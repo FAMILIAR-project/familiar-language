@@ -1,0 +1,49 @@
+
+
+ID = ([a-zA-Z0-9]+) / {Parent}
+
+ATTRIBUTE =  (:opt)? (...
+			| :enum ID COMMENT? ENUM_VALUES)
+			
+ENUM_VALUES = <val> :sel ENUM_EXPRESSION
+				    :desel ENUM_EXPRESSION
+		     </val>
+								
+			
+ENUM_EXPRESSION =  {ENUM_CONTENT}
+				 | ID
+				 | ID.ID
+				 | Parent.ID
+				 | NIL 
+		     
+INT_EXPRESSION =   ...  
+				 | [ INTEGER, INTEGER ]
+				 | {INT_SET_CONTENT}
+				 | ID.ID
+				 | Parent.ID 
+				 | NIL 
+
+REAL_EXPRESSION =  ...  
+				 | [ REAL, REAL ]
+				 | {REAL_SET_CONTENT}
+				 | ID.ID
+				 | Parent.ID 
+				 | NIL
+				 
+ENUM_CONTENT =  ID
+		      | ID, ENUM_CONTENT
+				 
+INT_SET_CONTENT =  INT_EXPRESSION
+                 | INT_EXPRESSION, INT_SET_CONTENT
+
+REAL_SET_CONTENT =  REAL_EXPRESSION
+                  | REAL_EXPRESSION, REAL_SET_CONTENT	 				     
+
+BOOL_EXPRESSION =  ...
+				 | {.true., .false.}
+				 | {.false., .true.}
+				 | ID.ID
+				 | Parent.ID 
+                 | ENUM_EXPRESSION == ENUM_EXPRESSION						  
+
+NIL = .nil. 

@@ -1,0 +1,13 @@
+root Car {
+	int maxSpeed in [120..240];
+	int fuelCapacity in {30, 40, 50};
+	real price in [15000..25000];
+	real co2 in [1..*];
+	enum mainColor in { Red, Blue,White };
+	//fuelCapacity in [40..41];
+	group oneof {
+		Ford,
+		Ferrari
+	}
+}
+	

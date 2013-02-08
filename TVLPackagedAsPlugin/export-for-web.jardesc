@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jardesc>
+    <jar path="TVLParser/lib/TVLParser.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/TVLParser/export-for-web.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="true" overwrite="true" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="false" manifestLocation="/TVLParser/MANIFEST.MF" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="true" exportOutputFolder="false">
+        <javaElement handleIdentifier="=TVLParser/src&lt;be.ac.fundp.info.TVLParser.Parser"/>
+        <javaElement handleIdentifier="=TVLParser/src&lt;be.ac.fundp.info.TVLParser.symbolTables"/>
+        <javaElement handleIdentifier="=TVLParser/src&lt;be"/>
+        <javaElement handleIdentifier="=TVLParser/src&lt;be.ac.fundp.info.TVLParser.Util"/>
+        <javaElement handleIdentifier="=TVLParser/src&lt;be.ac.fundp.info.TVLParser.exceptions"/>
+        <javaElement handleIdentifier="=TVLParser/src&lt;be.ac.fundp.info.TVLParser{Launcher.java"/>
+        <javaElement handleIdentifier="=TVLParser/src&lt;be.ac.fundp.info.TVLParser{TVLParser.java"/>
+        <javaElement handleIdentifier="=TVLParser/src&lt;be.ac.fundp.info.TVLParser.SyntaxTree"/>
+    </selectedElements>
+</jardesc>

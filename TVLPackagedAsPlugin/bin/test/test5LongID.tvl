@@ -1,0 +1,95 @@
+root Vehicle {
+	real price is sum(selectedchildren.price);
+	real weight is sum(selectedchildren.weight);
+	group oneof {
+		Car {
+			real price is sum(selectedchildren.price);
+			real weight is sum(selectedchildren.weight);
+			group oneof {
+				Sports {
+					real price is sum(selectedchildren.price);
+					real weight is sum(selectedchildren.weight);
+					group oneof {
+						Ferrari {
+							real price is 150000;
+							real weight is 1.5;	
+						}, 
+						Porsche {
+							real price is 160000;
+							real weight is 1;	
+						}
+					}
+				},
+				Family {
+					real price is sum(selectedchildren.price);
+					real weight is sum(selectedchildren.weight);
+					group oneof {
+						Ford {
+							real price is 25000;
+							real weight is 3;
+						},
+						Citroen {
+							real price is 22500;
+							real weight is 3.5;
+						}
+					}
+				}
+			}	
+		},
+		Bus {
+			real price is sum(selectedchildren.price);
+			real weight is sum(selectedchildren.weight);
+			group oneof {
+				Volkswagen {
+					real price is 180000;
+					real weight is 8;
+				},
+				Mercedes {
+					real price is 170000;
+					real weight is 7.5;	
+				}
+			}
+		},
+		Truck {
+			real price is sum(selectedchildren.price);
+			real weight is sum(selectedchildren.weight);
+			group oneof {
+				National {
+					real price;
+					real weight;
+					ifin: this.Renault.price == 125000;
+					group oneof {
+						Renault {
+							real price is 125000;
+							real weight is 5;
+						},
+						Ford{
+							real price is 122000;
+							real weight is 4.5;
+						}
+					}
+				},
+				International {
+					real price is sum(selectedchildren.price);
+					real weight is sum(selectedchildren.weight);
+					group oneof {
+						Volvo {
+							real price is 195000;
+							real weight is 10;
+						},
+						Mercedes {
+							real price is 215000;
+							real weight is 13.5;	
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+///////////////////////////////////////////////////////////////////////////////////////
+
+Renault {
+	parent.this.price == 125;
+}

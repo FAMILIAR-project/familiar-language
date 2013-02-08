@@ -1,0 +1,3349 @@
+// PACKAGES
+
+root Drupal7 {
+  group someof {
+    MUNIN {
+      group someof {
+        MUNIN_API
+      }
+    },
+    COMMON_FUNCTIONALITY {
+      group someof {
+        CF
+      }
+    },
+    TAXONOMY {
+      group someof {
+        TAXONOMY_CSV,
+        USER_FORCE_TERM
+      }
+    },
+    BIT_LY {
+      group someof {
+        BITLY
+      }
+    },
+    CONTEXT {
+      group someof {
+        CONTEXT_BOOL_FIELD,
+        CONTEXT_BLOCK_CLASS,
+        CONTEXT_CONDITION_THEME,
+        CONTEXT_SSL
+      }
+    },
+    THEME {
+      group someof {
+        JQUERYUI_THEME,
+        ROLE_THEME_SWITCHER
+      }
+    },
+    TESTING {
+      group someof {
+        CODE_COVERAGE
+      }
+    },
+    FEEDS_PLUGIN {
+      group someof {
+        PARSER_ICAL
+      }
+    },
+    CHAOS_TOOL_SUITE {
+      group someof {
+        CTOOLS,
+        CTOOLS_PATH_ACCESS
+      }
+    },
+    EFFECTS {
+      group someof {
+        IMAGEMARKER
+      }
+    },
+    RPG {
+      group someof {
+        DICE_ROLLER
+      }
+    },
+    PDF {
+      group someof {
+        PDFIDCARD
+      }
+    },
+    SEARCH_TOOLKIT {
+      group someof {
+        FACETAPI,
+        FACETAPI_TAGCLOUD,
+        SEARCH_FACETAPI
+      }
+    },
+    CORE_FIELDS {
+      group someof {
+        FILE
+      }
+    },
+    AMERICAN_BIBLE_SOCIETY {
+      group someof {
+        ABS_BIBLESEARCH
+      }
+    },
+    CONTENT_DISPLAY {
+      group someof {
+        ARCHIVE
+      }
+    },
+    DATE_TIME {
+      group someof {
+        DATE_REPEAT_PRESETS
+      }
+    },
+    UBERCART_EXTRA {
+      group someof {
+        UC_PRODUCT_MINMAX,
+        UC_FAVORDER
+      }
+    },
+    MONITORING {
+      group someof {
+        PROD_CHECK
+      }
+    },
+    SERVICES {
+      group someof {
+        BLOGAPI
+      }
+    },
+    GRAPH_TOOLS {
+      group someof {
+        GRAPHAPI
+      }
+    },
+    CONTENT_ACCESS_CONTROL {
+      group someof {
+        ABT
+      }
+    },
+    RECRUIT_CORE {
+      group someof {
+        RECRUIT
+      }
+    },
+    BRIGHTSOLUTIONS {
+      group someof {
+        BS_NICE_FRONTPAGE
+      }
+    },
+    TAXONOMY_MENU {
+      group someof {
+        TAXONOMY_MENU_TRAILS
+      }
+    },
+    FIELDS {
+      group someof {
+        SEMANTIC_FIELDS,
+        REF_FIELD,
+        METATAGS_QUICK,
+        WEBCAM,
+        FIELD_GROUP,
+        URLCONTENTFIELD,
+        ALLOW_ALL_FILE_EXTENSIONS,
+        COUNTRIES,
+        ADDRESSFIELD,
+        DOUBLE_FIELD,
+        MENU_LINK,
+        VIMEO,
+        NODEREFERENCE_URL,
+        ADDTHIS,
+        FIELD_SLIDESHOW,
+        NAMEDB,
+        SERIAL,
+        FIELD_WEIGHT,
+        CCK_PAGER,
+        TAXONOMY_FORMATTER,
+        MAXLENGTH_JS
+      }
+    },
+    CORE_ALTERNATE {
+      group someof {
+        CONTACT
+      }
+    },
+    AUTHORIZATION {
+      group someof {
+        SOCIAL_CONNECT
+      }
+    },
+    PUBLICATION_CHANNELS {
+      group someof {
+        CHANNELS
+      }
+    },
+    DBTNG {
+      group someof {
+        DBTNG_MIGRATOR
+      }
+    },
+    LOCATION {
+      group someof {
+        DEVICE_GEOLOCATION
+      }
+    },
+    COMMERCE_PAYMENT {
+      group someof {
+        COMMERCE_SERMEPA,
+        COMMERCE_SAGEPAY_DIRECT,
+        COMMERCE_3D_SECURE,
+        COMMERCE_SAGEPAY_FORM
+      }
+    },
+    AUTHENTICATION {
+      group someof {
+        SWEKEY,
+        YUBIKEY
+      }
+    },
+    GAMES {
+      group someof {
+        PONG,
+        CONNECTIV,
+        TETRIS,
+        INVADERS
+      }
+    },
+    SPAM_CONTROL {
+      group someof {
+        CAPTCHA
+      }
+    },
+    CONTENT_AUTHORING {
+      group someof {
+        AJAX_MARKUP,
+        BUEDITOR
+      }
+    },
+    MARKUP {
+      group someof {
+        HTML5_TOOLS
+      }
+    },
+    ADMINISTRATION {
+      group someof {
+        CLIENT_UI_CONTROL,
+        DRD,
+        FRONT_PAGE,
+        TOOLBAR_HIDE,
+        ENVIRONMENT_INDICATOR,
+        ADMIN_TOOLS,
+        ADMIN_MENU_DROPDOWN,
+        SYSTEMINFO,
+        SITE_INFO_LITE,
+        PAGENOTFOUND_REPORTS,
+        ADMIN_MENU,
+        ROLE_WEIGHTS,
+        BLOCK_CONTEXT,
+        DFW,
+        MENU_ADMIN_PER_MENU,
+        PENDING_USER_NOTIFICATION,
+        COLLAPSE_SYSTEM_MODULES,
+        ADMIN_PATH,
+        MENU_EXPANDED
+      }
+    },
+    QUIZ_CORE {
+      group someof {
+        QUIZ
+      }
+    },
+    WORKFLOW {
+      group someof {
+        WORKFLOW_NAMED_TRANSITIONS
+      }
+    },
+    IMAGE {
+      group someof {
+        THUMBNAILS,
+        IMAGE_LEGACY,
+        MANUALCROP,
+        IMAGECACHE_ACTIONS,
+        GET_NODE_IMG
+      }
+    },
+    SCHOOL_ADMINISTRATION_KIT {
+      group someof {
+        SCHOOL_ADMINISTRATION
+      }
+    },
+    DEVELOPMENT {
+      group someof {
+        DEVEL_BONUS,
+        WORDPRESS_MIGRATE,
+        SIMPLETEST_SELENIUM,
+        JOURNAL,
+        REROUTE_EMAIL,
+        SWITCHEROO,
+        FLOG,
+        QUNIT,
+        ERRORNOT,
+        EDIT_OWN_USER_ACCOUNT_PERMISSION,
+        ENABLED_MODULES,
+        GPUI,
+        CSS_WATCH,
+        MYHOOK,
+        MODULE_SUMMARY,
+        DRUPAL_RESET,
+        DEVEL_INFO,
+        DEMO,
+        SECURE_CODE_REVIEW,
+        CODER,
+        DEVEL_THEMER,
+        PQP,
+        MODULE_BUILDER,
+        XRAY,
+        FEEDBACK,
+        DEVEL_DEMO,
+        GRAMMAR_PARSER
+      }
+    },
+    AMAZON {
+      group someof {
+        AMAZON_STORE
+      }
+    },
+    PRESET_MANAGEMENT {
+      group someof {
+        PRESET
+      }
+    },
+    CHURCH {
+      group someof {
+        BIBLE
+      }
+    },
+    WEATHER {
+      group someof {
+        NWS_WEATHER
+      }
+    },
+    AJAX {
+      group someof {
+        SVAS
+      }
+    },
+    PERFORMANCE {
+      group someof {
+        CORE_LIBRARY,
+        ESI_API
+      }
+    },
+    OPEN_MEDIA_SYSTEM {
+      group someof {
+        OM_CHECKLIST
+      }
+    },
+    FILEFIELD_PATHS {
+      group someof {
+        FILE_ALIASES
+      }
+    },
+    VOTING {
+      group someof {
+        FIVESTAR,
+        PRIORITIES
+      }
+    },
+    USERPOINTS {
+      group someof {
+        USERPOINTS_NODEACCESS,
+        USERPOINTS_USER_PICTURE
+      }
+    },
+    FEED_PARSER {
+      group someof {
+        WOWARMORY
+      }
+    },
+    OTHER {
+      group someof {
+        SUBMITAGAIN,
+        LINKIT,
+        ANONYMOUS_POSTING,
+        ZEROPOINT,
+        TROLL,
+        QUOTES,
+        ATOM,
+        CONTENT_REFRESH,
+        INKRIBBON,
+        TOKEN,
+        ENEWS,
+        ALMANAC,
+        MAESTRO,
+        BLOCK_TERM,
+        SIMPLEPIE,
+        CLOUD_ZOOM,
+        FLATCOMMENTS,
+        DOMICILE,
+        DARKBLUE,
+        TRACKERLITE,
+        MOLLOM,
+        LINKCHECKER,
+        WORDFILTER,
+        ER,
+        UNDISPOSABLE,
+        JQM,
+        USER_RESTRICTIONS,
+        SMASHING_DILECTIO,
+        CONDITIONAL_ROLES,
+        TABLEFIELD,
+        HTMLPURIFIER,
+        CONTEXT_DOMAIN,
+        ADMIN_PANE,
+        VIDEO,
+        AUTOASSIGNROLE,
+        FORM_BUILDER,
+        NODECONNECT,
+        COMMERCE,
+        CMYK,
+        FORMUPDATER,
+        URLICON,
+        TAXONOMY_TREE_SELECT,
+        DOSSIER,
+        FEEDS_IMAGEGRABBER,
+        DIARY,
+        MOBWRITE,
+        PIXTURE_RELOADED,
+        MOODLE,
+        ADMIN_NOTIFICATION,
+        MIMEDETECT,
+        SEARCH404,
+        MONGODB,
+        HUMANSTXT,
+        IOS,
+        NAMEDAY,
+        WEB110,
+        GOTWO,
+        REFTAGGER,
+        USER_REGISTRATIONPASSWORD,
+        MOBI,
+        RECURLY,
+        ZENTROPY,
+        TARSKI,
+        PROPERTIES,
+        PRU8,
+        AKV_PAGEPEELS,
+        PASSWORD_POLICY,
+        PRIVATECOMMENTS,
+        FLIPPY,
+        SYSTEMMASK,
+        OPENATTRIBUTE,
+        CODEFILTER,
+        AROOGA,
+        MASS_MESSAGING,
+        NICEMESSAGES,
+        VIDEO_FILTER_FIELD,
+        GOOGLE_DOCS_LECTOR,
+        HOMOGRAPHIC_USERNAMES,
+        CUSTOM_BREADCRUMBS,
+        FAQ_ASK,
+        ADVUSER,
+        CVS_DEPLOY,
+        GROWL,
+        TWITTER_PULL,
+        IMAGE_URL_FORMATTER,
+        ASCIIDOC,
+        MESSAGE,
+        COLORTHEME,
+        LIBRARIES,
+        ENTITY_INDEX,
+        SPRING_BLOOM,
+        SIMPLETIMESHEET,
+        CONTENTED5,
+        HTML5_BOILERPLATE,
+        SHRINKTHEWEB,
+        GOOGLE_PR,
+        GLOBALREDIRECT,
+        JALAPENO,
+        EXTENDED_HTML,
+        MEDIAELEMENT,
+        INACTIVE_USER,
+        AWESOMERELATIONSHIP,
+        POORMANSCRON,
+        BEAN,
+        TERM_RELATIONS,
+        POSTAL,
+        ISBN2NODE,
+        STYLEGUIDE,
+        ACME,
+        PYGMENTIZER,
+        FEATURES_PLUMBER,
+        WYSIWYG_IMAGEFIELD,
+        USER_DIFF,
+        ACCORDION_BLOCKS,
+        KANJI,
+        REG_WITH_PIC,
+        JQ4DAT,
+        FILEFIELD_PATHS,
+        DREAM960,
+        PUSHBUTTON,
+        GEOFIELD,
+        STAFFLIST,
+        BARTIK_FB,
+        DB_MAINTENANCE,
+        STATICMAP,
+        TAXONOMY_REPLACE,
+        MICRO,
+        MENU_BLOCK,
+        NODE_PRIVACY_BYROLE,
+        RELEVANCE,
+        MM,
+        USERBAR,
+        LOGOTOOL,
+        GEONAMES,
+        MENUTREE,
+        STORM,
+        ACCESSAPI,
+        REVISIONS_RSS,
+        CHECKLIST,
+        OPENTOK,
+        ROBOTSTXT,
+        OVERRIDE_NODE_OPTIONS,
+        GUESTBOOK,
+        IMAGECACHE_PROFILES,
+        BLACKPIANO,
+        NITOBE,
+        NOPREMIUM,
+        FOLLOW,
+        CONDITIONAL_STYLES,
+        HIP_CORE,
+        MENU_ITEM_VISIBILITY,
+        SUBPROFILES,
+        OPENSEARCH,
+        CLOSEDQUESTION,
+        COBALT,
+        SESSION_LIMIT,
+        FIELD_INJECTOR,
+        PATH_REDIRECT,
+        YUI_GRID,
+        MEDIA_DEV,
+        BREADCRUMB,
+        BUNDLECACHE,
+        SKYSCANNER,
+        NODEBLOCK,
+        ONUS,
+        PAGE_TITLE,
+        OPTIONS_ELEMENT,
+        OMEGA_PROFILE,
+        OPENPUBLIC_EU,
+        REMARKUP,
+        FORWARD,
+        STARRATING,
+        JOB_SCHEDULER,
+        INTERACTIVE_MEDIA,
+        PROCESS_API,
+        RRDTOOL,
+        INSTANTFILTER,
+        MUCHOMENU,
+        QTIP,
+        WORKBENCH,
+        PBS,
+        SITE_VERIFY,
+        SIGNATUREFIELD,
+        WEATHER,
+        PATHAUTO_PERSIST,
+        NAT,
+        CAR,
+        UNITSAPI,
+        BALANCE_TRACKER,
+        SUBFORM,
+        NICE_MENUS,
+        SHAREPOINT,
+        BG_IMAGE,
+        JOURNALCRUNCH,
+        EMAIL_CONFIRM,
+        BOOKMARK,
+        MODEL,
+        PROFILE_PRIVACY,
+        USER_MODAL,
+        MAYO,
+        USER_TWEAKS,
+        CUSTOM_FORMATTERS,
+        CONTEXT_FIELD,
+        REINDEX,
+        VINCULUM,
+        CCK,
+        BOOK_MANAGER,
+        VARS,
+        TABS,
+        AD_NOVUS,
+        WP_BLOG,
+        SORT_COMMENTS,
+        FOLLOWBUTTON,
+        RELATION,
+        SKINR,
+        RELEVANT_CONTENT,
+        DRUPAD,
+        REEL,
+        BLOGGIT,
+        CORKY,
+        BLOCK_API,
+        FOOTER_MESSAGE,
+        CONTACT_CC,
+        CHRISTMAS_SNOW,
+        ADMIN_LANGUAGE,
+        QUESTION,
+        TAXONOMY_DUPECHECK,
+        GIT_DEPLOY,
+        FIELD_WRAPPERS,
+        USER_READONLY,
+        TYPE_LOCAL_NIDS,
+        COMMENT_SUBJECT,
+        TUPAS,
+        FRIENDCONNECT,
+        COLORBOX,
+        OPENOUTREACH,
+        YR_VERDATA,
+        POLYMORPH,
+        SITE_MAP,
+        BEANSTALKD,
+        BLOCK_CLASS,
+        HTMLAWED,
+        UPDATE_TEST_MODULE,
+        TITAN,
+        RICHSNIPPETS,
+        DUMMY_CONTENT,
+        DESK02_GRADIEL,
+        COMMERCE_COUPON,
+        TERM_REFERENCE_TREE,
+        BUTLER,
+        MENU_FIRSTCHILD,
+        DEFAULTCONTENT,
+        DRAGNDROP_UPLOADS,
+        CLONE,
+        FILTER_PROTOCOLS,
+        IMAGEAPI,
+        POCKETT,
+        SAMARA,
+        ROLE_DELEGATION,
+        COMICDROP,
+        ANTI_EXISTING_FIELD,
+        CHAMELEON,
+        HARVEST,
+        ARRANGE_FIELDS,
+        NAVIGATION404,
+        WEBFORM,
+        REDIRECT,
+        DAIL,
+        BLUELAKE,
+        NOGGIN,
+        SEMANTIC_SIMILARITY,
+        CHANNEL,
+        LAYOUTSTUDIO_EXTRAS,
+        SIMPLIFY,
+        BROWSERID,
+        PANELS,
+        BOOK_DELETE,
+        LOCATIONMAP,
+        RELATED_BLOCK,
+        REVISION_ALL,
+        PATHAUTO,
+        EQUALHEIGHTS,
+        IMAGEMAGICK,
+        DYNAMIC_IMAGE_STYLES,
+        CURLYPAGE,
+        MIX_AND_MATCH,
+        ANTONELLI,
+        BLUEMARINE,
+        CAMSEL,
+        IDEAINFORMER_WIDGET,
+        CAPTCHA_FREE,
+        COMMENTACCESS,
+        TWITTER_BLOCK,
+        COUNTDOWN,
+        DARTIK,
+        CDK,
+        URL_ALTER,
+        INDEXPAGE,
+        NODEASBLOCK,
+        TAXONOMY_TITLE,
+        FANCY_LOGIN,
+        UNFUDDLE_API,
+        NODEJS,
+        AFFILIATES,
+        TEXTIMAGE,
+        REVISIONING,
+        SQLSRV,
+        CRUSH,
+        CHAIN_MENU_ACCESS,
+        PHOTOGENIC,
+        TYPEBASED,
+        CONTENT_SECURITY_POLICY,
+        ANDROMEDA,
+        AFFILIATE_NG,
+        ALT_LOGIN,
+        SIMPLEFORMS,
+        ACCEPTEMAIL,
+        SAFEWORD,
+        MULTIFORM,
+        AUTORDF,
+        MENULESS_NODETYPE,
+        DEMO_PROFILE,
+        SECURE_PERMISSIONS,
+        STAGER,
+        ENTITLEMENTS,
+        JAVANODE,
+        DRUPAL_WRAPPERS,
+        DALERI_STRUCTURE,
+        FIELDSET_HELPER,
+        THE,
+        CONTENTASJSON,
+        INVITE,
+        FASTERIMAGES,
+        SCP_API,
+        ADSENSE,
+        JQUERY_COLORPICKER,
+        AES,
+        AVANTLINKER,
+        FILECACHE,
+        DAILYTWITTER,
+        PROFILER,
+        NODEORDER,
+        SPARQL_ENDPOINT,
+        VARIABLECHECK,
+        GAMERTAGS,
+        PLINK,
+        FEEDS,
+        CONTENT_TYPE_GROUPS,
+        FLOATING_BLOCK,
+        ACCOUNT_REMINDER,
+        KHAAAAAAAN,
+        COROLLA,
+        CORPORATECLEAN,
+        KIOSK,
+        TWITTER_BLACKBIRD,
+        IPGEOBASE_API,
+        MAINTENANCE_EXEMPT,
+        REALCHAT,
+        ALTERPROFILEPAGE,
+        SUBPERMISSIONS,
+        USERLIST_EXPORT,
+        BIBLIO,
+        MENU_NODE,
+        PY,
+        NINESIXTY,
+        MENU_ITEM_CONTAINER,
+        MENUADMINSPLITTER,
+        READ_MORE,
+        FIELD_BOXES,
+        MASQUERADE,
+        GUIDANCE,
+        FLOOD_CONTROL,
+        GOAWAY,
+        SECUREPAGES,
+        SANITIZABLE,
+        COMMENT_NOTIFY,
+        TFA,
+        MOBI_LOADER,
+        BETA,
+        PERFORMANCE_HACKS,
+        TREEABLE,
+        DOKEOS,
+        NODEQUEUE,
+        WALLS,
+        GEOLOCATION,
+        DINGUS,
+        CONTACT_FORMS,
+        AFW,
+        YAHOO_TERMS,
+        VCARD,
+        PANELS_960GS,
+        JQUERYMOBILE,
+        READABILITY,
+        WIREFRAME_ME,
+        SIMPLER,
+        LIGHTWEIGHT,
+        GAMMA,
+        GRAVATAR,
+        IMAGE_RESIZE_FILTER,
+        A11Y_TITLES,
+        CLICKPATH,
+        COMMENT_ALLOW_ANONYMOUS,
+        IMAGILICIOUS,
+        OWNTERM,
+        EXTENDED_PAYPAL,
+        SUBMITTED_BY,
+        KOI,
+        SYNTAXHIGHLIGHTER,
+        DSK,
+        PANELS_MEDIA,
+        STOCK,
+        URBAN_SOLICE,
+        FORM_CLERK,
+        GMAPEZ,
+        MEDIA,
+        GITHUB,
+        CDNJS,
+        FORMATTER_REFERENCE,
+        CJUNCTION,
+        MENU_ATTRIBUTES,
+        RGRAPH,
+        INSERT,
+        JAMMER,
+        INTEGERDATE,
+        MOBILE_CODES,
+        WRAPPEDSITES,
+        ARTHEMIA,
+        QFORMS_EXTRA,
+        FANCYCHECKBOXES,
+        PLANYO,
+        SECURITY_REVIEW,
+        AUSTIN,
+        NAT_NG,
+        TWEETPACK,
+        TERM_LEVEL,
+        NODE_AUTHLINK,
+        OFFICE_HTML,
+        FRONTPAGE,
+        SIMPLE_PAYPAL,
+        BLUEMASTERS,
+        AGRCACHE,
+        TAXONOMY_MENU,
+        CSS_BROWSER_SELECTOR,
+        LEXICON,
+        IFRAME_FILTER,
+        LOGINTOBOGGAN,
+        PICASA_NODE_ALBUM,
+        CACHE_CONVERTER,
+        EARTH_HOUR,
+        FILEVIEWER,
+        TRANSLATABLEREGIONS,
+        QUEUE_UI,
+        CTR_FIELD,
+        NODETYPEVIEWS,
+        FIELD_VALIDATION,
+        GRAZE,
+        USERPROTECT,
+        BLOGINFO,
+        FORCE_PASSWORD_CHANGE,
+        FRAMEPREVENTION,
+        SHADOWBOX,
+        MERGE_COMMENTS,
+        GETID3,
+        LJXP,
+        USER_CHOOSER,
+        TRANSLITERATION,
+        FIELD_DEFINITIONS,
+        QFORMS,
+        SKY,
+        CHESSBOARD,
+        WISHLIST,
+        PREDICTIONGAME,
+        SAVEGUARD,
+        ERP,
+        TAXONOMY_FILTER,
+        ELOQUA,
+        FILTERSIE,
+        CRON_DEBUG,
+        DHTML_MENU,
+        TAXONOMY_DISPLAY,
+        AD_THE_MORNING_AFTER,
+        MOBILE_BASIC,
+        SERVICES,
+        LEFTANDRIGHT,
+        URLLIST,
+        EARTHISH,
+        BOOKSTORE,
+        HOF,
+        ENVOLVE_CHAT,
+        ADDTOANY,
+        TABLEFORM,
+        CPN,
+        MULTIPLE_EMAIL,
+        PIECEMAKER,
+        SCOUTLE,
+        ASYNC_COMMAND,
+        REALNAME_REGISTRATION,
+        BLOCK_MORELINK,
+        ABESSIVE,
+        PROFILE_PAGE,
+        FIELD_CONVERT,
+        BLOGSPAM,
+        BAKERY,
+        INTLINKS,
+        SUBDOMAIN,
+        SIMILAR,
+        VIBE,
+        UNIQUE_FIELD,
+        FOATER,
+        TOKEN_FIELD,
+        ENCRYPT_SUBMISSIONS,
+        SESSION_API,
+        AD_BLUEPRINT,
+        ENCSET,
+        SIMILARTERMS,
+        CRC,
+        BASIC,
+        ANDREAS1024PX
+      }
+    },
+    D_D_CHARACTER {
+      group someof {
+        DND_CHARACTER
+      }
+    },
+    WORKBENCH {
+      group someof {
+        WORKBENCH_MODERATION,
+        WORKBENCH_ACCESS,
+        WORKBENCH_MEDIA,
+        WORKBENCH_FILES
+      }
+    },
+    UBERCART_RECURRING {
+      group someof {
+        UC_RECURRING
+      }
+    },
+    USER_RELATIONSHIPS {
+      group someof {
+        USER_RELATIONSHIP_LIMITS
+      }
+    },
+    PROFILE {
+      group someof {
+        PROFILE_ROLE,
+        PCP
+      }
+    },
+    PRONOVIX {
+      group someof {
+        MESSAGE_DOCS
+      }
+    },
+    LINKIT {
+      group someof {
+        LINKIT_VIEWS
+      }
+    },
+    DEVELOPER_LIBRARY {
+      group someof {
+        MULTIPAGE
+      }
+    },
+    JAVASCRIPT_UTILITIES {
+      group someof {
+        LABJS,
+        CLOSURE
+      }
+    },
+    GIT {
+      group someof {
+        GB
+      }
+    },
+    SCRATCHPADS {
+      group someof {
+        HASHCASH
+      }
+    },
+    WEBFORM {
+      group someof {
+        HUBSPOT,
+        WEBFORM_ENCRYPT,
+        WEBFORM_ALT_UI,
+        WEBFORM_PAYPAL,
+        WEBFORM_RULES,
+        WEBFORM_NODE_ELEMENT,
+        WEBFORM_TERM_OPTS,
+        WEBFORM2SUGAR
+      }
+    },
+    KNOWLEDGE_BASE {
+      group someof {
+        USER_DASHBOARD
+      }
+    },
+    READSPEAKER {
+      group someof {
+        DOCREADER
+      }
+    },
+    OPENTURK_ORG {
+      group someof {
+        MT_TASK,
+        MT_KARMA,
+        MT_ANALYSIS
+      }
+    },
+    SETTINGS_API {
+      group someof {
+        SETTINGS_AUDIT_LOG
+      }
+    },
+    IP_BOARD {
+      group someof {
+        IPBRIDGE
+      }
+    },
+    CORE_OPTIONAL {
+      group someof {
+        DIFF
+      }
+    },
+    FACEBOOK {
+      group someof {
+        FRIDGE
+      }
+    },
+    REGISTRATION {
+      group someof {
+        USERNAME_CHECK
+      }
+    },
+    CORE {
+      group someof {
+        FLICKR_BLOCK,
+        USER_RELATIONSHIPS_API,
+        GENERAL_SERVICES,
+        STYLES,
+        CONTEXT_UI,
+        FAQ,
+        ZEND,
+        USER_REFERENCE,
+        SMART_IP,
+        TOKEN,
+        POLL,
+        UC_CART,
+        MEDIA_INTERNET,
+        OG_CONTEXT,
+        DND_FIELDS,
+        IMCE_WYSIWYG,
+        ADVANCED_FORUM,
+        MT_TASK,
+        PANELS,
+        PATHAUTO,
+        ADVANCED_HELP,
+        VIEWS_DATA_EXPORT,
+        MYHOOKADMIN,
+        CREEPER,
+        BOXES,
+        STYLIZER,
+        HTMLPURIFIER,
+        VIDEO,
+        BOOK,
+        VIEWS_EXPORT,
+        NUMBER,
+        FORM_BUILDER,
+        APACHESOLR,
+        DELTA,
+        GOOGLEANALYTICS,
+        UDID,
+        BACKUP_MIGRATE,
+        SEARCH_API,
+        FILE,
+        ACL,
+        PLUPLOAD,
+        SHORTCUT,
+        CHAIN_MENU_ACCESS,
+        PANELS_IPE,
+        DIFF,
+        COMMERCE_PRODUCT,
+        CTOOLS_CUSTOM_CONTENT,
+        USER,
+        MONGODB,
+        PHP,
+        COMMERCE_UI,
+        BLOG,
+        WEBFORM_3_X_,
+        SERVICE_LINKS,
+        HELP,
+        KEYVALUEQUEUE,
+        COMMERCE_LINE_ITEM,
+        SEARCH_BY_PAGE,
+        TABLE,
+        DEVEL,
+        VARS_2_X_,
+        AES,
+        CODEFILTER,
+        COLOR,
+        MENU_EXPANDED,
+        ENTITY,
+        CLIENT_UI_CONTROL,
+        SEARCH_FILES,
+        ACL,
+        MAILSYSTEM,
+        DEMO,
+        DATE_VIEWS,
+        PRIVATEMSG,
+        GRAMMAR_PARSER,
+        CHANNELS_SERVICE,
+        RAPHAEL,
+        CTOOLS_ACCESS_RULESET,
+        COMMERCE_PRODUCT_REFERENCE,
+        ADMIN_TOOLS,
+        COMMERCE_CUSTOMER,
+        FIELD_GROUP,
+        COMMENT_NOTIFY,
+        ADDRESSFIELD,
+        FILE_STYLES,
+        DATE_API,
+        LINK,
+        TEXT,
+        VIEWS_UI,
+        COMMERCE_3D_SECURE,
+        UC_PAYMENT,
+        GLOBALREDIRECT,
+        BARTIK,
+        EXTENDED_HTML,
+        VIEWS_CONTENT,
+        FEEDS_XPATHPARSER,
+        DEBUT,
+        BLOCK,
+        CALENDAR,
+        LOCALE,
+        VOTINGAPI,
+        SIMPLEHTMLDOM,
+        OPTIONS,
+        COMMERCE_CHECKOUT,
+        VIEWS_BULK_OPERATIONS,
+        CTOOLS,
+        PAGE_MANAGER,
+        TRIGGER,
+        VIEWS_PDF,
+        UC_PRODUCT,
+        ADMIN_MENU,
+        USER_REVISION,
+        UX_ELEMENTS,
+        BULK_EXPORT,
+        GEOFIELD,
+        FEEDS_TAMPER,
+        NAME,
+        TRACKER,
+        MENU_BLOCK,
+        INSERT,
+        PROJECT_BROWSER,
+        CAPTCHA,
+        COMMERCE_CART,
+        PATH,
+        WYSIWYG,
+        ADMIN,
+        CONTEXTUAL,
+        AWSSDK,
+        SERVICES,
+        PIWIK,
+        BAD_JUDGEMENT,
+        COMMENT,
+        DBLOG,
+        FORUM,
+        JQUERY_UPDATE,
+        DATE_REPEAT,
+        LUCENEAPI,
+        NODE,
+        GRAPHVIZ_FILTER,
+        IMAGECACHE_PROFILES,
+        ENTITYCACHE,
+        DASHBOARD,
+        SIMPLE_PAYPAL,
+        FOLLOW,
+        HELPINJECTOR,
+        SUBPROFILES,
+        OG,
+        LIST,
+        LOGINTOBOGGAN,
+        PROPERTIES_SQL,
+        CF_ERROR,
+        DATE_POPUP,
+        COMMERCE_PRODUCT_UI,
+        FILTER,
+        MIGRATE,
+        FIELD,
+        OPTIONS_ELEMENT,
+        GETID3,
+        PANELS_NODE,
+        TRANSLITERATION,
+        VIEWS_PHP,
+        VIDEO_UI,
+        FORWARD,
+        QFORMS,
+        FIELD_UI,
+        JOB_SCHEDULER,
+        PROCESS_API,
+        OVERLAY,
+        FORM_BUILDER_WEBFORM,
+        SEARCH_API_FACETS,
+        VIEWS_VIEW_FIELD,
+        UPDATE,
+        RRDTOOL_MONITORS,
+        VIEWS_BOXES,
+        ACTIONS_PERMISSIONS,
+        MEDIA_YOUTUBE,
+        CODER_UPGRADE,
+        FEEDS_SELFNODE_PROCESSOR,
+        REFERENCES,
+        VIDEO_FILTER,
+        STRONGARM,
+        FIELD_PERMISSIONS,
+        IMCE,
+        PANELS_MINI,
+        TABLEFORM,
+        ROLE_REFERENCE,
+        FLICKRAPI,
+        STOCKAPI,
+        OG_UI,
+        ASYNC_COMMAND,
+        VARS,
+        SEARCH_API_PAGE,
+        FEEDS_CRAWLER,
+        ELEMENTS,
+        TRANSLATION,
+        NODE_REFERENCE,
+        DOMAIN,
+        FLAG,
+        APACHESOLR_SEARCH,
+        FACETAPI,
+        USER_RELATIONSHIPS_UI,
+        EXTLINK,
+        TIPSY,
+        TOOLBAR,
+        CONTACT,
+        XMLSITEMAP,
+        ENCSET,
+        COLORBOX,
+        DATE,
+        DELTA_UI,
+        COMMERCE_ORDER,
+        COMPUTED_FIELD,
+        RDF,
+        COMMERCE_FILE
+      }
+    },
+    DESIGN {
+      group someof {
+        SINGLE_PAGE_WEBSITE
+      }
+    },
+    OPENLAYERS {
+      group someof {
+        OPENLAYERS_FIELD
+      }
+    },
+    STORAGE {
+      group someof {
+        STORAGE_API
+      }
+    },
+    CCK {
+      group someof {
+        CCK_BLOCKS,
+        AUTOCOMPLETE_DELUXE,
+        FILEFIELD_NGINX_PROGRESS,
+        FIELDACTIONS,
+        VIDEO_UPLOAD,
+        IFRAME,
+        USER_ROLE_FIELD
+      }
+    },
+    DOMAIN_ACCESS {
+      group someof {
+        DOMAIN_CTOOLS,
+        DOMAIN_VIEWS,
+        DOMAIN_BLOCKS,
+        DOMAIN_PATH,
+        DOMAIN
+      }
+    },
+    XML_SITEMAP {
+      group someof {
+        XMLSITEMAP,
+        DOMAIN_XMLSITEMAP
+      }
+    },
+    COMMERCE {
+      group someof {
+        COMMERCE_GOOGLE_ANALYTICS,
+        COMMERCE_INVOICE,
+        COMMERCE_MOIP,
+        COMMERCE_PAYMENT_EWAY,
+        COMMERCE_OPTION,
+        COMMERCE_PRODUCT_BUNDLE,
+        COMMERCE_FIELDGROUP_PANES,
+        COMMERCE_PRODUCT_ATTRIBUTES,
+        COMMERCE_CHECKOUT_REDIRECT,
+        COMMERCE_PDF_INVOICE,
+        COMMERCE_FEEDS,
+        COMMERCE_PAGSEGURO,
+        COMMERCE_PAGTODIGITAL,
+        COMMERCE_CHEQUE,
+        COMMERCE_SHIPPING
+      }
+    },
+    QUEUE {
+      group someof {
+        APC_QUEUE,
+        KEYVALUEQUEUE
+      }
+    },
+    CONTENT {
+      group someof {
+        FIELD_REDIRECTION,
+        PAGES,
+        DATASOURCES
+      }
+    },
+    ACCESS_CONTROL {
+      group someof {
+        BOOK_ACCESS,
+        FLEXIACCESS,
+        FORUM_ACCESS,
+        USER_PERMISSIONS,
+        DENY_ACCESS,
+        ACL
+      }
+    },
+    ACTIVELAMP_TOOLS {
+      group someof {
+        SPRITESHEETS
+      }
+    },
+    SECURITY {
+      group someof {
+        SESSION443
+      }
+    },
+    VIMEO {
+      group someof {
+        VIMEO_GALLERY
+      }
+    },
+    WEB_SERVICES {
+      group someof {
+        WEBSERVICES,
+        TUMBLR_CONNECT
+      }
+    },
+    DRUPAL_COMMERCE_UI {
+      group someof {
+        COMMERCE_BPC
+      }
+    },
+    FEATURES {
+      group someof {
+        COMMERCE_DOWNLOADS_FEATURE,
+        DEBUT_IMAGE,
+        PANTAREI_SIREN_CORE,
+        DEBUT_SECTION,
+        DEBUT_SOCIAL,
+        EXAMPLE_WEB_SCRAPER,
+        DEBUT,
+        DEBUT_FORUM,
+        DEBUT_COMMENT,
+        DEBUT_ARTICLE,
+        DEBUT_MEDIA,
+        VIDEO_PRESETS,
+        DRUPAL_PLANET,
+        DEBUT_EVENT,
+        FEATURES_OVERRIDE,
+        DEBUT_BLOG,
+        DEBUT_WYSIWYG
+      }
+    },
+    APACHE_SOLR {
+      group someof {
+        APACHESOLR_OG,
+        APACHESOLR_PAGE,
+        APACHESOLR_AUTOCOMPLETE
+      }
+    },
+    JS_KIT {
+      group someof {
+        JSKITCOMMENTS
+      }
+    },
+    LIBRARIES {
+      group someof {
+        GOOGLEAPILIBS,
+        FIELD_HELPER
+      }
+    },
+    NODEQUEUE {
+      group someof {
+        NODEQUEUE_PUBLISHER
+      }
+    },
+    COMMERCE_PAYPAL_ {
+      group someof {
+        COMMERCE_PAYPAL
+      }
+    },
+    MEDIAWIKI {
+      group someof {
+        MEDIAWIKIAUTH
+      }
+    },
+    MAIL {
+      group someof {
+        MAIL_REDIRECT,
+        SUNMAILER,
+        SIMPLENEWS,
+        PMGROWL,
+        MIMEMAIL,
+        MAILWIRE,
+        AMAZON_SES
+      }
+    },
+    COMMERCE_POSTFINANCE_ {
+      group someof {
+        COMMERCE_POSTFINANCE
+      }
+    },
+    MENU {
+      group someof {
+        VOID_MENU
+      }
+    },
+    FONT_YOUR_FACE {
+      group someof {
+        FONTYOURFACE
+      }
+    },
+    RULES {
+      group someof {
+        RULES_AUTOTAG
+      }
+    },
+    IMPORT_EXPORT {
+      group someof {
+        ADVOGATO_IMPORT
+      }
+    },
+    INFRASTRUCTURE {
+      group someof {
+        WUNDERBAR
+      }
+    },
+    SIMPLETEST {
+      group someof {
+        SIMPLETEST_AUTOMATOR
+      }
+    },
+    GEOLOCATION {
+      group someof {
+        GEOLOCATION_PROXIMITY
+      }
+    },
+    META_TAGS {
+      group someof {
+        METATAG
+      }
+    },
+    MULTILANGUAGE {
+      group someof {
+        LANGUAGEASSIGN,
+        PO_RE_IMPORTER,
+        TCONTACT,
+        TRANSLATION_OVERVIEW,
+        COUNTRYICONS,
+        TRANSLATION_HELPERS
+      }
+    },
+    SEARCH {
+      group someof {
+        SEARCH_CONFIG,
+        PORTERSTEMMER,
+        FRENCHSTEMMER,
+        LUCENEAPI,
+        SBP_ATTACH,
+        SEARCH_API_MULTI,
+        DANISHSTEMMER,
+        ZEND_LUCENE,
+        EXT_SEARCH_PAGE,
+        LUCENEAPI_VIEWS,
+        SEARCH_API_SOLR,
+        SEARCH_API_MONGODB,
+        SEARCH_API_SAVED_SEARCHES,
+        SEARCH_API_RANGES,
+        SEARCH_API_AJAX,
+        SEARCH_API,
+        SEARCH_API_SPELLCHECK,
+        SEARCH_API_ATTACHMENTS,
+        SEARCH_API_CONTEXT,
+        SEARCH_API_FACETS_PATHS
+      }
+    },
+    FLAGS {
+      group someof {
+        BOOKMARKORGANIZER,
+        FLAG_WEIGHTS,
+        FLAG_PAGE,
+        FLAG
+      }
+    },
+    TWITTER {
+      group someof {
+        TWEETBOARD
+      }
+    },
+    PERFORMANCE_AND_SCALABILITY {
+      group someof {
+        ENTITYCACHE_FLUSH,
+        CSSTIDY,
+        BOOST
+      }
+    },
+    MOBILE {
+      group someof {
+        MOBILE_TOOLS
+      }
+    },
+    DRUPAL_FOR_FACEBOOK {
+      group someof {
+        FB
+      }
+    },
+    TAXONOMY_FILTER {
+      group someof {
+        TF_VIEWS
+      }
+    },
+    UBERCART_PAYMENT {
+      group someof {
+        UC_ADYEN,
+        UC_BANK_TRANSFER
+      }
+    },
+    TEXT_MINING_API {
+      group someof {
+        TEXTMINING_API
+      }
+    },
+    USER_INTERFACE {
+      group someof {
+        SETTINGS_RESET_BUTTON,
+        RENDER,
+        SIMPLE_DIALOG,
+        MENUUX,
+        SWFADDRESS,
+        BLOCK_PARTY,
+        JQUERY_UI,
+        TEXTSIZE,
+        COMPACT_FORMS,
+        YNEWS,
+        SWITCHTHEME,
+        PAGESTYLE,
+        BLOCK_REFRESH,
+        TINYMCE_MCIMAGEMANAGER,
+        GALLERYFORMATTER,
+        UNIFORM,
+        MULTICOLUMNCHECKBOXESRADIOS,
+        COLLAPSIBLOCK,
+        CKEDITOR_LINK,
+        JQUERY_CDN,
+        EXTLINK,
+        FANCYBOX,
+        WYSIWYG,
+        DIALOG,
+        AJAX_POLL,
+        IMCE_WYSIWYG,
+        TYPEKIT,
+        LOGINZA,
+        ADDANOTHER,
+        KCFINDER,
+        HINT,
+        BUTTON_STYLE,
+        JAVASCRIPT_LOADER,
+        BLOCKQUOTE,
+        JQUERY_UPDATE
+      }
+    },
+    CORE_CUTTING_EDGE {
+      group someof {
+        EDGE
+      }
+    },
+    FLICKR {
+      group someof {
+        FLICKRRIPPR,
+        FLICKRAPI
+      }
+    },
+    SWF_TOOLS {
+      group someof {
+        SWFTOOLS
+      }
+    },
+    COMMERCE_CONTRIB_ {
+      group someof {
+        COMMERCE_BANK_TRANSFER,
+        COMMERCE_OGONE,
+        COMMERCE_ADDRESSBOOK,
+        COMMERCE_FINNISH_PAYMENTS,
+        COMMERCE_DELIVERY,
+        COMMERCE_PRODUCT_KEY,
+        COMMERCE_PAYFLOW_PRO,
+        COMMERCE_CHECKOUT_LOGIN,
+        COMMERCE_FIRSTDATA,
+        COMMERCE_SUBSCRIPTION,
+        COMMERCE_CYBERSOURCE,
+        COMMERCE_AUTHNET,
+        COMMERCE_AUTOSKU,
+        COMMERCE_FILE
+      }
+    },
+    ZEND_FRAMEWORK {
+      group someof {
+        ZEND_FEED,
+        ZEND
+      }
+    },
+    NODE_ACCESS {
+      group someof {
+        TAC_LITE,
+        SIMPLE_ACCESS
+      }
+    },
+    JANRAIN_ENGAGE {
+      group someof {
+        RPX_CORE
+      }
+    },
+    CACHE {
+      group someof {
+        CACHEROUTER
+      }
+    },
+    ORGANIC_GROUPS {
+      group someof {
+        OG_VIEWS,
+        OG_NODE_LINK,
+        OG_THEME,
+        OG_LANGUAGE,
+        OG_CREATE_PERMS,
+        OGFLICKRBLOCK,
+        OG_EMAIL_BLAST
+      }
+    },
+    FILTERS {
+      group someof {
+        GRAPHVIZ_NODEREF,
+        TEXTILE,
+        EXT_LINK_PAGE
+      }
+    },
+    STATISTICS {
+      group someof {
+        UNITRACK,
+        GOOGLEANALYTICS,
+        PIWIK_REPORTS,
+        GA_STATS,
+        ETRACKER
+      }
+    },
+    SERVICES_SERVERS {
+      group someof {
+        AMFSERVER
+      }
+    },
+    INPUT_FILTERS {
+      group someof {
+        PICASA_SLIDESHOW_FILTER,
+        SPAMSPAN,
+        SCRIBD_FILTER,
+        PATHOLOGIC,
+        FILETREE,
+        INTERWIKI,
+        BBCODE,
+        VIDEO_FILTER,
+        CHILI_HIGHLIGHTER
+      }
+    },
+    MEDIA {
+      group someof {
+        VIMEO_LINK_FORMATTER,
+        MEDIA_BROWSER_PLUS,
+        MEDIA_AMAZON,
+        IMAGE_FIELD_URL_REPLACER,
+        IMCE_MKDIR,
+        MEDIA_PEGTV,
+        IMCE_CROP,
+        PLUPLOAD,
+        IMCE
+      }
+    },
+    MULTILINGUAL_INTERNATIONALIZATION {
+      group someof {
+        I18N_COMMENTS
+      }
+    },
+    THE_CODING_DESIGNERS_SURVIVAL_KIT {
+      group someof {
+        SURVIVALKIT
+      }
+    },
+    FEEDS {
+      group someof {
+        FEEDS_TAMPER,
+        FEEDS_CRAWLER,
+        FEEDS_YOUTUBE
+      }
+    },
+    VIEWS {
+      group someof {
+        EVA,
+        VIEWS_PHP,
+        SEMANTICVIEWS,
+        VIEWS_TOOLTIP,
+        FULLCALENDAR,
+        VIEWS_CALC,
+        DRAGGABLEVIEWS,
+        BOOKTREE,
+        PEEK_SUMMARY,
+        VIEWS_SYSTEM,
+        EFQ_VIEWS,
+        VIEWS_OAI_PMH,
+        GALLERY_SUMMARY
+      }
+    },
+    TOOLS {
+      group someof {
+        MMS
+      }
+    },
+    DRUPAL_COMMERCE_OTHER {
+      group someof {
+        COMMERCE_EXTRA_PANES
+      }
+    },
+    MULTILINGUAL {
+      group someof {
+        GETTEXTAPI,
+        LANGUAGE_SWITCHER,
+        LANGUAGE_COOKIE,
+        TRANSLATION,
+        I18N_MEDIA,
+        ENTITY_TRANSLATION,
+        TITLE,
+        LANGUAGEICONS
+      }
+    },
+    THEME_RELATED {
+      group someof {
+        PAGE_THEME,
+        CONTENT_THEME
+      }
+    },
+    SEO_COMPLIANCE_CHECKER {
+      group someof {
+        SEO_CHECKER
+      }
+    },
+    THEME_TOOLS {
+      group someof {
+        OMEGA_TOOLS,
+        DELTA,
+        OMEGA_UI
+      }
+    }
+  }
+}
+
+// DEPENDENCIES
+
+IMAGE_URL_FORMATTER {
+  IMAGE_URL_FORMATTER -> FIELD;
+  IMAGE_URL_FORMATTER -> IMAGE;
+}
+COMMERCE_SAGEPAY_DIRECT {
+  COMMERCE_SAGEPAY_DIRECT -> COMMERCE;
+  COMMERCE_SAGEPAY_DIRECT -> COMMERCE_3D_SECURE;
+  COMMERCE_SAGEPAY_DIRECT -> COMMERCE_PAYMENT;
+}
+USER_ROLE_FIELD {
+  USER_ROLE_FIELD -> FIELD_UI;
+}
+FIELD_WRAPPERS {
+  FIELD_WRAPPERS -> FIELD;
+}
+PANTAREI_SIREN_CORE {
+  PANTAREI_SIREN_CORE -> TRANSLITERATION;
+  PANTAREI_SIREN_CORE -> HELP;
+  PANTAREI_SIREN_CORE -> CTOOLS;
+  PANTAREI_SIREN_CORE -> FIELD_UI;
+  PANTAREI_SIREN_CORE -> PAGE_MANAGER;
+  PANTAREI_SIREN_CORE -> TRIGGER;
+  PANTAREI_SIREN_CORE -> UPDATE;
+  PANTAREI_SIREN_CORE -> DEVEL;
+  PANTAREI_SIREN_CORE -> BULK_EXPORT;
+  PANTAREI_SIREN_CORE -> CODEFILTER;
+  PANTAREI_SIREN_CORE -> COLOR;
+  PANTAREI_SIREN_CORE -> USER_REFERENCE;
+  PANTAREI_SIREN_CORE -> ACTIONS_PERMISSIONS;
+  PANTAREI_SIREN_CORE -> TOKEN;
+  PANTAREI_SIREN_CORE -> TRACKER;
+  PANTAREI_SIREN_CORE -> INSERT;
+  PANTAREI_SIREN_CORE -> PATH;
+  PANTAREI_SIREN_CORE -> IMAGE;
+  PANTAREI_SIREN_CORE -> WYSIWYG;
+  PANTAREI_SIREN_CORE -> TAXONOMY;
+  PANTAREI_SIREN_CORE -> IMCE_WYSIWYG;
+  PANTAREI_SIREN_CORE -> ADMIN;
+  PANTAREI_SIREN_CORE -> STRONGARM;
+  PANTAREI_SIREN_CORE -> CONTEXTUAL;
+  PANTAREI_SIREN_CORE -> PANELS;
+  PANTAREI_SIREN_CORE -> FIELD_PERMISSIONS;
+  PANTAREI_SIREN_CORE -> COMMENT;
+  PANTAREI_SIREN_CORE -> LIBRARIES;
+  PANTAREI_SIREN_CORE -> PATHAUTO;
+  PANTAREI_SIREN_CORE -> DBLOG;
+  PANTAREI_SIREN_CORE -> ADVANCED_HELP;
+  PANTAREI_SIREN_CORE -> IMCE;
+  PANTAREI_SIREN_CORE -> VIEWS;
+  PANTAREI_SIREN_CORE -> PANELS_MINI;
+  PANTAREI_SIREN_CORE -> STYLIZER;
+  PANTAREI_SIREN_CORE -> HTMLPURIFIER;
+  PANTAREI_SIREN_CORE -> CTOOLS_ACCESS_RULESET;
+  PANTAREI_SIREN_CORE -> FEATURES;
+  PANTAREI_SIREN_CORE -> IMAGECACHE_PROFILES;
+  PANTAREI_SIREN_CORE -> BOOK;
+  PANTAREI_SIREN_CORE -> FIELD_GROUP;
+  PANTAREI_SIREN_CORE -> VIEWS_EXPORT;
+  PANTAREI_SIREN_CORE -> DASHBOARD;
+  PANTAREI_SIREN_CORE -> NUMBER;
+  PANTAREI_SIREN_CORE -> LINK;
+  PANTAREI_SIREN_CORE -> BACKUP_MIGRATE;
+  PANTAREI_SIREN_CORE -> FILE;
+  PANTAREI_SIREN_CORE -> LIST;
+  PANTAREI_SIREN_CORE -> TRANSLATION;
+  PANTAREI_SIREN_CORE -> NODE_REFERENCE;
+  PANTAREI_SIREN_CORE -> VIEWS_UI;
+  PANTAREI_SIREN_CORE -> SHORTCUT;
+  PANTAREI_SIREN_CORE -> VIEWS_CONTENT;
+  PANTAREI_SIREN_CORE -> PANELS_IPE;
+  PANTAREI_SIREN_CORE -> DIFF;
+  PANTAREI_SIREN_CORE -> STATISTICS;
+  PANTAREI_SIREN_CORE -> CTOOLS_CUSTOM_CONTENT;
+  PANTAREI_SIREN_CORE -> BLOCK;
+  PANTAREI_SIREN_CORE -> MENU;
+  PANTAREI_SIREN_CORE -> SEARCH;
+  PANTAREI_SIREN_CORE -> LOCALE;
+  PANTAREI_SIREN_CORE -> PHP;
+  PANTAREI_SIREN_CORE -> COLORBOX;
+  PANTAREI_SIREN_CORE -> BLOG;
+  PANTAREI_SIREN_CORE -> RDF;
+  PANTAREI_SIREN_CORE -> GETID3;
+  PANTAREI_SIREN_CORE -> OPTIONS;
+  PANTAREI_SIREN_CORE -> VIEWS_BULK_OPERATIONS;
+  PANTAREI_SIREN_CORE -> PANELS_NODE;
+}
+CLOSEDQUESTION {
+  CLOSEDQUESTION -> LIBRARIES;
+}
+YNEWS {
+  YNEWS -> VIEWS;
+}
+WEBFORM_PAYPAL {
+  WEBFORM_PAYPAL -> WEBFORM;
+}
+FILEFIELD_NGINX_PROGRESS {
+  FILEFIELD_NGINX_PROGRESS -> FILE;
+}
+FIELD_SLIDESHOW {
+  FIELD_SLIDESHOW -> IMAGE;
+}
+SECURE_CODE_REVIEW {
+  SECURE_CODE_REVIEW -> CODER_UPGRADE;
+}
+IMCE_CROP {
+  IMCE_CROP -> IMCE;
+}
+OWNTERM {
+  OWNTERM -> TAXONOMY;
+}
+EVA {
+  EVA -> VIEWS;
+}
+DEBUT_EVENT {
+  DEBUT_EVENT -> VIEWS;
+  DEBUT_EVENT -> CALENDAR;
+  DEBUT_EVENT -> STRONGARM;
+  DEBUT_EVENT -> MEDIA;
+  DEBUT_EVENT -> FEATURES;
+  DEBUT_EVENT -> DATE;
+  DEBUT_EVENT -> DATE_POPUP;
+  DEBUT_EVENT -> TAXONOMY;
+  DEBUT_EVENT -> CONTEXT;
+}
+DEFAULTCONTENT {
+  DEFAULTCONTENT -> FEATURES;
+}
+LUCENEAPI {
+  LUCENEAPI -> CTOOLS;
+  LUCENEAPI -> SEARCH;
+}
+APACHESOLR_PAGE {
+  APACHESOLR_PAGE -> APACHESOLR;
+  APACHESOLR_PAGE -> ENTITY;
+}
+TAC_LITE {
+  TAC_LITE -> TAXONOMY;
+}
+VCARD {
+  VCARD -> PROFILE;
+}
+MANUALCROP {
+  MANUALCROP -> IMAGE;
+}
+ZEND_FEED {
+  ZEND_FEED -> ZEND;
+}
+COMMERCE_PAYPAL {
+  COMMERCE_PAYPAL -> COMMERCE;
+  COMMERCE_PAYPAL -> COMMERCE_UI;
+  COMMERCE_PAYPAL -> COMMERCE_ORDER;
+  COMMERCE_PAYPAL -> COMMERCE_PAYMENT;
+}
+PATHAUTO_PERSIST {
+  PATHAUTO_PERSIST -> PATHAUTO;
+}
+SEARCH_API_MONGODB {
+  SEARCH_API_MONGODB -> MONGODB;
+  SEARCH_API_MONGODB -> SEARCH_API;
+}
+TINYMCE_MCIMAGEMANAGER {
+  TINYMCE_MCIMAGEMANAGER -> LIBRARIES;
+  TINYMCE_MCIMAGEMANAGER -> WYSIWYG;
+}
+SEARCH_CONFIG {
+  SEARCH_CONFIG -> SEARCH;
+}
+TERM_RELATIONS {
+  TERM_RELATIONS -> TAXONOMY;
+}
+MIMEMAIL {
+  MIMEMAIL -> MAILSYSTEM;
+}
+ANTI_EXISTING_FIELD {
+  ANTI_EXISTING_FIELD -> FIELD_UI;
+}
+UC_RECURRING {
+  UC_RECURRING -> UC_CART;
+}
+IMCE_MKDIR {
+  IMCE_MKDIR -> IMCE;
+}
+SEARCH_FACETAPI {
+  SEARCH_FACETAPI -> FACETAPI;
+}
+QFORMS_EXTRA {
+  QFORMS_EXTRA -> QFORMS;
+}
+CJUNCTION {
+  CJUNCTION -> FIELD;
+  CJUNCTION -> TAXONOMY;
+}
+DOMAIN_BLOCKS {
+  DOMAIN_BLOCKS -> DOMAIN;
+  DOMAIN_BLOCKS -> BLOCK;
+}
+CONTACT_CC {
+  CONTACT_CC -> CONTACT;
+}
+BOOK_DELETE {
+  BOOK_DELETE -> BOOK;
+}
+FIELD_GROUP {
+  FIELD_GROUP -> FIELD;
+}
+KHAAAAAAAN {
+  KHAAAAAAAN -> BAD_JUDGEMENT;
+}
+DEBUT {
+  DEBUT -> FEATURES;
+}
+EXT_SEARCH_PAGE {
+  EXT_SEARCH_PAGE -> SEARCH_API_PAGE;
+}
+TERM_REFERENCE_TREE {
+  TERM_REFERENCE_TREE -> TAXONOMY;
+  TERM_REFERENCE_TREE -> OPTIONS;
+}
+PRIORITIES {
+  PRIORITIES -> TAXONOMY;
+}
+COMMERCE_3D_SECURE {
+  COMMERCE_3D_SECURE -> COMMERCE;
+  COMMERCE_3D_SECURE -> COMMERCE_ORDER;
+  COMMERCE_3D_SECURE -> COMMERCE_PAYMENT;
+}
+DEBUT_WYSIWYG {
+  DEBUT_WYSIWYG -> MEDIA;
+  DEBUT_WYSIWYG -> FEATURES;
+  DEBUT_WYSIWYG -> DEBUT;
+  DEBUT_WYSIWYG -> WYSIWYG;
+  DEBUT_WYSIWYG -> ENTITY;
+}
+TITLE {
+  TITLE -> LOCALE;
+}
+VIDEO_FILTER_FIELD {
+  VIDEO_FILTER_FIELD -> VIDEO_FILTER;
+}
+TAXONOMY_MENU {
+  TAXONOMY_MENU -> MENU;
+  TAXONOMY_MENU -> TAXONOMY;
+}
+LANGUAGE_SWITCHER {
+  LANGUAGE_SWITCHER -> LOCALE;
+}
+MICRO {
+  MICRO -> ENTITY;
+}
+PATHAUTO {
+  PATHAUTO -> PATH;
+  PATHAUTO -> TOKEN;
+}
+SEARCH404 {
+  SEARCH404 -> SEARCH;
+}
+SEARCH_API_SOLR {
+  SEARCH_API_SOLR -> SEARCH_API;
+}
+FEEDS_TAMPER {
+  FEEDS_TAMPER -> FEEDS;
+}
+FILE_ALIASES {
+  FILE_ALIASES -> PATH;
+  FILE_ALIASES -> FILEFIELD_PATHS;
+}
+DEVICE_GEOLOCATION {
+  DEVICE_GEOLOCATION -> SMART_IP;
+}
+PROFILE_ROLE {
+  PROFILE_ROLE -> PROFILE;
+}
+COLORTHEME {
+  COLORTHEME -> COLOR;
+}
+BOOK_MANAGER {
+  BOOK_MANAGER -> BOOK;
+}
+CCK_BLOCKS {
+  CCK_BLOCKS -> BLOCK;
+}
+MENU_BLOCK {
+  MENU_BLOCK -> MENU;
+}
+WORKBENCH {
+  WORKBENCH -> VIEWS;
+}
+WORKBENCH_ACCESS {
+  WORKBENCH_ACCESS -> TAXONOMY;
+}
+COMMERCE_PAGSEGURO {
+  COMMERCE_PAGSEGURO -> COMMERCE;
+  COMMERCE_PAGSEGURO -> COMMERCE_PAYMENT;
+}
+MT_ANALYSIS {
+  MT_ANALYSIS -> MT_TASK;
+}
+BLOGINFO {
+  BLOGINFO -> BLOG;
+}
+UC_PRODUCT_MINMAX {
+  UC_PRODUCT_MINMAX -> UC_PRODUCT;
+}
+MENU_ITEM_VISIBILITY {
+  MENU_ITEM_VISIBILITY -> MENU;
+}
+LANGUAGEICONS {
+  LANGUAGEICONS -> LOCALE;
+}
+TAXONOMY_MENU_TRAILS {
+  TAXONOMY_MENU_TRAILS -> TAXONOMY;
+}
+ENCSET {
+  ENCSET -> FIELD;
+}
+NAMEDB {
+  NAMEDB -> NAME;
+}
+COMMERCE_BANK_TRANSFER {
+  COMMERCE_BANK_TRANSFER -> COMMERCE;
+  COMMERCE_BANK_TRANSFER -> COMMERCE_UI;
+  COMMERCE_BANK_TRANSFER -> COMMERCE_ORDER;
+  COMMERCE_BANK_TRANSFER -> COMMERCE_PAYMENT;
+}
+FLEXIACCESS {
+  FLEXIACCESS -> ACL;
+}
+GPUI {
+  GPUI -> GRAMMAR_PARSER;
+}
+COMMERCE_AUTOSKU {
+  COMMERCE_AUTOSKU -> COMMERCE_PRODUCT;
+}
+DATE_REPEAT_PRESETS {
+  DATE_REPEAT_PRESETS -> DATE_REPEAT;
+}
+FIVESTAR {
+  FIVESTAR -> VOTINGAPI;
+}
+GALLERY_SUMMARY {
+  GALLERY_SUMMARY -> VIEWS;
+}
+CONTEXT_FIELD {
+  CONTEXT_FIELD -> BOXES;
+  CONTEXT_FIELD -> VIEWS_BOXES;
+  CONTEXT_FIELD -> CONTEXT;
+  CONTEXT_FIELD -> CONTEXT_UI;
+}
+USER_RELATIONSHIP_LIMITS {
+  USER_RELATIONSHIP_LIMITS -> USER_RELATIONSHIPS_API;
+  USER_RELATIONSHIP_LIMITS -> USER_RELATIONSHIPS_UI;
+}
+MEDIA_DEV {
+  MEDIA_DEV -> HELP;
+  MEDIA_DEV -> FIELD_UI;
+  MEDIA_DEV -> STYLES;
+  MEDIA_DEV -> DASHBOARD;
+  MEDIA_DEV -> FILE_STYLES;
+  MEDIA_DEV -> DEVEL;
+  MEDIA_DEV -> MEDIA;
+  MEDIA_DEV -> FILE;
+  MEDIA_DEV -> COLOR;
+  MEDIA_DEV -> PLUPLOAD;
+  MEDIA_DEV -> MEDIA_YOUTUBE;
+  MEDIA_DEV -> SHORTCUT;
+  MEDIA_DEV -> MEDIA_INTERNET;
+  MEDIA_DEV -> PATH;
+  MEDIA_DEV -> IMAGE;
+  MEDIA_DEV -> TOOLBAR;
+  MEDIA_DEV -> WYSIWYG;
+  MEDIA_DEV -> TAXONOMY;
+  MEDIA_DEV -> BLOCK;
+  MEDIA_DEV -> MENU;
+  MEDIA_DEV -> SEARCH;
+  MEDIA_DEV -> CONTEXTUAL;
+  MEDIA_DEV -> COMMENT;
+  MEDIA_DEV -> RDF;
+  MEDIA_DEV -> DBLOG;
+}
+USER_TWEAKS {
+  USER_TWEAKS -> VARS_2_X_;
+}
+TAXONOMY_FORMATTER {
+  TAXONOMY_FORMATTER -> TAXONOMY;
+}
+QUIZ {
+  QUIZ -> TAXONOMY;
+}
+MEDIA_BROWSER_PLUS {
+  MEDIA_BROWSER_PLUS -> MEDIA;
+  MEDIA_BROWSER_PLUS -> TAXONOMY;
+}
+FAQ_ASK {
+  FAQ_ASK -> FAQ;
+}
+RRDTOOL {
+  RRDTOOL -> RRDTOOL_MONITORS;
+}
+FILTERSIE {
+  FILTERSIE -> IMAGE;
+}
+PQP {
+  PQP -> DEVEL;
+  PQP -> PERFORMANCE;
+}
+MENU_ITEM_CONTAINER {
+  MENU_ITEM_CONTAINER -> MENU;
+}
+VIEWS_TOOLTIP {
+  VIEWS_TOOLTIP -> VIEWS;
+  VIEWS_TOOLTIP -> TIPSY;
+}
+OG_LANGUAGE {
+  OG_LANGUAGE -> LOCALE;
+  OG_LANGUAGE -> OG_CONTEXT;
+}
+HTML5_TOOLS {
+  HTML5_TOOLS -> FIELD;
+  HTML5_TOOLS -> ELEMENTS;
+}
+MYHOOK {
+  MYHOOK -> MYHOOKADMIN;
+}
+FEATURES_OVERRIDE {
+  FEATURES_OVERRIDE -> CTOOLS;
+  FEATURES_OVERRIDE -> FEATURES;
+}
+SANITIZABLE {
+  SANITIZABLE -> FILTER;
+}
+USERPOINTS_NODEACCESS {
+  USERPOINTS_NODEACCESS -> USERPOINTS;
+}
+LUCENEAPI_VIEWS {
+  LUCENEAPI_VIEWS -> VIEWS;
+  LUCENEAPI_VIEWS -> LUCENEAPI;
+}
+NODECONNECT {
+  NODECONNECT -> NODE_REFERENCE;
+}
+MASS_MESSAGING {
+  MASS_MESSAGING -> VIEWS;
+}
+TRANSLATION_OVERVIEW {
+  TRANSLATION_OVERVIEW -> TRANSLATION;
+}
+GET_NODE_IMG {
+  GET_NODE_IMG -> FIELD;
+  GET_NODE_IMG -> IMAGE;
+}
+FLICKRRIPPR {
+  FLICKRRIPPR -> FLICKRAPI;
+}
+REINDEX {
+  REINDEX -> SEARCH;
+}
+SESSION_LIMIT {
+  SESSION_LIMIT -> TRIGGER;
+}
+CONTEXT_BLOCK_CLASS {
+  CONTEXT_BLOCK_CLASS -> CONTEXT;
+}
+COMMERCE_PAGTODIGITAL {
+  COMMERCE_PAGTODIGITAL -> COMMERCE;
+  COMMERCE_PAGTODIGITAL -> COMMERCE_PAYMENT;
+}
+COMMERCE_COUPON {
+  COMMERCE_COUPON -> COMMERCE;
+}
+FEEDS {
+  FEEDS -> CTOOLS;
+  FEEDS -> JOB_SCHEDULER;
+}
+COMMERCE_CHECKOUT_LOGIN {
+  COMMERCE_CHECKOUT_LOGIN -> COMMERCE_ORDER;
+  COMMERCE_CHECKOUT_LOGIN -> COMMERCE_CHECKOUT;
+}
+WEBFORM_RULES {
+  WEBFORM_RULES -> WEBFORM;
+  WEBFORM_RULES -> RULES;
+}
+SEARCH_API_SPELLCHECK {
+  SEARCH_API_SPELLCHECK -> SEARCH_API;
+}
+WEATHER {
+  WEATHER -> BLOCK;
+}
+TAXONOMY_FILTER {
+  TAXONOMY_FILTER -> TAXONOMY;
+}
+COMMERCE_PDF_INVOICE {
+  COMMERCE_PDF_INVOICE -> VIEWS_VIEW_FIELD;
+  COMMERCE_PDF_INVOICE -> COMMERCE_ORDER;
+  COMMERCE_PDF_INVOICE -> VIEWS_PDF;
+}
+IMCE_WYSIWYG {
+  IMCE_WYSIWYG -> WYSIWYG;
+  IMCE_WYSIWYG -> IMCE;
+}
+ANONYMOUS_POSTING {
+  ANONYMOUS_POSTING -> FIELD;
+}
+PO_RE_IMPORTER {
+  PO_RE_IMPORTER -> LOCALE;
+}
+EFQ_VIEWS {
+  EFQ_VIEWS -> VIEWS;
+  EFQ_VIEWS -> ENTITY;
+}
+COMMERCE_AUTHNET {
+  COMMERCE_AUTHNET -> COMMERCE;
+  COMMERCE_AUTHNET -> COMMERCE_UI;
+  COMMERCE_AUTHNET -> COMMERCE_ORDER;
+  COMMERCE_AUTHNET -> COMMERCE_PAYMENT;
+}
+TUMBLR_CONNECT {
+  TUMBLR_CONNECT -> SIMPLEHTMLDOM;
+}
+MODEL {
+  MODEL -> VIEWS;
+  MODEL -> ENTITY;
+}
+OPENOUTREACH {
+  OPENOUTREACH -> HELP;
+  OPENOUTREACH -> FIELD_UI;
+  OPENOUTREACH -> FEATURES;
+  OPENOUTREACH -> PATH;
+  OPENOUTREACH -> IMAGE;
+  OPENOUTREACH -> TAXONOMY;
+  OPENOUTREACH -> BLOCK;
+  OPENOUTREACH -> DASHBOARD;
+  OPENOUTREACH -> NUMBER;
+  OPENOUTREACH -> STRONGARM;
+  OPENOUTREACH -> MENU;
+  OPENOUTREACH -> SEARCH;
+  OPENOUTREACH -> SUBPROFILES;
+  OPENOUTREACH -> COMMENT;
+  OPENOUTREACH -> FILE;
+  OPENOUTREACH -> LIST;
+  OPENOUTREACH -> RDF;
+  OPENOUTREACH -> COLOR;
+  OPENOUTREACH -> OPTIONS;
+  OPENOUTREACH -> DBLOG;
+}
+ADMIN_MENU_DROPDOWN {
+  ADMIN_MENU_DROPDOWN -> ADMIN_MENU;
+}
+IMAGECACHE_PROFILES {
+  IMAGECACHE_PROFILES -> IMAGE;
+}
+ADDTHIS {
+  ADDTHIS -> FIELD;
+}
+VIEWS_SYSTEM {
+  VIEWS_SYSTEM -> VIEWS;
+}
+MEDIA {
+  MEDIA -> FILE_STYLES;
+  MEDIA -> FILE;
+  MEDIA -> IMAGE;
+}
+INTLINKS {
+  INTLINKS -> FILTER;
+}
+ENTITYCACHE_FLUSH {
+  ENTITYCACHE_FLUSH -> ENTITYCACHE;
+}
+EXTENDED_PAYPAL {
+  EXTENDED_PAYPAL -> SIMPLE_PAYPAL;
+}
+LINKIT_VIEWS {
+  LINKIT_VIEWS -> VIEWS;
+  LINKIT_VIEWS -> LINKIT;
+}
+APACHESOLR_OG {
+  APACHESOLR_OG -> APACHESOLR;
+  APACHESOLR_OG -> OG;
+}
+COMMERCE_SERMEPA {
+  COMMERCE_SERMEPA -> COMMERCE;
+  COMMERCE_SERMEPA -> COMMERCE_PAYMENT;
+}
+SEARCH_API_SAVED_SEARCHES {
+  SEARCH_API_SAVED_SEARCHES -> SEARCH_API;
+}
+INTEGERDATE {
+  INTEGERDATE -> FIELD;
+}
+SHAREPOINT {
+  SHAREPOINT -> FIELD;
+}
+VIMEO {
+  VIMEO -> FIELD;
+  VIMEO -> IMAGE;
+}
+RULES_AUTOTAG {
+  RULES_AUTOTAG -> RULES;
+}
+MAESTRO {
+  MAESTRO -> TRIGGER;
+}
+AMAZON_STORE {
+  AMAZON_STORE -> AMAZON;
+}
+COMMERCE_SAGEPAY_FORM {
+  COMMERCE_SAGEPAY_FORM -> COMMERCE;
+  COMMERCE_SAGEPAY_FORM -> COMMERCE_PAYMENT;
+}
+PRIVATECOMMENTS {
+  PRIVATECOMMENTS -> COMMENT;
+}
+RECURLY {
+  RECURLY -> LIBRARIES;
+}
+APC_QUEUE {
+  APC_QUEUE -> KEYVALUEQUEUE;
+}
+FIELD_REDIRECTION {
+  FIELD_REDIRECTION -> FIELD;
+}
+AJAX_POLL {
+  AJAX_POLL -> POLL;
+}
+CLOUD_ZOOM {
+  CLOUD_ZOOM -> IMAGE;
+}
+COMMERCE_MOIP {
+  COMMERCE_MOIP -> COMMERCE;
+  COMMERCE_MOIP -> COMMERCE_PAYMENT;
+}
+IMAGECACHE_ACTIONS {
+  IMAGECACHE_ACTIONS -> IMAGE;
+}
+SIMPLENEWS {
+  SIMPLENEWS -> TAXONOMY;
+}
+STATICMAP {
+  STATICMAP -> GEOFIELD;
+}
+SIMPLETIMESHEET {
+  SIMPLETIMESHEET -> VIEWS;
+  SIMPLETIMESHEET -> VIEWS_PHP;
+  SIMPLETIMESHEET -> CTOOLS;
+  SIMPLETIMESHEET -> FIELD_UI;
+  SIMPLETIMESHEET -> FEATURES;
+  SIMPLETIMESHEET -> DATE_POPUP;
+  SIMPLETIMESHEET -> PATH;
+  SIMPLETIMESHEET -> REFERENCES;
+  SIMPLETIMESHEET -> NUMBER;
+  SIMPLETIMESHEET -> DATE_API;
+  SIMPLETIMESHEET -> DATE_VIEWS;
+  SIMPLETIMESHEET -> DATE;
+  SIMPLETIMESHEET -> LIST;
+  SIMPLETIMESHEET -> NODE_REFERENCE;
+  SIMPLETIMESHEET -> OPTIONS;
+  SIMPLETIMESHEET -> VIEWS_DATA_EXPORT;
+  SIMPLETIMESHEET -> USER_REFERENCE;
+  SIMPLETIMESHEET -> TOKEN;
+}
+SPAMSPAN {
+  SPAMSPAN -> FILTER;
+}
+IMAGEMARKER {
+  IMAGEMARKER -> IMAGE;
+}
+COMMERCE_PRODUCT_BUNDLE {
+  COMMERCE_PRODUCT_BUNDLE -> COMMERCE;
+}
+ADMIN_TOOLS {
+  ADMIN_TOOLS -> ADMIN;
+  ADMIN_TOOLS -> MENU;
+}
+CONTEXT_SSL {
+  CONTEXT_SSL -> CONTEXT;
+}
+DEBUT_BLOG {
+  DEBUT_BLOG -> VIEWS;
+  DEBUT_BLOG -> STRONGARM;
+  DEBUT_BLOG -> CAPTCHA;
+  DEBUT_BLOG -> MEDIA;
+  DEBUT_BLOG -> FEATURES;
+  DEBUT_BLOG -> TAXONOMY;
+  DEBUT_BLOG -> STYLES;
+  DEBUT_BLOG -> CONTEXT;
+}
+ZEND_LUCENE {
+  ZEND_LUCENE -> SEARCH_API;
+  ZEND_LUCENE -> ZEND;
+}
+TAXONOMY_REPLACE {
+  TAXONOMY_REPLACE -> TAXONOMY;
+}
+COMICDROP {
+  COMICDROP -> IMAGE;
+}
+OMEGA_PROFILE {
+  OMEGA_PROFILE -> HELP;
+  OMEGA_PROFILE -> VIEWS;
+  OMEGA_PROFILE -> CTOOLS;
+  OMEGA_PROFILE -> FIELD_UI;
+  OMEGA_PROFILE -> ADMIN_TOOLS;
+  OMEGA_PROFILE -> CONTEXT_UI;
+  OMEGA_PROFILE -> NUMBER;
+  OMEGA_PROFILE -> DELTA;
+  OMEGA_PROFILE -> DEVEL;
+  OMEGA_PROFILE -> LIST;
+  OMEGA_PROFILE -> FILE;
+  OMEGA_PROFILE -> COLOR;
+  OMEGA_PROFILE -> VIEWS_UI;
+  OMEGA_PROFILE -> MENU_EXPANDED;
+  OMEGA_PROFILE -> CONTEXT;
+  OMEGA_PROFILE -> TOKEN;
+  OMEGA_PROFILE -> CLIENT_UI_CONTROL;
+  OMEGA_PROFILE -> GLOBALREDIRECT;
+  OMEGA_PROFILE -> EXTLINK;
+  OMEGA_PROFILE -> PATH;
+  OMEGA_PROFILE -> IMAGE;
+  OMEGA_PROFILE -> TAXONOMY;
+  OMEGA_PROFILE -> BLOCK;
+  OMEGA_PROFILE -> ADMIN;
+  OMEGA_PROFILE -> MENU;
+  OMEGA_PROFILE -> CONTEXTUAL;
+  OMEGA_PROFILE -> SEARCH;
+  OMEGA_PROFILE -> DELTA_UI;
+  OMEGA_PROFILE -> COMMENT;
+  OMEGA_PROFILE -> PATHAUTO;
+  OMEGA_PROFILE -> RDF;
+  OMEGA_PROFILE -> DBLOG;
+  OMEGA_PROFILE -> OPTIONS;
+}
+MENU_ATTRIBUTES {
+  MENU_ATTRIBUTES -> MENU;
+}
+ISBN2NODE {
+  ISBN2NODE -> IMAGE;
+}
+TAXONOMY_TREE_SELECT {
+  TAXONOMY_TREE_SELECT -> TAXONOMY;
+  TAXONOMY_TREE_SELECT -> OPTIONS;
+}
+LANGUAGEASSIGN {
+  LANGUAGEASSIGN -> LOCALE;
+}
+ENABLED_MODULES {
+  ENABLED_MODULES -> VIEWS;
+}
+BUNDLECACHE {
+  BUNDLECACHE -> TABLE;
+}
+FLAG_WEIGHTS {
+  FLAG_WEIGHTS -> FLAG;
+}
+EXAMPLE_WEB_SCRAPER {
+  EXAMPLE_WEB_SCRAPER -> FEEDS_TAMPER;
+  EXAMPLE_WEB_SCRAPER -> FEEDS_SELFNODE_PROCESSOR;
+  EXAMPLE_WEB_SCRAPER -> FEEDS_CRAWLER;
+  EXAMPLE_WEB_SCRAPER -> FEATURES;
+  EXAMPLE_WEB_SCRAPER -> FEEDS_XPATHPARSER;
+  EXAMPLE_WEB_SCRAPER -> FEEDS;
+}
+DOMAIN_XMLSITEMAP {
+  DOMAIN_XMLSITEMAP -> XMLSITEMAP;
+  DOMAIN_XMLSITEMAP -> DOMAIN;
+}
+UC_FAVORDER {
+  UC_FAVORDER -> UC_CART;
+  UC_FAVORDER -> BLOCK;
+}
+OG_EMAIL_BLAST {
+  OG_EMAIL_BLAST -> OG_UI;
+}
+FEEDS_CRAWLER {
+  FEEDS_CRAWLER -> FEEDS;
+}
+COMMENT_ALLOW_ANONYMOUS {
+  COMMENT_ALLOW_ANONYMOUS -> COMMENT;
+}
+TRANSLATION {
+  TRANSLATION -> LOCALE;
+}
+COMMERCE_EXTRA_PANES {
+  COMMERCE_EXTRA_PANES -> CTOOLS;
+  COMMERCE_EXTRA_PANES -> COMMERCE_CHECKOUT;
+}
+LANGUAGE_COOKIE {
+  LANGUAGE_COOKIE -> LOCALE;
+}
+CONTACT_FORMS {
+  CONTACT_FORMS -> CONTACT;
+}
+COMMERCE_GOOGLE_ANALYTICS {
+  COMMERCE_GOOGLE_ANALYTICS -> GOOGLEANALYTICS;
+  COMMERCE_GOOGLE_ANALYTICS -> COMMERCE;
+}
+FEATURES_PLUMBER {
+  FEATURES_PLUMBER -> CTOOLS;
+  FEATURES_PLUMBER -> FEATURES;
+}
+COMMERCE_OPTION {
+  COMMERCE_OPTION -> COMMERCE;
+}
+MERGE_COMMENTS {
+  MERGE_COMMENTS -> COMMENT;
+}
+CONTEXT_DOMAIN {
+  CONTEXT_DOMAIN -> CONTEXT;
+}
+FIELD_VALIDATION {
+  FIELD_VALIDATION -> FIELD;
+  FIELD_VALIDATION -> FIELD_UI;
+}
+MT_KARMA {
+  MT_KARMA -> MT_TASK;
+  MT_KARMA -> ENCSET;
+}
+FLAG_PAGE {
+  FLAG_PAGE -> FLAG;
+}
+DANISHSTEMMER {
+  DANISHSTEMMER -> SEARCH;
+}
+SEARCH_API_ATTACHMENTS {
+  SEARCH_API_ATTACHMENTS -> SEARCH_API;
+}
+TAXONOMY_CSV {
+  TAXONOMY_CSV -> TAXONOMY;
+}
+COMMERCE_FIELDGROUP_PANES {
+  COMMERCE_FIELDGROUP_PANES -> COMMERCE;
+  COMMERCE_FIELDGROUP_PANES -> FIELD_GROUP;
+}
+PICASA_NODE_ALBUM {
+  PICASA_NODE_ALBUM -> ZEND;
+}
+COMMERCE_DELIVERY {
+  COMMERCE_DELIVERY -> VIEWS;
+  COMMERCE_DELIVERY -> COMMERCE;
+  COMMERCE_DELIVERY -> COMMERCE_LINE_ITEM;
+  COMMERCE_DELIVERY -> COMMERCE_ORDER;
+  COMMERCE_DELIVERY -> COMMERCE_PRODUCT;
+  COMMERCE_DELIVERY -> RULES;
+  COMMERCE_DELIVERY -> ENTITY;
+}
+VOID_MENU {
+  VOID_MENU -> MENU;
+}
+MENUTREE {
+  MENUTREE -> MENU;
+}
+FACETAPI {
+  FACETAPI -> CTOOLS;
+}
+SEMANTIC_FIELDS {
+  SEMANTIC_FIELDS -> FIELD;
+  SEMANTIC_FIELDS -> FIELD_UI;
+}
+KCFINDER {
+  KCFINDER -> WYSIWYG;
+}
+COMMERCE_FINNISH_PAYMENTS {
+  COMMERCE_FINNISH_PAYMENTS -> COMMERCE;
+  COMMERCE_FINNISH_PAYMENTS -> COMMERCE_PAYMENT;
+}
+DOMAIN_CTOOLS {
+  DOMAIN_CTOOLS -> CTOOLS;
+  DOMAIN_CTOOLS -> DOMAIN;
+}
+DOMAIN_PATH {
+  DOMAIN_PATH -> PATH;
+  DOMAIN_PATH -> DOMAIN;
+}
+SINGLE_PAGE_WEBSITE {
+  SINGLE_PAGE_WEBSITE -> MENU;
+}
+FACETAPI_TAGCLOUD {
+  FACETAPI_TAGCLOUD -> FACETAPI;
+}
+USER_FORCE_TERM {
+  USER_FORCE_TERM -> TAXONOMY;
+}
+ADMIN_PANE {
+  ADMIN_PANE -> MENU_BLOCK;
+  ADMIN_PANE -> TOOLBAR;
+}
+SEMANTICVIEWS {
+  SEMANTICVIEWS -> VIEWS;
+}
+BEAN {
+  BEAN -> CTOOLS;
+  BEAN -> ENTITY;
+}
+BREADCRUMB {
+  BREADCRUMB -> BLOCK;
+}
+DENY_ACCESS {
+  DENY_ACCESS -> NODE;
+}
+MUCHOMENU {
+  MUCHOMENU -> PANELS_MINI;
+  MUCHOMENU -> CTOOLS;
+}
+NICE_MENUS {
+  NICE_MENUS -> MENU;
+}
+FIELDACTIONS {
+  FIELDACTIONS -> CONTENT;
+}
+APACHESOLR_AUTOCOMPLETE {
+  APACHESOLR_AUTOCOMPLETE -> APACHESOLR;
+  APACHESOLR_AUTOCOMPLETE -> APACHESOLR_SEARCH;
+}
+OG_THEME {
+  OG_THEME -> OG_CONTEXT;
+}
+COMMERCE_CHEQUE {
+  COMMERCE_CHEQUE -> COMMERCE;
+  COMMERCE_CHEQUE -> COMMERCE_PAYMENT;
+}
+PIWIK_REPORTS {
+  PIWIK_REPORTS -> PIWIK;
+}
+MEDIA_AMAZON {
+  MEDIA_AMAZON -> AWSSDK;
+  MEDIA_AMAZON -> LIBRARIES;
+}
+DND_CHARACTER {
+  DND_CHARACTER -> FEATURES;
+  DND_CHARACTER -> LIST;
+  DND_CHARACTER -> DND_FIELDS;
+  DND_CHARACTER -> FIELD_GROUP;
+  DND_CHARACTER -> NUMBER;
+}
+AUTORDF {
+  AUTORDF -> SEARCH;
+  AUTORDF -> TAXONOMY;
+}
+RELATION {
+  RELATION -> ENTITY;
+}
+TAXONOMY_DUPECHECK {
+  TAXONOMY_DUPECHECK -> TAXONOMY;
+}
+TAXONOMY_DISPLAY {
+  TAXONOMY_DISPLAY -> TAXONOMY;
+}
+LEXICON {
+  LEXICON -> FIELD;
+  LEXICON -> TAXONOMY;
+}
+DEBUT_MEDIA {
+  DEBUT_MEDIA -> VIEWS;
+  DEBUT_MEDIA -> MEDIA_INTERNET;
+  DEBUT_MEDIA -> FEATURES;
+  DEBUT_MEDIA -> STYLES;
+  DEBUT_MEDIA -> CONTEXT;
+  DEBUT_MEDIA -> MEDIA_YOUTUBE;
+}
+COMMERCE_PAYMENT_EWAY {
+  COMMERCE_PAYMENT_EWAY -> COMMERCE;
+  COMMERCE_PAYMENT_EWAY -> COMMERCE_UI;
+  COMMERCE_PAYMENT_EWAY -> COMMERCE_ORDER;
+  COMMERCE_PAYMENT_EWAY -> COMMERCE_PAYMENT;
+}
+COMMERCE_BPC {
+  COMMERCE_BPC -> COMMERCE_PRODUCT_UI;
+}
+SERIAL {
+  SERIAL -> FIELD;
+}
+STOCK {
+  STOCK -> STOCKAPI;
+}
+PROCESS_API {
+  PROCESS_API -> ENTITY;
+}
+TEXTMINING_API {
+  TEXTMINING_API -> PROCESS_API;
+}
+COMMERCE_FIRSTDATA {
+  COMMERCE_FIRSTDATA -> COMMERCE;
+  COMMERCE_FIRSTDATA -> COMMERCE_UI;
+  COMMERCE_FIRSTDATA -> COMMERCE_ORDER;
+  COMMERCE_FIRSTDATA -> COMMERCE_CUSTOMER;
+  COMMERCE_FIRSTDATA -> COMMERCE_PAYMENT;
+}
+UNIFORM {
+  UNIFORM -> LIBRARIES;
+}
+COMMERCE_OGONE {
+  COMMERCE_OGONE -> COMMERCE;
+  COMMERCE_OGONE -> COMMERCE_UI;
+  COMMERCE_OGONE -> COMMERCE_ORDER;
+  COMMERCE_OGONE -> COMMERCE_PAYMENT;
+}
+SBP_ATTACH {
+  SBP_ATTACH -> SEARCH_FILES;
+  SBP_ATTACH -> FILE;
+  SBP_ATTACH -> SEARCH_BY_PAGE;
+}
+PARSER_ICAL {
+  PARSER_ICAL -> DATE_API;
+  PARSER_ICAL -> FEEDS;
+}
+CLOSURE {
+  CLOSURE -> LIBRARIES;
+}
+USER_DIFF {
+  USER_DIFF -> USER_REVISION;
+  USER_DIFF -> DIFF;
+}
+CF {
+  CF -> CF_ERROR;
+}
+OG_NODE_LINK {
+  OG_NODE_LINK -> OG;
+}
+AMAZON_SES {
+  AMAZON_SES -> CREEPER;
+}
+AUTOCOMPLETE_DELUXE {
+  AUTOCOMPLETE_DELUXE -> TAXONOMY;
+  AUTOCOMPLETE_DELUXE -> OPTIONS;
+}
+CHANNELS {
+  CHANNELS -> CHANNELS_SERVICE;
+  CHANNELS -> PROCESS_API;
+  CHANNELS -> ENTITY;
+}
+DEBUT_COMMENT {
+  DEBUT_COMMENT -> STRONGARM;
+  DEBUT_COMMENT -> CAPTCHA;
+  DEBUT_COMMENT -> FEATURES;
+  DEBUT_COMMENT -> CONTEXT;
+  DEBUT_COMMENT -> LOGINTOBOGGAN;
+  DEBUT_COMMENT -> COMMENT_NOTIFY;
+}
+AFFILIATE_NG {
+  AFFILIATE_NG -> ENTITY;
+}
+TOOLBAR_HIDE {
+  TOOLBAR_HIDE -> TOOLBAR;
+}
+RELATED_BLOCK {
+  RELATED_BLOCK -> SEARCH;
+}
+DRUPAL_PLANET {
+  DRUPAL_PLANET -> VIEWS;
+  DRUPAL_PLANET -> CTOOLS;
+  DRUPAL_PLANET -> FLAG;
+}
+COMMENT_NOTIFY {
+  COMMENT_NOTIFY -> COMMENT;
+  COMMENT_NOTIFY -> TOKEN;
+}
+FIELD_INJECTOR {
+  FIELD_INJECTOR -> FIELD;
+}
+AFFILIATES {
+  AFFILIATES -> PROFILE;
+}
+NODEREFERENCE_URL {
+  NODEREFERENCE_URL -> NODE_REFERENCE;
+}
+COMMERCE_FEEDS {
+  COMMERCE_FEEDS -> COMMERCE;
+  COMMERCE_FEEDS -> FEEDS;
+}
+OG_VIEWS {
+  OG_VIEWS -> VIEWS;
+  OG_VIEWS -> OG;
+}
+COMMERCE_PRODUCT_KEY {
+  COMMERCE_PRODUCT_KEY -> RULES;
+}
+TCONTACT {
+  TCONTACT -> LOCALE;
+  TCONTACT -> CONTACT;
+}
+WEBFORM_ENCRYPT {
+  WEBFORM_ENCRYPT -> WEBFORM;
+  WEBFORM_ENCRYPT -> AES;
+}
+FILEVIEWER {
+  FILEVIEWER -> FILE;
+}
+CCK {
+  CCK -> FIELD_UI;
+}
+GRAPHVIZ_NODEREF {
+  GRAPHVIZ_NODEREF -> GRAPHVIZ_FILTER;
+  GRAPHVIZ_NODEREF -> NODE_REFERENCE;
+}
+DEVEL_THEMER {
+  DEVEL_THEMER -> DEVEL;
+}
+DEMO_PROFILE {
+  DEMO_PROFILE -> DEMO;
+}
+CONTEXT_CONDITION_THEME {
+  CONTEXT_CONDITION_THEME -> CONTEXT;
+}
+FIELD_DEFINITIONS {
+  FIELD_DEFINITIONS -> FIELD;
+}
+PAGENOTFOUND_REPORTS {
+  PAGENOTFOUND_REPORTS -> DBLOG;
+}
+SEARCH_API_MULTI {
+  SEARCH_API_MULTI -> SEARCH_API;
+}
+CTOOLS_PATH_ACCESS {
+  CTOOLS_PATH_ACCESS -> CTOOLS;
+}
+FLATCOMMENTS {
+  FLATCOMMENTS -> COMMENT;
+}
+PROPERTIES {
+  PROPERTIES -> PROPERTIES_SQL;
+}
+UC_ADYEN {
+  UC_ADYEN -> UC_PAYMENT;
+}
+DOMAIN_VIEWS {
+  DOMAIN_VIEWS -> VIEWS;
+  DOMAIN_VIEWS -> DOMAIN;
+}
+BLOCK_CONTEXT {
+  BLOCK_CONTEXT -> BLOCK;
+}
+MEDIA_PEGTV {
+  MEDIA_PEGTV -> MEDIA_INTERNET;
+}
+PIECEMAKER {
+  PIECEMAKER -> LIBRARIES;
+}
+SOCIAL_CONNECT {
+  SOCIAL_CONNECT -> FIELD;
+}
+ENTITY_TRANSLATION {
+  ENTITY_TRANSLATION -> LOCALE;
+}
+DAILYTWITTER {
+  DAILYTWITTER -> BLOG;
+}
+DSK {
+  DSK -> SHORTCUT;
+  DSK -> HELP;
+  DSK -> FIELD_UI;
+  DSK -> OVERLAY;
+  DSK -> PATH;
+  DSK -> IMAGE;
+  DSK -> TOOLBAR;
+  DSK -> TAXONOMY;
+  DSK -> BLOCK;
+  DSK -> DASHBOARD;
+  DSK -> NUMBER;
+  DSK -> MENU;
+  DSK -> SEARCH;
+  DSK -> CONTEXTUAL;
+  DSK -> COMMENT;
+  DSK -> FILE;
+  DSK -> LIST;
+  DSK -> RDF;
+  DSK -> COLOR;
+  DSK -> DBLOG;
+  DSK -> OPTIONS;
+}
+CHILI_HIGHLIGHTER {
+  CHILI_HIGHLIGHTER -> VARS_2_X_;
+}
+AMFSERVER {
+  AMFSERVER -> SERVICES;
+}
+SIGNATUREFIELD {
+  SIGNATUREFIELD -> LIBRARIES;
+}
+FRONTPAGE {
+  FRONTPAGE -> VARS;
+}
+VIEWS_OAI_PMH {
+  VIEWS_OAI_PMH -> VIEWS;
+}
+USER_DASHBOARD {
+  USER_DASHBOARD -> DASHBOARD;
+}
+FEEDS_IMAGEGRABBER {
+  FEEDS_IMAGEGRABBER -> IMAGE;
+  FEEDS_IMAGEGRABBER -> FEEDS;
+}
+RELEVANCE {
+  RELEVANCE -> TAXONOMY;
+}
+MENU_NODE {
+  MENU_NODE -> MENU;
+}
+OGFLICKRBLOCK {
+  OGFLICKRBLOCK -> FLICKR_BLOCK;
+  OGFLICKRBLOCK -> OG;
+  OGFLICKRBLOCK -> FLICKR;
+}
+WEBFORM_ALT_UI {
+  WEBFORM_ALT_UI -> FORM_BUILDER;
+  WEBFORM_ALT_UI -> WEBFORM;
+  WEBFORM_ALT_UI -> UX_ELEMENTS;
+  WEBFORM_ALT_UI -> FORM_BUILDER_WEBFORM;
+}
+METATAG {
+  METATAG -> TOKEN;
+}
+HUBSPOT {
+  HUBSPOT -> WEBFORM_3_X_;
+}
+SUNMAILER {
+  SUNMAILER -> VIEWS;
+}
+MENUUX {
+  MENUUX -> MENU;
+}
+PANELS_MEDIA {
+  PANELS_MEDIA -> CTOOLS;
+  PANELS_MEDIA -> PANELS;
+}
+COMMERCE_CHECKOUT_REDIRECT {
+  COMMERCE_CHECKOUT_REDIRECT -> COMMERCE;
+}
+SEMANTIC_SIMILARITY {
+  SEMANTIC_SIMILARITY -> VIEWS;
+  SEMANTIC_SIMILARITY -> RAPHAEL;
+}
+TRANSLATION_HELPERS {
+  TRANSLATION_HELPERS -> TRANSLATION;
+}
+WP_BLOG {
+  WP_BLOG -> VIEWS;
+  WP_BLOG -> TAXONOMY;
+}
+STARRATING {
+  STARRATING -> FIELD;
+}
+COMMERCE_PAYFLOW_PRO {
+  COMMERCE_PAYFLOW_PRO -> COMMERCE;
+  COMMERCE_PAYFLOW_PRO -> COMMERCE_UI;
+  COMMERCE_PAYFLOW_PRO -> COMMERCE_ORDER;
+  COMMERCE_PAYFLOW_PRO -> COMMERCE_PAYMENT;
+}
+GALLERYFORMATTER {
+  GALLERYFORMATTER -> FILE;
+  GALLERYFORMATTER -> IMAGE;
+}
+DEBUT_ARTICLE {
+  DEBUT_ARTICLE -> VIEWS;
+  DEBUT_ARTICLE -> STRONGARM;
+  DEBUT_ARTICLE -> CAPTCHA;
+  DEBUT_ARTICLE -> MEDIA;
+  DEBUT_ARTICLE -> FEATURES;
+  DEBUT_ARTICLE -> IMAGE;
+  DEBUT_ARTICLE -> TAXONOMY;
+  DEBUT_ARTICLE -> CONTEXT;
+}
+COMMERCE_SUBSCRIPTION {
+  COMMERCE_SUBSCRIPTION -> ROLE_REFERENCE;
+  COMMERCE_SUBSCRIPTION -> COMMERCE;
+  COMMERCE_SUBSCRIPTION -> DATE;
+  COMMERCE_SUBSCRIPTION -> NUMBER;
+}
+COMMERCE_PRODUCT_ATTRIBUTES {
+  COMMERCE_PRODUCT_ATTRIBUTES -> COMMERCE;
+}
+MT_TASK {
+  MT_TASK -> ENCSET;
+  MT_TASK -> ASYNC_COMMAND;
+}
+USERNAME_CHECK {
+  USERNAME_CHECK -> USER;
+}
+FULLCALENDAR {
+  FULLCALENDAR -> VIEWS;
+  FULLCALENDAR -> DATE;
+}
+FORUM_ACCESS {
+  FORUM_ACCESS -> ACL;
+  FORUM_ACCESS -> CHAIN_MENU_ACCESS;
+  FORUM_ACCESS -> FORUM;
+}
+DEBUT_IMAGE {
+  DEBUT_IMAGE -> VIEWS;
+  DEBUT_IMAGE -> CTOOLS;
+  DEBUT_IMAGE -> STRONGARM;
+  DEBUT_IMAGE -> HELPINJECTOR;
+  DEBUT_IMAGE -> TEXT;
+  DEBUT_IMAGE -> FEATURES;
+  DEBUT_IMAGE -> IMAGE;
+  DEBUT_IMAGE -> CONTEXT;
+}
+PANELS {
+  PANELS -> CTOOLS;
+}
+DUMMY_CONTENT {
+  DUMMY_CONTENT -> TABLEFORM;
+}
+SEARCH_API_RANGES {
+  SEARCH_API_RANGES -> SEARCH_API_FACETS;
+  SEARCH_API_RANGES -> SEARCH_API;
+  SEARCH_API_RANGES -> BLOCK;
+}
+BOOK_ACCESS {
+  BOOK_ACCESS -> VARS_2_X_;
+  BOOK_ACCESS -> BOOK;
+}
+DRUPAL_WRAPPERS {
+  DRUPAL_WRAPPERS -> BAD_JUDGEMENT;
+}
+COMMERCE_POSTFINANCE {
+  COMMERCE_POSTFINANCE -> COMMERCE;
+  COMMERCE_POSTFINANCE -> COMMERCE_UI;
+  COMMERCE_POSTFINANCE -> COMMERCE_ORDER;
+  COMMERCE_POSTFINANCE -> COMMERCE_PAYMENT;
+}
+USER_MODAL {
+  USER_MODAL -> CTOOLS;
+}
+SEARCH_API_CONTEXT {
+  SEARCH_API_CONTEXT -> SEARCH_API;
+}
+NAT {
+  NAT -> TAXONOMY;
+}
+DEBUT_SOCIAL {
+  DEBUT_SOCIAL -> STRONGARM;
+  DEBUT_SOCIAL -> FOLLOW;
+  DEBUT_SOCIAL -> FORWARD;
+  DEBUT_SOCIAL -> CAPTCHA;
+  DEBUT_SOCIAL -> FEATURES;
+  DEBUT_SOCIAL -> GENERAL_SERVICES;
+  DEBUT_SOCIAL -> CONTEXT;
+  DEBUT_SOCIAL -> SERVICE_LINKS;
+}
+UC_BANK_TRANSFER {
+  UC_BANK_TRANSFER -> UC_CART;
+  UC_BANK_TRANSFER -> UC_PAYMENT;
+}
+BOOKMARKORGANIZER {
+  BOOKMARKORGANIZER -> FLAG;
+}
+IMAGILICIOUS {
+  IMAGILICIOUS -> IMAGE;
+}
+DRAGGABLEVIEWS {
+  DRAGGABLEVIEWS -> VIEWS;
+}
+MESSAGE {
+  MESSAGE -> CTOOLS;
+  MESSAGE -> ENTITY;
+}
+PROFILE_PRIVACY {
+  PROFILE_PRIVACY -> PROFILE;
+}
+COMMERCE_DOWNLOADS_FEATURE {
+  COMMERCE_DOWNLOADS_FEATURE -> FEATURES;
+  COMMERCE_DOWNLOADS_FEATURE -> COMMERCE_CART;
+  COMMERCE_DOWNLOADS_FEATURE -> COMMERCE_PRODUCT_UI;
+  COMMERCE_DOWNLOADS_FEATURE -> COMMERCE_PAYMENT;
+  COMMERCE_DOWNLOADS_FEATURE -> COMMERCE_FILE;
+}
+ALLOW_ALL_FILE_EXTENSIONS {
+  ALLOW_ALL_FILE_EXTENSIONS -> FILE;
+}
+IFRAME {
+  IFRAME -> FIELD;
+}
+SEARCH_API_AJAX {
+  SEARCH_API_AJAX -> SEARCH_API_PAGE;
+  SEARCH_API_AJAX -> SEARCH_API_FACETS;
+  SEARCH_API_AJAX -> SEARCH_API;
+}
+WYSIWYG_IMAGEFIELD {
+  WYSIWYG_IMAGEFIELD -> INSERT;
+  WYSIWYG_IMAGEFIELD -> IMAGE;
+  WYSIWYG_IMAGEFIELD -> WYSIWYG;
+}
+COMMERCE_INVOICE {
+  COMMERCE_INVOICE -> COMMERCE_ORDER;
+  COMMERCE_INVOICE -> RULES;
+}
+COMMENT_SUBJECT {
+  COMMENT_SUBJECT -> COMMENT;
+}
+TOKEN_FIELD {
+  TOKEN_FIELD -> FIELD;
+  TOKEN_FIELD -> TOKEN;
+}
+BLOCK_API {
+  BLOCK_API -> BLOCK;
+}
+PEEK_SUMMARY {
+  PEEK_SUMMARY -> VIEWS;
+}
+VIDEO_UPLOAD {
+  VIDEO_UPLOAD -> FILE;
+}
+TERM_LEVEL {
+  TERM_LEVEL -> TAXONOMY;
+}
+VIDEO_PRESETS {
+  VIDEO_PRESETS -> VIDEO_UI;
+  VIDEO_PRESETS -> VIDEO;
+}
+BIBLIO {
+  BIBLIO -> TAXONOMY;
+}
+NODE_AUTHLINK {
+  NODE_AUTHLINK -> COMPUTED_FIELD;
+}
+SERVICES {
+  SERVICES -> CTOOLS;
+}
+NAT_NG {
+  NAT_NG -> TAXONOMY;
+}
+VIMEO_LINK_FORMATTER {
+  VIMEO_LINK_FORMATTER -> FIELD;
+  VIMEO_LINK_FORMATTER -> LINK;
+}
+COMMERCE_ADDRESSBOOK {
+  COMMERCE_ADDRESSBOOK -> ADDRESSFIELD;
+  COMMERCE_ADDRESSBOOK -> COMMERCE;
+  COMMERCE_ADDRESSBOOK -> ENTITY;
+}
+WEBFORM_NODE_ELEMENT {
+  WEBFORM_NODE_ELEMENT -> WEBFORM;
+}
+OPENSEARCH {
+  OPENSEARCH -> VARS_2_X_;
+  OPENSEARCH -> SEARCH;
+}
+FEEDS_YOUTUBE {
+  FEEDS_YOUTUBE -> FEEDS;
+}
+DELTA {
+  DELTA -> CONTEXT;
+}
+WORKBENCH_FILES {
+  WORKBENCH_FILES -> WORKBENCH;
+}
+LEFTANDRIGHT {
+  LEFTANDRIGHT -> TAXONOMY;
+}
+COMMENTACCESS {
+  COMMENTACCESS -> COMMENT;
+}
+I18N_MEDIA {
+  I18N_MEDIA -> LOCALE;
+}
+FILEFIELD_PATHS {
+  FILEFIELD_PATHS -> TOKEN;
+}
+BLOCK_TERM {
+  BLOCK_TERM -> TAXONOMY;
+}
+TF_VIEWS {
+  TF_VIEWS -> VIEWS;
+}
+BOOKTREE {
+  BOOKTREE -> BOOK;
+}
+MENU_ADMIN_PER_MENU {
+  MENU_ADMIN_PER_MENU -> MENU;
+}
+INVITE {
+  INVITE -> TOKEN;
+}
+RGRAPH {
+  RGRAPH -> VIEWS;
+  RGRAPH -> EXTENDED_HTML;
+}
+WORDPRESS_MIGRATE {
+  WORDPRESS_MIGRATE -> MIGRATE;
+}
+GEOFIELD {
+  GEOFIELD -> LIBRARIES;
+}
+MENU_FIRSTCHILD {
+  MENU_FIRSTCHILD -> MENU;
+}
+THE {
+  THE -> BAD_JUDGEMENT;
+}
+WEBFORM2SUGAR {
+  WEBFORM2SUGAR -> WEBFORM;
+}
+DATASOURCES {
+  DATASOURCES -> UDID;
+  DATASOURCES -> ENTITY;
+}
+REEL {
+  REEL -> JQUERY_UPDATE;
+}
+COMMERCE_FILE {
+  COMMERCE_FILE -> COMMERCE;
+  COMMERCE_FILE -> COMMERCE_LINE_ITEM;
+  COMMERCE_FILE -> COMMERCE_PRODUCT_REFERENCE;
+  COMMERCE_FILE -> FILE;
+  COMMERCE_FILE -> COMMERCE_ORDER;
+  COMMERCE_FILE -> COMMERCE_PRODUCT;
+  COMMERCE_FILE -> RULES;
+  COMMERCE_FILE -> ENTITY;
+}
+MEDIAELEMENT {
+  MEDIAELEMENT -> LIBRARIES;
+}
+COMMERCE_SHIPPING {
+  COMMERCE_SHIPPING -> COMMERCE;
+  COMMERCE_SHIPPING -> COMMERCE_LINE_ITEM;
+  COMMERCE_SHIPPING -> RULES;
+}
+ADMIN_LANGUAGE {
+  ADMIN_LANGUAGE -> LOCALE;
+}
+FORM_BUILDER {
+  FORM_BUILDER -> OPTIONS_ELEMENT;
+}
+TAXONOMY_TITLE {
+  TAXONOMY_TITLE -> TAXONOMY;
+}
+VIEWS_CALC {
+  VIEWS_CALC -> VIEWS;
+}
+WORKBENCH_MEDIA {
+  WORKBENCH_MEDIA -> WORKBENCH;
+  WORKBENCH_MEDIA -> MEDIA;
+}
+PMGROWL {
+  PMGROWL -> PRIVATEMSG;
+}
+SUBMITTED_BY {
+  SUBMITTED_BY -> TOKEN;
+}
+DFW {
+  DFW -> MENU;
+}
+GEOLOCATION_PROXIMITY {
+  GEOLOCATION_PROXIMITY -> VIEWS;
+  GEOLOCATION_PROXIMITY -> GEOLOCATION;
+}
+DEBUT_FORUM {
+  DEBUT_FORUM -> STRONGARM;
+  DEBUT_FORUM -> MENU;
+  DEBUT_FORUM -> FEATURES;
+  DEBUT_FORUM -> ADVANCED_FORUM;
+}
+WORKFLOW_NAMED_TRANSITIONS {
+  WORKFLOW_NAMED_TRANSITIONS -> WORKFLOW;
+}
+FONTYOURFACE {
+  FONTYOURFACE -> VIEWS;
+}
+RELEVANT_CONTENT {
+  RELEVANT_CONTENT -> TAXONOMY;
+  RELEVANT_CONTENT -> BLOCK;
+}
+OPENLAYERS_FIELD {
+  OPENLAYERS_FIELD -> OPENLAYERS;
+}
+COMMERCE_CYBERSOURCE {
+  COMMERCE_CYBERSOURCE -> COMMERCE;
+  COMMERCE_CYBERSOURCE -> COMMERCE_UI;
+  COMMERCE_CYBERSOURCE -> COMMERCE_ORDER;
+  COMMERCE_CYBERSOURCE -> COMMERCE_PAYMENT;
+}
+THUMBNAILS {
+  THUMBNAILS -> CTOOLS;
+  THUMBNAILS -> IMAGE;
+}
+YAHOO_TERMS {
+  YAHOO_TERMS -> TAXONOMY;
+}
+VIDEO {
+  VIDEO -> FILE;
+  VIDEO -> IMAGE;
+}
+DEVEL_BONUS {
+  DEVEL_BONUS -> DEVEL;
+}
+DEVEL_DEMO {
+  DEVEL_DEMO -> DEVEL;
+}
+DEBUT_SECTION {
+  DEBUT_SECTION -> VIEWS;
+  DEBUT_SECTION -> STRONGARM;
+  DEBUT_SECTION -> MEDIA;
+  DEBUT_SECTION -> FEATURES;
+  DEBUT_SECTION -> BOOK;
+  DEBUT_SECTION -> CONTEXT;
+}
+VIEWS_PHP {
+  VIEWS_PHP -> VIEWS;
+}
+USERPOINTS_USER_PICTURE {
+  USERPOINTS_USER_PICTURE -> USERPOINTS;
+}
+PROJECT_BROWSER {
+  PROJECT_BROWSER -> UPDATE;
+}

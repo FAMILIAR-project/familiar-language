@@ -1,0 +1,59 @@
+root Car {
+	group oneof {
+		Focus {
+			bool rally;	
+		}	
+	}
+	enum brand in {Ford, Nissan};
+	enum color in {blue, red, yellow, white, black};
+	int doorsNumber;
+	int maxSpeed;
+	real price;
+	real size;
+	bool sold;
+	bool used;
+}
+
+root Car {
+	sold && used;
+	sold || used;
+	sold -> used;
+	sold <-> used;
+	sold <- used;
+	!(sold);
+	!(sold == used);
+	sold != used;
+	doorsNumber == maxSpeed;
+	price == size;
+	maxSpeed == size;
+	//brand == color;
+	true;
+	false;
+	doorsNumber <= maxSpeed;
+	price <= size;
+	maxSpeed <= size;
+	doorsNumber < maxSpeed;
+	price < size;
+	maxSpeed < size;
+	doorsNumber >= maxSpeed;
+	price >= size;
+	maxSpeed >= size;
+	doorsNumber > maxSpeed;
+	price > size;
+	maxSpeed > size;
+	brand in {Nissan, Ford};
+	maxSpeed in [180..250];
+	price in {15000, 17000, 19000.50};
+	this.Focus requires Car;
+	root.Focus excludes Car;
+	used ? true : false;
+	and (sold, used, this.Focus.rally);
+	or (sold, true);
+	xor (false, used);
+	and (selectedchildren.rally);
+	or (selectedchildren.rally);
+	xor (selectedchildren.rally);
+	and (children.rally);
+	or (children.rally);
+	xor (children.rally);
+}

@@ -1,0 +1,39 @@
+root Vehicle {
+	group oneof {
+		Car {
+			int price;
+			group oneof {
+				Ford {
+					int price;
+					ifin: this.price == 7500;
+					ifin: root.Car.Ford.Focus.weight == 1500;
+					group oneof {
+						Focus {
+							int weight;
+							ifin: parent.parent.price == 7500;
+							this.weight == 1500;
+						}	
+					}
+				}
+			}
+		},
+		Truck {
+			group oneof {
+				Ford {
+					int price;
+					ifin: price == 15000;
+					ifin: this.Transit.weight == 3000;
+					group oneof {
+						Transit {
+							int weight;
+							ifin: parent.price == 15000;
+							ifin: Car.Ford.Focus.weight == 3000;
+							weight == 3000;
+						}	
+					}
+				}
+			}
+		}
+	}
+}
+	

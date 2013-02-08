@@ -1,0 +1,46 @@
+root MotherBoard {
+	group oneof {
+		Test1
+		Test2
+		Test3 
+			group oneof { 
+				Terre
+				Polo
+				Test1
+			}
+		Test
+		Carton
+		Exemple
+	}
+}
+Test {
+	group oneof {
+		Exemple
+		Exemple1 
+			group someof {
+				Exemple2
+			}
+		Exemple2
+	}
+}
+Carton {
+	group[0..2] {
+		Tesquieu
+		K
+		Exemple2
+	}
+}
+root.Test3.Terre {
+	group allof {
+		Logitech
+		Arnaud
+		Catherine
+		K
+	}
+}
+MotherBoard {
+}
+Test.Exemple {
+}
+root.Carton {
+}

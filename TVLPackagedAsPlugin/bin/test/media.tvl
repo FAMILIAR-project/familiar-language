@@ -1,0 +1,25 @@
+Media {
+	group allof {
+		opt Hole //Clonable feature
+	}
+	dimension dim;
+	bool insert; 
+	bool tab; 
+	real tabIndent; //optional attribute
+	(tab==false) -> (tabIndent==-1); // dummy constraint for optional attribute
+	bool cyclic;
+	int cycleLength;//optional attribute 
+	(cyclic==false) -> (cycleLength==0); 
+	real weight;
+	enum type in {plain, glossy, coated, stationary, transparent, plasticSheet, colorCopy, custom, none}; //optional attribute -> none value
+	enum color in {none, white, red, green, blue, cyan, magenta, yellow,pink, gray, black, purple, orange, buff, goldenrod, clear, ivory, custom}; //optional attribute -> none value
+	bool singleSided;
+	bool prePrinted;
+	real thickness;
+	singleSided -> Sheet.side==1;
+}
+
+Media.Hole {//Clonable feature
+	position pos;
+	dimension size;	
+}

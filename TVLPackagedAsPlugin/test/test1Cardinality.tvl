@@ -1,0 +1,27 @@
+root Animal {
+	group allof {
+		Dog {
+			group oneof {
+				Labrador,
+				Caniche	
+			}
+		},
+		Cat {
+			group someof {
+				Siamois,
+				Birman
+			}
+		},
+		Fish {
+			group [0..2] {
+				Truite
+			}	
+		},
+		Bird {
+			group [1..1] {
+				Canari,
+				Pie	
+			}
+		}
+	}	
+}

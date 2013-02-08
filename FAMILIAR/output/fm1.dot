@@ -12,7 +12,8 @@ edge [arrowhead=normal];
 102[label="OR",shape="triangle",style="filled",color="black",fontcolor="white"]
 93->102[arrowhead=none];
 102->94[arrowhead=none];
-102->98[arrowhead=none];
+102->95[arrowhead=none];
+102->100[arrowhead=none];
 103[label="OR",shape="triangle",style="filled",color="black",fontcolor="white"]
 93->103[arrowhead=none];
 103->92[arrowhead=none];
@@ -20,7 +21,6 @@ edge [arrowhead=normal];
 104[label="OR",shape="triangle",style="filled",color="black",fontcolor="white"]
 93->104[arrowhead=none];
 104->94[arrowhead=none];
-104->95[arrowhead=none];
-104->100[arrowhead=none];
+104->98[arrowhead=none];
 92->97[arrowhead=odot];
 }

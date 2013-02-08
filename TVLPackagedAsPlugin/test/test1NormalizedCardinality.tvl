@@ -1,0 +1,25 @@
+root A {
+	group [1..3] {
+		B1,
+		B2,
+		B3
+	}
+}
+B1 {
+	group oneof {
+		C1,
+		C2
+	}
+}
+B2 {
+	group allof {
+		D1,
+		D2
+	}
+}
+B3 {
+	group someof {
+		E1,
+		E2
+	}
+}

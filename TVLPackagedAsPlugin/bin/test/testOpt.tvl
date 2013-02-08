@@ -1,0 +1,14 @@
+root F {
+	 group oneof {
+	 	A,
+		B group allof {
+			opt B1,
+			opt B2 group oneof {
+				B2_1,
+				B2_2
+			},
+			B3
+		}
+	 }
+	 
+}

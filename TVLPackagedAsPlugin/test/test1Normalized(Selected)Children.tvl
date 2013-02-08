@@ -1,0 +1,32 @@
+root Car {
+	int price1 is sum(selectedchildren.price);
+	int price2 is mul(selectedchildren.price);
+	int price3 is avg(selectedchildren.price);
+	int price4 is count(selectedchildren);
+	int price5 is sum(children.price);
+	int price6 is mul(children.price);
+	int price7 is avg(children.price);
+	int price8 is count(children);
+	int price9 is max(children.price);
+	int price10 is max(children.price);
+	bool used1 is and(selectedchildren.used);
+	bool used2 is or(selectedchildren.used);
+	bool used3 is xor(selectedchildren.used);
+	bool used4 is and(children.used);
+	bool used5 is or(children.used);
+	bool used6 is xor(selectedchildren.used);
+	group oneof {
+		Ford {
+			int price is 7500;
+			bool used is true;
+		},
+		Citroen {
+			group oneof {
+				Ford,
+				C3	
+			}
+			int price is 8500;
+			bool used is false;
+		}
+	}		
+}

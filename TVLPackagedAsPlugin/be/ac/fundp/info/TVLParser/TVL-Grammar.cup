@@ -1,0 +1,437 @@
+// FEATUREMX VFD STAR FORMAT CUP PARSER SPECIFICATION
+// Initial implementation: Xavier Devroey & Michael Marcozzi 
+// Updated by Germain Saval
+
+
+//PREPROCESS
+//----------
+package be.ac.fundp.info.TVLParser.Parser;
+
+
+import be.ac.fundp.info.TVLParser.SyntaxTree.*;
+import be.ac.fundp.info.TVLParser.symbolTables.FeaturesSymbolTable;
+
+// Reacting to errors
+parser code {:
+
+	private FeaturesSymbolTable featuresSymbolTable = new FeaturesSymbolTable();
+	
+	public FeaturesSymbolTable getFeaturesSymbolTable() {
+		return this.featuresSymbolTable;
+	}
+
+	public void report_fatal_error ( String message, Object info ) throws Exception { 
+		if (info instanceof java_cup.runtime.Symbol) {
+			java_cup.runtime.Symbol s = ((java_cup.runtime.Symbol) info);
+			if (s.left >= 0) {
+				 message = message + " in line "+(s.left+1);
+				 if (s.right >= 0)
+				 	message = message + ", column "+(s.right+1);
+			}
+		}
+		throw new Exception("Parsing error : "+message); 
+	} 
+:}; 
+
+// TERMINALS
+// ---------
+
+// Numbers
+terminal ZERO;
+terminal String INTEGER, REAL, STRING;
+
+// Properties
+terminal SHARED, ROOT, OPT, BOOL, INT, ENUM, STRUCT, REALP, IFIN, IFOUT, CONST;
+
+// Cardinality
+terminal GROUP, ONEOF, SOMEOF, ALLOF;
+
+// Selectors
+terminal PARENT, THIS, CHILDREN, SCHILDREN;
+
+// Operators
+terminal AND, OR, INVERSEIMPLIES, IMPLIES, IFANDONLYIF, NOT, TRUE, FALSE, NOTEQUALS, EQUALS,GREATER, LOWER, GEQ, LEQ, PLUS, MINUS, UMINUS, TIMES, DIVIDE, MAX, MIN, SUM, MUL, AVG, COUNT, ANDAGG, ORAGG, XORAGG, ABS, IN, IS, EXCLUDES, REQUIRES;
+
+// Other symbols
+terminal SQBRA, SQBRAEND, COMMA, BRA, BRAEND, CBRA, CBRAEND, DOT, QUEST, COLON, SEMICOLON, DATA;
+
+// Identifier
+terminal String ID;
+
+// NON TERMINALS
+// -------------
+
+non terminal Model model;
+non terminal ModelItem model_item ;
+
+// Meta section
+
+
+// Constant section
+non terminal Constant constant;
+
+// Type section
+non terminal Type type;
+non terminal SimpleType simple_type;
+non terminal Record record;
+non terminal RecordBody record_body;
+non terminal RecordField record_field;
+
+// ID section
+non terminal String short_id;
+non terminal String long_id;
+
+// Feature sections
+non terminal Feature feature;
+non terminal Feature feature_root;
+non terminal Feature feature_node;
+non terminal Feature feature_node_clone;
+
+non terminal HierarchicalFeatures hierarchical_features;
+non terminal Feature hierarchical_feature;
+non terminal Cardinality cardinalityGroup;
+non terminal Cardinality cardinalityFeature;
+non terminal Cardinality cardinalityBase;
+non terminal String cardinality_limit;
+non terminal FeatureBody feature_body;
+non terminal FeatureBodyItem feature_body_item;
+non terminal FeatureGroup feature_group;
+
+// Attribute section
+non terminal Attribute attribute;
+non terminal BaseAttribute base_attribute;
+non terminal AttributeBody attribute_body;
+non terminal AttributeConditionnal attribute_conditional;
+non terminal StructAttributeBody struct_attribute_body;
+non terminal SubAttribute sub_attribute;
+
+// Expression section
+non terminal Expression expression;
+non terminal ExpressionList expression_list;
+non terminal SetExpression set_expression;
+non terminal ChildrenAttributeID children_attribute_id;
+non terminal String set_expression_bound;
+
+// Constraint section
+non terminal Constraint constraint;
+
+// Data section
+non terminal Data data;
+non terminal DataPairList data_pair_list;
+non terminal DataPair data_pair;
+
+
+// PRECEDENCE AND ASSOCIATIVITY
+// ----------------------------
+precedence left COMMA;
+precedence right QUEST;
+precedence right INVERSEIMPLIES;
+precedence left IMPLIES;
+precedence nonassoc IFANDONLYIF;
+precedence left OR;
+precedence left AND;
+precedence nonassoc EQUALS, NOTEQUALS, IN;
+precedence nonassoc GEQ, LOWER, GREATER, LEQ;
+precedence left PLUS, MINUS;
+precedence left TIMES, DIVIDE;
+precedence nonassoc REQUIRES, EXCLUDES;
+precedence right NOT, UMINUS, ABS, MIN, MAX, COUNT, AVG, XORAGG, MUL, SUM, ANDAGG, ORAGG;
+precedence left DOT;
+
+// THE GRAMMAR
+// -----------
+
+start with model;
+
+model ::=  model_item:e1 {: RESULT = new Model(e1); :}
+         | model_item:e1 model:e2 {: RESULT = new Model(e1, e2); :}
+         ;
+
+model_item ::=  type:e1 {: RESULT = e1; :}
+              | constant:e1 {: RESULT = e1; :}
+              | feature:e1 {: RESULT = e1; :}
+              ; 
+
+//----- Type section -----------------------------------------------------------------------------------------/*
+	 
+type ::=  simple_type:e1 {: RESULT = e1; :}
+		| record:e1 {: RESULT = e1; :}
+		;
+		
+simple_type ::=  INT ID:e1 IN set_expression:e2 SEMICOLON {: RESULT = new SimpleType(Expression.INT, e1, e2); :}
+			   | REALP ID:e1 IN set_expression:e2 SEMICOLON {: RESULT = new SimpleType(Expression.REAL, e1, e2); :}
+			   | ENUM ID:e1 IN set_expression:e2 SEMICOLON {: RESULT = new SimpleType(Expression.ENUM, e1, e2); :}
+			   | INT ID:e1 SEMICOLON {: RESULT = new SimpleType(Expression.INT, e1); :}
+			   | REALP ID:e1 SEMICOLON {: RESULT = new SimpleType(Expression.REAL, e1); :}
+			   | BOOL ID:e1 SEMICOLON {: RESULT = new SimpleType(Expression.BOOL, e1); :}
+			   ;
+
+			 
+record ::=  STRUCT ID:e1 CBRA record_body:e2 CBRAEND {: RESULT = new Record(Expression.STRUCT, e1, e2); :}
+		  ;
+		  
+record_body ::=   record_field:e1 {: RESULT = new RecordBody(e1); :}
+				| record_field:e1 record_body:e2 {: RESULT = new RecordBody(e1, e2); :}
+				;
+				  
+record_field ::=  simple_type:e1 {: RESULT = new RecordField(e1); :}
+			    | ID:e1 ID:e2 SEMICOLON {: RESULT = new RecordField(e1, e2); :}
+			    ;  
+ 
+//----- Constant section ------------------------------------------------------------------------------------------
+
+constant ::=  CONST INT ID:e1 INTEGER:e2 SEMICOLON {: RESULT = new Constant(Expression.INT, e1, e2); :}
+			| CONST INT ID:e1 ZERO SEMICOLON {: RESULT = new Constant(Expression.INT, e1, "0"); :}
+			| CONST REALP ID:e1 REAL:e2 SEMICOLON {: RESULT = new Constant(Expression.REAL, e1, e2); :}
+			| CONST REALP ID:e1 ZERO SEMICOLON {: RESULT = new Constant(Expression.REAL, e1,"0"); :}
+			| CONST BOOL ID:e1 TRUE SEMICOLON  {: RESULT = new Constant(Expression.BOOL, e1, "true"); :}
+			| CONST BOOL ID:e1 FALSE SEMICOLON {: RESULT = new Constant(Expression.BOOL, e1,"false"); :}
+			; 
+
+//----- ID section ------------------------------------------------------------------------------------------
+
+short_id ::= ROOT {: RESULT = "root"; :}  
+		   | THIS {: RESULT = "this"; :}
+		   | PARENT {: RESULT = "parent"; :}
+		   | ID:e1 {: RESULT = e1; :}
+		   ;
+
+long_id ::=   short_id:e1 {: RESULT = e1; :}
+			| short_id:e1 DOT long_id:e2 {: RESULT = e1+"."+e2; :} 
+			;
+
+                         				  
+//----- Feature section ------------------------------------------------------------------------------------------ 
+					  
+feature ::=  feature_root:e1 {: RESULT = e1 ; :} 
+		   | feature_node:e1 {: RESULT = e1 ; :} 
+		   ;
+		   	   	   
+feature_root ::= ROOT ID:e1 CBRA feature_body:e2 CBRAEND {: RESULT = new Feature(true, e1, e2, false, false); :}
+                | ROOT ID:e1 feature_group:e2 {: RESULT = new Feature(true, e1, e2, false, false); :}
+		   ;
+
+feature_node ::= long_id:e1 CBRA feature_body:e2 CBRAEND {: RESULT = new Feature(false, e1, e2, false, false); :}
+                | long_id:e1 feature_group:e2 {: RESULT = new Feature(false, e1, e2, false, false); :}
+			;
+			
+feature_node_clone ::= long_id:e1 cardinalityFeature:e2 CBRA feature_body:e3 CBRAEND {: RESULT = new Feature(e1, e2, e3); :}
+					 | long_id:e1 cardinalityFeature:e2 feature_group:e3 {: RESULT = new Feature(e1, e2, e3); :}
+			;			
+
+feature_body ::=  {: RESULT = null; :}
+				| feature_body_item:e1 feature_body:e2 {: RESULT = new FeatureBody(e1, e2); :}
+				;
+
+feature_body_item ::=  data:e1 {: RESULT = e1; :}
+					 | constraint:e1 {: RESULT = e1; :}
+					 | attribute:e1 {: RESULT = e1; :}
+					 | feature_group:e1 {: RESULT = e1; :}
+				     ; 
+
+feature_group ::= GROUP cardinalityGroup:e1 CBRA hierarchical_features:e2 CBRAEND {: RESULT = new FeatureGroup(e1, e2); :}
+				 ;
+
+hierarchical_features ::=  hierarchical_feature:e1 {: RESULT = new HierarchicalFeatures(e1); :}
+						 | hierarchical_feature:e1 COMMA hierarchical_features:e2 {: RESULT = new HierarchicalFeatures(e1, e2); :}
+						 ;
+						 
+hierarchical_feature ::=  long_id:e1 {: RESULT = new Feature(false, e1, false, false); :}
+			| long_id:e1 cardinalityFeature:e2 {: RESULT = new Feature(e1, e2); :}
+			| OPT long_id:e1 {: RESULT = new Feature(false, e1, true, false); :}
+			| SHARED long_id:e1 {: RESULT = new Feature(false, e1, false, true); :}
+			| feature_node:e1 {: RESULT = e1; :}
+			| feature_node_clone:e1 {: RESULT = e1; :}						
+			| OPT feature_node:e1 {: e1.setOptionalStrict(); RESULT = e1; :}
+		//	| SHARED feature_node:e1 {: e1.setShared(); RESULT = e1; :}
+			;						 					 
+						
+cardinalityGroup ::=   ONEOF {: RESULT = new Cardinality("1", "1"); :}
+				| SOMEOF {: RESULT = new Cardinality ("1", "*"); :}
+				| ALLOF {: RESULT = new Cardinality("*", "*"); :}
+				| cardinalityBase:e1 {: RESULT = e1; :}
+				;
+
+cardinalityFeature ::= cardinalityBase:e1 {: RESULT = e1; :}
+				;
+
+cardinalityBase ::= SQBRA cardinality_limit:e1 DOT DOT cardinality_limit:e2 SQBRAEND {: RESULT = new Cardinality(e1, e2); :}
+				;
+				
+cardinality_limit ::= ZERO {: RESULT = "0"; :}
+					| TIMES {: RESULT = "*"; :}
+					| INTEGER:e1 {: RESULT = e1; :}
+					| ID:e1 {: RESULT = e1; :}
+					;
+
+//----- Attribute section ------------------------------------------------------------------------------------------
+		
+
+attribute ::=  base_attribute:e1 {: RESULT = e1; :}
+			 | ID:e1 ID:e2 CBRA struct_attribute_body:e3 CBRAEND {: RESULT = new Attribute(e1, e2, e3); :}
+			 ;
+			
+base_attribute ::=  INT ID:e1 attribute_body:e2 SEMICOLON {: RESULT = new BaseAttribute(Expression.INT, e1, e2); :}
+				  | REALP ID:e1 attribute_body:e2 SEMICOLON {: RESULT = new BaseAttribute(Expression.REAL, e1, e2); :}
+				  | BOOL ID:e1 attribute_body:e2 SEMICOLON {: RESULT = new BaseAttribute(Expression.BOOL, e1, e2); :}
+				  | ENUM ID:e1 attribute_body:e2 SEMICOLON {: RESULT = new BaseAttribute(Expression.ENUM, e1, e2); :}
+				  | ID:e1 ID:e2 attribute_body:e3 SEMICOLON {: RESULT = new BaseAttribute(e1, e2, e3); :}
+				  ;
+				  
+attribute_body ::= {: RESULT = null; :} 
+				  | IS expression:e1 {: RESULT = new AttributeBody(e1); :}
+				  | IN set_expression:e1 COMMA attribute_conditional:e2 {: RESULT = new AttributeBody(e1, e2); :}
+				  | IN set_expression:e1 {: RESULT = new AttributeBody(e1); :}
+				  | COMMA attribute_conditional:e1 {: RESULT = new AttributeBody(e1); :}
+				  ; 
+				  
+attribute_conditional ::=   IFIN COLON IS expression:e1 COMMA IFOUT COLON IS expression:e2 {: RESULT = new AttributeConditionnal(e1, e2); :}
+		            	  | IFIN COLON IS expression:e1 COMMA IFOUT COLON IN set_expression:e2 {: RESULT = new AttributeConditionnal(e1, e2); :}
+        			      | IFIN COLON IN set_expression:e1 COMMA IFOUT COLON IS expression:e2 {: RESULT = new AttributeConditionnal(e1, e2); :}
+		        	      | IFIN COLON IN set_expression:e1 COMMA IFOUT COLON IN set_expression:e2 {: RESULT = new AttributeConditionnal(e1, e2); :}
+      			    	  | IFIN COLON IS expression:e1 {: RESULT = new AttributeConditionnal(true, e1); :}
+			              | IFIN COLON IN set_expression:e1 {: RESULT = new AttributeConditionnal(true, e1); :}
+			              | IFOUT COLON IS expression:e1 {: RESULT = new AttributeConditionnal(false, e1); :}
+			              | IFOUT COLON IN set_expression:e1 {: RESULT = new AttributeConditionnal(false, e1); :}
+              ;
+			 
+struct_attribute_body ::=  sub_attribute:e1 {: RESULT = new StructAttributeBody(e1); :}
+						 | sub_attribute:e1 struct_attribute_body:e2 {: RESULT = new StructAttributeBody(e1, e2); :}
+						 ;
+							 
+sub_attribute ::=  ID:e1 attribute_body:e2 SEMICOLON {: RESULT = new SubAttribute(e1, e2); :}
+				 ;
+
+//----- Expression section ------------------------------------------------------------------------------------------
+
+expression ::=  expression:e1 AND expression:e2 {: RESULT = new AndExpression(e1, e2); :}
+ 
+			  | expression:e1 OR expression:e2 {: RESULT = new OrExpression(e1, e2); :} 
+			  
+			  | expression:e1 IMPLIES expression:e2 {: RESULT = new ImpliesExpression(e1, e2); :}
+			  
+			  | expression:e1 INVERSEIMPLIES expression:e2 {: RESULT = new InverseImpliesExpression(e1, e2); :}
+			   
+			  | expression:e1 IFANDONLYIF expression:e2 {: RESULT = new IfAndOnlyIfExpression(e1, e2); :} 
+			  
+			  | NOT expression:e1 {: RESULT = new NotExpression(e1); :}
+			  
+			  | BRA expression:e1 BRAEND {: RESULT = new ParenthesesExpression(e1); :}
+			  
+			  | TRUE {: RESULT = new TrueExpression(); :}
+			  
+			  | FALSE {: RESULT = new FalseExpression(); :}
+			  
+		      | long_id:e1 {: RESULT = new LongIDExpression(e1, parser.getFeaturesSymbolTable()); :}
+		      
+			  | expression:e1 EQUALS expression:e2 {: RESULT = new EqualsExpression(e1, e2); :}
+			  
+			  | expression:e1 NOTEQUALS expression:e2 {: RESULT = new NotEqualsExpression(e1, e2); :}
+			  
+			  | expression:e1 GEQ expression:e2 {: RESULT = new GEQExpression(e1, e2); :}
+			  
+			  | expression:e1 GREATER expression:e2 {: RESULT = new GreaterExpression(e1, e2); :}
+			  
+			  | expression:e1 LEQ expression:e2 {: RESULT = new LEQExpression(e1, e2); :}
+			  
+			  | expression:e1 LOWER expression:e2 {: RESULT = new LowerExpression(e1, e2); :}
+			  
+			  | long_id:e1 IN set_expression:e2 {: RESULT = new InExpression(new LongIDExpression(e1, parser.getFeaturesSymbolTable()), e2); :}
+			  
+			  | ANDAGG BRA expression_list:e1 BRAEND {: RESULT = new AndAggExpression(e1); :}
+			  
+			  | ANDAGG BRA children_attribute_id:e1 BRAEND {: RESULT = new AndAggExpression(e1); :}
+			  
+			  | ORAGG BRA expression_list:e1 BRAEND {: RESULT = new OrAggExpression(e1); :}
+			  
+			  | ORAGG BRA children_attribute_id:e1 BRAEND {: RESULT = new OrAggExpression(e1); :}
+			  
+			  | XORAGG BRA expression_list:e1 BRAEND {: RESULT = new XorAggExpression(e1); :}
+			  
+			  | XORAGG BRA children_attribute_id:e1 BRAEND {: RESULT = new XorAggExpression(e1); :}
+			  
+			  | long_id:e1 EXCLUDES long_id:e2 {: RESULT = new ExcludesExpression(e1, e2, parser.getFeaturesSymbolTable()); :}
+			  
+			  | long_id:e1 REQUIRES long_id:e2 {: RESULT = new IncludesExpression(e1, e2, parser.getFeaturesSymbolTable()); :}
+			  
+			  | expression:e1 PLUS expression:e2 {: RESULT = new PlusExpression(e1, e2); :}
+			  
+			  | expression:e1 MINUS expression:e2 {: RESULT = new MinusExpression(e1, e2); :}
+			  
+			  | expression:e1 TIMES expression:e2 {: RESULT = new TimesExpression(e1, e2); :}
+			  
+			  | expression:e1 DIVIDE expression:e2 {: RESULT = new DivideExpression(e1, e2); :}
+			  
+			  | MINUS expression:e1 {: RESULT = new MinusExpression(e1); :} %prec UMINUS
+			  
+			  | ABS BRA expression:e1 BRAEND {: RESULT = new AbsExpression(e1); :}
+			  
+			  | expression:e1 QUEST expression:e2 COLON expression:e3 {: RESULT = new QuestExpression(e1, e2, e3); :}
+			  
+			  | SUM BRA expression_list:e1 BRAEND {: RESULT = new SumAggExpression(e1); :}
+			  
+			  | SUM BRA children_attribute_id:e1 BRAEND {: RESULT = new SumAggExpression(e1); :}
+			  
+			  | MUL BRA expression_list:e1 BRAEND {: RESULT = new MulAggExpression(e1); :}
+			  
+			  | MUL BRA children_attribute_id:e1 BRAEND {: RESULT = new MulAggExpression(e1); :}
+			  
+			  | MIN BRA expression_list:e1 BRAEND {: RESULT = new MinAggExpression(e1); :}
+			  
+			  | MIN BRA children_attribute_id:e1 BRAEND {: RESULT = new MinAggExpression(e1); :}
+			  
+			  | MAX BRA expression_list:e1 BRAEND {: RESULT = new MaxAggExpression(e1); :}
+			  
+			  | MAX BRA children_attribute_id:e1 BRAEND {: RESULT = new MaxAggExpression(e1); :}
+			  
+			  | COUNT BRA SCHILDREN BRAEND {: RESULT = new CountAggExpression(ChildrenAttributeID.SELECTED_CHILDREN, parser.getFeaturesSymbolTable()); :}
+			  
+			  | COUNT BRA CHILDREN BRAEND {: RESULT = new CountAggExpression(ChildrenAttributeID.CHILDREN, parser.getFeaturesSymbolTable()); :}
+			  
+			  | AVG BRA expression_list:e1 BRAEND {: RESULT = new AvgAggExpression(e1); :}
+			  
+			  | AVG BRA children_attribute_id:e1 BRAEND {: RESULT = new AvgAggExpression(e1); :}
+			  
+			  | ZERO {: RESULT = new ZeroExpression(); :}
+			  
+			  | INTEGER:e1 {: RESULT = new IntExpression(e1); :}
+			  
+			  | REAL:e1 {: RESULT = new RealExpression(e1); :}
+			  ;
+			  
+children_attribute_id ::=  SCHILDREN DOT long_id:e1 {: RESULT = new ChildrenAttributeID(ChildrenAttributeID.SELECTED_CHILDREN, e1,parser.getFeaturesSymbolTable()); :}
+                         | CHILDREN DOT long_id:e1 {: RESULT = new ChildrenAttributeID(ChildrenAttributeID.CHILDREN, e1,parser.getFeaturesSymbolTable()); :}
+                         ;
+
+expression_list ::=  expression:e1 {: RESULT = new ExpressionList(e1); :}
+			       | expression:e1 COMMA expression_list:e2 {: RESULT = new ExpressionList(e1, e2); :}
+			       ;
+
+set_expression ::=  CBRA expression_list:e1 CBRAEND {: RESULT = new SetExpression(e1, parser.getFeaturesSymbolTable()); :}
+				  | SQBRA set_expression_bound:e1 DOT DOT set_expression_bound:e2 SQBRAEND {: RESULT =  new SetExpression(e1, e2, parser.getFeaturesSymbolTable()); :}
+				  ;
+				  
+set_expression_bound ::=  INTEGER:e1 {: RESULT = e1; :}
+					    | REAL:e1 {: RESULT = e1; :}
+					    | ZERO:e1 {: RESULT = "0"; :}
+					    | TIMES:e1 {: RESULT = "*"; :}
+					    ;
+                   
+//----- Constraint section ------------------------------------------------------------------------------------------
+			   
+constraint ::=  IFIN COLON expression:e1 SEMICOLON {: RESULT = new Constraint(true, e1); :}
+              | IFOUT COLON expression:e1 SEMICOLON {: RESULT = new Constraint(false, e1); :}
+              | expression:e1 SEMICOLON {: RESULT = new Constraint(e1); :}
+              ;
+              
+//----- Data section -------------------------------------------------------------------------------------------------
+
+data ::= DATA CBRA data_pair_list:e1 CBRAEND {: RESULT = new Data(e1); :}
+		;
+		
+data_pair_list ::=  data_pair:e1 {: RESULT = new DataPairList(e1); :}
+				  | data_pair:e1 SEMICOLON data_pair_list:e2 {: RESULT = new DataPairList(e1, e2); :}
+				  ;
+				  
+data_pair ::= STRING:e1 STRING:e2 {: RESULT = new DataPair(e1, e2); :}
+			 ;	

@@ -1,0 +1,12 @@
+real cPrice in [300..200];
+root Computer {
+	 group oneof {
+	 	Acer,
+	 	Apple,
+	 	Asus,
+	 	Dell,
+	 	HP,
+	 	Medion,
+	 	Sony
+	 } 
+}

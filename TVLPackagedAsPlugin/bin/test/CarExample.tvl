@@ -1,0 +1,11 @@
+root Car {
+	int price is sum(selectedchildren.price);
+	group oneof {
+		Focus {
+			int price is 12000;
+		},
+		Saxo {
+			int price is 13500;
+		}
+	}
+}

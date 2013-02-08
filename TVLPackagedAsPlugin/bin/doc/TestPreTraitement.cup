@@ -1,0 +1,81 @@
+// FEATUREMX VFD STAR FORMAT CUP PARSER SPECIFICATION
+
+package conditionningTreatement;
+
+import java.util.Vector;
+
+import java.util.HashMap;
+
+import java.util.Map;
+
+import java_cup.runtime.*;
+
+import syntaxTree.*;
+
+
+// Reacting to errors
+parser code {:
+ 
+	public void report_fatal_error ( String message, Object info ) throws Exception { 
+		if (info instanceof java_cup.runtime.Symbol) {
+			java_cup.runtime.Symbol s = ((java_cup.runtime.Symbol) info);
+			if (s.left >= 0) {
+				 message = message + " in line "+(s.left+1);
+				 if (s.right >= 0)
+				 	message = message + ", column "+(s.right+1);
+			}
+		}
+		throw new Exception("VFDStar schema parsing - Syntax Error - "+message); 
+	} 
+:}; 
+
+// TERMINALS
+// ---------
+
+// Comments
+terminal String TEXT;
+terminal String EOL;
+terminal String SLASH;
+terminal String STAR;
+
+
+// NON TERMINALS
+// -------------
+
+non terminal fields;
+non terminal field;
+non terminal commentLine;
+non terminal commentBlock;
+non terminal commentBlockContent;
+non terminal commentBlockLine;
+
+// Meta section
+
+
+// THE GRAMMAR
+// -----------
+
+start with fields;
+
+fields ::=
+          | field fields
+          ; 
+
+field ::=  TEXT:e1 EOL {: System.out.println("++ Text : "+e1+"++"); :} 
+         | commentBlock {: System.out.println("++ Comment Block ++"); :}
+         | TEXT commentLine {: System.out.println("++ Comment Line ++"); :}
+         ;
+         
+commentLine ::= SLASH SLASH TEXT EOL
+			   ;
+			  
+commentBlock ::= SLASH STAR EOL commentBlockContent STAR SLASH EOL
+				;
+
+commentBlockContent ::= 
+					   | commentBlockLine commentBlockContent
+					   ;
+					   
+commentBlockLine ::=  STAR EOL {: System.out.println("++ */ ++"); :}
+					| STAR TEXT:e1 EOL {: System.out.println("++ *"+e1+" ++"); :}
+					; 		

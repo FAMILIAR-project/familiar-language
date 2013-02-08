@@ -1,0 +1,20 @@
+Page {
+	bool color; //False for black, true for other colors  -> Useful?
+	enum side in {recto, verso}; 
+	real bindingMargin; //Optional attribute
+	enum orient in {portrait, landcape}; 
+	int page;
+	position pos; 
+	dimension dim;
+	bool cover;
+	enum force in {none, front, back}; //Optional attribute -> none value
+	Page.force in {front, back} -> Sheet.side==2;
+	Page.force==back -> Page.side==verso;
+	Page.force==front -> Page.side==recto;
+	Document.type==perfectBinding && Page.cover -> Page.bindingMargin==-1; //Exclude an optional attribute
+	Document.type==perfectBinding && Page.cover -> !Sheet.Hole; //Constaint on all clones i.e. equivalent to (not exists)
+	Document.type==perfectBinding && Page.cover -> Sheet.folding==none;
+	Document.type==perfectBinding && Page.cover -> Sheet.side==2;
+	Document.type==perfectBinding && Page.cover -> Page.force==none;
+	Document.type==perfectBinding && Page.cover -> !Sheet.NumberingMethod;
+}

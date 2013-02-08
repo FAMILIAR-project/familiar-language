@@ -1,0 +1,11 @@
+enum cBrand in {Acer, Asus, Toshiba};
+root Computer {
+	group oneof {
+		GraphicCard {
+			group oneof {
+				Asus,
+				NVidia	
+			}	
+		}		
+	}
+}

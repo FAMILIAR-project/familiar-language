@@ -1,0 +1,10 @@
+enum color in {Red, Blue, White};
+root Car {
+	this.mainColor != this.optionnalColor;
+	group oneof {
+		Nissan,
+		Ford
+	}
+	color mainColor;
+	color optionnalColor;
+}

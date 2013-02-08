@@ -1,0 +1,100 @@
+enum cpuSocket {
+	lGA1156, 
+	aSB1
+};
+enum screenConnectivity {
+	vGA, 
+	dVI
+};
+struct motherBoardSize { 
+	int height;  
+	int width;
+};
+root Computer { 
+	group [3..*] { 
+		Motherboard, 
+		CPU, 
+		GraphicCard,
+ 
+		opt Accessories
+	}	
+}
+
+Computer { 
+	int price, in [0..100], ifin: sum(selectedchildren.price), ifout: 0;
+}
+
+
+MotherBoard {
+	int price, ifin: sum(selectedchildren.price); 
+	cpuSocket socket;
+	motherBoardSize size {
+		height, ifin: sum(selectedchildren.size.height);
+	    width, ifin: sum(selectedchildren.size.width);
+	};
+	
+	oneof {
+	 	Asus {
+	    	int price, ifin: 259;
+	       	motherBoardSize size { 
+	       		height, ifin: 30;
+	      		width, ifin: 40;
+	      	};
+	    }
+	    Aopen {
+	       	int price, ifin: 199;
+	       	motherBoardSize size { 
+	       		height, ifin: 30;
+	      		width, ifin: 40;
+	      	};	
+	    }
+	}
+} 
+
+
+
+CPU
+	int price, ifin: sum(selectedchildren.price);
+	cpuSocket socket;
+	oneof { 
+	    CoreI7 {
+	      	int price, ifin: 399;
+	    	}
+      	AthlonNeo {
+	      	int price, ifin: 299;	
+	    }  		
+	}
+
+
+		
+GraphicCard {
+	int price, ifin: sum(selectedchildren.price);
+	screenConnectivity connectivity;
+	oneof {
+
+		shared PhilipsScreen
+		shared SamsungScreen
+	    NVIDIA {
+	      	int price, ifin: 199;		
+	    }
+      	ATI {
+	      	int price, ifin: 159;		
+	    }
+	}
+}
+
+
+Accessories {
+	int price, ifin: sum(selectedchildren.price);
+	group [1..2] { 
+		opt LogitechKeyboardAndMouse {
+			int price, ifin: 19;
+		}
+		opt PhilipsScreen {
+			int price, ifin: 99;	  	  
+		}
+		opt SamsungScreen {
+			int price, ifin: 149;	  
+		}
+	}
+}

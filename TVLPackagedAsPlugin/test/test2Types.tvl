@@ -1,0 +1,13 @@
+int price in [12.2..32];
+root Computer {
+	 group oneof {
+	 	Acer,
+	 	Apple,
+	 	Asus,
+	 	Dell,
+	 	HP,
+	 	Medion,
+	 	Sony
+	 }
+	 
+}

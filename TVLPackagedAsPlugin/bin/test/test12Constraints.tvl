@@ -1,0 +1,8 @@
+root Car {
+	int doorsNumber;
+	real price;
+	group oneof {
+		Ferrari
+	}
+	abs(doorsNumber);
+}

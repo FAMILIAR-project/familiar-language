@@ -1,0 +1,123 @@
+FIELD = META TYPE ROOT
+
+META = :author = Paul;
+	   :version = 2.4;
+       :date = 10/21/2009;
+       
+TYPE = :type :enum CPUSocket :in {LGA1156, ASB1};
+       :type :enum ScreenConnectivity :in {VGA, DVI};
+       :type MotherBoardSize :struct { :int Height;  
+								       :int Width;
+							         }
+							         
+//Dans cette version, on définit d'abord toute la structure du FD. Les attributs et contraintes de chaque fetaure sont définis par après.
+
+ROOT = COMPUTER
+
+COMPUTER = gr[3,4]{ MOTHERBOARD, CPU, GRAPHICCARD, :opt ACCESSORIES}
+
+MOTHERBOARD = gr[1,1] {ASUS, AOPEN}
+
+CPU = [1,1]{COREI7, ATHLONEO}
+
+GRAPHICCARD = gr[1,1]{NVIDIA, ATI}
+
+ACCESORIES = gr[1,3]{:opt LOGITECHKEYBOARDANDMOUSE, :opt PHILIPSSCREEN, :opt SAMSUNGSCREEN}
+
+
+
+// Définition des attributs et contraintes de chaque feature
+
+COMPUTER = :att{ :int Price
+		   			:sel :sum(:selectedChildren.Price);
+		   }
+		   :constraint{ :sel MotherBoard.CPUSocket == CPU.Socket };
+	       }
+	       
+MOTHERBOARD = :att{ :int Price
+	       				:sel :sum(:selectedChildren.Price);
+	       			CPUSocket CPUSocket;
+	       			MotherBoardSize Size{ Height
+	      			  						:sel :sum(:selectedChildren.Size.Height);
+	      			  					  Width
+	      			  						:sel :sum(:selectedChildren.Size.Width);
+	      			};	
+	       	  }
+	       	  
+ASUS = :att{ :int Price 
+	       	 	:sel 259;
+	       	 MotherBoardSize Size{ Height
+	      			  				:sel 30;
+	      			  			   Width
+	      			  				:sel 40;
+	      	 };
+	    }
+	    :const{ :sel Parent.CPUSocket == LGA1156; 
+	    }
+	       
+AOPEN = :att{ :int Price
+	    		:sel 199;
+	    	  MotherBoardSize Size{ Height
+	      			  				 :sel 30;
+	      			  				Width
+	      			  				 :sel 40;
+	      	  };
+	    }
+	    :const{ :sel Parent.CPUSocket == ASB1; 
+	    }
+	    
+CPU = :att{ :int Price 
+	      		:sel :sum(:selectedChildren.Price);
+	      	CPUSocket Socket;
+	  }
+	  
+COREI7 = :att{ :int Price
+	      	     :sel 399;
+	     }
+	     :const{ :sel Parent.CPUSocket == LGA1156; 
+	     }
+	     
+ATHLONNEO = :att{ :int Price
+	      			:sel 299;	
+	        }
+	      	:const{ :sel Parent.CPUSocket == ASB1; 
+	       	}
+	       	
+GRAPHICCARD = :att{ :int Price
+	      		      :sel :sum(:selectedChildren.Price);
+	      		    ScreenConnectivity Connectivity;
+	      	  }
+	      	  
+NVIDIA = :att{ :int Price
+	      		 :sel 199;		
+	     }
+	     :const{ :sel Parent.Connectivity == DVI; 
+	     }
+	     
+ATI = :att{ :int Price
+	      	  :sel 159;		
+	  }
+	  :const{ :sel Parent.Connectivity == VGA; 
+	  }
+	  
+ACCESORIES = :att{ :int Price
+					 :sel :sum(:selectedChildren.Price);
+			 }
+			 :const{ :sel !(PhilipsScreen && SamsungScreen)
+			 }
+			 
+LOGITECHKEYBOARDANDMOUSE = :att{ :int Price
+								   :sel 19;
+						   }
+						   
+PHILIPSSCREEN = :att{ :int Price
+					    :sel 99;	  	  
+				}
+				:const{ :sel GraphicCard.Connectivity == VGA
+				}
+
+SAMSUNGSCREEN = :att{ :int Price
+						:sel 149;	  
+				}
+				:const{ :sel GraphicCard.Connectivity == DVI
+				}

@@ -2,10 +2,10 @@ digraph{
 graph [rankdir=TB];
 node [shape=box];
 edge [arrowhead=normal];
-0[label="Red",]
-1[label="ClipRectangle",]
-2[label="Arc",]
-3[label="Black",]
+0[label="ClipRectangle",]
+1[label="Red",]
+2[label="Black",]
+3[label="Arc",]
 4[label="DrawingTools",]
 5[label="Polygone",]
 6[label="Oval",]

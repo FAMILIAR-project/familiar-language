@@ -1,0 +1,407 @@
+root AudiCar {
+    Wheel.Size -> Wheel.Size.size == s15;
+    TypeWheel -> ( Harm7 || Hole6 );
+    Gas -> ( Petrol || Diesel );
+    DriveTrain -> ( Manual || STronic );
+    TrimLine -> ( SE || Sport || SLine || BlackEdition || CompetitionLine || ContrastEdition );
+    Gas -> ( Petrol || Diesel );
+    DriveTrain -> ( Manual || STronic );
+    TrimLine -> ( SE || Sport || SLine );
+    AudiA8 -> Saloon;
+    AudiA8 -> ( A8 || A8L || A8W12 );
+    AudiA5 -> ( Sportback || Coupe || Cabriolet );
+    AudiA5 -> ( A5Coupe || A5Sportback || A5Cabriolet || S5Coupe || S5Sportback || S5Cabriolet || RS5Coupe );
+    AudiQ3 -> SUV;
+    AudiQ3 -> Q3;
+    AudiA4 -> ( Saloon || Avant || AllroadQuattro );
+    AudiA4 -> ( A4Saloon || A4Avant || A4AllroadQuattro || S4Saloon || S4Avant );
+    AudiA7 -> Sportback;
+    AudiA7 -> A7Sportback;
+    AudiA6 -> ( Saloon || Avant );
+    AudiA6 -> ( A6Saloon || A6Avant );
+    AudiTT -> ( Coupe || Roadster );
+    AudiTT -> ( TTCoupe || TTRoadster || TTSCoupe || TTSRoadster || TTRSCoupe || TTRSRoadster );
+    AudiA1 -> ( Door3 || Sportback );
+    AudiA1 -> ( A1 || A1Sportback );
+    AudiQ7 -> SUV;
+    AudiQ7 -> ( Q7 || Q7V12 );
+    AudiA3 -> ( Door3 || Sportback || Cabriolet );
+    AudiA3 -> ( A3 || A3Sportback || A3Cabriolet || S3 || S3Sportback || RS3Sportback );
+    AudiR8 -> ( Coupe || Spyder );
+    AudiR8 -> ( R8Coupe || R8Spyder );
+    AudiQ5 -> SUV;
+    AudiQ5 -> Q5;
+    Avant -> ( A4Avant || S4Avant || A6Avant );
+    Door3 -> ( A1 || A3 || S3 );
+    SUV -> ( Q3 || Q5 || Q7 || Q7V12 );
+    Roadster -> ( TTRoadster || TTSRoadster || TTRSRoadster );
+    Saloon -> ( A4Saloon || S4Saloon || A6Saloon || A8 || A8L || A8W12 );
+    Spyder -> R8Spyder;
+    Cabriolet -> ( A3Cabriolet || A5Cabriolet || S5Cabriolet );
+    AllroadQuattro -> A4AllroadQuattro;
+    Coupe -> ( A5Coupe || S5Coupe || RS5Coupe || TTCoupe || TTSCoupe || TTRSCoupe || R8Coupe );
+    Sportback -> ( A1Sportback || A3Sportback || S3Sportback || RS3Sportback || A5Sportback || S5Sportback || A7Sportback );
+    ModelMotor -> ( BlackEdition14TFSI || BlackEdition20TDI );
+    ModelMotor -> ( SE12TFSI || SE16TDI );
+    ModelMotor -> ( CompetitionLine14TFSI || CompetitionLine14TFSI119g || CompetitionLine16TDI );
+    ModelMotor -> ( Sport12TFSI || Sport14TFSI || Sport14TFSI119g || Sport16TDI || Sport20TDI );
+    ModelMotor -> ( ContrastEdition12TFSI || ContrastEdition14TFSI || ContrastEdition14TFSI119g || ContrastEdition16TDI || ContrastEdition20TDI );
+    ModelMotor -> ( SLine12TFSI || SLine14TFSI || SLine16TDI || SLine20TDI );
+    Power -> ( ! HorsePower185 );
+    ModelMotor -> ( SE12TFSI || CompetitionLine14TFSI || ContrastEdition12TFSI || ContrastEdition14TFSI || Sport12TFSI || Sport14TFSI || Sport14TFSI119g || SLine12TFSI || SLine14TFSI || SE16TDI || CompetitionLine16TDI || ContrastEdition16TDI || ContrastEdition20TDI || Sport16TDI || Sport20TDI || BlackEdition20TDI || SLine16TDI || SLine20TDI );
+    Power -> ( HorsePower122 || HorsePower185 );
+    ModelMotor -> ( CompetitionLine14TFSI119g || ContrastEdition14TFSI119g || Sport14TFSI119g || BlackEdition14TFSI || SLine14TFSI );
+    ModelMotor -> ( SE12TFSI || CompetitionLine14TFSI || CompetitionLine14TFSI119g || ContrastEdition12TFSI || ContrastEdition14TFSI || ContrastEdition14TFSI119g || Sport12TFSI || Sport14TFSI || Sport14TFSI119g || BlackEdition14TFSI || SLine12TFSI || SLine14TFSI );
+    ModelMotor -> ( SE16TDI || CompetitionLine16TDI || ContrastEdition16TDI || ContrastEdition20TDI || Sport16TDI || Sport20TDI || BlackEdition20TDI || SLine16TDI || SLine20TDI );
+    group [ 7..7 ] {
+        Interior {
+            group [ 1..1 ] {
+                SeatUpholstery {
+                    group [ 1..1 ] {
+                        Leather {
+                            group [ 1..1 ] {
+                                Nappa {
+                                },
+                                Valcona {
+                                },
+                                Vienna {
+                                },
+                                Milano {
+                                }
+                            }
+                        },
+                        Cloth {
+                        },
+                        Alcantara {
+                        }
+                    }
+                },
+                InteriorPackage {
+                    group [ 1..2 ] {
+                        MediaStyle {
+                        },
+                        ExclusiveLeather {
+                        }
+                    }
+                }
+            }
+        },
+        Equipment {
+            group [ 1..9 ] {
+                Seats {
+                },
+                Tyres {
+                },
+                Warranty {
+                },
+                EquipInterior {
+                },
+                EquipExterior {
+                },
+                Package {
+                },
+                SteeringWheels {
+                },
+                AudiAndCommunication {
+                },
+                SafetyAndTechnology {
+                }
+            }
+        },
+        Model {
+            group [ 1..1 ] {
+                A1 {
+                },
+                S3Sportback {
+                },
+                A3 {
+                },
+                A8 {
+                },
+                S5Sportback {
+                },
+                S4Saloon {
+                },
+                R8Spyder {
+                },
+                TTRSRoadster {
+                },
+                A5Sportback {
+                },
+                TTSRoadster {
+                },
+                RS3Sportback {
+                },
+                TTCoupe {
+                },
+                S4Avant {
+                },
+                A3Sportback {
+                },
+                RS5Coupe {
+                },
+                TTSCoupe {
+                },
+                R8Coupe {
+                },
+                A8L {
+                },
+                A6Saloon {
+                },
+                A4AllroadQuattro {
+                },
+                A3Cabriolet {
+                },
+                S5Cabriolet {
+                },
+                A5Cabriolet {
+                },
+                S5Coupe {
+                },
+                A1Sportback {
+                },
+                TTRoadster {
+                },
+                A7Sportback {
+                },
+                A4Saloon {
+                },
+                TTRSCoupe {
+                },
+                A8W12 {
+                },
+                Q5 {
+                },
+                S3 {
+                },
+                Q7 {
+                },
+                A4Avant {
+                },
+                Q3 {
+                },
+                A5Coupe {
+                },
+                Q7V12 {
+                },
+                A6Avant {
+                }
+            }
+        },
+        ModelLine {
+            group [ 1..1 ] {
+                AudiA8 {
+                },
+                AudiA5 {
+                },
+                AudiQ3 {
+                },
+                AudiA4 {
+                },
+                AudiA7 {
+                },
+                AudiA6 {
+                },
+                AudiTT {
+                },
+                AudiA1 {
+                },
+                AudiQ7 {
+                },
+                AudiA3 {
+                },
+                AudiR8 {
+                },
+                AudiQ5 {
+                }
+            }
+        },
+        BodyStyle {
+            group [ 1..1 ] {
+                Avant {
+                },
+                Door3 {
+                },
+                SUV {
+                },
+                Roadster {
+                },
+                Saloon {
+                },
+                Spyder {
+                },
+                Cabriolet {
+                },
+                AllroadQuattro {
+                },
+                Coupe {
+                },
+                Sportback {
+                }
+            }
+        },
+        Exterior {
+            group [ 3..3 ] {
+                Colors {
+                    group [ 1..1 ] {
+                        Grey {
+                            group [ 1..1 ] {
+                                shared PearlEffect,
+                                shared Other,
+                                shared Metallic
+                            }
+                        },
+                        Color {
+                            group [ 1..1 ] {
+                                shared PearlEffect,
+                                shared Other,
+                                shared Metallic
+                            }
+                        }
+                    }
+                },
+                opt ExteriorPackage {
+                    group [ 1..2 ] {
+                        ContrastRoof {
+                        },
+                        BlackStyling {
+                        }
+                    }
+                },
+                Wheel {
+                    group [ 2..2 ] {
+                        TypeWheel {
+                            group [ 1..1 ] {
+                                Harm7 {
+                                },
+                                Hole6 {
+                                },
+                                Spoke5 {
+                                },
+                                Spoke6 {
+                                }
+                            }
+                        },
+                        Size {
+                            enum size in { s20, s19, s18, s17, s16, s15 };
+                        }
+                    }
+                }
+            }
+        },
+        Engine {
+            group [ 5..5 ] {
+                TrimLine {
+                    group [ 1..1 ] {
+                        BlackEdition {
+                        },
+                        SE {
+                        },
+                        CompetitionLine {
+                        },
+                        Sport {
+                        },
+                        ContrastEdition {
+                        },
+                        SLine {
+                        },
+                        SETechnik {
+                        }
+                    }
+                },
+                Motor {
+                    group [ 2..2 ] {
+                        Power {
+                            group [ 1..1 ] {
+                                HorsePower143 {
+                                },
+                                HorsePower185 {
+                                },
+                                HorsePower82 {
+                                },
+                                HorsePower105 {
+                                },
+                                HorsePower122 {
+                                }
+                            }
+                        },
+                        ModelMotor {
+                            group [ 1..1 ] {
+                                Sport14TFSI {
+                                },
+                                CompetitionLine14TFSI {
+                                },
+                                SLine14TFSI {
+                                },
+                                Sport12TFSI {
+                                },
+                                SLine12TFSI {
+                                },
+                                CompetitionLine14TFSI119g {
+                                },
+                                Sport14TFSI119g {
+                                },
+                                ContrastEdition16TDI {
+                                },
+                                SE16TDI {
+                                },
+                                ContrastEdition14TFSI119g {
+                                },
+                                ContrastEdition12TFSI {
+                                },
+                                SLine20TDI {
+                                },
+                                ContrastEdition20TDI {
+                                },
+                                CompetitionLine16TDI {
+                                },
+                                Sport16TDI {
+                                },
+                                SE12TFSI {
+                                },
+                                BlackEdition14TFSI {
+                                },
+                                BlackEdition20TDI {
+                                },
+                                SLine16TDI {
+                                },
+                                Sport20TDI {
+                                },
+                                ContrastEdition14TFSI {
+                                }
+                            }
+                        }
+                    }
+                },
+                DriveTrain {
+                    group [ 1..1 ] {
+                        Manual {
+                        },
+                        Automatic {
+                        },
+                        STronic {
+                        }
+                    }
+                },
+                WheelDrive {
+                    group [ 1..1 ] {
+                        RearWheelDrive {
+                        },
+                        Quatro {
+                        },
+                        FrontWheelDrive {
+                        }
+                    }
+                },
+                Gas {
+                    group [ 1..1 ] {
+                        Petrol {
+                        },
+                        Diesel {
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

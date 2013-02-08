@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE featureMX_model SYSTEM "DTD_Saving_Files.dtd">
+<featureMX_model name="Nike">
+	<meta>
+		<data name="author">sample</data>
+		<data name="version">10/12/2009</data>
+	</meta>
+	<vfd_star_diagram><![CDATA[
+		:mand Bike <!>root feature</!>
+			<const>
+				:sel
+					[ :cnf ((((Height :intof Rims) == 50) && ((Value intof: FrameSize) >= 15) && ((Value intof: FrameSize) <= 22)) ||
+							(((Height :intof Rims) == 65) && ((Value intof: FrameSize) >= 17) && ((Value intof: FrameSize) <= 28)) ||
+							(((Height :intof Rims) == 70) && ((Value intof: FrameSize) >= 19) && ((Value intof: FrameSize) <= 28)))
+					]
+					[ :cnf ((PersonBikeTypeRacer &&  ((Value intof: GearsNumber) >= 19) && ((Value intof: GearsNumber) <= 28) && !(Mudguard) && !(Basket)) ||
+							(PersonBikeTypeMountain &&  ((Value intof: GearsNumber) >= 30) && !(Carrier) && !(Basket)) ||
+							(PersonBikeTypeCity &&  ((Value intof: GearsNumber) >= 22) && ((Value intof: GearsNumber) <= 35))
+							(PersonBikeTypeGrandma &&  ((Value intof: GearsNumber) >= 25) && ((Value intof: GearsNumber) <= 35) && Carrier && Propstand && Basket))
+					]
+					[ :cnf !(Internal :booleanof Gear)  ==> !(PropStand) ]
+					[ :cnf ((PersonBikeTypeRacer || PersonBikeTypeCity) && PersonHeight150-160) ==>  (((Value :intof FrameSize) >= 17) && ((Value :intof FrameSize) <= 20)) ]
+					[ :cnf ((PersonBikeTypeRacer || PersonBikeTypeCity) && PersonHeight160-170) ==>  (((Value :intof FrameSize) >= 19) && ((Value :intof FrameSize) <= 22)) ]
+					[ :cnf ((PersonBikeTypeRacer || PersonBikeTypeCity) && PersonHeight170-180) ==>  (((Value :intof FrameSize) >= 21) && ((Value :intof FrameSize) <= 24)) ]
+					[ :cnf ((PersonBikeTypeRacer || PersonBikeTypeCity) && PersonHeight180-190) ==>  (((Value :intof FrameSize) >= 23) && ((Value :intof FrameSize) <= 28)) ]
+					[ :cnf ((PersonBikeTypeRacer || PersonBikeTypeCity) && PersonHeight190-200) ==>  (((Value :intof FrameSize) >= 25) && ((Value :intof FrameSize) <= 28)) ]
+					[ :cnf (PersonBikeTypeMountain && PersonHeight150-160) ==>  (((Value :intof FrameSize) >= 15) && ((Value :intof FrameSize) <= 18)) ]
+					[ :cnf (PersonBikeTypeMountain && PersonHeight160-170) ==>  (((Value :intof FrameSize) >= 16) && ((Value :intof FrameSize) <= 19)) ]
+					[ :cnf (PersonBikeTypeMountain && PersonHeight170-180) ==>  (((Value :intof FrameSize) >= 17) && ((Value :intof FrameSize) <= 20)) ]
+					[ :cnf (PersonBikeTypeMountain && PersonHeight180-190) ==>  (((Value :intof FrameSize) >= 18) && ((Value :intof FrameSize) <= 22)) ]
+					[ :cnf (PanaracerAvventura || PanaracerCategoryPro || PanaracerTourguard || PanaracerEverride || PanaracerStradius) ==> !(Sidereflex) ]
+					[ :cnf (PersonBikeTypeRacer || PersonBikeTypeMountain) ==> !(PedalTypeStandard) ]
+					[ :cnf (PersonBikeTypeCity || PersonBikeTypeGrandma) ==> PedalTypeStandard) ]
+			</const>
+   			<gr> [11,13] :mand Person
+   							<gr> [3,3] :mand PersonGender
+   											<gr> [1,1] :mand PersonGenderFemale
+   													   :mand PersonGenderMale
+   											</gr>
+   									   :mand PersonHeight
+   									   		<gr> [1,1] :mand PersonHeight150-160
+   									   				   :mand PersonHeight160-170
+   									   				   :mand PersonHeight170-180
+   									   				   :mand PersonHeight180-190
+   									   				   :mand PersonHeight190-200
+   									   		</gr>
+   									   :mand PersonBikeType
+   									   		<gr> [1,1] :mand PersonBikeTypeCity
+   									   				   :mand PersonBikeTypeGrandma
+   									   				   :mand PersonBikeTypeMountain
+   									   				   :mand PersonBikeTypeRacer
+   							</gr>
+   					   :opt Accessories
+   					   		<const> 
+   					   			:sel
+   					   				[ :cnf Carrier ==>  Mudguard ]
+   					   				[ :cnf !(Pump && Bottle) ]
+   					   		</const> 
+   					   		<gr> [0,9] :opt :prim Carrier
+   					   				   :opt :prim Mudguard
+   					   				   :opt :prim Lock
+   					   				   :opt :prim Pump
+   					   				   :opt :prim Bottle
+   					   				   :opt :prim Barket
+   					   				   :opt :prim Cateye
+   					   				   :opt :prim Sidereflex
+ 									   :opt :prim Frontreflex
+   					   				   :opt :prim Propstand
+   					   		</gr>	
+   					   :mand Pedal
+   					   		<const>
+   					   			:sel
+   					   				[ :cnf 
+   					   				(BlackPlastic && PedalTypeSPD) ||
+   					   				(CampagnoloChorus && PedalTypeSPD) ||
+   					   				(CampagnoloRecord && PedalTypeSPD) ||
+   					   				(PD5500 && PedalTypeSPD) ||
+   					   				(PD6600 && PedalTypeSPD) ||
+   					   				(PDC101 && PedalTypeStandard) ||
+   					   				(PD105 && PedalTypeStandard) ||
+   					   				(PDM434 && PedalTypeClip) ||
+   					   				(PDM545 && PedalTypeClips) 
+   					   		</const>
+   					   		<gr> [1,1] :mand :prim BlackPlastic 
+   					   				   :mand :prim CampagnoloChorus
+   					   				   :mand :prim CampagnoloRecord
+   					   				   :mand :prim PD5500
+   					   				   :mand :prim PDC101
+   					   				   :mand :prim PDC105
+   					   				   :mand :prim PDM434
+   					   				   :mand :prim PDM545
+   					   		</gr>
+   					   :opt Shoes
+   					   		<const>
+   					   			:sel
+   					   				[ :cnf 
+   					   				(PedalTypeClip && ( SHR072 || SHR150 )) ||
+   					   				(PedalTypeSPD && ( SHR090 || SHR212 )) 
+   					   				]
+   					   		</const>
+   					   		<gr> [1,1] :mand :prim SHR072
+   					   				   :mand :prim SHR090
+   					   				   :mand :prim SHR150
+   					   				   :mand :prim SHR212
+   					   		</gr>	
+   					   :mand Rims
+   					   		<att> :int Height <val> :sel ((Height :intof CampagnoloAtlantaAero) + (Height :intof MA3) + (Height :intof T519) + (Height :intof CXP33) + (Height :intof OpenPro) + (Height :intof X221) + (Height :intof Cosmos) + (Height :intof Cross) + (Height :intof CampagnoloMexicoAero) + (Height :intof CampagnoloProton) + (Height :intof CampagnoloMoskvaAero) + (Height :intof Helium))            
+   					   								:desel 0
+   					   						  </val>
+   					   			  :real Width <val> :sel ((Width :realof CampagnoloAtlantaAero) + (Width :realof MA3) + (Width :realof T519) + (Width :realof CXP33) + (Width :realof OpenPro) + (Width :realof X221) + (Width :realof Cosmos) + (Width :realof Cross) + (Width :realof CampagnoloMexicoAero) + (Width :realof CampagnoloProton) + (Width :realof CampagnoloMoskvaAero) + (Width :realof Helium))            
+   					   								:desel 0
+   					   						  o</val>		 
+   					   		</att> 
+   					   		<gr> [1,1] :mand :prim CampagnoloAtlantaAero
+   					   						<att> :int Height <val> :sel 65
+   					   												:desel 0
+   					   										  </val>
+   					   							  :real Width <val> :sel 1.00
+   					   							  					:desel 0
+   					   							  			  </val>
+   					   						</att>
+   					   				   :mand :prim MA3
+   					   						<att> :int Height <val> :sel 70
+   					   												:desel 0
+   					   										  </val>
+   					   							  :real Width <val> :sel 0.85
+   					   							  					:desel 0
+   					   							  			  </val>
+   					   						</att>
+   					   				   :mand :prim T519
+   					   						<att> :int Height <val> :sel 70
+   					   												:desel 0
+   					   										  </val>
+   					   							  :real Width <val> :sel 1.00
+   					   							  					:desel 0
+   					   							  			  </val>
+   					   						</att>
+   					   				   :mand :prim CXP33
+   					   						<att> :int Height <val> :sel 70
+   					   												:desel 0
+   					   										  </val>
+   					   							  :real Width <val> :sel 1.25
+   					   							  					:desel 0
+   					   							  			  </val>
+   					   						</att>
+   					   				   :mand :prim OpenPro
+   					   						<att> :int Height <val> :sel 70
+   					   												:desel 0
+   					   										  </val>
+   					   							  :real Width <val> :sel 1.00
+   					   							  					:desel 0
+   					   							  			  </val>
+   					   						</att>
+   					   				   :mand :prim X221
+   					   						<att> :int Height <val> :sel 65
+   					   												:desel 0
+   					   										  </val>
+   					   							  :real Width <val> :sel 1.50
+   					   							  					:desel 0
+   					   							  			  </val>
+   					   						</att>
+   					   				   :mand :prim Cosmos
+   					   						<att> :int Height <val> :sel 65
+   					   												:desel 0
+   					   										  </val>
+   					   							  :real Width <val> :sel 1.25
+   					   							  					:desel 0
+   					   							  			  </val>
+   					   						</att>
+   					   				   :mand :prim Cross
+   					   						<att> :int Height <val> :sel 50
+   					   												:desel 0
+   					   										  </val>
+   					   							  :real Width <val> :sel 1.50
+   					   							  					:desel 0
+   					   							  			  </val>
+   					   						</att>
+   					   				   :mand :prim CampagnoloMexicoAero
+   					   						<att> :int Height <val> :sel 65
+   					   												:desel 0
+   					   										  </val>
+   					   							  :real Width <val> :sel 1.00
+   					   							  					:desel 0
+   					   							  			  </val>
+   					   						</att>
+   					   				   :mand :prim CampagnoloProton
+   					   						<att> :int Height <val> :sel 65
+   					   												:desel 0
+   					   										  </val>
+   					   							  :real Width <val> :sel 0.85
+   					   							  					:desel 0
+   					   							  			  </val>
+   					   						</att>
+   					   				   :mand :prim CampagnoloMoskvaAero
+   					   						<att> :int Height <val> :sel 65
+   					   												:desel 0
+   					   										  </val>
+   					   							  :real Width <val> :sel 0.85
+   					   							  					:desel 0
+   					   							  			  </val>
+   					   						</att>
+   					   					:mand :prim Helium
+   					   						<att> :int Height <val> :sel 50
+   					   												:desel 0
+   					   										  </val>
+   					   							  :real Width <val> :sel 1.25
+   					   							  					:desel 0
+   					   							  			  </val>
+   					   						</att>	
+   					   		</gr>
+   					   :mand Tires
+   					   		<const>
+   					   			:sel
+   					   				[ :cnf 
+   					   				(Triatlon && TireProfile20) ||
+   					   				(Courier && ((Height :intof Rims) == 70) && (((Width :realof Rims) == 1.00) || ((Width :realof Rims) == 1.25)) && (TireProfile23 || TireProfile32)) ||
+   					   				(Tecno && ((Height :intof Rims) == 70) && (((Width :realof Rims) == 1.00) || ((Width :realof Rims) == 1.25)) && (TireProfile20 || TireProfile23 || TireProfile28)) ||
+   					   				(Roma && ((Height :intof Rims) == 70) && (((Width :realof Rims) == 0.85) || ((Width :realof Rims) == 1.00)) && (TireProfile19 || TireProfile22 || TireProfile25)) ||
+   					   				(Lizzard && ((Height :intof Rims) == 70) && (((Width :realof Rims) == 1.50) || ((Width :realof Rims) == 1.75)) && (TireProfile35 || TireProfile38)) ||
+   					   				(Atlanta && ((Height :intof Rims) == 70) && ((Width :realof Rims) == 1.00) && (TireProfile20 || TireProfile21)) ||
+   					   				(Track && ((Height :intof Rims) == 70) && ((Width :realof Rims) == 0.85) && TireProfile22) ||
+   					   				(Extreme && ((Height :intof Rims) == 70) && ((Width :realof Rims) == 1.00) && TireProfile21) ||
+   					   				(AllWeather && ((Height :intof Rims) == 70) && ((Width :realof Rims) == 1.25) && (TireProfile20 || TireProfile22)) ||
+   					   				(Beaumont && ((Height :intof Rims) == 65) && (((Width :realof Rims) == 1.25) || ((Width :realof Rims) == 1.50)) && TireProfile20) ||
+   					   				(PanaracerAvventura && ((Height :intof Rims) == 65) && (((Width :realof Rims) == 1.00) || ((Width :realof Rims) == 1.25)) && TireProfile20) ||
+   					   				(PanaracerCategoryPro && (((Height :intof Rims) == 70) || ((Height :intof Rims) == 65)) && (((Width :realof Rims) == 1.00) || ((Width :realof Rims) == 1.25)) && (TireProfile20 || TireProfile22)) ||
+   					   				(PanaracerEverride && (((Height :intof Rims) == 70) || ((Height :intof Rims) == 65)) && (((Width :realof Rims) == 1.00) || ((Width :realof Rims) == 1.25)) && (TireProfile22 || TireProfile25)) ||
+   					   				(PanaracerTourguard && (((Height :intof Rims) == 70) || ((Height :intof Rims) == 65)) && (((Width :realof Rims) == 1.00) || ((Width :realof Rims) == 1.25)) && (TireProfile22 || TireProfile23 || TireProfile25 || TireProfile28 || TireProfile30)) ||
+   					   				(PanaracerStradius && (((Height :intof Rims) == 70) || ((Height :intof Rims) == 65)) && (((Width :realof Rims) == 0.85) || ((Width :realof Rims) == 1.25)) && (TireProfile20 || TireProfile19)) ||
+   					   				(Kenda && ((Height :intof Rims) == 50) && (((Width :realof Rims) == 1.50) || ((Width :realof Rims) == 1.25)) && TireProfile35) 
+   					   				]
+   					   		</const>
+   					   		<gr> [1,1] :mand :prim Triatlon
+   					   		  
+   					   				   :mand :prim Courier  
+   					   				   :mand :prim Tecno  
+   					   				   :mand :prim Roma  
+   					   				   :mand :prim Lizzard  
+   					   				   :mand :prim Atlanta  
+   					   				   :mand :prim Track  
+   					   				   :mand :prim Extreme  
+   					   				   :mand :prim AllWeather  
+   					   				   :mand :prim Beaumont  
+   					   				   :mand :prim PanaracerAvventura  
+   					   				   :mand :prim PanaracerCategoryPro  
+   					   				   :mand :prim PanaracerEverride  
+   					   				   :mand :prim PanaracerTourguard  
+   					   				   :mand :prim PanaracerStradius  
+   					   				   :mand :prim Kenda  
+   					   		</gr>
+   					   :opt Gear
+   					   			<att> :bool Internal <val> :sel (Value :booleanof DuraAce) || (Value :booleanof Ultegra) || (Value :booleanof Tiagra) || (Value :booleanof Sora) || (Value :booleanof Acera) || (Value :booleanof ShimanoNexus) || (Value :booleanof ShimanoRSXSTI) || (Value :booleanof Shimano105STI) || (Value :booleanof CampagnoloAvantiErgopower) || (Value :booleanof CampagnoloMirageErgopower) || (Value :booleanof CampagnoloVeloce) || (Value :booleanof ShimanoDeore) || (Value :booleanof ShimanoAcer) || (Value :booleanof Torpedo)
+   					   									   :desel false
+   					   								 </val>
+   					   			</att>
+   					   			<const>
+   					   				:sel
+   					   					[ :cnf 
+   					   					(DuraAce && PersonBikeTypeRacer && GearsNumbers18) ||
+   					   					(Ultegra && PersonBikeTypeRacer && GearsNumbers16) ||
+   					   					(Tiagra && PersonBikeTypeRacer && GearsNumbers16) ||
+   					   					(Sora && PersonBikeTypeMountain && GearsNumbers21) ||
+   					   					(Acera && PersonBikeTypeMountain && GearsNumbers24) ||
+   					   					(ShimanoNexus && (PersonBikeTypeCity || PersonBikeTypeMountain || PersonBikeTypeGrandma)  && (GearsNumbers3 || GearsNumbers4 || GearsNumbers7)) ||
+   					   					(ShimanoRSXSTI && PersonBikeTypeRacer && GearsNumbers16) ||
+   					   					(Shimano105STI && PersonBikeTypeRacer && GearsNumbers18) ||
+   					   					(CampagnoloAvantiErgopower && PersonBikeTypeRacer && GearsNumbers16) ||
+   					   					(CampagnoloMirageErgopower && PersonBikeTypeRacer && GearsNumbers18) ||
+   					   					(CampagnoloVeloce && PersonBikeTypeRacer && GearsNumbers18) ||
+   					   					(ShimanoDeore && PersonBikeTypeMountain && GearsNumbers27) ||
+   					   					(ShimanoAcer && PersonBikeTypeMountain && GearsNumbers24) ||
+   					   					(Torpedo && (PersonBikeTypeCity || PersonBikeTypeGrandma) && (GearsNumbers3 || GearsNumbers5)) 
+   					   					]
+   					   			</const>
+   					   			<gr> [1,1] :mand :prim DuraAce
+   					   							<att> :bool Internal <val> :sel .false.
+   					   												 	   :desel .false.
+   					   												 </val>  
+   					   							</att>
+   					   					   :mand :prim Ultegra
+   					   							<att> :bool Internal <val> :sel .false.
+   					   												 	   :desel .false.
+   					   												 </val>	   
+   					   							</att>
+   					   					   :mand :prim Tiagra
+   					   							<att> :bool Internal <val> :sel .false.
+   					   												 	   :desel .false.
+   					   												 </val> 	   
+   					   							</att>
+   					   					   :mand :prim Sora
+   					   							<att> :bool Internal <val> :sel .false.
+   					   												 	   :desel .false.
+   					   												 </val>  	   
+   					   							</att>
+   					   					   :mand :prim Acera
+   					   							<att> :bool Internal <val> :sel .false.
+   					   												 	   :desel .false.
+   					   												 </val>	   
+   					   							</att>
+   					   					   :mand :prim ShimanoNexus
+   					   							<att> :bool Internal <val> :sel .true.
+   					   												 	   :desel .false.
+   					   												 </val>	   
+   					   							</att>
+   					   					   :mand :prim ShimanoRSXSTI
+   					   							<att> :bool Internal <val> :sel .false.
+   					   												 	   :desel .false.
+   					   												 </val>	   
+   					   							</att>
+   					   					   :mand :prim Shimano105STI
+   					   							<att> :bool Internal <val> :sel .false.
+   					   												 	   :desel .false.
+   					   												 </val>	   
+   					   							</att>
+   					   					   :mand :prim CampagnoloAvantiErgopower
+   					   							<att> :bool Internal <val> :sel .false.
+   					   												 	   :desel .false.
+   					   												 </val>	   
+   					   							</att>
+   					   					   :mand :prim CampagnoloMirageErgopower
+   					   							<att> :bool Internal <val> :sel .false.
+   					   												 	   :desel .false.
+   					   												 </val>	   
+   					   							</att>
+   					   							<gr> [1,1] :mand GearsNumber18
+   					   							</gr>
+   					   					   :mand :prim CampagnoloVeloce
+   					   							<att> :bool Internal <val> :sel .false.
+   					   												 	   :desel .false.
+   					   												 </val>	   
+   					   							</att>
+   					   					   :mand :prim ShimanoDeore
+   					   							<att> :bool Internal <val> :sel .false.
+   					   												 	   :desel .true.
+   					   												 </val>	   
+   					   							</att>
+   					   					   :mand :prim ShimanoAcer
+   					   							<att> :bool Internal <val> :sel .false.
+   					   												 	   :desel .false.
+   					   												 </val>	   
+   					   							</att>
+   					   					   :mand :prim Torpedo
+   					   							<att> :bool Internal <val> :sel .true.
+   					   												 	   :desel .false.
+   					   												 </val>	   
+   					   							</att>
+   					   			</gr>
+   					   
+   					   :mand Frame
+   					   		<att> :enum Color <val> :sel   					   		                			Black,   					   				   					BlackPurple,   					   				   					Blue,   					   				   					Brown,   					   				   					Creme,   					   				   					Green,   					   				   					Grey,   					   				   					Blue,   					   				   					Green,   					   				   					Purple,   					   				   					Red,   					   				   					Silver,   					   				   					White,   					   				   					Yellow
+   					   				   				:desel nil                     						  </val>
+                     			  :int Size <val> :sel [13,28]
+                     			  				  :desel 0	
+                     			  			</val>							</att>
+   					   		<const> 
+   					   			:sel
+   					   				[ :cnf
+   					   				(ButterflyClassic && PersonBikeTypeGrandma && PersonGenderFemale && (Internal :booleanof Gear)) ||
+   					   				(CenturionBasicFreeMetal && PersonBikeTypeCity && PersonGenderFemale && (Internal :booleanof Gear)) ||
+   					   				(CenturionBasicFree && PersonBikeTypeCity && PersonGenderMale && (Internal :booleanof Gear)) ||
+   					   				(CenturionBasicLightMetal && PersonBikeTypeCity && PersonGenderFemale && (Internal :booleanof Gear)) ||
+   					   				(CenturionBasicLight && PersonBikeTypeCity && PersonGenderMale && (Internal :booleanof Gear)) ||
+   					   				(CenturionBasicMeral && PersonBikeTypeCity && PersonGenderFemale && (Internal :booleanof Gear)) ||
+   					   				(CenturionBasic && PersonBikeTypeCity && PersonGenderMale && (Internal :booleanof Gear)) ||
+   					   				(CenturionBoulevard && PersonBikeTypeCity && PersonGenderFemale && (Internal :booleanof Gear)) ||
+   					   				(CenturionChallengerLady && PersonBikeTypeCity && PersonGenderFemale && (Internal :booleanof Gear)) ||
+   					   				(CenturionChallenger && PersonBikeTypeCity && PersonGenderFemale && (Internal :booleanof Gear) ||
+   					   				(CenturionChallenger && PersonBikeTypeCity && (Internal :booleanof Gear)) ||
+   					   				(CenturionCrazyPointLady && PersonBikeTypeMountain && PersonGenderFemale && (Internal :booleanof Gear)) ||
+   					   				(CenturionCrazyPoint && PersonBikeTypeMountain && PersonGenderMale && (Internal :booleanof Gear)) ||
+   					   				(CenturionDarkImage && PersonBikeTypeMountain && PersonGenderMale && (Internal :booleanof Gear)) ||
+   					   				(CenturionDiscoveryLady && PersonBikeTypeCity && PersonGenderFemale && (Internal :booleanof Gear)) ||
+   					   				(CenturionDiscovery && PersonBikeTypeCity && PersonGenderMale && (Internal :booleanof Gear)) ||
+   					   				(CenturionEternityLady && PersonBikeTypeCity && PersonGenderFemale && (Internal :booleanof Gear)) ||
+   					   				(CenturionEternity && PersonBikeTypeCity && PersonGenderMale && (Internal :booleanof Gear)) ||
+   					   				(CenturionFarOut && PersonBikeTypeMountain && PersonGenderMale && !(Internal :booleanof Gear)) ||
+   					   				(CenturionHelium && PersonBikeTypeRacer && PersonGenderMale && !(Internal :booleanof Gear)) ||
+   					   				(CenturionInvincible && PersonBikeTypeRacer && PersonGenderMale && !(Internal :booleanof Gear)) ||
+   					   				(CenturionNitrogen && PersonBikeTypeRacer && PersonGenderMale && !(Internal :booleanof Gear)) ||
+   					   				(CenturionOffDuty && PersonBikeTypeMountain && PersonGenderMale && (Internal :booleanof Gear)) ||
+   					   				(CenturionOxygenMeral && PersonBikeTypeRacer && PersonGenderFemale && !(Internal :booleanof Gear)) ||
+   					   				(CenturionOxygen && PersonBikeTypeRacer && PersonGenderMale && !(Internal :booleanof Gear)) ||
+   					   				(CenturionUltimate && PersonBikeTypeRacer && PersonGenderMale && !(Internal :booleanof Gear)) ||
+   					   				(CenturionBasic && PersonBikeTypeCity && (Internal :booleanof Gear)) ||
+   					   				(ColibriStreetBikePlus && PersonBikeTypeCity && (Internal :booleanof Gear)) ||
+   					   				(Faggin7005 && PersonBikeTypeRacer && PersonGenderMale && !(Internal :booleanof Gear)) ||
+   					   				(Faggin7020 && PersonBikeTypeRacer && PersonGenderMale && !(Internal :booleanof Gear)) ||
+   					   				(FagginEaston && PersonBikeTypeRacer && PersonGenderMale && !(Internal :booleanof Gear)) ||
+   					   				(JupiterCruiser && PersonBikeTypeMountain && (PersonGenderMale || PersonGenderFemale) && (Internal :booleanof Gear)) ||
+   					   				(JupiterInside && (PersonBikeTypeCity || PersonBikeTypeMountain) && PersonGenderFemale && (Internal :booleanof Gear)) ||
+   					   				(JupiterInside && (PersonBikeTypeCity || PersonBikeTypeMountain) && PersonGenderMale && (Internal :booleanof Gear)) ||
+   					   				(JupiterMillenium && (PersonBikeTypeCity || PersonBikeTypeMountain) && PersonGenderMale && (Internal :booleanof Gear)) ||
+   					   				(JupiterMillenium && (PersonBikeTypeCity || PersonBikeTypeMountain) && PersonGenderFemale && (Internal :booleanof Gear)) ||
+   					   				(JupiterStraight && PersonBikeTypeCity && (PersonGenderMale || PersonGenderFemale) && (Internal :booleanof Gear)) ||
+   					   				(KildemoesLogic32Derailleur && PersonBikeTypeMountain && (PersonGenderMale || PersonGenderFemale)) && !(Internal :booleanof Gear)) ||
+   					   				(KildemoesPrimates && PersonBikeTypeMountain && PersonGenderMale && (Internal :booleanof Gear)) ||
+   					   				(SchwinnMesa && PersonBikeTypeMountain && PersonGenderMale && !(Internal :booleanof Gear)) ||
+   					   				(SchwinnMoab3 && PersonBikeTypeMountain && PersonGenderFemale && !(Internal :booleanof Gear)) 
+   					   				]
+   					   				[ :cnf (PersonBikeTypeCity || PersonBikeTypeGrandma) ==> (Internal :booleanof Gear) ]
+   					   				[ :cnf PersonBikeTypeRacer ==> !(Internal :booleanof Gear) ]
+   					   		</const>
+   					   		<gr> [1,1] :mand :prim ButterflyClassic
+   					   						<const> 												:sel 
+													[Parent.Color = {Black, Red, Creme, Blue} && (Parent.Size >= 20) && (Parent.Size <= 23)]											</const>
+   					   				   :mand :prim CenturionBasic
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Silver, Green, Blue, Black} && (Parent.Size = {22, 23, 25})]											</const>
+   					   				   :mand :prim CenturionBasicFree
+   					   				   		<const> 												:sel 
+													[Parent.Color = {SilverLightBlue}  && (Parent.Size = {22, 23, 25})]											</const>
+   					   				   :mand :prim CenturionBasicFreeMeral
+   					   				   		<const> 												:sel 
+													[Parent.Color = {LightBlue} && (Parent.Size = {20, 22, 23})]											</const>
+   					   				   :mand :prim CenturionBasicLight
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Silver, Purple, Red} && (Parent.Size = {22,23,25})]											</const>
+   					   				   :mand :prim CenturionBasicLightMeral
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Silver, Red}  && (Parent.Size = {20,22,23})]											</const>
+   					   				   :mand :prim CenturionBasicMeral
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Silver, Green, Blue, Black} && (Parent.Size = {20,22,23})]											</const>
+   					   				   :mand :prim CenturionBoulevard
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Red}  && (Parent.Size >= 20) &&  && (Parent.Size <= 23)]											</const>
+   					   				   :mand :prim CenturionChallenger
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Blue, Brown, LightBlue, Purple, Red}  && (Parent.Size = {17,19,20,22,23})]											</const>
+   					   				   :mand :prim CenturionChallengerLady
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Purple, LightBlue, Red, Black}  && (Parent.Size = {20,22,23})]											</const>
+   					   				   :mand :prim CenturionCrazyPoint
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Silver, Brown, Blue, Black} && (Parent.Size = {15,17,19,20,22})]											</const>
+   					   				   :mand :prim CenturionCrazyPointLady
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Silver, Red, Black} && (Parent.Size = {19,17,19,20})]											</const>
+   					   				   :mand :prim CenturionDarkImage
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Silver, Blue} && (Parent.Size = {15,17,19,20,22})]											</const>
+   					   				   :mand :prim CenturionDiscovery
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Silver, Green, Purple} && (Parent.Size = {22,23,25})]											</const>
+   					   				   :mand :prim CenturionDiscoveryLady
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Purple, Silver, Red} && (Parent.Size = {20,22,23})]											</const>
+   					   				   :mand :prim CenturionEternity
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Silver, Red, Green, Purple, Blue}]											</const>
+   					   				   :mand :prim CenturionEternityLady
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Silver, Blue} && (Parent.Size = {20,22,23})]											</const>
+   					   				   :mand :prim CenturionFarOut
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Red} && (Parent.Size = {15,17,19,20,22})]											</const>
+   					   				   :mand :prim CenturionHelium
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Green, LightGreen} && (Parent.Size = {22,23,24,25})]											</const>
+   					   				   :mand :prim CenturionInvincible
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Red, LightGreen}  && (Parent.Size = {22,23,24,25})]											</const>
+   					   				   :mand :prim CenturionNitrogen
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Green, LightBlue}  && (Parent.Size = {22,23,24,25})]											</const>
+   					   				   :mand :prim CenturionOffDuty
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Silver, Green, Purple} && (Parent.Size = {15,17,19,20,22})]											</const>
+   					   				   :mand :prim CenturionOxygen
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Silver, Blue, Purple}  && (Parent.Size = {22,23,24,25})]											</const>
+   					   				   :mand :prim CenturionOxygenMeral
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Silver} && (Parent.Size = {19,20,21,22})]											</const>
+   					   				   :mand :prim CenturionUltimate
+   					   				   		<const> 												:sel 
+													[Parent.Color = {LightBlue} && (Parent.Size = {22,23,24,25})]											</const>
+   					   				   :mand :prim ColibriStreetBikePlus
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Black, Grey, Yellow, Blue, White, Red, Green, Silver LightBlue}  && (Parent.Size = {20,22,24})]											</const>
+   					   				   :mand :prim Faggin7005
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Black}  && (Parent.Size = {20,22,23,25,28})]											</const>
+   					   				   :mand :prim Faggin7020
+   					   				   		<const> 												:sel 
+													[Parent.Color = {BlackPurple} && (Parent.Size = {20,22,23,25,28})]											</const>
+   					   				   :mand :prim FagginEaston
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Black, White} && (Parent.Size = {20,22,23,25,28})]											</const>
+   					   				   :mand :prim JupiterCruiser
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Silver} && (Parent.Size = {15,17,19,21})]											</const>
+   					   				   :mand :prim JupiterInside
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Silver}  && ((Parent.Size = {20,21,22})  || (Parent.Size = {21,22,24}))]											</const>
+   					   				   :mand :prim JupiterMillenium
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Silver}  && ((Parent.Size = {20,21,22,24})  || (Parent.Size = {20,21}))]											</const>
+   					   				   :mand :prim JupiterStraight
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Silver, LightBlue} && (Parent.Size = {22,23,24})]											</const>
+   					   				   :mand :prim KildemoesLogic32Derailleur
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Silver} && ((Parent.Size = {20,22,23})  || (Parent.Size = {20,22}))]											</const>
+   					   				   :mand :prim KildemoesPrimates
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Green} && (Parent.Size = {16,18,20})]											</const>
+   					   				   :mand :prim Schwinn Mesa
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Red} && (Parent.Size >= 13) && (Parent.Size <= 23)]											</const>
+   					   				   :mand :prim SchwinnMoab3 
+   					   				   		<const> 												:sel 
+													[Parent.Color = {Silver} && (Parent.Size >= 13) && (Parent.Size <= 23)]											</const>
+   					   		</gr>
+
+
+
+
+
+
+
+   					   :mand PedalType
+   					   		<gr> [1,1] :mand PedalTypeStandard
+   					   		           :mand PedalTypeSPD
+   					   		           :mand PedalTypeClip
+   					   		</gr>
+   					   :mand TireProfile
+   					   		<att> :int Value <val> :sel TireProfile19 + TireProfile20 + TireProfile21 + TireProfile22 + TireProfile23 + TireProfile25 + TireProfile28 + TireProfile30 + TireProfile32 + TireProfile35 + TireProfile38
+   					   							   :desel 0
+   					   						</att>
+   					   		<gr> [1,1] :mand TireProfile19
+   					   						<att> :int Value <val> :sel 19
+   					   											   :desel 0
+   					   						</att>
+   					   				   :mand TireProfile20
+   					   				   		<att> :int Value <val> :sel 20
+   					   											   :desel 0
+   					   						</att>
+   					   				   :mand TireProfile21
+   					   				   		<att> :int Value <val> :sel 21
+   					   											   :desel 0
+   					   						</att>
+   					   				   :mand TireProfile22
+   					   				   		<att> :int Value <val> :sel 22
+   					   											   :desel 0
+   					   						</att>
+   					   				   :mand TireProfile23
+   					   				   		<att> :int Value <val> :sel 23
+   					   											   :desel 0
+   					   						</att>
+   					   				   :mand TireProfile25
+   					   				   		<att> :int Value <val> :sel 25
+   					   											   :desel 0
+   					   						</att>
+   					   				   :mand TireProfile28
+   					   				   		<att> :int Value <val> :sel 28
+   					   											   :desel 0
+   					   						</att>
+   					   				   :mand TireProfile30
+   					   				   		<att> :int Value <val> :sel 30
+   					   											   :desel 0
+   					   						</att>
+   					   				   :mand TireProfile32
+   					   				   		<att> :int Value <val> :sel 32
+   					   											   :desel 0
+   					   						</att>
+   					   				   :mand TireProfile35
+   					   				   		<att> :int Value <val> :sel 35
+   					   											   :desel 0
+   					   						</att>
+   					   				   :mand TireProfile38
+   					   				   		<att> :int Value <val> :sel 38
+   					   											   :desel 0
+   					   						</att>
+   					   		</gr>
+   					   :mand GearsNumber 
+   					   		<gr> [1,1] : mand GearsNumbers1
+   					   				   : mand GearsNumbers3
+   					   				   : mand GearsNumbers4
+   					   				   : mand GearsNumbers5
+   					   				   : mand GearsNumbers7
+   					   				   : mand GearsNumbers16
+   					   				   : mand GearsNumbers18
+   					   				   : mand GearsNumbers21
+   					   				   : mand GearsNumbers24
+   					   				   : mand GearsNumbers27
+   					   		</gr>
+   					   :mand FrameSize
+   					   		<att> :int Value <val> :sel ((Value :intof FrameSize13) + (Value :intof FrameSize14) + (Value :intof FrameSize15) + (Value :intof FrameSize16) +  (Value :intof FrameSize17) + (Value :intof FrameSize18) + (Value :intof FrameSize19) + (Value :intof FrameSize20) + (Value :intof FrameSize 21) + (Value :intof FrameSize22) + (Value :intof FrameSize23) + (Value :intof FrameSize24) + (Value :intof FrameSize25)  + (Value :intof FrameSize26) + (Value :intof FrameSize27) + (Value :intof FrameSize28))
+   					   							   :desel 0
+   					   						 </val>
+   					   		</att>
+   					   		<gr> [1,1] :mand FrameSize13
+   					   						<att> :int Value <val> :sel 13
+   					   											   :desel 0
+   					   						</att>
+   					   				   :mand FrameSize14
+   					   						<att> :int Value <val> :sel 14
+   					   											   :desel 0
+   					   						</att>
+   					   				   :mand FrameSize15
+   					   						<att> :int Value <val> :sel 15
+   					   											   :desel 0
+   					   						</att>
+   					   				   :mand FrameSize16
+   					   						<att> :int Value <val> :sel 16      					   											   :desel 0
+   					   						</att>
+   					   				   :mand FrameSize17
+   					   						<att> :int Value <val> :sel 17
+   					   											   :desel 0
+   					   						</att>
+   					   				   :mand FrameSize18
+   					   						<att> :int Value <val> :sel 18
+   					   											   :desel 0
+   					   						</att>
+   					   				   :mand FrameSize19
+   					   						<att> :int Value <val> :sel 19
+   					   											   :desel 0
+   					   						</att>
+   					   				   :mand FrameSize20
+   					   						<att> :int Value <val> :sel 20
+   					   											   :desel 0
+   					   						</att>
+   					   				   :mand FrameSize21
+   					   						<att> :int Value <val> :sel 21
+   					   											   :desel 0
+   					   						</att>
+   					   				   :mand FrameSize22
+   					   						<att> :int Value <val> :sel 22
+   					   											   :desel 0
+   					   						</att>
+   					   				   :mand FrameSize23
+   					   						<att> :int Value <val> :sel 23
+   					   											   :desel 0
+   					   						</att>
+   					   				   :mand FrameSize24
+   					   						<att> :int Value <val> :sel 24
+   					   											   :desel 0
+   					   						</att>
+   					   				   :mand FrameSize25
+   					   						<att> :int Value <val> :sel 25
+   					   											   :desel 0
+   					   						</att>
+   					   				   :mand FrameSize26
+   					   						<att> :int Value <val> :sel 26
+   					   											   :desel 0
+   					   						</att>
+   					   				   :mand FrameSize27
+   					   						<att> :int Value <val> :sel 27
+   					   											   :desel 0
+   					   						</att>
+   					   				   :mand FrameSize28
+   					   						<att> :int Value <val> :sel 28
+   					   											   :desel 0
+   					   						</att>
+   					   		</gr>
+   					   :mand FrameColor
+   					   		<gr> [1,1] :mand FrameColorBlack
+   					   				   :mand FrameColorBlackPurple
+   					   				   :mand FrameColorBlue
+   					   				   :mand FrameColorBrown
+   					   				   :mand FrameColorCreme
+   					   				   :mand FrameColorGreen
+   					   				   :mand FrameColorGrey
+   					   				   :mand FrameColorLightBlue
+   					   				   :mand FrameColorLightGreen
+   					   				   :mand FrameColorPurple
+   					   				   :mand FrameColorRed
+   					   				   :mand FrameColorSilver
+   					   				   :mand FrameColorWhite
+   					   				   :mand FrameColorYellow
+   					   		</gr>	
+   			</gr>
+]]></vfd_star_diagram>
+</featureMX_model>

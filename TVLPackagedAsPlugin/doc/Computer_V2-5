@@ -1,0 +1,107 @@
+:author = Paul;
+:version = 2.4;
+:date = 10/21/2009;
+:type :enum CPUSocket :in {LGA1156, ASB1};
+:type :enum ScreenConnectivity :in {VGA, DVI};
+:type MotherBoardSize :struct { :int Height;  
+								:int Width;
+							  }
+:root Computer
+	:att{ :int Price
+			:sel :sum(:selectedChildren.Price);
+	}
+	:constraint{ :sel MotherBoard.CPUSocket == CPU.Socket };
+	}
+	:gr[3,4]{ MotherBoard
+	       		:att{ :int Price
+	       				:sel :sum(:selectedChildren.Price);
+	       			  CPUSocket CPUSocket;
+	       			  MotherBoardSize Size{ Height
+	      			  							:sel :sum(:selectedChildren.Size.Height);
+	      			  						Width
+	      			  							:sel :sum(:selectedChildren.Size.Width);
+	      			  };	
+	       		}
+	       		:gr[1,1]{ Asus
+	       						:att{ :int Price 
+	       								:sel 259;
+	       							  MotherBoardSize Size{ Height
+	      			  							          	 :sel 30;
+	      			  						                Width
+	      			  							             :sel 40;
+	      			  				  };
+	       						}
+	       						:const{ :sel Parent.CPUSocket == LGA1156; 
+	       						}
+	       				  Aopen
+	       				  		:att{ :int Price
+	       				  				:sel 199;
+	       				  			  MotherBoardSize Size{ Height
+	      			  							          	 :sel 30;
+	      			  						                Width
+	      			  							             :sel 40;
+	      			  				  };
+	       				  		}
+	       				  		:const{ :sel Parent.CPUSocket == ASB1; 
+	       						}
+	       		} 
+	          CPU
+	      		:att{ :int Price 
+	      				:sel :sum(:selectedChildren.Price);
+	      			  CPUSocket Socket;
+	      		}
+	      		:gr[1,1]{ CoreI7
+	      						:att{ :int Price
+	      								:sel 399;
+	      						}
+	      						:const{ :sel Parent.CPUSocket == LGA1156; 
+	       						}
+      				  	  AthlonNeo
+	      						:att{ :int Price
+	      								:sel 299;	
+	      						}
+	      						:const{ :sel Parent.CPUSocket == ASB1; 
+	       						}
+	      		}
+	          GraphicCard
+	      		:att{ :int Price
+	      		      	:sel :sum(:selectedChildren.Price);
+	      		      ScreenConnectivity Connectivity;
+	      		}
+	      		:gr[1,1]{ NVIDIA
+	      						:att{ :int Price
+	      								:sel 199;		
+	      						}
+	      						:const{ :sel Parent.Connectivity == DVI; 
+	       						}
+      				  	  ATI
+	      						:att{ :int Price
+	      								:sel 159;		
+	      						}
+	      						:const{ :sel Parent.Connectivity == VGA; 
+	       						}
+	      		} 		
+		      :opt Accesories
+				:att{ :int Price
+						:sel :sum(:selectedChildren.Price);
+				}
+				:const{ :sel !(PhilipsScreen && SamsungScreen)
+				}
+				:gr[1,3]{ :opt LogitechKeyboardAndMouse
+								:att{ :int Price
+										:sel 19;
+								}
+						  :opt PhilipsScreen
+						  		:att{ :int Price
+						  				:sel 99;	  	  
+						  		}
+						  		:const{ :sel GraphicCard.Connectivity == VGA
+						  		}
+						  :opt SamsungScreen
+						  		:att{ :int Price
+						  				:sel 149;	  
+						  		}
+						  		:const{ :sel GraphicCard.Connectivity == DVI
+						  		}
+	}
+	

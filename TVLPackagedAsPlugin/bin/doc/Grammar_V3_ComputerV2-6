@@ -1,0 +1,157 @@
+
+
+FIELD = META (CONSTANTS)? (TYPES)? FD
+
+META = AUTHOR VERSION DATE
+
+AUTHOR = :author = STRING;   
+
+VERSION = :version = STRING;
+
+DATE = :date = (INTEGER/INTEGER/INTEGER);
+
+CONSTANTS = (CONSTANT)+ 
+
+CONSTANT =  :define :bool ATTRIBUTE_ID (true | false);
+		  | :define :int ATTRIBUTE_ID INTEGER;
+		  | :define :real ATTRIBUTE_ID REAL:
+		  
+TYPES = (BASE_TYPE | RECORD)+
+
+BASE_TYPE =  :int ATTRIBUTE_ID :in INT_SET_EXPRESSION; 
+           | :real ATTRIBUTE_ID :in REAL_SET_EXPRESSION;
+           | :enum ATTRIBUTE_ID :in ENUM_EXPRESSION;  
+
+RECORD = :struct ATTRIBUTE_ID { (BASE_TYPE | ATTRIBUTE_ID ATTRIBUTE_ID;)+ };
+
+COMPOSED_FEATURE_ID =  :Root->FEATURE_ID_CHAIN
+            		 | FEATURE_ID->FEATURE_ID_CHAIN
+
+FEATURE_ID_CHAIN =  FEATURE_ID
+				  | FEATURE_ID->FEATURE_ID_CHAIN
+           
+FEATURE_ID = [A-Z]([a-zA-Z0-9])+ / {"parent", "root", "true", "false", "children"}
+
+COMPOSED_ATTRIBUTE_ID =  :Parent.ATTRIBUTE_ID_CHAIN
+              		   | FEATURE_ID.ATTRIBUTE_ID_CHAIN
+              		   | COMPOSED_FEATURE_ID.ATTRIBUTE_ID_CHAIN   
+
+ATTRIBUTE_ID_CHAIN =  ATTRIBUTE_ID
+                    | ATTRIBUTE_ID.ATTRIBUTE_ID_CHAIN
+
+ATTRIBUTE_ID = [a-z]([a-zA-Z0-9])+ / {"parent", "root", "true", "false", "children"}
+
+CHILDREN_ATTRIBUTE_ID =  :SelectedChildren.ATTRIBUTE_ID_CHAIN
+      				   | :Children.ATTRIBUTE_ID_CHAIN
+         
+FD = :root (:prim)?  FEATURE_ID { DATA? ATTRIBUTES? CONSTRAINTS? FEATURES?}
+
+FEATURES = :grCARDINALITY{ (FEATURE)+ }
+
+FEATURE =  :dag FEATURE_ID { DATA? } 
+         | (:opt)? (:prim)? FEATURE_ID { DATA? ATTRIBUTES? CONSTRAINTS? FEATURES? }
+
+CARDINALITY = [(NATURAL |*),(NATURAL |*)]  
+
+ATTRIBUTES = (ATTRIBUTE)+
+
+ATTRIBUTE =  BASE_ATTRIBUTE
+		   | ATTRIBUTE_ID ATTRIBUTE_ID (SEL_DESEL_INT | SEL_DESEL_REAL | SEL_DESEL_ENUM)?;
+		   | ATTRIBUTE_ID ATTRIBUTE_ID ((ATTRIBUTE_ID (SEL_DESEL_INT | SEL_DESEL_REAL | SEL_DESEL_ENUM |SEL_DESEL_BOOL))+)?;
+		   | :heritage ATTRIBUTE_ID (SEL_DESEL_INT | SEL_DESEL_REAL | SEL_DESEL_ENUM |SEL_DESEL_BOOL)?;
+		   | :heritage ATTRIBUTE_ID ((ATTRIBUTE_ID (SEL_DESEL_INT | SEL_DESEL_REAL | SEL_DESEL_ENUM |SEL_DESEL_BOOL))+)?;
+
+BASE_ATTRIBUTE =  :int ATTRIBUTE_ID ((:in INT_SET_EXPRESSION SEL_DESEL_INT) | :in INT_SET_EXPRESSION | SEL_DESEL_INT);    
+           		| :real ATTRIBUTE_ID ((:in REAL_SET_EXPRESSION SEL_DESEL_REAL) | :in REAL_SET_EXPRESSION | SEL_DESEL_REAL);
+           		| :bool ATTRIBUTE_ID SEL_DESEL_BOOL?;
+           		| :enum ATTRIBUTE_ID :in ENUM_EXPRESSION (SEL_DESEL_ENUM)?;
+           		
+SEL_DESEL_INT =  :sel (INT_EXPRESSION | :in INT_SET_EXPRESSION) :desel (INT_EXPRESSION | :in INT_SET_EXPRESSION)
+               | :sel (INT_EXPRESSION | :in INT_SET_EXPRESSION)
+               | :desel (INT_EXPRESSION | :in INT_SET_EXPRESSION)
+
+SEL_DESEL_REAL =  :sel (REAL_EXPRESSION | :in REAL_SET_EXPRESSION) :desel (REAL_EXPRESSION | :in REAL_SET_EXPRESSION)
+				| :sel (REAL_EXPRESSION | :in REAL_SET_EXPRESSION)
+				| :desel (REAL_EXPRESSION | :in REAL_SET_EXPRESSION)
+
+SEL_DESEL_ENUM =  :sel (ID | :in ENUM_EXPRESSION) :desel (ID | :in ENUM_EXPRESSION)
+				| :sel (ID | :in ENUM_EXPRESSION)
+				| :desel (ID | :in ENUM_EXPRESSION)
+
+SEL_DESEL_BOOL =  :sel BOOL_EXPRESSION :desel BOOL_EXPRESSION
+				| :sel BOOL_EXPRESSION
+				| :desel BOOL_EXPRESSION
+           
+BOOL_EXPRESSION =  BOOL_EXPRESSION && BOOL_EXPRESSION				 | BOOL_EXPRESSION || BOOL_EXPRESSION				 | BOOL_EXPRESSION ==> BOOL_EXPRESSION				 | BOOL_EXPRESSION <=> BOOL_EXPRESSION                 | !(BOOL_EXPRESSION)                 | (BOOL_EXPRESSION)                 | true                 | false
+                 | COMPOSED_FEATURE_ID                 | FEATURE_ID
+                 | COMPOSED_ATTRIBUTE_ID
+                 | ATTRIBUTE_ID                 | INT_EXPRESSION == INT_EXPRESSION                 | INT_EXPRESSION == REAL_EXPRESSION                 | REAL_EXPRESSION == INT_EXPRESSION                 | REAL_EXPRESSION == REAL_EXPRESSION                 | INT_EXPRESSION >= INT_EXPRESSION                 | INT_EXPRESSION <= INT_EXPRESSION                 | REAL_EXPRESSION >= REAL_EXPRESSION                 | REAL_EXPRESSION <= REAL_EXPRESSION
+                 | ATTRIBUTE_ID :in (ENUM_EXPRESSION | INT_SET_EXPRESSION | REAL_SET_EXPRESSION)
+                 | COMPOSED_ATTRIBUTE_ID :in (ENUM_EXPRESSION | INT_SET_EXPRESSION | REAL_SET_EXPRESSION)
+                 | ATTRIBUTE_ID == ID
+                 | COMPOSED_ATTRIBUTE_ID == ID
+                 | BOOL_CHILDREN_OPERATION
+
+INT_EXPRESSION =  INT_EXPRESSION + INT_EXPRESSION                | INT_EXPRESSION - INT_EXPRESSION                | INT_EXPRESSION * INT_EXPRESSION                | INT_EXPRESSION / INT_EXPRESSION                | -(INT_EXPRESSION)                | (INT_EXPRESSION)                | max(INT_EXPRESSION,INT_EXPRESSION)                | min(INT_EXPRESSION,INT_EXPRESSION)                | abs(INT_EXPRESSION)                | COMPOSED_ATTRIBUTE_ID
+                | ATTRIBUTE_ID                | ? BOOL_EXPRESSION : INT_EXPRESSION , INT_EXPRESSION ?                | INTEGER
+                | NUM_CHILDREN_OPERATION
+                
+NUM_CHILDREN_OPERATION =  :sum(CHILDREN_ATTRIBUTE_ID)
+                        | :mul(CHILDREN_ATTRIBUTE_ID)
+                        | :min(CHILDREN_ATTRIBUTE_ID)
+                        | :max(CHILDREN_ATTRIBUTE_ID)
+                        | :count(CHILDREN_ATTRIBUTE_ID)
+                        | :avg(CHILDREN_ATTRIBUTE_ID)
+                        
+BOOL_CHILDREN_OPERATION =  :and(CHILDREN_ATTRIBUTE_ID)
+                         | :or(CHILDREN_ATTRIBUTE_ID)
+                         | :xor(CHILDREN_ATTRIBUTE_ID)
+                
+REAL_EXPRESSION =  REAL_EXPRESSION + REAL_EXPRESSION                 | REAL_EXPRESSION - REAL_EXPRESSION                 | REAL_EXPRESSION * REAL_EXPRESSION                 | (REAL_EXPRESSION)                 | REAL                 | COMPOSED_ATTRIBUTE_ID
+                 | ATTRIBUTE_ID                 | ? BOOL_EXPRESSION : REAL_EXPRESSION , REAL_EXPRESSION ?
+                 | NUM_CHILDREN_OPERATION  
+           
+ENUM_EXPRESSION = {ENUM_CONTENT}
+			  
+INT_SET_EXPRESSION =  {INT_SET_CONTENT}
+					| [INT_EXPRESSION, INT_EXPRESSION]
+					
+REAL_SET_EXPRESSION =  {REAL_SET_CONTENT}
+					 | [REAL_EXPRESSION, REAL_EXPRESSION]
+					 
+ENUM_CONTENT =  ID
+			  | ID, ENUM_CONTENT
+					
+INT_SET_CONTENT =  INT_EXPRESSION
+     			 | INT_EXPRESSION, INT_SET_CONTENT
+     			 
+REAL_SET_CONTENT =  REAL_EXPRESSION
+     			  | REAL_EXPRESSION, INT_SET_CONTENT
+     			  
+CONSTRAINTS = (:sel (CONSTRAINT) | :desel (CONSTRAINT))+
+
+               
+CONSTRAINT = (BOOLEAN_CONSTRAINT | EXTENDED_CONSTRAINT);
+               
+NATURAL = 0 | [1-9][0-9]*
+
+INTEGER = 0 | (-)?[1-9][0-9]* 
+
+REAL = INTEGER.([0-9]*[1-9])?
+
+INCLUDE = :include(FILE);
+
+FILE = [a-zA-Z0-9:/]+
+
+STRING = [^«</!>»]*
+
+DATA = :data{ DATA_PAIR }
+
+DATA_PAIR =  (ID, (STRING))
+           | (ID, (STRING)), DATA_PAIR               
+               
+COMMENT =  //
+         | /* STRING */
+         | /** STRING* **/               
+               
+               

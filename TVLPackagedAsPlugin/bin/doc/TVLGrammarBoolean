@@ -1,0 +1,129 @@
+----- Starting point --------------------------------------------------------------
+
+	MODEL                   = ( TYPE | CONSTANT | FEATURE )*
+
+	----- Type section ----------------------------------------------------------------
+
+	TYPE                    =  SIMPLE_TYPE
+	                         | RECORD
+
+	SIMPLE_TYPE             =  "enum" ID "in" SET_EXPRESSION ";"
+	                         | "bool" ID ";"
+
+	RECORD                  = "struct" ID "{" RECORD_FIELD+ "}"
+
+	RECORD_FIELD            =  SIMPLE_TYPE
+	                         | ID ID ";"
+
+	----- Constant section -------------------------------------------------------------
+
+	CONSTANT                =  "const" "bool" ID ( "true" | "false" ) ";"
+
+	----- ID section -------------------------------------------------------------------
+
+	SHORT_ID                =  "root"
+	                         | "this"
+	                         | "parent"
+	                         | ID
+
+	LONG_ID                 =  SHORT_ID
+	                         | SHORT_ID "." LONG_ID
+
+	----- Feature section --------------------------------------------------------------
+
+	FEATURE                 =  "root" ID "{" FEATURE_BODY_ITEM* "}" 
+	                         | LONG_ID "{" FEATURE_BODY_ITEM* "}"
+	                         | "root" ID FEATURE_GROUP
+	                         | LONG_ID FEATURE_GROUP
+
+	FEATURE_BODY_ITEM       =  DATA
+	                         | CONSTRAINT
+	                         | ATTRIBUTE
+	                         | FEATURE_GROUP
+
+	FEATURE_GROUP           = "group" CARDINALITY "{" HIERARCHICAL_FEATURE ("," HIERARCHICAL_FEATURE)* "}"           
+
+	HIERARCHICAL_FEATURE    =  ("opt")? FEATURE
+	                         | ( "shared" | "opt" )? LONG_ID
+
+	CARDINALITY             =  "oneof"
+	                         | "someof"
+	                         | "allof"
+	                         | "[" ( NATURAL ) "," (NATURAL | "*" ) "]"
+
+	----- Attribute section -------------------------------------------------------------
+
+	ATTRIBUTE               =  BASE_ATTRIBUTE
+	                         | ID ID "{" SUB_ATTRIBUTE+ "}"
+
+	BASE_ATTRIBUTE          =  "bool" ID  ATTRIBUTE_BODY? ";"
+	                         | "enum" ID  ATTRIBUTE_BODY? ";"
+
+	ATTRIBUTE_BODY          =  "is" EXPRESSION
+	                         | "in" SET_EXPRESSION "," ATTRIBUTE_CONDITIONNAL
+	                         | "in" SET_EXPRESSION
+	                         | "," ATTRIBUTE_CONDITIONNAL
+
+	ATTRIBUTE_CONDITIONNAL  =  "ifin:" "is" EXPRESSION "," "ifout:" "is" EXPRESSION
+	                         | "ifin:" "is" EXPRESSION
+	                         | "ifout:" "is" EXPRESSION
+	                         | "ifin:" "in" SET_EXPRESSION "," "ifout:" "is" EXPRESSION
+	                         | "ifin:" "is" EXPRESSION "," "ifout:" "in" SET_EXPRESSION
+	                         | "ifin:" "in" SET_EXPRESSION "," "ifout:" "in" SET_EXPRESSION
+	                         | "ifin:" "in" SET_EXPRESSION
+	                         | "ifout:" "in" SET_EXPRESSION
+
+	SUB_ATTRIBUTE           = ID ATTRIBUTE_BODY ";"
+
+	----- Expression section --------------------------------------------------------------
+
+	EXPRESSION              =  EXPRESSION "&&" EXPRESSION
+	                         | EXPRESSION "||" EXPRESSION
+	                         | EXPRESSION "->" EXPRESSION
+	                         | EXPRESSION "<-" EXPRESSION
+	                         | EXPRESSION "<->" EXPRESSION
+	                         | "!" EXPRESSION
+	                         | "(" EXPRESSION ")"
+	                         | "true"
+	                         | "false"
+	                         | LONG_ID
+	                         | EXPRESSION "==" EXPRESSION
+	                         | EXPRESSION "!=" EXPRESSION
+	                         | EXPRESSION "in" SET_EXPRESSION
+	                         | "and" "(" ( EXPRESSION_LIST | CHILDREN_ID ) ")"
+	                         | "or" "(" ( EXPRESSION_LIST | CHILDREN_ID ) ")"
+	                         | "xor" "(" ( EXPRESSION_LIST | CHILDREN_ID ) ")"
+	                         | LONG_ID "excludes" LONG_ID
+	                         | LONG_ID "requires" LONG_ID
+	                         | EXPRESSION "?" EXPRESSION ":" EXPRESSION
+
+	EXPRESSION_LIST         = EXPRESSION ("," EXPRESSION_LIST)*
+
+	SET_EXPRESSION          =  "{" EXPRESSION_LIST "}"
+
+	CHILDREN_ID             =  "selectedchildren" "." LONG_ID
+	                         | "children" "." LONG_ID
+
+	----- Constraint section --------------------------------------------------------------
+
+	CONSTRAINT              =  "ifin:" EXPRESSION ";"
+	                         | "ifout:" EXPRESSION ";"
+	                         | EXPRESSION ";"
+
+	----- Data section ---------------------------------------------------------------------
+
+	DATA                    = "data" "{" DATA_PAIR+ "}"
+
+	DATA_PAIR               = STRING STRING ";"
+
+	----- Value section -------------------------------------------------------------------
+
+	NATURAL                 = "0" | ["1"-"9"]["0"-"9"]*
+
+	INTEGER                 = "0" | ("-")?["1"-"9"]["0"-"9"]*
+
+	REAL                    = INTEGER "." (["0"-"9"]*["1"-"9"])?
+
+	ID                      = ["a"-"z" "A"-"Z"] ["a"-"z" "A"-"Z" "0" -"9" "_"]+
+
+	STRING    

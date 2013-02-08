@@ -1,0 +1,16 @@
+root Vehicle {
+	group oneof {
+		Car {
+			group oneof {
+				Ford,
+				Ferrari
+			}
+		},
+		Truck {
+			group oneof {
+				Ford,
+				Peugeot
+			}
+		}
+	}
+}

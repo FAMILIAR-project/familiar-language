@@ -1,0 +1,33 @@
+<project name="TVLParser" default="compile" basedir=".">
+<property name="src" location="${basedir}/src"/>    
+<property name="cupJar" location="../TVL-LIB/java_cup/java-cup-11a.jar"/>
+<property name="flexJar" location="../TVL-LIB/JFlex/JFlex.jar"/>
+<description>
+Generate Compiler Files from CUP Lexicon and Grammar
+</description>
+
+<target name="compile" depends="flex, cup" />
+
+<target name="flex">
+	<java jar="${flexJar}" fork="true" failonerror="true">
+    <arg value="-d"/>
+    <arg value="${src}/be/ac/fundp/info/TVLParser/Parser"/>
+    <arg value="${src}/be/ac/fundp/info/TVLParser/TVL-Grammar.flex"/>
+    </java>
+</target>
+
+<target name="cup">
+    <java jar="${cupJar}" fork="true" failonerror="true">
+    <arg value="-package" />
+    <arg value="be.ac.fundp.info.TVLParser.Parser"/>
+    <arg value="-destdir"/>
+    <arg value="${src}/be/ac/fundp/info/TVLParser/Parser" />
+    <arg value="-parser"/>
+    <arg value="Parser"/>
+    <arg value="-symbols"/>
+    <arg value="Symbols"/>
+    <arg value="${src}/be/ac/fundp/info/TVLParser/TVL-Grammar.cup"/>
+    </java>
+</target>
+
+</project>

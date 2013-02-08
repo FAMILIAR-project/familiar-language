@@ -1,0 +1,3044 @@
+-----------------------------------------------------------------------------
+-------------------------- Solutions information ----------------------------
+-----------------------------------------------------------------------------
+
+Congratulations, the feature model is satisfiable.
+
+The feature model has 132 solutions :
+
+ Solution number 1 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+! AvailableVoteValues
+! NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+! EnableVoting
+! 15
+! 16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 2 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 3 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 4 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 5 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 6 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 7 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+! AvailableVoteValues
+! NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+! EnableVoting
+! 15
+  16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 8 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 9 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 10 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+! AvailableVoteValues
+! NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+! EnableVoting
+  15
+! 16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 11 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 12 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 13 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 14 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 15 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 16 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 17 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 18 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+! AvailableVoteValues
+! NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+! EnableVoting
+  15
+  16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 19 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 20 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 21 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 22 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 23 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 24 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 25 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 26 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 27 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 28 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 29 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 30 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 31 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 32 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+! 17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 33 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+! AvailableVoteValues
+! NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+! EnableVoting
+! 15
+! 16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 34 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 35 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 36 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 37 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 38 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 39 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 40 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 41 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+! AvailableVoteValues
+! NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+! EnableVoting
+  15
+! 16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 42 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 43 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 44 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 45 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 46 :
+
+
+  Votes
+  Artificial3
+  DefaultVoteValue
+! NoDVV
+  AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 47 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 48 :
+
+
+  Votes
+  Artificial3
+  DefaultVoteValue
+! NoDVV
+  AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 49 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 50 :
+
+
+  Votes
+  Artificial3
+  DefaultVoteValue
+! NoDVV
+  AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 51 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+! AvailableVoteValues
+! NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+! EnableVoting
+! 15
+  16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 52 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 53 :
+
+
+  Votes
+  Artificial3
+  DefaultVoteValue
+! NoDVV
+  AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 54 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+! AvailableVoteValues
+! NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+! EnableVoting
+  15
+  16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 55 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 56 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 57 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 58 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 59 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 60 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 61 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 62 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 63 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 64 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 65 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 66 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 67 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 68 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+  17
+! 18
+
+--------------------------------------------------------
+
+ Solution number 69 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+! AvailableVoteValues
+! NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+! EnableVoting
+! 15
+! 16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 70 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 71 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 72 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 73 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 74 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 75 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 76 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 77 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+! AvailableVoteValues
+! NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+! EnableVoting
+  15
+! 16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 78 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 79 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 80 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 81 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 82 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 83 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 84 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 85 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+! AvailableVoteValues
+! NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+! EnableVoting
+! 15
+  16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 86 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 87 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 88 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 89 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 90 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 91 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 92 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 93 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+! AvailableVoteValues
+! NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+! EnableVoting
+  15
+  16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 94 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 95 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 96 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 97 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 98 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 99 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 100 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+! 17
+  18
+
+--------------------------------------------------------
+
+ Solution number 101 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+! AvailableVoteValues
+! NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+! EnableVoting
+! 15
+! 16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 102 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 103 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 104 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 105 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 106 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 107 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 108 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+! 16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 109 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+! AvailableVoteValues
+! NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+! EnableVoting
+  15
+! 16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 110 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 111 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 112 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 113 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 114 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 115 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 116 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+! 16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 117 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+! AvailableVoteValues
+! NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+! EnableVoting
+! 15
+  16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 118 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 119 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 120 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 121 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 122 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 123 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 124 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+! 15
+  16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 125 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+! AvailableVoteValues
+! NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+! EnableVoting
+  15
+  16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 126 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 127 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 128 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+! AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 129 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 130 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+! YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 131 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+! NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+  17
+  18
+
+--------------------------------------------------------
+
+ Solution number 132 :
+
+
+  Votes
+  Artificial3
+! DefaultVoteValue
+! NoDVV
+! AbstentionDVV
+! YesDVV
+  Artificial2
+  AvailableVoteValues
+  NoAVV
+  YesAVV
+  AbstentionAVV
+  Artificial1
+  EnableVoting
+  15
+  16
+  17
+  18
+
+--------------------------------------------------------
+

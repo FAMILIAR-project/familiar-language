@@ -1,0 +1,250 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * 
+ * This is a description of the XYZ feature diagram file format. *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * The format is illustrated with a PC product line.
+ * 
+ */
+
+/*
+ * As you have noticed, comments are written in a  C-style syntax.  They can be placed anywhere and are filtered out by the
+ * preprocessor before the compilation.
+ */
+
+/* 
+ * At the begining of the file, the user may specify metadata: the file author name, the file version and the date. 
+ */
+:author = Paul;
+:version = 2.6 1TBS Style;
+:date = 10/21/2009;
+
+/* 
+ * Before specifying the feature diagram, the user may want to define some attribute types. Each type has a value domain and is 
+ * terminated with a ";". The basic attribute types are : ":bool", ":enum", ":int" and "real".
+ * 
+ * Naming convention: feature names start with a capital letter. All other names (attributes, types,...) start with a lowercase letter.
+ */
+:enum cpuSocket = {
+	LGA1156, 
+	ASB1
+};
+
+/**
+ * Javadoc-style comments (starting with two **) have a special meaning: they contain the description of the 
+ * following language element (the "screenConnectivity" type in this case).  Contrary to the normal comments, they 
+ * will not be filtered out by the preprocessor; they will be part of the AST, so that modelling tools can use them 
+ * to store documentation.
+ */
+:enum screenConnectivity = {
+	VGA, 
+	DVI
+};
+
+/*
+ * In addition to the basic types, a type may be a hierarchical structure (":struct") that has several fields. 
+ */ 
+:struct motherBoardSize { 
+	:int height;  
+	:int width;
+};
+
+/*
+ * After the types statement, the user may specify some constants thanks to the keyword ":define". 
+ */ 
+:define :int maxRamBlocks 4;
+
+/* 
+ * After the type declarations comes the feature diagram itself.  It starts with the root feature, which must be 
+ * preceded by the keyword ":root". A feature block consists of the following :
+ *  - The feature constraints
+ *  - The feature attributes
+ *  - The children of the feature: There are two ways to specify the children of a feature
+ *      1) The "hierarchical" way: Fully specify the child feature in this place (the complete feature block)
+ *    	2) The "grammatical" way : Only specify the ID (and optional state) of the child feature (without its block). 
+ *    	   The details of the child feature (its block) is provided later in the file. 
+ * 
+ * More generally, the definition of a feature can be spread over an arbitrary number of feature blocks.  This is 
+ * semantically equivalent to specifying a single definition with the lines that are otherwise spread.  The compiler 
+ * will simply join the contents of each of the blocks.  The children block of a feature can only be specified in one 
+ * piece, though (it cannot be spread over different blocks).
+ * 
+ * 
+ * In our example, the children of the feature "computer" is are specified in the grammatical way.  The group statement 
+ * contains only the ID of the child features and the user has chosen to specify the attributes and the constraints later.
+ *
+ * The cardinality of the group statement ("[x, y]") shows the minimum ("x") and maximum ("y") number of children 
+ * features.  One can use the wildcard char * to indicate the maximum number of features.
+ * 
+ * Instead of using cardinalities, one can also use the standard decomposition operators :and, :or, :xor.
+ */
+:root Computer { // <- The braces that delimit the feature block can be omitted
+	:gr[3,4] {  // <- The braces of the children block are mandatory
+		Motherboard, 
+		CPU, 
+		GraphicCard,
+		// A feature preceded by the keyword ":opt" indicates that the feature "Accessories" is optional. 
+		:opt Accessories
+	}	
+} // This is the end of the definition of the computer feature.
+
+
+/*
+ * Since this block is also called "Computer", it designates the same feature as before, the declarations in here will 
+ * be added to the previous ones.
+ */
+Computer { 
+	/*
+	 * When a user creates a new attribute, he must specify :
+	 * 1) The attribute type : Basic type (":bool", ":int", ":real" and ":enum") or a self created type.
+	 * 2) The attribute name.
+	 * 3) The domain of the attribute ":in {..}" (optionnal)
+	 * 4) The value the attribute takes when its parent feature is selected ":sel ..." (optionnal)
+	 * 5) The value the attribute takes when its parent feature is deselected ":desel ..." (optional)
+	 *
+	 * The value is simply an expression with the type of the attribute.  The syntax for these expressions
+	 * is as expected (operators +-*/ for numeric expressions and && || ==> <=> ! for boolean expressions.
+	 * In addition, there are a number of aggregation operators, such as :sum, :max, :min, :mult, :count, 
+	 * :avg for numeric attributes as well as :and, :or, :xor for boolean attributes.
+	 * 
+	 * Inside these aggregation operators, one can also make use of special keywords to range over the 
+	 * child features of the feature the attribute belongs to:
+	 *	 - ":children.ATTRIBUTE" denotes the value of ATTRIBUTE of all the child features
+	 *   - ":selectedChildren.ATTRIBUTE" denotes the the value of ATTRIBUTE of the selected child features only
+	 * The attribute ATTRIBUTE has to declared for all the child features, all with the same type, and the type
+	 * has to match the aggregation function.
+	 *
+	 * An attribute may be referenced in two ways :
+	 *  1) FEATURE.ATTRIBUTE, where FEATURE is the name of the parent feature and ATTRIBUTE the name of the attribute
+	 *  2) FEATURE1->FEATURE2.ATTRIBUTE, where FEATURE1->FEATURE2 is a path in the diagram.
+	 *  3) Using a number of keywords
+	 *      - :this.ATTRIBUTE denotes an attribute of the current feature
+	 *      - :parent.ATTRIBUTE denotes an attribute of the parent of the current feature. This cannot be used
+	 *        if the feature has more then one parent.
+	 *
+	 * In case of a struct, the fields of the struct can be referenced with dots as well: FEATURE.ATTRIBUTE.SUBATTRIBUTE.
+     */
+	:int price :sel :sum(:selectedChildren.price);
+	
+	/*
+	 * A constraint is simply a boolean expression.  It can be preceded by one of the two key words :
+	 *  - ":sel" : The constraint only has to hold when its feature is selected.
+	 *  - ":desel" : The contraint only has to hold when its feature is deselected.
+	 * 
+	 */
+	:sel MotherBoard.socket == CPU.socket;
+	
+	/*
+	 * The ":include" include statement is a preprocessor directive that allows to insert content of another file.
+	 * into this file.  It works like a macro and has no additional semantics.
+	 */
+	:include(additionalComputerConstraints.vfd);
+	
+	/*
+	 * Each feature can contain a block with additional data.  This block is simply a list of couples (key, value).
+	 * Their purpose is to make the format easily extensible; they are supposed to hold additional information about
+	 * the feature that is not of interest to the analysis, but to some kind of tool (e.g. it could be a reference
+	 * to a PDF file with documentation, it could be an indication of where in the code the feature is, it could even 
+	 * be a string in XML format or a serialised object).
+	 * 
+	 * The key has to follow the same naming convention as other identifiers, except that it cannot be refereced
+	 * anywhere in the doc (its only there for storage).  The Value is delimited by double quotes and a semicolon.
+	 * Any double quotes inside the value should be escaped with a backslash.
+	 */
+	:data{
+		key   "value";
+		key2  "Some \"other\" value";
+	}
+}
+
+
+MotherBoard {
+	:int price :sel :sum(:selectedChildren.price); 
+	cpuSocket socket;
+	
+	/*
+	 * In the case where the attribute is composed of sub-attributes (:struct), each sub-attribute must be specified.
+	 */
+	motherBoardSize size {
+		height :sel :sum(:selectedChildren.size.height);
+	    width :sel :sum(:selectedChildren.size.width);
+	};
+	
+	:gr[1,1] {
+	 	Asus {
+	    	:int price :sel 259;
+	       	motherBoardSize size { 
+	       		height :sel 30;
+	      		width :sel 40;
+	      	};
+	
+			/*
+			 * The value of an enum is referenced directly.
+			 */
+	      	:sel :parent.socket == LGA1156; 
+	    }
+	    Aopen {
+	       	:int price :sel 199;
+	       	motherBoardSize size { 
+	       		height :sel 30;
+	      		width :sel 40;
+	      	};	
+	       	:sel :parent.socket == ASB1; 
+	    }
+	}
+} 
+
+
+
+CPU // Sometimes, the user may choose to not use curly braces to delimit the feature block
+	:int price :sel :sum(:selectedChildren.price);
+	cpuSocket socket;
+	:gr[1,1] { 
+	    CoreI7 {
+	      	:int price :sel 399;
+	      	:sel :parent.socket == LGA1156; 
+	    	}
+      	AthlonNeo {
+	      	:int price :sel 299;	
+	      	:sel :parent.socket == ASB1; 
+	    }  		
+	}
+
+
+		
+GraphicCard {
+	:int price :sel :sum(:selectedChildren.price);
+	screenConnectivity connectivity;
+	:gr[1,1] {
+		/*
+		* The keyword ":dag" shows that PhilipsScreen is also a children feature of GraphicCard.
+		*/
+		:dag PhilipsScreen
+		:dag SamsungScreen
+	    NVIDIA {
+	      	:int price :sel 199;		
+	      	:sel :parent.connectivity == DVI; 
+	    }
+      	ATI {
+	      	:int price :sel 159;		
+	      	:sel :parent.connectivity == VGA; 
+	    }
+	}
+}
+
+
+Accessories {
+	:int price :sel :sum(:selectedChildren.price);
+	:sel !(PhilipsScreen && SamsungScreen);
+	:gr[1,2] { 
+		:opt LogitechKeyboardAndMouse {
+			:int price :sel 19;
+		}
+		:opt PhilipsScreen {
+			:int price :sel 99;	  	  
+			:sel GraphicCard.connectivity == VGA;
+		}
+		:opt SamsungScreen {
+			:int price :sel 149;	  
+			:sel GraphicCard.connectivity == DVI;
+		}
+	}
+}

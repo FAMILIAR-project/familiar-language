@@ -1,0 +1,1426 @@
+rocco:src phe$ java java_cup.Main -expect 277 VFD.cup
+Opening files...
+Parsing specification from standard input...
+Checking specification...
+Warning: Terminal "COMMENT" was declared but never used
+Warning: Non terminal "constant" was declared but never used
+Building parse tables...
+  Computing non-terminal nullability...
+  Computing first sets...
+  Building state machine...
+  Filling in tables...
+*** Reduce/Reduce conflict found in state #202
+  between int_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  and     real_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbols: {IFOUT, AND, OR, IMPLIES, IFANDONLYIF, EQUALS, GEQ, LEQ, PLUS, MINUS, TIMES, COMMA, BRAEND, CBRAEND, DOT, COLON, SEMICOLON}
+  Resolved in favor of the first production.
+
+*** Shift/Reduce conflict found in state #202
+  between int_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol IFOUT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between int_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol AND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between int_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol OR
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between int_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol IMPLIES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between int_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol IFANDONLYIF
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between int_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol EQUALS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between int_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol GEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between int_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol LEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between int_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol PLUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between int_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol MINUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between int_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol TIMES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between int_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol COMMA
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between int_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol BRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between int_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol CBRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between int_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol DOT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between int_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol COLON
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between int_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol SEMICOLON
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between real_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol IFOUT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between real_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol AND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between real_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol OR
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between real_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol IMPLIES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between real_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol IFANDONLYIF
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between real_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol EQUALS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between real_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol GEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between real_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol LEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between real_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol PLUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between real_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol MINUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between real_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol TIMES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between real_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol COMMA
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between real_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol BRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between real_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol CBRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between real_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol DOT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between real_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol COLON
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #202
+  between real_expression ::= AVG BRA children_attribute_id BRAEND (*) 
+  under symbol SEMICOLON
+  Resolved in favor of shifting.
+
+*** Reduce/Reduce conflict found in state #261
+  between real_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  and     int_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbols: {IFOUT, AND, OR, IMPLIES, IFANDONLYIF, EQUALS, GEQ, LEQ, PLUS, MINUS, TIMES, COMMA, BRAEND, CBRAEND, DOT, COLON, SEMICOLON}
+  Resolved in favor of the second production.
+
+*** Shift/Reduce conflict found in state #261
+  between real_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol IFOUT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between real_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol AND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between real_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol OR
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between real_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol IMPLIES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between real_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol IFANDONLYIF
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between real_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol EQUALS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between real_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol GEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between real_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol LEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between real_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol PLUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between real_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol MINUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between real_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol TIMES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between real_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol COMMA
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between real_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol BRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between real_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol CBRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between real_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol DOT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between real_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol COLON
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between real_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol SEMICOLON
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between int_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol IFOUT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between int_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol AND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between int_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol OR
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between int_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol IMPLIES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between int_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol IFANDONLYIF
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between int_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol EQUALS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between int_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol GEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between int_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol LEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between int_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol PLUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between int_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol MINUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between int_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol TIMES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between int_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol COMMA
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between int_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol BRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between int_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol CBRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between int_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol DOT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between int_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol COLON
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #261
+  between int_expression ::= SUM BRA children_attribute_id BRAEND (*) 
+  under symbol SEMICOLON
+  Resolved in favor of shifting.
+
+*** Reduce/Reduce conflict found in state #124
+  between int_expression ::= attribute_id_path (*) 
+  and     real_expression ::= attribute_id_path (*) 
+  under symbols: {IFOUT, AND, OR, IMPLIES, IFANDONLYIF, PLUS, MINUS, TIMES, COMMA, BRAEND, CBRAEND, DOT, COLON, SEMICOLON}
+  Resolved in favor of the first production.
+
+*** Shift/Reduce conflict found in state #124
+  between int_expression ::= attribute_id_path (*) 
+  under symbol IFOUT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #124
+  between int_expression ::= attribute_id_path (*) 
+  under symbol AND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #124
+  between int_expression ::= attribute_id_path (*) 
+  under symbol OR
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #124
+  between int_expression ::= attribute_id_path (*) 
+  under symbol IMPLIES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #124
+  between int_expression ::= attribute_id_path (*) 
+  under symbol IFANDONLYIF
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #124
+  between int_expression ::= attribute_id_path (*) 
+  under symbol PLUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #124
+  between int_expression ::= attribute_id_path (*) 
+  under symbol MINUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #124
+  between int_expression ::= attribute_id_path (*) 
+  under symbol TIMES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #124
+  between int_expression ::= attribute_id_path (*) 
+  under symbol COMMA
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #124
+  between int_expression ::= attribute_id_path (*) 
+  under symbol BRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #124
+  between int_expression ::= attribute_id_path (*) 
+  under symbol CBRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #124
+  between int_expression ::= attribute_id_path (*) 
+  under symbol DOT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #124
+  between int_expression ::= attribute_id_path (*) 
+  under symbol COLON
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #124
+  between int_expression ::= attribute_id_path (*) 
+  under symbol SEMICOLON
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #124
+  between real_expression ::= attribute_id_path (*) 
+  under symbol IFOUT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #124
+  between real_expression ::= attribute_id_path (*) 
+  under symbol AND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #124
+  between real_expression ::= attribute_id_path (*) 
+  under symbol OR
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #124
+  between real_expression ::= attribute_id_path (*) 
+  under symbol IMPLIES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #124
+  between real_expression ::= attribute_id_path (*) 
+  under symbol IFANDONLYIF
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #124
+  between real_expression ::= attribute_id_path (*) 
+  under symbol PLUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #124
+  between real_expression ::= attribute_id_path (*) 
+  under symbol MINUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #124
+  between real_expression ::= attribute_id_path (*) 
+  under symbol TIMES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #124
+  between real_expression ::= attribute_id_path (*) 
+  under symbol COMMA
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #124
+  between real_expression ::= attribute_id_path (*) 
+  under symbol BRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #124
+  between real_expression ::= attribute_id_path (*) 
+  under symbol CBRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #124
+  between real_expression ::= attribute_id_path (*) 
+  under symbol DOT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #124
+  between real_expression ::= attribute_id_path (*) 
+  under symbol COLON
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #124
+  between real_expression ::= attribute_id_path (*) 
+  under symbol SEMICOLON
+  Resolved in favor of shifting.
+
+*** Reduce/Reduce conflict found in state #106
+  between int_expression ::= attribute_id_path (*) 
+  and     real_expression ::= attribute_id_path (*) 
+  under symbols: {IFOUT, EQUALS, GEQ, LEQ, PLUS, MINUS, TIMES, BRAEND, SEMICOLON}
+  Resolved in favor of the first production.
+
+*** Reduce/Reduce conflict found in state #106
+  between int_expression ::= attribute_id_path (*) 
+  and     bool_expression ::= attribute_id_path (*) 
+  under symbols: {IFOUT, BRAEND, SEMICOLON}
+  Resolved in favor of the second production.
+
+*** Shift/Reduce conflict found in state #106
+  between int_expression ::= attribute_id_path (*) 
+  under symbol IFOUT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #106
+  between int_expression ::= attribute_id_path (*) 
+  and     bool_expression ::= attribute_id_path (*) EQUALS ATTRIBUTE_ID 
+  under symbol EQUALS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #106
+  between int_expression ::= attribute_id_path (*) 
+  under symbol GEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #106
+  between int_expression ::= attribute_id_path (*) 
+  under symbol LEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #106
+  between int_expression ::= attribute_id_path (*) 
+  under symbol PLUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #106
+  between int_expression ::= attribute_id_path (*) 
+  under symbol MINUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #106
+  between int_expression ::= attribute_id_path (*) 
+  under symbol TIMES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #106
+  between int_expression ::= attribute_id_path (*) 
+  under symbol BRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #106
+  between int_expression ::= attribute_id_path (*) 
+  under symbol SEMICOLON
+  Resolved in favor of shifting.
+
+*** Reduce/Reduce conflict found in state #106
+  between real_expression ::= attribute_id_path (*) 
+  and     bool_expression ::= attribute_id_path (*) 
+  under symbols: {IFOUT, BRAEND, SEMICOLON}
+  Resolved in favor of the second production.
+
+*** Shift/Reduce conflict found in state #106
+  between real_expression ::= attribute_id_path (*) 
+  under symbol IFOUT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #106
+  between real_expression ::= attribute_id_path (*) 
+  and     bool_expression ::= attribute_id_path (*) EQUALS ATTRIBUTE_ID 
+  under symbol EQUALS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #106
+  between real_expression ::= attribute_id_path (*) 
+  under symbol GEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #106
+  between real_expression ::= attribute_id_path (*) 
+  under symbol LEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #106
+  between real_expression ::= attribute_id_path (*) 
+  under symbol PLUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #106
+  between real_expression ::= attribute_id_path (*) 
+  under symbol MINUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #106
+  between real_expression ::= attribute_id_path (*) 
+  under symbol TIMES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #106
+  between real_expression ::= attribute_id_path (*) 
+  under symbol BRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #106
+  between real_expression ::= attribute_id_path (*) 
+  under symbol SEMICOLON
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #106
+  between bool_expression ::= attribute_id_path (*) 
+  under symbol IFOUT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #106
+  between bool_expression ::= attribute_id_path (*) 
+  and     bool_expression ::= attribute_id_path (*) EQUALS ATTRIBUTE_ID 
+  under symbol EQUALS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #106
+  between bool_expression ::= attribute_id_path (*) 
+  under symbol GEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #106
+  between bool_expression ::= attribute_id_path (*) 
+  under symbol LEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #106
+  between bool_expression ::= attribute_id_path (*) 
+  under symbol PLUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #106
+  between bool_expression ::= attribute_id_path (*) 
+  under symbol MINUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #106
+  between bool_expression ::= attribute_id_path (*) 
+  under symbol TIMES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #106
+  between bool_expression ::= attribute_id_path (*) 
+  under symbol BRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #106
+  between bool_expression ::= attribute_id_path (*) 
+  under symbol SEMICOLON
+  Resolved in favor of shifting.
+
+*** Reduce/Reduce conflict found in state #193
+  between int_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  and     real_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbols: {IFOUT, AND, OR, IMPLIES, IFANDONLYIF, EQUALS, GEQ, LEQ, PLUS, MINUS, TIMES, COMMA, BRAEND, CBRAEND, DOT, COLON, SEMICOLON}
+  Resolved in favor of the first production.
+
+*** Shift/Reduce conflict found in state #193
+  between int_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol IFOUT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between int_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol AND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between int_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol OR
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between int_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol IMPLIES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between int_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol IFANDONLYIF
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between int_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol EQUALS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between int_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol GEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between int_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol LEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between int_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol PLUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between int_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol MINUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between int_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol TIMES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between int_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol COMMA
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between int_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol BRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between int_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol CBRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between int_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol DOT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between int_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol COLON
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between int_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol SEMICOLON
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between real_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol IFOUT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between real_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol AND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between real_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol OR
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between real_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol IMPLIES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between real_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol IFANDONLYIF
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between real_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol EQUALS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between real_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol GEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between real_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol LEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between real_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol PLUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between real_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol MINUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between real_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol TIMES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between real_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol COMMA
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between real_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol BRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between real_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol CBRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between real_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol DOT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between real_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol COLON
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #193
+  between real_expression ::= COUNT BRA children_attribute_id BRAEND (*) 
+  under symbol SEMICOLON
+  Resolved in favor of shifting.
+
+*** Reduce/Reduce conflict found in state #196
+  between int_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  and     real_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbols: {IFOUT, AND, OR, IMPLIES, IFANDONLYIF, EQUALS, GEQ, LEQ, PLUS, MINUS, TIMES, COMMA, BRAEND, CBRAEND, DOT, COLON, SEMICOLON}
+  Resolved in favor of the first production.
+
+*** Shift/Reduce conflict found in state #196
+  between int_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol IFOUT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between int_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol AND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between int_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol OR
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between int_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol IMPLIES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between int_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol IFANDONLYIF
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between int_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol EQUALS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between int_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol GEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between int_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol LEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between int_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol PLUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between int_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol MINUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between int_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol TIMES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between int_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol COMMA
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between int_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol BRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between int_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol CBRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between int_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol DOT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between int_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol COLON
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between int_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol SEMICOLON
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between real_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol IFOUT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between real_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol AND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between real_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol OR
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between real_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol IMPLIES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between real_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol IFANDONLYIF
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between real_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol EQUALS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between real_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol GEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between real_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol LEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between real_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol PLUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between real_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol MINUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between real_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol TIMES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between real_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol COMMA
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between real_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol BRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between real_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol CBRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between real_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol DOT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between real_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol COLON
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #196
+  between real_expression ::= MAX BRA children_attribute_id BRAEND (*) 
+  under symbol SEMICOLON
+  Resolved in favor of shifting.
+
+*** Reduce/Reduce conflict found in state #199
+  between int_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  and     real_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbols: {IFOUT, AND, OR, IMPLIES, IFANDONLYIF, EQUALS, GEQ, LEQ, PLUS, MINUS, TIMES, COMMA, BRAEND, CBRAEND, DOT, COLON, SEMICOLON}
+  Resolved in favor of the first production.
+
+*** Shift/Reduce conflict found in state #199
+  between int_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol IFOUT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between int_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol AND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between int_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol OR
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between int_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol IMPLIES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between int_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol IFANDONLYIF
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between int_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol EQUALS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between int_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol GEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between int_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol LEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between int_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol PLUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between int_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol MINUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between int_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol TIMES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between int_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol COMMA
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between int_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol BRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between int_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol CBRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between int_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol DOT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between int_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol COLON
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between int_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol SEMICOLON
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between real_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol IFOUT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between real_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol AND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between real_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol OR
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between real_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol IMPLIES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between real_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol IFANDONLYIF
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between real_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol EQUALS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between real_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol GEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between real_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol LEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between real_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol PLUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between real_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol MINUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between real_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol TIMES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between real_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol COMMA
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between real_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol BRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between real_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol CBRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between real_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol DOT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between real_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol COLON
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #199
+  between real_expression ::= MIN BRA children_attribute_id BRAEND (*) 
+  under symbol SEMICOLON
+  Resolved in favor of shifting.
+
+*** Reduce/Reduce conflict found in state #496
+  between feature_id_list ::= FEATURE_ID (*) 
+  and     data ::= (*) 
+  under symbols: {CBRAEND}
+  Resolved in favor of the first production.
+
+*** Shift/Reduce conflict found in state #496
+  between feature_id_list ::= FEATURE_ID (*) 
+  under symbol CBRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #496
+  between data ::= (*) 
+  under symbol CBRAEND
+  Resolved in favor of shifting.
+
+*** Reduce/Reduce conflict found in state #126
+  between int_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  and     real_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbols: {IFOUT, AND, OR, IMPLIES, IFANDONLYIF, EQUALS, GEQ, LEQ, PLUS, MINUS, TIMES, COMMA, BRAEND, CBRAEND, DOT, COLON, SEMICOLON}
+  Resolved in favor of the first production.
+
+*** Shift/Reduce conflict found in state #126
+  between int_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol IFOUT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between int_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol AND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between int_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol OR
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between int_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol IMPLIES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between int_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol IFANDONLYIF
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between int_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol EQUALS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between int_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol GEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between int_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol LEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between int_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol PLUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between int_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol MINUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between int_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol TIMES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between int_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol COMMA
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between int_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol BRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between int_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol CBRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between int_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol DOT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between int_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol COLON
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between int_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol SEMICOLON
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between real_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol IFOUT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between real_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol AND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between real_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol OR
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between real_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol IMPLIES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between real_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol IFANDONLYIF
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between real_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol EQUALS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between real_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol GEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between real_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol LEQ
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between real_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol PLUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between real_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol MINUS
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between real_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol TIMES
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between real_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol COMMA
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between real_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol BRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between real_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol CBRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between real_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol DOT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between real_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol COLON
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #126
+  between real_expression ::= MUL BRA children_attribute_id BRAEND (*) 
+  under symbol SEMICOLON
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #39
+  between attribute_id_chain ::= ATTRIBUTE_ID (*) 
+  and     attribute_id_chain ::= ATTRIBUTE_ID (*) DOT attribute_id_chain 
+  under symbol DOT
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #94
+  between feature_id_chain ::= FEATURE_ID (*) 
+  and     feature_id_chain ::= FEATURE_ID (*) DOT feature_id_chain 
+  under symbol DOT
+  Resolved in favor of shifting.
+
+*** Reduce/Reduce conflict found in state #531
+  between data ::= (*) 
+  and     feature_id_list ::= OPT FEATURE_ID (*) 
+  under symbols: {CBRAEND}
+  Resolved in favor of the second production.
+
+*** Shift/Reduce conflict found in state #531
+  between data ::= (*) 
+  under symbol CBRAEND
+  Resolved in favor of shifting.
+
+*** Shift/Reduce conflict found in state #531
+  between feature_id_list ::= OPT FEATURE_ID (*) 
+  under symbol CBRAEND
+  Resolved in favor of shifting.
+
+  Checking for non-reduced productions...
+Writing parser...
+Closing files...
+------- CUP v0.10k Parser Generation Summary -------
+  0 errors and 279 warnings
+  65 terminals, 46 non-terminals, and 209 productions declared, 
+  producing 575 unique parse states.
+  2 terminals declared but not used.
+  0 non-terminals declared but not used.
+  0 productions never reduced.
+  277 conflicts detected (277 expected).
+  Code written to "parser.java", and "sym.java".
+---------------------------------------------------- (v0.10k)

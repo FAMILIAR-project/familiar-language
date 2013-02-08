@@ -1,0 +1,24 @@
+enum color in { Red, Blue, Yellow, White };
+root Car {
+	//bool usedCar is Peugeot && Peugeot.used || ! Peugeot && true && Citroën && Citroën.used || ! Citroën && true && Ford && Ford.used || ! Ford && true;
+	bool usedCar is xor(children.used);
+	//color carColor;
+	group [1..1] {
+		Ford {
+			bool used is false;
+			//ifin: parent.carColor == Blue;
+		},
+		Citroën {
+			bool used is true;
+			//ifin: parent.carColor == Red;
+		},
+		Peugeot {
+			bool used is false;
+			//ifin: parent.carColor == White;
+		},
+		Opel {
+			bool used is true;
+			//ifin: parent.carColor == Yellow;
+		}
+	}
+}

@@ -1,0 +1,3317 @@
+root Drupal7 {
+  group someof {
+    Church {
+      group someof {
+        Bible
+      }
+    },
+    Input_filters {
+      group someof {
+        Chili_highlighter,
+        Scribd_input_filter,
+        Interwiki,
+        Video_filter,
+        Pathologic,
+        File_tree,
+        Spamspan,
+        Bbcode
+      }
+    },
+    Erp {
+      group someof {
+        Erp
+      }
+    },
+    Ubercart_recurring {
+      group someof {
+        Recurring_payments_api
+      }
+    },
+    Common_functionality,
+    Games {
+      group someof {
+        Pong,
+        Tetris,
+        Connect_iv,
+        Invaders
+      }
+    },
+    Flickr {
+      group someof {
+        Flickr_rippr,
+        Flickrapi
+      }
+    },
+    Cache {
+      group someof {
+        Cacherouter
+      }
+    },
+    Image {
+      group someof {
+        Imagecache_actions,
+        Get_node_image,
+        Manual_crop,
+        Thumbnails,
+        Image_legacy
+      }
+    },
+    Menu {
+      group someof {
+        Void_menu
+      }
+    },
+    American_bible_society {
+      group someof {
+        American_bible_society_bible_search
+      }
+    },
+    Brightsolutions {
+      group someof {
+        Bs_nice_frontpage
+      }
+    },
+    Rgraph,
+    Cloud_zoom,
+    Drupal_for_facebook {
+      group someof {
+        Facebook_api
+      }
+    },
+    Maestro,
+    Authorization {
+      group someof {
+        Social_connect
+      }
+    },
+    D_d_character,
+    Skinr,
+    Video,
+    Nodejs {
+      group someof {
+        Nodejs_integration
+      }
+    },
+    Views {
+      group someof {
+        Gallery_summary,
+        Entityfieldquery_views_backend,
+        Views_calc,
+        Views_oai_pmh,
+        Semantic_views,
+        Views_tooltip,
+        Peek_summary,
+        Views_php,
+        Booktree,
+        Eva,
+        Views_system,
+        Draggableviews,
+        Fullcalendar
+      }
+    },
+    Janrain_engage {
+      group someof {
+        Janrain_engage_core
+      }
+    },
+    Web_services {
+      group someof {
+                Tumblr_connect
+      }
+    },
+    Adsense {
+      group someof {
+        Adsense_core
+      }
+    },
+    Quiz_core {
+      group someof {
+        Quiz
+      }
+    },
+    Fields {
+      group someof {
+        Url_content_field
+      }
+    },
+    Testing {
+      group someof {
+        Code_coverage
+      }
+    },
+    Eloqua {
+      group someof {
+        Eloqua_integration
+      }
+    },
+    Date_time {
+      group someof {
+        Date_repeat_presets
+      }
+    },
+    User_interface1 {
+      group someof {
+        Swfaddress
+      }
+    },
+    Content_authoring {
+      group someof {
+        Bueditor,
+        Ajax_markup
+      }
+    },
+    Cdk {
+      group someof {
+        Content_destruction_kit
+      }
+    },
+    Registration {
+      group someof {
+        Username_available_ajax_check
+      }
+    },
+    Filters {
+      group someof {
+        External_link_page,
+        Textile,
+        Graphviz_nodereference_graph
+      }
+    },
+    Simpletest {
+      group someof {
+        Simpletest_automator
+      }
+    },
+    Monitoring {
+      group someof {
+        Production_check
+      }
+    },
+    Ios,
+    Invite,
+    Core_alternate {
+      group someof {
+        Contact
+      }
+    },
+    Pronovix {
+      group someof {
+        Message_docs
+      }
+    },
+    Open_media_system {
+      group someof {
+        Configuration_checklist
+      }
+    },
+    Geolocation {
+      group someof {
+        Geolocation_proximity_filter
+      }
+    },
+    Cck {
+      group someof {
+        Field_actions,
+                Video_upload_field,
+        User_role_field,
+        Cck_blocks,
+        Filefield_nginx_progress,
+        Autocomplete_deluxe,
+        Iframe
+      }
+    },
+    Administration {
+      group someof {
+        Collapse_system_modules,
+        Role_weights,
+        Page_not_found_reports,
+        Administration_menu,
+        Administration_menu_dropdown,
+        Environment_indicator,
+        Toolbar_hider,
+        Drupal_firewall,
+        Front_page,
+        Drupal_remote_dashboard,
+        Menu_expanded,
+        Client_ui_control,
+        Site_info_lite,
+        Administrative_pages,
+        System_information,
+        Pending_user_notification,
+        Admin_tools,
+        Menu_admin_per_menu,
+        Block_context
+      }
+    },
+    Ubercart_extra {
+      group someof {
+        Product_minimum_maximum,
+        Favorite_order
+      }
+    },
+    Zend_framework {
+      group someof {
+                Zend_feed
+      }
+    },
+    Openturk_org {
+      group someof {
+        Amt_analysis,
+        Amazon_mechanical_turk_integration,
+        Amt_karma
+      }
+    },
+    User_relationships {
+      group someof {
+        Ur_limits
+      }
+    },
+    Mobile {
+      group someof {
+        Mobile_tools
+      }
+    },
+    Userpoints {
+      group someof {
+        Userpoints_user_picture,
+        Userpoints_nodeaccess
+      }
+    },
+    Bit_ly,
+    Developer_library {
+      group someof {
+        Multipage
+      }
+    },
+    Commerce_contrib_ {
+      group someof {
+        Commerce_autosku,
+        Delivery,
+        Payflow_pro,
+        Commerce_finnish_payments,
+        Authorize_net,
+        Product_key,
+        Ogone,
+        Commerce_file,
+        Subscription,
+        Commerce_addressbook,
+        First_data,
+        Commerce_bank_transfer,
+        Cybersource,
+        Checkout_login
+      }
+    },
+    Theme {
+      group someof {
+        Jquery_ui_theme
+      }
+    },
+    Feeds {
+      group someof {
+        Feeds_crawler,
+        Feeds_youtube,
+        Feeds_tamper
+      }
+    },
+    Profile_page,
+    Theme2 {
+      group someof {
+        Role_theme_switcher
+      }
+    },
+    Jammer {
+      group someof {
+        Content_form_jammer
+      }
+    },
+    Cjunction {
+      group someof {
+        Commission_junction_api
+      }
+    },
+    Facebook {
+      group someof {
+        Post_to_facebook_beta
+      }
+    },
+    Voting {
+      group someof {
+        Priorities,
+        Fivestar
+      }
+    },
+    Theme_tools {
+      group someof {
+        Omega_tools,
+        Omega_ui,
+        Delta_api
+      }
+    },
+    Mediawiki {
+      group someof {
+        Mediawiki_auth_bridge
+      }
+    },
+    Queue {
+      group someof {
+        Apc_queue,
+        Key_value_queue
+      }
+    },
+    Drupal_commerce_other {
+      group someof {
+        Drupal_commerce_extra_panes
+      }
+    },
+    Taxonomy_menu {
+      group someof {
+                Taxonomy_menu_trails
+      }
+    },
+    Content_access_control {
+      group someof {
+        Access_by_term_abt_
+      }
+    },
+    Feeds_plugin {
+      group someof {
+        Ical_parser
+      }
+    },
+    Weather {
+      group someof {
+        Nws_weather
+      }
+    },
+    Curlypage,
+    Content_display {
+      group someof {
+        Archive
+      }
+    },
+    Rrdtool {
+      group someof {
+        Rrdtool
+      }
+    },
+    Other {
+      group someof {
+        Term_level_field,
+        Insert,
+        Sql_server,
+        Drupad,
+        Image_url_formatter,
+        Desk02_gradiel,
+        Follow,
+        Subform,
+        Tableform,
+        Guestbook,
+        Link_checker,
+        Getid3_,
+        Earthish,
+        Qforms,
+        Textimage,
+        Term_relations,
+        Floater_theme,
+        Omega,
+        Taxonomy_dupecheck,
+        Encrypted_settings_field,
+        Job_scheduler,
+        Zentropy,
+        Bookmark,
+        Simplepie_core,
+        Pathauto_persistant_state,
+        Beta,
+        Ad_the_morning_after,
+        Google_docs_lector,
+        Bakery,
+        Comment_subjects,
+        Location_map,
+        Menu_admin_splitter,
+        Reindex,
+        Revisions_rss,
+        Cmyk,
+        Open_attribute,
+        Password_policy,
+        Readability,
+        Treeable,
+        Fancy_login,
+        Wp_blog,
+        Email_confirm,
+        Scp_api,
+        Transliteration,
+        Content_security_policy,
+        Simple_forms,
+        Own_term,
+        Faster_images,
+        Geofield,
+        Bundlecache,
+        Extended_html,
+        Fancy_checkboxes,
+        Dynamic_properties,
+        Wrapped_sites,
+        Earth_hour,
+        Safeword,
+        Background_image,
+        Autordf,
+        Token_field,
+        Url_list,
+        Twitter_pull,
+        Butler,
+        Christmas_snow,
+        Pru8,
+        Open_outreach,
+        Stager,
+        Imagecache_profile_pictures,
+        Titan,
+        Ad_novus_fixed,
+        Basic,
+        Iframe_filter,
+        Micro,
+        Jquery_for_designers_themers,
+        Node_privacy_by_role,
+        Static_map,
+        Profile_privacy,
+        Comment_access,
+        Search_404,
+        Frontpage,
+        Variables_api,
+        Content_type_groups,
+        Mobile_basic_theme,
+        Features_plumber,
+        Urbansolice,
+        Encrypt_submissions,
+        Ad_blueprint_fixed,
+        Code_filter,
+        Lightweight,
+        Ink_ribbon,
+        Muchomenu,
+        Role_delegation,
+        Book_store,
+        Onus,
+        Chain_menu_access_api,
+        Dossier,
+        User_protect,
+        Gmapez,
+        Simple_paypal_framework,
+        Camsel,
+        Pygmentizer,
+        Relevant_content,
+        Faq_ask,
+        Pathauto,
+        Block_visibility_by_term,
+        Comment_allow_anonymous,
+        Menu_item_visibility,
+        Mobile_codes,
+        Demonstration_site,
+        User_modal,
+        Ipgeobase_api,
+        Book_delete,
+        Color_theme,
+        Tabs,
+        Available_for_work,
+        Create_related_content,
+        Related_block,
+        Subdomain,
+        Logotool,
+        Flood_control,
+        Zero_point,
+        Subprofiles,
+        Masquerade,
+        Bloginfo,
+        Cache_converter,
+        Bartik_facebook,
+        Filter_allowed_protocols,
+        Administration_pane,
+        Closed_question,
+        Spring_bloom,
+        Cdn_js,
+        Skyscanner,
+        Blue_masters,
+        Kiosk,
+        Admin_language,
+        User_list_export,
+        Plink,
+        Mm,
+        Total_hook_extremism,
+        Disposable_e_mail_protection,
+        Imagemagick,
+        Khaaaaaaan,
+        Async_command,
+        Avantlinker,
+        Java_node,
+        Auto_assign_role,
+        Read_more_link,
+        Translatable_regions,
+        Tarski,
+        Bean,
+        Dummy_content,
+        Corky,
+        Basic_e_news,
+        Daily_twitter,
+        Andromeda,
+        Arthemia,
+        Poormanscron,
+        Openpublic,
+        Form_builder,
+        Node_type_views,
+        Star_rating,
+        Scoutle,
+        Update_test_module_normal_,
+        Node_connect,
+        Submitted_by,
+        Context_domain,
+        Dartik,
+        Code_per_node,
+        Colorbox,
+        Image_resize_filter,
+        Smashing_dilectio,
+        Nice_messages,
+        Syntax_highlighter,
+        Re_markup,
+        Video_filter_field,
+        Anti_existing_field,
+        Node_authorize_link,
+        Cron_debug,
+        Anonymous_posting,
+        Idea_informer_widget,
+        Nat,
+        Typebased,
+        Journalcrunch,
+        Menu_node_api,
+        Shrinktheweb,
+        Similar_entries,
+        Google_pagerank,
+        Taxonomy_tree_select,
+        Picasa_node_album,
+        Simple_timesheet,
+        Revision_all,
+        Github,
+        Bluemarine,
+        Feeds_image_grabber,
+        Mayo,
+        Corporateclean,
+        Signature_field,
+        Global_redirect,
+        Term_reference_tree,
+        Per_bundle_storage,
+        Node_option_premium,
+        Entity_access_api,
+        Simplify,
+        User_restrictions,
+        Reftagger,
+        Override_node_options,
+        Sparql_endpoints_registry,
+        Nodeblock,
+        Form_updater,
+        Abessive,
+        Daleri_structure,
+        Jquery_colorpicker,
+        Variable_check,
+        Tablefield,
+        Graze,
+        Advanced_user_management,
+        Comment_notify,
+        Bloggit,
+        Htmlawed_x_html_filter_purifier,
+        Mobwrite,
+        Qtip_tooltips,
+        Google_friend_connect,
+        Flat_comments,
+        Menu_tree,
+        Blocks_in_accordion,
+        Model,
+        Field_convert,
+        Secure_pages,
+        Nodeorder,
+        Menu_block,
+        Units_api,
+        Blogspam,
+        Checklist,
+        Session_api,
+        Mediaelement_js,
+        Mix_and_match,
+        Mobi,
+        Node_as_block,
+        Quotes,
+        Addtoany,
+        Content_refresh,
+        Blue_lake,
+        Block_more_link,
+        Left_and_right,
+        Photogenic,
+        Relevance,
+        Mimedetect,
+        Url_alter,
+        Logintoboggan,
+        User_registration_password,
+        Field_injector,
+        Node_clone,
+        Tracker_lite,
+        Fieldset_helper,
+        Options_element,
+        Prediction_game,
+        Merge_comments,
+        Revisioning,
+        Realchat,
+        Submit_again,
+        Acceptemail,
+        Countdown,
+        Field_boxes,
+        Affiliates,
+        Menu_firstchild,
+        Opensearch_feed,
+        Inactive_user,
+        Blackpiano,
+        Secure_permissions,
+        Page_title,
+        Troll,
+        Simpler,
+        Wishlist,
+        Maintenance_exempt,
+        Clickpath,
+        Polymorph,
+        Mollom,
+        Site_verification,
+        Gamma,
+        Moodle,
+        Session_limit,
+        Contact_forms,
+        Queue_ui,
+        Administration_notifications,
+        Dynamic_image_styles,
+        Aes,
+        Drupal_wrappers,
+        Robots_txt,
+        Breadcrumb,
+        Py,
+        Livejournal_crossposter,
+        Multiple_email,
+        Vcard,
+        Arooga,
+        A11y_titles,
+        The_jalapeno_mdb,
+        Jqm,
+        Unique_field,
+        Rich_snippets,
+        Entity_relationships,
+        Dark_blue,
+        Footer_message,
+        Menuless_node_type,
+        Security_review,
+        Content_as_json,
+        Frameprevention,
+        Context_field,
+        Similar_by_terms,
+        Nat_ng,
+        Permissions_subset,
+        Corolla,
+        Tfa,
+        Atom,
+        Floating_block,
+        Style_guide,
+        Git_deploy,
+        Db_maintenance,
+        Tweetpack,
+        Filters_image_effect_filtersie_,
+        Andreas1024px,
+        Formatter_reference,
+        Planyo_com_reservation_system_module,
+        Browserid,
+        Opentok,
+        Lexicon,
+        Alter_profile_page,
+        Akv_pagepeel,
+        Samara,
+        Field_wrappers,
+        Channel,
+        Yr_weatherdata,
+        Multiple_forms,
+        Dsk,
+        Chessboard_renderer,
+        Diff,
+        Yahoo_terms_extractor,
+        Cvs_deploy,
+        Captcha_free,
+        File_viewer,
+        Default_content,
+        Libraries,
+        Mobi_loader,
+        Wireframe_me,
+        Block_api,
+        Internal_links,
+        Equal_heights,
+        Weather,
+        Asciidoc_filter,
+        Diary,
+        Beanstalkd,
+        Taxonomy_title,
+        D7sbe_domicile,
+        Redirect,
+        Affiliate_ng,
+        Pixture_reloaded,
+        Staff_list,
+        Follow_button,
+        Book_manager,
+        Block_class,
+        Noggin,
+        Word_filter,
+        Site_map,
+        User_readonly,
+        Vibe,
+        Entity_index,
+        Url_icon,
+        Twitter_block_module,
+        Koi,
+        Form_clerk,
+        Panels_960gs,
+        Sanitizable,
+        Comicdrop,
+        Nitobe,
+        Austin,
+        Guidance,
+        Type_local_nids,
+        Hall_of_fame,
+        Web110,
+        Sort_comments,
+        Dingus,
+        Css_browser_selector,
+        Gravatar,
+        Media_development,
+        Dream960,
+        Gamertags,
+        Qforms_extra,
+        Contact_cc,
+        Conditional_stylesheets,
+        Html_purifier,
+        Jquery_reel,
+        Envolve_chat,
+        Arrange_fields,
+        N960_grid_system,
+        Wysiwyg_imagefield,
+        Acme_theme,
+        Office_html_filter,
+        Force_password_change,
+        User_chooser,
+        Private_comments,
+        Forward,
+        Path_redirect,
+        Chameleon,
+        Html5_boilerplate,
+        User_tweaks,
+        Systemmask,
+        Homographic_usernames,
+        Postal,
+        Aggregate_cache,
+        Almanac,
+        Kanji,
+        Taxonomy_replace,
+        Custom_breadcrumbs,
+        Twitter_blackbird,
+        Flippy,
+        Integer_date,
+        Field_validation,
+        Custom_formatters,
+        Shadowbox,
+        Imagilicious,
+        Indexpage,
+        Performance_hacks,
+        Filefield_paths,
+        Profiler,
+        Recurly,
+        Hiprofile_core,
+        Unfuddle_api,
+        Field_definitions,
+        Fourzerofour_navigation,
+        Growl,
+        Dragndrop_uploads,
+        Account_reminder,
+        Sky,
+        Alternate_login,
+        Layoutstudio_extras,
+        Dhtml_menu,
+        Humans_txt,
+        Nice_menus,
+        Sharepoint_integration,
+        File_cache,
+        Antonelli,
+        Goaway,
+        Relation,
+        Isbn2node,
+        Awesome_relationship,
+        Pushbutton,
+        Gotwo,
+        Pockett,
+        Token,
+        Menu_attributes,
+        Instant_filter,
+        Certified_to_rock_field,
+        Extended_paypal_famework,
+        Reg_with_pic,
+        Menu_item_containers,
+        Taxonomy_display,
+        Jquerymobile,
+        Saveguard,
+        Strongarm,
+		Advanced_forum,
+		Locale,
+		Og_context,
+		Zend,
+		Dblog,
+		Ctools,
+		Devel,
+		Commerce_3d_secure,
+		Locale2,
+		Field,
+		Commerce_ui,
+		Commerce_order,
+		Domain,
+		Ctools2,
+		Video_ui,
+		Awssdk,
+		Webform_3_x_,
+		Search_api_page,
+		Date_popup,
+		Date,
+		Calendar,
+		Commerce_cart,
+		Commerce_product_ui,
+		Options,
+		Apachesolr,
+		Og,
+		Field_ui,
+		Facetapi,
+		Poll,
+		Block,
+		Search_api_facets,
+		Commerce_checkout,
+		Uc_cart,
+		Date_views,
+		List,
+		Number,
+		User_reference,
+		References,
+		Path,
+		Date_api,
+		Views_data_export,
+		Node_reference,
+		Vars,
+		Mt_task,
+		Properties_sql,
+		Udid,
+		Entity2,
+		Bad_judgement,
+		Encset,
+		Myhookadmin,
+		Commerce_line_item,
+		Commerce_product,
+		Entity,
+		Trigger,
+		Keyvaluequeue,
+		Creeper,
+		Date_repeat,
+		Faq,
+		Uc_payment,
+		Demo,
+		Blog,
+		Panels_mini,
+		Migrate,
+		Color,
+		Update,
+		Votingapi,
+		Toolbar,
+		Vars_2_x_,
+		Contextual,
+		Plupload,
+		Media_internet,
+		File_styles,
+		Shortcut,
+		Help,
+		Rdf,
+		Styles,
+		Media_youtube,
+		Dashboard,
+		Comment,
+		Backup_migrate,
+		Panels_node,
+		Field_group,
+		Php,
+		Stylizer,
+		Ctools_access_ruleset,
+		Page_manager,
+		Getid3,
+		Bulk_export,
+		Field_permissions,
+		Imce_wysiwyg,
+		Translation,
+		Views_ui,
+		Views_export,
+		Link,
+		Ctools_custom_content,
+		Panels_ipe,
+		Codefilter,
+		Tracker,
+		Views_bulk_operations,
+		Advanced_help,
+		Imagecache_profiles,
+		Actions_permissions,
+		Htmlpurifier,
+		Views_content,
+		Admin,
+		Book,
+		Computed_field,
+		Service_links,
+		General_services,
+		Admin_menu,
+		Filter,
+		Commerce_product_reference,
+		Mailsystem,
+		Ux_elements,
+		Form_builder_webform,
+		Og_ui,
+		User_revision,
+		Forum,
+		Chain_menu_access,
+		Smart_ip,
+		Context_ui,
+		Delta_ui,
+		Globalredirect,
+		Delta,
+		Extlink,
+		Flickr_block,
+		Graphviz_filter,
+		Luceneapi,
+		Xmlsitemap,
+		Coder_upgrade,
+		Entitycache,
+		Table,
+		Rrdtool_monitors,
+		Dnd_fields,
+		Privatemsg,
+		Apachesolr_search,
+		Tipsy,
+		Googleanalytics,
+		Views_view_field,
+		Views_pdf,
+		Addressfield,
+		Uc_product,
+		Feeds_xpathparser,
+		Feeds_selfnode_processor,
+		Channels_service,
+		Boxes,
+		Views_boxes,
+		User_relationships_ui,
+		User_relationships_api,
+		Overlay,
+		Role_reference,
+		User,
+		Cf_error,
+		Search_files,
+		Search_by_page,
+		Commerce_customer,
+		Node,
+		Name,
+		Simple_paypal,
+		Simplehtmldom,
+		Stockapi,
+		Helpinjector,
+		Text,
+		Elements,
+		Piwik
+      }
+    },
+    Settings_api {
+      group someof {
+        Settings_audit_log
+      }
+    },
+    Conditional_roles,
+    Walls,
+    Performance_and_scalability {
+      group someof {
+        Entity_cache_flusher,
+        Boost,
+        Csstidy
+      }
+    },
+    Storage {
+      group someof {
+        Storage_api
+      }
+    },
+    Commerce_payment {
+      group someof {
+        Commerce_sermepa_payment_method,
+        Sagepay_form_integration,
+        Sagepay_direct_integration_for_drupal_commerce,
+        Drupal_commerce_3d_secure_support
+      }
+    },
+    Core_optional {
+      group someof {
+        Diff
+      }
+    },
+    Webform {
+      group someof {
+        Webform_encrypt,
+        Hubspot_drupal_integration,
+        Webform_alternate_ui,
+                Webform_rules,
+        Webform2sugar,
+        Webform_paypal_component,
+        Webform_term_options,
+        Webform_node_element
+      }
+    },
+    Dail {
+      group someof {
+        D_a_i_l_
+      }
+    },
+    Linkit {
+      group someof {
+                Linkit_views
+      }
+    },
+    Media {
+      group someof {
+        Media_amazon,
+                Imce_mkdir,
+        Media_browser_plus,
+        Media_peg_tv,
+        Vimeo_link_formatter,
+        Imce_crop,
+        Image_field_url_replacer,
+        Imce,
+        Plupload_integration_module
+      }
+    },
+    Core {
+      group someof {
+        Project_browser,
+        Bartik
+      }
+    },
+    Spam_control {
+      group someof {
+        Captcha
+      }
+    },
+    Recruit_core {
+      group someof {
+        Recruit
+      }
+    },
+    Mail {
+      group someof {
+        Simplenews,
+        Private_message_growl,
+        Sunmailer,
+        Mime_mail,
+        Mail_redirect,
+        Mail_wire_module,
+        Amazon_ses
+      }
+    },
+    Tupas {
+      group someof {
+        Tupas_authentication
+      }
+    },
+    Drupal_commerce_ui {
+      group someof {
+        Commerce_bulk_product_creation
+      }
+    },
+    Commerce_postfinance_ {
+      group someof {
+        Postfinance_e_payment
+      }
+    },
+    Vimeo {
+      group someof {
+        Vimeo_gallery
+      }
+    },
+    Seo_compliance_checker,
+    Theme_related {
+      group someof {
+        Page_theme,
+        Content_theme
+      }
+    },
+    Entitlements {
+      group someof {
+        Entitlements_api
+      }
+    },
+    Content {
+      group someof {
+        Field_redirection,
+        Pages,
+        Datasources
+      }
+    },
+    Font_your_face,
+    Import_export {
+      group someof {
+        Advogato_import
+      }
+    },
+    Vinculum,
+    Node_access {
+      group someof {
+        Taxonomy_access_control_lite,
+        Simple_access
+      }
+    },
+    Javascript_utilities {
+      group someof {
+        Google_closure_library,
+        Labjs
+      }
+    },
+    Process_api,
+    Search {
+      group someof {
+        Danish_stemmer,
+        Zend_lucene,
+        Search_by_page_attachments,
+        Search_lucene_api,
+        Porter_stemmer,
+        Search_config,
+        Extended_search_pages,
+        Search_api_saved_searches,
+        Search_ajaxified,
+        Search_api_facets_paths,
+        Search_ranges,
+        Search_api_context,
+        Mongodb_search,
+        Search_lucene_views,
+        French_stemmer,
+        Search_api,
+        Search_api_attachments,
+        Solr_search,
+        Multi_index_searches,
+        Search_spellcheck
+      }
+    },
+    Pdf {
+      group someof {
+        Pdf_idcard
+      }
+    },
+    Js_kit {
+      group someof {
+        Js_kit_echo
+      }
+    },
+    Rpg {
+      group someof {
+        Dice_roller
+      }
+    },
+    Commerce {
+      group someof {
+        Pagseguro,
+        Product_bundle,
+        Checkout_redirect,
+        Product_option,
+        Invoice,
+        Moip_payment_method,
+        Pdf_invoice,
+        Product_attributes,
+        Commerce_feeds,
+        Eway_payment_method,
+        Order_fieldgroup_panes,
+        Pagamento_digital,
+        Shipping,
+                Pay_by_cheque,
+        Google_analytics
+      }
+    },
+    Imageapi,
+    Preset_management {
+      group someof {
+        Preset
+      }
+    },
+    School_administration_kit {
+      group someof {
+        School_administration
+      }
+    },
+    Taxonomy_filter {
+      group someof {
+        Multi_term_views,
+        Taxonomy_filter_core
+      }
+    },
+    Panels,
+    User_interface {
+      group someof {
+        Menu_ux,
+        Fancybox,
+        Tinymce_mcimagemanager,
+        Page_style,
+        Kcfinder_integration,
+        Button_style,
+        Jquery_cdn,
+        Compact_forms,
+        Blockquotes,
+        Yandex_news_export,
+        Gallery_formatter,
+        Simple_dialog,
+        Ajax_poll,
+        Collapsiblock,
+        Wysiwyg,
+        Block_party_suite,
+        Javascript_loader,
+        Loginza,
+        External_links,
+        Add_another,
+        Hint,
+        Block_refresh,
+        Dynamic_rendering,
+        Uniform,
+        Ckeditor_link,
+        Dialog_api,
+        Text_size,
+        Typekit,
+        Jquery_ui,
+        Switchtheme,
+        Imce_wysiwyg_api_bridge,
+        Multi_column_checkboxes_radios,
+        Jquery_update,
+        Settings_reset_button
+      }
+    },
+    Apache_solr {
+      group someof {
+        Apache_solr_organic_groups,
+        Apache_solr_pages,
+        Apache_solr_autocomplete
+      }
+    },
+    Authentication {
+      group someof {
+        Swekey,
+        Yubikey
+      }
+    },
+    Statistics {
+      group someof {
+        Unitrack,
+        Piwik_reports,
+        Etracker,
+        Google_analytics_statistics,
+        Google_analytics
+      }
+    },
+    Mass_messaging {
+      group someof {
+        Mass_messaging
+      }
+    },
+    Search_toolkit {
+      group someof {
+        Faceted_navigation_for_search,
+        Facet_api,
+        Facet_tagcloud
+      }
+    },
+    Domain_access {
+      group someof {
+        Domain_views,
+        Domain_path,
+                Domain_blocks,
+        Domain_ctools
+      }
+    },
+    Filefield_paths {
+      group someof {
+        File_aliases
+      }
+    },
+    Scratchpads {
+      group someof {
+        Hashcash
+      }
+    },
+    Ip_board {
+      group someof {
+        Ipbridge
+      }
+    },
+    Flags {
+      group someof {
+        Flag_weights,
+        Flag,
+        Flag_pages,
+        Bookmark_organizer
+      }
+    },
+    Workflow {
+      group someof {
+        Workflow_named_transitions
+      }
+    },
+    Crush {
+      group someof {
+        Crush_administrative_command_line_interface
+      }
+    },
+    Core_fields {
+      group someof {
+        File
+      }
+    },
+    Core_cutting_edge {
+      group someof {
+        Edge
+      }
+    },
+    Piecemaker,
+    Feed_parser {
+      group someof {
+        Wow_armory
+      }
+    },
+    Services {
+      group someof {
+        Blog_api
+      }
+    },
+    Swf_tools,
+    Workbench {
+      group someof {
+        Workbench_media,
+        Workbench_files,
+                Workbench_moderation,
+        Workbench_access
+      }
+    },
+    Ubercart_payment {
+      group someof {
+        Bank_transfer,
+        Adyen
+      }
+    },
+    Amazon {
+      group someof {
+        Amazon_store
+      }
+    },
+    Development {
+      group someof {
+        Qunit,
+        Myhook,
+        Reroute_emails,
+        Devel_bonus,
+        Module_summary_module,
+        Journal,
+        Simpletest_selenium,
+        Module_builder,
+        Feedback,
+        Switcheroo,
+        File_logger,
+        Drupal_reset,
+        Demonstration_site,
+        Coder,
+        Devel_info,
+        Theme_developer,
+        Migration_from_wordpress,
+        Edit_own_user_account_permission,
+        Css_watch,
+        Secure_code_review,
+        Php_quick_profiler,
+        Enabled_modules,
+        Grammar_parser_ui,
+        Errornot,
+        Devel_demo,
+        X_ray,
+        Grammar_parser
+      }
+    },
+    Services_servers {
+      group someof {
+        Amfserver
+      }
+    },
+    Storm,
+    Git {
+      group someof {
+        Git_browser
+      }
+    },
+    Panels_media,
+    Knowledge_base {
+      group someof {
+        User_dashboard
+      }
+    },
+    Harvest {
+      group someof {
+        Harvest_api
+      }
+    },
+    Question,
+    Car,
+    Organic_groups {
+      group someof {
+        Og_create_permissions,
+        Organic_groups_flickr_block,
+        Organic_groups_e_mail_blast,
+        Organic_groups_views_integration,
+        Organic_groups_language,
+        Organic_groups_node_link,
+        Organic_groups_theme
+      }
+    },
+    Activelamp_tools {
+      group someof {
+        Spritesheets
+      }
+    },
+    Geonames {
+      group someof {
+        Geonames_api
+      }
+    },
+    Context {
+      group someof {
+        Context_ssl,
+        Context_condition_theme,
+        Context_breadcrumb_current_page,
+        Context_block_class
+      }
+    },
+    Twitter {
+      group someof {
+        Tweetboard
+      }
+    },
+    Security {
+      group someof {
+        Fourfourthree_session
+      }
+    },
+    Dokeos,
+    Rules {
+      group someof {
+        Rules_autotag
+      }
+    },
+    Message,
+    The_coding_designers_survival_kit,
+    Commerce_coupon,
+    Publication_channels {
+      group someof {
+        Channels
+      }
+    },
+    Openlayers {
+      group someof {
+        Openlayers_field
+      }
+    },
+    Text_mining_api,
+    Effects {
+      group someof {
+        Imagefield_markers
+      }
+    },
+    Balance_tracker {
+      group someof {
+        Balance_tracker_api
+      }
+    },
+    Input_filters2 {
+      group someof {
+        Picasa_webalbum_slideshow
+      }
+    },
+    Tools {
+      group someof {
+        Mms_mnemonic_major_system
+      }
+    },
+    Xml_sitemap {
+      group someof {
+        Xml_sitemap_domain
+      }
+    },
+    Cobalt,
+    Multilingual_internationalization {
+      group someof {
+        I18n_comments
+      }
+    },
+    Munin {
+      group someof {
+        Munin_api
+      }
+    },
+    Dbtng {
+      group someof {
+        Dbtng_migrator
+      }
+    },
+    Commerce_paypal_ {
+      group someof {
+        Paypal
+      }
+    },
+    Graph_tools {
+      group someof {
+        Graph_api
+      }
+    },
+    Performance {
+      group someof {
+        Core_library,
+        Esi_api
+      }
+    },
+    Nodequeue {
+      group someof {
+        Nodequeue_publisher
+      }
+    },
+    Access_control {
+      group someof {
+        User_permissions,
+        Book_access,
+        Deny_access,
+        Acl,
+        Flexi_access,
+        Forum_access
+      }
+    },
+    Multilanguage {
+      group someof {
+        Language_assignment,
+        Po_re_importer,
+        Translation_overview,
+        Translation_helpers,
+        Tcontact,
+        Country_icons
+      }
+    },
+    Infrastructure {
+      group someof {
+        Wunderbar
+      }
+    },
+    Userbar,
+    Libraries {
+      group someof {
+        Google_api_libraries,
+        Field_helper
+      }
+    },
+    Biblio,
+    Ajax {
+      group someof {
+        Sysvar_ajax_saver
+      }
+    },
+    Taxonomy {
+      group someof {
+        User_force_term,
+        Taxonomy_csv_import_export
+      }
+    },
+    Profile {
+      group someof {
+        Profile_role,
+        Profile_complete_percentage
+      }
+    },
+    Stock,
+    Readspeaker {
+      group someof {
+        Docreader
+      }
+    },
+    Markup {
+      group someof {
+        Html5_tools
+      }
+    },
+    Multilingual {
+      group someof {
+        Image_media_translation,
+        Gettext_import_export_api,
+        Content_translation,
+        Language_cookie,
+        Language_switcher,
+        Entity_translation,
+        Language_icons,
+        Title
+      }
+    },
+    Design {
+      group someof {
+        Single_page_website
+      }
+    },
+    Meta_tags,
+    Features {
+      group someof {
+        Debut_blog,
+        Debut_section,
+        Debut_article,
+        Video_presets,
+        Features_override,
+        Debut_event,
+        Debut_social,
+        Debut_wysiwyg,
+        Commerce_downloads_feature,
+        Example_web_scraper,
+        Debut_forum,
+        Debut_image,
+        Pantarei_siren_core,
+        Debut,
+        Debut_comment,
+        Debut_media,
+        Drupal_planet
+      }
+    },
+    Mongodb,
+    Location {
+      group someof {
+        Device_geolocation
+      }
+    },
+    Chaos_tool_suite {
+      group someof {
+        Chaos_tools,
+        Ctools_path_access_plugin
+      }
+    },
+    Fields2 {
+      group someof {
+        Menu_link,
+        Addthis,
+        Vimeo,
+        Allow_all_file_extensions,
+        Webcam_field,
+        Semantic_fields,
+        Name_db,
+        Address_field,
+        Countries,
+        Field_weight,
+        Serial,
+        Double_field,
+        Maxlength_js,
+        Entity_reference_field,
+        Meta_tag_field,
+        Cck_pager,
+        Node_reference_url_widget,
+        Fieldgroup,
+        Taxonomy_formatter,
+        Field_slideshow
+      }
+    }
+  }
+}
+
+// DEPENDENCIES
+
+Debut_forum {
+  Debut_forum -> Menu;
+  Debut_forum -> Features;
+  Debut_forum -> Strongarm;
+  Debut_forum -> Advanced_forum;
+}
+Comicdrop {
+  Comicdrop -> Image;
+}
+Organic_groups_language {
+  Organic_groups_language -> Locale;
+  Organic_groups_language -> Og_context;
+}
+Picasa_node_album {
+  Picasa_node_album -> Zend;
+}
+Enabled_modules {
+  Enabled_modules -> Views;
+}
+Page_not_found_reports {
+  Page_not_found_reports -> Dblog;
+}
+Thumbnails {
+  Thumbnails -> Image;
+  Thumbnails -> Ctools;
+}
+Devel_bonus {
+  Devel_bonus -> Devel;
+}
+Sagepay_direct_integration_for_drupal_commerce {
+  Sagepay_direct_integration_for_drupal_commerce -> Commerce_payment;
+  Sagepay_direct_integration_for_drupal_commerce -> Commerce_3d_secure;
+  Sagepay_direct_integration_for_drupal_commerce -> Commerce;
+}
+Language_icons {
+  Language_icons -> Locale;
+}
+Search_spellcheck {
+  Search_spellcheck -> Search_api;
+}
+Menu_attributes {
+  Menu_attributes -> Menu;
+}
+Search_api_attachments {
+  Search_api_attachments -> Search_api;
+}
+Token_field {
+  Token_field -> Field;
+  Token_field -> Token;
+}
+Eway_payment_method {
+  Eway_payment_method -> Commerce_payment;
+  Eway_payment_method -> Commerce_ui;
+  Eway_payment_method -> Commerce;
+  Eway_payment_method -> Commerce_order;
+}
+Domain_ctools {
+  Domain_ctools -> Domain;
+  Domain_ctools -> Ctools;
+}
+Video_presets {
+  Video_presets -> Video_ui;
+  Video_presets -> Video;
+}
+Userpoints_user_picture {
+  Userpoints_user_picture -> Userpoints;
+}
+Media_amazon {
+  Media_amazon -> Libraries;
+  Media_amazon -> Awssdk;
+}
+Language_switcher {
+  Language_switcher -> Locale;
+}
+Views_php {
+  Views_php -> Views;
+}
+Profile_privacy {
+  Profile_privacy -> Profile;
+}
+Autordf {
+  Autordf -> Search;
+  Autordf -> Taxonomy;
+}
+Pay_by_cheque {
+  Pay_by_cheque -> Commerce_payment;
+  Pay_by_cheque -> Commerce;
+}
+Search_404 {
+  Search_404 -> Search;
+}
+Sharepoint_integration {
+  Sharepoint_integration -> Field;
+}
+Hubspot_drupal_integration {
+  Hubspot_drupal_integration -> Webform_3_x_;
+}
+Lexicon {
+  Lexicon -> Field;
+  Lexicon -> Taxonomy;
+}
+Term_level_field {
+  Term_level_field -> Taxonomy;
+}
+Workflow_named_transitions {
+  Workflow_named_transitions -> Workflow;
+}
+Social_connect {
+  Social_connect -> Field;
+}
+Commission_junction_api {
+  Commission_junction_api -> Field;
+  Commission_junction_api -> Taxonomy;
+}
+Menu_tree {
+  Menu_tree -> Menu;
+}
+Star_rating {
+  Star_rating -> Field;
+}
+Extended_search_pages {
+  Extended_search_pages -> Search_api_page;
+}
+Views_calc {
+  Views_calc -> Views;
+}
+Debut_event {
+  Debut_event -> Views;
+  Debut_event -> Features;
+  Debut_event -> Context;
+  Debut_event -> Strongarm;
+  Debut_event -> Date_popup;
+  Debut_event -> Taxonomy;
+  Debut_event -> Date;
+  Debut_event -> Media;
+  Debut_event -> Calendar;
+}
+Uniform {
+  Uniform -> Libraries;
+}
+Yahoo_terms_extractor {
+  Yahoo_terms_extractor -> Taxonomy;
+}
+Workbench_files {
+  Workbench_files -> Workbench;
+}
+Commerce_downloads_feature {
+  Commerce_downloads_feature -> Commerce_cart;
+  Commerce_downloads_feature -> Commerce_product_ui;
+  Commerce_downloads_feature -> Commerce_file;
+  Commerce_downloads_feature -> Commerce_payment;
+  Commerce_downloads_feature -> Features;
+}
+Term_reference_tree {
+  Term_reference_tree -> Taxonomy;
+  Term_reference_tree -> Options;
+}
+Field_redirection {
+  Field_redirection -> Field;
+}
+Apache_solr_organic_groups {
+  Apache_solr_organic_groups -> Apachesolr;
+  Apache_solr_organic_groups -> Og;
+}
+Anti_existing_field {
+  Anti_existing_field -> Field_ui;
+}
+Ctools_path_access_plugin {
+  Ctools_path_access_plugin -> Ctools;
+}
+Faceted_navigation_for_search {
+  Faceted_navigation_for_search -> Facetapi;
+}
+Taxonomy_menu_trails {
+  Taxonomy_menu_trails -> Taxonomy;
+}
+Imagilicious {
+  Imagilicious -> Image;
+}
+Contact_cc {
+  Contact_cc -> Contact;
+}
+Commerce_feeds {
+  Commerce_feeds -> Feeds;
+  Commerce_feeds -> Commerce;
+}
+Ajax_poll {
+  Ajax_poll -> Poll;
+}
+Search_ranges {
+  Search_ranges -> Search_api;
+  Search_ranges -> Block;
+  Search_ranges -> Search_api_facets;
+}
+Signature_field {
+  Signature_field -> Libraries;
+}
+Block_visibility_by_term {
+  Block_visibility_by_term -> Taxonomy;
+}
+Search_ajaxified {
+  Search_ajaxified -> Search_api_page;
+  Search_ajaxified -> Search_api;
+  Search_ajaxified -> Search_api_facets;
+}
+Checkout_login {
+  Checkout_login -> Commerce_checkout;
+  Checkout_login -> Commerce_order;
+}
+Taxonomy_formatter {
+  Taxonomy_formatter -> Taxonomy;
+}
+Delta_api {
+  Delta_api -> Context;
+}
+Priorities {
+  Priorities -> Taxonomy;
+}
+Favorite_order {
+  Favorite_order -> Uc_cart;
+  Favorite_order -> Block;
+}
+Manual_crop {
+  Manual_crop -> Image;
+}
+Simple_timesheet {
+  Simple_timesheet -> Date_views;
+  Simple_timesheet -> Field_ui;
+  Simple_timesheet -> Views_php;
+  Simple_timesheet -> Date_popup;
+  Simple_timesheet -> List;
+  Simple_timesheet -> Number;
+  Simple_timesheet -> Date;
+  Simple_timesheet -> Ctools;
+  Simple_timesheet -> User_reference;
+  Simple_timesheet -> References;
+  Simple_timesheet -> Token;
+  Simple_timesheet -> Views;
+  Simple_timesheet -> Features;
+  Simple_timesheet -> Path;
+  Simple_timesheet -> Date_api;
+  Simple_timesheet -> Views_data_export;
+  Simple_timesheet -> Node_reference;
+  Simple_timesheet -> Options;
+}
+Workbench_media {
+  Workbench_media -> Workbench;
+  Workbench_media -> Media;
+}
+Rgraph {
+  Rgraph -> Extended_html;
+  Rgraph -> Views;
+}
+Drupal_planet {
+  Drupal_planet -> Flag;
+  Drupal_planet -> Views;
+  Drupal_planet -> Ctools;
+}
+Webform_paypal_component {
+  Webform_paypal_component -> Webform;
+}
+Void_menu {
+  Void_menu -> Menu;
+}
+Commerce_finnish_payments {
+  Commerce_finnish_payments -> Commerce_payment;
+  Commerce_finnish_payments -> Commerce;
+}
+Feeds_youtube {
+  Feeds_youtube -> Feeds;
+}
+Panels_media {
+  Panels_media -> Panels;
+  Panels_media -> Ctools;
+}
+Context_domain {
+  Context_domain -> Context;
+}
+Product_option {
+  Product_option -> Commerce;
+}
+Frontpage {
+  Frontpage -> Vars;
+}
+User_force_term {
+  User_force_term -> Taxonomy;
+}
+Tinymce_mcimagemanager {
+  Tinymce_mcimagemanager -> Libraries;
+  Tinymce_mcimagemanager -> Wysiwyg;
+}
+Amt_analysis {
+  Amt_analysis -> Mt_task;
+}
+Dynamic_properties {
+  Dynamic_properties -> Properties_sql;
+}
+Relevance {
+  Relevance -> Taxonomy;
+}
+Menu_admin_per_menu {
+  Menu_admin_per_menu -> Menu;
+}
+Bank_transfer {
+  Bank_transfer -> Uc_cart;
+  Bank_transfer -> Uc_payment;
+}
+User_role_field {
+  User_role_field -> Field_ui;
+}
+Drupal7.Other.Demonstration_site {
+  Drupal7.Other.Demonstration_site -> Demo;
+}
+Bloginfo {
+  Bloginfo -> Blog;
+}
+Pagseguro {
+  Pagseguro -> Commerce_payment;
+  Pagseguro -> Commerce;
+}
+Muchomenu {
+  Muchomenu -> Panels_mini;
+  Muchomenu -> Ctools;
+}
+Imce_wysiwyg_api_bridge {
+  Imce_wysiwyg_api_bridge -> Wysiwyg;
+  Imce_wysiwyg_api_bridge -> Imce;
+}
+Menu_item_visibility {
+  Menu_item_visibility -> Menu;
+}
+Static_map {
+  Static_map -> Geofield;
+}
+Migration_from_wordpress {
+  Migration_from_wordpress -> Migrate;
+}
+Color_theme {
+  Color_theme -> Color;
+}
+Entity_translation {
+  Entity_translation -> Locale;
+}
+Project_browser {
+  Project_browser -> Update;
+}
+Video {
+  Video -> File;
+  Video -> Image;
+}
+Fivestar {
+  Fivestar -> Votingapi;
+}
+Commerce_autosku {
+  Commerce_autosku -> Commerce_product;
+}
+Left_and_right {
+  Left_and_right -> Taxonomy;
+}
+Default_content {
+  Default_content -> Features;
+}
+Field_wrappers {
+  Field_wrappers -> Field;
+}
+User_modal {
+  User_modal -> Ctools;
+}
+Taxonomy_access_control_lite {
+  Taxonomy_access_control_lite -> Taxonomy;
+}
+Zend_feed {
+  Zend_feed -> Zend;
+}
+Toolbar_hider {
+  Toolbar_hider -> Toolbar;
+}
+Serial {
+  Serial -> Field;
+}
+User_tweaks {
+  User_tweaks -> Vars_2_x_;
+}
+Media_development {
+  Media_development -> Contextual;
+  Media_development -> Field_ui;
+  Media_development -> Plupload;
+  Media_development -> Toolbar;
+  Media_development -> Media_internet;
+  Media_development -> Block;
+  Media_development -> File_styles;
+  Media_development -> Shortcut;
+  Media_development -> Help;
+  Media_development -> Search;
+  Media_development -> File;
+  Media_development -> Path;
+  Media_development -> Rdf;
+  Media_development -> Taxonomy;
+  Media_development -> Devel;
+  Media_development -> Wysiwyg;
+  Media_development -> Menu;
+  Media_development -> Image;
+  Media_development -> Styles;
+  Media_development -> Dblog;
+  Media_development -> Media_youtube;
+  Media_development -> Color;
+  Media_development -> Dashboard;
+  Media_development -> Comment;
+  Media_development -> Media;
+}
+Organic_groups_theme {
+  Organic_groups_theme -> Og_context;
+}
+File_aliases {
+  File_aliases -> Filefield_paths;
+  File_aliases -> Path;
+}
+Image_url_formatter {
+  Image_url_formatter -> Field;
+  Image_url_formatter -> Image;
+}
+Pantarei_siren_core {
+  Pantarei_siren_core -> Libraries;
+  Pantarei_siren_core -> Field_ui;
+  Pantarei_siren_core -> Drupal7.Other.Diff;
+  Pantarei_siren_core -> Pathauto;
+  Pantarei_siren_core -> Panels_mini;
+  Pantarei_siren_core -> Backup_migrate;
+  Pantarei_siren_core -> Panels_node;
+  Pantarei_siren_core -> Help;
+  Pantarei_siren_core -> Search;
+  Pantarei_siren_core -> File;
+  Pantarei_siren_core -> Field_group;
+  Pantarei_siren_core -> Php;
+  Pantarei_siren_core -> Features;
+  Pantarei_siren_core -> Rdf;
+  Pantarei_siren_core -> Taxonomy;
+  Pantarei_siren_core -> Stylizer;
+  Pantarei_siren_core -> Ctools_access_ruleset;
+  Pantarei_siren_core -> Node_reference;
+  Pantarei_siren_core -> Page_manager;
+  Pantarei_siren_core -> Getid3;
+  Pantarei_siren_core -> Wysiwyg;
+  Pantarei_siren_core -> Menu;
+  Pantarei_siren_core -> Image;
+  Pantarei_siren_core -> Bulk_export;
+  Pantarei_siren_core -> Number;
+  Pantarei_siren_core -> Dashboard;
+  Pantarei_siren_core -> Comment;
+  Pantarei_siren_core -> Field_permissions;
+  Pantarei_siren_core -> Update;
+  Pantarei_siren_core -> Contextual;
+  Pantarei_siren_core -> Imce_wysiwyg;
+  Pantarei_siren_core -> Translation;
+  Pantarei_siren_core -> Views_ui;
+  Pantarei_siren_core -> Views_export;
+  Pantarei_siren_core -> Link;
+  Pantarei_siren_core -> Locale;
+  Pantarei_siren_core -> Block;
+  Pantarei_siren_core -> Ctools_custom_content;
+  Pantarei_siren_core -> Blog;
+  Pantarei_siren_core -> Panels_ipe;
+  Pantarei_siren_core -> Statistics;
+  Pantarei_siren_core -> Shortcut;
+  Pantarei_siren_core -> Codefilter;
+  Pantarei_siren_core -> User_reference;
+  Pantarei_siren_core -> Token;
+  Pantarei_siren_core -> Panels;
+  Pantarei_siren_core -> Path;
+  Pantarei_siren_core -> Strongarm;
+  Pantarei_siren_core -> Tracker;
+  Pantarei_siren_core -> Colorbox;
+  Pantarei_siren_core -> Options;
+  Pantarei_siren_core -> Views_bulk_operations;
+  Pantarei_siren_core -> Devel;
+  Pantarei_siren_core -> Trigger;
+  Pantarei_siren_core -> Dblog;
+  Pantarei_siren_core -> List;
+  Pantarei_siren_core -> Advanced_help;
+  Pantarei_siren_core -> Imce;
+  Pantarei_siren_core -> Imagecache_profiles;
+  Pantarei_siren_core -> Ctools;
+  Pantarei_siren_core -> Actions_permissions;
+  Pantarei_siren_core -> Htmlpurifier;
+  Pantarei_siren_core -> Views_content;
+  Pantarei_siren_core -> Color;
+  Pantarei_siren_core -> Views;
+  Pantarei_siren_core -> Admin;
+  Pantarei_siren_core -> Transliteration;
+  Pantarei_siren_core -> Book;
+  Pantarei_siren_core -> Insert;
+}
+Merge_comments {
+  Merge_comments -> Comment;
+}
+Gallery_summary {
+  Gallery_summary -> Views;
+}
+Integer_date {
+  Integer_date -> Field;
+}
+Node_authorize_link {
+  Node_authorize_link -> Computed_field;
+}
+Debut_social {
+  Debut_social -> Service_links;
+  Debut_social -> General_services;
+  Debut_social -> Forward;
+  Debut_social -> Features;
+  Debut_social -> Context;
+  Debut_social -> Strongarm;
+  Debut_social -> Captcha;
+  Debut_social -> Follow;
+}
+Pathauto {
+  Pathauto -> Token;
+  Pathauto -> Path;
+}
+Pagamento_digital {
+  Pagamento_digital -> Commerce_payment;
+  Pagamento_digital -> Commerce;
+}
+Relevant_content {
+  Relevant_content -> Block;
+  Relevant_content -> Taxonomy;
+}
+Field_injector {
+  Field_injector -> Field;
+}
+Sagepay_form_integration {
+  Sagepay_form_integration -> Commerce_payment;
+  Sagepay_form_integration -> Commerce;
+}
+Menu_block {
+  Menu_block -> Menu;
+}
+Field_validation {
+  Field_validation -> Field;
+  Field_validation -> Field_ui;
+}
+Admin_language {
+  Admin_language -> Locale;
+}
+Debut_section {
+  Debut_section -> Views;
+  Debut_section -> Features;
+  Debut_section -> Context;
+  Debut_section -> Book;
+  Debut_section -> Strongarm;
+  Debut_section -> Media;
+}
+Payflow_pro {
+  Payflow_pro -> Commerce_payment;
+  Payflow_pro -> Commerce_ui;
+  Payflow_pro -> Commerce;
+  Payflow_pro -> Commerce_order;
+}
+Administration_menu_dropdown {
+  Administration_menu_dropdown -> Admin_menu;
+}
+Product_bundle {
+  Product_bundle -> Commerce;
+}
+Sanitizable {
+  Sanitizable -> Filter;
+}
+Comment_allow_anonymous {
+  Comment_allow_anonymous -> Comment;
+}
+Comment_notify {
+  Comment_notify -> Token;
+  Comment_notify -> Comment;
+}
+Cloud_zoom {
+  Cloud_zoom -> Image;
+}
+Debut {
+  Debut -> Features;
+}
+Authorize_net {
+  Authorize_net -> Commerce_payment;
+  Authorize_net -> Commerce_ui;
+  Authorize_net -> Commerce;
+  Authorize_net -> Commerce_order;
+}
+Taxonomy_csv_import_export {
+  Taxonomy_csv_import_export -> Taxonomy;
+}
+Book_delete {
+  Book_delete -> Book;
+}
+Taxonomy_tree_select {
+  Taxonomy_tree_select -> Taxonomy;
+  Taxonomy_tree_select -> Options;
+}
+Anonymous_posting {
+  Anonymous_posting -> Field;
+}
+Qforms_extra {
+  Qforms_extra -> Qforms;
+}
+Taxonomy_filter_core {
+  Taxonomy_filter_core -> Taxonomy;
+}
+Commerce_file {
+  Commerce_file -> Commerce_product_reference;
+  Commerce_file -> File;
+  Commerce_file -> Commerce_product;
+  Commerce_file -> Entity;
+  Commerce_file -> Commerce_line_item;
+  Commerce_file -> Commerce;
+  Commerce_file -> Rules;
+  Commerce_file -> Commerce_order;
+}
+Facet_tagcloud {
+  Facet_tagcloud -> Facetapi;
+}
+Product_key {
+  Product_key -> Rules;
+}
+Title {
+  Title -> Locale;
+}
+Autocomplete_deluxe {
+  Autocomplete_deluxe -> Taxonomy;
+  Autocomplete_deluxe -> Options;
+}
+Eva {
+  Eva -> Views;
+}
+Mime_mail {
+  Mime_mail -> Mailsystem;
+}
+Video_upload_field {
+  Video_upload_field -> File;
+}
+Micro {
+  Micro -> Entity;
+}
+Paypal {
+  Paypal -> Commerce_payment;
+  Paypal -> Commerce_ui;
+  Paypal -> Commerce;
+  Paypal -> Commerce_order;
+}
+Field_actions {
+  Field_actions -> Content;
+}
+File_viewer {
+  File_viewer -> File;
+}
+Webform_alternate_ui {
+  Webform_alternate_ui -> Ux_elements;
+  Webform_alternate_ui -> Webform;
+  Webform_alternate_ui -> Form_builder;
+  Webform_alternate_ui -> Form_builder_webform;
+}
+Webform_node_element {
+  Webform_node_element -> Webform;
+}
+Submitted_by {
+  Submitted_by -> Token;
+}
+Search_config {
+  Search_config -> Search;
+}
+Openlayers_field {
+  Openlayers_field -> Openlayers;
+}
+Taxonomy_menu {
+  Taxonomy_menu -> Menu;
+  Taxonomy_menu -> Taxonomy;
+}
+Php_quick_profiler {
+  Php_quick_profiler -> Devel;
+  Php_quick_profiler -> Performance;
+}
+Meta_tags {
+  Meta_tags -> Token;
+}
+User_dashboard {
+  User_dashboard -> Dashboard;
+}
+Yandex_news_export {
+  Yandex_news_export -> Views;
+}
+Organic_groups_e_mail_blast {
+  Organic_groups_e_mail_blast -> Og_ui;
+}
+Apache_solr_pages {
+  Apache_solr_pages -> Apachesolr;
+  Apache_solr_pages -> Entity;
+}
+Order_fieldgroup_panes {
+  Order_fieldgroup_panes -> Field_group;
+  Order_fieldgroup_panes -> Commerce;
+}
+Drupal7.Other.Diff {
+  Drupal7.Other.Diff -> Drupal7.Other.Diff;
+  Drupal7.Other.Diff -> User_revision;
+}
+Forum_access {
+  Forum_access -> Forum;
+  Forum_access -> Chain_menu_access;
+}
+Sunmailer {
+  Sunmailer -> Views;
+}
+Shipping {
+  Shipping -> Commerce_line_item;
+  Shipping -> Rules;
+  Shipping -> Commerce;
+}
+Simplenews {
+  Simplenews -> Taxonomy;
+}
+Own_term {
+  Own_term -> Taxonomy;
+}
+Device_geolocation {
+  Device_geolocation -> Smart_ip;
+}
+Book_manager {
+  Book_manager -> Book;
+}
+Organic_groups_node_link {
+  Organic_groups_node_link -> Og;
+}
+Omega {
+  Omega -> Contextual;
+  Omega -> Field_ui;
+  Omega -> Views_ui;
+  Omega -> Pathauto;
+  Omega -> Block;
+  Omega -> Client_ui_control;
+  Omega -> Menu_expanded;
+  Omega -> Help;
+  Omega -> Token;
+  Omega -> Search;
+  Omega -> File;
+  Omega -> Context_ui;
+  Omega -> Path;
+  Omega -> Rdf;
+  Omega -> Taxonomy;
+  Omega -> Delta_ui;
+  Omega -> Options;
+  Omega -> Devel;
+  Omega -> Admin_tools;
+  Omega -> Globalredirect;
+  Omega -> Delta;
+  Omega -> Menu;
+  Omega -> Image;
+  Omega -> Dblog;
+  Omega -> Number;
+  Omega -> List;
+  Omega -> Ctools;
+  Omega -> Extlink;
+  Omega -> Color;
+  Omega -> Views;
+  Omega -> Admin;
+  Omega -> Context;
+  Omega -> Comment;
+}
+Debut_wysiwyg {
+  Debut_wysiwyg -> Wysiwyg;
+  Debut_wysiwyg -> Entity;
+  Debut_wysiwyg -> Features;
+  Debut_wysiwyg -> Debut;
+  Debut_wysiwyg -> Media;
+}
+Administration_pane {
+  Administration_pane -> Toolbar;
+  Administration_pane -> Menu_block;
+}
+Organic_groups_flickr_block {
+  Organic_groups_flickr_block -> Flickr;
+  Organic_groups_flickr_block -> Flickr_block;
+  Organic_groups_flickr_block -> Og;
+}
+Graphviz_nodereference_graph {
+  Graphviz_nodereference_graph -> Graphviz_filter;
+  Graphviz_nodereference_graph -> Node_reference;
+}
+Admin_tools {
+  Admin_tools -> Admin;
+  Admin_tools -> Menu;
+}
+Search_lucene_views {
+  Search_lucene_views -> Views;
+  Search_lucene_views -> Luceneapi;
+}
+Video_filter_field {
+  Video_filter_field -> Video_filter;
+}
+Spamspan {
+  Spamspan -> Filter;
+}
+Reindex {
+  Reindex -> Search;
+}
+Message {
+  Message -> Entity;
+  Message -> Ctools;
+}
+Daily_twitter {
+  Daily_twitter -> Blog;
+}
+Xml_sitemap_domain {
+  Xml_sitemap_domain -> Domain;
+  Xml_sitemap_domain -> Xmlsitemap;
+}
+Grammar_parser_ui {
+  Grammar_parser_ui -> Grammar_parser;
+}
+Vimeo_link_formatter {
+  Vimeo_link_formatter -> Field;
+  Vimeo_link_formatter -> Link;
+}
+Multi_term_views {
+  Multi_term_views -> Views;
+}
+Node_connect {
+  Node_connect -> Node_reference;
+}
+Profile_role {
+  Profile_role -> Profile;
+}
+Ogone {
+  Ogone -> Commerce_payment;
+  Ogone -> Commerce_ui;
+  Ogone -> Commerce;
+  Ogone -> Commerce_order;
+}
+Secure_code_review {
+  Secure_code_review -> Coder_upgrade;
+}
+Panels {
+  Panels -> Ctools;
+}
+Open_outreach {
+  Open_outreach -> Field_ui;
+  Open_outreach -> Subprofiles;
+  Open_outreach -> Menu;
+  Open_outreach -> Block;
+  Open_outreach -> Image;
+  Open_outreach -> Dblog;
+  Open_outreach -> List;
+  Open_outreach -> Number;
+  Open_outreach -> Help;
+  Open_outreach -> Search;
+  Open_outreach -> Color;
+  Open_outreach -> File;
+  Open_outreach -> Path;
+  Open_outreach -> Features;
+  Open_outreach -> Strongarm;
+  Open_outreach -> Rdf;
+  Open_outreach -> Taxonomy;
+  Open_outreach -> Comment;
+  Open_outreach -> Dashboard;
+  Open_outreach -> Options;
+}
+Encrypted_settings_field {
+  Encrypted_settings_field -> Field;
+}
+Nat_ng {
+  Nat_ng -> Taxonomy;
+}
+Cck_blocks {
+  Cck_blocks -> Block;
+}
+Translation_overview {
+  Translation_overview -> Translation;
+}
+Entity_cache_flusher {
+  Entity_cache_flusher -> Entitycache;
+}
+Organic_groups_views_integration {
+  Organic_groups_views_integration -> Views;
+  Organic_groups_views_integration -> Og;
+}
+Bundlecache {
+  Bundlecache -> Table;
+}
+Domain_path {
+  Domain_path -> Path;
+  Domain_path -> Domain;
+}
+Wysiwyg_imagefield {
+  Wysiwyg_imagefield -> Wysiwyg;
+  Wysiwyg_imagefield -> Image;
+  Wysiwyg_imagefield -> Insert;
+}
+Imagecache_profile_pictures {
+  Imagecache_profile_pictures -> Image;
+}
+Media_browser_plus {
+  Media_browser_plus -> Taxonomy;
+  Media_browser_plus -> Media;
+}
+Rules_autotag {
+  Rules_autotag -> Rules;
+}
+Iframe {
+  Iframe -> Field;
+}
+Quiz {
+  Quiz -> Taxonomy;
+}
+Feeds {
+  Feeds -> Job_scheduler;
+  Feeds -> Ctools;
+}
+Debut_blog {
+  Debut_blog -> Views;
+  Debut_blog -> Features;
+  Debut_blog -> Context;
+  Debut_blog -> Styles;
+  Debut_blog -> Strongarm;
+  Debut_blog -> Captcha;
+  Debut_blog -> Taxonomy;
+  Debut_blog -> Media;
+}
+Wp_blog {
+  Wp_blog -> Views;
+  Wp_blog -> Taxonomy;
+}
+Drupal7.Rrdtool {
+  Drupal7.Rrdtool -> Rrdtool_monitors;
+}
+Affiliates {
+  Affiliates -> Profile;
+}
+Font_your_face {
+  Font_your_face -> Views;
+}
+D_d_character {
+  D_d_character -> Field_group;
+  D_d_character -> Features;
+  D_d_character -> Number;
+  D_d_character -> List;
+  D_d_character -> Dnd_fields;
+}
+Private_message_growl {
+  Private_message_growl -> Privatemsg;
+}
+Biblio {
+  Biblio -> Taxonomy;
+}
+Filters_image_effect_filtersie_ {
+  Filters_image_effect_filtersie_ -> Image;
+}
+Field_slideshow {
+  Field_slideshow -> Image;
+}
+Language_assignment {
+  Language_assignment -> Locale;
+}
+Imagefield_markers {
+  Imagefield_markers -> Image;
+}
+Apache_solr_autocomplete {
+  Apache_solr_autocomplete -> Apachesolr;
+  Apache_solr_autocomplete -> Apachesolr_search;
+}
+Model {
+  Model -> Views;
+  Model -> Entity;
+}
+Theme_developer {
+  Theme_developer -> Devel;
+}
+Commerce_bulk_product_creation {
+  Commerce_bulk_product_creation -> Commerce_product_ui;
+}
+Media {
+  Media -> File;
+  Media -> File_styles;
+  Media -> Image;
+}
+Views_tooltip {
+  Views_tooltip -> Tipsy;
+  Views_tooltip -> Views;
+}
+Drupal7.Statistics.Google_analytics {
+  Drupal7.Statistics.Google_analytics -> Googleanalytics;
+  Drupal7.Statistics.Google_analytics -> Commerce;
+}
+Taxonomy_display {
+  Taxonomy_display -> Taxonomy;
+}
+Pdf_invoice {
+  Pdf_invoice -> Views_view_field;
+  Pdf_invoice -> Views_pdf;
+  Pdf_invoice -> Commerce_order;
+}
+Relation {
+  Relation -> Entity;
+}
+Amt_karma {
+  Amt_karma -> Mt_task;
+  Amt_karma -> Encset;
+}
+Fieldgroup {
+  Fieldgroup -> Field;
+}
+Breadcrumb {
+  Breadcrumb -> Block;
+}
+Context_block_class {
+  Context_block_class -> Context;
+}
+Search_api_context {
+  Search_api_context -> Search_api;
+}
+Drupal7.Vimeo {
+  Drupal7.Vimeo -> Field;
+  Drupal7.Vimeo -> Image;
+}
+Search_api_saved_searches {
+  Search_api_saved_searches -> Search_api;
+}
+Entityfieldquery_views_backend {
+  Entityfieldquery_views_backend -> Views;
+  Entityfieldquery_views_backend -> Entity;
+}
+Moip_payment_method {
+  Moip_payment_method -> Commerce_payment;
+  Moip_payment_method -> Commerce;
+}
+Features_override {
+  Features_override -> Features;
+  Features_override -> Ctools;
+}
+Invite {
+  Invite -> Token;
+}
+Debut_media {
+  Debut_media -> Media_internet;
+  Debut_media -> Views;
+  Debut_media -> Features;
+  Debut_media -> Context;
+  Debut_media -> Styles;
+  Debut_media -> Media_youtube;
+}
+Adyen {
+  Adyen -> Uc_payment;
+}
+Commerce_addressbook {
+  Commerce_addressbook -> Entity;
+  Commerce_addressbook -> Commerce;
+  Commerce_addressbook -> Addressfield;
+}
+Domain_blocks {
+  Domain_blocks -> Domain;
+  Domain_blocks -> Block;
+}
+Field_definitions {
+  Field_definitions -> Field;
+}
+Product_minimum_maximum {
+  Product_minimum_maximum -> Uc_product;
+}
+Flat_comments {
+  Flat_comments -> Comment;
+}
+Example_web_scraper {
+  Example_web_scraper -> Feeds_tamper;
+  Example_web_scraper -> Feeds;
+  Example_web_scraper -> Feeds_xpathparser;
+  Example_web_scraper -> Feeds_crawler;
+  Example_web_scraper -> Feeds_selfnode_processor;
+  Example_web_scraper -> Features;
+}
+Danish_stemmer {
+  Danish_stemmer -> Search;
+}
+Private_comments {
+  Private_comments -> Comment;
+}
+Total_hook_extremism {
+  Total_hook_extremism -> Bad_judgement;
+}
+Jquery_reel {
+  Jquery_reel -> Jquery_update;
+}
+Single_page_website {
+  Single_page_website -> Menu;
+}
+Fullcalendar {
+  Fullcalendar -> Views;
+  Fullcalendar -> Date;
+}
+Solr_search {
+  Solr_search -> Search_api;
+}
+Channels {
+  Channels -> Channels_service;
+  Channels -> Entity;
+  Channels -> Process_api;
+}
+Mongodb_search {
+  Mongodb_search -> Search_api;
+  Mongodb_search -> Mongodb;
+}
+Menu_firstchild {
+  Menu_firstchild -> Menu;
+}
+Feeds_image_grabber {
+  Feeds_image_grabber -> Feeds;
+  Feeds_image_grabber -> Image;
+}
+Cck {
+  Cck -> Field_ui;
+}
+Zend_lucene {
+  Zend_lucene -> Search_api;
+  Zend_lucene -> Zend;
+}
+Context_condition_theme {
+  Context_condition_theme -> Context;
+}
+Chili_highlighter {
+  Chili_highlighter -> Vars_2_x_;
+}
+Media_peg_tv {
+  Media_peg_tv -> Media_internet;
+}
+Imce_mkdir {
+  Imce_mkdir -> Imce;
+}
+Context_field {
+  Context_field -> Context_ui;
+  Context_field -> Boxes;
+  Context_field -> Context;
+  Context_field -> Views_boxes;
+}
+Commerce_coupon {
+  Commerce_coupon -> Commerce;
+}
+Node_reference_url_widget {
+  Node_reference_url_widget -> Node_reference;
+}
+Ur_limits {
+  Ur_limits -> User_relationships_ui;
+  Ur_limits -> User_relationships_api;
+}
+Nice_menus {
+  Nice_menus -> Menu;
+}
+Filefield_nginx_progress {
+  Filefield_nginx_progress -> File;
+}
+Dsk {
+  Dsk -> Field_ui;
+  Dsk -> Contextual;
+  Dsk -> Toolbar;
+  Dsk -> Menu;
+  Dsk -> Block;
+  Dsk -> Image;
+  Dsk -> Dblog;
+  Dsk -> List;
+  Dsk -> Number;
+  Dsk -> Shortcut;
+  Dsk -> Help;
+  Dsk -> Overlay;
+  Dsk -> Search;
+  Dsk -> Color;
+  Dsk -> File;
+  Dsk -> Path;
+  Dsk -> Rdf;
+  Dsk -> Taxonomy;
+  Dsk -> Comment;
+  Dsk -> Dashboard;
+  Dsk -> Options;
+}
+Flag_weights {
+  Flag_weights -> Flag;
+}
+Drupal_commerce_3d_secure_support {
+  Drupal_commerce_3d_secure_support -> Commerce_payment;
+  Drupal_commerce_3d_secure_support -> Commerce;
+  Drupal_commerce_3d_secure_support -> Commerce_order;
+}
+Mediaelement_js {
+  Mediaelement_js -> Libraries;
+}
+Isbn2node {
+  Isbn2node -> Image;
+}
+Webform_encrypt {
+  Webform_encrypt -> Webform;
+  Webform_encrypt -> Aes;
+}
+Subscription {
+  Subscription -> Role_reference;
+  Subscription -> Number;
+  Subscription -> Date;
+  Subscription -> Commerce;
+}
+Tcontact {
+  Tcontact -> Locale;
+  Tcontact -> Contact;
+}
+Session_limit {
+  Session_limit -> Trigger;
+}
+Ical_parser {
+  Ical_parser -> Feeds;
+  Ical_parser -> Date_api;
+}
+Taxonomy_replace {
+  Taxonomy_replace -> Taxonomy;
+}
+Search_lucene_api {
+  Search_lucene_api -> Search;
+  Search_lucene_api -> Ctools;
+}
+Webform_rules {
+  Webform_rules -> Webform;
+  Webform_rules -> Rules;
+}
+Linkit_views {
+  Linkit_views -> Views;
+  Linkit_views -> Linkit;
+}
+Piecemaker {
+  Piecemaker -> Libraries;
+}
+Username_available_ajax_check {
+  Username_available_ajax_check -> User;
+}
+Flexi_access {
+  Flexi_access -> Acl;
+}
+Draggableviews {
+  Draggableviews -> Views;
+}
+Form_builder {
+  Form_builder -> Options_element;
+}
+Kcfinder_integration {
+  Kcfinder_integration -> Wysiwyg;
+}
+Common_functionality {
+  Common_functionality -> Cf_error;
+}
+Workbench {
+  Workbench -> Views;
+}
+Search_by_page_attachments {
+  Search_by_page_attachments -> Search_files;
+  Search_by_page_attachments -> Search_by_page;
+  Search_by_page_attachments -> File;
+}
+Amazon_store {
+  Amazon_store -> Amazon;
+}
+Image_media_translation {
+  Image_media_translation -> Locale;
+}
+Feeds_tamper {
+  Feeds_tamper -> Feeds;
+}
+Contact_forms {
+  Contact_forms -> Contact;
+}
+Feeds_crawler {
+  Feeds_crawler -> Feeds;
+}
+First_data {
+  First_data -> Commerce_payment;
+  First_data -> Commerce_customer;
+  First_data -> Commerce_ui;
+  First_data -> Commerce;
+  First_data -> Commerce_order;
+}
+Semantic_views {
+  Semantic_views -> Views;
+}
+Deny_access {
+  Deny_access -> Node;
+}
+Vcard {
+  Vcard -> Profile;
+}
+Imce_crop {
+  Imce_crop -> Imce;
+}
+Get_node_image {
+  Get_node_image -> Field;
+  Get_node_image -> Image;
+}
+Views_system {
+  Views_system -> Views;
+}
+Features_plumber {
+  Features_plumber -> Features;
+  Features_plumber -> Ctools;
+}
+Userpoints_nodeaccess {
+  Userpoints_nodeaccess -> Userpoints;
+}
+Pathauto_persistant_state {
+  Pathauto_persistant_state -> Pathauto;
+}
+Name_db {
+  Name_db -> Name;
+}
+Menu_item_containers {
+  Menu_item_containers -> Menu;
+}
+Views_oai_pmh {
+  Views_oai_pmh -> Views;
+}
+Nat {
+  Nat -> Taxonomy;
+}
+Debut_comment {
+  Debut_comment -> Logintoboggan;
+  Debut_comment -> Features;
+  Debut_comment -> Context;
+  Debut_comment -> Strongarm;
+  Debut_comment -> Captcha;
+  Debut_comment -> Comment_notify;
+}
+Extended_paypal_famework {
+  Extended_paypal_famework -> Simple_paypal;
+}
+Bookmark_organizer {
+  Bookmark_organizer -> Flag;
+}
+Comment_subjects {
+  Comment_subjects -> Comment;
+}
+Tumblr_connect {
+  Tumblr_connect -> Simplehtmldom;
+}
+Drupal_commerce_extra_panes {
+  Drupal_commerce_extra_panes -> Commerce_checkout;
+  Drupal_commerce_extra_panes -> Ctools;
+}
+Stock {
+  Stock -> Stockapi;
+}
+Translation_helpers {
+  Translation_helpers -> Translation;
+}
+Bean {
+  Bean -> Entity;
+  Bean -> Ctools;
+}
+Debut_image {
+  Debut_image -> Text;
+  Debut_image -> Views;
+  Debut_image -> Helpinjector;
+  Debut_image -> Features;
+  Debut_image -> Context;
+  Debut_image -> Strongarm;
+  Debut_image -> Image;
+  Debut_image -> Ctools;
+}
+Opensearch_feed {
+  Opensearch_feed -> Search;
+  Opensearch_feed -> Vars_2_x_;
+}
+Checkout_redirect {
+  Checkout_redirect -> Commerce;
+}
+Product_attributes {
+  Product_attributes -> Commerce;
+}
+Workbench_access {
+  Workbench_access -> Taxonomy;
+}
+Commerce_sermepa_payment_method {
+  Commerce_sermepa_payment_method -> Commerce_payment;
+  Commerce_sermepa_payment_method -> Commerce;
+}
+Html5_tools {
+  Html5_tools -> Field;
+  Html5_tools -> Elements;
+}
+Book_access {
+  Book_access -> Vars_2_x_;
+  Book_access -> Book;
+}
+Flag_pages {
+  Flag_pages -> Flag;
+}
+Drupal_firewall {
+  Drupal_firewall -> Menu;
+}
+Language_cookie {
+  Language_cookie -> Locale;
+}
+Block_context {
+  Block_context -> Block;
+}
+Commerce_bank_transfer {
+  Commerce_bank_transfer -> Commerce_payment;
+  Commerce_bank_transfer -> Commerce_ui;
+  Commerce_bank_transfer -> Commerce;
+  Commerce_bank_transfer -> Commerce_order;
+}
+Services {
+  Services -> Ctools;
+}
+Filefield_paths {
+  Filefield_paths -> Token;
+}
+Postfinance_e_payment {
+  Postfinance_e_payment -> Commerce_payment;
+  Postfinance_e_payment -> Commerce_ui;
+  Postfinance_e_payment -> Commerce;
+  Postfinance_e_payment -> Commerce_order;
+}
+Piwik_reports {
+  Piwik_reports -> Piwik;
+}
+Webform2sugar {
+  Webform2sugar -> Webform;
+}
+Drupal_wrappers {
+  Drupal_wrappers -> Bad_judgement;
+}
+Taxonomy_title {
+  Taxonomy_title -> Taxonomy;
+}
+Block_api {
+  Block_api -> Block;
+}
+Term_relations {
+  Term_relations -> Taxonomy;
+}
+Content_translation {
+  Content_translation -> Locale;
+}
+Invoice {
+  Invoice -> Rules;
+  Invoice -> Commerce_order;
+}
+Internal_links {
+  Internal_links -> Filter;
+}
+Flickr_rippr {
+  Flickr_rippr -> Flickrapi;
+}
+Semantic_fields {
+  Semantic_fields -> Field;
+  Semantic_fields -> Field_ui;
+}
+Allow_all_file_extensions {
+  Allow_all_file_extensions -> File;
+}
+Weather {
+  Weather -> Block;
+}
+Gallery_formatter {
+  Gallery_formatter -> File;
+  Gallery_formatter -> Image;
+}
+Menu_ux {
+  Menu_ux -> Menu;
+}
+Facet_api {
+  Facet_api -> Ctools;
+}
+Booktree {
+  Booktree -> Book;
+}
+Context_ssl {
+  Context_ssl -> Context;
+}
+Mass_messaging {
+  Mass_messaging -> Views;
+}
+Taxonomy_dupecheck {
+  Taxonomy_dupecheck -> Taxonomy;
+}
+Geofield {
+  Geofield -> Libraries;
+}
+Po_re_importer {
+  Po_re_importer -> Locale;
+}
+Affiliate_ng {
+  Affiliate_ng -> Entity;
+}
+Geolocation_proximity_filter {
+  Geolocation_proximity_filter -> Geolocation;
+  Geolocation_proximity_filter -> Views;
+}
+Comment_access {
+  Comment_access -> Comment;
+}
+Debut_article {
+  Debut_article -> Views;
+  Debut_article -> Features;
+  Debut_article -> Context;
+  Debut_article -> Strongarm;
+  Debut_article -> Image;
+  Debut_article -> Captcha;
+  Debut_article -> Taxonomy;
+  Debut_article -> Media;
+}
+Multi_index_searches {
+  Multi_index_searches -> Search_api;
+}
+Process_api {
+  Process_api -> Entity;
+}
+Faq_ask {
+  Faq_ask -> Faq;
+}
+Closed_question {
+  Closed_question -> Libraries;
+}
+Related_block {
+  Related_block -> Search;
+}
+Google_closure_library {
+  Google_closure_library -> Libraries;
+}
+Devel_demo {
+  Devel_demo -> Devel;
+}
+Text_mining_api {
+  Text_mining_api -> Process_api;
+}
+Date_repeat_presets {
+  Date_repeat_presets -> Date_repeat;
+}
+Domain_views {
+  Domain_views -> Views;
+  Domain_views -> Domain;
+}
+Cybersource {
+  Cybersource -> Commerce_payment;
+  Cybersource -> Commerce_ui;
+  Cybersource -> Commerce;
+  Cybersource -> Commerce_order;
+}
+Amazon_ses {
+  Amazon_ses -> Creeper;
+}
+Apc_queue {
+  Apc_queue -> Keyvaluequeue;
+}
+Dummy_content {
+  Dummy_content -> Tableform;
+}
+Menu_node_api {
+  Menu_node_api -> Menu;
+}
+Peek_summary {
+  Peek_summary -> Views;
+}
+Imagecache_actions {
+  Imagecache_actions -> Image;
+}
+Maestro {
+  Maestro -> Trigger;
+}
+Delivery {
+  Delivery -> Views;
+  Delivery -> Entity;
+  Delivery -> Commerce_product;
+  Delivery -> Rules;
+  Delivery -> Commerce_line_item;
+  Delivery -> Commerce;
+  Delivery -> Commerce_order;
+}
+Myhook {
+  Myhook -> Myhookadmin;
+}
+Amazon_mechanical_turk_integration {
+  Amazon_mechanical_turk_integration -> Async_command;
+  Amazon_mechanical_turk_integration -> Encset;
+}
+Recurly {
+  Recurly -> Libraries;
+}
+Khaaaaaaan {
+  Khaaaaaaan -> Bad_judgement;
+}
+Datasources {
+  Datasources -> Entity;
+  Datasources -> Udid;
+}
+Addthis {
+  Addthis -> Field;
+}
+Recurring_payments_api {
+  Recurring_payments_api -> Uc_cart;
+}

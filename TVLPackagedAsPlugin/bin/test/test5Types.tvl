@@ -1,0 +1,18 @@
+struct cSize {
+	real width;
+	real height;
+	real length;
+	ghostType test;	
+}
+root Computer {
+	 group oneof {
+	 	Acer,
+	 	Apple,
+	 	Asus,
+	 	Dell,
+	 	HP,
+	 	Medion,
+	 	Sony
+	 }
+	 
+} 
