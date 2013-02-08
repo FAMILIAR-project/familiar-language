@@ -1,0 +1,40 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Oct 9, 2009 - 4:09 AM  --> 
+<feature_model name="Inventory"> 
+<meta> 
+<data name="description">Inventory Control Systems</data> 
+<data name="creator">Melvin Perez-Cedano</data> 
+<data name="address"></data> 
+<data name="email">melperez@mail.rit.edu</data> 
+<data name="phone"></data> 
+<data name="website"></data> 
+<data name="organization">Rochester Institute of Technology</data> 
+<data name="department">Golisano College of Computing and Information Sciences</data> 
+<data name="date">04/30/2009</data> 
+<data name="reference"></data> 
+</meta> 
+<feature_tree>
+:r Inventory(_r)
+	:m Items(_r_1)
+		:g (_r_1_2) [1,*] 
+			: Sales Items(_r_1_2_3)
+				:m Costing(_r_1_2_3_7)
+				:o Perishables(_r_1_2_3_8)
+					:o Expiration Control(_r_1_2_3_8_10)
+				:o Serialized(_r_1_2_3_9)
+					:o Renting(_r_1_2_3_9_11)
+					:o Warranty(_r_1_2_3_9_19)
+			: Office Supplies(_r_1_2_4)
+				:m Control and Management(_r_1_2_4_12)
+			: Raw Materials(_r_1_2_5)
+				:m Bills of Materials(_r_1_2_5_13)
+	:m Transactions(_r_6)
+		:m Entry(_r_6_14)
+		:m Deduction(_r_6_15)
+		:o Transfer(_r_6_16)
+		:o Reservation(_r_6_17)
+		:o Assembling(_r_6_18)
+</feature_tree> 
+<constraints> 
+constraint_1:~_r_1_2_5 or _r_6_18
+</constraints> 
+</feature_model> 

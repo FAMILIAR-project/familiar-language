@@ -1,0 +1,36 @@
+<feature_model name="Test model">
+<meta>
+<data name="description">Feature model for JUnit tests</data>
+<data name="creator">Marcilio Mendonca</data>
+<data name="email">marcilio.mendonca@gmail.com</data>
+<data name="date">August, 2009</data>
+<data name="department"></data>
+<data name="organization"></data>
+<data name="address"></data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r r (r)
+	:m a (a)
+		:g [1,*]
+			: g_a1 (g_a1)
+			: g_a2 (g_a2)
+		:m a3 (a3)
+		:o a4 (a4)
+	:o b (b)
+		:g [1,1]
+			: b1 (b1)
+			: b2 (b2)
+	:o c (c)
+		:o c1 (c1)
+		:m c2 (c2)
+</feature_tree>
+<constraints>
+c1: ~r or b
+c2: ~a or b1
+c3: b2 or ~r
+</constraints>
+</feature_model>
+

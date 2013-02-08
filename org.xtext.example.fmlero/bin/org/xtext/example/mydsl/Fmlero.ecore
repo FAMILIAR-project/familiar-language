@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="fmprimitives" nsURI="http://lero.ie/spl/fmprimitives.ecore"
+    nsPrefix="fmprimitives">
+  <eClassifiers xsi:type="ecore:EClass" name="FeatureModel">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
+        eType="#//Feature" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="primitives" upperBound="-1"
+        eType="#//FeatureModelPrimitive" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FeatureModelPrimitive">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="configurationSource" eType="#//ConfigurationSource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="explanations" unique="false"
+        upperBound="-1" eType="#//Explanation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FeatureHasSubfeature" eSuperTypes="#//FeatureModelPrimitive">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//Feature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="subfeature" eType="#//Feature"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UndirectedRelationship"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DirectedRelationship"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FeatureGroup"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Feature">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="groupHasParent" unique="false"
+        upperBound="-1" eType="#//GroupHasParent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="groupHasChild" unique="false"
+        upperBound="-1" eType="#//GroupHasChild"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="featureHasParent" eType="#//FeatureHasSubfeature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="featureHasSubfeature" unique="false"
+        upperBound="-1" eType="#//FeatureHasSubfeature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="selectedFeature" unique="false"
+        upperBound="-1" eType="#//SelectedFeature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="eliminatedFeature" unique="false"
+        upperBound="-1" eType="#//EliminatedFeature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="undirectedRelationships"
+        unique="false" upperBound="-1" eType="#//UndirectedRelationship"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="incomingDirectedRelationships"
+        unique="false" upperBound="-1" eType="#//DirectedRelationship"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="outgoingDirectedRelationships"
+        unique="false" upperBound="-1" eType="#//DirectedRelationship"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="featureIsRoot" eType="#//FeatureIsRoot"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GroupHasParent" eSuperTypes="#//FeatureModelPrimitive">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" eType="#//Feature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="group" eType="#//FeatureGroup"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GroupHasChild" eSuperTypes="#//FeatureModelPrimitive">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="child" eType="#//Feature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="group" eType="#//FeatureGroup"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SelectedFeature" eSuperTypes="#//FeatureModelPrimitive">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="feature" eType="#//Feature"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="EliminatedFeature" eSuperTypes="#//FeatureModelPrimitive">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="feature" eType="#//Feature"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FeatureIsRoot" eSuperTypes="#//FeatureModelPrimitive">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="feature" eType="#//Feature"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Explanation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="primitives" unique="false"
+        upperBound="-1" eType="#//FeatureModelPrimitive"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ConfigurationSource">
+    <eLiterals name="MODEL" literal="MODEL"/>
+    <eLiterals name="MODELCONSEQUENCE" value="1" literal="MODELCONSEQUENCE"/>
+    <eLiterals name="USER" value="2" literal="USER"/>
+    <eLiterals name="USERCONSEQUENCE" value="3" literal="USERCONSEQUENCE"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GroupHasMax" eSuperTypes="#//FeatureModelPrimitive">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="max" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="group" eType="#//FeatureGroup"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GroupHasMin" eSuperTypes="#//FeatureModelPrimitive">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="min" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="group" eType="#//FeatureGroup"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AlternativeGroup" eSuperTypes="#//FeatureModelPrimitive #//FeatureGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="groupHasParent" eType="#//GroupHasParent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="groupHasChild" unique="false"
+        upperBound="-1" eType="#//GroupHasChild"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="groupHasMax" eType="#//GroupHasMax"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="groupHasMin" eType="#//GroupHasMin"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OrGroup" eSuperTypes="#//FeatureModelPrimitive #//FeatureGroup">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="groupHasParent" eType="#//GroupHasParent"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="groupHasChild" unique="false"
+        upperBound="-1" eType="#//GroupHasChild"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="groupHasMax" eType="#//GroupHasMax"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="groupHasMin" eType="#//GroupHasMin"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FeatureHasOptionalSubfeature" eSuperTypes="#//FeatureModelPrimitive #//FeatureHasSubfeature"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FeatureHasMandatorySubfeature" eSuperTypes="#//FeatureModelPrimitive #//FeatureHasSubfeature"/>
+  <eClassifiers xsi:type="ecore:EClass" name="MutualExclusive" eSuperTypes="#//FeatureModelPrimitive #//UndirectedRelationship">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relatedFeatures" unique="false"
+        upperBound="-1" eType="#//Feature"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CustomUndirectedRelationship" eSuperTypes="#//FeatureModelPrimitive #//UndirectedRelationship">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stereotype" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="relatedFeatures" unique="false"
+        upperBound="-1" eType="#//Feature"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Requires" eSuperTypes="#//FeatureModelPrimitive #//DirectedRelationship">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sources" unique="false"
+        upperBound="-1" eType="#//Feature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targets" unique="false"
+        upperBound="-1" eType="#//Feature"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TemporalOrderingSequential" eSuperTypes="#//FeatureModelPrimitive #//DirectedRelationship">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sources" unique="false"
+        upperBound="-1" eType="#//Feature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targets" unique="false"
+        upperBound="-1" eType="#//Feature"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CustomDirectedRelationship" eSuperTypes="#//FeatureModelPrimitive #//DirectedRelationship">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="stereotype" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sources" unique="false"
+        upperBound="-1" eType="#//Feature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="targets" unique="false"
+        upperBound="-1" eType="#//Feature"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="AutoComplete" eSuperTypes="#//FeatureModelPrimitive"/>
+</ecore:EPackage>

@@ -1,0 +1,29 @@
+<feature_model name="Trek Road Bikes">
+<meta>
+<data name="description">This feature models describes the features of a simple bike</data>
+<data name="creator">Marcilio Mendonca</data>
+<data name="email">marcilio.mendonca@gmail.com</data>
+<data name="date">July, 2009</data>
+<data name="department"></data>
+<data name="organization"></data>
+<data name="address"></data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Bike (bike)
+	:m frame (frame)
+		:g [1,1]
+			: aluminium (_frame_aluminium)
+			: carbon (_frame_carbon)
+	:o pedal (pedal)
+		:g [1,1]
+			: pedal A (_pedal_pedala)
+			: pedal B (_pedal_pedalb)
+</feature_tree>
+<constraints>
+c1: ~_pedal_pedalb or _frame_carbon
+</constraints>
+</feature_model>
+
