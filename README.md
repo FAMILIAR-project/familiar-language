@@ -7,8 +7,8 @@ The repo is currently "private" for two reasons:
  * we still have to fix the License (GPL, LGPL or EPL) and the GPL licence of FeatureIDE is a kind of problem at the moment 
  * we can easily have experimental, research-oriented and non visible branches (but I guess we can manage this with a public repo)
 
-How to?
-========
+## How to?
+
 
 You need Eclipse: 
  * with Xtext 2.3.1 (Eclipse 4.2 with the last version of Xtext is currently used for instance)
@@ -43,3 +43,67 @@ For installing FeatureIDE checkout the following projects, using the SVN server:
 Note that we are currently using revision #2074
 Important final step: 
 => expose all packages of de.ovgu.featureide.ui and de.ovgu.featureide.fm.ui (in the two projects there are META-INF/MANIFEST.MF)
+
+### Testing the installation
+
+To check your installation, execute the JUnit tests in '''/src/fr/unice/polytech/modalis/familiar/test''' and '''/src/fr/unice/polytech/modalis/familiar/test/featureide'''
+with the the VM argument '''-Xmx1024M'''.
+You should have around 7 errors, 11 failures, 61 ignored (in total) out of 800+ tests
+
+
+### Exporting an Executable Jar
+
+If you want to export FAMILIAR as a standalone application (i.e., as an executable JAR): 
+ * execute FML (package fr.unice.polytech.modalis.familiar.standalone;) which contains a main method ; 
+ * right click on FAMILIAR project, select "Export..." and then "Runnable JAR file..."
+ * please select "Package required..." and in Launch Configuration "FAMILIAR - FML" (you can also select "FAMILIAR - FamiliarEditor" for the version with the comprehensive environment)
+  
+### Hello World (API)
+
+As a developer of FAMILIAR or API user, you certainly want to know how to load feature models and reuse facilities offered by FAMILIAR. 
+Here is an "Hello World" in the form of a JUnit test that demonstrates the API in action
+
+
+
+	package fr.unice.polytech.modalis.familiar.test;
+	import static org.junit.Assert.assertEquals;
+	import java.util.Collection;
+	import org.junit.Test;
+	import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
+	import fr.unice.polytech.modalis.familiar.variable.SetVariable;
+	import gsd.graph.ImplicationGraph;
+	import gsd.graph.SimpleEdge;
+	/**
+	* @author macher1
+	*
+	*/
+	public class HelloWorldTest extends FMLTest {
+	  
+	  @Test
+	  public void test1() throws Exception {
+	  	
+	    FeatureModelVariable fm1 = FM("fm1", "A : B [C] ; ");
+	    		
+	    SetVariable cores1 = (SetVariable) _shell.parse("cores fm1");
+	    System.err.println("cores1=" + cores1.names());
+	    assertEquals(2, cores1.size());
+	    ImplicationGraph<String> big1 = fm1.computeImplicationGraph() ;
+	    Collection<SimpleEdge> e1 = big1.edges() ;
+	    for (SimpleEdge e : e1) {
+	      	System.err.println("" + big1.getEdgeSource(e) + " => " + big1.getEdgeTarget(e));
+	    }
+	  	    		
+	  }
+	
+	}
+
+
+The test passes and it will print the core features and the implicaiton graph of the feature model:
+
+	cores1=[A, B]
+	C => A
+	B => A
+	C => B
+	A => B
+
+
