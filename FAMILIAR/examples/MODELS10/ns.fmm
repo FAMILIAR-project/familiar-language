@@ -1,0 +1,10 @@
+children gc1.DirectX // explicit notation needed: DirectX exists also in gc2 and gc3
+gc2.GraphicalCard // explicit notation needed: GraphicalCard exists also in gc1 and gc3
+parent v11 // non ambigous: equivalent to gc3.v11 
+
+/*
+\begin{Verbatim}[commandchars=@\[\],numbers=left,firstnumber=1,stepnumber=1]
+print children gc1.DirectX gc2.GraphicalCard
+print parent v11 gc3.v11
+\end{Verbatim}
+*/

@@ -1,0 +1,32 @@
+fm0 = FM (A : B C D; )
+nfm0 = counting fm0 
+nfm0Expected = 1
+assert (nfm0 eq nfm0Expected) 
+
+fm1 = FM (A: (B|C|D|E) ; )
+nfm1 = counting fm1
+chA = children fm1.A 
+nfm1Expected = size chA
+assert (nfm1 eq nfm1Expected) 
+
+fm2 = FM (A : G [B] [C] [D]; ) 
+nfm2 = counting fm2 
+nfm2Expected = 8 // 2 ^ 3
+
+assert (nfm2 eq nfm2Expected) 
+
+fm3 = FM (A : [B] [C] [D] I; I : (J|K|L); )
+nfm3 = counting fm3
+nfm3Expected = 24 // (2 ^ 3) * 3
+
+assert (nfm3 eq nfm3Expected)
+
+fm4 = FM (A: B C ; B : (D|E); !C -> !D; !C -> !E; ) // not valid
+
+validfm4 = isValid fm4
+nfm4 = counting fm4
+FALSE = false
+ZERO = 0
+assert (validfm4 eq FALSE)
+assert (nfm4 eq ZERO) 
+// ...

@@ -1,0 +1,8 @@
+graph G {
+  ConferencePapers;
+  EventsPreference;
+  0;
+  1;
+  ConferencePapers -- 1;
+  EventsPreference -- 1;
+}

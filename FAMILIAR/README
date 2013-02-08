@@ -1,0 +1,113 @@
+This file is no longer maintained. 
+
+See https://nyx.unice.fr/projects/familiar/wiki/readme
+
+How to install FAMILIAR?
+
+We provide two products: 
+  * the former is a plugin for the Eclipse platform ;
+  * the latter is a Java standalone version that can be executed through a JAR file. 
+
+The Eclipse plugin requires Java 1.6 and Eclipse Helios (>= 3.6) with Xtext 1.0 
+The easiest way is to get it from http://xtext.itemis.com/xtext/language=en/23947/downloads
+
+All dependent Eclipse projects or libraries (FeatureIDE, JavaBDD) are included 
+either in the standalone version or in the Eclipse plugin version. 
+You do not need FeatureIDE. 
+Note that it is not possible to use an existing version of FeatureIDE since we have made some changes to the FeatureIDE code. 
+
+
+Installing the Eclipse plugin via the update site-method:
+	- Open eclipse.
+	- Go to Help -> Install new software then click on "Add" button.
+	- A dialog frame will be shown with tow fields
+		The first is for the name.
+		The second one is for the URL of the plugin. Paste the following link "http://www.i3s.unice.fr/~acher/familiar/update/" and validate
+	- Select "FAMILIAR" in the new frame and click on "Next" and click again on "Next" if there is no dependence error is reported.
+	- Click on "Finish" and restart your Eclipse. Your plugin should now be available.
+	
+Hint for MacOS users:
+Select the cocoa-x86_64 version of Eclipse (there are some issues with SWT related to some MacOS versions)
+
+
+**** Starting with the Eclipse Plugin (highly recommended to read) *****
+
+Once you have installed FAMILIAR in the Eclipse environment, you should have an Eclipse menu called FAMILIAR. 
+At this step, I suggest not to use the entry "Top Level" but to create a new Eclipse project, with a new file called foo.fml 
+("fml" is the extension supported by FAMILIAR). You can edit your FAMILIAR file with the FAMILIAR editor. 
+Let say you write something like:
+
+// foo.fml
+fm1 = FM (A : B C [D]; D -> C; )
+fm2 = FM (W : [X] Y Z; X <-> Y ; )
+fm3 = FM (R : S [T] U; !U -> !S; ) 
+
+Then, I suggest you activate the FAMILIAR environment view and the FAMILIAR Trace view. (Window -> Show View -> Other) before executing any FAMILIAR file.
+At this step, right click on foo.fml and "Run as FAMILIAR script" executes the script foo.fml. 
+
+Some variables should appear in the FAMILIAR environment view. 
+You can double click on variables to obtain a visual representation (using FeatureIDE editors). 
+You also have an access to the top level. Type ls for instance to display the list of variables. 
+Or simply fm1. Or new commands like renameFeature fm1.A as "AAA" 
+
+
+**** Starting with the Standalone version ****
+
+The standalone version is simply a JAR file.
+
+Available here: http://www.i3s.unice.fr/~acher/familiar/FML-0.9.0.jar
+
+> java -Xmx1024M -jar FML-0.9.1.jar --help
+
+Usage: java FML
+                [-v|--verbose] [-h|--help] [--version] [(-p|--path)[:paths1,paths2,...,pathsN ]] [(-o|--output) <output>] [<filename>]
+
+  [-v|--verbose]
+        Requests verbose output.
+
+  [-h|--help]
+        Help.
+
+  [--version]
+        Version of FAMILIAR
+
+  [(-p|--path)[:paths1,paths2,...,pathsN ]]
+        Paths to consider (FAMILIAR files should be located in those paths)
+
+  [(-o|--output) <output>]
+        Output folder where FAMILIAR files are produced.
+
+  [<filename>]
+        FAMILIAR file to interpret.
+        
+(Options -p and -o are not longer active at the moment)
+
+Here is an example session:
+
+macbook-pro-de-mathieu-acher-2:Documents mathieuacher$ java -Xmx1024M -jar FML-0.9.1.jar workspaceScala/FAMILIAR/examples/testing/FMs/fm0.fml 
+FAMILIAR (for FeAture Model scrIpt Language for manIpulation and Automatic Reasoning)  version 0.9.0 (beta)
+University of Nice Sophia Antipolis, UMR CNRS 6070, I3S Laboratory
+https://nyx.unice.fr/projects/familiar/
+fml> ls
+(FEATURE_MODEL, completeName: fm1, ns:) fm1 = A: D? B C ; (D -> C);
+(FEATURE_MODEL, completeName: fm3, ns:) fm3 = R: S T? U ; (!U -> !S);
+(FEATURE_MODEL, completeName: fm2, ns:) fm2 = W: X? Y Z ; (X <-> Y);
+fml> fm1
+fm1: (FEATURE_MODEL) A: D? B C ; (D -> C);
+fml> renameFeature fm1.A as "AAA"
+res0: (BOOLEAN) true
+fml> fm1
+fm1: (FEATURE_MODEL) AAA: D? B C ; (D -> C);
+fml> c1 = configuration fm1
+c1: (CONFIGURATION) selected: [AAA, B, C] 	 deselected: []
+fml> c1
+c1: (CONFIGURATION) selected: [AAA, B, C] 	 deselected: []
+fml> autoSelect c1 MAX
+res1: (BOOLEAN) true
+fml> c1
+c1: (CONFIGURATION) selected: [D, AAA, B, C] 	 deselected: []
+fml> c2 = configuration fm1
+c2: (CONFIGURATION) selected: [AAA, B, C] 	 deselected: []
+
+
+

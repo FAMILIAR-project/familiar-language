@@ -1,0 +1,35 @@
+digraph res1 {
+graph [rankdir=TB];
+node [shape=box];
+edge [arrowhead=normal];
+102[label="PET",]
+103[label="Nifti",]
+104[label="FormatName",]
+105[label="MetaDataSupport",]
+106[label="T2",]
+107[label="MRI",]
+108[label="MedicalImage",]
+109[label="AnonymizedSupport",]
+110[label="ModalityAcquisition",]
+112[label="CT",]
+113[label="Analyze",]
+115[label="Format",]
+107->106[arrowhead=dot];
+117[label="XOR",shape="triangle",width=0.3]
+104->117[arrowhead=none];
+117->103[arrowhead=none];
+117->113[arrowhead=none];
+118[label="",]
+110->118[arrowhead=none];
+118->107[arrowhead=none];
+108->110[arrowhead=dot];
+115->105[arrowhead=odot];
+115->104[arrowhead=dot];
+119[label="XOR",shape="triangle",width=0.3]
+110->119[arrowhead=none];
+119->102[arrowhead=none];
+119->112[arrowhead=none];
+119->107[arrowhead=none];
+105->109[arrowhead=odot];
+108->115[arrowhead=dot];
+}

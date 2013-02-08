@@ -1,0 +1,5 @@
+// newlaptop.fmm: a new laptop family 
+
+//laptop = FM ( Laptop: Motherboard Processor Chipset [Wifi] [GraphicCard] ; GraphicCard: Speed DirectX Bus [Multi] ; Speed: (n800|n1200); Bus: (n128|n64) ; DirectX: v10 ; )
+laptop = FM ( Laptop: Motherboard Processor Chipset [Wifi] [GraphicCard] ; GraphicCard: Speed DirectX Bus [Multi] ; Speed: n800; Bus: n128 ; DirectX: v10 ; )
+//export laptop

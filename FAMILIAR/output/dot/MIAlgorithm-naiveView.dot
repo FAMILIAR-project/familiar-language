@@ -1,0 +1,40 @@
+digraph fmNaiveViewMIAlgorithm {
+graph [rankdir=TB];
+node [shape=box];
+edge [arrowhead=normal];
+172[label="Affine",]
+173[label="Model",]
+174[label="Method",]
+175[label="EMS",]
+176[label="Scaling",]
+177[label="MIAlgorithm",]
+178[label="PAM",]
+180[label="NonGrid",]
+181[label="Atlas",]
+182[label="CFL",]
+183[label="BAM",]
+184[label="Linear",]
+185[label="Rotation",]
+186[label="Interactive",]
+189[label="XOR",shape="triangle",width=0.3]
+181->189[arrowhead=none];
+189->182[arrowhead=none];
+189->175[arrowhead=none];
+177->186[arrowhead=odot];
+190[label="XOR",shape="triangle",width=0.3]
+173->190[arrowhead=none];
+190->178[arrowhead=none];
+190->183[arrowhead=none];
+177->174[arrowhead=dot];
+191[label="XOR",shape="triangle",width=0.3]
+174->191[arrowhead=none];
+191->173[arrowhead=none];
+191->180[arrowhead=none];
+191->181[arrowhead=none];
+191->184[arrowhead=none];
+192[label="XOR",shape="triangle",width=0.3]
+184->192[arrowhead=none];
+192->172[arrowhead=none];
+192->176[arrowhead=none];
+192->185[arrowhead=none];
+}

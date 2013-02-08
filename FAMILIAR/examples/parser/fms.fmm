@@ -1,0 +1,6 @@
+// Collection of FMs
+fm2 = FM ( A: B C? D Z; D: (E|F); )
+fm3 = FM ( A: B C? D; D: (E|F); C: (H|I)+; I: K? L; )
+fm4 = FM ( A: B? C? D; D: (E|F)+; C: (H|I); I: K? L M; )
+fm5 = FM ( A: B C D?; D: (E|F)+; C: (H|I); I: K? L? M?; )
+ls

@@ -1,0 +1,12 @@
+fmTarget = FM (A : B C [D]; D: (E|F); C: (I|J); )
+ft = "D" 
+fmD = FM (D : F?;) 
+//fmD2root = root fmD
+//assert (ft eq fmD2root)
+fmAA = copy fmA
+//fmAA = remove_feature fmAA::B
+run "replaceSubTree" fmA ft fmD into repl
+//run "replaceAuto" fmAA fmD into replauto
+
+
+exit

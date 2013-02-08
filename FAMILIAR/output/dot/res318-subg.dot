@@ -1,0 +1,25 @@
+graph G {
+  congress_mngt;
+  james;
+  forum;
+  user_mngt;
+  gui;
+  ws_interface;
+  0;
+  db;
+  1;
+  ws_interface -- james;
+  db -- user_mngt;
+  user_mngt -- james;
+  james -- 1;
+  gui -- james;
+  congress_mngt -- james;
+  congress_mngt -- 1;
+  forum -- james;
+  forum -- 1;
+  user_mngt -- 1;
+  gui -- 1;
+  ws_interface -- 1;
+  db -- james;
+  db -- 1;
+}

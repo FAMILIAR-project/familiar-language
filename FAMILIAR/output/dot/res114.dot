@@ -1,0 +1,34 @@
+digraph G {
+  WLAN;
+  Camera;
+  Bluetooth;
+  BasisFunctions;
+  UMTS;
+  EightMP;
+  MMS;
+  Extras;
+  MPThree;
+  ThreeMP;
+  VoiceCall;
+  SMS;
+  Cellphone;
+  0;
+  Communication;
+  1;
+  Message;
+  Extras -> Cellphone;
+  Communication -> Cellphone;
+  Camera -> Extras;
+  EightMP -> Camera;
+  UMTS -> Communication;
+  SMS -> Message;
+  MPThree -> Extras;
+  BasisFunctions -> Cellphone;
+  Cellphone -> 1;
+  VoiceCall -> BasisFunctions;
+  MMS -> Message;
+  WLAN -> Communication;
+  ThreeMP -> Camera;
+  Bluetooth -> Communication;
+  Message -> BasisFunctions;
+}

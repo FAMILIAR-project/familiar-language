@@ -1,0 +1,5 @@
+fm1 = FM (A : (B|C); B : D; C -> D ;)
+bf1 = isValid fm1
+c = configuration fm1
+nexpected = counting fm1
+s = configs fm1

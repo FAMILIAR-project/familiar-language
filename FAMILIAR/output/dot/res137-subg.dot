@@ -1,0 +1,28 @@
+graph G {
+  Camera;
+  Settings;
+  Bluetooth;
+  Calls;
+  Media;
+  JavaSupport;
+  MPThree;
+  OS;
+  Messaging;
+  0;
+  RingingTones;
+  1;
+  Camera -- Media;
+  OS -- Settings;
+  MPThree -- Media;
+  JavaSupport -- Settings;
+  Settings -- 1;
+  Media -- 1;
+  JavaSupport -- 1;
+  MPThree -- 1;
+  OS -- 1;
+  Messaging -- 1;
+  RingingTones -- 1;
+  Camera -- 1;
+  Bluetooth -- 1;
+  Calls -- 1;
+}

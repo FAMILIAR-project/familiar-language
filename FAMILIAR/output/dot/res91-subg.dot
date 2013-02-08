@@ -1,0 +1,25 @@
+graph G {
+  DestaqueDuplo;
+  Site;
+  DestaqueWide;
+  SemFoto;
+  Texto;
+  Menu;
+  EPortal;
+  0;
+  1;
+  SemFoto -- DestaqueWide;
+  Site -- EPortal;
+  Menu -- EPortal;
+  EPortal -- 1;
+  DestaqueDuplo -- EPortal;
+  Site -- 1;
+  DestaqueWide -- EPortal;
+  DestaqueWide -- 1;
+  SemFoto -- EPortal;
+  SemFoto -- 1;
+  Texto -- EPortal;
+  Texto -- 1;
+  Menu -- 1;
+  DestaqueDuplo -- 1;
+}

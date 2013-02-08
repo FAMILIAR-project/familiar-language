@@ -1,0 +1,2 @@
+run "Hartmann.fmm"
+mspl = merge sunion { supplierTwo supplierThree supplierOne }

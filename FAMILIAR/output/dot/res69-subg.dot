@@ -1,0 +1,8 @@
+graph G {
+  Payandbillsystem;
+  Input;
+  0;
+  1;
+  Input -- 1;
+  Payandbillsystem -- 1;
+}

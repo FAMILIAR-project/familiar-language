@@ -1,0 +1,26 @@
+digraph G {
+  wireless;
+  li_ion;
+  bluetooth;
+  color;
+  accu_cell;
+  display;
+  cellphone;
+  ni_mh;
+  ni_ca;
+  0;
+  infrared;
+  1;
+  monochrome;
+  bluetooth -> wireless;
+  wireless -> cellphone;
+  cellphone -> 1;
+  ni_ca -> accu_cell;
+  li_ion -> accu_cell;
+  color -> display;
+  infrared -> wireless;
+  ni_mh -> accu_cell;
+  accu_cell -> cellphone;
+  monochrome -> display;
+  display -> cellphone;
+}

@@ -1,0 +1,278 @@
+p cnf 94 183
+-91 49 0
+-49 91 0
+1 0
+-34 83 0
+-62 57 0
+-19 53 0
+-53 19 0
+-23 8 0
+-83 3 0
+-3 83 0
+-26 32 0
+-72 57 0
+-18 2 0
+-10 86 0
+-89 75 49 0
+-36 32 0
+-35 45 0
+-4 8 0
+-57 14 0
+-14 57 0
+-51 50 0
+-50 51 0
+-50 32 0
+-53 12 0
+-6 73 0
+-79 86 0
+-9 75 0
+-75 9 0
+-52 80 15 0
+-44 35 0
+-16 76 0
+-90 76 0
+-76 68 0
+-46 57 0
+-30 16 0
+-35 -73 0
+-49 89 0
+-20 77 0
+-77 20 0
+-37 81 0
+-94 36 0
+-36 94 0
+-87 32 0
+-76 92 0
+-10 2 0
+-10 90 0
+-79 2 0
+-67 19 0
+-41 83 0
+-11 16 0
+-63 71 0
+-10 94 0
+-8 74 0
+-14 74 0
+-85 61 0
+-81 83 0
+-23 61 0
+-61 23 0
+-55 57 0
+-25 2 0
+-56 59 0
+-40 64 0
+-39 68 0
+-64 71 0
+-25 19 0
+-72 66 0
+-45 35 73 0
+-48 83 0
+-85 68 0
+-8 17 23 4 60 43 0
+-24 3 0
+-3 24 0
+-83 41 82 34 7 48 81 0
+-65 74 0
+-92 10 0
+-10 92 0
+-86 12 0
+-15 76 0
+-76 15 0
+-54 57 0
+-74 28 0
+-28 74 0
+-27 81 0
+-29 81 0
+-81 29 0
+-10 79 0
+-58 48 0
+-48 58 0
+-75 -49 0
+-10 56 0
+-43 8 0
+-60 70 0
+-70 60 0
+-84 87 0
+-72 92 0
+-10 59 0
+-11 41 0
+-41 11 0
+-92 74 0
+-7 59 0
+-59 7 0
+-32 87 71 26 50 36 5 0
+-47 57 0
+-11 61 0
+-21 81 0
+-2 12 0
+-15 52 0
+-58 86 0
+-26 69 0
+-69 26 0
+-82 83 0
+-16 90 0
+-78 81 0
+-22 35 0
+-35 22 0
+-3 65 0
+-65 3 0
+-74 20 0
+-20 74 0
+-19 68 0
+-68 19 0
+-13 81 0
+-13 92 0
+-57 30 0
+-30 57 0
+-10 76 0
+-16 4 0
+-4 16 0
+-45 77 0
+-77 45 0
+-5 32 0
+-7 83 0
+-39 81 0
+-80 52 0
+-75 89 0
+-10 43 0
+-43 10 0
+-12 28 0
+-28 12 0
+-84 92 0
+-62 69 0
+-71 32 0
+-5 66 0
+-66 5 0
+-85 2 0
+-10 70 0
+-40 71 0
+-46 16 0
+-42 74 0
+-74 42 0
+-90 80 0
+-80 90 0
+-33 34 0
+-34 33 0
+-73 89 0
+-89 73 0
+-16 61 0
+-92 68 0
+-68 92 0
+-17 8 0
+-85 57 0
+-76 61 0
+-73 45 0
+-38 57 0
+-31 57 0
+-67 92 0
+-59 61 0
+-74 1 0
+-1 74 0
+-10 68 0
+-17 56 0
+-56 17 0
+-93 87 0
+-10 61 0
+-88 82 0
+-82 88 0
+-21 70 0
+-18 81 0
+-79 12 0
+-32 77 0
+-52 74 0
+-76 2 0
+-60 8 0
+c 1->BerkeleyDb
+c 3->Statistics
+c 2->featureINCompressor
+c 4->_featureTransaction
+c 6->featureDirectNIO
+c 5->_featureChecksum
+c 8->FConcurrency
+c 7->_featureStatisticsLock
+c 9->featureChunkedNIO
+c 10->featureLatch
+c 12->BTree
+c 11->featureStatisticsTransaction
+c 15->_featureDeleteDb
+c 14->FLogging
+c 13->featureStatisticsEnvCaching
+c 16->featureTransaction
+c 18->featureStatisticsEnvINCompressor
+c 17->_featureCheckLeaks
+c 20->FPersistency
+c 19->Evictor
+c 21->featureStatisticsEnvFSync
+c 23->_dummyFeatureLocking
+c 22->featureIO
+c 24->featureStatisticsBase
+c 26->_featureEnvironmentLock
+c 25->featureCriticalEviction
+c 28->FBtree
+c 27->featureStatisticsEnvCleaner
+c 30->featureLoggingBase
+c 29->featureStatisticsEnvBase
+c 32->FPersistencyFeatures
+c 31->featureLoggingFiner
+c 34->_featureStatisticsPreload
+c 33->featureStatisticsPreload
+c 35->IO
+c 36->_featureFileHandleCache
+c 37->featureStatisticsEnvCheckpointer
+c 39->featureStatisticsEnvEvictor
+c 38->featureLoggingDbLog
+c 41->_featureStatisticsTransaction
+c 40->featureCustomizableCheckpointerBytes
+c 44->featureSynchronizedIO
+c 43->_featureLatch
+c 42->BASE
+c 46->featureLoggingFinest
+c 45->FIOFeature
+c 47->featureLoggingFile
+c 48->_featureStatisticsDatabase
+c 50->_featureHandleFullDiscError
+c 49->NotChunked
+c 52->FDbOperation
+c 51->featureHandleFullDiscError
+c 53->FEvictor
+c 54->featureLoggingConsole
+c 55->featureLoggingConfig
+c 56->featureCheckLeaks
+c 57->Logging
+c 59->featureStatisticsLock
+c 58->featureStatisticsDatabase
+c 60->_featureFSync
+c 62->featureLoggingSevere
+c 61->dummyFeatureLocking
+c 63->featureCheckpointerDaemon
+c 64->featureCustomizableCheckpointerTime
+c 66->featureChecksum
+c 65->FStatistics
+c 67->featureEvictorDaemon
+c 68->featureEvictor
+c 70->featureFSync
+c 69->featureEnvironmentLock
+c 72->featureLoggingInfo
+c 71->Checkpointer
+c 73->NIO
+c 74->BerkeleyDB
+c 76->featureDeleteDb
+c 75->Chunked
+c 77->Persistency
+c 78->featureStatisticsEnvLog
+c 79->featureVerifier
+c 80->_featureTruncateDb
+c 81->EnvStats
+c 83->FStatisticsFeatures
+c 82->_featureStatisticsSequence
+c 85->featureLoggingFine
+c 84->featureLookAheadCache
+c 87->Cleaner
+c 86->featureTreeVisitor
+c 90->featureTruncateDb
+c 89->FNIOType
+c 88->featureStatisticsSequence
+c 91->featureNIO
+c 92->featureMemoryBudget
+c 94->featureFileHandleCache
+c 93->featureCleanerDaemon

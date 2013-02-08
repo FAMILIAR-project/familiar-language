@@ -1,0 +1,12 @@
+graph G {
+  Put;
+  Static;
+  LFU;
+  OS;
+  0;
+  1;
+  OS -- 1;
+  Put -- 1;
+  LFU -- 1;
+  Static -- 1;
+}

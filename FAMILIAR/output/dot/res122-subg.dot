@@ -1,0 +1,35 @@
+graph G {
+  HavingAwards;
+  Location;
+  ContactDetails;
+  ConferenceContext;
+  ConferencePapers;
+  EventsPreference;
+  BuildingResolution;
+  0;
+  DOTDOTDOT_Zero;
+  Venue;
+  Publications;
+  1;
+  ConferencePapers -- Publications;
+  ConferenceContext -- 1;
+  BuildingResolution -- Location;
+  Location -- ConferenceContext;
+  ContactDetails -- ConferenceContext;
+  EventsPreference -- ConferenceContext;
+  BuildingResolution -- ConferenceContext;
+  DOTDOTDOT_Zero -- ConferenceContext;
+  DOTDOTDOT_Zero -- 1;
+  Venue -- ConferenceContext;
+  Venue -- 1;
+  Publications -- ConferenceContext;
+  Publications -- 1;
+  HavingAwards -- ConferenceContext;
+  HavingAwards -- 1;
+  Location -- 1;
+  ContactDetails -- 1;
+  ConferencePapers -- ConferenceContext;
+  ConferencePapers -- 1;
+  EventsPreference -- 1;
+  BuildingResolution -- 1;
+}

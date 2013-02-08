@@ -1,0 +1,34 @@
+// Replace subtree rooted at target.f by fmToInsert
+parameter target : FeatureModel
+parameter f : String
+parameter fmToInsert : Feature // type specification is optional
+
+froot = root fmToInsert
+parentF = parent target.f // save the parent of feature
+operatorF = operator target.f // save the operator of the feature
+b = remove_feature target.f
+if (not (b)) then 
+	print "Unable to remove feature!"
+else 
+	insert froot into parentF with operatorF
+end
+hide froot operatorF parentF b 
+
+/*
+\begin{Verbatim}[commandchars=@\[\],numbers=left,firstnumber=1,stepnumber=1]
+// Replace subtree target.f by fmToInsert
+parameter target : FeatureModel
+parameter f : String
+parameter fmToInsert
+
+froot = root fmToInsert
+operatorF = operator target.f
+parentF = parent target.f
+b = remove\_feature target.f
+if (not b) 
+then print ``Unable to remove feature!''
+else insert froot into parentF with operatorF
+end
+hide froot operatorF parentF b 
+\end{Verbatim}
+*/

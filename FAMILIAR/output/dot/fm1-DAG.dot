@@ -1,0 +1,10 @@
+digraph G {
+  SPI;
+  MedicalImage;
+  Nifti;
+  GE;
+  Proprietary;
+  SPI -> Proprietary;
+  GE -> Proprietary;
+  Proprietary -> MedicalImage;
+}

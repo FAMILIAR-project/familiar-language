@@ -1,0 +1,57 @@
+digraph res1 {
+graph [rankdir=TB];
+node [shape=box];
+edge [arrowhead=normal];
+81[label="Authentification",]
+82[label="PGP",]
+83[label="SSLAuth",]
+84[label="NetworkSecurity",]
+85[label="KDC",]
+86[label="DES",]
+87[label="Crypto",]
+88[label="MetaDataSupport",]
+89[label="NetworkProtocol",]
+90[label="HTTPS",]
+91[label="Symetric",]
+92[label="Asymetric",]
+93[label="HTTP",]
+94[label="MIService",]
+95[label="AnonymizedSupport",]
+96[label="HeaderEncoding",]
+97[label="SSL",]
+99[label="PasswordBased",]
+100[label="KerberosAuth",]
+101[label="TransferProtocol",]
+103[label="TripleDES",]
+84->97[arrowhead=odot];
+105[label="",]
+81->105[arrowhead=none];
+105->83[arrowhead=none];
+84->82[arrowhead=odot];
+89->96[arrowhead=odot];
+94->88[arrowhead=odot];
+106[label="XOR",shape="triangle",width=0.3]
+91->106[arrowhead=none];
+106->85[arrowhead=none];
+106->86[arrowhead=none];
+106->103[arrowhead=none];
+89->101[arrowhead=dot];
+107[label="XOR",shape="triangle",width=0.3]
+87->107[arrowhead=none];
+107->92[arrowhead=none];
+107->91[arrowhead=none];
+108[label="XOR",shape="triangle",width=0.3]
+81->108[arrowhead=none];
+108->83[arrowhead=none];
+108->99[arrowhead=none];
+108->100[arrowhead=none];
+84->87[arrowhead=dot];
+89->84[arrowhead=dot];
+94->81[arrowhead=dot];
+109[label="XOR",shape="triangle",width=0.3]
+101->109[arrowhead=none];
+109->93[arrowhead=none];
+109->90[arrowhead=none];
+94->89[arrowhead=dot];
+88->95[arrowhead=odot];
+}

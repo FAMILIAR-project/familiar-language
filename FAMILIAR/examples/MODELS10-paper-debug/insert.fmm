@@ -1,0 +1,16 @@
+base = FM (Keyboard: [ControlCD] Wireless Wiring [International] ; Wiring: (USB|PS2); )
+aspect1 = FM ( Lang : [US] European [Chinese]; )
+insert aspect1 into International with mand // 'base' is modified
+
+removeVariable aspect1 // no longer need 'aspect1' variable
+
+fInt = parent Lang // feature International in 'base' FM
+
+namefInt = name fInt
+namefIntExpected = "International"
+assert (namefInt eq namefIntExpected) 
+
+
+childrenfInt = children fInt
+sz = size childrenfInt
+assert (sz eq 3)

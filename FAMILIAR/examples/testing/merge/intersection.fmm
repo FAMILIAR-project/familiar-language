@@ -1,0 +1,46 @@
+fm0 = FM (A: (B|C) ; )
+fm1 = FM (A: B [C] ; )
+fm2 = merge intersection { fm0 fm1 } 
+
+// some checkings
+
+fm2Expected = FM (A: B;)
+cmpFM2 = compare fm2 fm2Expected 
+assert (cmpFM2 eq REFACTORING)  
+nfm2 = nbFeatures fm2
+TWO = 2
+assert (nfm2 eq TWO)
+nfm2p = size fm2.*
+assert (nfm2p eq TWO)
+
+// another example
+
+fm3 = FM (U: X Y [Z] [W]; X : (F|G|H); Y : (I|J|K|L)+ ; )
+fm4 = FM (U: X Y [Z] [W]; X : (F|G|H); Y : (I|J|K|L)+ ; W : [T] [A] B; )
+fm5 = merge intersection { fm3 fm4 }
+
+// some checkings
+
+fm5Expected = copy fm3
+removeFeature fm5Expected.W
+cmpFM5 = compare fm5 fm5Expected 
+assert (cmpFM5 eq REFACTORING)  
+
+// merge can act on a set of feature models
+
+fmStar = merge intersection fm* 
+vStart = isValid fmStar
+FALSE = false
+assert (vStart eq FALSE) // there is no common configuration between fm0, fm1, fm2, fm2Expected, fm3, fm4, fm5 and fm5Expected
+
+
+// yet another example
+
+gc4 = FM ( GraphicCard: DirectX Speed Bus [Multi] ; DirectX: (v10dot1 | v10) ; Speed: (n800 | n1000) ; Bus: n128; )
+gc5 = FM ( GraphicCard: DirectX Speed Bus [Vertex] ; DirectX: (v10dot1 | v10 | v9) ; Speed: n800 ; Bus: (n64 | n128); )
+gc_expected = FM ( GraphicCard: DirectX Speed Bus ; DirectX: (v10dot1 | v10) ; Speed: n800 ; Bus: n128 ; )
+gc_merged = merge intersection { gc4 gc5 } 
+cmpChecking = compare gc_merged gc_expected
+assert (cmpChecking eq REFACTORING)
+
+exit

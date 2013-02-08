@@ -1,0 +1,8 @@
+graph G {
+  Standard;
+  Reserve;
+  0;
+  1;
+  Standard -- 1;
+  Reserve -- 1;
+}

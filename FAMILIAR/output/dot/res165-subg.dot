@@ -1,0 +1,21 @@
+graph G {
+  Executable;
+  Source_Zero;
+  Ruleselection;
+  1;
+  Reusemechanisms;
+  Bidirectionalrules;
+  Parameterization;
+  0;
+  Model;
+  Dedicatedsupport;
+  Reusemechanisms -- 1;
+  Model -- Dedicatedsupport;
+  Source_Zero -- 1;
+  Ruleselection -- 1;
+  Bidirectionalrules -- 1;
+  Parameterization -- 1;
+  Dedicatedsupport -- 1;
+  Executable -- 1;
+  Model -- 1;
+}

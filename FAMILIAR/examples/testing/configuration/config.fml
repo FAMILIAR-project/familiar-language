@@ -1,0 +1,30 @@
+fm1 = FM (A: B [C] [D] E; D : (F|G)+; E : (I|J|K|L)+ ; )
+c1 = configuration fm1
+select C in c1
+deselect D in c1
+dc1 = deselectedF c1 // contains D, F and G
+
+dc1Expected = { fm1.D fm1.F fm1.G }
+assert (dc1 eq dc1Expected)
+
+deselect J in c1
+deselect K in c1
+deselect L in c1
+sc1 = selectedF c1 // contains I
+
+sc1Expected = { fm1.A fm1.B fm1.C fm1.E fm1.I }
+assert (sc1 eq sc1Expected)
+
+// at this step all features are either selected or deselected
+
+bcomplete = isComplete c1
+TRUE = true
+assert (bcomplete eq TRUE)
+
+// stated differently: there is no feature unselected
+
+uc1 = unselectedF c1 // empty
+
+uc1isEmpty = setIsEmpty uc1
+assert (uc1isEmpty eq TRUE)
+//...

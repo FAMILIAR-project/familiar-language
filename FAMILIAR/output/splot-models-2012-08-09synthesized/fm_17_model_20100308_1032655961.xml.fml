@@ -1,0 +1,1 @@
+FM (Cellphone: Extras BasisFunctions [Communication] ; Extras: (MPThree|Camera)+ ; BasisFunctions: VoiceCall Message ; Communication: [WLAN] [Bluetooth] [UMTS] ; Camera: (ThreeMP|EightMP) ; Message: SMS [MMS] ; (MMS -> Camera); (Bluetooth -> Camera); (Bluetooth -> !MPThree); )

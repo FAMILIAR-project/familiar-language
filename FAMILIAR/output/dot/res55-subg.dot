@@ -1,0 +1,27 @@
+graph G {
+  Language;
+  Evaluator;
+  Optimizer;
+  Shortcircuit;
+  SAL;
+  0;
+  SimpleArithmetic;
+  1;
+  Conditional;
+  SAL -- 1;
+  SimpleArithmetic -- Language;
+  Conditional -- Language;
+  Optimizer -- SAL;
+  Shortcircuit -- Optimizer;
+  Language -- SAL;
+  Evaluator -- SAL;
+  Language -- 1;
+  Evaluator -- 1;
+  Optimizer -- 1;
+  Shortcircuit -- SAL;
+  Shortcircuit -- 1;
+  SimpleArithmetic -- SAL;
+  SimpleArithmetic -- 1;
+  Conditional -- SAL;
+  Conditional -- 1;
+}

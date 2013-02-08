@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- prefuse TreeML Writer | Fri May 18 01:18:27 PDT 2012 -->
+<tree>
+  <declarations>
+    <attributeDecl name="name" type="String"/>
+    <attributeDecl name="solitary" type="Int"/>
+    <attributeDecl name="group" type="Int"/>
+  </declarations>
+
+  <branch>
+    <attribute name="name" value="Access"/>
+    <attribute name="solitary" value="-1"/>
+    <attribute name="group" value="-1"/>
+    <branch>
+      <attribute name="name" value="UI"/>
+      <attribute name="solitary" value="0"/>
+      <attribute name="group" value="-1"/>
+      <leaf>
+        <attribute name="name" value="MUI"/>
+        <attribute name="solitary" value="1"/>
+        <attribute name="group" value="-1"/>
+      </leaf>
+      <leaf>
+        <attribute name="name" value="Reports"/>
+        <attribute name="solitary" value="0"/>
+        <attribute name="group" value="-1"/>
+      </leaf>
+      <leaf>
+        <attribute name="name" value="Forms"/>
+        <attribute name="solitary" value="0"/>
+        <attribute name="group" value="-1"/>
+      </leaf>
+    </branch>
+    <branch>
+      <attribute name="name" value="Components"/>
+      <attribute name="solitary" value="1"/>
+      <attribute name="group" value="-1"/>
+      <branch>
+        <attribute name="name" value="OR114"/>
+        <attribute name="solitary" value="-1"/>
+        <attribute name="group" value="8"/>
+        <leaf>
+          <attribute name="name" value="AddIns"/>
+          <attribute name="solitary" value="-1"/>
+          <attribute name="group" value="-1"/>
+        </leaf>
+        <leaf>
+          <attribute name="name" value="VBA"/>
+          <attribute name="solitary" value="-1"/>
+          <attribute name="group" value="-1"/>
+        </leaf>
+      </branch>
+    </branch>
+    <branch>
+      <attribute name="name" value="ACEEngine"/>
+      <attribute name="solitary" value="0"/>
+      <attribute name="group" value="-1"/>
+      <branch>
+        <attribute name="name" value="OR115"/>
+        <attribute name="solitary" value="-1"/>
+        <attribute name="group" value="8"/>
+        <leaf>
+          <attribute name="name" value="ExpressionService"/>
+          <attribute name="solitary" value="-1"/>
+          <attribute name="group" value="-1"/>
+        </leaf>
+        <branch>
+          <attribute name="name" value="Providers"/>
+          <attribute name="solitary" value="-1"/>
+          <attribute name="group" value="-1"/>
+          <leaf>
+            <attribute name="name" value="DAO"/>
+            <attribute name="solitary" value="0"/>
+            <attribute name="group" value="-1"/>
+          </leaf>
+          <leaf>
+            <attribute name="name" value="OLEDB"/>
+            <attribute name="solitary" value="1"/>
+            <attribute name="group" value="-1"/>
+          </leaf>
+          <leaf>
+            <attribute name="name" value="ODBC"/>
+            <attribute name="solitary" value="1"/>
+            <attribute name="group" value="-1"/>
+          </leaf>
+        </branch>
+        <branch>
+          <attribute name="name" value="ISAMs"/>
+          <attribute name="solitary" value="-1"/>
+          <attribute name="group" value="-1"/>
+          <leaf>
+            <attribute name="name" value="ExcelISAM"/>
+            <attribute name="solitary" value="1"/>
+            <attribute name="group" value="-1"/>
+          </leaf>
+          <leaf>
+            <attribute name="name" value="RJet"/>
+            <attribute name="solitary" value="1"/>
+            <attribute name="group" value="-1"/>
+          </leaf>
+          <branch>
+            <attribute name="name" value="RedISAM"/>
+            <attribute name="solitary" value="0"/>
+            <attribute name="group" value="-1"/>
+            <branch>
+              <attribute name="name" value="OR117"/>
+              <attribute name="solitary" value="-1"/>
+              <attribute name="group" value="8"/>
+              <leaf>
+                <attribute name="name" value="accdb"/>
+                <attribute name="solitary" value="-1"/>
+                <attribute name="group" value="-1"/>
+              </leaf>
+              <leaf>
+                <attribute name="name" value="accdr"/>
+                <attribute name="solitary" value="-1"/>
+                <attribute name="group" value="-1"/>
+              </leaf>
+              <leaf>
+                <attribute name="name" value="mdb"/>
+                <attribute name="solitary" value="-1"/>
+                <attribute name="group" value="-1"/>
+              </leaf>
+              <leaf>
+                <attribute name="name" value="accde"/>
+                <attribute name="solitary" value="-1"/>
+                <attribute name="group" value="-1"/>
+              </leaf>
+              <leaf>
+                <attribute name="name" value="mde"/>
+                <attribute name="solitary" value="-1"/>
+                <attribute name="group" value="-1"/>
+              </leaf>
+            </branch>
+          </branch>
+          <leaf>
+            <attribute name="name" value="WSS"/>
+            <attribute name="solitary" value="1"/>
+            <attribute name="group" value="-1"/>
+          </leaf>
+          <leaf>
+            <attribute name="name" value="Exchange"/>
+            <attribute name="solitary" value="1"/>
+            <attribute name="group" value="-1"/>
+          </leaf>
+          <leaf>
+            <attribute name="name" value="Text"/>
+            <attribute name="solitary" value="1"/>
+            <attribute name="group" value="-1"/>
+          </leaf>
+        </branch>
+      </branch>
+    </branch>
+    <branch>
+      <attribute name="name" value="Architecture"/>
+      <attribute name="solitary" value="0"/>
+      <attribute name="group" value="-1"/>
+      <branch>
+        <attribute name="name" value="XOR116"/>
+        <attribute name="solitary" value="-1"/>
+        <attribute name="group" value="16"/>
+        <leaf>
+          <attribute name="name" value="x64"/>
+          <attribute name="solitary" value="-1"/>
+          <attribute name="group" value="-1"/>
+        </leaf>
+        <leaf>
+          <attribute name="name" value="x86"/>
+          <attribute name="solitary" value="-1"/>
+          <attribute name="group" value="-1"/>
+        </leaf>
+      </branch>
+    </branch>
+    <branch>
+      <attribute name="name" value="     CONSTRAINTS:     "/>
+      <attribute name="solitary" value="-1"/>
+      <attribute name="group" value="32"/>
+      <branch>
+        <attribute name="name" value="(UI -&gt; ACEEngine)"/>
+        <attribute name="solitary" value="32"/>
+        <attribute name="group" value="-1"/>
+        <leaf>
+          <attribute name="name" value="(VBA -&gt; DAO)"/>
+          <attribute name="solitary" value="32"/>
+          <attribute name="group" value="-1"/>
+        </leaf>
+      </branch>
+    </branch>
+  </branch>
+</tree>

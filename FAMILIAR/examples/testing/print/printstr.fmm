@@ -1,0 +1,13 @@
+println "PLOP" "PLIP" "PLUP" // PLOPPLIPPLUP
+println "PLOP " "PLIP " " PLUP" // PLOP PLIP PLUP
+
+fm1 = FM (A : B [C]; )
+pl = "PLAP"
+
+println "PLOP " "PLIP " " PLUP" pl // PLOP PLIP PLUPPLAP
+println "PLOP " "PLIP " " PLUP " pl // PLOP PLIP PLUP PLAP
+
+println "PLOP " "PLIP " pl " PLUP " pl // PLOP PLIP PLAP PLUP 
+println pl "PLOP " "PLIP " pl " PLUP " pl // PLAP PLOP PLIP PLAP PLUP 
+
+exit

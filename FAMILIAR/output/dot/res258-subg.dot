@@ -1,0 +1,8 @@
+graph G {
+  forum;
+  0;
+  db;
+  1;
+  forum -- 1;
+  db -- 1;
+}

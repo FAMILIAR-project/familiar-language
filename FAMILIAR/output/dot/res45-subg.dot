@@ -1,0 +1,27 @@
+graph G {
+  SendFileSystemOperations;
+  RebootPUS;
+  PUSRename;
+  Receive;
+  ReceiveAcknowledgedMode;
+  RebootEntity;
+  Reboot_;
+  0;
+  SendAcknowledgedMode;
+  Send;
+  1;
+  SendAcknowledgedMode -- Send;
+  SendFileSystemOperations -- Send;
+  RebootEntity -- Reboot_;
+  ReceiveAcknowledgedMode -- Receive;
+  RebootPUS -- Reboot_;
+  Receive -- 1;
+  ReceiveAcknowledgedMode -- 1;
+  Reboot_ -- 1;
+  Send -- 1;
+  SendFileSystemOperations -- 1;
+  RebootPUS -- 1;
+  PUSRename -- 1;
+  RebootEntity -- 1;
+  SendAcknowledgedMode -- 1;
+}

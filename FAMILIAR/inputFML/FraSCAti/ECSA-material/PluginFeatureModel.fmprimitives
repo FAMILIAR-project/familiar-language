@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fmprimitives:FeatureModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fmprimitives="http://lero.ie/spl/fmprimitives.ecore" name="OW2 FraSCAti: Modules Parent" id="frascati-modules">
+  <features name="FraSCAti" id="FraSCAti" featureHasSubfeature="//@primitives.0 //@primitives.1 //@primitives.2 //@primitives.3 //@primitives.4 //@primitives.5 //@primitives.6 //@primitives.7 //@primitives.8 //@primitives.9 //@primitives.10 //@primitives.11 //@primitives.12 //@primitives.13 //@primitives.14 //@primitives.15 //@primitives.16 //@primitives.17 //@primitives.18 //@primitives.19 //@primitives.20 //@primitives.21 //@primitives.22 //@primitives.23 //@primitives.24 //@primitives.25 //@primitives.26 //@primitives.27 //@primitives.28 //@primitives.29 //@primitives.30 //@primitives.31 //@primitives.32 //@primitives.33 //@primitives.34 //@primitives.35 //@primitives.36 //@primitives.37 //@primitives.38 //@primitives.39"/>
+  <features name="frascati-sca-compiler-parent" id="@PLUGfrascati-sca-compiler-parent" featureHasParent="//@primitives.0"/>
+  <features name="frascati-all" id="@PLUGfrascati-all" featureHasParent="//@primitives.1" outgoingDirectedRelationships="//@primitives.40 //@primitives.41 //@primitives.42 //@primitives.43 //@primitives.44 //@primitives.45 //@primitives.46 //@primitives.47 //@primitives.48 //@primitives.49 //@primitives.50 //@primitives.51 //@primitives.52 //@primitives.53 //@primitives.54 //@primitives.55 //@primitives.56 //@primitives.57 //@primitives.58 //@primitives.59 //@primitives.60 //@primitives.61 //@primitives.62 //@primitives.63 //@primitives.64 //@primitives.65"/>
+  <features name="frascati-assembly-factory" id="@PLUGfrascati-assembly-factory" featureHasParent="//@primitives.2" incomingDirectedRelationships="//@primitives.40 //@primitives.68 //@primitives.71 //@primitives.73 //@primitives.78 //@primitives.81 //@primitives.84 //@primitives.87 //@primitives.91 //@primitives.96 //@primitives.99 //@primitives.101 //@primitives.105 //@primitives.107 //@primitives.108 //@primitives.109 //@primitives.110 //@primitives.111 //@primitives.114 //@primitives.117" outgoingDirectedRelationships="//@primitives.66 //@primitives.67"/>
+  <features name="frascati-assembly-factory-juliac-jdt-tinfi-oo" id="@PLUGfrascati-assembly-factory-juliac-jdt-tinfi-oo" featureHasParent="//@primitives.3" outgoingDirectedRelationships="//@primitives.68 //@primitives.69 //@primitives.70"/>
+  <features name="frascati-binding-factory" id="@PLUGfrascati-binding-factory" featureHasParent="//@primitives.4" incomingDirectedRelationships="//@primitives.41 //@primitives.75 //@primitives.80 //@primitives.83 //@primitives.86 //@primitives.88"/>
+  <features name="frascati-binding-http" id="@PLUGfrascati-binding-http" featureHasParent="//@primitives.5" incomingDirectedRelationships="//@primitives.42" outgoingDirectedRelationships="//@primitives.71 //@primitives.72"/>
+  <features name="frascati-binding-jms" id="@PLUGfrascati-binding-jms" featureHasParent="//@primitives.6" incomingDirectedRelationships="//@primitives.43 //@primitives.76" outgoingDirectedRelationships="//@primitives.73 //@primitives.74 //@primitives.75"/>
+  <features name="frascati-binding-jms/tests" id="@PLUGfrascati-binding-jms/tests" featureHasParent="//@primitives.7" outgoingDirectedRelationships="//@primitives.76 //@primitives.77"/>
+  <features name="frascati-binding-jsonrpc" id="@PLUGfrascati-binding-jsonrpc" featureHasParent="//@primitives.8" incomingDirectedRelationships="//@primitives.44" outgoingDirectedRelationships="//@primitives.78 //@primitives.79 //@primitives.80"/>
+  <features name="frascati-binding-rest" id="@PLUGfrascati-binding-rest" featureHasParent="//@primitives.9" incomingDirectedRelationships="//@primitives.45" outgoingDirectedRelationships="//@primitives.81 //@primitives.82 //@primitives.83"/>
+  <features name="frascati-binding-rmi" id="@PLUGfrascati-binding-rmi" featureHasParent="//@primitives.10" incomingDirectedRelationships="//@primitives.46" outgoingDirectedRelationships="//@primitives.84 //@primitives.85 //@primitives.86"/>
+  <features name="frascati-binding-ws" id="@PLUGfrascati-binding-ws" featureHasParent="//@primitives.11" incomingDirectedRelationships="//@primitives.47" outgoingDirectedRelationships="//@primitives.87 //@primitives.88"/>
+  <features name="frascati-component-factory" id="@PLUGfrascati-component-factory" featureHasParent="//@primitives.12" incomingDirectedRelationships="//@primitives.48 //@primitives.90 //@primitives.92 //@primitives.95" outgoingDirectedRelationships="//@primitives.89"/>
+  <features name="frascati-component-factory-julia" id="@PLUGfrascati-component-factory-julia" featureHasParent="//@primitives.13" incomingDirectedRelationships="//@primitives.49" outgoingDirectedRelationships="//@primitives.90 //@primitives.91"/>
+  <features name="frascati-component-factory-juliac" id="@PLUGfrascati-component-factory-juliac" featureHasParent="//@primitives.14" incomingDirectedRelationships="//@primitives.50 //@primitives.93 //@primitives.94 //@primitives.120" outgoingDirectedRelationships="//@primitives.92"/>
+  <features name="frascati-component-factory-juliac-jdt" id="@PLUGfrascati-component-factory-juliac-jdt" featureHasParent="//@primitives.15" incomingDirectedRelationships="//@primitives.51 //@primitives.69" outgoingDirectedRelationships="//@primitives.93"/>
+  <features name="frascati-component-factory-juliac-tinfi-oo" id="@PLUGfrascati-component-factory-juliac-tinfi-oo" featureHasParent="//@primitives.16" incomingDirectedRelationships="//@primitives.52 //@primitives.70 //@primitives.119" outgoingDirectedRelationships="//@primitives.94"/>
+  <features name="frascati-component-factory-tinfi-oo" id="@PLUGfrascati-component-factory-tinfi-oo" featureHasParent="//@primitives.17" incomingDirectedRelationships="//@primitives.53 //@primitives.67" outgoingDirectedRelationships="//@primitives.95"/>
+  <features name="frascati-implementation-bpel" id="@PLUGfrascati-implementation-bpel" featureHasParent="//@primitives.18" incomingDirectedRelationships="//@primitives.54" outgoingDirectedRelationships="//@primitives.96 //@primitives.97 //@primitives.98"/>
+  <features name="frascati-implementation-fractal" id="@PLUGfrascati-implementation-fractal" featureHasParent="//@primitives.19" incomingDirectedRelationships="//@primitives.55" outgoingDirectedRelationships="//@primitives.99 //@primitives.100"/>
+  <features name="frascati-implementation-osgi" id="@PLUGfrascati-implementation-osgi" featureHasParent="//@primitives.20" incomingDirectedRelationships="//@primitives.56 //@primitives.103 //@primitives.104" outgoingDirectedRelationships="//@primitives.101 //@primitives.102"/>
+  <features name="frascati-implementation-osgi-equinox" id="@PLUGfrascati-implementation-osgi-equinox" featureHasParent="//@primitives.21" incomingDirectedRelationships="//@primitives.57" outgoingDirectedRelationships="//@primitives.103"/>
+  <features name="frascati-implementation-osgi-felix" id="@PLUGfrascati-implementation-osgi-felix" featureHasParent="//@primitives.22" outgoingDirectedRelationships="//@primitives.104"/>
+  <features name="frascati-implementation-script" id="@PLUGfrascati-implementation-script" featureHasParent="//@primitives.23" incomingDirectedRelationships="//@primitives.58" outgoingDirectedRelationships="//@primitives.105 //@primitives.106"/>
+  <features name="frascati-implementation-spring" id="@PLUGfrascati-implementation-spring" featureHasParent="//@primitives.24" incomingDirectedRelationships="//@primitives.59" outgoingDirectedRelationships="//@primitives.107"/>
+  <features name="frascati-interface-wsdl" id="@PLUGfrascati-interface-wsdl" featureHasParent="//@primitives.25" incomingDirectedRelationships="//@primitives.60 //@primitives.77 //@primitives.97" outgoingDirectedRelationships="//@primitives.108"/>
+  <features name="frascati-metamodel-frascati" id="@PLUGfrascati-metamodel-frascati" featureHasParent="//@primitives.26" incomingDirectedRelationships="//@primitives.61 //@primitives.79 //@primitives.82 //@primitives.85 //@primitives.100 //@primitives.102 //@primitives.106" outgoingDirectedRelationships="//@primitives.109"/>
+  <features name="frascati-metamodel-frascati-ext" id="@PLUGfrascati-metamodel-frascati-ext" featureHasParent="//@primitives.27"/>
+  <features name="frascati-metamodel-tuscany" id="@PLUGfrascati-metamodel-tuscany" featureHasParent="//@primitives.28" incomingDirectedRelationships="//@primitives.62 //@primitives.72" outgoingDirectedRelationships="//@primitives.110"/>
+  <features name="frascati-property-jaxb" id="@PLUGfrascati-property-jaxb" featureHasParent="//@primitives.29" incomingDirectedRelationships="//@primitives.63" outgoingDirectedRelationships="//@primitives.111"/>
+  <features name="frascati-sca-parser" id="@PLUGfrascati-sca-parser" featureHasParent="//@primitives.30" incomingDirectedRelationships="//@primitives.64 //@primitives.66 //@primitives.113" outgoingDirectedRelationships="//@primitives.112"/>
+  <features name="frascati-tinfi-sca-parser" id="@PLUGfrascati-tinfi-sca-parser" featureHasParent="//@primitives.31" outgoingDirectedRelationships="//@primitives.113"/>
+  <features name="frascati-servlet-cxf" id="@PLUGfrascati-servlet-cxf" featureHasParent="//@primitives.32" incomingDirectedRelationships="//@primitives.65" outgoingDirectedRelationships="//@primitives.114"/>
+  <features name="frascati-util" id="@PLUGfrascati-util" featureHasParent="//@primitives.33" incomingDirectedRelationships="//@primitives.89 //@primitives.112 //@primitives.115"/>
+  <features name="frascati-util-xml" id="@PLUGfrascati-util-xml" featureHasParent="//@primitives.34" incomingDirectedRelationships="//@primitives.74 //@primitives.98" outgoingDirectedRelationships="//@primitives.115"/>
+  <features name="module-native" id="@PLUGmodule-native" featureHasParent="//@primitives.35"/>
+  <features name="module-upnp" id="@PLUGmodule-upnp" featureHasParent="//@primitives.36"/>
+  <features name="frascati-all-jdk6" id="@PLUGfrascati-all-jdk6" featureHasParent="//@primitives.37" outgoingDirectedRelationships="//@primitives.116"/>
+  <features name="frascati-assembly-factory-jdk6" id="@PLUGfrascati-assembly-factory-jdk6" featureHasParent="//@primitives.38" incomingDirectedRelationships="//@primitives.116" outgoingDirectedRelationships="//@primitives.117 //@primitives.118 //@primitives.119"/>
+  <features name="frascati-component-factory-juliac-jdk6" id="@PLUGfrascati-component-factory-juliac-jdk6" featureHasParent="//@primitives.39" incomingDirectedRelationships="//@primitives.118" outgoingDirectedRelationships="//@primitives.120"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-sca-compiler-parent"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-all"/>
+  <primitives xsi:type="fmprimitives:FeatureHasMandatorySubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-assembly-factory"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-assembly-factory-juliac-jdt-tinfi-oo"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-binding-factory"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-binding-http"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-binding-jms"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-binding-jms/tests"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-binding-jsonrpc"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-binding-rest"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-binding-rmi"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-binding-ws"/>
+  <primitives xsi:type="fmprimitives:FeatureHasMandatorySubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-component-factory"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-component-factory-julia"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-component-factory-juliac"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-component-factory-juliac-jdt"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-component-factory-juliac-tinfi-oo"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-component-factory-tinfi-oo"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-implementation-bpel"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-implementation-fractal"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-implementation-osgi"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-implementation-osgi-equinox"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-implementation-osgi-felix"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-implementation-script"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-implementation-spring"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-interface-wsdl"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-metamodel-frascati"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-metamodel-frascati-ext"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-metamodel-tuscany"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-property-jaxb"/>
+  <primitives xsi:type="fmprimitives:FeatureHasMandatorySubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-sca-parser"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-tinfi-sca-parser"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-servlet-cxf"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-util"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-util-xml"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGmodule-native"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGmodule-upnp"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-all-jdk6"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-assembly-factory-jdk6"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" parent="FraSCAti" subfeature="@PLUGfrascati-component-factory-juliac-jdk6"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-all" targets="@PLUGfrascati-assembly-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-all" targets="@PLUGfrascati-binding-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-all" targets="@PLUGfrascati-binding-http"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-all" targets="@PLUGfrascati-binding-jms"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-all" targets="@PLUGfrascati-binding-jsonrpc"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-all" targets="@PLUGfrascati-binding-rest"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-all" targets="@PLUGfrascati-binding-rmi"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-all" targets="@PLUGfrascati-binding-ws"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-all" targets="@PLUGfrascati-component-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-all" targets="@PLUGfrascati-component-factory-julia"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-all" targets="@PLUGfrascati-component-factory-juliac"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-all" targets="@PLUGfrascati-component-factory-juliac-jdt"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-all" targets="@PLUGfrascati-component-factory-juliac-tinfi-oo"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-all" targets="@PLUGfrascati-component-factory-tinfi-oo"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-all" targets="@PLUGfrascati-implementation-bpel"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-all" targets="@PLUGfrascati-implementation-fractal"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-all" targets="@PLUGfrascati-implementation-osgi"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-all" targets="@PLUGfrascati-implementation-osgi-equinox"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-all" targets="@PLUGfrascati-implementation-script"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-all" targets="@PLUGfrascati-implementation-spring"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-all" targets="@PLUGfrascati-interface-wsdl"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-all" targets="@PLUGfrascati-metamodel-frascati"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-all" targets="@PLUGfrascati-metamodel-tuscany"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-all" targets="@PLUGfrascati-property-jaxb"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-all" targets="@PLUGfrascati-sca-parser"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-all" targets="@PLUGfrascati-servlet-cxf"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-assembly-factory" targets="@PLUGfrascati-sca-parser"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-assembly-factory" targets="@PLUGfrascati-component-factory-tinfi-oo"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-assembly-factory-juliac-jdt-tinfi-oo" targets="@PLUGfrascati-assembly-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-assembly-factory-juliac-jdt-tinfi-oo" targets="@PLUGfrascati-component-factory-juliac-jdt"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-assembly-factory-juliac-jdt-tinfi-oo" targets="@PLUGfrascati-component-factory-juliac-tinfi-oo"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-binding-http" targets="@PLUGfrascati-assembly-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-binding-http" targets="@PLUGfrascati-metamodel-tuscany"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-binding-jms" targets="@PLUGfrascati-assembly-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-binding-jms" targets="@PLUGfrascati-util-xml"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-binding-jms" targets="@PLUGfrascati-binding-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-binding-jms/tests" targets="@PLUGfrascati-binding-jms"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-binding-jms/tests" targets="@PLUGfrascati-interface-wsdl"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-binding-jsonrpc" targets="@PLUGfrascati-assembly-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-binding-jsonrpc" targets="@PLUGfrascati-metamodel-frascati"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-binding-jsonrpc" targets="@PLUGfrascati-binding-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-binding-rest" targets="@PLUGfrascati-assembly-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-binding-rest" targets="@PLUGfrascati-metamodel-frascati"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-binding-rest" targets="@PLUGfrascati-binding-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-binding-rmi" targets="@PLUGfrascati-assembly-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-binding-rmi" targets="@PLUGfrascati-metamodel-frascati"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-binding-rmi" targets="@PLUGfrascati-binding-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-binding-ws" targets="@PLUGfrascati-assembly-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-binding-ws" targets="@PLUGfrascati-binding-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-component-factory" targets="@PLUGfrascati-util"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-component-factory-julia" targets="@PLUGfrascati-component-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-component-factory-julia" targets="@PLUGfrascati-assembly-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-component-factory-juliac" targets="@PLUGfrascati-component-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-component-factory-juliac-jdt" targets="@PLUGfrascati-component-factory-juliac"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-component-factory-juliac-tinfi-oo" targets="@PLUGfrascati-component-factory-juliac"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-component-factory-tinfi-oo" targets="@PLUGfrascati-component-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-implementation-bpel" targets="@PLUGfrascati-assembly-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-implementation-bpel" targets="@PLUGfrascati-interface-wsdl"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-implementation-bpel" targets="@PLUGfrascati-util-xml"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-implementation-fractal" targets="@PLUGfrascati-assembly-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-implementation-fractal" targets="@PLUGfrascati-metamodel-frascati"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-implementation-osgi" targets="@PLUGfrascati-assembly-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-implementation-osgi" targets="@PLUGfrascati-metamodel-frascati"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-implementation-osgi-equinox" targets="@PLUGfrascati-implementation-osgi"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-implementation-osgi-felix" targets="@PLUGfrascati-implementation-osgi"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-implementation-script" targets="@PLUGfrascati-assembly-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-implementation-script" targets="@PLUGfrascati-metamodel-frascati"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-implementation-spring" targets="@PLUGfrascati-assembly-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-interface-wsdl" targets="@PLUGfrascati-assembly-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-metamodel-frascati" targets="@PLUGfrascati-assembly-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-metamodel-tuscany" targets="@PLUGfrascati-assembly-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-property-jaxb" targets="@PLUGfrascati-assembly-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-sca-parser" targets="@PLUGfrascati-util"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-tinfi-sca-parser" targets="@PLUGfrascati-sca-parser"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-servlet-cxf" targets="@PLUGfrascati-assembly-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-util-xml" targets="@PLUGfrascati-util"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-all-jdk6" targets="@PLUGfrascati-assembly-factory-jdk6"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-assembly-factory-jdk6" targets="@PLUGfrascati-assembly-factory"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-assembly-factory-jdk6" targets="@PLUGfrascati-component-factory-juliac-jdk6"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-assembly-factory-jdk6" targets="@PLUGfrascati-component-factory-juliac-tinfi-oo"/>
+  <primitives xsi:type="fmprimitives:Requires" sources="@PLUGfrascati-component-factory-juliac-jdk6" targets="@PLUGfrascati-component-factory-juliac"/>
+</fmprimitives:FeatureModel>

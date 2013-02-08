@@ -1,0 +1,28 @@
+graph G {
+  DICOM;
+  Modality;
+  FormatName;
+  MRI;
+  MedicalImage;
+  0;
+  CT;
+  Analyze;
+  1;
+  DICOM -- FormatName;
+  Modality -- MedicalImage;
+  MedicalImage -- 1;
+  Analyze -- FormatName;
+  CT -- Modality;
+  MRI -- Modality;
+  Modality -- 1;
+  FormatName -- MedicalImage;
+  MRI -- MedicalImage;
+  MRI -- 1;
+  CT -- MedicalImage;
+  CT -- 1;
+  Analyze -- MedicalImage;
+  DICOM -- MedicalImage;
+  DICOM -- 1;
+  FormatName -- 1;
+  Analyze -- 1;
+}

@@ -1,0 +1,1 @@
+fm2 = FM ( A: [Z] [Y] C D; D: (E|F); C: (I|J|K)+; )

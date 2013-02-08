@@ -1,0 +1,30 @@
+// testing the 'sibling' operation
+
+// syntacs: b = sibling a
+
+// a is a variable of feature type
+
+// b is a set of features f1, f2, ..., fn sibling of a
+ 
+// b = sibling fm1.A
+
+// b is a set of features f1, f2, ..., fn sibling of A (present in the feature model fm1)
+
+fm1 = FM (A : B [C] ; B : E F ; C : (I|J|K) ; )
+
+sIK = sibling J
+nsibling_J = size sIK
+nexpected = 2
+assert (nsibling_J eq nexpected)
+fC = parent fm1.J
+
+sB = sibling fC
+nexpected = 1
+nsB = size sB 
+assert (nsB eq nexpected)
+
+fm2 = FM (A : B [C] ; B : E ; )
+sE = sibling fm2.E
+bsE = setIsEmpty sE
+TRUE = true
+assert (bsE eq TRUE)

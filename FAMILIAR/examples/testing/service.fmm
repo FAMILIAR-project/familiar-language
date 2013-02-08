@@ -1,0 +1,2 @@
+run "griddeployment.fmm" into deployment
+run "medicalimage.fmm" into MI

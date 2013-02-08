@@ -1,0 +1,14 @@
+parameter fm1 : FeatureModel // feature model in which we want to replace the subtree
+parameter fmToInsert : FeatureModel // new subtree
+
+
+froot = root fmToInsert
+run "replaceSubTree" fm1 froot fmToInsert
+//parentF = parent fm1::froot // save the parent (where fmToInsert will be inserted after)
+//fm1 = remove_feature fm1::froot
+//ls
+//fm1 = insert fmToInsert::froot into fm1::parentF with opt
+
+
+//hide froot
+//hide parentF

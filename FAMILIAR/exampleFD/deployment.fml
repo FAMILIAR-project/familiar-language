@@ -1,0 +1,142 @@
+// deployment script file: From Requirement to Runtime
+
+/******* (1) variability modeling *******/
+
+// requirement model:
+//  - high-level requirements/goals (QoS, object of interest to process, task model), 
+//  - problem world (context, deployment)
+
+requirement = FM ("requirement.fml")
+
+// VS knowledge 
+REQrules = constraints ( Counting -> Large ; 
+				Precision -> VingtCinqFrSec ; 	
+				Counting -> Precision ; 
+				Counting -> VingtCinqFrSec ; // Rting: Counting implies high frame rate (e.g., 25 frames/sec for Camera).
+				Infrared -> !Large ; // R Infrared Camera Type excludes "Long Distance" Sensor View.
+				ResponseTime -> Tracking ; // TResponseTime: Response Time influences Long term Tracking history parameter (history length should be at most the expected response time)
+				IntrusionDetection -> LowFrameRate ; // Intrusion Detection suggests low frame rate (5-8) for Camera
+				//NaturalLight & Night -> Infrared ; // Natural light and Night suggests "Infrared" Camera type.
+				Tracking -> HighFrameRate ;	//	Tracking implies high frame rate for Camera.
+			 	Person -> Movable ; 
+			 	Vehicle -> Movable ; 
+			 	Person -> SelfPropelled ; 
+			 	)
+			  
+map requirement with REQrules // constraints are effective
+
+// software components of the VS platform 
+platform = FM ("platform.fml") 
+
+
+PlatformRules = constraints (	
+								Edge -> !Density ; 
+						        !GravityCenter -> FusionStandard ;            
+						    	!GravityCenter -> SplitStandard ;
+						  		(HighGridStep | WithWindow) -> !Edge ;
+						  		(HighGridStep | WithWindow) -> !Ellipse ; 
+						   		(SegmFineTune -> !Shape ) ; )
+								
+map platform with PlatformRules
+
+oPlatform = counting platform
+
+
+
+// at this step we have two FMs
+
+// now we relate the requirement features to software features
+TRANSrules = constraints ( LessPrecision -> (GridStep & WithWindow) ; // TPrecision: Less precision implies a big grid step and/or window size.
+						 Sensitivity -> LowThreshold ; // TSensitivity: Sensitivity influences Segmentation parameters (high sensitivity implies low threshold parameter)
+					     Shadows -> ShadowElimination ; //Shadows implies shadow elimination.
+					   	 GroupOfObjects -> WithMask ; //  A zone of interest in model suggests Segmentation with mask. 
+					     ArtificialLight <-> ScenarioRecognition ; // TArtificial: Artificial Light implies to add at the beginning or end of the chain a special algorithm to detect rapid lightning changes. 
+					     Color -> SystemColor ; // Color: Color suggests Segmentation Kernel.
+					     Counting ->  ReferenceImageUpdating ; //   Counting implies the use of a special algorithm for Reference Image Updating (which integrates objects in background if no movement).
+					     Counting -> LowGridStep ; //  T(2) Counting implies/suggests low Grid Step in Segmentation.
+					     Outdoors ->  Edge ; // Outdoors defaults an edge kernel.
+					     LessPrecision <-> !SegmFineTune ; // added
+					     TopView -> !ThreeDModel ; //Top view View(1) excludes 3D Model.
+					 //    Night & HeadLight <-> HeadLightDetection ;
+					     Flashes or HeadLight -> Contour ;
+					     LightingVariation -> Edge ; 
+					     ResponseTime -> LongTermTracking ;
+					     ArtificialLight -> ReferenceImageUpdating ;
+					     Indoors -> Region ;
+					     NormalView or SideView -> LongTermTracking ;
+					     Person -> OmegaModel ;
+					     MultiSensor -> LongTermTracking ;
+					     MultiSensor <-> TrackingDataFusion ;
+					     Sensitivity -> LowThreshold ;
+					     
+					     )
+					     
+			     
+original_deployment_FM = aggregate { requirement platform } withMapping TRANSrules
+
+
+
+requirement_spe = copy requirement 
+
+/*********** refining variability *********/ 
+// (a) specialization facilities
+/*
+
+removeFeature requirement_spe.ArtificialLight 
+removeFeature requirement_spe.LightingVariation 
+removeFeature requirement_spe.Sensitivity 
+removeFeature requirement_spe.Outdoors 
+removeFeature requirement_spe.BackgroundMovement 
+removeFeature requirement_spe.Noise
+removeFeature requirement_spe.LightingVariation
+
+
+setMandatory requirement_spe.Indoors
+setMandatory requirement_spe.Tracking
+setMandatory requirement_spe.LessPrecision
+setMandatory requirement_spe.Person
+setMandatory requirement_spe.Counting
+setMandatory requirement_spe.TopView
+
+newDeploymentFM = aggregate { requirement_spe platform } withMapping TRANSrules
+cleanup newDeploymentFM
+new_platform_fm = extract newDeploymentFM.VSPlatform
+map new_platform_fm with PlatformRules
+*/
+
+// (b) or using configuration facilities
+deploymentFM = aggregate { requirement platform } withMapping TRANSrules
+
+deployment_conf = configuration deploymentFM
+
+/*
+deselect LightingVariation Outdoors ArtificialLight Sensitivity BackgroundMovement Noise in deployment_conf
+select Color TopView Indoors Counting LessPrecision Tracking Person in deployment_conf
+deployment_speConf = asFM deployment_conf
+*/
+
+/*
+new_platform_fmConf = extract deployment_speConf.VSPlatform
+map new_platform_fmConf with PlatformRules
+*/
+
+
+
+
+
+
+/****** printing statistics ******/ 
+
+// (a) nNewPlatform = counting new_platform_fm
+
+// (b)
+//nNewPlatform = counting new_platform_fmConf
+
+//println "#newPlatformFM=", nNewPlatform, " vs ", "#originalPlatform=", oPlatform
+
+
+
+
+
+
+

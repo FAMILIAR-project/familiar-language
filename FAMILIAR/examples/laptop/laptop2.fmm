@@ -1,0 +1,40 @@
+// laptopScenario.fmm: implementation of suppliers' scenario
+run "newlaptop" // new family of laptop firstly designed 
+// load repositories
+run "repositoryGC" into GC
+run "repositoryCPU" into CPU
+run "repositoryMonitor" into monitor
+// we map the 'newlaptop' graphic card description with the graphic card products of the repository 
+originalGC = extract newlaptop.laptop.GraphicCard 
+// products of the 'GC' repository should cover the entire set of products described by 'originalGC'
+allProductsGC = merge sunion GC.*
+gc_merged = merge intersection originalGC allProductsGC
+if (not (isValid gc_merged)) then 
+	print "No product can be provided" 
+	exit // stop the programm
+end
+cmp_gc = compare originalGC allProductsGC
+if (cmp_gc eq GENERALIZATION || cmp_gc eq ARBITRARY) then 
+	gc_losed = merge diff original allProductsGC 
+	print "Some products cannot be provided: " (configs gc_losed)
+end
+// at this step, *all* products of originalGC can be provided by suppliers
+assert (cmp_gc eq REFACTORING || cmp_gc eq SPECIALIZATION)
+// nevertheless, some suppliers are out of the competition or provide products with too many features
+GC_suppliers_in = setEmpty // create an empty set 
+foreach (supp in GC.*) do 
+	if (not (isValid (merge intersection originalGC supp))) then
+		print "Supplier is unable to provide any product: " supp
+	else
+		supp_updated = merge intersection supp originalGC // some products of supp are not needed
+		setAdd GC_suppliers_in supp_updated // add relevant suppliers
+	end
+end
+assert ((size GC_suppliers_in) >= 1) // obviously, there is at least one available supplier 
+// configuration process
+gcProduct = configuration originalGC
+
+
+
+
+

@@ -1,0 +1,9 @@
+graph G {
+  Detail;
+  SelectMovie;
+  0;
+  1;
+  Detail -- SelectMovie;
+  SelectMovie -- 1;
+  Detail -- 1;
+}

@@ -1,0 +1,7 @@
+oldFeature = parent n256 // oldFeature refers to 'Bus' feature of gc3
+
+newName = strConcat "Memory" (name oldFeature)
+b1 = renameFeature oldFeature as newName // aligning terms of gc3 with gc1 and gc2
+
+assert (b1 eq true)
+

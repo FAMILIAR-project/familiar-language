@@ -1,0 +1,28 @@
+digraph G {
+  software;
+  sizes;
+  swpackTwo;
+  medium;
+  small;
+  swpackOne;
+  ipvoice;
+  tecom;
+  rack;
+  messaging;
+  upgrade_swpack;
+  0;
+  1;
+  large;
+  ipvoice -> tecom;
+  tecom -> 1;
+  medium -> sizes;
+  swpackTwo -> software;
+  software -> ipvoice;
+  upgrade_swpack -> messaging;
+  large -> sizes;
+  rack -> tecom;
+  small -> sizes;
+  sizes -> rack;
+  swpackOne -> software;
+  messaging -> tecom;
+}

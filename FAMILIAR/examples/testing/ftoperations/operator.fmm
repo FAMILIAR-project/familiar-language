@@ -1,0 +1,42 @@
+// syntacs: op = operator ft
+
+// ft is a variable of feature type
+
+// op is the operator (mandatory, optional, Xor, Or) of feature 'ft' and its parent
+
+// => a leaf feature does have an operator
+
+// => a root feature has no operator
+
+// op = operator fm1.A
+
+// op is the operator of feature A (present in the feature model fm1)
+
+
+fm1 = FM (A : B [C] D; D : (E|F); C : (I|J|K)+; )
+
+op1 = operator fm1.D // edge between D and A: mandatory status
+
+assert (op1 eq MAND)
+
+op2 = operator fm1.F // edge between F and D: Xor 
+
+assert (op2 eq XOR)
+
+op3 = operator C // edge between C and A : optional status
+
+assert (op3 eq OPT)
+
+op4 = operator K // edge between K and F: Or
+
+assert (op4 eq OR)
+
+fC = parent fm1.I // C
+
+op5 = operator fC 
+assert (op5 eq OPT)
+
+fD = parent F  // D
+
+op6 = operator fD
+assert (op6 eq MAND)

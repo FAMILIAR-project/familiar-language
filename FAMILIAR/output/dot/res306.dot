@@ -1,0 +1,38 @@
+digraph G {
+  transmission;
+  temperatures;
+  exhaust_level_temp;
+  distance;
+  drive;
+  rpm;
+  fuel_consumption;
+  type_of_driving;
+  engine;
+  gallon_mile;
+  l_km;
+  colant;
+  methods;
+  engine_performance;
+  measures;
+  oil;
+  0;
+  monitor_engine_system;
+  1;
+  temperatures -> engine_performance;
+  engine_performance -> monitor_engine_system;
+  transmission -> temperatures;
+  monitor_engine_system -> 1;
+  rpm -> engine_performance;
+  l_km -> measures;
+  fuel_consumption -> monitor_engine_system;
+  engine -> temperatures;
+  colant -> temperatures;
+  type_of_driving -> methods;
+  exhaust_level_temp -> engine_performance;
+  measures -> fuel_consumption;
+  methods -> fuel_consumption;
+  oil -> temperatures;
+  gallon_mile -> measures;
+  distance -> methods;
+  drive -> methods;
+}

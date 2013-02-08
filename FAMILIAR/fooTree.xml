@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- prefuse TreeML Writer | Sun Mar 06 13:34:07 CET 2011 -->
+<tree>
+  <declarations>
+    <attributeDecl name="name" type="String"/>
+  </declarations>
+
+  <branch>
+    <attribute name="name" value="A"/>
+    <leaf>
+      <attribute name="name" value="C"/>
+    </leaf>
+    <leaf>
+      <attribute name="name" value="B"/>
+    </leaf>
+    <leaf>
+      <attribute name="name" value="D"/>
+    </leaf>
+  </branch>
+</tree>

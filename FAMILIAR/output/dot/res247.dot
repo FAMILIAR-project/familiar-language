@@ -1,0 +1,32 @@
+digraph G {
+  java;
+  sdi;
+  petri_net;
+  jplug;
+  mdi;
+  model_code_synch;
+  gui_builder;
+  diagram_builder;
+  uml;
+  qt;
+  0;
+  mvc;
+  javac;
+  compiler;
+  1;
+  interface;
+  compiler -> jplug;
+  gui_builder -> jplug;
+  petri_net -> diagram_builder;
+  mvc -> compiler;
+  qt -> gui_builder;
+  model_code_synch -> jplug;
+  jplug -> 1;
+  diagram_builder -> jplug;
+  uml -> diagram_builder;
+  interface -> jplug;
+  sdi -> interface;
+  mdi -> interface;
+  javac -> compiler;
+  java -> gui_builder;
+}

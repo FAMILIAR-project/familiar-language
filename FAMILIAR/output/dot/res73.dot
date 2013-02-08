@@ -1,0 +1,26 @@
+digraph G {
+  Foto;
+  ComFoto;
+  DestaqueDuplo;
+  Site;
+  Box;
+  DestaqueWide;
+  SemFoto;
+  Texto;
+  Menu;
+  Elementos;
+  EPortal;
+  0;
+  1;
+  Texto -> Box;
+  Menu -> EPortal;
+  Elementos -> EPortal;
+  Box -> EPortal;
+  DestaqueWide -> Box;
+  DestaqueDuplo -> Box;
+  SemFoto -> DestaqueWide;
+  Foto -> Box;
+  ComFoto -> DestaqueWide;
+  Site -> EPortal;
+  EPortal -> 1;
+}

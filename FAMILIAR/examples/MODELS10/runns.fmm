@@ -1,0 +1,5 @@
+run "script1.fmm" into script_declaration // into or as?
+varset = script_declaration.*
+gc1 = varset
+export varset
+hide script_declaration.gc*

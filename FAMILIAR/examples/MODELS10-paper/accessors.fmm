@@ -1,0 +1,14 @@
+gc3 = FM ( GraphicCard: DirectX Speed Bus Multi; 
+                                 DirectX: (v11 | v10dot1) ; Speed: n1000 ; Bus: n256 ; )
+f1 = parent v11 // f1 refers to feature named 'DirectX' in gc3
+
+f2 = root gc3 // f2 refers to feature named 'GraphicCard' in gc3
+
+s1 = name f2 // s1 is a string "GraphicCard"
+
+fs = children f1 // fs refers to the set of features named 'v11' and 'v10dot1' in gc3
+
+nfs = size fs
+
+
+

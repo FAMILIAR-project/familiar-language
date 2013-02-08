@@ -1,0 +1,4 @@
+conf1 = configuration gc1
+b1 = select Multi in conf1 // feature Multi of gc3 is selected
+b2 = deselect Multi in conf1 // override the previous selection
+b3 = unselect Multi in conf1 // Multi is neither selected or deselected

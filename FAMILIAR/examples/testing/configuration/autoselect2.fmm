@@ -1,0 +1,62 @@
+fm1 = FM (A: [B] [C] [D] E ; )
+c1 = configuration fm1
+
+sc1 = selectedF c1 // A, E
+nsc1 = size sc1 
+nsc1Expected = 2
+assert (nsc1 eq nsc1Expected)
+
+uc1 = unselectedF c1 // B, C, D
+
+nuc1 = size uc1 
+nuc1Expected = 3 
+assert (nuc1 eq nuc1Expected)
+
+autoSelect c1 MAX // A, B, C, D, E
+nsc11 = selectedF c1
+nftfm1 = size fm1.*
+assert (nsc11 eq nftfm1)
+
+fm2 = FM (U: X Y [Z] [W]; X : (F|G|H); Y : (I|J|K|L)+ ; )
+
+c2 = configuration fm2
+autoSelect c2 MIN // U, X, Y, F or G or H, I or J or K or L
+sc2 = selectedF c2
+nsc2 = size sc2
+nsc2Expected = 5
+assert (nsc2 eq nsc2Expected) 
+
+ 
+c3 = configuration fm2
+autoSelect c3 MAX // U, X, Y, Z, W, F or G or H, I, J, K, L
+sc3 = selectedF c3
+nsc3 = size sc3
+nsc3Expected = 10
+assert (nsc3 eq nsc3Expected) 
+
+c6 = configuration fm2
+select Z in c6
+select I in c6
+deselect W in c6
+autoSelect c6 RANDOM // populate c6 with current selected/deselected features
+
+c7 = configuration fm2
+deselect Z in c7
+deselect W in c7
+select F in c7
+autoSelect c7 // by default, autoSelect uses the RANDOM mode
+bc7 = isComplete c7
+bbc7 = isValid c7
+assert (bc7)
+assert (bbc7)
+
+c8 = configuration fm2
+deselect W in c7 
+bc8 = isComplete c8 
+FALSE = false
+assert (bc8 eq FALSE)
+
+fm3 = FM (U: X Y [Z] [W]; X : (F|G|H); Y : (I|J|K|L)+ ; W : [T] [A] [B]; )
+
+c10 = configuration fm3
+deselect Z W in c10

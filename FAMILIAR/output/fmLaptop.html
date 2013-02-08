@@ -1,0 +1,279 @@
+<html>
+		  <head>
+		    <title>Feature Model VisualizationfmLaptop</title>
+		    <link type="text/css" rel="stylesheet" href="ex.css?3.2"/>
+		    <script type="text/javascript" src="../protovis/protovis-r3.2.js"></script>
+		    <script type="text/javascript" src="../output/fmLaptop.js"></script>
+		    <style type="text/css">
+
+		#fig {
+		  width: 800px;
+		  height: 700px ;
+		}
+
+		    </style>
+		  </head>
+		  <body><div id="center"><div id="fig">
+		    <script type="text/javascript+protovis">
+
+function sunburstLayout() {
+var vis = new pv.Panel()
+    .width(900)
+    .height(900)
+    .bottom(-80);
+
+var partition = vis.add(pv.Layout.Partition.Fill)
+    .nodes(pv.dom(flare).root("flare").nodes())
+    .size(function(d) d.nodeValue)
+    .order("descending")
+    .orient("radial");
+
+partition.node.add(pv.Wedge)
+    .fillStyle(pv.Colors.category19().by(function(d) d.parentNode && d.parentNode.nodeName))
+    .strokeStyle("#fff")
+    .lineWidth(.5);
+
+partition.label.add(pv.Label)
+    .visible(function(d) d.angle * d.outerRadius >= 6);
+
+vis.render();
+
+/* Update the layout's size method and re-render. */
+function update(method) {
+  switch (method) {
+    case "byte": partition.size(function(d) d.nodeValue); break;
+    case "file": partition.size(function(d) d.firstChild ? 0 : 1); break;
+  }
+  vis.render();
+}
+
+}
+
+function icicleLayout() {
+var vis = new pv.Panel()
+    .width(900)
+    .height(300)
+    .bottom(30);
+
+var layout = vis.add(pv.Layout.Partition.Fill)
+    .nodes(pv.dom(flare).root("flare").nodes())
+    .order("descending")
+    .orient("top")
+    .size(function(d) d.nodeValue);
+
+layout.node.add(pv.Bar)
+    .fillStyle(pv.Colors.category19().by(function(d) d.parentNode && d.parentNode.nodeName))
+    .strokeStyle("rgba(255,255,255,.5)")
+    .lineWidth(1)
+    .antialias(false);
+
+layout.label.add(pv.Label)
+    .textAngle(-Math.PI / 2)
+    .visible(function(d) d.dx > 6);
+
+vis.render();
+}
+
+function indentedLayout() {
+var root = pv.dom(flare)
+    .root("flare")
+    .sort(function(a, b) pv.naturalOrder(a.nodeName, b.nodeName));
+
+/* Recursively compute the package sizes. */
+root.visitAfter(function(n) {
+  if (n.firstChild) {
+    n.nodeValue = pv.sum(n.childNodes, function(n) n.nodeValue);
+  }
+});
+
+var vis = new pv.Panel()
+    .width(260)
+    .height(function() (root.nodes().length + 1) * 12)
+    .margin(5);
+
+var layout = vis.add(pv.Layout.Indent)
+    .nodes(function() root.nodes())
+    .depth(12)
+    .breadth(12);
+
+layout.link.add(pv.Line);
+
+var node = layout.node.add(pv.Panel)
+    .top(function(n) n.y - 6)
+    .height(12)
+    .right(6)
+    .strokeStyle(null)
+    .events("all")
+    .event("mousedown", toggle);
+
+node.anchor("left").add(pv.Dot)
+    .strokeStyle("#1f77b4")
+    .fillStyle(function(n) n.toggled ? "#1f77b4" : n.firstChild ? "#aec7e8" : "#ff7f0e")
+    .title(function t(d) d.parentNode ? (t(d.parentNode) + "." + d.nodeName) : d.nodeName)
+  .anchor("right").add(pv.Label)
+    .text(function(n) n.nodeName);
+
+node.anchor("right").add(pv.Label)
+    .textStyle(function(n) n.firstChild || n.toggled ? "#aaa" : "#000")
+    .text(function(n) (n.nodeValue >> 10) + "KB");
+
+vis.render();
+
+/* Toggles the selected node, then updates the layout. */
+function toggle(n) {
+  n.toggle(pv.event.altKey);
+  return layout.reset().root;
+}
+
+}
+
+function dendogramsLayout() {
+		var vis = new pv.Panel()
+		    .width(600)
+		    .height(1800)
+		    .left(40)
+		    .right(160)
+		    .top(10)
+		    .bottom(10);
+
+		var layout = vis.add(pv.Layout.Cluster)
+		    .nodes(pv.dom(flare)
+		        .nodes())
+		    .group(true)
+		    .orient("left");
+
+		layout.link.add(pv.Line)
+		    .strokeStyle("#ccc")
+		    .lineWidth(1)
+		    .antialias(false);
+
+		layout.node.add(pv.Dot)
+		    .fillStyle(function(n) n.firstChild ? "#aec7e8" : "#ff7f0e");
+
+		layout.label.add(pv.Label);
+
+		vis.render();
+
+}
+
+function treeLayout() {
+var vis = new pv.Panel()
+    .width(800)
+    .height(800)
+    .left(75)
+    .right(-75)
+    .top(-30)
+    .bottom(-80);
+
+var tree = vis.add(pv.Layout.Tree)
+    .nodes(pv.dom(flare).root("flare").nodes())
+    .depth(85)
+    .breadth(7.25)
+    .orient("radial");
+
+tree.link.add(pv.Line);
+
+tree.node.add(pv.Dot)
+    .fillStyle(function(n) n.firstChild ? "#aec7e8" : "#ff7f0e");
+
+tree.label.add(pv.Label);
+
+vis.render();
+}
+
+function enclosureLayout() {
+/* For pretty number formatting. */
+var format = pv.Format.number();
+
+var vis = new pv.Panel()
+    .width(796)
+    .height(796)
+    .margin(2);
+
+var pack = vis.add(pv.Layout.Pack)
+    .nodes(pv.dom(flare).root("flare").nodes())
+    .size(function(d) d.nodeValue);
+
+pack.node.add(pv.Dot)
+    .fillStyle(function(d) d.firstChild ? "rgba(31, 119, 180, .25)" : "#ff7f0e")
+    .title(function(d) d.nodeName + (d.firstChild ? "" : ": " + format(d.nodeValue)))
+    .lineWidth(1);
+
+pack.label.add(pv.Label)
+    .visible(function(d) !d.firstChild)
+    .text(function(d) d.nodeName.substring(0, Math.sqrt(d.nodeValue) / 20));
+
+vis.render();
+}
+
+function treemapLayout() {
+/** Computes the full class name of a given node. */
+function title(d) {
+  return d.parentNode ? (title(d.parentNode) + "." + d.nodeName) : d.nodeName;
+}
+
+var re = "",
+    color = pv.Colors.category19().by(function(d) d.parentNode.nodeName)
+    nodes = pv.dom(flare).root("flare").nodes();
+
+var vis = new pv.Panel()
+    .width(860)
+    .height(568);
+
+var treemap = vis.add(pv.Layout.Treemap)
+    .nodes(nodes)
+    .round(true);
+
+treemap.leaf.add(pv.Panel)
+    .fillStyle(function(d) color(d).alpha(title(d).match(re) ? 1 : .2))
+    .strokeStyle("#fff")
+    .lineWidth(1)
+    .antialias(false);
+
+treemap.label.add(pv.Label)
+    .textStyle(function(d) pv.rgb(0, 0, 0, title(d).match(re) ? 1 : .2));
+
+vis.render();
+
+/** Counts the number of matching classes, updating the title element. */
+function count() {
+  var classes = 0, bytes = 0, total = 0;
+  for (var i = 0; i < nodes.length; i++) {
+    var n = nodes[i];
+    if(n.firstChild) continue;
+    total += n.nodeValue;
+    if (title(n).match(re)) {
+      classes++;
+      bytes += n.nodeValue;
+    }
+  }
+  var percent = bytes / total * 100;
+}
+
+/** Updates the visualization and count when a new query is entered. */
+function update(query) {
+  if (query != re) {
+    re = new RegExp(query, "i");
+    count();
+    vis.render();
+  }
+}
+
+count();
+}
+
+</script> <div class="header">
+      <b>Layout:</b>
+      <select onchange="layoutValue = this.value; eval(layoutValue);">
+        <option value="sunburstLayout();" >sunburstLayout</option>
+        <option value="icicleLayout();" >icicleLayout</option>
+        <option value="indentedLayout();" >indentedLayout</option>
+        <option value="dendogramsLayout();" selected="true">dendogramsLayout</option>
+        <option value="treeLayout();" >treeLayout</option>
+        <option value="enclosureLayout();" >enclosureLayout</option>
+        <option value="treemapLayout();" >treemapLayout</option>
+      </select>
+    </div><script>
+		    </script>
+		  </div></div></body>
+		</html>

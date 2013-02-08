@@ -1,0 +1,24 @@
+digraph G {
+  Language;
+  Evaluator;
+  Optimizer;
+  Shortcircuit;
+  Machinesemantics;
+  Evaluationsemantics;
+  SAL;
+  0;
+  SimpleArithmetic;
+  Constantfolding;
+  1;
+  Conditional;
+  Language -> SAL;
+  Machinesemantics -> Evaluator;
+  Shortcircuit -> Optimizer;
+  Optimizer -> SAL;
+  Constantfolding -> Optimizer;
+  Evaluationsemantics -> Evaluator;
+  Evaluator -> SAL;
+  SAL -> 1;
+  Conditional -> Language;
+  SimpleArithmetic -> Language;
+}

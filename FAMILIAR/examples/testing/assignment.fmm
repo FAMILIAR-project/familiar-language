@@ -1,0 +1,19 @@
+// assignment, references, etc.
+a = FM (A : B [C] [E] F ;)
+b = FM (A : B C; }
+sab = {a b}
+a = merge union { a b }
+c = a
+assert (c eq a)
+//assert (c eqref a) // succeed
+d = copy a
+assert (c eq d)
+//assert (d eqref a) // fail: copy of 'a'
+a = rename_feature a::F "Fprime"
+assert (a neq c)
+//assert (c eqref a) // fail: a is a new feature model
+assert (d eq c)
+foreach (s in sab) do
+	s = rename_feature s::C as "X" // returns a new feature model
+end
+// printinfo sab

@@ -1,0 +1,19 @@
+graph G {
+  ContentManagement;
+  Search;
+  PlatformType;
+  0;
+  1;
+  Categorization;
+  UsersInteraction;
+  DiscussionBoards;
+  DiscussionBoards -- UsersInteraction;
+  Categorization -- ContentManagement;
+  Search -- ContentManagement;
+  ContentManagement -- 1;
+  Search -- 1;
+  PlatformType -- 1;
+  Categorization -- 1;
+  UsersInteraction -- 1;
+  DiscussionBoards -- 1;
+}

@@ -1,0 +1,8 @@
+graph G {
+  file_upload;
+  0;
+  user_localize;
+  1;
+  user_localize -- 1;
+  file_upload -- 1;
+}

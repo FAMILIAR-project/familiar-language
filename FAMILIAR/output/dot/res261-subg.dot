@@ -1,0 +1,11 @@
+graph G {
+  FireControl;
+  Siren;
+  PredefinedValues;
+  0;
+  1;
+  FireControl -- 1;
+  Siren -- FireControl;
+  Siren -- 1;
+  PredefinedValues -- 1;
+}

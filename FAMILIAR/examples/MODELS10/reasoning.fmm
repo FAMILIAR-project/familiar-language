@@ -1,0 +1,17 @@
+conf2 = copy conf1
+nb = card gc1
+b1 = valid? conf1
+b2 = compare gc1 gc2 // refactoring
+b3 = compare conf1 conf2 // compare the set of features selected?!
+
+
+
+/*
+\begin{Verbatim}[commandchars=@\[\],numbers=left,firstnumber=1,stepnumber=1]
+conf2 = copy conf1
+nb = card gc1
+b1 = valid conf1
+b2 = compare gc1 gc2
+b3 = compare conf1 conf2
+\end{Verbatim}
+*/

@@ -1,0 +1,11 @@
+run "aggregateRepository"
+
+// order does not matter
+
+fm6 = aggregate fm1 fm2 fm3 fm4
+fm7 = aggregate fm3 fm1 fm4 fm2
+
+cmp = compare fm6 fm7
+assert (cmp eq REFACTORING)  
+
+exit

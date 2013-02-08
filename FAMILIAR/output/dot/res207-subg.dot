@@ -1,0 +1,8 @@
+graph G {
+  person;
+  0;
+  1;
+  unemployment;
+  person -- 1;
+  unemployment -- 1;
+}

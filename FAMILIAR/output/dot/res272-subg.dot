@@ -1,0 +1,12 @@
+graph G {
+  Search;
+  connected;
+  cycle;
+  shortest;
+  0;
+  1;
+  Search -- 1;
+  connected -- 1;
+  cycle -- 1;
+  shortest -- 1;
+}

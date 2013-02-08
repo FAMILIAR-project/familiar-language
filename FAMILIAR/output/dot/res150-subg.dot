@@ -1,0 +1,8 @@
+graph G {
+  HELP;
+  ANALYZER;
+  0;
+  1;
+  HELP -- 1;
+  ANALYZER -- 1;
+}

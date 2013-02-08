@@ -1,0 +1,66 @@
+<feature_model name="fmMerle">
+<meta>
+<data name="description"/>
+<data name="creator"/>
+<data name="address"/>
+<data name="email"/>
+<data name="phone"/>
+<data name="website"/>
+<data name="organization"/>
+<data name="department"/>
+<data name="date"/>
+<data name="reference"/>
+</meta>
+<feature_tree>
+:r FraSCAti(_r0)
+	:m SCAParser(_r1)
+		:m Metamodel(_r2)
+			:m SCA(_r3)
+			:o MMFraSCAti(_r4)
+			:o Tuscany(_r5)
+	:m AssemblyFactory(_r6)
+		:m Implementation(_r7)
+			:o OSGiImplementation(_r8)
+				:g [1,1]
+					: Felix(_r9)
+					: Equinox(_r10)
+			:o Script(_r11)
+			:o Fractal(_r12)
+			:o Spring(_r13)
+			:o BPEL(_r14)
+		:m Interface(_r15)
+			:o WSDL(_r16)
+			:o native(_r17)
+		:m Binding(_r18)
+			:o http(_r19)
+			:o jsonrpc(_r20)
+			:o rest(_r21)
+			:o rmi(_r22)
+			:o ws(_r23)
+			:o UPnP(_r24)
+		:m PropertyType(_r25)
+			:o jaxb(_r26)
+	:m ComponentFactory(_r27)
+		:m MembraneFactory(_r28)
+			:m tinfi_ooMembraneFactory(_r29)
+			:o julia(_r30)
+			:o OSGiMembrane(_r31)
+		:m MembraneGeneration(_r32)
+			:m JavaCompiler(_r33)
+				:g [1,1]
+					: JDT(_r34)
+					: JDK6(_r35)
+			:m MembraneGenerator(_r36)
+				:o tinfi_oo(_r37)
+				:o OSGI(_r38)
+</feature_tree>
+<constraints>
+C0:~_r8 or _r4
+C1:~_r11 or _r4
+C2:~_r21 or _r4
+C3:~_r22 or _r4
+C4:~_r20 or _r4
+C5:~_r19 or _r5
+C6:~_r12 or _r4
+</constraints>
+</feature_model>

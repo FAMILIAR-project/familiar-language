@@ -1,0 +1,41 @@
+fmEquivalent = FM (GA : G [TA] A  ; 
+				G : WN DN [CD] [SC]; 
+				WN : (W|UW) ;
+				DN : (D|UD) ;
+				TA : FAKEFS ; 
+				FAKEFS : (BFS|DFS); 
+				A : (C|SC|V|M|S|CD)+ ;
+				CD -> DFS ; 
+				SC -> DFS ; 
+				)
+
+
+
+
+
+fmEquivalentStillNoGood = FM (GA : A DN G WN ; 
+				A : (TA|W)+ ;
+				TA : [C] [UW] [V] FAKEFS;
+				FAKEFS : (BFS|DFS) ;
+				DFS : [CD] [SC];  
+				W : (M|S) ; 
+				WN : (D|UD) ;
+				C -> UD ;
+				M -> UD ; 
+				S -> D ;
+				SC -> D ;
+				(W & !UW) | (!UW & W) ;
+				)
+
+
+fmEquivalentMartinNoGood = FM (GA : A DN G WN ; 
+				A : (TA|W)+ ;
+				TA : [C] [UW] [V] (BFS|DFS) ;
+				DFS : [CD] [SC];  
+				W : (M|S) ; 
+				WN : (D|UD) ;
+				C -> UD ;
+				M -> UD ; 
+				S -> D ;
+				SC -> D ;
+				)				

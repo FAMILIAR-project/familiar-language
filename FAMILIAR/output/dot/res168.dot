@@ -1,0 +1,36 @@
+digraph G {
+  Individualsoftware;
+  FunktionsabhaengigeSoftware;
+  ClientServerArchitektur;
+  Anwendungssoftware;
+  Managementsoftware;
+  BranchenspezifischeSoftware;
+  Standardsoftware;
+  BranchenunabhaengigeSoftware;
+  Basissoftware;
+  ServiceorientierteArchitektur;
+  Software;
+  OperativeSoftware;
+  0;
+  Systemsoftware;
+  Officesoftware;
+  1;
+  FunktionsorientierteSoftware;
+  FunktionsuebergreifendeSoftware;
+  ClientServerArchitektur -> FunktionsorientierteSoftware;
+  Standardsoftware -> Anwendungssoftware;
+  Managementsoftware -> FunktionsorientierteSoftware;
+  Software -> 1;
+  FunktionsuebergreifendeSoftware -> FunktionsorientierteSoftware;
+  Officesoftware -> Standardsoftware;
+  Anwendungssoftware -> Software;
+  BranchenunabhaengigeSoftware -> FunktionsorientierteSoftware;
+  ServiceorientierteArchitektur -> FunktionsorientierteSoftware;
+  OperativeSoftware -> FunktionsorientierteSoftware;
+  Basissoftware -> Standardsoftware;
+  Systemsoftware -> Software;
+  FunktionsorientierteSoftware -> Standardsoftware;
+  BranchenspezifischeSoftware -> FunktionsorientierteSoftware;
+  FunktionsabhaengigeSoftware -> FunktionsorientierteSoftware;
+  Individualsoftware -> Anwendungssoftware;
+}

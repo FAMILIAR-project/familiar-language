@@ -1,0 +1,30 @@
+digraph G {
+  Rich;
+  Bluetooth;
+  Thin;
+  MoviesApp;
+  CachePolicy;
+  GPS;
+  BuiltIn;
+  Remote;
+  Wifi;
+  Local;
+  DB;
+  GUI;
+  0;
+  1;
+  Network;
+  MoviesApp -> 1;
+  Remote -> DB;
+  Rich -> GUI;
+  DB -> MoviesApp;
+  Bluetooth -> Network;
+  Network -> MoviesApp;
+  Local -> DB;
+  BuiltIn -> GPS;
+  CachePolicy -> Remote;
+  Thin -> GUI;
+  GPS -> MoviesApp;
+  GUI -> MoviesApp;
+  Wifi -> Network;
+}

@@ -1,0 +1,12 @@
+run "./examples/foo/fm1.fmm"
+run "./examples/foo/fm2.fmm"
+fm3 = merge sunion { fm1 fm2 }
+fm4 = merge intersection { fm1 fm2 }
+compare fm1 fm2
+valid? fm4
+run "bighierarchy1.fmm"
+compare bigfmOne bigfmTwo
+fm5 = FM ( A: B C? ; )
+fm6 = FM ( A: B C ; )
+fm1 = FM ( A : E? F; )
+valid? fm1

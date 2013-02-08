@@ -1,0 +1,8 @@
+graph G {
+  MessageBased;
+  0;
+  1;
+  Timeout;
+  MessageBased -- 1;
+  Timeout -- 1;
+}

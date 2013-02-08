@@ -1,0 +1,1 @@
+QoSFM = FM ( QoS : (ComputerLoad|ResponseTime|Quality) ; Quality : (Precision|Sensitivity)+ ; )

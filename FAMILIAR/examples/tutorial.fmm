@@ -1,0 +1,19 @@
+fm1 = FM ( A : B [C] ; B : (D|E|F)+ ; C : (I|J)+ ; )
+n = counting fm1
+renameFeature fm1.B as "Bbis"
+removeFeature fm1.C
+//gdisplay fm1
+c1 = configuration fm1 
+autoSelect c1 MIN 
+c2 = configuration fm1
+autoSelect c2 MAX
+ls
+
+fm3 = asFM c2
+
+gdisplay fm3 
+
+
+
+//selectedFeatures = selectedF c1
+//println selectedFeatures

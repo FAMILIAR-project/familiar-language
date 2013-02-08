@@ -1,0 +1,28 @@
+graph G {
+  ForceFeedback;
+  Input;
+  MobileGame;
+  Touchscreen;
+  SpeechInput;
+  0;
+  MovementDetection;
+  Keypad;
+  1;
+  MobileGame -- 1;
+  MovementDetection -- Input;
+  Input -- MobileGame;
+  SpeechInput -- Input;
+  Keypad -- Input;
+  Touchscreen -- Input;
+  ForceFeedback -- MobileGame;
+  Input -- 1;
+  Touchscreen -- MobileGame;
+  Touchscreen -- 1;
+  SpeechInput -- MobileGame;
+  SpeechInput -- 1;
+  MovementDetection -- MobileGame;
+  MovementDetection -- 1;
+  Keypad -- MobileGame;
+  Keypad -- 1;
+  ForceFeedback -- 1;
+}

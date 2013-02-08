@@ -1,0 +1,26 @@
+digraph G {
+  Detail;
+  ChangeServer;
+  VCRInterf;
+  PlayImm;
+  SelectMovie;
+  StartPlayer;
+  Quit;
+  StartMovie;
+  StopMovie;
+  0;
+  VODPlayer;
+  1;
+  Pause;
+  PlayImm -> VODPlayer;
+  StartPlayer -> VODPlayer;
+  Quit -> VODPlayer;
+  SelectMovie -> VODPlayer;
+  VCRInterf -> VODPlayer;
+  ChangeServer -> SelectMovie;
+  StopMovie -> StartMovie;
+  Pause -> VODPlayer;
+  StartMovie -> VODPlayer;
+  VODPlayer -> 1;
+  Detail -> SelectMovie;
+}

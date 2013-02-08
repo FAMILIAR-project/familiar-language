@@ -1,0 +1,33 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Jan 13, 2012 - 2:41 PM  -->
+<feature_model name="e-shop">
+<meta>
+<data name="description">family of e-shop store, adapted from Wikipedia, including EXCLUDES and REQUIRES constraints, and extra feature called public report</data>
+<data name="creator">Samuel Sepulveda, adapted from Wikipedia</data>
+<data name="address">Temuco, Chile</data>
+<data name="email">ssepulve@ufro.cl</data>
+<data name="phone"></data>
+<data name="website">ceisufro.cl</data>
+<data name="organization">DIS-CEIS-UFRO</data>
+<data name="department"></data>
+<data name="date">July 2011</data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r eShop(_r)
+	:m catalogue(_r_1)
+	:m payment(_r_2)
+		:g (_r_2_5) [1,*] 
+			: bank trasnsfer(_r_2_5_6)
+			: credit card(_r_2_5_7)
+	:m security(_r_3)
+		:g (_r_3_8) [1,1] 
+			: high(_r_3_8_9)
+			: standard(_r_3_8_10)
+	:o search(_r_4)
+		:o public report(_r_4_11)
+</feature_tree>
+<constraints>
+constraint_1:~_r_2_5_7 or _r_3_8_9
+constraint_4:~_r_3_8_9 or ~_r_4_11
+</constraints>
+</feature_model>

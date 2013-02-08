@@ -1,0 +1,217 @@
+<feature_model name="deploymentFM">
+<meta>
+<data name="description"/>
+<data name="creator"/>
+<data name="address"/>
+<data name="email"/>
+<data name="phone"/>
+<data name="website"/>
+<data name="organization"/>
+<data name="department"/>
+<data name="date"/>
+<data name="reference"/>
+</meta>
+<feature_tree>
+:r deploymentFM(_r0)
+	:m VSApplicationRequirement(_r1)
+		:m Task(_r2)
+			:g [1,*]
+				: Counting(_r3)
+				: Tracking(_r4)
+				: BehaviourRecognition(_r5)
+					:o IntrusionDetection(_r6)
+		:m ObjectOfInterest(_r7)
+			:m Sort(_r8)
+				:g [1,*]
+					: Natural(_r9)
+						:m Person(_r10)
+					: Manufactured(_r11)
+						:m Vehicle(_r12)
+			:m Cardinality(_r13)
+				:g [1,1]
+					: SingleObject(_r14)
+					: GroupOfObjects(_r15)
+			:m Mobility(_r16)
+				:g [1,1]
+					: Movable(_r17)
+					:g [1,1]
+							: ExternallyPropelled(_r18)
+							: SelfPropelled(_r19)
+					: Immovable(_r20)
+		:m Scene(_r21)
+			:m Environment(_r22)
+				:m LightingType(_r23)
+				:g [1,*]
+						: ArtificialLight(_r24)
+						: NaturalLight(_r25)
+				:m LightingConditions(_r26)
+				:g [1,*]
+						: Indoors(_r27)
+						: Outdoors(_r28)
+							:m TimeOfDay(_r29)
+							:g [1,*]
+									: Day(_r30)
+									: Night(_r31)
+				:o Noise(_r32)
+					:o LightingVariation(_r33)
+					:g [1,*]
+							: Flashes(_r34)
+							: HeadLight(_r35)
+							: Shadows(_r36)
+					:o BackgroundMovement(_r37)
+						:g [1,*]
+							: SandOrDust(_r38)
+							: SeaOceanWaves(_r39)
+							: VegetationMovement(_r40)
+			:m APrioriKnowledge(_r41)
+				:m Scenery3DModel(_r42)
+				:o BehaviourLibrary(_r43)
+				:o DeploymentArchitecture(_r44)
+					:o ProgrammerDefined(_r45)
+					:m Sensor(_r46)
+						:m SensorProperty(_r47)
+							:g [1,1]
+								: MonoSensor(_r48)
+								: MultiSensor(_r49)
+						:m SensorView(_r50)
+						:g [1,1]
+								: SideView(_r51)
+								: TopView(_r52)
+								: NormalView(_r53)
+						:m Camera(_r54)
+							:m DepthOfField(_r55)
+							:m FieldOfView(_r56)
+								:g [1,1]
+									: Large(_r57)
+									: Narrow(_r58)
+							:m Resolution(_r59)
+							:m FramesPerSecond(_r60)
+								:g [1,1]
+									: HighFrameRate(_r61)
+										:m VingtCinqFrSec(_r62)
+									: LowFrameRate(_r63)
+									: IntermediateFrameRate(_r64)
+							:m CameraType(_r65)
+							:g [1,1]
+									: BlackAndWhite(_r66)
+									: Color(_r67)
+									: Infrared(_r68)
+					:m Server(_r69)
+					:o ClientDefined(_r70)
+		:m QualityOfService(_r71)
+			:g [1,*]
+				: ComputerLoad(_r72)
+				: ResponseTime(_r73)
+				: Quality(_r74)
+				:g [1,*]
+						: Sensitivity(_r75)
+						: Precision(_r76)
+							:o LessPrecision(_r77)
+	:m VSPlatform(_r78)
+		:m FrameToFrameTracking(_r79)
+		:m SegmentationModule(_r80)
+			:m KernelFunction(_r81)
+				:o ShadowElimination(_r82)
+				:m ColorType(_r83)
+					:g [1,1]
+						: GreyLevel(_r84)
+						: SystemColor(_r85)
+				:m ObjectAspect(_r86)
+					:g [1,1]
+						: Edge(_r87)
+						: Region(_r88)
+			:o SegmFineTune(_r89)
+			:m TraversalAlgorithm(_r90)
+				:m GridStep(_r91)
+					:g [1,1]
+						: HighGridStep(_r92)
+						: LowGridStep(_r93)
+				:m TraversalParameters(_r94)
+					:g [1,*]
+						: WithWindow(_r95)
+						: WithMask(_r96)
+						: Fast(_r97)
+			:m Threshold(_r98)
+				:g [1,1]
+					: LowThreshold(_r99)
+					: MidThreshold(_r100)
+					: HighThreshold(_r101)
+		:m ImageAcquisition(_r102)
+		:o ReferenceImageUpdating(_r103)
+		:o TrackingDataFusion(_r104)
+		:m Clustering(_r105)
+			:g [1,1]
+				: DistanceRGBAnd3DClustering(_r106)
+				: FastClustering(_r107)
+				: KMeansClustering(_r108)
+		:o LongTermTracking(_r109)
+		:m ClassificationModule(_r110)
+			:o Split(_r111)
+				:g [1,1]
+					: SplitStandard(_r112)
+					: SplitGravityCenter(_r113)
+			:o Contour(_r114)
+			:o Merge(_r115)
+				:g [1,1]
+					: FusionGravityCenter(_r116)
+					: FusionStandard(_r117)
+			:m ClassificationStandard(_r118)
+				:o Density(_r119)
+			:m Model(_r120)
+				:g [1,1]
+					: ModelType(_r121)
+						:g [1,*]
+							: OmegaModel(_r122)
+							: ThreeDModel(_r123)
+					: Ellipse(_r124)
+					: Shape(_r125)
+					: Parallelepiped(_r126)
+					: GravityCenter(_r127)
+		:o ScenarioRecognition(_r128)
+</feature_tree>
+<constraints>
+C0:~_r4 or _r61
+C1:_r127 or _r112
+C2:~_r49 or _r109
+C3:~_r76 or _r62
+C4:~_r104 or _r49
+C5:~_r15 or _r96
+C6:~_r3 or _r76
+C7:_r53 or ~_r51 or _r109
+C8:~_r3 or _r57
+C9:~_r27 or _r88
+C10:~_r28 or _r87
+C11:~_r12 or _r17
+C12:~_r92 or ~_r124
+C13:~_r49 or _r104
+C14:~_r128 or _r24
+C15:~_r33 or _r87
+C16:~_r3 or _r93
+C17:~_r68 or ~_r57
+C18:~_r3 or _r103
+C19:~_r95 or ~_r124
+C20:~_r92 or ~_r87
+C21:~_r87 or ~_r119
+C22:~_r36 or _r82
+C23:~_r10 or _r19
+C24:_r34 or ~_r35 or _r114
+C25:~_r6 or _r63
+C26:~_r67 or _r85
+C27:~_r95 or ~_r87
+C28:~_r24 or _r103
+C29:_r89 or _r77
+C30:~_r24 or _r128
+C31:~_r89 or ~_r125
+C32:~_r10 or _r122
+C33:~_r73 or _r109
+C34:~_r10 or _r17
+C35:~_r77 or ~_r89
+C36:_r95 or ~_r77
+C37:~_r3 or _r62
+C38:_r91 or ~_r77
+C39:_r127 or _r117
+C40:~_r75 or _r99
+C41:~_r52 or ~_r123
+C42:~_r73 or _r4
+</constraints>
+</feature_model>

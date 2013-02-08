@@ -1,0 +1,15 @@
+graph G {
+  modem;
+  wap;
+  0;
+  1;
+  net;
+  slides;
+  remote;
+  wap -- net;
+  net -- 1;
+  slides -- 1;
+  remote -- 1;
+  modem -- 1;
+  wap -- 1;
+}

@@ -1,0 +1,35 @@
+graph G {
+  all_lines;
+  input_output;
+  adt;
+  compression;
+  ascendant;
+  insensitive;
+  file;
+  0;
+  1;
+  order;
+  sensitive;
+  arch_style;
+  circular_shift;
+  implicit;
+  compression -- circular_shift;
+  file -- input_output;
+  adt -- arch_style;
+  ascendant -- order;
+  all_lines -- compression;
+  all_lines -- circular_shift;
+  input_output -- 1;
+  file -- 1;
+  order -- 1;
+  sensitive -- 1;
+  arch_style -- 1;
+  circular_shift -- 1;
+  implicit -- circular_shift;
+  all_lines -- 1;
+  adt -- 1;
+  compression -- 1;
+  ascendant -- 1;
+  insensitive -- 1;
+  implicit -- 1;
+}

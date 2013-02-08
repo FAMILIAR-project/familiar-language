@@ -1,0 +1,22 @@
+graph G {
+  PROCESSORandDATASTORAGE;
+  DEMULTIPLEXERandDESCRAMBLING;
+  POWERSUPPLY;
+  PowerLineControl;
+  YM_Test;
+  DATAINTERFACES;
+  0;
+  1;
+  YM_Test -- 1;
+  DATAINTERFACES -- YM_Test;
+  PROCESSORandDATASTORAGE -- YM_Test;
+  PowerLineControl -- DATAINTERFACES;
+  DEMULTIPLEXERandDESCRAMBLING -- YM_Test;
+  POWERSUPPLY -- YM_Test;
+  PROCESSORandDATASTORAGE -- 1;
+  DEMULTIPLEXERandDESCRAMBLING -- 1;
+  POWERSUPPLY -- 1;
+  PowerLineControl -- YM_Test;
+  DATAINTERFACES -- 1;
+  PowerLineControl -- 1;
+}

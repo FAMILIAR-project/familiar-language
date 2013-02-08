@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fmprimitives:FeatureModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:fmprimitives="http://lero.ie/spl/fmprimitives.ecore" id="fm1S2T2" name="fm1S2T2">
+  <features id="A" name="A" featureHasSubfeature="//@primitives.0 //@primitives.1 //@primitives.2"/>
+  <features id="D" name="D" featureHasParent="//@primitives.2"/>
+  <features id="C" name="C" featureHasParent="//@primitives.1"/>
+  <features id="B" name="B" featureHasParent="//@primitives.0"/>
+  <primitives xsi:type="fmprimitives:FeatureHasMandatorySubfeature" id="edge0" name="edge0" parent="//@features.0" subfeature="//@features.3"/>
+  <primitives xsi:type="fmprimitives:FeatureHasOptionalSubfeature" id="edge1" name="edge1" parent="//@features.0" subfeature="//@features.2"/>
+  <primitives xsi:type="fmprimitives:FeatureHasMandatorySubfeature" id="edge2" name="edge2" parent="//@features.0" subfeature="//@features.1"/>
+</fmprimitives:FeatureModel>

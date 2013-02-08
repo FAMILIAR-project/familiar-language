@@ -1,0 +1,10 @@
+graph G {
+  moving_mode;
+  0;
+  1;
+  move_do_undo_redo;
+  zoom_inout;
+  zoom_inout -- 1;
+  moving_mode -- 1;
+  move_do_undo_redo -- 1;
+}

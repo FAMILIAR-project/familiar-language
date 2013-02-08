@@ -1,0 +1,28 @@
+graph G {
+  ThreadSafety;
+  Stack;
+  ElementType;
+  Speed;
+  TypeCheck;
+  Float;
+  Value;
+  Counter;
+  0;
+  1;
+  Stack -- 1;
+  ElementType -- Stack;
+  Float -- ElementType;
+  Counter -- Stack;
+  ThreadSafety -- Stack;
+  ElementType -- 1;
+  Speed -- Stack;
+  TypeCheck -- Stack;
+  Float -- Stack;
+  Float -- 1;
+  Value -- Stack;
+  Counter -- 1;
+  ThreadSafety -- 1;
+  Speed -- 1;
+  TypeCheck -- 1;
+  Value -- 1;
+}

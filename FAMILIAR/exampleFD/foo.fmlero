@@ -1,0 +1,9 @@
+FeatureModel foo {
+	name Foooo
+	features {
+		Feature Ft1 {
+			name Ft1
+		}
+	}
+	
+}
