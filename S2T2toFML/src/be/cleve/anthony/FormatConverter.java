@@ -15,7 +15,6 @@ import ie.lero.spl.fmprimitives.OrGroup;
 import ie.lero.spl.fmprimitives.Requires;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.ListIterator;
 import java.util.Map;
 
