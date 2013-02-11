@@ -1,8 +1,8 @@
 /*
  * This file is part of the FAMILIAR (for FeAture Model scrIpt Language for manIpulation and Automatic Reasoning)
- * project (https://nyx.unice.fr/projects/familiar/).
+ * project (http://familiar-project.github.com/).
  *
- * Copyright (C) 2012
+ * Copyright (C) 2011 - 2013
  *     University of Nice Sophia Antipolis, UMR CNRS 6070, I3S Laboratory
  *     Colorado State University, Computer Science Department
  *     
@@ -138,6 +138,13 @@ public class TreeMLAction {
             try {
             	// Before saving the FM, add (or replace) it to the FAMILIAR environment, and validate it
             	FeatureModelVariable fmv = FamiliarConsole.INSTANCE.getLoadedFMV();
+            	if (null == fmv) {
+              		JOptionPane.showMessageDialog(FamiliarEditor.INSTANCE, 
+              	            "Error saving FM as " + f.getAbsolutePath() + "\nError: No current FeatureModelVariable.",
+              	            desc, JOptionPane.ERROR_MESSAGE);
+              		return;
+              	}
+            	
               	if (fmv.isValid()) {
               		new TreeMLWriter().writeGraph(FamiliarEditor.INSTANCE.getLoadedTree(), f);
               		FamiliarConsole.INSTANCE.addOrReplaceFMVariable(fmv);
@@ -170,7 +177,15 @@ public class TreeMLAction {
             this.putValue(AbstractAction.SMALL_ICON, Menu.createImageIcon("images/filesave.gif"));
         }
         public void actionPerformed(ActionEvent e) {
-        	if (null != mapLastSaved.get(Tab2EnvVar.INSTANCE.getCurrentFMVName())) {
+        	String fmvName = Tab2EnvVar.INSTANCE.getCurrentFMVName();
+        	if (null == fmvName) {
+        		JOptionPane.showMessageDialog(FamiliarEditor.INSTANCE, 
+                    "Error: File not saved. No current FeatureModelVariable.",
+                    desc, JOptionPane.ERROR_MESSAGE);
+        		return;
+        	} 
+        	
+        	if (null != mapLastSaved.get(fmvName)) {
         		saveXMLTree();
         	} else {
           		JOptionPane.showMessageDialog(FamiliarEditor.INSTANCE, 
@@ -183,7 +198,7 @@ public class TreeMLAction {
             try {
             	// Before saving the FM, add (or replace) it to the FAMILIAR environment, and validate it
             	FeatureModelVariable fmv = FamiliarConsole.INSTANCE.getLoadedFMV();
-              	if (fmv.isValid()) {
+              	if (null != fmv && fmv.isValid()) {
               		new TreeMLWriter().writeGraph(FamiliarEditor.INSTANCE.getLoadedTree(), 
               				mapLastSaved.get(fmv.getIdentifier()));
               		FamiliarConsole.INSTANCE.addOrReplaceFMVariable(fmv);

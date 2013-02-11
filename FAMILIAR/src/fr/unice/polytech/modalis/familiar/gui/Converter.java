@@ -1,8 +1,8 @@
 /*
  * This file is part of the FAMILIAR (for FeAture Model scrIpt Language for manIpulation and Automatic Reasoning)
- * project (https://nyx.unice.fr/projects/familiar/).
+ * project (http://familiar-project.github.com/).
  *
- * Copyright (C) 2012
+ * Copyright (C) 2011 - 2013
  *     University of Nice Sophia Antipolis, UMR CNRS 6070, I3S Laboratory
  *     Colorado State University, Computer Science Department
  *     
@@ -49,9 +49,10 @@ public class Converter {
 	// A simple, fast, and thread-safe singleton implementation.
 	public final static Converter INSTANCE = new Converter();
 
-	public static final String LABEL = "name";
+	public static final String NAME = "name";
 	public static final String SOLITARY = "solitary";
 	public static final String GROUP = "group";
+	public static final String CONSTRAINTS = "     CONSTRAINTS:     ";
 	
 	public static final int NOTAVAILABLE = -1;
 	public static final int MANDATORY = 0;
@@ -72,7 +73,7 @@ public class Converter {
 	
 	private Tree generateEmptyTree() {
 		Tree t = new Tree();
-		t.addColumn(LABEL, String.class);
+		t.addColumn(NAME, String.class);
 		t.addColumn(SOLITARY, int.class, NOTAVAILABLE);
 		t.addColumn(GROUP, int.class, NOTAVAILABLE);
 		return t;
@@ -81,7 +82,7 @@ public class Converter {
 	public Tree buildStartupDisplayFromPrefuseTree(String fmRootName) {
 		Tree t = generateEmptyTree();
 		Node root = t.addRoot();
-		root.setString(LABEL, null == fmRootName ? generateRootName() : fmRootName);
+		root.setString(NAME, null == fmRootName ? generateRootName() : fmRootName);
 		return t;
 	}
 	
@@ -107,7 +108,7 @@ public class Converter {
 			
 			Map<String, Node> nameToNode = new HashMap<String, Node>();
 			Node root = t.addRoot();
-			root.setString(LABEL, rootName);
+			root.setString(NAME, rootName);
 			nameToNode.put(rootName, root);
 	
 			convertFeatureGraph2PrefuseTree(fg, t, nameToNode);
@@ -116,13 +117,13 @@ public class Converter {
 			Set<Expression<String>> constraints = fm.getConstraints();
 			if (null != constraints && constraints.size() > 0) {
 				Node groupC = t.addNode();
-				groupC.setString(LABEL, "     CONSTRAINTS:     ");
+				groupC.setString(NAME, CONSTRAINTS);
 				groupC.setInt(GROUP, new Integer(CONSTRAINT));
 				t.addChildEdge(root, groupC);
 				Node parent = null;
 				for (Expression<String> expression : constraints) {
 					Node node = t.addNode();
-					node.setString(LABEL, expression.toString());
+					node.setString(NAME, expression.toString());
 					node.setInt(SOLITARY, new Integer(CONSTRAINT));
 					if (null != parent) {
 						t.addChildEdge(parent, node);
@@ -144,9 +145,9 @@ public class Converter {
 		// Solitaire Feature
 		if (NOTAVAILABLE != node.getInt(SOLITARY)) {
 			if (OPTIONAL == node.getInt(SOLITARY)) {
-				return "[" + node.getString(LABEL) + "]" + " ";
+				return "[" + node.getString(NAME) + "]" + " ";
 			} else if (MANDATORY == node.getInt(SOLITARY)) {
-				return node.getString(LABEL) + " ";
+				return node.getString(NAME) + " ";
 			} 
 		}
 		// Feature Group
@@ -155,7 +156,7 @@ public class Converter {
 			Node child=node.getFirstChild(); 
 			while (child!=null) {
 				stack.push(child);
-				group += child.getString(LABEL);
+				group += child.getString(NAME);
 				child=child.getNextSibling();
 				if (null != child) {
 					group += "|";
@@ -178,7 +179,7 @@ public class Converter {
 			Node node = stack.pop();
 			if (node.getChildCount() > 0 && NOTAVAILABLE == node.getInt(GROUP)
 					&& CONSTRAINT != node.getInt(SOLITARY)) {
-				sb.append(node.getString(LABEL) + " : ");
+				sb.append(node.getString(NAME) + " : ");
 				Node child=node.getFirstChild(); 
 				while (child!=null) {
 					stack.push(child);
@@ -202,7 +203,7 @@ public class Converter {
 			if (CONSTRAINT == child.getInt(GROUP) && child.getChildCount() > 0) {
 				constr = child.getFirstChild(); 
 				while (null != constr) {
-					sb.append(constr.getString(LABEL) + " ");
+					sb.append(constr.getString(NAME) + " ");
 					constr = constr.getFirstChild(); 
 					if (null != constr) {
 						sb.append("; ");
@@ -227,7 +228,7 @@ public class Converter {
 			return null;
 		}
 		if (null == root.getFirstChild()) {
-			return "FM ( " + root.getString(LABEL) + " ; )";
+			return "FM ( " + root.getString(NAME) + " ; )";
 		}
 		sb = new StringBuilder();
 		sb.append("FM ( ");
@@ -336,7 +337,7 @@ public class Converter {
 				boolean alreadyExists = nameToNode.containsKey(ftName);
 				if (!alreadyExists) {
 					node = t.addNode();
-					node.setString(LABEL, ftName);
+					node.setString(NAME, ftName);
 					nameToNode.put(ftName, node);
 				} else {
 					node = nameToNode.get(ftName);

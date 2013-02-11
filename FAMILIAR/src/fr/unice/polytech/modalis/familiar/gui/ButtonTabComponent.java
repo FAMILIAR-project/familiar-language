@@ -87,7 +87,7 @@ public class ButtonTabComponent extends JPanel {
         
         add(label);
         //add more space between the label and the button
-        label.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 5));
+        label.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 17));
         //tab button
         JButton button = new TabButton();
         add(button);
@@ -99,9 +99,9 @@ public class ButtonTabComponent extends JPanel {
 		private static final long serialVersionUID = 1L;
 
 		public TabButton() {
-            int size = 25;
+            int size = 22;
             setPreferredSize(new Dimension(size, size));
-            setToolTipText("Close this FM view");
+            setToolTipText("Close this view");
             //Make the button looks the same for all Laf's
             setUI(new BasicButtonUI());
             //Make it transparent
@@ -121,8 +121,8 @@ public class ButtonTabComponent extends JPanel {
         public void actionPerformed(ActionEvent e) {
         	if (Tab2EnvVar.INSTANCE.getTab().getTabCount() <= 1) {
         		JOptionPane.showMessageDialog(FamiliarEditor.INSTANCE, 
-    	            "There must be at least one active FM view.",
-    	            "FM View", JOptionPane.WARNING_MESSAGE);
+    	            "There must be at least one active tab.",
+    	            "Tab View", JOptionPane.WARNING_MESSAGE);
         		// If we are down to one tab only, do not allow closing operation
         		return;
         	}

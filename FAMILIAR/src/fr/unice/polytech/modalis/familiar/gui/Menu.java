@@ -1,8 +1,8 @@
 /*
  * This file is part of the FAMILIAR (for FeAture Model scrIpt Language for manIpulation and Automatic Reasoning)
- * project (https://nyx.unice.fr/projects/familiar/).
+ * project (http://familiar-project.github.com/).
  *
- * Copyright (C) 2012
+ * Copyright (C) 2011 - 2013
  *     University of Nice Sophia Antipolis, UMR CNRS 6070, I3S Laboratory
  *     Colorado State University, Computer Science Department
  *     
@@ -74,7 +74,7 @@ public class Menu {
     			String root = RuleEnforcer.onlyDigitsAndLetters(rootFeature.getText());
     			String fmvname = RuleEnforcer.onlyDigitsAndLetters(fmName.getText());
     			if (root.isEmpty() || fmvname.isEmpty() ||
-    					(null != FamiliarConsole.INSTANCE.getFMVariableByName(fmvname))) {
+    					(null != FamiliarConsole.INSTANCE.getVariableByName(fmvname))) {
     				JOptionPane.showMessageDialog(FamiliarEditor.INSTANCE, 
     					"Error creating new FM: Names are not valid or FM Name already exist. The change has not been committed.",
     					menuTitle, JOptionPane.ERROR_MESSAGE);
@@ -118,27 +118,35 @@ public class Menu {
         scriptMenu.add(new TreeMLAction.RunScriptAction());
         
         JMenu displayMenu = new JMenu("Display");
+        
+        final String showAll = "Show all loaded FMs and configurations";
+        final JMenuItem showAllMenuItem = new JMenuItem(showAll);
+        displayMenu.add(showAllMenuItem);
+        showAllMenuItem.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		FamiliarConsole.INSTANCE.showAllVariables();
+			}
+		});
+        
         final String switchTitle = "Display another FM";
         final JMenuItem switchMenuItem = new JMenuItem(switchTitle);
-     
         displayMenu.add(switchMenuItem);
         switchMenuItem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String[] fms = FamiliarConsole.INSTANCE.allFmvToStringArray();
-				if (null == fms) {
+				if (null == fms || fms.length < 2) {
 					JOptionPane.showMessageDialog(FamiliarEditor.INSTANCE, 
-				      "There should be at least two FM loaded before you can switch display among them.",
-				      switchTitle, JOptionPane.ERROR_MESSAGE);
+				      "There should be at least two FMs loaded before you can switch display among them.",
+				      showAll, JOptionPane.ERROR_MESSAGE);
 					return;
 				}
 			    String loadFM = (String) JOptionPane.showInputDialog(null, "Choose FM to switch display to...",
-			    	switchTitle, JOptionPane.QUESTION_MESSAGE, null, fms, fms[1]); // Initial choice
+			    		showAll, JOptionPane.QUESTION_MESSAGE, null, fms, fms[1]); // Initial choice
 			    if (null != loadFM) {
 		            Tab2EnvVar.INSTANCE.switchToNewTab(loadFM);
 			    }
 			}
 		});
-        
         
         final JCheckBoxMenuItem infoMenuItem = new JCheckBoxMenuItem("Displayed FM Info");
         // FM variable info text is shown by default on display
@@ -147,8 +155,8 @@ public class Menu {
         StatusBar.INSTANCE.setDisplayText(infoMenuItem.isSelected());
         displayMenu.add(infoMenuItem);
         infoMenuItem.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				StatusBar.INSTANCE.setDisplayText(infoMenuItem.isSelected());
+        	public void actionPerformed(ActionEvent e) {
+        		StatusBar.INSTANCE.setDisplayText(infoMenuItem.isSelected());
 			}
 		});
         
@@ -191,7 +199,7 @@ public class Menu {
         
         JMenu helpMenu = new JMenu("Help");
         helpMenu.setMnemonic(KeyEvent.VK_H);
-        final String helpMenuItemTitle = "FAMILIAR Editor Quick Help";
+        final String helpMenuItemTitle = "FAMILIAR Tool Quick Help";
         final JMenuItem helpMenuItem = new JMenuItem(helpMenuItemTitle);
         helpMenuItem.setMnemonic(KeyEvent.VK_H);
         helpMenuItem.setIcon(createImageIcon("images/info.gif"));

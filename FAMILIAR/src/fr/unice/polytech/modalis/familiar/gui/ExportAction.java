@@ -1,8 +1,8 @@
 /*
  * This file is part of the FAMILIAR (for FeAture Model scrIpt Language for manIpulation and Automatic Reasoning)
- * project (https://nyx.unice.fr/projects/familiar/).
+ * project (http://familiar-project.github.com/).
  *
- * Copyright (C) 2012
+ * Copyright (C) 2011 - 2013
  *     University of Nice Sophia Antipolis, UMR CNRS 6070, I3S Laboratory
  *     Colorado State University, Computer Science Department
  *     
@@ -76,7 +76,14 @@ public class ExportAction extends ConcreteAction {
       	}
       	// Before saving the FM, add (or replace) it to the FAMILIAR environment, and validate it
       	FeatureModelVariable fmv = FamiliarConsole.INSTANCE.getLoadedFMV();
-      	if (null != fmv && fmv.isValid()) {
+      	if (null == fmv) {
+      		JOptionPane.showMessageDialog(FamiliarEditor.INSTANCE, 
+      	            "Error exporting FM to " + longName + " File " + f.getAbsolutePath() 
+      	            + "\nError: No current FeatureModelVariable.",
+      	            desc, JOptionPane.ERROR_MESSAGE);
+      		return;
+      	}
+      	if (fmv.isValid()) {
       		if (saveSpecificFormat(f, fmv)) {
       			FamiliarConsole.INSTANCE.addOrReplaceFMVariable(fmv);
           		StatusBar.INSTANCE.setLoadedFMlabel(fmv);

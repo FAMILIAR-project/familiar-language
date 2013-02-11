@@ -1,8 +1,8 @@
 /*
  * This file is part of the FAMILIAR (for FeAture Model scrIpt Language for manIpulation and Automatic Reasoning)
- * project (https://nyx.unice.fr/projects/familiar/).
+ * project (http://familiar-project.github.com/).
  *
- * Copyright (C) 2012
+ * Copyright (C) 2011 - 2013
  *     University of Nice Sophia Antipolis, UMR CNRS 6070, I3S Laboratory
  *     Colorado State University, Computer Science Department
  *     
@@ -73,6 +73,7 @@ public class PopupMenuController extends ControlAdapter implements ActionListene
 	private static final String deleteGroup = "Delete Group";
 	
 	private static final String newConstraint = "New Constraint";
+	private static final String newConfiguration = "New Configuration";
 	private static final String deleteAllConstraints = "Delete All Constraints";
 	
 	private static final String updateConstraint = "Update Constraint";
@@ -102,7 +103,7 @@ public class PopupMenuController extends ControlAdapter implements ActionListene
 			if (newF.getText().isEmpty()) return;
 
 			fmv = Translator.INSTANCE.addChildFeature( 
-					parentNode.getString(Converter.LABEL), 
+					parentNode.getString(Converter.NAME), 
 					RuleEnforcer.onlyDigitsAndLetters(newF.getText()), groupType);
 			if (null == fmv) {
 				JOptionPane.showMessageDialog(FamiliarEditor.INSTANCE, 
@@ -166,10 +167,10 @@ public class PopupMenuController extends ControlAdapter implements ActionListene
 			}
 		} else if (e.getActionCommand().endsWith(deleteFeature)) {
 			Node nodeToDelete = getClickedNode();
-			fmv = Translator.INSTANCE.deleteFeature(nodeToDelete.getString(Converter.LABEL));
+			fmv = Translator.INSTANCE.deleteFeature(nodeToDelete.getString(Converter.NAME));
 			if (null == fmv) {
 				JOptionPane.showMessageDialog(FamiliarEditor.INSTANCE, 
-		            "Error deleting feature " + nodeToDelete.getString(Converter.LABEL) + 
+		            "Error deleting feature " + nodeToDelete.getString(Converter.NAME) + 
 		            ". Resulting FM is not valid, this change has not been committed.",
 		            deleteFeature, JOptionPane.ERROR_MESSAGE);
 			}
@@ -186,7 +187,7 @@ public class PopupMenuController extends ControlAdapter implements ActionListene
 				if (newFeatureName == null || newFeatureName.isEmpty()) return;
 			Node groupNode = getClickedNode();
 			fmv = Translator.INSTANCE.addGroupedFeature( 
-				groupNode.getParent().getString(Converter.LABEL), 
+				groupNode.getParent().getString(Converter.NAME), 
 				RuleEnforcer.onlyDigitsAndLetters(newFeatureName), groupNode.getInt(Converter.GROUP));
 			if (null == fmv) {
 				JOptionPane.showMessageDialog(FamiliarEditor.INSTANCE, 
@@ -262,7 +263,9 @@ public class PopupMenuController extends ControlAdapter implements ActionListene
 	
 	private void handleRenameFMName() {
 		FeatureModelVariable fmv = FamiliarConsole.INSTANCE.getLoadedFMV();
-		
+		if (null == fmv) {
+			return;
+		}
 		String origFMName = fmv.getIdentifier();
 		JTextField origF = new JTextField();
 		origF.setText(origFMName);
@@ -280,6 +283,25 @@ public class PopupMenuController extends ControlAdapter implements ActionListene
 		if (newF.getText().isEmpty() || newF.getText().equals(origFMName)) return;
 		
 		FamiliarConsole.INSTANCE.renameFMV(origFMName, RuleEnforcer.onlyDigitsAndLetters(newF.getText()));
+	}
+	
+	private void handleConfiguration() {
+		FeatureModelVariable fmv = FamiliarConsole.INSTANCE.getLoadedFMV();
+		if (null == fmv) {
+			return;
+		}
+		JTextField newConf = new JTextField();
+		newConf.setText("config" + fmv.getIdentifier());
+		
+		final JComponent[] inputs = new JComponent[] {
+           new JLabel(newConfiguration + ":"), newConf
+		};
+		JOptionPane.showMessageDialog(FamiliarEditor.INSTANCE, 
+			inputs, newConfiguration, JOptionPane.PLAIN_MESSAGE);
+		
+		if (newConf.getText().isEmpty()) return;
+		System.out.println(RuleEnforcer.onlyDigitsAndLetters(newConf.getText()));
+
 	}
 	
 	public PopupMenuController() {
@@ -325,6 +347,10 @@ public class PopupMenuController extends ControlAdapter implements ActionListene
 	
 	private void buildRootFeaturePopupMenu() {
 		popupRootMenu = new JPopupMenu(); 
+		JMenuItem renFMName = new JMenuItem(renameFMName);
+		popupRootMenu.add(renFMName);
+		popupRootMenu.addSeparator();
+		
 		submenuRAddChild = new JMenu(newChildFeature);
 		JMenuItem newMand = new JMenuItem(newMandFeature);
 		submenuRAddChild.add(newMand);
@@ -335,10 +361,7 @@ public class PopupMenuController extends ControlAdapter implements ActionListene
 		JMenuItem newXor = new JMenuItem(newXorGroup);
 		submenuRAddChild.add(newXor);
 		popupRootMenu.add(submenuRAddChild);
-		popupRootMenu.addSeparator();
-		JMenuItem renFMName = new JMenuItem(renameFMName);
-		popupRootMenu.add(renFMName);
-		popupRootMenu.addSeparator();
+		
 		JMenuItem renameNode = new JMenuItem(renameFeature);
 		popupRootMenu.add(renameNode);
 		
@@ -361,6 +384,12 @@ public class PopupMenuController extends ControlAdapter implements ActionListene
 		popupRootMenu.add(newCItem);
 		newCItem.setActionCommand(constr + newConstraint);
 		newCItem.addActionListener(this);
+		
+		popupRootMenu.addSeparator();
+		JMenuItem newConfItem = new JMenuItem(newConfiguration);
+		popupRootMenu.add(newConfItem);
+		newConfItem.setActionCommand(newConfiguration);
+		newConfItem.addActionListener(this);
 	}
 	
 	private void buildGroupPopupMenu() {
@@ -439,7 +468,7 @@ public class PopupMenuController extends ControlAdapter implements ActionListene
 	}
 	
 	private String getClickedNodeLabel() {
-		return getClickedNode().getString(Converter.LABEL);
+		return getClickedNode().getString(Converter.NAME);
 	}
 
 	public void actionPerformed(ActionEvent e) {
@@ -451,6 +480,8 @@ public class PopupMenuController extends ControlAdapter implements ActionListene
 			handleConstraint(e);
 		} else if (e.getActionCommand().equals(renameFMName)) {
 			handleRenameFMName();
+		} else if (e.getActionCommand().equals(newConfiguration)) {
+			handleConfiguration();
 		}
 		clickedItem = null;
 	}

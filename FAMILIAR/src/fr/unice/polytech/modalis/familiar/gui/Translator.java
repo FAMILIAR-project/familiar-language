@@ -1,8 +1,8 @@
 /*
  * This file is part of the FAMILIAR (for FeAture Model scrIpt Language for manIpulation and Automatic Reasoning)
- * project (https://nyx.unice.fr/projects/familiar/).
+ * project (http://familiar-project.github.com/).
  *
- * Copyright (C) 2012
+ * Copyright (C) 2011 - 2013
  *     University of Nice Sophia Antipolis, UMR CNRS 6070, I3S Laboratory
  *     Colorado State University, Computer Science Department
  *     
@@ -83,6 +83,10 @@ public class Translator extends Observable {
 	}
 	
 	public void changedFmv(FeatureModelVariable fmv) {
+		if (null == fmv) {
+			// Nothing to change since this is not FeatureModelVariable; it's probably ConfigurationVariable
+			return; 
+		}
 		setChanged();
 		notifyObservers(null == fmv ? FamiliarConsole.INSTANCE.getLoadedFMV() : fmv);
 	}
@@ -239,7 +243,7 @@ public class Translator extends Observable {
 		}
 		Node child=group.getFirstChild(); 
 		while (child!=null) {
-			if (false == fmv.removeFeature(child.getString(Converter.LABEL))) {
+			if (false == fmv.removeFeature(child.getString(Converter.NAME))) {
 				return null;
 			}
 			child=child.getNextSibling();
@@ -271,6 +275,10 @@ public class Translator extends Observable {
 	
 	public FeatureModelVariable updateConstraint(String oldConstr, String newConstr) {
 		FeatureModelVariable fmv = FamiliarConsole.INSTANCE.getLoadedFMV();
+		if (null == fmv) {
+			return null;
+		}
+		
 		Expression<String> newExpr = new Expression<String>(newConstr);
 		if (null == fmv || !isConstraintValid(fmv, newExpr)) {
 			return null;

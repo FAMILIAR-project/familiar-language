@@ -1,8 +1,8 @@
 /*
  * This file is part of the FAMILIAR (for FeAture Model scrIpt Language for manIpulation and Automatic Reasoning)
- * project (https://nyx.unice.fr/projects/familiar/).
+ * project (http://familiar-project.github.com/).
  *
- * Copyright (C) 2012
+ * Copyright (C) 2011 - 2013
  *     University of Nice Sophia Antipolis, UMR CNRS 6070, I3S Laboratory
  *     Colorado State University, Computer Science Department
  *     
@@ -109,26 +109,39 @@ public class FamiliarEditor extends JPanel implements Observer {
 	            "FM is not valid, and it will not be updated and/or loaded.",
 	            "Error updating FM display", JOptionPane.ERROR_MESSAGE);
     		fmv = FamiliarConsole.INSTANCE.getLoadedFMV();
+    		if (null == fmv) {
+    			FamiliarConsole.INSTANCE.setMessage("Error: No current FeatureModelVariable.");
+    			return;
+    		}
+    		
     		t = Converter.INSTANCE.fmv2PrefuseTree(fmv);
-    		if (null == fmv || false == fmv.isValid() || 
+    		if (false == fmv.isValid() || 
     			null == t || false == t.isValidTree()) {
     			FamiliarConsole.INSTANCE.setMessage("Error: FMV and/or Prefuse tree is not valid.");
     			return;
     		}
     	} 
     	FamiliarConsole.INSTANCE.addOrReplaceFMVariable(fmv);
+    	
+    	Visualization v = getVis();
+		if (null == v) {
+			//JOptionPane.showMessageDialog(this, 
+			//		"FM visualization is not valid, and it will not be updated and/or loaded.",
+		    //        "Error updating FM display", JOptionPane.ERROR_MESSAGE);
+			return;
+		}
    
-    	getVis().setRendererFactory(Renderer.INSTANCE.getDRF(Converter.LABEL));
-    	getVis().removeGroup(treeGroup);
-        VisualTree vt = getVis().addTree(treeGroup, t);
-        getVis().setValue(treeEdges, null, VisualItem.INTERACTIVE, Boolean.FALSE);
+    	v.setRendererFactory(Renderer.INSTANCE.getDRF(Converter.NAME));
+    	v.removeGroup(treeGroup);
+        VisualTree vt = v.addTree(treeGroup, t);
+        v.setValue(treeEdges, null, VisualItem.INTERACTIVE, Boolean.FALSE);
         VisualItem f = (VisualItem)vt.getNode(0);
-        getVis().getGroup(Visualization.FOCUS_ITEMS).setTuple(f);
+        v.getGroup(Visualization.FOCUS_ITEMS).setTuple(f);
         
         f.setFixed(false);
         StatusBar.INSTANCE.setLoadedFMlabel(fmv);
    
-        getVis().run("draw");
+        v.run("draw");
     }
     
     protected JComponent makeTextPanel(String text) {
@@ -247,11 +260,19 @@ public class FamiliarEditor extends JPanel implements Observer {
 	}
     
 	public Tree getTree() {
-		return (Tree) getVis().getSourceData(FamiliarEditor.treeGroup);
+		Visualization v = getVis();
+		if (null == v) {
+			return null;
+		}
+		return (Tree) v.getSourceData(FamiliarEditor.treeGroup);
 	}
     
     public Tree getLoadedTree() {
-    	return (Tree) getVis().getSourceData(treeGroup);
+    	Visualization v = getVis();
+		if (null == v) {
+			return null;
+		}
+    	return (Tree) v.getSourceData(treeGroup);
     }
     
     public static void setLookAndFeel() {
@@ -259,7 +280,11 @@ public class FamiliarEditor extends JPanel implements Observer {
     }
     
     public static Visualization getVis() {
-    	Visualization v = pVis.get(Tab2EnvVar.INSTANCE.getCurrentFMVName());
+    	String fmvName = Tab2EnvVar.INSTANCE.getCurrentFMVName();
+    	if (null == fmvName) {
+    		return null;
+    	}
+    	Visualization v = pVis.get(fmvName);
     	return (null == v ? lastCreatedVis : v);
     }
     

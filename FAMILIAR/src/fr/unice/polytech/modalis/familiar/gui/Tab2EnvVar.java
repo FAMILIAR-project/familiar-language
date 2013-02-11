@@ -1,8 +1,8 @@
 /*
  * This file is part of the FAMILIAR (for FeAture Model scrIpt Language for manIpulation and Automatic Reasoning)
- * project (https://nyx.unice.fr/projects/familiar/).
+ * project (http://familiar-project.github.com/).
  *
- * Copyright (C) 2012
+ * Copyright (C) 2011 - 2013
  *     University of Nice Sophia Antipolis, UMR CNRS 6070, I3S Laboratory
  *     Colorado State University, Computer Science Department
  *     
@@ -30,7 +30,9 @@ import javax.swing.JTabbedPane;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.ChangeListener;
 
+import fr.unice.polytech.modalis.familiar.variable.ConfigurationVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
+import fr.unice.polytech.modalis.familiar.variable.Variable;
 
 
 public class Tab2EnvVar {
@@ -38,7 +40,6 @@ public class Tab2EnvVar {
 	public final static Tab2EnvVar INSTANCE = new Tab2EnvVar();
 	
 	private static boolean needToSyncTabWhenSwitchingTo = true;
-	
 	private static JTabbedPane tabbedPane = new JTabbedPane();
 	
 	public void createNewTab(String name, Component component) {
@@ -47,8 +48,10 @@ public class Tab2EnvVar {
  		    // This method is called whenever the selected tab changes
  		    public void stateChanged(ChangeEvent evt) {
  		    	if (needToSyncTabWhenSwitchingTo) {
- 		    		Translator.INSTANCE.changedFmv(
- 		    			FamiliarConsole.INSTANCE.getFMVariableByName(getCurrentFMVName()));
+ 		    		Variable v = FamiliarConsole.INSTANCE.getVariableByName(getCurrentFMVName());
+ 		    		if (v instanceof FeatureModelVariable) {
+ 		    			Translator.INSTANCE.changedFmv((FeatureModelVariable)v);
+ 		    		}
  		    	}
  		    }
      	});
@@ -69,8 +72,14 @@ public class Tab2EnvVar {
 			return;
 		}
 		
-		// No existing tab found, need to create a new tab for FM
-		FamiliarEditor.INSTANCE.visualizeFM(FamiliarConsole.INSTANCE.getFMVariableByName(name));
+		Variable v = FamiliarConsole.INSTANCE.getVariableByName(name);
+		
+		if (v instanceof FeatureModelVariable) {
+			// No existing tab found, need to create a new tab for FM
+			FamiliarEditor.INSTANCE.visualizeFM((FeatureModelVariable)v);
+		} else if (v instanceof ConfigurationVariable) {
+			createNewConfigurationTab((ConfigurationVariable)v, false);
+		}
 		
 		// Make sure to set this tab to current (because it was created from different tab, and
 		// updateDiplay would use that tab index).
@@ -95,12 +104,35 @@ public class Tab2EnvVar {
 		needToSyncTabWhenSwitchingTo = true;
 	}
 	
+	public void createNewConfigurationTab(ConfigurationVariable cv, boolean ifExistDelete) {
+		int index = tabbedPane.indexOfTab(cv.getIdentifier());
+		if (index != -1) {
+			if (ifExistDelete) {
+				tabbedPane.remove(index);
+			} else {
+				// If ConfigurationVariable exists, don't do anything
+				return;
+			}
+		}
+		
+		ConfigsSelected.INSTANCE.updateConfigsSelected(cv);
+		Configurator frame = new Configurator(cv.getIdentifier());
+		Tab2EnvVar.INSTANCE.createNewTab(cv.getIdentifier(), frame.getComponent(0));
+		
+	}
+	
 	public JTabbedPane getTab() {
 		return tabbedPane;
 	}
 	
 	public String getCurrentFMVName() {
-		return tabbedPane.getTitleAt(tabbedPane.getSelectedIndex());
+		String name = tabbedPane.getTitleAt(tabbedPane.getSelectedIndex());
+		Variable v = FamiliarConsole.INSTANCE.getVariableByName(name);
+ 		if (v instanceof FeatureModelVariable) {
+ 			return name;
+ 		}
+ 		// Current tab is not FeatureModelVariable
+ 		return null;
 	}
 	
 	public void renameCurrentFMVName(String newName) {
@@ -115,4 +147,5 @@ public class Tab2EnvVar {
 	public int getSelectedIndex() {
 		return tabbedPane.getSelectedIndex(); 
 	}
+	
 } // end of class Tab2EnvVar

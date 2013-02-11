@@ -1,8 +1,8 @@
 /*
  * This file is part of the FAMILIAR (for FeAture Model scrIpt Language for manIpulation and Automatic Reasoning)
- * project (https://nyx.unice.fr/projects/familiar/).
+ * project (http://familiar-project.github.com/).
  *
- * Copyright (C) 2012
+ * Copyright (C) 2011 - 2013
  *     University of Nice Sophia Antipolis, UMR CNRS 6070, I3S Laboratory
  *     Colorado State University, Computer Science Department
  *     
@@ -30,6 +30,7 @@ import java.io.File;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ListIterator;
 
@@ -41,6 +42,7 @@ import javax.swing.text.Element;
 
 import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
 import fr.unice.polytech.modalis.familiar.parser.FMLCommandInterpreter;
+import fr.unice.polytech.modalis.familiar.variable.ConfigurationVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import fr.unice.polytech.modalis.familiar.variable.Variable;
 
@@ -117,15 +119,15 @@ public class FamiliarConsole {
 		parseCommand("run \"" + filename + "\"");
 		StatusBar.INSTANCE.setLoadedFMVStatusBar(allFmvToString());
 		
-		FeatureModelVariable fmv = null;
 		List<Variable> vars = fEnv.getVariables();
 		ListIterator<Variable> itr = vars.listIterator(vars.size());
 		
 		while (itr.hasPrevious()) {
 			Variable v = (Variable) itr.previous();
 			if (v instanceof FeatureModelVariable) {
-				fmv = (FeatureModelVariable) v;
-				Tab2EnvVar.INSTANCE.createNewTab(fmv);
+				Tab2EnvVar.INSTANCE.createNewTab((FeatureModelVariable) v);
+			} else if (v instanceof ConfigurationVariable) {
+				Tab2EnvVar.INSTANCE.createNewConfigurationTab((ConfigurationVariable) v, false);
 			}
 		}
 	}
@@ -184,24 +186,33 @@ public class FamiliarConsole {
 		}
 	}
 	
-	public FeatureModelVariable getFMVariableByName(String name) {
-		FeatureModelVariable fmv = null;
+	public Variable getVariableByName(String name) {
+		if (null == name) {
+			return null;
+		}
 		List<Variable> vars = fEnv.getVariables();
 		ListIterator<Variable> itr = vars.listIterator(vars.size());
 		while (itr.hasPrevious()) {
 			Variable v = (Variable) itr.previous();
-			if (v instanceof FeatureModelVariable) {
-				fmv = (FeatureModelVariable) v;
-				if (fmv.getIdentifier().contentEquals(name)) {
-					return fmv;
-				}
-			}
+			if (v instanceof FeatureModelVariable || v instanceof ConfigurationVariable) {
+				if (v.getIdentifier().contentEquals(name)) {
+					return v;
+				} 
+			} 
 		}
 		return null;
 	}
 	
 	public FeatureModelVariable getLoadedFMV() {
-		return getFMVariableByName(Tab2EnvVar.INSTANCE.getCurrentFMVName());
+		String fmvName = Tab2EnvVar.INSTANCE.getCurrentFMVName();
+		if (null == fmvName) {
+			return null;
+		}
+		Variable v = getVariableByName(fmvName);
+		if (v instanceof FeatureModelVariable) {
+			return (FeatureModelVariable)v;
+		}
+		return null;
 	}
 	
 	public void addOrReplaceFMVariable(FeatureModelVariable fmv) {
@@ -214,31 +225,56 @@ public class FamiliarConsole {
 	
 	public String[] allFmvToStringArray() {
 		ListIterator<Variable> itr = fEnv.getVariables().listIterator();
-		int maxSize = fEnv.getVariables().size();
-		if (maxSize <= 1 ) {
+		if (fEnv.getVariables().size() <= 1 ) {
 			return null;
 		}
-		String[] sa = new String[maxSize];
+		List<String> list = new ArrayList<String>();
 		Variable v = null; 
 		if(itr.hasNext()) {
 			v = itr.next();
 		} else {
 			return null;
 		}
-		int i = 0;
+	
 		while (null != v) {
 			if (v instanceof FeatureModelVariable) {
 				FeatureModelVariable fmv = (FeatureModelVariable) v;
-				sa[i] = fmv.getIdentifier();
-				i++;
+				list.add(fmv.getIdentifier());
 			}
 			if (itr.hasNext()) {
 				v = itr.next();
 			} else {
-				return sa;
+				break;
 			}
 		}
-		return sa;
+		String[] array = list.toArray(new String[list.size()]);
+		return array;
+	}
+	
+	public void showAllVariables() {
+		ListIterator<Variable> itr = fEnv.getVariables().listIterator();
+		if (fEnv.getVariables().size() < 1 ) {
+			return;
+		}
+		Variable v = null; 
+		if(itr.hasNext()) {
+			v = itr.next();
+		} else {
+			return;
+		}
+	
+		while (null != v) {
+			if (v instanceof FeatureModelVariable) {
+				Tab2EnvVar.INSTANCE.switchToNewTab(v.getIdentifier());
+			} else if (v instanceof ConfigurationVariable) {
+				Tab2EnvVar.INSTANCE.switchToNewTab(v.getIdentifier());
+			}
+			if (itr.hasNext()) {
+				v = itr.next();
+			} else {
+				break;
+			}
+		}
 	}
 	
 	private String allFmvToString() {
@@ -255,11 +291,11 @@ public class FamiliarConsole {
 			if (v instanceof FeatureModelVariable) {
 				FeatureModelVariable fmv = (FeatureModelVariable) v;
 				sb.append("\"" + fmv.getIdentifier() + "\" | ");
-			}
+			} 
 			if (itr.hasNext()) {
 				v = itr.next();
 			} else {
-				return sb.toString();
+				break;
 			}
 		}
 		return sb.toString();
@@ -270,6 +306,16 @@ public class FamiliarConsole {
 		fShell.printPrompt();
 		console.setCaretPosition(console.getDocument().getLength()); 
 		StatusBar.INSTANCE.setLoadedFMVStatusBar(allFmvToString());
+		if (command.contains("configuration")) {
+			String[] tokens = command.split("="); // c = configuration Laptop  
+			if (null != tokens && !tokens[0].isEmpty()) {
+				Variable v = getVariableByName(tokens[0].trim());
+				if (v instanceof ConfigurationVariable) {
+					Tab2EnvVar.INSTANCE.createNewConfigurationTab(
+							(ConfigurationVariable) v, false);
+				}
+			}
+		}
 	}
 
 	private void updateTextArea(final String text) {
