@@ -24,6 +24,7 @@
  */
 package fr.unice.polytech.modalis.familiar.gui;
 
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
@@ -33,6 +34,7 @@ import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
@@ -293,15 +295,19 @@ public class PopupMenuController extends ControlAdapter implements ActionListene
 		JTextField newConf = new JTextField();
 		newConf.setText("config" + fmv.getIdentifier());
 		
-		final JComponent[] inputs = new JComponent[] {
-           new JLabel(newConfiguration + ":"), newConf
-		};
-		JOptionPane.showMessageDialog(FamiliarEditor.INSTANCE, 
-			inputs, newConfiguration, JOptionPane.PLAIN_MESSAGE);
-		
-		if (newConf.getText().isEmpty()) return;
-		System.out.println(RuleEnforcer.onlyDigitsAndLetters(newConf.getText()));
-
+	    JPanel panel = new JPanel();
+	    panel.setLayout(new GridLayout(2, 1, 5, 5));
+	    panel.add(new JLabel("New Configuration Name:"));
+	    panel.add(newConf);
+	    
+	    int result = JOptionPane.showConfirmDialog(FamiliarEditor.INSTANCE, panel, 
+	    		newConfiguration, JOptionPane.OK_CANCEL_OPTION);
+	    if (result == JOptionPane.OK_OPTION) {
+	    	if (newConf.getText().isEmpty()) return;
+	    	FamiliarConsole.INSTANCE.createNewConfig(
+	    			RuleEnforcer.onlyDigitsAndLetters(newConf.getText()), 
+	    			fmv.getIdentifier());
+	    }
 	}
 	
 	public PopupMenuController() {

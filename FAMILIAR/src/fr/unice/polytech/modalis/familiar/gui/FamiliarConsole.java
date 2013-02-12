@@ -35,6 +35,7 @@ import java.util.List;
 import java.util.ListIterator;
 
 import javax.swing.BorderFactory;
+import javax.swing.JOptionPane;
 import javax.swing.JTextArea;
 import javax.swing.SwingUtilities;
 import javax.swing.text.Document;
@@ -88,8 +89,19 @@ public class FamiliarConsole {
 							String lastLine = document.getText(lineStart, lineEnd - lineStart);
 							lastLine = lastLine.replaceFirst(FMLShell.PROMPT, "").trim();
 							parseCommand(lastLine);
-							// Always update the FM view
-							Translator.INSTANCE.changedFmv(FamiliarConsole.INSTANCE.getLoadedFMV());
+							if (lastLine.contains("configuration")) {
+								String[] tokens = lastLine.split("="); // c = configuration Laptop  
+								if (null != tokens && !tokens[0].isEmpty()) {
+									Variable v = getVariableByName(tokens[0].trim());
+									if (v instanceof ConfigurationVariable) {
+										Tab2EnvVar.INSTANCE.createNewConfigurationTab(
+												(ConfigurationVariable) v, false);
+									}
+								}
+							} else {
+								// Update the FM view
+								Translator.INSTANCE.changedFmv(FamiliarConsole.INSTANCE.getLoadedFMV());
+							}
 						} catch (Exception e) {
 							e.printStackTrace();
 							fShell.printPrompt();
@@ -98,6 +110,17 @@ public class FamiliarConsole {
 				} 
 		} });
 		return console;
+	}
+	
+	public void createNewConfig(String configName, String fmvName) {
+		fShell.parse(configName + "= configuration " + fmvName);
+		fShell.printPrompt();
+		console.setCaretPosition(console.getDocument().getLength()); 
+		Variable v = getVariableByName(configName);
+		if (v instanceof ConfigurationVariable) {
+			Tab2EnvVar.INSTANCE.createNewConfigurationTab(
+					(ConfigurationVariable) v, true);
+		}
 	}
 	
 	public void runScript(File f) {
@@ -206,7 +229,22 @@ public class FamiliarConsole {
 	public FeatureModelVariable getLoadedFMV() {
 		String fmvName = Tab2EnvVar.INSTANCE.getCurrentFMVName();
 		if (null == fmvName) {
-			return null;
+			String[] fms = FamiliarConsole.INSTANCE.allFmvToStringArray();
+			if (null != fms && fms.length > 0) {
+				if (1 == fms.length) {
+					return (FeatureModelVariable)getVariableByName(fms[0]);
+				}
+				final String selectFM = "Select Current Feature Model";
+				String loadFM = (String) JOptionPane.showInputDialog(null, "Choose your current FM...",
+						selectFM, JOptionPane.QUESTION_MESSAGE, null, fms, fms[0]); // Initial choice
+			    if (null != loadFM) {
+		            fmvName = loadFM;
+			    } else {
+			    	return null;
+			    }
+			} else {
+				return null;
+			}
 		}
 		Variable v = getVariableByName(fmvName);
 		if (v instanceof FeatureModelVariable) {
@@ -225,7 +263,7 @@ public class FamiliarConsole {
 	
 	public String[] allFmvToStringArray() {
 		ListIterator<Variable> itr = fEnv.getVariables().listIterator();
-		if (fEnv.getVariables().size() <= 1 ) {
+		if (fEnv.getVariables().size() <= 0 ) {
 			return null;
 		}
 		List<String> list = new ArrayList<String>();
@@ -306,16 +344,6 @@ public class FamiliarConsole {
 		fShell.printPrompt();
 		console.setCaretPosition(console.getDocument().getLength()); 
 		StatusBar.INSTANCE.setLoadedFMVStatusBar(allFmvToString());
-		if (command.contains("configuration")) {
-			String[] tokens = command.split("="); // c = configuration Laptop  
-			if (null != tokens && !tokens[0].isEmpty()) {
-				Variable v = getVariableByName(tokens[0].trim());
-				if (v instanceof ConfigurationVariable) {
-					Tab2EnvVar.INSTANCE.createNewConfigurationTab(
-							(ConfigurationVariable) v, false);
-				}
-			}
-		}
 	}
 
 	private void updateTextArea(final String text) {

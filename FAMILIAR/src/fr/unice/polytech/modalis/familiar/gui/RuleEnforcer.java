@@ -24,7 +24,6 @@
  */
 package fr.unice.polytech.modalis.familiar.gui;
 
-
 public class RuleEnforcer {
 		
 	private static final int maxAcceptedFMNodeLength = 32;
@@ -34,5 +33,4 @@ public class RuleEnforcer {
 		return (sanitized.length() > maxAcceptedFMNodeLength ? 
 				sanitized.substring(0, maxAcceptedFMNodeLength) : sanitized);
 	}
-	
 } // end of class RuleEnforcer

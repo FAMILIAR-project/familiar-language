@@ -34,7 +34,6 @@ import fr.unice.polytech.modalis.familiar.variable.ConfigurationVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import fr.unice.polytech.modalis.familiar.variable.Variable;
 
-
 public class Tab2EnvVar {
 	// A simple, fast, and thread-safe singleton implementation.
 	public final static Tab2EnvVar INSTANCE = new Tab2EnvVar();
@@ -116,8 +115,10 @@ public class Tab2EnvVar {
 		}
 		
 		ConfigsSelected.INSTANCE.updateConfigsSelected(cv);
-		Configurator frame = new Configurator(cv.getIdentifier());
+		Configurator frame = new Configurator(cv);
+		needToSyncTabWhenSwitchingTo = false;
 		Tab2EnvVar.INSTANCE.createNewTab(cv.getIdentifier(), frame.getComponent(0));
+		needToSyncTabWhenSwitchingTo = true;
 		
 	}
 	

@@ -24,18 +24,19 @@
  */
 package fr.unice.polytech.modalis.familiar.gui;
 
+import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 
 import javax.swing.ImageIcon;
 import javax.swing.JCheckBoxMenuItem;
-import javax.swing.JComponent;
 import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import prefuse.data.Tree;
@@ -64,12 +65,18 @@ public class Menu {
     			JTextField rootFeature = new JTextField();
     			rootFeature.setText(rootName);
     		
-    			final JComponent[] inputs = new JComponent[] {
-                    new JLabel("New FM Name:"), fmName,
-                    new JLabel("New root feature:"), rootFeature
-    			};
-    			JOptionPane.showMessageDialog(FamiliarEditor.INSTANCE,
-    				inputs, menuTitle, JOptionPane.PLAIN_MESSAGE);
+    		    JPanel panel = new JPanel();
+    		    panel.setLayout(new GridLayout(2, 2, 10, 10));
+    		    panel.add(new JLabel("New FM Name:"));
+    		    panel.add(fmName);
+    		    panel.add(new JLabel("New root feature:"));
+    		    panel.add(rootFeature);
+    		    
+    		    int result = JOptionPane.showConfirmDialog(FamiliarEditor.INSTANCE, panel, 
+    		    		menuTitle, JOptionPane.OK_CANCEL_OPTION);
+    		    if (result != JOptionPane.OK_OPTION) {
+    		    	return;
+    		    }
     			
     			String root = RuleEnforcer.onlyDigitsAndLetters(rootFeature.getText());
     			String fmvname = RuleEnforcer.onlyDigitsAndLetters(fmName.getText());

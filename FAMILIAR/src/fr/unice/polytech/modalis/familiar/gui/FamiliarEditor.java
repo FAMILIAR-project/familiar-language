@@ -125,9 +125,9 @@ public class FamiliarEditor extends JPanel implements Observer {
     	
     	Visualization v = getVis();
 		if (null == v) {
-			//JOptionPane.showMessageDialog(this, 
-			//		"FM visualization is not valid, and it will not be updated and/or loaded.",
-		    //        "Error updating FM display", JOptionPane.ERROR_MESSAGE);
+			JOptionPane.showMessageDialog(this, 
+					"Visualization of an FM is null. FN cannot be updated and/or loaded.",
+		            "Error updating FM display", JOptionPane.ERROR_MESSAGE);
 			return;
 		}
    

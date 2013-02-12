@@ -47,6 +47,7 @@ import javax.swing.tree.TreePath;
 import org.xtext.example.mydsl.fML.OpSelection;
 
 import fr.unice.polytech.modalis.familiar.variable.ConfigurationVariable;
+import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import fr.unice.polytech.modalis.familiar.variable.Variable;
 
 import prefuse.data.Node;
@@ -65,11 +66,13 @@ public class Configurator extends JFrame {
         }
     }
   
-  public Configurator(String cvName) {
+  public Configurator(ConfigurationVariable cv) {
 	  	tree = new JPrefuseTree(
-			  Converter.INSTANCE.fmv2PrefuseTree(FamiliarConsole.INSTANCE.getLoadedFMV()), Converter.NAME);
+			  Converter.INSTANCE.fmv2PrefuseTree((FeatureModelVariable)
+					  FamiliarConsole.INSTANCE.getVariableByName(cv.getFmv().getIdentifier())), 
+					  Converter.NAME);
   
-	    tree.setName(cvName);
+	    tree.setName(cv.getIdentifier());
 	    tree.setCellRenderer(new CheckRenderer());
 	    tree.addMouseListener(new NodeSelectionListener(tree));
     
@@ -135,7 +138,6 @@ class CheckRenderer extends JPanel implements TreeCellRenderer {
 	  
 	    label.setFont(tree.getFont());
 	    label.setText(name);
-	    //label.setSelected(isSelected);
 	    label.setFocus(hasFocus);
 	    if (leaf) {
 	    	label.setIcon(UIManager.getIcon("Tree.leafIcon"));
