@@ -122,13 +122,12 @@ public class KSynthesisBDD extends KSynthesis  {
 		FeatureGraph<String> synthesisedFD = synthesisedFM.getDiagram();
 
 		mkSyntheticRoot(synthesisedFD);
+			
 		
 		// 2. IMPLICATION/EXCLUSION (aka MUTEX) GRAPH
 
 		_LOGGER.debug("Implication graph");
-		ImplicationGraph<String> impl = IGBuilder.build(lFla, _builder);
-		
-		
+		ImplicationGraph<String> impl = IGBuilder.build(lFla, _builder);		
 		
 		_LOGGER.debug("Exclusion graph");
 		ExclusionGraph<String> excl = EGBuilder.build(lFla, _builder) ; 

@@ -2,9 +2,9 @@ digraph{
 graph [rankdir=TB];
 node [shape=box];
 edge [arrowhead=normal];
-0[label="Basic",]
+0[label="Colour",]
 1[label="Screen",]
-2[label="Colour",]
+2[label="Basic",]
 3[label="Media",]
 4[label="Camera",]
 5[label="MPThree",]

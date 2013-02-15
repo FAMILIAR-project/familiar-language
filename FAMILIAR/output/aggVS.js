@@ -1,180 +1,180 @@
 var flare = {
 aggVS: {
 	 VSApplicationRequirement: {
-		 Scene: {
-			 Environment: {
-				 LightingType: {
-						 ArtificialLight: 10000 ,
-						 NaturalLight: 10001 ,
-				},
-				 LightingConditions: {
-						 Indoors: 10002 ,
-						 Outdoors: {
-							 TimeOfDay: {
-									 Day: 10003 ,
-									 Night: 10004 ,
-							},
-						},
-				},
-				 Noise: {
-					 LightingVariation: {
-							 Flashes: 10005 ,
-							 HeadLight: 10006 ,
-							 Shadows: 10007 ,
-					},
-					 BackgroundMovement: {
-							 SandOrDust: 10008 ,
-							 SeaOceanWaves: 10009 ,
-							 VegetationMovement: 10010 ,
-					},
-				},
-			},
-			 APrioriKnowledge: {
-				 Scenery3DModel: 10011,
-				 DeploymentArchitecture: {
-					 ClientDefined: 10012,
-					 ProgrammerDefined: 10013,
-					 Sensor: {
-						 SensorProperty: {
-								 MonoSensor: 10014 ,
-								 MultiSensor: 10015 ,
-						},
-						 Camera: {
-							 CameraType: {
-									 BlackAndWhite: 10016 ,
-									 Color: 10017 ,
-									 Infrared: 10018 ,
-							},
-							 Resolution: 10019,
-							 FramesPerSecond: {
-									 HighFrameRate: {
-										 VingtCinqFrSec: 10020,
-									},
-									 LowFrameRate: 10021 ,
-									 IntermediateFrameRate: 10022 ,
-							},
-							 FieldOfView: {
-									 Large: 10023 ,
-									 Narrow: 10024 ,
-							},
-							 DepthOfField: 10025,
-						},
-						 SensorView: {
-								 SideView: 10026 ,
-								 TopView: 10027 ,
-								 NormalView: 10028 ,
-						},
-					},
-					 Server: 10029,
-				},
-				 BehaviourLibrary: 10030,
-			},
-		},
-		 QualityOfService: {
-				 ComputerLoad: 10031 ,
-				 ResponseTime: 10032 ,
-				 Quality: {
-						 Sensitivity: 10033 ,
-						 Precision: {
-							 LessPrecision: 10034,
-						},
-				},
-		},
 		 ObjectOfInterest: {
-			 Sort: {
-					 Natural: {
-						 Person: 10035,
-					},
-					 Manufactured: {
-						 Vehicle: 10036,
-					},
-			},
 			 Mobility: {
 					 Movable: {
-							 ExternallyPropelled: 10037 ,
-							 SelfPropelled: 10038 ,
+							 ExternallyPropelled: 10000 ,
+							 SelfPropelled: 10001 ,
 					},
-					 Immovable: 10039 ,
+					 Immovable: 10002 ,
+			},
+			 Sort: {
+					 Natural: {
+						 Person: 10003,
+					},
+					 Manufactured: {
+						 Vehicle: 10004,
+					},
 			},
 			 Cardinality: {
-					 SingleObject: 10040 ,
-					 GroupOfObjects: 10041 ,
+					 SingleObject: 10005 ,
+					 GroupOfObjects: 10006 ,
 			},
 		},
 		 Task: {
-				 Counting: 10042 ,
-				 Tracking: 10043 ,
+				 Counting: 10007 ,
+				 Tracking: 10008 ,
 				 BehaviourRecognition: {
-					 IntrusionDetection: 10044,
+					 IntrusionDetection: 10009,
+				},
+		},
+		 Scene: {
+			 APrioriKnowledge: {
+				 Scenery3DModel: 10010,
+				 BehaviourLibrary: 10011,
+				 DeploymentArchitecture: {
+					 ClientDefined: 10012,
+					 Server: 10013,
+					 Sensor: {
+						 Camera: {
+							 DepthOfField: 10014,
+							 Resolution: 10015,
+							 FramesPerSecond: {
+									 HighFrameRate: {
+										 VingtCinqFrSec: 10016,
+									},
+									 LowFrameRate: 10017 ,
+									 IntermediateFrameRate: 10018 ,
+							},
+							 CameraType: {
+									 BlackAndWhite: 10019 ,
+									 Color: 10020 ,
+									 Infrared: 10021 ,
+							},
+							 FieldOfView: {
+									 Large: 10022 ,
+									 Narrow: 10023 ,
+							},
+						},
+						 SensorView: {
+								 SideView: 10024 ,
+								 TopView: 10025 ,
+								 NormalView: 10026 ,
+						},
+						 SensorProperty: {
+								 MonoSensor: 10027 ,
+								 MultiSensor: 10028 ,
+						},
+					},
+					 ProgrammerDefined: 10029,
+				},
+			},
+			 Environment: {
+				 LightingType: {
+						 ArtificialLight: 10030 ,
+						 NaturalLight: 10031 ,
+				},
+				 Noise: {
+					 LightingVariation: {
+							 Flashes: 10032 ,
+							 HeadLight: 10033 ,
+							 Shadows: 10034 ,
+					},
+					 BackgroundMovement: {
+							 SandOrDust: 10035 ,
+							 SeaOceanWaves: 10036 ,
+							 VegetationMovement: 10037 ,
+					},
+				},
+				 LightingConditions: {
+						 Indoors: 10038 ,
+						 Outdoors: {
+							 TimeOfDay: {
+									 Day: 10039 ,
+									 Night: 10040 ,
+							},
+						},
+				},
+			},
+		},
+		 QualityOfService: {
+				 ComputerLoad: 10041 ,
+				 ResponseTime: 10042 ,
+				 Quality: {
+						 Sensitivity: 10043 ,
+						 Precision: {
+							 LessPrecision: 10044,
+						},
 				},
 		},
 	},
 	 VSPlatform: {
-		 ReferenceImageUpdating: 10045,
-		 ClassificationModule: {
-			 Split: {
-					 SplitStandard: 10046 ,
-					 SplitGravityCenter: 10047 ,
-			},
-			 Contour: 10048,
-			 Merge: {
-					 FusionGravityCenter: 10049 ,
-					 FusionStandard: 10050 ,
-			},
-			 ClassificationStandard: {
-				 Density: 10051,
-			},
-			 Model: {
-					 ModelType: {
-							 OmegaModel: 10052 ,
-							 ThreeDModel: 10053 ,
-					},
-					 Ellipse: 10054 ,
-					 Shape: 10055 ,
-					 Parallelepiped: 10056 ,
-					 GravityCenter: 10057 ,
-			},
-		},
-		 FrameToFrameTracking: 10058,
 		 SegmentationModule: {
 			 KernelFunction: {
 				 ColorType: {
-						 GreyLevel: 10059 ,
-						 SystemColor: 10060 ,
+						 GreyLevel: 10045 ,
+						 SystemColor: 10046 ,
 				},
-				 ShadowElimination: 10061,
+				 ShadowElimination: 10047,
 				 ObjectAspect: {
-						 Edge: 10062 ,
-						 Region: 10063 ,
+						 Edge: 10048 ,
+						 Region: 10049 ,
 				},
 			},
 			 Threshold: {
-					 LowThreshold: 10064 ,
-					 MidThreshold: 10065 ,
-					 HighThreshold: 10066 ,
+					 LowThreshold: 10050 ,
+					 MidThreshold: 10051 ,
+					 HighThreshold: 10052 ,
 			},
 			 TraversalAlgorithm: {
 				 TraversalParameters: {
-						 WithWindow: 10067 ,
-						 WithMask: 10068 ,
-						 Fast: 10069 ,
+						 WithWindow: 10053 ,
+						 WithMask: 10054 ,
+						 Fast: 10055 ,
 				},
 				 GridStep: {
-						 HighGridStep: 10070 ,
-						 LowGridStep: 10071 ,
+						 HighGridStep: 10056 ,
+						 LowGridStep: 10057 ,
 				},
 			},
-			 SegmFineTune: 10072,
+			 SegmFineTune: 10058,
 		},
+		 ReferenceImageUpdating: 10059,
 		 Clustering: {
-				 DistanceRGBAnd3DClustering: 10073 ,
-				 FastClustering: 10074 ,
-				 KMeansClustering: 10075 ,
+				 DistanceRGBAnd3DClustering: 10060 ,
+				 FastClustering: 10061 ,
+				 KMeansClustering: 10062 ,
 		},
-		 ImageAcquisition: 10076,
+		 TrackingDataFusion: 10063,
+		 ClassificationModule: {
+			 Contour: 10064,
+			 Split: {
+					 SplitStandard: 10065 ,
+					 SplitGravityCenter: 10066 ,
+			},
+			 Model: {
+					 ModelType: {
+							 OmegaModel: 10067 ,
+							 ThreeDModel: 10068 ,
+					},
+					 Ellipse: 10069 ,
+					 Shape: 10070 ,
+					 Parallelepiped: 10071 ,
+					 GravityCenter: 10072 ,
+			},
+			 Merge: {
+					 FusionGravityCenter: 10073 ,
+					 FusionStandard: 10074 ,
+			},
+			 ClassificationStandard: {
+				 Density: 10075,
+			},
+		},
+		 FrameToFrameTracking: 10076,
 		 LongTermTracking: 10077,
-		 TrackingDataFusion: 10078,
-		 ScenarioRecognition: 10079,
+		 ScenarioRecognition: 10078,
+		 ImageAcquisition: 10079,
 	},
 }
 
