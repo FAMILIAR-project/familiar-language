@@ -24,6 +24,8 @@
  */
 package fr.unice.polytech.modalis.familiar.gui;
 
+
+import java.awt.Cursor;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -40,13 +42,78 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 import prefuse.data.Tree;
+import fr.unice.polytech.modalis.familiar.fm.FMLUtils;
 import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
+import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 
 public class Menu {
 	// A simple, fast, and thread-safe singleton implementation.
 	public final static Menu INSTANCE = new Menu();
 	
+	private static enum ReasoningType {
+		isValid("isValid"),
+		countFeatures("Count Features"),
+		countConstraints("Count Constraints"),
+		countValidConfigs("Count Valid Configs"),
+		textSyntaxt("Textual Syntax"),
+		validConfigs("Valid Configs"),
+		cores("Cores"),
+		deads("Deads"),
+		depth("Depth");
+		
+	    private ReasoningType(final String text) {
+	        this.reasoningType = text;
+	    }
+	    
+	    @Override
+	    public String toString() {
+	        return reasoningType;
+	    }
+
+	    private final String reasoningType;
+	}
+	
 	private Menu() {
+	}
+	
+	private ActionListener createActionListener(final ReasoningType rt) {
+		return new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				// In a case FM was not loaded (i.e., it is configuration)
+		      	FeatureModelVariable fmv = FamiliarConsole.INSTANCE.getLoadedFMV();
+		      	if (null == fmv) {
+		      		JOptionPane.showMessageDialog(FamiliarEditor.INSTANCE, 
+		      	            "Error: No current FeatureModelVariable.",
+		      	            "No current FeatureModelVariable", JOptionPane.ERROR_MESSAGE);
+		      		return;
+		      	}
+		      	String output = "";
+		      	if (rt.toString().equals(ReasoningType.isValid.toString())) {
+		      		output = Boolean.toString(fmv.isValid());
+		      	} else if (rt.toString().equals(ReasoningType.countFeatures.toString())) {
+		      		output = Integer.toString(fmv.nbFeatures());
+		      	} else if (rt.toString().equals(ReasoningType.countConstraints.toString())) {
+		      		output = Integer.toString(fmv.getFm().getConstraints().size());
+		      	} else if (rt.toString().equals(ReasoningType.countValidConfigs.toString())) {
+		      		output = Double.toString(fmv.counting());
+		      	} else if (rt.toString().equals(ReasoningType.textSyntaxt.toString())) {
+		      		output = Converter.INSTANCE.Tree2String(Converter.INSTANCE.fmv2PrefuseTree(fmv));
+		      	} else if (rt.toString().equals(ReasoningType.validConfigs.toString())) {
+		      		output = FMLUtils.setConfigToSetStr(fmv.configs()).toString();
+		      	} else if (rt.toString().equals(ReasoningType.cores.toString())) {
+		      		output = fmv.cores().toString();
+		      	} else if (rt.toString().equals(ReasoningType.deads.toString())) {
+		      		output = fmv.deads().toString();
+		      	} else if (rt.toString().equals(ReasoningType.depth.toString())) {
+		      		output = Integer.toString(fmv.depth());
+		      	}
+		      	
+		      	FamiliarEditor.INSTANCE.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+				FamiliarConsole.INSTANCE.setMessage(rt.toString() + " for FM " 
+						+ fmv.getIdentifier() + ":\n" + output);
+				FamiliarEditor.INSTANCE.setCursor(Cursor.getDefaultCursor());
+			}
+		};
 	}
 	
 	public JMenuBar createMenuBar() {
@@ -126,7 +193,7 @@ public class Menu {
         
         JMenu displayMenu = new JMenu("Display");
         
-        final String showAll = "Show all loaded FMs and configurations";
+        final String showAll = "Display all loaded FMs and configurations";
         final JMenuItem showAllMenuItem = new JMenuItem(showAll);
         displayMenu.add(showAllMenuItem);
         showAllMenuItem.addActionListener(new ActionListener() {
@@ -155,18 +222,6 @@ public class Menu {
 			}
 		});
         
-        final JCheckBoxMenuItem infoMenuItem = new JCheckBoxMenuItem("Displayed FM Info");
-        // FM variable info text is shown by default on display
-        infoMenuItem.setSelected(true);
-       
-        StatusBar.INSTANCE.setDisplayText(infoMenuItem.isSelected());
-        displayMenu.add(infoMenuItem);
-        infoMenuItem.addActionListener(new ActionListener() {
-        	public void actionPerformed(ActionEvent e) {
-        		StatusBar.INSTANCE.setDisplayText(infoMenuItem.isSelected());
-			}
-		});
-        
         JMenu consoleMenu = new JMenu("Console");
         JMenuItem cconsoleMenuItem = new JMenuItem("Clear Console");
         cconsoleMenuItem.setIcon(createImageIcon("images/clear.gif"));
@@ -185,16 +240,6 @@ public class Menu {
 		});
         consoleMenu.addSeparator();
         
-        JMenuItem fmlMenuItem = new JMenuItem("Visualized FM -> FM Textual Syntax");
-        consoleMenu.add(fmlMenuItem);
-        fmlMenuItem.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				FamiliarConsole.INSTANCE.setMessage(
-					Converter.INSTANCE.Tree2String(FamiliarEditor.INSTANCE.getTree()));
-			}
-		});
-        
-        consoleMenu.addSeparator();
         final JCheckBoxMenuItem verboseLMenuItem = new JCheckBoxMenuItem("Verbose Logging");
         verboseLMenuItem.setMnemonic(KeyEvent.VK_C);
         consoleMenu.add(verboseLMenuItem);
@@ -203,6 +248,52 @@ public class Menu {
             	FamiliarConsole.INSTANCE.setVerboseLogging(verboseLMenuItem.isSelected());
             }
         });
+        
+        JMenu reasoningMenu = new JMenu("Reasoning");
+        
+        JMenuItem isValidItem = new JMenuItem(ReasoningType.isValid.toString());
+        reasoningMenu.add(isValidItem);
+        isValidItem.addActionListener(createActionListener(ReasoningType.isValid));
+        
+        JMenuItem nbItem = new JMenuItem(ReasoningType.countFeatures.toString());
+        reasoningMenu.add(nbItem);
+        nbItem.addActionListener(createActionListener(ReasoningType.countFeatures));
+     
+        JMenuItem constItem = new JMenuItem(ReasoningType.countConstraints.toString());
+        reasoningMenu.add(constItem);
+        constItem.addActionListener(createActionListener(ReasoningType.countConstraints));
+      
+        JMenuItem confItem = new JMenuItem(ReasoningType.countValidConfigs.toString());
+        reasoningMenu.add(confItem);
+        confItem.addActionListener(createActionListener(ReasoningType.countValidConfigs));
+        
+        JMenuItem fmlMenuItem = new JMenuItem(ReasoningType.textSyntaxt.toString());
+        reasoningMenu.add(fmlMenuItem);
+        fmlMenuItem.addActionListener(createActionListener(ReasoningType.textSyntaxt));
+        
+        JMenuItem vconfigsItem = new JMenuItem(ReasoningType.validConfigs.toString());
+        reasoningMenu.add(vconfigsItem);
+        vconfigsItem.addActionListener(createActionListener(ReasoningType.validConfigs));
+        
+        JMenuItem coresItem = new JMenuItem(ReasoningType.cores.toString());
+        reasoningMenu.add(coresItem);
+        coresItem.addActionListener(createActionListener(ReasoningType.cores));
+        
+        JMenuItem deadsItem = new JMenuItem(ReasoningType.deads.toString());
+        reasoningMenu.add(deadsItem);
+        deadsItem.addActionListener(createActionListener(ReasoningType.deads));
+        
+        JMenuItem depthItem = new JMenuItem(ReasoningType.depth.toString());
+        reasoningMenu.add(depthItem);
+        depthItem.addActionListener(createActionListener(ReasoningType.depth));
+        
+        JMenuItem compareFMsItem = new JMenuItem("Compare FMs");
+        reasoningMenu.add(compareFMsItem);
+        compareFMsItem.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new CompareFMsFrame(FamiliarConsole.INSTANCE.allFmvToStringArray());
+			}
+		});
         
         JMenu helpMenu = new JMenu("Help");
         helpMenu.setMnemonic(KeyEvent.VK_H);
@@ -273,6 +364,7 @@ public class Menu {
         menubar.add(scriptMenu);
         menubar.add(displayMenu);
         menubar.add(consoleMenu);
+        menubar.add(reasoningMenu);
         menubar.add(helpMenu);
         return menubar;
 	}
