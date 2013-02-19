@@ -287,11 +287,12 @@ public class Menu {
         reasoningMenu.add(depthItem);
         depthItem.addActionListener(createActionListener(ReasoningType.depth));
         
-        JMenuItem compareFMsItem = new JMenuItem("Compare FMs");
+        final String compareTitle = "Compare FMs";
+        JMenuItem compareFMsItem = new JMenuItem(compareTitle);
         reasoningMenu.add(compareFMsItem);
         compareFMsItem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				new CompareFMsFrame(FamiliarConsole.INSTANCE.allFmvToStringArray());
+				new CompareFMsFrame(FamiliarConsole.INSTANCE.allFmvToStringArray(), compareTitle);
 			}
 		});
         

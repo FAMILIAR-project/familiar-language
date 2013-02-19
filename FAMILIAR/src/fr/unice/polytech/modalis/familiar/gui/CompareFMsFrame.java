@@ -53,8 +53,8 @@ public class CompareFMsFrame extends JFrame {
 	private JComboBox<String> jc2 = null;
 	private String selection = "";
 
-public CompareFMsFrame(String[] fms) {
-	super("Compare");
+public CompareFMsFrame(String[] fms, String compareTitle) {
+	super(compareTitle);
 	setResizable(false);
     ModePanel checkbox = new ModePanel();
  
@@ -184,7 +184,7 @@ public CompareFMsFrame(String[] fms) {
 					  if (Comparison.ARBITRARY == cRes) {
 						  isArb = true;
 					  }
-					  aMsg = "FM " + fmName1 + (isArb ? " is a " : " is NOT a ") 
+					  aMsg = "FM " + fmName1 + (isArb ? " is an " : " is NOT an ") 
 							  + Comparison.ARBITRARY.toString() + " of FM " + fmName2;
 				  }
 				
