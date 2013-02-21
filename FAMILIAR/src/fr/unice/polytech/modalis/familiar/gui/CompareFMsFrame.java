@@ -49,8 +49,10 @@ public class CompareFMsFrame extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private static final String allModesStr = "ALL MODES";
 
-	private JComboBox<String> jc1 = null;
-	private JComboBox<String> jc2 = null;
+	// Java 6 will not compile with generics on JComboBox class
+	// For backwards compatibility remove <String> part from JComboBox<String>
+	private JComboBox jc1 = null;
+	private JComboBox jc2 = null;
 	private String selection = "";
 
 public CompareFMsFrame(String[] fms, String compareTitle) {
@@ -61,8 +63,8 @@ public CompareFMsFrame(String[] fms, String compareTitle) {
     JButton button = new JButton("Compare");
     button.addActionListener(new ButtonActionListener(this));
     
-    jc1 = new JComboBox<String>(fms);
-    jc2 = new JComboBox<String>(fms);
+    jc1 = new JComboBox(fms);
+    jc2 = new JComboBox(fms);
     
     JPanel fmsPanel = new JPanel();
     fmsPanel.setBorder(new TitledBorder("Select Feature Models to Compare"));
