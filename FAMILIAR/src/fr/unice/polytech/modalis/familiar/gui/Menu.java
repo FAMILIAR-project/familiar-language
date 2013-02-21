@@ -159,6 +159,15 @@ public class Menu {
             }
         });
         
+        final String newConfigTitle = "New Configuration";
+        JMenuItem newConfigitem = new JMenuItem(newConfigTitle);
+        fileMenu.add(newConfigitem);
+        newConfigitem.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae) {
+        		new NewConfiguration();
+            }
+        });
+        
         fileMenu.addSeparator();
         fileMenu.add(new TreeMLAction.OpenTree());
         fileMenu.add(new TreeMLAction.SaveTree());

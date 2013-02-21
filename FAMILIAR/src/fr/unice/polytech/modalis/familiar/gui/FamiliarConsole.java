@@ -237,7 +237,7 @@ public class FamiliarConsole {
 				}
 				final String selectFM = "Select Feature Model";
 				String loadFM = (String) JOptionPane.showInputDialog(null, 
-						"Choose your current Feature Model to work with ... ",
+						"Choose your current FM to work with ... ",
 						selectFM, JOptionPane.QUESTION_MESSAGE, null, fms, fms[0]); // Initial choice
 			    if (null != loadFM) {
 		            fmvName = loadFM;

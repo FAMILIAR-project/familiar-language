@@ -75,7 +75,6 @@ public class PopupMenuController extends ControlAdapter implements ActionListene
 	private static final String deleteGroup = "Delete Group";
 	
 	private static final String newConstraint = "New Constraint";
-	private static final String newConfiguration = "New Configuration";
 	private static final String deleteAllConstraints = "Delete All Constraints";
 	
 	private static final String updateConstraint = "Update Constraint";
@@ -288,26 +287,7 @@ public class PopupMenuController extends ControlAdapter implements ActionListene
 	}
 	
 	private void handleConfiguration() {
-		FeatureModelVariable fmv = FamiliarConsole.INSTANCE.getLoadedFMV();
-		if (null == fmv) {
-			return;
-		}
-		JTextField newConf = new JTextField();
-		newConf.setText("config" + fmv.getIdentifier());
-		
-	    JPanel panel = new JPanel();
-	    panel.setLayout(new GridLayout(2, 1, 5, 5));
-	    panel.add(new JLabel("New Configuration Name:"));
-	    panel.add(newConf);
-	    
-	    int result = JOptionPane.showConfirmDialog(FamiliarEditor.INSTANCE, panel, 
-	    		newConfiguration, JOptionPane.OK_CANCEL_OPTION);
-	    if (result == JOptionPane.OK_OPTION) {
-	    	if (newConf.getText().isEmpty()) return;
-	    	FamiliarConsole.INSTANCE.createNewConfig(
-	    			RuleEnforcer.onlyDigitsAndLetters(newConf.getText()), 
-	    			fmv.getIdentifier());
-	    }
+		new NewConfiguration();
 	}
 	
 	public PopupMenuController() {
@@ -392,9 +372,9 @@ public class PopupMenuController extends ControlAdapter implements ActionListene
 		newCItem.addActionListener(this);
 		
 		popupRootMenu.addSeparator();
-		JMenuItem newConfItem = new JMenuItem(newConfiguration);
+		JMenuItem newConfItem = new JMenuItem(NewConfiguration.title);
 		popupRootMenu.add(newConfItem);
-		newConfItem.setActionCommand(newConfiguration);
+		newConfItem.setActionCommand(NewConfiguration.title);
 		newConfItem.addActionListener(this);
 	}
 	
@@ -486,7 +466,7 @@ public class PopupMenuController extends ControlAdapter implements ActionListene
 			handleConstraint(e);
 		} else if (e.getActionCommand().equals(renameFMName)) {
 			handleRenameFMName();
-		} else if (e.getActionCommand().equals(newConfiguration)) {
+		} else if (e.getActionCommand().equals(NewConfiguration.title)) {
 			handleConfiguration();
 		}
 		clickedItem = null;
