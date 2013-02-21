@@ -10,9 +10,19 @@ package fr.unice.polytech.modalis.familiar.variable;
  */
 public enum Comparison {
 	
-	SPECIALIZATION, 
-	GENERALIZATION, 
-	REFACTORING, 
-	ARBITRARY
-
+	SPECIALIZATION("SPECIALIZATION"), 
+	GENERALIZATION("GENERALIZATION"), 
+	REFACTORING("REFACTORING"), 
+	ARBITRARY("ARBITRARY");
+	
+	private Comparison(final String in) {
+        this.cmpString = in;
+    }
+	
+	@Override
+	public String toString() {
+		return cmpString;
+	}
+	
+	private final String cmpString;
 }

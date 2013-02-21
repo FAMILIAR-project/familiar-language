@@ -30,12 +30,10 @@ import java.awt.Font;
 import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.BoxLayout;
-import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
 import prefuse.util.FontLib;
 import prefuse.util.ui.JFastLabel;
-import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 
 public class StatusBar {
 	// A simple, fast, and thread-safe singleton implementation.
@@ -45,9 +43,6 @@ public class StatusBar {
 	private JFastLabel sbTitle = new JFastLabel(loadedFM);
 	private static final String loadedFM = "FM name: ";
 	public static final String loadedFMVars = "Loaded FM(s): ";
-	private static JLabel label = new JLabel();
-	private static String displayText = "";
-	private static boolean displayTextOn = true;
 	
 	private StatusBar() {
 	}
@@ -61,37 +56,6 @@ public class StatusBar {
         statusbar.add(Box.createHorizontalStrut(10));
         statusbar.add(sbTitle);
         return statusbar;
-	}
-	
-	public JLabel createLabel() {
-		label.setSize(2048, 50); 
-		label.setBorder(BorderFactory.createEmptyBorder(15, 15, 15, 15));
-		label.setFont(FontLib.getFont("Tahoma", Font.PLAIN, 14));
-		return label;
-	}
-	
-	public void setDisplayText(boolean displayTextOn) {
-		StatusBar.displayTextOn = displayTextOn;
-		if (StatusBar.displayTextOn) {
-			label.setText(displayText);
-		} else {
-			label.setText("");
-		}
-	}
-	
-	public void setLoadedFMlabel(FeatureModelVariable fmv) {
-		displayText = loadedFM + fmv.getCompleteIdentifier() + "\"" +
-				" | nbFeatures (number of features): " + fmv.nbFeatures() + 
-	    		" | depth: " + fmv.depth() + 
-	    		" | counting (number of valid configs): " + fmv.counting() + 
-	    		" | number of constraints: " + fmv.getFm().getConstraints().size() +
-	    		" |";
-		
-		if (displayTextOn) {
-			label.setText(displayText);
-		} else {
-			label.setText("");
-		}
 	}
 	
 	public void setLoadedFMVStatusBar(String text) {

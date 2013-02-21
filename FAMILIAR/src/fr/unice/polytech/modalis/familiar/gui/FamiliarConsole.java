@@ -99,8 +99,10 @@ public class FamiliarConsole {
 									}
 								}
 							} else {
-								// Update the FM view
-								Translator.INSTANCE.changedFmv(FamiliarConsole.INSTANCE.getLoadedFMV());
+								if (lastLine.contains(" ")) {
+									// Update the FM view
+									Translator.INSTANCE.changedFmv(FamiliarConsole.INSTANCE.getLoadedFMV());
+								}
 							}
 						} catch (Exception e) {
 							e.printStackTrace();
@@ -200,7 +202,6 @@ public class FamiliarConsole {
 				if (fmv.getIdentifier().contentEquals(oldName)) {
 					fmv.setIdentifier(newName);
 					StatusBar.INSTANCE.setLoadedFMVStatusBar(allFmvToString());
-					StatusBar.INSTANCE.setLoadedFMlabel(fmv);
 					Tab2EnvVar.INSTANCE.renameCurrentFMVName(newName);
 					FamiliarEditor.INSTANCE.pVisRenameKey(oldName, newName);
 					break;
@@ -234,8 +235,9 @@ public class FamiliarConsole {
 				if (1 == fms.length) {
 					return (FeatureModelVariable)getVariableByName(fms[0]);
 				}
-				final String selectFM = "Select Current Feature Model";
-				String loadFM = (String) JOptionPane.showInputDialog(null, "Choose your current FM...",
+				final String selectFM = "Select Feature Model";
+				String loadFM = (String) JOptionPane.showInputDialog(null, 
+						"Choose your current FM to work with ... ",
 						selectFM, JOptionPane.QUESTION_MESSAGE, null, fms, fms[0]); // Initial choice
 			    if (null != loadFM) {
 		            fmvName = loadFM;

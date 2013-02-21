@@ -146,9 +146,9 @@ public class TreeMLAction {
               	}
             	
               	if (fmv.isValid()) {
-              		new TreeMLWriter().writeGraph(FamiliarEditor.INSTANCE.getLoadedTree(), f);
+              		Tree t = Converter.INSTANCE.fmv2PrefuseTree(fmv);
+              		new TreeMLWriter().writeGraph(t, f);
               		FamiliarConsole.INSTANCE.addOrReplaceFMVariable(fmv);
-              		StatusBar.INSTANCE.setLoadedFMlabel(fmv);
               		JOptionPane.showMessageDialog(FamiliarEditor.INSTANCE, 
                       	"FM " + fmv.getCompleteIdentifier() + " has been successfully saved  to " + 
                       	f.getAbsolutePath(),
@@ -199,10 +199,10 @@ public class TreeMLAction {
             	// Before saving the FM, add (or replace) it to the FAMILIAR environment, and validate it
             	FeatureModelVariable fmv = FamiliarConsole.INSTANCE.getLoadedFMV();
               	if (null != fmv && fmv.isValid()) {
-              		new TreeMLWriter().writeGraph(FamiliarEditor.INSTANCE.getLoadedTree(), 
+              		Tree t = Converter.INSTANCE.fmv2PrefuseTree(fmv);
+              		new TreeMLWriter().writeGraph(t, 
               				mapLastSaved.get(fmv.getIdentifier()));
               		FamiliarConsole.INSTANCE.addOrReplaceFMVariable(fmv);
-              		StatusBar.INSTANCE.setLoadedFMlabel(fmv);
               		JOptionPane.showMessageDialog(FamiliarEditor.INSTANCE, 
                   		"FM " + fmv.getCompleteIdentifier() + " has been successfully saved  to " + 
                   				mapLastSaved.get(fmv.getIdentifier()).getAbsolutePath(),

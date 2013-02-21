@@ -83,8 +83,6 @@ public class FamiliarEditor extends JPanel implements Observer {
     public final static String shortAppName = "FAMILIAR Tool";
 	public final static String longAppName = "FAMILIAR (FeAture Model scrIpt Language for manIpulation and Automatic Reasoning) Tool";
 	
-	private JLabel label = StatusBar.INSTANCE.createLabel(); 
-	
 	private static HashMap<String, Visualization> pVis;
 	// This is for cases when we cannot retrieve the visualization by FMV name since
 	// its tab has not been created yet
@@ -130,17 +128,13 @@ public class FamiliarEditor extends JPanel implements Observer {
 		            "Error updating FM display", JOptionPane.ERROR_MESSAGE);
 			return;
 		}
-   
     	v.setRendererFactory(Renderer.INSTANCE.getDRF(Converter.NAME));
     	v.removeGroup(treeGroup);
         VisualTree vt = v.addTree(treeGroup, t);
         v.setValue(treeEdges, null, VisualItem.INTERACTIVE, Boolean.FALSE);
         VisualItem f = (VisualItem)vt.getNode(0);
         v.getGroup(Visualization.FOCUS_ITEMS).setTuple(f);
-        
         f.setFixed(false);
-        StatusBar.INSTANCE.setLoadedFMlabel(fmv);
-   
         v.run("draw");
     }
     
@@ -233,7 +227,6 @@ public class FamiliarEditor extends JPanel implements Observer {
         	display.pan(w/2-70, 30);
         	display.zoom(new Point2D.Double(w/2,h/2), 1.2);
         }
-        display.add(label);
         display.addControlListener(new FocusControl(1));
         display.addControlListener(new PanControl());
         display.addControlListener(new ZoomControl());
@@ -258,22 +251,6 @@ public class FamiliarEditor extends JPanel implements Observer {
 		} 
 		return fmv;
 	}
-    
-	public Tree getTree() {
-		Visualization v = getVis();
-		if (null == v) {
-			return null;
-		}
-		return (Tree) v.getSourceData(FamiliarEditor.treeGroup);
-	}
-    
-    public Tree getLoadedTree() {
-    	Visualization v = getVis();
-		if (null == v) {
-			return null;
-		}
-    	return (Tree) v.getSourceData(treeGroup);
-    }
     
     public static void setLookAndFeel() {
     	UILib.setPlatformLookAndFeel();

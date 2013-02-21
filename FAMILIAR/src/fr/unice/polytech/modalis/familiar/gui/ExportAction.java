@@ -86,7 +86,6 @@ public class ExportAction extends ConcreteAction {
       	if (fmv.isValid()) {
       		if (saveSpecificFormat(f, fmv)) {
       			FamiliarConsole.INSTANCE.addOrReplaceFMVariable(fmv);
-          		StatusBar.INSTANCE.setLoadedFMlabel(fmv);
           		JOptionPane.showMessageDialog(FamiliarEditor.INSTANCE, 
           			"FM " + fmv.getCompleteIdentifier() + " has been successfully saved  to " + 
           			f.getAbsolutePath(),
