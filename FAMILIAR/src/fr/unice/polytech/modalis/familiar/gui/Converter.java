@@ -79,6 +79,15 @@ public class Converter {
 		return t;
 	}
 	
+    public FeatureModelVariable getStartupFMV() {
+		FeatureModelVariable fmv = buildStartupDisplayFromFML();
+		if (null == fmv) {
+			Tree t = buildStartupDisplayFromPrefuseTree(null);
+			fmv = prefuseTree2Fmv(t, null);
+		} 
+		return fmv;
+	}
+	
 	public Tree buildStartupDisplayFromPrefuseTree(String fmRootName) {
 		Tree t = generateEmptyTree();
 		Node root = t.addRoot();
@@ -86,7 +95,7 @@ public class Converter {
 		return t;
 	}
 	
-	public FeatureModelVariable buildStartupDisplayFromFML() {
+	private FeatureModelVariable buildStartupDisplayFromFML() {
 		FeatureModel<String> fm = null;
 		try {
 			fm = FMBuilder.getInternalFM(FMLTest.FM_LAPTOP);

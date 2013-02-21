@@ -34,15 +34,12 @@ import java.util.HashMap;
 import java.util.Observable;
 import java.util.Observer;
 
-import javax.swing.Box;
 import javax.swing.JComponent;
-import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JSplitPane;
-import javax.swing.JTextArea;
 
 import prefuse.Constants;
 import prefuse.Display;
@@ -64,10 +61,8 @@ import prefuse.data.Tree;
 import prefuse.data.Tuple;
 import prefuse.data.event.TupleSetListener;
 import prefuse.data.tuple.TupleSet;
-import prefuse.util.ui.UILib;
 import prefuse.visual.VisualItem;
 import prefuse.visual.VisualTree;
-import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 
 public class FamiliarEditor extends JPanel implements Observer {
@@ -79,9 +74,6 @@ public class FamiliarEditor extends JPanel implements Observer {
 	private static final String treeGroup = "tree";
     private static final String treeNodes = "tree.nodes";
     public static final String treeEdges = "tree.edges";
-    
-    public final static String shortAppName = "FAMILIAR Tool";
-	public final static String longAppName = "FAMILIAR (FeAture Model scrIpt Language for manIpulation and Automatic Reasoning) Tool";
 	
 	private static HashMap<String, Visualization> pVis;
 	// This is for cases when we cannot retrieve the visualization by FMV name since
@@ -159,17 +151,13 @@ public class FamiliarEditor extends JPanel implements Observer {
     	
     	initPrefuseVis();
     	
-        // Initialize few singletons that codebase depends on...
-    	final Box statusBar = StatusBar.INSTANCE.createStatusBar();
-    	final JTextArea console = FamiliarConsole.INSTANCE.createTextArea();
-    	
-    	visualizeFM(getStartupFMV());
+    	visualizeFM(Converter.INSTANCE.getStartupFMV());
         
 		fixSelectedFocusNodes();
-       
+		
         JPanel south = new JPanel(new BorderLayout());
-        south.add(new JScrollPane(console), BorderLayout.CENTER);
-        south.add(statusBar, BorderLayout.SOUTH);
+        south.add(new JScrollPane(FamiliarConsole.INSTANCE.createTextArea()), BorderLayout.CENTER);
+        south.add(StatusBar.INSTANCE.createStatusBar(), BorderLayout.SOUTH);
         
         // Create a new JSplitPane to present the interface
         JSplitPane split = new JSplitPane(JSplitPane.VERTICAL_SPLIT, Tab2EnvVar.INSTANCE.getTab(), south);
@@ -243,19 +231,6 @@ public class FamiliarEditor extends JPanel implements Observer {
         updateDisplay(fmv);
     }
     
-    private FeatureModelVariable getStartupFMV() {
-		FeatureModelVariable fmv = Converter.INSTANCE.buildStartupDisplayFromFML();
-		if (null == fmv) {
-			Tree t = Converter.INSTANCE.buildStartupDisplayFromPrefuseTree(null);
-			fmv = Converter.INSTANCE.prefuseTree2Fmv(t, null);
-		} 
-		return fmv;
-	}
-    
-    public static void setLookAndFeel() {
-    	UILib.setPlatformLookAndFeel();
-    }
-    
     public static Visualization getVis() {
     	String fmvName = Tab2EnvVar.INSTANCE.getCurrentFMVName();
     	if (null == fmvName) {
@@ -263,31 +238,6 @@ public class FamiliarEditor extends JPanel implements Observer {
     	}
     	Visualization v = pVis.get(fmvName);
     	return (null == v ? lastCreatedVis : v);
-    }
-    
-    /**
-     * Main and buildAppFrame static methods.
-     */
-    public static void main(String[] args) {
-    	javax.swing.SwingUtilities.invokeLater(new Runnable() { public void run() {
-    		setLookAndFeel();
-            
-            JFrame frame = buildAppFrame(0);
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    	}});
-    }
-    
-    public static JFrame buildAppFrame(final int currTab) {
-        // Launch window
-        final JFrame frame = new JFrame(shortAppName + " | Version " + FMLShell.FML_VERSION);
-        frame.setJMenuBar(Menu.INSTANCE.createMenuBar());
-        frame.setContentPane(FamiliarEditor.INSTANCE);
-        frame.setIconImage(Menu.createImageIcon("images/binary-tree.gif").getImage());
-        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        frame.pack();
-        FamiliarConsole.INSTANCE.displayHeader();
-        frame.setVisible(true);
-        return frame;
     }
 
 	@Override

@@ -60,6 +60,11 @@ public class FamiliarConsole {
 	private FamiliarConsole() {
 	}
 	
+	public void initializeFMLShell() {
+		fShell = FMLShell.instantiateStandalone(System.in);
+		fEnv = fShell.getCurrentEnv();
+	}
+	
 	public JTextArea createTextArea() {
 		console.setLineWrap(true);
 		console.setRows(15);
@@ -67,11 +72,6 @@ public class FamiliarConsole {
 		console.setBorder(BorderFactory.createEmptyBorder(5, 5, 5, 5));
 		
 		redirectSystemStreams();
-		
-		fShell = FMLShell.instantiateStandalone(System.in);
-		fShell.setToInteractiveMode();
-		
-		fEnv = fShell.getCurrentEnv();
 		
 		console.addKeyListener(new KeyAdapter() { 
 			public void keyTyped(KeyEvent evt) { } 
@@ -98,11 +98,11 @@ public class FamiliarConsole {
 												(ConfigurationVariable) v, false);
 									}
 								}
-							} else {
-								if (lastLine.contains(" ")) {
-									// Update the FM view
-									Translator.INSTANCE.changedFmv(FamiliarConsole.INSTANCE.getLoadedFMV());
-								}
+							} else if (lastLine.split("\\s+").length >= 3) {
+								// Update the FM view only if command might actually change it
+								// i.e., this rules out one-line commands like 
+								// when using variable names to print them out
+								Translator.INSTANCE.changedFmv(FamiliarConsole.INSTANCE.getLoadedFMV());
 							}
 						} catch (Exception e) {
 							e.printStackTrace();
@@ -166,6 +166,7 @@ public class FamiliarConsole {
 	
 	public void displayHeader() {
 		console.setText("");
+		fShell.setToInteractiveMode();
 		fShell.printFMLHeader();
 		fShell.printPrompt();
 	}

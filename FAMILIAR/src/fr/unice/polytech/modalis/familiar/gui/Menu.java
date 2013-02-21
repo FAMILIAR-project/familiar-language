@@ -346,14 +346,14 @@ public class Menu {
 			}
 		});
         
-        final JMenuItem aboutMenuItem = new JMenuItem("About " + FamiliarEditor.shortAppName + "...");
+        final JMenuItem aboutMenuItem = new JMenuItem("About " + FamiliarTool.shortAppName + "...");
         aboutMenuItem.setMnemonic(KeyEvent.VK_A);
         aboutMenuItem.setIcon(createImageIcon("images/info.gif"));
         helpMenu.add(aboutMenuItem);
         aboutMenuItem.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				JOptionPane.showMessageDialog(aboutMenuItem,
-					FamiliarEditor.longAppName + "\n" +
+					FamiliarTool.longAppName + "\n" +
 					"Version " + FMLShell.FML_VERSION + "\n\n" +
 					"Authors:\n\n" +
 					"     * Mathieu Acher\n" +
@@ -363,7 +363,7 @@ public class Menu {
 					"      * Philippe Collet\n      * Philippe Lahire\n" +
 					"   University of Nice Sophia Antipolis, UMR CNRS 6070, I3S Laboratory, France\n\n" +
 					"FAMILIAR Web Site: http://familiar-project.github.com/\n\n",
-			    "About " + FamiliarEditor.shortAppName,
+			    "About " + FamiliarTool.shortAppName,
 			    JOptionPane.INFORMATION_MESSAGE,
 			    createImageIcon("images/info.gif"));
 			}
