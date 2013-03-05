@@ -23,6 +23,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -34,6 +35,7 @@ import com.google.common.collect.Sets;
 
 import fr.unice.polytech.modalis.familiar.fm.FMLUtils;
 import fr.unice.polytech.modalis.familiar.operations.AllConfigsBDD;
+import fr.unice.polytech.modalis.familiar.operations.FDOverApproximationStrategy;
 import fr.unice.polytech.modalis.familiar.operations.FMLMergerBDD;
 import fr.unice.polytech.modalis.familiar.operations.FormulaAnalyzer;
 import fr.unice.polytech.modalis.familiar.operations.Mode;
@@ -48,6 +50,26 @@ import gsd.synthesis.Formula;
  * 
  */
 public class FMLMergeOperationsTest extends FMLTest {
+	
+	
+	@Test
+	public void testMST1() throws Exception {
+		
+		FeatureModelVariable fm1 = FM ("fm1", "C : [B] ; B : [A] ; ") ;
+		FeatureModelVariable fm2 = FM ("fm2", "C : [B] [A] ; A -> B ; ") ;
+		FeatureModelVariable fm3 = FM ("fm3", "C : [B] [A] ; A -> B ; ") ;
+		
+		
+		Collection<FeatureModelVariable> lfms = new ArrayList<FeatureModelVariable>() ;
+		lfms.add(fm1);
+		lfms.add(fm2);
+		lfms.add(fm3);
+		
+		FeatureModelVariable fm4 = new FMLMergerBDD (lfms, FDOverApproximationStrategy.SYNCHRONIZED_FLA).union() ;
+		System.err.println("fm4=" + fm4);
+		System.err.println("" + fm4.computeImplicationGraph().toString());
+		
+	}
 
 	@Test
 	public void testECMFA1() throws Exception {
@@ -82,12 +104,12 @@ public class FMLMergeOperationsTest extends FMLTest {
 
 		/*
 		 * A dead feature is a non-instantiable feature, i.e., a feature that
-		 * despite being deÞned in a FM, it appears in no product in the SPL. C
+		 * despite being deï¿½ned in a FM, it appears in no product in the SPL. C
 		 * and C' are dead features. A child feature in a non-mandatory
 		 * relationship is a full-mandatory feature if it has to be instantiated
 		 * whenever its parent feature is, i.e., it is neither an optional nor
 		 * an alternative feature. C is a full-mandatory feature since it
-		 * belongs to a Xor-group but appears in every conÞguration. Such
+		 * belongs to a Xor-group but appears in every conï¿½guration. Such
 		 * features, acting as errors in the resulting FM, should be avoided.
 		 */
 

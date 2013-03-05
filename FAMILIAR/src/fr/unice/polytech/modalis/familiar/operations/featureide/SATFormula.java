@@ -286,8 +286,7 @@ public abstract class SATFormula implements FMLFormula {
 					marked[i][j] = false ;
 				}
 		
-		for (int i = 0; i < aDomain.length; i++) {
-			
+		for (int i = 0; i < aDomain.length; i++) {	
 			
 
 			T u = aDomain[i];

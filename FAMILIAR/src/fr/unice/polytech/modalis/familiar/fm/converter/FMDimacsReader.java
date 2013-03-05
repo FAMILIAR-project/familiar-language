@@ -4,10 +4,11 @@
 package fr.unice.polytech.modalis.familiar.fm.converter;
 
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Map;
 import java.util.Set;
+
+import com.google.common.collect.BiMap;
+import com.google.common.collect.HashBiMap;
 
 /**
  * @author macher1
@@ -15,12 +16,16 @@ import java.util.Set;
  */
 public class FMDimacsReader {
 
-	protected Map<Integer, String> _var2IDs = new HashMap<Integer, String>();
+	protected BiMap<Integer, String> _var2IDs = HashBiMap.create();
 	
 	protected Set<String> _fakes = new HashSet<String>();
 	
 	
 	
+	
+	public Integer getVariable(String id) {
+		return _var2IDs.inverse().get(id);
+	}
 
 	protected String extractVarName(String line, int l) {
 		return line.substring(l + 2);

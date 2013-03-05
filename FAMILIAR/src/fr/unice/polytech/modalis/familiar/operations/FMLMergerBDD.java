@@ -359,7 +359,7 @@ public class FMLMergerBDD extends FMLMerger {
 
 		if (flaMerged.isZero()) // false
 			return FeatureModelVariable.mkFalse(flaMerged, 
-					HierarchyMergerFactory.mkMerger(HierarchyMergerStrategy.BASIC, null, null).build(_lfms));
+					HierarchyMergerFactory.mkMerger(HierarchyMergerStrategy.BASIC, null, null).build(_lfms)); // FIXME parametereize HierarchyMergerStrategy.MST_IMPLICATION_GRAPH
 
 		// first, we eliminate dead features (synthesis algorithm precondition)
 

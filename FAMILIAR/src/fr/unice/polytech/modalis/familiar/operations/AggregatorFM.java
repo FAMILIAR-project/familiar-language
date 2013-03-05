@@ -70,7 +70,7 @@ public class AggregatorFM {
 			List<FeatureModel<String>> lfms,
 			List<Expression<String>> constraints, String fakeRootName) {
 
-		FeatureModel<String> aggregatedFM = FMBuilder.getInternalFM(fakeRootName + ";");
+		FeatureModel<String> aggregatedFM = FMBuilder.getInternalFM(fakeRootName + " ;");
 
 		FeatureGraph<String> aggregatedGraph = aggregatedFM.getDiagram();
 		FeatureNode<String> root = aggregatedGraph.findVertex(fakeRootName);

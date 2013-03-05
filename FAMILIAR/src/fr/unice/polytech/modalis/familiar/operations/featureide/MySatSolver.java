@@ -4,6 +4,7 @@
 package fr.unice.polytech.modalis.familiar.operations.featureide;
 
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 import org.prop4j.Node;
@@ -25,7 +26,8 @@ public class MySatSolver extends SatSolver {
 	public MySatSolver(Node node, long timeout) {
 		super(node, timeout);
 	}
-
+	
+	
 	public Set<String> getSetSolutions(int number) throws TimeoutException {
 		Set<String> out = new HashSet<String>();
 		if (contradiction)
@@ -60,6 +62,11 @@ public class MySatSolver extends SatSolver {
 			out.add(pos.toString());
 		}
 		return out;
+	}
+
+
+	public Map<Integer, Object> getVars2ID() {
+		return intToVar ; 
 	}
 
 }
