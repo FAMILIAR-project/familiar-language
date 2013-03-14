@@ -140,7 +140,7 @@ public class FMBuilder extends FMLAbstractCommandAnalyzer {
 				_LOGGER.debug("FeatureIDE import");
 				File file = FMLShell.getInstance().searchFile(filename) ; 
 				// FIXME @FeatureIDE
-				strfm = new FeatureIDEReader(file).writeToString() ;
+				strfm = new FeatureIDEReader(file).writeToString() ; // TODO model-to-model transformations
 			}
 			
 			else if (filename.endsWith(".tvl")) {
@@ -472,7 +472,6 @@ public class FMBuilder extends FMLAbstractCommandAnalyzer {
 
 	public static gsd.synthesis.FeatureModel<String> getInternalFM(String strfm) {
 				
-		
 		String completeStrFM = strfm ; 
 		if (!strfm.startsWith("FM (")) {
 			completeStrFM = "FM (" + strfm + " )" ; 
@@ -507,9 +506,9 @@ public class FMBuilder extends FMLAbstractCommandAnalyzer {
 	 */
 	private static String _normalize(String completeStrFM) {
 		
-		return completeStrFM.replaceAll("ç", "c")
-				.replaceAll("ã", "a")
-				.replaceAll("ê", "e")
+		return completeStrFM.replaceAll("ÔøΩ", "c")
+				.replaceAll("ÔøΩ", "a")
+				.replaceAll("ÔøΩ", "e")
 				.replaceAll(",", "")
 				.replaceAll("Configuration", "Configuration_")
 				.replaceAll("name", "naMe")

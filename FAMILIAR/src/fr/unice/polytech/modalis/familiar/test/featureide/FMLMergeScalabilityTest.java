@@ -22,15 +22,19 @@ import net.sf.javabdd.BDD;
 
 import org.junit.Ignore;
 import org.junit.Test;
+import org.xtext.example.mydsl.fML.FMFormat;
 
 import de.ovgu.featureide.fm.core.io.UnsupportedModelException;
 import de.ovgu.featureide.fm.core.io.guidsl.GuidslReader;
+import fr.unice.polytech.modalis.familiar.fm.converter.SPLOTtoFML;
 import fr.unice.polytech.modalis.familiar.fm.featureide.FMGenerator;
 import fr.unice.polytech.modalis.familiar.fm.featureide.FeatureIDEtoFML;
 import fr.unice.polytech.modalis.familiar.operations.FMLMergerBDD;
 import fr.unice.polytech.modalis.familiar.operations.FMLMergerBDDSPLOT;
 import fr.unice.polytech.modalis.familiar.operations.Mode;
+import fr.unice.polytech.modalis.familiar.operations.featureide.FeatureIDEReader;
 import fr.unice.polytech.modalis.familiar.parser.FMBuilder;
+import fr.unice.polytech.modalis.familiar.parser.FMConverter;
 import fr.unice.polytech.modalis.familiar.test.FMLSlicerUtilityTest;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import fr.unice.polytech.modalis.utils.MyLogger;
@@ -40,7 +44,6 @@ import gsd.synthesis.FeatureModel;
 import gsd.synthesis.FeatureModelSerializer;
 import gsd.synthesis.Formula;
 
-@Ignore
 public class FMLMergeScalabilityTest extends FMLSlicerUtilityTest {
 
 	public final static String PATH =
@@ -48,7 +51,8 @@ public class FMLMergeScalabilityTest extends FMLSlicerUtilityTest {
 	// "/Users/mathieuacher/Downloads/nfm20/" ;
 	// "/Users/mathieuacher/Downloads/nFM40/" ;
 	// "/Users/mathieuacher/Desktop/PhD/DEV/workspace/SPLC2010-evaluation/" ;
-	"/Users/mathieuacher/Desktop/PhD/DEV/workspace/JOT2011/";
+	//"/Users/mathieuacher/Desktop/PhD/DEV/workspace/JOT2011/";
+	"/Users/macher1/Documents/SANDBOX/MODELS13/" ; 
 
 	static int m = 0;
 
@@ -247,9 +251,14 @@ public class FMLMergeScalabilityTest extends FMLSlicerUtilityTest {
 	private BDD loadFMs(int nFM, int nFeatures, int percent, boolean splot)
 			throws Exception {
 
-		Map<Integer, FeatureModelVariable> iTofmvs = getFMsFromFMCalcDirectory(PATH
+		/*Map<Integer, FeatureModelVariable> iTofmvs = getFMsFromFMCalcDirectory(PATH
 				+ FMGenerator.targetPathStr("", nFM, nFeatures, percent)
-				+ "fmcalc/");
+				+ "fmcalc/");*/
+		
+		Map<Integer, FeatureModelVariable> iTofmvs = getFMsFromEDirectory(PATH
+				+ FMGenerator.targetPathStr("", nFM, nFeatures, percent)
+				+ "splot/");
+			//	+ "featureide/");
 
 		assertEquals(iTofmvs.size(), nFM);
 		Collection<FeatureModelVariable> fmvs = iTofmvs.values();
@@ -478,7 +487,7 @@ public class FMLMergeScalabilityTest extends FMLSlicerUtilityTest {
 	}
 
 	@Deprecated
-	public static Map<Integer, FeatureModelVariable> getFMsFromFeatureIDEDirectory(
+	public static Map<Integer, FeatureModelVariable> getFMsFromEDirectory(
 			String directoryTargeted) {
 
 		File f = new File(directoryTargeted);
@@ -486,23 +495,48 @@ public class FMLMergeScalabilityTest extends FMLSlicerUtilityTest {
 
 			@Override
 			public boolean accept(File pathname) {
-				return pathname.isFile() && pathname.getName().endsWith(".m");
+				return pathname.isFile() && pathname.getName().endsWith(".xml") ; //(".m");
 			}
 		};
 		File[] files = f.listFiles(filter);
 		Map<Integer, FeatureModelVariable> lfms = new HashMap<Integer, FeatureModelVariable>();
 		int i = 0;
 		for (File file : files) {
-			lfms.put(i++, getFMfromFeatureIDE(getFeatureIDEFM(file)));
+			System.err.println("file="  + file);
+			FeatureModelVariable fmv = 
+					new FeatureModelVariable(null, FMBuilder.getInternalFM(new SPLOTtoFML().convert(file))); //getFMfromFeatureIDE(file) ;
+			if (fmv != null)
+				lfms.put(i++, fmv);
+					//getFMfromFeatureIDE(getFeatureIDEFM(file)));
 		}
+
 		return lfms;
 
+	}
+
+	private static FeatureModelVariable getFMfromFeatureIDE(File file) {
+		
+		String strfm = new FeatureIDEReader(file).writeToString() ;
+		gsd.synthesis.FeatureModel<String> fm = null;
+
+		System.out.println("strfm(" + m++ + ")=" + strfm);
+
+		try {
+			fm = FMBuilder.getInternalFM(strfm);
+		} catch (Exception e) {
+			return null ; 
+			//assertFalse(true);
+		}
+
+		return new FeatureModelVariable(null, fm);
 	}
 
 	@Deprecated
 	public static FeatureModelVariable getFMfromFeatureIDE(
 			de.ovgu.featureide.fm.core.FeatureModel fmFeatureIDE) {
+		
 
+	
 		FeatureIDEtoFML toFML = new FeatureIDEtoFML(fmFeatureIDE); // buggy!
 		String strfm = toFML.writeToString();
 

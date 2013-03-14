@@ -3,6 +3,7 @@
  */
 package fr.unice.polytech.modalis.familiar.fm.converter;
 
+import java.io.File;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -10,12 +11,17 @@ import java.util.Stack;
 
 import org.apache.log4j.Logger;
 
+import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
+import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
+
 import splar.core.constraints.BooleanVariable;
 import splar.core.constraints.PropositionalFormula;
 import splar.core.fm.FeatureGroup;
 import splar.core.fm.FeatureModel;
+import splar.core.fm.FeatureModelException;
 import splar.core.fm.FeatureTreeNode;
 import splar.core.fm.SolitaireFeature;
+import splar.core.fm.XMLFeatureModel;
 
 /**
  * @author mathieuacher
@@ -140,10 +146,10 @@ public class SPLOTtoFML {
 		res = res.replace("-", "");
 		res = res.replace(" ", "");
 
-		res = res.replace("—", "o");
-		res = res.replace("’", "i");
-		res = res.replace("‡", "a");
-		res = res.replace("Ž", "e");
+		res = res.replace("ï¿½", "o");
+		res = res.replace("ï¿½", "i");
+		res = res.replace("ï¿½", "a");
+		res = res.replace("ï¿½", "e");
 		res = res.replace(".", "DOT");
 		res = res.replace("/", "_");
 		res = res.replace("$", "USDollar");
@@ -208,6 +214,23 @@ public class SPLOTtoFML {
 		res = res.replace(" ", "");
 
 		return res;
+	}
+
+	public String convert(File splotFile) {
+		
+		splar.core.fm.FeatureModel featureModelSPLOT = new XMLFeatureModel(
+				splotFile.getAbsolutePath(),
+				XMLFeatureModel.USE_VARIABLE_NAME_AS_ID);
+		try {
+			featureModelSPLOT.loadModel();
+		} catch (FeatureModelException e) {
+			FMLShell.getInstance().printError(
+					"Unable to load SPLOT feature model "
+							+ e.getMessage());
+			return null;
+		}
+
+		return convert(featureModelSPLOT);
 	}
 
 }

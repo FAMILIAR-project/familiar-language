@@ -1,5 +1,6 @@
 package fr.unice.polytech.modalis.familiar.test.featureide;
 
+import static org.junit.Assert.*;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
@@ -11,21 +12,30 @@ import java.util.List;
 import java.util.Set;
 
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
+import org.prop4j.And;
+import org.prop4j.Literal;
+import org.prop4j.Node;
+import org.prop4j.Or;
 import org.xtext.example.mydsl.fML.SliceMode;
 
 import com.google.common.collect.Sets;
 
+import de.ovgu.featureide.fm.core.editing.NodeCreator;
 import fr.unice.polytech.modalis.familiar.fm.converter.ExclusionGraph;
 import fr.unice.polytech.modalis.familiar.operations.CountingStrategy;
+import fr.unice.polytech.modalis.familiar.operations.ImplicationGraphUtil;
 import fr.unice.polytech.modalis.familiar.operations.featureide.SATFMLFormula;
 import fr.unice.polytech.modalis.familiar.parser.FMLMergerWithConstraints;
 import fr.unice.polytech.modalis.familiar.test.FMLSlicerUtilityTest;
 import fr.unice.polytech.modalis.familiar.variable.Comparison;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
+import fr.unice.polytech.modalis.familiar.variable.SetVariable;
+import fr.unice.polytech.modalis.familiar.variable.Variable;
 import gsd.graph.ImplicationGraph;
 import gsd.graph.SimpleEdge;
 import gsd.synthesis.Excludes;
@@ -97,6 +107,13 @@ public class FMLMergeAndAggregateTest extends FMLSlicerUtilityTest {
 
 		return Arrays
 				.asList(new Object[][] {
+						
+						{
+							Arrays.asList(new String[] {
+									"FM (A : B C ; ) ",
+									"FM (A : E ; )" }),
+							Arrays.asList(new String[] { "FM (A : B C E ; )" }) },
+							
 						{
 								Arrays.asList(new String[] {
 										"FM (A : (B|C|D)+; ) ",
@@ -185,17 +202,28 @@ public class FMLMergeAndAggregateTest extends FMLSlicerUtilityTest {
 									Arrays.asList(new String[] { "FM (A : I ; )" }) },
 								
 						{
-									Arrays.asList(mkInputFMs(20, 
+									Arrays.asList(mkInputFMs(15, 
 											new String[] { "FM (A : (B|C|D)+; ) ",
 											"FM (A : (B|D|E) ; )",
 											"FM (A : (B|D)+; )",
 											"FM (A : (B|D)+; )",
 											"FM (A : (B|D|E|C) ; )", }									
 									)),
-									Arrays.asList(new String[] { "FM (A : B C D E G ; )" }) },
+									Arrays.asList(new String[] { "FM (A : B C D E ; )" }) },
+									
+									
+						/*	scale		{
+										Arrays.asList(mkInputFMs(100, 
+												new String[] { "FM (A : (B|C|D)+; ) ",
+												"FM (A : (B|D|E) ; )",
+												"FM (A : (B|D)+; )",
+												"FM (A : (B|D)+; )",
+												"FM (A : (B|D|E|C) ; )", }									
+										)),
+										Arrays.asList(new String[] { "FM (A : B C D E ; )" }) },*/
 							
-							/*		
-							{
+									
+						/* scale	{
 									Arrays.asList(mkInputFMs(200, 
 											new String[] { "FM (A : (B|C|D)+; ) ",
 											"FM (A : (B|D|E) ; )",
@@ -203,17 +231,71 @@ public class FMLMergeAndAggregateTest extends FMLSlicerUtilityTest {
 											"FM (A : (B|G)+; )",
 											"FM (A : (B|D|E|C) ; )", }									
 									)),
-									Arrays.asList(new String[] { "FM (A : B C D E G ; )" }) },*/
+									Arrays.asList(new String[] { "FM (A : B C D E ; )" }) }, */
 									
-							/*{
-										Arrays.asList(mkInputFMs(450, 
+							/* scale		{
+										Arrays.asList(mkInputFMs(200, 
+												new String[] { "FM (A : (B|C|D)+ ; D : (I|J)+ ; )",
+												"FM (A : (B|D|E) ; D : [I] ; E : [J] ; I -> E ;  )",
+												"FM (A : (B|D)+; D : J ; )",
+												"FM (A : (B|G)+ [I] ; )",
+												"FM (A : (B|D|E|C) ; D : (I|J) ; )", }									
+										)),
+										Arrays.asList(new String[] { "FM (A : B C D E G ; D : I J ; )" }) },*/
+									
+									
+							/* scale {
+										Arrays.asList(mkInputFMs(400, 
+												new String[] { "FM (A : (B|C|D)+ ; D : (I|J)+ ; )",
+												"FM (A : (B|D|E) ; D : [I] ; E : [J] ; I -> E ;  )",
+												"FM (A : (B|D)+; D : J ; )",
+												"FM (A : (B|G)+ [I] ; )",
+												"FM (A : (B|D|E|C) ; D : (I|J) ; )", }									
+										)),
+										Arrays.asList(new String[] { "FM (A : B C D E G ; D : I J ; )" }) },*/
+									
+									
+									
+						/*	{
+										Arrays.asList(mkInputFMs(450,  // not scaling with SAT-based merging
 												new String[] { "FM (A : (B|C|D)+; ) ",
 												"FM (A : (B|D|E) ; )",
 												"FM (A : (B|D)+; )",
 												"FM (A : (B|G)+; )",
 												"FM (A : (B|D|E|C) ; )", }									
 										)),
-										Arrays.asList(new String[] { "FM (A : B C D E G ; )" }) }, */
+										Arrays.asList(new String[] { "FM (A : B C D E G ; )" }) },*/
+									
+							/* scale {
+									Arrays.asList(mkInputFMs(75, 
+											new String[] { "FM (A : (B|C|D)+ ; D : (I|J)+ ; )",
+											"FM (A : (B|D|E) ; D : [I] ; E : [J] ; I -> E ;  )",
+											"FM (A : (B|D)+; D : J ; )",
+											"FM (A : (B|G)+ [I] ; )",
+											"FM (A : (B|D|E|C) ; D : (I|J) ; )", }									
+									)),
+									Arrays.asList(new String[] { "FM (A : B C D E G ; D : I J ; )" }) },*/
+									
+									
+							/*scale {
+										Arrays.asList(mkInputFMs(75, 
+												new String[] { "FM (A : (B|C|D)+ ; D : (I|J)+ ; )",
+												"FM (A : (B|D|E) ; D : [I] ; E : M N O [J] ; I -> E ;  )",
+												"FM (A : (B|D)+; D : J P Q R; )",
+												"FM (A : (B|G)+ [I] S ; )",
+												"FM (A : (B|D|E|C) ; D : (I|J) T U V W; )", }									
+										)),
+										Arrays.asList(new String[] { "FM (A : B C D E G S ; E : M N O ; D : P Q R I J T U V W ; )" }) },*/
+									
+						 {
+									Arrays.asList(mkInputFMs(275, 
+											new String[] { "FM (A : (B|C|D)+ ; D : (I|J)+ ; )",
+											"FM (A : (B|D|E) ; D : [I] ; E : M N O [J] ; I -> E ;  )",
+											"FM (A : (B|D)+; D : J P Q R; )",
+											"FM (A : (B|G)+ [I] S ; )",
+											"FM (A : (B|D|E|C) ; D : (I|J) T U V W; )", }									
+									)),
+									Arrays.asList(new String[] { "FM (A : B C D E G S ; E : M N O ; D : P Q R I J T U V W ; )" }) },
 
 				});
 	}
@@ -244,14 +326,51 @@ public class FMLMergeAndAggregateTest extends FMLSlicerUtilityTest {
 		// expected merged FM
 
 		_shell.parse("expectedFM = merge sunion fm*");
+		
+		// SAT-based merging
+		SetVariable fms = getSetVariable("fm*") ;
+		Node n = new Literal(NodeCreator.varFalse); 
+		Set<String> fts = new HashSet<String>();
+		for (Variable v : fms.getVars()) {
+			FeatureModelVariable fmv = (FeatureModelVariable) v ; 
+			fts.addAll(fmv.features().names());
+		}
+		
+		
+		for (Variable v : fms.getVars()) {
+			FeatureModelVariable fmv = (FeatureModelVariable) v ;
+			Node fmvNode = new SATFMLFormula(fmv).getNode() ;
+			Set<String> fmvFts = fmv.features().names() ;
+			Set<String> toNegates = Sets.difference(fts, fmvFts);
+			Node nots = new Literal(NodeCreator.varTrue);
+			for (String toNegate : toNegates) {
+				nots = new And(nots, new Literal(toNegate, false));
+			}
+			
+			fmvNode = new And(fmvNode, nots); 
+			n = new Or(n, fmvNode).toCNF(); 
+		}
+		
+		
+		
+		ImplicationGraph<String> ig = new SATFMLFormula(n.toCNF()).computeImplicationGraph(fts);
+		ImplicationGraphUtil.debugImplicationGraph(ig);
+		
+		
+		
+		
 		FeatureModelVariable expectedFM = getFMVariable("expectedFM");
+		
+		
+		assertTrue(ImplicationGraphUtil. eq (ig, 
+											expectedFM.computeImplicationGraph()));
 
 		System.err.println("expectedFM=" + expectedFM);
 		//double countExpected = expectedFM.counting();
 		//System.err.println("#expectedFM=" + countExpected);
 
 		
-
+/*
 		_shell.setVerbose(true) ; 
 		FeatureModelVariable fmvMerged = new FMLMergerWithConstraints(_lfmvs).union();
 		_shell.setVerbose(false) ; 
@@ -274,30 +393,42 @@ public class FMLMergeAndAggregateTest extends FMLSlicerUtilityTest {
 		FeatureModelVariable slicedFmv = fmvMerged.slice(SliceMode.EXCLUDING, allFts) ;
 		System.err.println("slicedFmv=" + slicedFmv);
 		System.err.println(""); 
-		System.err.println(""); 
-		assertEquals(Comparison.REFACTORING, slicedFmv.compareBDD(expectedFM, _builder)); 
+		System.err.println(""); */
+		
+		
+		
+	// time consuming	
+		//assertEquals(Comparison.REFACTORING, slicedFmv.compareBDD(expectedFM, _builder)); 
 		
 		//SATFormula flaMerged = fmvMerged.sliceSAT(SliceMode.INCLUDING, slicedFmv.features().names());
 	
+		
+		/*
 		SATFMLFormula flaMerged = new SATFMLFormula(fmvMerged) ;
+		FeatureModelVariable slicedSATFla = new FeatureModelVariableSATFormula("", flaMerged).slice(SliceMode.EXCLUDING, allFts);
+		slicedSATFla.computeImplicationGraph() ; 
 		
-		ImplicationGraph<String> implGMerged = flaMerged.computeImplicationGraph
-										(Sets.difference(fmvMerged.getFm().features(), allFts)) ; 
-		Set<SimpleEdge> edgesI = implGMerged.edgeSet() ;
-		for (SimpleEdge edgeI : edgesI) {
-			String s = implGMerged.getEdgeSource(edgeI);
-			String t = implGMerged.getTarget(edgeI) ; 
-			System.err.println("" + s + " => " + t);
-		}
+		ImplicationGraph<String> implGMerged = 
+				//slicedSATFla.computeImplicationGraph() ;
+				flaMerged.computeImplicationGraph (Sets.difference(fmvMerged.getFm().features(), allFts)) ;
+		ImplicationGraphUtil.debugImplicationGraph(implGMerged);
+		System.err.println("\n\n\n===============\n\n\n");
 		
+		ImplicationGraph<String> implMergedSATSliced = slicedSATFla.computeImplicationGraph() ; 
+		ImplicationGraphUtil.debugImplicationGraph(implMergedSATSliced);
+		
+		assertTrue(ImplicationGraphUtil. eq (implMergedSATSliced, 
+											implGMerged ))
+											;
 		ExclusionGraph<String> exclGMerged = flaMerged.computeExclusionGraph(Sets.difference(fmvMerged.getFm().features(), allFts)) ;
 		Set<Excludes<String>> edgesE = exclGMerged.edgeSet() ; 
 		for (Excludes<String> edgeE : edgesE) {
 			String s = edgeE.getAntecedent() ; 
 			String t = edgeE.getConsequent() ;
 			System.err.println("" + s + " excludes " + t);
-		}
+		}*/
 		
+	
 		
 		
 		
@@ -309,6 +440,7 @@ public class FMLMergeAndAggregateTest extends FMLSlicerUtilityTest {
 
 	}
 	
+	@Ignore
 	@Test
 	public void testMergeIntersection() throws Exception {
 
