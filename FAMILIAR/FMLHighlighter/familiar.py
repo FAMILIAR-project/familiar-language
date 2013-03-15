@@ -26,7 +26,7 @@ class FamiliarLexer(PythonLexer):
     
     
      
-    EXTRA_KEYWORDS = ['slice', 'including', 'cores', 'serialize', 'constraint', 'constraints', 'removeConstraint', 'addConstraint', 'deads', 'setUnion', 'setIntersection', 'to', 'falseOptionals', 'excluding', 'constraints', 'withMapping', 'map', 'cleanup', 'Set', 'asFM', 'addConstraint', 'aggregate', 'isConflicting', 'autoSelect', 'setIsEmpty', 'isComplete', 'isNull', 'isExisting', 'diff', 'counting', 'removeFeature', 'renameFeature', 'isValid', 'requires', 
+    EXTRA_KEYWORDS = ['aggregateMerge', 'ksynthesis', 'slice', 'over', 'including', 'cores', 'serialize', 'constraint', 'constraints', 'removeConstraint', 'addConstraint', 'deads', 'setUnion', 'setIntersection', 'to', 'falseOptionals', 'excluding', 'constraints', 'withMapping', 'map', 'cleanup', 'Set', 'asFM', 'addConstraint', 'aggregate', 'isConflicting', 'autoSelect', 'setIsEmpty', 'isComplete', 'isNull', 'isExisting', 'diff', 'counting', 'removeFeature', 'renameFeature', 'isValid', 'requires', 
                       'implies', 'excludes', 'FeatureModel', 'Feature', 'String', 
                       'operator', 'configuration', 'select', 'deselect', 'size', 'unselect',
                       'min', 'max', 'random', 'not', '==', 'else', 'configs', 'set', 'setAdd', 
@@ -97,7 +97,8 @@ class FamiliarLexer(PythonLexer):
 #PATH_FOLDER = "/Users/mathieuacher/Desktop/PhD/RESEARCHINPROGRESS/ArchFM/FML/"
 #PATH_FOLDER = "/Users/mathieuacher/Desktop/PhD/RESEARCHINPROGRESS/SCP-FAMILIAR/FML/"
 #PATH_FOLDER = "/Users/macher/Documents/runtime-EclipseApplication/FraSCAtiSoSyM/"
-PATH_FOLDER = "/Users/macher1/Documents/FML-scripts/"
+#PATH_FOLDER = "/Users/macher1/Documents/FML-scripts/"
+PATH_FOLDER = "/Users/macher1/Documents/FMLTestRepository/"
 PATH_OUPUT = "" # where to serialize the output
 
 
