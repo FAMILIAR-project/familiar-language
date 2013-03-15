@@ -4,15 +4,13 @@
 package fr.unice.polytech.modalis.familiar.fm.converter;
 
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
 import org.apache.log4j.Logger;
-
-import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
-import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 
 import splar.core.constraints.BooleanVariable;
 import splar.core.constraints.PropositionalFormula;
@@ -22,13 +20,18 @@ import splar.core.fm.FeatureModelException;
 import splar.core.fm.FeatureTreeNode;
 import splar.core.fm.SolitaireFeature;
 import splar.core.fm.XMLFeatureModel;
+import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
+import gsd.synthesis.Expression;
+import gsd.synthesis.FeatureEdge;
+import gsd.synthesis.FeatureGraph;
+import gsd.synthesis.FeatureNode;
 
 /**
  * @author mathieuacher
  * 
  */
 public class SPLOTtoFML {
-	
+
 	private static Logger _LOGGER = Logger.getLogger(SPLOTtoFML.class);
 
 
@@ -60,12 +63,12 @@ public class SPLOTtoFML {
 		while (!stack.isEmpty()) {
 			FeatureTreeNode ftNode = stack.pop();
 			if (!ftNode.isLeaf() && !(ftNode instanceof FeatureGroup)) { // not
-																			// a
-																			// left
-																			// and
-																			// not
-																			// a
-																			// group
+				// a
+				// left
+				// and
+				// not
+				// a
+				// group
 				String parentName = interoperableFtName(ftNode.getName());
 				sb.append(parentName + " : ");
 				for (int i = 0; i < ftNode.getChildCount(); i++) {
@@ -215,8 +218,8 @@ public class SPLOTtoFML {
 
 		return res;
 	}
-
-	public String convert(File splotFile) {
+	
+		public String convert(File splotFile) {
 		
 		splar.core.fm.FeatureModel featureModelSPLOT = new XMLFeatureModel(
 				splotFile.getAbsolutePath(),
@@ -231,6 +234,118 @@ public class SPLOTtoFML {
 		}
 
 		return convert(featureModelSPLOT);
+	}
+
+	/**
+	 * Convert a SPLOT feature model to a gsd feature model
+	 * @param featureModelSPLOT
+	 * @return
+	 */
+	public gsd.synthesis.FeatureModel<String> convertToFeatureModel(FeatureModel featureModelSPLOT) {
+
+		// Convert feature diagram
+		FeatureGraph<String> featureGraph = FeatureGraph.mkStringFeatureGraph();
+		convertHierarchy(featureGraph, featureModelSPLOT.getRoot());
+
+		// Convert constraints
+		gsd.synthesis.FeatureModel<String> featureModelFAMILIAR = new gsd.synthesis.FeatureModel<String>(featureGraph);
+		convertConstraints(featureModelFAMILIAR, featureModelSPLOT);
+
+		return featureModelFAMILIAR;
+	}
+
+
+	private void convertHierarchy(FeatureGraph<String> featureGraph, FeatureTreeNode root) {
+		// Convert root node
+		Stack<FeatureTreeNode> stack = new Stack<FeatureTreeNode>();
+		stack.push(root);
+		FeatureNode<String> rootFeature = new FeatureNode<String>(root.getDescription());
+		featureGraph.addVertex(rootFeature);
+		featureGraph.addEdge(rootFeature, featureGraph.getTopVertex(), FeatureEdge.HIERARCHY);
+		featureGraph.addEdge(rootFeature, featureGraph.getTopVertex(), FeatureEdge.MANDATORY);
+
+		// Convert other nodes
+		while (!stack.isEmpty()) {
+			FeatureTreeNode node = stack.pop();
+
+			int type;
+			String parentName;
+
+
+			if (!(node instanceof FeatureGroup)) {
+				parentName = node.getDescription();
+
+				for (int i = 0; i < node.getChildCount(); i++) {
+					FeatureTreeNode child = (FeatureTreeNode) node.getChildAt(i);
+					FeatureNode<String> childFeature = new FeatureNode<String>(child.getDescription());
+
+					// Add features and skip group nodes
+					if (child instanceof SolitaireFeature) {
+						SolitaireFeature solitaireNode = (SolitaireFeature) child;
+						featureGraph.addVertex(childFeature);
+						featureGraph.addEdge(childFeature, featureGraph.findVertex(parentName), FeatureEdge.HIERARCHY);
+						if (!solitaireNode.isOptional()) {
+							featureGraph.addEdge(childFeature, featureGraph.findVertex(parentName), FeatureEdge.MANDATORY);
+						}
+					}
+
+					stack.push(child);
+				}
+			} else { 
+				parentName = ((FeatureTreeNode) node.getParent()).getDescription();
+				FeatureNode<String> parent = featureGraph.findVertex(parentName);
+
+				// Set group type
+				FeatureGroup group = (FeatureGroup) node;
+				if (group.getMin() == 0 && group.getMax() == 1) {
+					type = FeatureEdge.MUTEX;	
+				} else if (group.getMin() == 1 && group.getMax() == 1) {
+					type = FeatureEdge.XOR;
+				} else {
+					type = FeatureEdge.OR;
+				}
+
+				// Collect children
+				ArrayList<FeatureNode<String>> children = new ArrayList<FeatureNode<String>>();
+				for (int i = 0; i < node.getChildCount(); i++) {
+					FeatureTreeNode child = (FeatureTreeNode) node.getChildAt(i);
+					FeatureNode<String> childFeature = new FeatureNode<String>(child.getDescription());
+					featureGraph.addVertex(childFeature);
+					featureGraph.addEdge(childFeature, parent, FeatureEdge.HIERARCHY);
+					children.add(childFeature);
+					stack.push(child);
+				}
+
+				// Add group to the feature model
+				featureGraph.addEdge(children, parent, type);
+			}
+
+
+		}
+	}
+
+	private void convertConstraints( gsd.synthesis.FeatureModel<String> featureModelFAMILIAR, FeatureModel featureModelSPLOT) {
+		for (PropositionalFormula formula : featureModelSPLOT.getConstraints()){
+			Collection<BooleanVariable> variables = formula.getVariables();
+			Expression<String> constraint = null;
+			
+			for (BooleanVariable variable : variables) {
+				Expression<String> variableConstraint;
+				String variableName = featureModelSPLOT.getNodeByID(variable.getID()).getDescription();
+				variableConstraint = new Expression<String>(variableName);
+				if (!variable.isPositive()) {
+					variableConstraint = variableConstraint.not();
+				}
+				
+				if (constraint == null) {
+					constraint = variableConstraint;
+				} else {
+					constraint = constraint.or(variableConstraint);					
+				}
+			}
+			
+			featureModelFAMILIAR.addConstraint(constraint);
+		}
 	}
 
 }
