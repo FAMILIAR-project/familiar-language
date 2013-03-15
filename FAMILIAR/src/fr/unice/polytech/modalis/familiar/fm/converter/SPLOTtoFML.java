@@ -3,12 +3,7 @@
  */
 package fr.unice.polytech.modalis.familiar.fm.converter;
 
-import gsd.synthesis.Expression;
-import gsd.synthesis.ExpressionType;
-import gsd.synthesis.FeatureEdge;
-import gsd.synthesis.FeatureGraph;
-import gsd.synthesis.FeatureNode;
-
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -21,8 +16,15 @@ import splar.core.constraints.BooleanVariable;
 import splar.core.constraints.PropositionalFormula;
 import splar.core.fm.FeatureGroup;
 import splar.core.fm.FeatureModel;
+import splar.core.fm.FeatureModelException;
 import splar.core.fm.FeatureTreeNode;
 import splar.core.fm.SolitaireFeature;
+import splar.core.fm.XMLFeatureModel;
+import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
+import gsd.synthesis.Expression;
+import gsd.synthesis.FeatureEdge;
+import gsd.synthesis.FeatureGraph;
+import gsd.synthesis.FeatureNode;
 
 /**
  * @author mathieuacher
@@ -215,6 +217,23 @@ public class SPLOTtoFML {
 		res = res.replace(" ", "");
 
 		return res;
+	}
+	
+		public String convert(File splotFile) {
+		
+		splar.core.fm.FeatureModel featureModelSPLOT = new XMLFeatureModel(
+				splotFile.getAbsolutePath(),
+				XMLFeatureModel.USE_VARIABLE_NAME_AS_ID);
+		try {
+			featureModelSPLOT.loadModel();
+		} catch (FeatureModelException e) {
+			FMLShell.getInstance().printError(
+					"Unable to load SPLOT feature model "
+							+ e.getMessage());
+			return null;
+		}
+
+		return convert(featureModelSPLOT);
 	}
 
 	/**

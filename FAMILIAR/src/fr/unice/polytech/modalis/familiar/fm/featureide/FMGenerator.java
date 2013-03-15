@@ -36,6 +36,7 @@ import de.ovgu.featureide.fm.core.FeatureModel;
 import de.ovgu.featureide.fm.core.editing.evaluation.Generator;
 import de.ovgu.featureide.fm.core.io.AbstractFeatureModelWriter;
 import de.ovgu.featureide.fm.core.io.guidsl.GuidslWriter;
+import de.ovgu.featureide.fm.core.io.sxfm.SXFMWriter;
 
 /**
  * @author mathieuacher
@@ -94,7 +95,7 @@ public class FMGenerator extends Generator {
 
 	private static int nsave = 1;
 
-	public static String path = "/Users/mathieuacher/Desktop/PhD/DEV/workspace/JOT2011/";
+	public static String path = "/Users/macher1/Documents/SANDBOX/MODELS13/" ; // "/Users/mathieuacher/Desktop/PhD/DEV/workspace/JOT2011/";
 
 	/**
 	 * @param nFM
@@ -600,10 +601,41 @@ public class FMGenerator extends Generator {
 
 			save(fm, session, nsave); // featureide
 			featureIDEtoFMCalc(fm, session, nsave);
+			serializeAsSPLOT(fm, session, nsave);
 			nsave++;
 			// debug(fm);
 		}
 
+	}
+
+	private static void serializeAsSPLOT(FeatureModel fm, String session, int id) {
+		
+		String featureide = "splot" + File.separator;
+		String p = path + session + featureide;
+
+		if (!new File(path + session).isDirectory())
+			new File(path + session).mkdir();
+		if (!new File(p).isDirectory())
+			new File(p).mkdir();
+
+		try {
+			AbstractFeatureModelWriter writer = new SXFMWriter(fm) ; 
+			File f = new File(p + "fm" + id + ".xml");
+			if (f.exists()) {
+				f.delete();
+				f.createNewFile();
+			}
+
+			FileOutputStream output = new FileOutputStream(f);
+			output.write(writer.writeToString().getBytes());
+			output.flush();
+			output.close();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	
+		
 	}
 
 	private static void reset() {

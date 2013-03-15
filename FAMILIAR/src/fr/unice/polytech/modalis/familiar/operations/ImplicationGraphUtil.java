@@ -337,4 +337,26 @@ public class ImplicationGraphUtil {
 		return fg;
 	}
 
+	public static boolean eq(ImplicationGraph<String> impl1, ImplicationGraph<String> impl2) {
+		return _eqIn (impl1, impl2) && _eqIn (impl2, impl1);
+		
+	}
+
+	private static boolean _eqIn(ImplicationGraph<String> impl1, ImplicationGraph<String> impl2) {
+		
+		Set<SimpleEdge> edges1 = impl1.edgeSet() ;
+		Set<SimpleEdge> edges2 = impl2.edgeSet() ; 
+		for (SimpleEdge e1 : edges1) {
+			boolean found = false ; 
+			for (SimpleEdge e2 : edges2) {
+				if (edgeEquality(e1, e2, impl1, impl2)) 
+					found = true ; 
+			}
+			if (found == false)
+				return false ; 
+		}
+		return true ; 
+		
+	}
+
 }

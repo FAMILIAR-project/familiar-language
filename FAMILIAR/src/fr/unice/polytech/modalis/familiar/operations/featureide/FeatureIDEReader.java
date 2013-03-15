@@ -6,6 +6,8 @@ import java.io.FileNotFoundException;
 import de.ovgu.featureide.fm.core.FeatureModel;
 import de.ovgu.featureide.fm.core.io.UnsupportedModelException;
 import de.ovgu.featureide.fm.core.io.guidsl.GuidslReader;
+import de.ovgu.featureide.fm.core.io.sxfm.SXFMWriter;
+import fr.unice.polytech.modalis.familiar.fm.converter.SPLOTtoFML;
 import fr.unice.polytech.modalis.familiar.fm.featureide.FeatureIDEtoFML;
 import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
 
@@ -17,7 +19,7 @@ public class FeatureIDEReader {
 		_file = file ; 
 	}
 	
-	private FeatureModel parseFeatureModel() {
+	public FeatureModel parseFeatureModel() {
 		FeatureModel fmFeatureIDE = new FeatureModel();
 		GuidslReader fmR = new GuidslReader(fmFeatureIDE);
 		try {
@@ -37,6 +39,7 @@ public class FeatureIDEReader {
 
 	public String writeToString() {
 		FeatureModel fmFeatureIDE = parseFeatureModel() ;
+
 		// FIXME @FeatureIDE 
 		FeatureIDEtoFML toFML = new FeatureIDEtoFML(fmFeatureIDE);
 		return toFML.writeToString();
