@@ -16,6 +16,11 @@ import org.xtext.example.mydsl.fML.HierarchySpecification;
 import org.xtext.example.mydsl.fML.KnowledgeSpecification;
 import org.xtext.example.mydsl.fML.Synthesis;
 
+import fr.unice.polytech.modalis.familiar.gui.FamiliarEditor;
+import fr.unice.polytech.modalis.familiar.gui.FamiliarTool;
+import fr.unice.polytech.modalis.familiar.gui.Tab2EnvVar;
+import fr.unice.polytech.modalis.familiar.gui.synthesis.FMSynthesisEnvironment;
+import fr.unice.polytech.modalis.familiar.gui.synthesis.InteractiveFMSynthesizer;
 import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
 import fr.unice.polytech.modalis.familiar.operations.KnowledgeSynthesis;
 import fr.unice.polytech.modalis.familiar.variable.ConstraintVariable;
@@ -117,6 +122,10 @@ public class KSynthesisAnalyzer extends FMLAbstractCommandAnalyzer {
 		if (ksCmd.isInteractive()) {
 			// interactive mode
 			// with or without knowledge
+			InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(fmToSynthesis);
+			FMSynthesisEnvironment environment = new FMSynthesisEnvironment(synthesizer);
+			Tab2EnvVar.INSTANCE.createNewTab(fmToSynthesis.getIdentifier(), environment);
+			
 		}
 		
 		// TODO backend analysis for defining the synthesis strateg
