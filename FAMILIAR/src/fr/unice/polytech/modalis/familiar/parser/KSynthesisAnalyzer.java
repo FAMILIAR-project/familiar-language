@@ -69,9 +69,7 @@ public class KSynthesisAnalyzer extends FMLAbstractCommandAnalyzer {
 		FMCommand fmCmd = ksCmd.getFm();
 		FeatureModelVariable fmToSynthesis = _environment.parseFMCommand(fmCmd, null, null);
 		
-		if (ksCmd.isInteractive()) {
-			// interactive mode
-		}
+		
 		
 		
 		
@@ -116,7 +114,13 @@ public class KSynthesisAnalyzer extends FMLAbstractCommandAnalyzer {
 		
 		fmToSynthesis.setBuilder(FMLCommandInterpreter.getBuilder()); // in case we want BDD
 		
-		// TODO backend analysis for defining the synthesis strategy
+		if (ksCmd.isInteractive()) {
+			// interactive mode
+			// with or without knowledge
+		}
+		
+		// TODO backend analysis for defining the synthesis strateg
+		// no interactive mode
 		FeatureModelVariable fmSynthesised = fmToSynthesis.ksynthesis(kst1);
 			
 		setVariable(fmSynthesised) ; 
