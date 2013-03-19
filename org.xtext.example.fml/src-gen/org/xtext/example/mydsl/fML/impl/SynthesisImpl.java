@@ -22,6 +22,7 @@ import org.xtext.example.mydsl.fML.Synthesis;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.xtext.example.mydsl.fML.impl.SynthesisImpl#isInteractive <em>Interactive</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.fML.impl.SynthesisImpl#getFm <em>Fm</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.fML.impl.SynthesisImpl#getKst <em>Kst</em>}</li>
  * </ul>
@@ -31,6 +32,26 @@ import org.xtext.example.mydsl.fML.Synthesis;
  */
 public class SynthesisImpl extends CommandImpl implements Synthesis
 {
+  /**
+   * The default value of the '{@link #isInteractive() <em>Interactive</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isInteractive()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean INTERACTIVE_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isInteractive() <em>Interactive</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isInteractive()
+   * @generated
+   * @ordered
+   */
+  protected boolean interactive = INTERACTIVE_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getFm() <em>Fm</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -70,6 +91,29 @@ public class SynthesisImpl extends CommandImpl implements Synthesis
   protected EClass eStaticClass()
   {
     return FMLPackage.eINSTANCE.getSynthesis();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public boolean isInteractive()
+  {
+    return interactive;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setInteractive(boolean newInteractive)
+  {
+    boolean oldInteractive = interactive;
+    interactive = newInteractive;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, FMLPackage.SYNTHESIS__INTERACTIVE, oldInteractive, interactive));
   }
 
   /**
@@ -196,6 +240,8 @@ public class SynthesisImpl extends CommandImpl implements Synthesis
   {
     switch (featureID)
     {
+      case FMLPackage.SYNTHESIS__INTERACTIVE:
+        return isInteractive();
       case FMLPackage.SYNTHESIS__FM:
         return getFm();
       case FMLPackage.SYNTHESIS__KST:
@@ -214,6 +260,9 @@ public class SynthesisImpl extends CommandImpl implements Synthesis
   {
     switch (featureID)
     {
+      case FMLPackage.SYNTHESIS__INTERACTIVE:
+        setInteractive((Boolean)newValue);
+        return;
       case FMLPackage.SYNTHESIS__FM:
         setFm((FMCommand)newValue);
         return;
@@ -234,6 +283,9 @@ public class SynthesisImpl extends CommandImpl implements Synthesis
   {
     switch (featureID)
     {
+      case FMLPackage.SYNTHESIS__INTERACTIVE:
+        setInteractive(INTERACTIVE_EDEFAULT);
+        return;
       case FMLPackage.SYNTHESIS__FM:
         setFm((FMCommand)null);
         return;
@@ -254,12 +306,31 @@ public class SynthesisImpl extends CommandImpl implements Synthesis
   {
     switch (featureID)
     {
+      case FMLPackage.SYNTHESIS__INTERACTIVE:
+        return interactive != INTERACTIVE_EDEFAULT;
       case FMLPackage.SYNTHESIS__FM:
         return fm != null;
       case FMLPackage.SYNTHESIS__KST:
         return kst != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (interactive: ");
+    result.append(interactive);
+    result.append(')');
+    return result.toString();
   }
 
 } //SynthesisImpl

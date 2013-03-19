@@ -2677,12 +2677,14 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Synthesis");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cKsynthesisKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cFmAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cFmFMCommandParserRuleCall_1_0 = (RuleCall)cFmAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cWithKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cKstAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cKstKnowledgeSpecificationParserRuleCall_2_1_0 = (RuleCall)cKstAssignment_2_1.eContents().get(0);
+		private final Assignment cInteractiveAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cInteractiveInteractiveKeyword_1_0 = (Keyword)cInteractiveAssignment_1.eContents().get(0);
+		private final Assignment cFmAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cFmFMCommandParserRuleCall_2_0 = (RuleCall)cFmAssignment_2.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cWithKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cKstAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cKstKnowledgeSpecificationParserRuleCall_3_1_0 = (RuleCall)cKstAssignment_3_1.eContents().get(0);
 		
 		/// *
 		// could be ksynthesis fm0 with fm1
@@ -2690,32 +2692,38 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 		// it is preferable to have a decomposed specification with all parts optional
 		// importantly, KST can be specified using accessors of FML
 		// * / Synthesis:
-		//	"ksynthesis" fm=FMCommand ("with" kst=KnowledgeSpecification)?;
+		//	"ksynthesis" interactive?="--interactive" fm=FMCommand ("with" kst=KnowledgeSpecification)?;
 		public ParserRule getRule() { return rule; }
 
-		//"ksynthesis" fm=FMCommand ("with" kst=KnowledgeSpecification)?
+		//"ksynthesis" interactive?="--interactive" fm=FMCommand ("with" kst=KnowledgeSpecification)?
 		public Group getGroup() { return cGroup; }
 
 		//"ksynthesis"
 		public Keyword getKsynthesisKeyword_0() { return cKsynthesisKeyword_0; }
 
+		//interactive?="--interactive"
+		public Assignment getInteractiveAssignment_1() { return cInteractiveAssignment_1; }
+
+		//"--interactive"
+		public Keyword getInteractiveInteractiveKeyword_1_0() { return cInteractiveInteractiveKeyword_1_0; }
+
 		//fm=FMCommand
-		public Assignment getFmAssignment_1() { return cFmAssignment_1; }
+		public Assignment getFmAssignment_2() { return cFmAssignment_2; }
 
 		//FMCommand
-		public RuleCall getFmFMCommandParserRuleCall_1_0() { return cFmFMCommandParserRuleCall_1_0; }
+		public RuleCall getFmFMCommandParserRuleCall_2_0() { return cFmFMCommandParserRuleCall_2_0; }
 
 		//("with" kst=KnowledgeSpecification)?
-		public Group getGroup_2() { return cGroup_2; }
+		public Group getGroup_3() { return cGroup_3; }
 
 		//"with"
-		public Keyword getWithKeyword_2_0() { return cWithKeyword_2_0; }
+		public Keyword getWithKeyword_3_0() { return cWithKeyword_3_0; }
 
 		//kst=KnowledgeSpecification
-		public Assignment getKstAssignment_2_1() { return cKstAssignment_2_1; }
+		public Assignment getKstAssignment_3_1() { return cKstAssignment_3_1; }
 
 		//KnowledgeSpecification
-		public RuleCall getKstKnowledgeSpecificationParserRuleCall_2_1_0() { return cKstKnowledgeSpecificationParserRuleCall_2_1_0; }
+		public RuleCall getKstKnowledgeSpecificationParserRuleCall_3_1_0() { return cKstKnowledgeSpecificationParserRuleCall_3_1_0; }
 	}
 
 	public class KnowledgeSpecificationElements extends AbstractParserRuleElementFinder {
@@ -7212,7 +7220,7 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 	// it is preferable to have a decomposed specification with all parts optional
 	// importantly, KST can be specified using accessors of FML
 	// * / Synthesis:
-	//	"ksynthesis" fm=FMCommand ("with" kst=KnowledgeSpecification)?;
+	//	"ksynthesis" interactive?="--interactive" fm=FMCommand ("with" kst=KnowledgeSpecification)?;
 	public SynthesisElements getSynthesisAccess() {
 		return (pSynthesis != null) ? pSynthesis : (pSynthesis = new SynthesisElements());
 	}

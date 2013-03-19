@@ -298,6 +298,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FML.ecore#//AggregateMerge/fms"/>
     </genClasses>
     <genClasses ecoreClass="FML.ecore#//Synthesis">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FML.ecore#//Synthesis/interactive"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FML.ecore#//Synthesis/fm"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FML.ecore#//Synthesis/kst"/>
     </genClasses>

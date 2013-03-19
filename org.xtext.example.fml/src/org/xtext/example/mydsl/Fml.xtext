@@ -283,7 +283,7 @@ AggregateMerge: 'aggregateMerge' mode=MergeMode
  it is preferable to have a decomposed specification with all parts optional
  importantly, KST can be specified using accessors of FML
  */     	 
-Synthesis: 'ksynthesis' fm=FMCommand ('with' kst=KnowledgeSpecification)? ;
+Synthesis: 'ksynthesis' interactive ?=('--interactive') fm=FMCommand ('with' kst=KnowledgeSpecification)? ;
 // ('withKST' kst=KnowledgeSpecification)? ;
 
 //('with' LEFT_HOOK kst=KnowledgeSpecification RIGHT_HOOK)? ;

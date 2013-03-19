@@ -228,7 +228,7 @@ public class FMLSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	/**
 	 * Syntax:
-	 *     'cp' | 'copy'
+	 *     'copy' | 'cp'
 	 */
 	protected void emit_CopyVariable_CopyKeyword_0_0_or_CpKeyword_0_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -236,7 +236,7 @@ public class FMLSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     'save' | 'serialize'
+	 *     'serialize' | 'save'
 	 */
 	protected void emit_FMLSave_SaveKeyword_0_0_or_SerializeKeyword_0_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -244,7 +244,7 @@ public class FMLSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     'FM' | 'featuremodel'
+	 *     'featuremodel' | 'FM'
 	 */
 	protected void emit_FeatureModel_FMKeyword_0_0_or_FeaturemodelKeyword_0_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -284,7 +284,7 @@ public class FMLSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     'removeVariable' | 'rm'
+	 *     'rm' | 'removeVariable'
 	 */
 	protected void emit_RemoveVariable_RemoveVariableKeyword_0_0_or_RmKeyword_0_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

@@ -5330,39 +5330,54 @@ ruleSynthesis returns [EObject current=null]
     }
 (
 (
-		{ 
-	        newCompositeNode(grammarAccess.getSynthesisAccess().getFmFMCommandParserRuleCall_1_0()); 
+		lv_interactive_1_0=	'--interactive' 
+    {
+        newLeafNode(lv_interactive_1_0, grammarAccess.getSynthesisAccess().getInteractiveInteractiveKeyword_1_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getSynthesisRule());
+	        }
+       		setWithLastConsumed($current, "interactive", true, "--interactive");
 	    }
-		lv_fm_1_0=ruleFMCommand		{
+
+)
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getSynthesisAccess().getFmFMCommandParserRuleCall_2_0()); 
+	    }
+		lv_fm_2_0=ruleFMCommand		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getSynthesisRule());
 	        }
        		set(
        			$current, 
        			"fm",
-        		lv_fm_1_0, 
+        		lv_fm_2_0, 
         		"FMCommand");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)(	otherlv_2='with' 
+)(	otherlv_3='with' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getSynthesisAccess().getWithKeyword_2_0());
+    	newLeafNode(otherlv_3, grammarAccess.getSynthesisAccess().getWithKeyword_3_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getSynthesisAccess().getKstKnowledgeSpecificationParserRuleCall_2_1_0()); 
+	        newCompositeNode(grammarAccess.getSynthesisAccess().getKstKnowledgeSpecificationParserRuleCall_3_1_0()); 
 	    }
-		lv_kst_3_0=ruleKnowledgeSpecification		{
+		lv_kst_4_0=ruleKnowledgeSpecification		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getSynthesisRule());
 	        }
        		set(
        			$current, 
        			"kst",
-        		lv_kst_3_0, 
+        		lv_kst_4_0, 
         		"KnowledgeSpecification");
 	        afterParserOrEnumRuleCall();
 	    }

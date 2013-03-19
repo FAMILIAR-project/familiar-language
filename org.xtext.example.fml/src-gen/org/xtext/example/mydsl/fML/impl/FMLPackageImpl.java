@@ -2982,9 +2982,19 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getSynthesis_Interactive()
+  {
+        return (EAttribute)getSynthesis().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getSynthesis_Fm()
   {
-        return (EReference)getSynthesis().getEStructuralFeatures().get(0);
+        return (EReference)getSynthesis().getEStructuralFeatures().get(1);
   }
 
   /**
@@ -2994,7 +3004,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
    */
   public EReference getSynthesis_Kst()
   {
-        return (EReference)getSynthesis().getEStructuralFeatures().get(1);
+        return (EReference)getSynthesis().getEStructuralFeatures().get(2);
   }
 
   /**

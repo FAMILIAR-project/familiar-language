@@ -2047,13 +2047,22 @@ public interface FMLPackage extends EPackage
   int SYNTHESIS = 62;
 
   /**
+   * The feature id for the '<em><b>Interactive</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SYNTHESIS__INTERACTIVE = COMMAND_FEATURE_COUNT + 0;
+
+  /**
    * The feature id for the '<em><b>Fm</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SYNTHESIS__FM = COMMAND_FEATURE_COUNT + 0;
+  int SYNTHESIS__FM = COMMAND_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Kst</b></em>' containment reference.
@@ -2062,7 +2071,7 @@ public interface FMLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SYNTHESIS__KST = COMMAND_FEATURE_COUNT + 1;
+  int SYNTHESIS__KST = COMMAND_FEATURE_COUNT + 2;
 
   /**
    * The number of structural features of the '<em>Synthesis</em>' class.
@@ -2071,7 +2080,7 @@ public interface FMLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SYNTHESIS_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 2;
+  int SYNTHESIS_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 3;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.impl.KnowledgeSpecificationImpl <em>Knowledge Specification</em>}' class.
@@ -6718,6 +6727,17 @@ public interface FMLPackage extends EPackage
    * @generated
    */
   EClass getSynthesis();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.fML.Synthesis#isInteractive <em>Interactive</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Interactive</em>'.
+   * @see org.xtext.example.mydsl.fML.Synthesis#isInteractive()
+   * @see #getSynthesis()
+   * @generated
+   */
+  EAttribute getSynthesis_Interactive();
 
   /**
    * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.fML.Synthesis#getFm <em>Fm</em>}'.

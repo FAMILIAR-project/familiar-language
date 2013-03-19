@@ -11,6 +11,7 @@ package org.xtext.example.mydsl.fML;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link org.xtext.example.mydsl.fML.Synthesis#isInteractive <em>Interactive</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.fML.Synthesis#getFm <em>Fm</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.fML.Synthesis#getKst <em>Kst</em>}</li>
  * </ul>
@@ -22,6 +23,32 @@ package org.xtext.example.mydsl.fML;
  */
 public interface Synthesis extends Command, FMCommand
 {
+  /**
+   * Returns the value of the '<em><b>Interactive</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Interactive</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Interactive</em>' attribute.
+   * @see #setInteractive(boolean)
+   * @see org.xtext.example.mydsl.fML.FMLPackage#getSynthesis_Interactive()
+   * @model
+   * @generated
+   */
+  boolean isInteractive();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.mydsl.fML.Synthesis#isInteractive <em>Interactive</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Interactive</em>' attribute.
+   * @see #isInteractive()
+   * @generated
+   */
+  void setInteractive(boolean value);
+
   /**
    * Returns the value of the '<em><b>Fm</b></em>' containment reference.
    * <!-- begin-user-doc -->

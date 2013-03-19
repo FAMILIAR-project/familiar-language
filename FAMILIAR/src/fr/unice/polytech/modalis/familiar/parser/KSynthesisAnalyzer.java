@@ -69,6 +69,10 @@ public class KSynthesisAnalyzer extends FMLAbstractCommandAnalyzer {
 		FMCommand fmCmd = ksCmd.getFm();
 		FeatureModelVariable fmToSynthesis = _environment.parseFMCommand(fmCmd, null, null);
 		
+		if (ksCmd.isInteractive()) {
+			// interactive mode
+		}
+		
 		
 		
 		

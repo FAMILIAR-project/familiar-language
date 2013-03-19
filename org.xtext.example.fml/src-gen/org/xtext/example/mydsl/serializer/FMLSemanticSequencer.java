@@ -2835,7 +2835,7 @@ public class FMLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (fm=FMCommand kst=KnowledgeSpecification?)
+	 *     (interactive?='--interactive' fm=FMCommand kst=KnowledgeSpecification?)
 	 */
 	protected void sequence_Synthesis(EObject context, Synthesis semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
