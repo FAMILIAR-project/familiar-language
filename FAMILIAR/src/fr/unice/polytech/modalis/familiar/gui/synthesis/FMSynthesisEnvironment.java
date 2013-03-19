@@ -1,8 +1,9 @@
 package fr.unice.polytech.modalis.familiar.gui.synthesis;
 
+import gsd.graph.ImplicationGraph;
+
 import java.util.AbstractMap;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -12,11 +13,8 @@ import java.util.Observer;
 import javax.swing.JPanel;
 import javax.swing.JSplitPane;
 
-import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
-import gsd.graph.ImplicationGraph;
-
 public class FMSynthesisEnvironment extends JPanel implements Observer{
-	
+
 	private InteractiveFMSynthesizer synthesizer;
 	private FMViewer fmViewer;
 	private ParentSelector parentSelector;
@@ -24,11 +22,11 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 	public FMSynthesisEnvironment(InteractiveFMSynthesizer synthesizer) {
 		this.synthesizer = synthesizer;
 		synthesizer.addObserver(this);
-		
+
 		// Create views
-		fmViewer = new FMViewer();
+		fmViewer = new FMExplorer();
 		parentSelector = new ParentSelector(this);
-		
+
 		// Set layout
 		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, parentSelector, fmViewer);
 		this.add(splitPane);
@@ -38,17 +36,10 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 
 	@Override
 	public void update(Observable o, Object arg) {
-		System.out.println(arg.getClass().getName());
-		if (arg instanceof FeatureModelVariable) {
-			FeatureModelVariable fmv = (FeatureModelVariable) arg;
-			fmViewer.updateFM(fmv);
-			
-		} else if (arg instanceof ImplicationGraph<?>) {
-			ImplicationGraph<String> big = (ImplicationGraph<String>) arg;
-			parentSelector.updateParents(convertBIGToParentMap(big));
-		}
+		fmViewer.updateFM(synthesizer.getFeatureModelVariable());
+		parentSelector.updateParents(convertBIGToParentMap(synthesizer.getImplicationGraph()));
 	}
-	
+
 	private List<Entry<String, List<String>>> convertBIGToParentMap(ImplicationGraph<String> big) {
 		List<Entry<String, List<String>>> parents = new ArrayList<Map.Entry<String,List<String>>>();
 		for (String feature : big.vertices()) {
@@ -62,5 +53,9 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 	public void selectParent(String child, String parent) {
 		synthesizer.selectParent(child, parent);
 	}
-	
+
+	public void ignoreParent(String child, String parent) {
+		synthesizer.ignoreParent(child, parent);
+	}
+
 }

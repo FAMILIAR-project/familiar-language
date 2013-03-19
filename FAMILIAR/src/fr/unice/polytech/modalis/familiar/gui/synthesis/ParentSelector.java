@@ -49,6 +49,7 @@ public class ParentSelector extends JPanel {
 		ignoreParentItem.addActionListener(new IgnoreParentActionListener());
 		popupMenu.add(ignoreParentItem);
 		
+		// Show popup menu when there is a right button event
 		tree.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
@@ -56,7 +57,7 @@ public class ParentSelector extends JPanel {
 					int row = tree.getRowForLocation(e.getX(), e.getY());
 					TreePath path = tree.getPathForRow(row);
 					tree.setSelectionRow(row);
-					if (path.getPathCount() == 3) {
+					if (path != null && path.getPathCount() == 3) {
 						lastSelectedFeature = path.getPathComponent(1).toString();
 						lastSelectedParent = path.getPathComponent(2).toString();
 						popupMenu.show(tree, e.getX(), e.getY());	
@@ -69,7 +70,6 @@ public class ParentSelector extends JPanel {
 	}
 
 	public void updateParents(List<Entry<String, List<String>>> list) {
-		System.out.println("UPDATING PARENTS");
 		DefaultTreeModel model = (DefaultTreeModel) tree.getModel();
 		DefaultMutableTreeNode root =  (DefaultMutableTreeNode) model.getRoot();
 		
@@ -107,8 +107,7 @@ public class ParentSelector extends JPanel {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
-			// TODO Auto-generated method stub
-			
+			environment.ignoreParent(lastSelectedFeature, lastSelectedParent);
 		}
 		
 	}

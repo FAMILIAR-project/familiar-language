@@ -11,6 +11,7 @@ import gsd.synthesis.FeatureEdge;
 import gsd.synthesis.FeatureGraph;
 import gsd.synthesis.FeatureGraphFactory;
 import gsd.synthesis.FeatureModel;
+import gsd.synthesis.FeatureNode;
 
 public class InteractiveFMSynthesizer extends Observable{
 	
@@ -23,10 +24,34 @@ public class InteractiveFMSynthesizer extends Observable{
 //		fmv.setFm(new FeatureModel<String>(FeatureGraphFactory.mkStringFactory().mkTop()));
 	}
 	
+	public FeatureModelVariable getFeatureModelVariable() {
+		return fmv;
+	}
+
+	public ImplicationGraph<String> getImplicationGraph() {
+		return big;
+	}
+	
 	public void selectParent(String child, String parent) {
 		// Add the edge to the feature graph
 		FeatureGraph<String> graph = fmv.getFm().getDiagram();
-		graph.addEdge(graph.findVertex(child), graph.findVertex(parent), FeatureEdge.HIERARCHY);
+		FeatureNode<String> childNode;
+		try {
+			childNode = graph.findVertex(child);	
+		} catch (IllegalArgumentException e) {
+			childNode = new FeatureNode<String>(child);
+			graph.addVertex(childNode);
+		}
+		
+		FeatureNode<String> parentNode;
+		try {
+			parentNode = graph.findVertex(parent);
+		} catch (IllegalArgumentException e) {
+			parentNode = new FeatureNode<String>(parent);
+			graph.addVertex(parentNode);
+		}
+		
+		graph.addEdge(childNode, parentNode, FeatureEdge.HIERARCHY);
 		
 		// Modify the implication graph to represent this new relation
 		Set<SimpleEdge> removedEdges = new HashSet<SimpleEdge>(big.outgoingEdges(child));
@@ -34,17 +59,17 @@ public class InteractiveFMSynthesizer extends Observable{
 		big.removeAllEdges(removedEdges);
 		
 		setChanged();
-		notifyObservers(fmv);
+		notifyObservers();
+	}
+
+	public void ignoreParent(String child, String parent) {
+		// Suppress the corresponding edge from the implication graph
+		SimpleEdge edge = big.findEdge(child, parent);
+		if (edge != null) {
+			big.removeEdge(edge);
+		}
 		setChanged();
-		notifyObservers(big);
-	}
-
-	public FeatureModelVariable getFeatureModelVariable() {
-		return fmv;
-	}
-
-	public ImplicationGraph<String> getImplicationGraph() {
-		return big;
+		notifyObservers();
 	}
 	
 
