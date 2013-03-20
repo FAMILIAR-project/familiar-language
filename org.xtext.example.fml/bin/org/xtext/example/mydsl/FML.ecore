@@ -89,6 +89,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="StrCommand"/>
   <eClassifiers xsi:type="ecore:EClass" name="ConfigurationCommand"/>
   <eClassifiers xsi:type="ecore:EClass" name="SetCommand" eSuperTypes="#//FMLAbstractCommand"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Leaves" eSuperTypes="#//Command #//SetCommand">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fm" eType="#//FMCommand"
+        containment="true"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ConstraintCommand" eSuperTypes="#//FMLAbstractCommand"/>
   <eClassifiers xsi:type="ecore:EClass" name="GetConstraints" eSuperTypes="#//Command #//SetCommand">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="kindOfGet" eType="#//KindOfGet"/>

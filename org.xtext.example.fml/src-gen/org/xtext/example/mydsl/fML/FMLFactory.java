@@ -221,6 +221,15 @@ public interface FMLFactory extends EFactory
   SetCommand createSetCommand();
 
   /**
+   * Returns a new object of class '<em>Leaves</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Leaves</em>'.
+   * @generated
+   */
+  Leaves createLeaves();
+
+  /**
    * Returns a new object of class '<em>Constraint Command</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

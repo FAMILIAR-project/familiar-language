@@ -84,6 +84,7 @@ import org.xtext.example.mydsl.fML.KnowledgeSpecification;
 import org.xtext.example.mydsl.fML.LArgs;
 import org.xtext.example.mydsl.fML.LFMArgs;
 import org.xtext.example.mydsl.fML.LVidentifier;
+import org.xtext.example.mydsl.fML.Leaves;
 import org.xtext.example.mydsl.fML.Listing;
 import org.xtext.example.mydsl.fML.LoadGeneric;
 import org.xtext.example.mydsl.fML.Mandatory;
@@ -760,6 +761,15 @@ public class FMLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 			case FMLPackage.LVIDENTIFIER:
 				if(context == grammarAccess.getLVidentifierRule()) {
 					sequence_LVidentifier(context, (LVidentifier) semanticObject); 
+					return; 
+				}
+				else break;
+			case FMLPackage.LEAVES:
+				if(context == grammarAccess.getCommandRule() ||
+				   context == grammarAccess.getFMLAbstractCommandRule() ||
+				   context == grammarAccess.getLeavesRule() ||
+				   context == grammarAccess.getSetCommandRule()) {
+					sequence_Leaves(context, (Leaves) semanticObject); 
 					return; 
 				}
 				else break;
@@ -2202,6 +2212,22 @@ public class FMLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	 */
 	protected void sequence_LVidentifier(EObject context, LVidentifier semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     fm=FMCommand
+	 */
+	protected void sequence_Leaves(EObject context, Leaves semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, FMLPackage.eINSTANCE.getLeaves_Fm()) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FMLPackage.eINSTANCE.getLeaves_Fm()));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getLeavesAccess().getFmFMCommandParserRuleCall_1_0(), semanticObject.getFm());
+		feeder.finish();
 	}
 	
 	

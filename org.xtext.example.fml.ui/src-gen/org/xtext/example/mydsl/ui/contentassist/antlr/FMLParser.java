@@ -137,6 +137,7 @@ public class FMLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getIfConditionAccess().getGroup(), "rule__IfCondition__Group__0");
 					put(grammarAccess.getIfConditionAccess().getGroup_6(), "rule__IfCondition__Group_6__0");
 					put(grammarAccess.getForeachSetAccess().getGroup(), "rule__ForeachSet__Group__0");
+					put(grammarAccess.getLeavesAccess().getGroup(), "rule__Leaves__Group__0");
 					put(grammarAccess.getGetConstraintsAccess().getGroup(), "rule__GetConstraints__Group__0");
 					put(grammarAccess.getComputeConstraintsAccess().getGroup(), "rule__ComputeConstraints__Group__0");
 					put(grammarAccess.getGetFGroupsAccess().getGroup(), "rule__GetFGroups__Group__0");
@@ -295,6 +296,7 @@ public class FMLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getForeachSetAccess().getVarAssignment_4(), "rule__ForeachSet__VarAssignment_4");
 					put(grammarAccess.getForeachSetAccess().getExprsAssignment_7(), "rule__ForeachSet__ExprsAssignment_7");
 					put(grammarAccess.getLTypeAccess().getValAssignment(), "rule__LType__ValAssignment");
+					put(grammarAccess.getLeavesAccess().getFmAssignment_1(), "rule__Leaves__FmAssignment_1");
 					put(grammarAccess.getGetConstraintsAccess().getKindOfGetAssignment_0(), "rule__GetConstraints__KindOfGetAssignment_0");
 					put(grammarAccess.getGetConstraintsAccess().getFmAssignment_1(), "rule__GetConstraints__FmAssignment_1");
 					put(grammarAccess.getComputeConstraintsAccess().getKindOfComputeAssignment_0(), "rule__ComputeConstraints__KindOfComputeAssignment_0");

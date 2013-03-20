@@ -185,6 +185,11 @@ public class FMLAdapterFactory extends AdapterFactoryImpl
         return createSetCommandAdapter();
       }
       @Override
+      public Adapter caseLeaves(Leaves object)
+      {
+        return createLeavesAdapter();
+      }
+      @Override
       public Adapter caseConstraintCommand(ConstraintCommand object)
       {
         return createConstraintCommandAdapter();
@@ -1152,6 +1157,21 @@ public class FMLAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createSetCommandAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.example.mydsl.fML.Leaves <em>Leaves</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.example.mydsl.fML.Leaves
+   * @generated
+   */
+  public Adapter createLeavesAdapter()
   {
     return null;
   }
