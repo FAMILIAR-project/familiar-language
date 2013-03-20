@@ -14,15 +14,12 @@ public class PairwiseAnalyzer extends FMLAbstractCommandAnalyzer {
 
 	public PairwiseAnalyzer(Command cmd, String assigner, NameSpace ns,
 			FMLCommandInterpreter an) {
-	
 		super(cmd, assigner, ns, an);
-		System.out.println("const");
 		// TODO Auto-generated constructor stub
 	}
 
 	@Override
 	public void eval() {
-		System.out.println("eval");
 		int _min ;
 		int _partial ;
 	PairwiseCommand currpwCmd = (PairwiseCommand) _command ;
