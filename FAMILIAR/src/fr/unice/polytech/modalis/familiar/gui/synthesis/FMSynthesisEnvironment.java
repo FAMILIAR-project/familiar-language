@@ -25,7 +25,7 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 		synthesizer.addObserver(this);
 
 		// Create views
-		fmViewer = new FMExplorer();
+		fmViewer = new FMPanel();
 		parentSelector = new ParentSelector(this);
 
 		// Set layout

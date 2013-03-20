@@ -14,5 +14,7 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="lib/simmetrics_jar_v1_6_2_d07_02_07.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/sbennasr/Downloads/jgrapht-0.8.3/jgrapht-0.8.3/jgrapht-jdk1.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sbennasr/Downloads/jgraph-5.5.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
