@@ -2,14 +2,15 @@ package fr.unice.polytech.modalis.familiar.gui.synthesis;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Observable;
 import java.util.Set;
 
+import ch.usi.inf.sape.hac.dendrogram.Dendrogram;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.clustering.FMExperiment;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.clustering.HierarchicalFeatureClusterer;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.FeatureSimilarityMetric;
-import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.SimmetricsMetric;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import gsd.graph.ImplicationGraph;
 import gsd.graph.SimpleEdge;
@@ -21,14 +22,20 @@ public class InteractiveFMSynthesizer extends Observable{
 	
 	private FeatureModelVariable fmv;
 	private ImplicationGraph<String> big;
-	private FeatureSimilarityMetric similarityMetric;
+	
+	private FeatureSimilarityMetric parentSimilarityMetric;
 	private FeatureComparator featureComparator;
+	
+	private FeatureSimilarityMetric clusteringSimilarityMetric;
+	private Set<Set<String>> similarityClusters;
+	private double clusteringThreshold;
 	
 	public InteractiveFMSynthesizer(FeatureModelVariable fmv) {
 		this.fmv = fmv;
 		big = fmv.computeImplicationGraph();
 //		fmv.setFm(new FeatureModel<String>(FeatureGraphFactory.mkStringFactory().mkTop()));
 		featureComparator = new OutDegreeComparator(big);
+		similarityClusters = null;
 	}
 	
 	public FeatureModelVariable getFeatureModelVariable() {
@@ -99,8 +106,8 @@ public class InteractiveFMSynthesizer extends Observable{
 		for (String feature : big.vertices()) {
 			List<String> parentList = new ArrayList<String>(big.parents(feature));
 			
-			if (similarityMetric != null) {
-				Collections.sort(parentList, new ParentComparator(feature, similarityMetric));	
+			if (parentSimilarityMetric != null) {
+				Collections.sort(parentList, new ParentComparator(feature, parentSimilarityMetric));	
 			}
 			
 			KeyValue<String, List<String>> parentEntry = new KeyValue<String, List<String>>(feature, parentList);
@@ -109,9 +116,40 @@ public class InteractiveFMSynthesizer extends Observable{
 		Collections.sort(parents, featureComparator);
 		return parents;
 	}
-	
 
-	public void setSimilarityMetric(FeatureSimilarityMetric similarityMetric) {
-		this.similarityMetric = similarityMetric;
+	public void setParentSimilarityMetric(
+			FeatureSimilarityMetric parentSimilarityMetric) {
+		this.parentSimilarityMetric = parentSimilarityMetric;
 	}
+
+	/**
+	 * Set clustering parameters and compute clusters
+	 * @param clusteringSimilarityMetric
+	 * @param threshold
+	 */
+	public void setClusteringParameters(FeatureSimilarityMetric clusteringSimilarityMetric, double threshold) {
+		this.clusteringSimilarityMetric = clusteringSimilarityMetric;
+		this.clusteringThreshold = threshold;
+		computeClusters();
+	}
+
+	/**
+	 * Compute clusters according to the previously specified similarity metric and threshold
+	 */
+	private void computeClusters() {
+		HierarchicalFeatureClusterer hierarchicalClustering = new HierarchicalFeatureClusterer();
+		FMExperiment experiment = new FMExperiment(big);
+		Dendrogram dendrogram = hierarchicalClustering.computeDendrogram(experiment, clusteringSimilarityMetric);
+		similarityClusters = hierarchicalClustering.extractClusters(experiment,dendrogram, clusteringThreshold);
+		notifyObservers();
+	}
+
+	/**
+	 * Return similarity clusters or null if they have not been computed yet
+	 * @return
+	 */
+	public Set<Set<String>> getSimilarityClusters() {
+		return similarityClusters;
+	}
+
 }
