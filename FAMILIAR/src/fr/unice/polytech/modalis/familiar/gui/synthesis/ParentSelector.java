@@ -98,11 +98,11 @@ public class ParentSelector extends JPanel {
 		
 	}
 
-	public void updateParents(List<Entry<String, List<String>>> list) {
+	public void updateParents(List<KeyValue<String, List<String>>> list) {
 		List<TreePath> pathsToExpand = new ArrayList<TreePath>();
 		root.removeAllChildren();
 
-		for (Entry<String, List<String>> entry : list) {
+		for (KeyValue<String, List<String>> entry : list) {
 			DefaultMutableTreeNode feature = new DefaultMutableTreeNode(entry.getKey());
 			root.add(feature);
 			for (String parent : entry.getValue()) {

@@ -1,13 +1,6 @@
 package fr.unice.polytech.modalis.familiar.gui.synthesis;
 
-import gsd.graph.ImplicationGraph;
-
 import java.awt.GridLayout;
-import java.util.AbstractMap;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -33,24 +26,14 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, parentSelector, fmViewer);
 		this.add(splitPane);
 		fmViewer.updateFM(synthesizer.getFeatureModelVariable());
-		parentSelector.updateParents(convertBIGToParentMap(synthesizer.getImplicationGraph()));
+		parentSelector.updateParents(synthesizer.getParentCandidates());
 		
 	}
 
 	@Override
 	public void update(Observable o, Object arg) {
 		fmViewer.updateFM(synthesizer.getFeatureModelVariable());
-		parentSelector.updateParents(convertBIGToParentMap(synthesizer.getImplicationGraph()));
-	}
-
-	private List<Entry<String, List<String>>> convertBIGToParentMap(ImplicationGraph<String> big) {
-		List<Entry<String, List<String>>> parents = new ArrayList<Map.Entry<String,List<String>>>();
-		for (String feature : big.vertices()) {
-			List<String> parentList = new ArrayList<String>(big.parents(feature));
-			Entry<String, List<String>> parentEntry = new AbstractMap.SimpleEntry<String, List<String>>(feature, parentList);
-			parents.add(parentEntry);
-		}
-		return parents;
+		parentSelector.updateParents(synthesizer.getParentCandidates());
 	}
 
 	public void selectParent(String child, String parent) {
