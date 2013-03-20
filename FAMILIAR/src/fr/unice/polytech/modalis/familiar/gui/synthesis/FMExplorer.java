@@ -1,5 +1,8 @@
 package fr.unice.polytech.modalis.familiar.gui.synthesis;
 
+import java.awt.GridLayout;
+import java.util.Set;
+
 import javax.swing.JScrollPane;
 import javax.swing.JTree;
 import javax.swing.tree.DefaultMutableTreeNode;
@@ -15,10 +18,14 @@ public class FMExplorer extends FMViewer{
 	private DefaultMutableTreeNode root;
 	
 	public FMExplorer() {
+		// Create explorer view
 		root = new DefaultMutableTreeNode();
 		model = new DefaultTreeModel(root);
 		JTree tree = new JTree(model);
 		tree.setRootVisible(false);
+		
+		// Set layout
+		this.setLayout(new GridLayout(1, 1));
 		this.add(new JScrollPane(tree));
 	}
 
@@ -26,8 +33,11 @@ public class FMExplorer extends FMViewer{
 	public void updateFM(FeatureModelVariable fmv) {
 		root.removeAllChildren();
 		FeatureGraph<String> graph = fmv.getFm().getDiagram();
-		printFM(graph, graph.getTopVertex(), root); // TODO : avoid printing top vertex
-		model.reload();
+		Set<FeatureNode<String>> possibleRoots = graph.children(graph.getTopVertex());
+		if (!possibleRoots.isEmpty()) {
+			printFM(graph, possibleRoots.iterator().next(), root);
+			model.reload();	
+		}
 	}
 
 	private void printFM(FeatureGraph<String> graph, FeatureNode<String> featureNode, DefaultMutableTreeNode treeNode) {

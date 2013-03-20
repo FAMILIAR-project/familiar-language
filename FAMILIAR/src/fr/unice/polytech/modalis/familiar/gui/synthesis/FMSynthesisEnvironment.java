@@ -2,6 +2,7 @@ package fr.unice.polytech.modalis.familiar.gui.synthesis;
 
 import gsd.graph.ImplicationGraph;
 
+import java.awt.GridLayout;
 import java.util.AbstractMap;
 import java.util.ArrayList;
 import java.util.List;
@@ -28,10 +29,12 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 		parentSelector = new ParentSelector(this);
 
 		// Set layout
+		this.setLayout(new GridLayout(1, 1));
 		JSplitPane splitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, parentSelector, fmViewer);
 		this.add(splitPane);
 		fmViewer.updateFM(synthesizer.getFeatureModelVariable());
 		parentSelector.updateParents(convertBIGToParentMap(synthesizer.getImplicationGraph()));
+		
 	}
 
 	@Override

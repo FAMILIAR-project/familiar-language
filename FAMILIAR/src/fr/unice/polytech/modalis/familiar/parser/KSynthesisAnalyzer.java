@@ -125,7 +125,6 @@ public class KSynthesisAnalyzer extends FMLAbstractCommandAnalyzer {
 			InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(fmToSynthesis);
 			FMSynthesisEnvironment environment = new FMSynthesisEnvironment(synthesizer);
 			Tab2EnvVar.INSTANCE.createNewTab(fmToSynthesis.getIdentifier(), environment);
-			
 		}
 		
 		// TODO backend analysis for defining the synthesis strateg
