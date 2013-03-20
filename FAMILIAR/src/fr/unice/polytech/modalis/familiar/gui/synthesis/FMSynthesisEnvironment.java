@@ -18,6 +18,7 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 
 	private InteractiveFMSynthesizer synthesizer;
 	private FMViewer fmViewer;
+	private BIGViewer bigViewer;
 	private ParentSelector parentSelector;
 
 	public FMSynthesisEnvironment(InteractiveFMSynthesizer synthesizer) {
@@ -26,6 +27,7 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 
 		// Create views
 		fmViewer = new FMPanel();
+		bigViewer = new BIGPanel();
 		parentSelector = new ParentSelector(this);
 
 		// Set layout
