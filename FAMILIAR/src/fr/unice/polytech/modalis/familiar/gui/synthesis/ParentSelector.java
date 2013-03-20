@@ -87,14 +87,12 @@ public class ParentSelector extends JPanel {
 			public void treeExpanded(TreeExpansionEvent event) {
 				String feature = event.getPath().getLastPathComponent().toString();
 				expandedFeatures.add(feature);
-				System.out.println("expand : " + feature);
 			}
 			
 			@Override
 			public void treeCollapsed(TreeExpansionEvent event) {
 				String feature = event.getPath().getLastPathComponent().toString();
 				expandedFeatures.remove(feature);
-				System.out.println("collaspe : " + feature);
 			}
 		});
 		
