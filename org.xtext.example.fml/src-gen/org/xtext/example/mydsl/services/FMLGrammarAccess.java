@@ -371,23 +371,24 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cCoresParserRuleCall_1_33 = (RuleCall)cAlternatives_1.eContents().get(33);
 		private final RuleCall cDeadsParserRuleCall_1_34 = (RuleCall)cAlternatives_1.eContents().get(34);
 		private final RuleCall cCliquesParserRuleCall_1_35 = (RuleCall)cAlternatives_1.eContents().get(35);
-		private final RuleCall cFullMandatorysParserRuleCall_1_36 = (RuleCall)cAlternatives_1.eContents().get(36);
-		private final RuleCall cPrinterUtilityParserRuleCall_1_37 = (RuleCall)cAlternatives_1.eContents().get(37);
-		private final RuleCall cConvertParserRuleCall_1_38 = (RuleCall)cAlternatives_1.eContents().get(38);
-		private final RuleCall cAssertionParserRuleCall_1_39 = (RuleCall)cAlternatives_1.eContents().get(39);
-		private final RuleCall cGDisplayParserRuleCall_1_40 = (RuleCall)cAlternatives_1.eContents().get(40);
-		private final RuleCall cGListingParserRuleCall_1_41 = (RuleCall)cAlternatives_1.eContents().get(41);
-		private final RuleCall cCleanUpParserRuleCall_1_42 = (RuleCall)cAlternatives_1.eContents().get(42);
-		private final RuleCall cAsFMParserRuleCall_1_43 = (RuleCall)cAlternatives_1.eContents().get(43);
-		private final RuleCall cModifyVOperatorParserRuleCall_1_44 = (RuleCall)cAlternatives_1.eContents().get(44);
-		private final RuleCall cFMLSaveParserRuleCall_1_45 = (RuleCall)cAlternatives_1.eContents().get(45);
-		private final RuleCall cConfigurationCmdParserRuleCall_1_46 = (RuleCall)cAlternatives_1.eContents().get(46);
-		private final RuleCall cScriptDefinitionParserRuleCall_1_47 = (RuleCall)cAlternatives_1.eContents().get(47);
-		private final RuleCall cShellParserRuleCall_1_48 = (RuleCall)cAlternatives_1.eContents().get(48);
-		private final RuleCall cCopyVariableParserRuleCall_1_49 = (RuleCall)cAlternatives_1.eContents().get(49);
-		private final RuleCall cRemoveVariableParserRuleCall_1_50 = (RuleCall)cAlternatives_1.eContents().get(50);
-		private final RuleCall cCTCRCommandParserRuleCall_1_51 = (RuleCall)cAlternatives_1.eContents().get(51);
-		private final RuleCall cPairwiseCommandParserRuleCall_1_52 = (RuleCall)cAlternatives_1.eContents().get(52);
+		private final RuleCall cLeavesParserRuleCall_1_36 = (RuleCall)cAlternatives_1.eContents().get(36);
+		private final RuleCall cFullMandatorysParserRuleCall_1_37 = (RuleCall)cAlternatives_1.eContents().get(37);
+		private final RuleCall cPrinterUtilityParserRuleCall_1_38 = (RuleCall)cAlternatives_1.eContents().get(38);
+		private final RuleCall cConvertParserRuleCall_1_39 = (RuleCall)cAlternatives_1.eContents().get(39);
+		private final RuleCall cAssertionParserRuleCall_1_40 = (RuleCall)cAlternatives_1.eContents().get(40);
+		private final RuleCall cGDisplayParserRuleCall_1_41 = (RuleCall)cAlternatives_1.eContents().get(41);
+		private final RuleCall cGListingParserRuleCall_1_42 = (RuleCall)cAlternatives_1.eContents().get(42);
+		private final RuleCall cCleanUpParserRuleCall_1_43 = (RuleCall)cAlternatives_1.eContents().get(43);
+		private final RuleCall cAsFMParserRuleCall_1_44 = (RuleCall)cAlternatives_1.eContents().get(44);
+		private final RuleCall cModifyVOperatorParserRuleCall_1_45 = (RuleCall)cAlternatives_1.eContents().get(45);
+		private final RuleCall cFMLSaveParserRuleCall_1_46 = (RuleCall)cAlternatives_1.eContents().get(46);
+		private final RuleCall cConfigurationCmdParserRuleCall_1_47 = (RuleCall)cAlternatives_1.eContents().get(47);
+		private final RuleCall cScriptDefinitionParserRuleCall_1_48 = (RuleCall)cAlternatives_1.eContents().get(48);
+		private final RuleCall cShellParserRuleCall_1_49 = (RuleCall)cAlternatives_1.eContents().get(49);
+		private final RuleCall cCopyVariableParserRuleCall_1_50 = (RuleCall)cAlternatives_1.eContents().get(50);
+		private final RuleCall cRemoveVariableParserRuleCall_1_51 = (RuleCall)cAlternatives_1.eContents().get(51);
+		private final RuleCall cCTCRCommandParserRuleCall_1_52 = (RuleCall)cAlternatives_1.eContents().get(52);
+		private final RuleCall cPairwiseCommandParserRuleCall_1_53 = (RuleCall)cAlternatives_1.eContents().get(53);
 		
 		//Command:
 		//	LEFT_PAREN ComplexCommand RIGHT_PAREN | (StringExpr | SetExpr | BooleanExpr | IdentifierExpr | IntegerExpr |
@@ -396,7 +397,7 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 		//	RemoveConstraint | SetOperations | AnalysisOperation | // children, sibling, parent, operator
 		//	FeatureOperation | StringOperation | Compare | LoadGeneric | Merge | AggregateMerge | Synthesis | Hierarchy | // insert, remove, rename, extract
 		//	FeatureModelOperation | Aggregate | Slice | Map | UnMap | AtomicConstraintExpr | ConstraintExpr | GetConstraints |
-		//	ComputeConstraints | GetFGroups | ComputeFGroups | VariableNull | Cores | Deads | Cliques | FullMandatorys |
+		//	ComputeConstraints | GetFGroups | ComputeFGroups | VariableNull | Cores | Deads | Cliques | Leaves | FullMandatorys |
 		//	PrinterUtility | Convert | Assertion | GDisplay | GListing | CleanUp | AsFM | ModifyVOperator | FMLSave |
 		//	ConfigurationCmd | ScriptDefinition | Shell | CopyVariable | RemoveVariable | CTCRCommand | PairwiseCommand);
 		public ParserRule getRule() { return rule; }
@@ -407,7 +408,7 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 		//RemoveConstraint | SetOperations | AnalysisOperation | // children, sibling, parent, operator
 		//FeatureOperation | StringOperation | Compare | LoadGeneric | Merge | AggregateMerge | Synthesis | Hierarchy | // insert, remove, rename, extract
 		//FeatureModelOperation | Aggregate | Slice | Map | UnMap | AtomicConstraintExpr | ConstraintExpr | GetConstraints |
-		//ComputeConstraints | GetFGroups | ComputeFGroups | VariableNull | Cores | Deads | Cliques | FullMandatorys |
+		//ComputeConstraints | GetFGroups | ComputeFGroups | VariableNull | Cores | Deads | Cliques | Leaves | FullMandatorys |
 		//PrinterUtility | Convert | Assertion | GDisplay | GListing | CleanUp | AsFM | ModifyVOperator | FMLSave |
 		//ConfigurationCmd | ScriptDefinition | Shell | CopyVariable | RemoveVariable | CTCRCommand | PairwiseCommand)
 		public Alternatives getAlternatives() { return cAlternatives; }
@@ -430,7 +431,7 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 		//RemoveConstraint | SetOperations | AnalysisOperation | // children, sibling, parent, operator
 		//FeatureOperation | StringOperation | Compare | LoadGeneric | Merge | AggregateMerge | Synthesis | Hierarchy | // insert, remove, rename, extract
 		//FeatureModelOperation | Aggregate | Slice | Map | UnMap | AtomicConstraintExpr | ConstraintExpr | GetConstraints |
-		//ComputeConstraints | GetFGroups | ComputeFGroups | VariableNull | Cores | Deads | Cliques | FullMandatorys |
+		//ComputeConstraints | GetFGroups | ComputeFGroups | VariableNull | Cores | Deads | Cliques | Leaves | FullMandatorys |
 		//PrinterUtility | Convert | Assertion | GDisplay | GListing | CleanUp | AsFM | ModifyVOperator | FMLSave |
 		//ConfigurationCmd | ScriptDefinition | Shell | CopyVariable | RemoveVariable | CTCRCommand | PairwiseCommand
 		public Alternatives getAlternatives_1() { return cAlternatives_1; }
@@ -547,56 +548,59 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 		//Cliques
 		public RuleCall getCliquesParserRuleCall_1_35() { return cCliquesParserRuleCall_1_35; }
 
+		//Leaves
+		public RuleCall getLeavesParserRuleCall_1_36() { return cLeavesParserRuleCall_1_36; }
+
 		//FullMandatorys
-		public RuleCall getFullMandatorysParserRuleCall_1_36() { return cFullMandatorysParserRuleCall_1_36; }
+		public RuleCall getFullMandatorysParserRuleCall_1_37() { return cFullMandatorysParserRuleCall_1_37; }
 
 		//PrinterUtility
-		public RuleCall getPrinterUtilityParserRuleCall_1_37() { return cPrinterUtilityParserRuleCall_1_37; }
+		public RuleCall getPrinterUtilityParserRuleCall_1_38() { return cPrinterUtilityParserRuleCall_1_38; }
 
 		//Convert
-		public RuleCall getConvertParserRuleCall_1_38() { return cConvertParserRuleCall_1_38; }
+		public RuleCall getConvertParserRuleCall_1_39() { return cConvertParserRuleCall_1_39; }
 
 		//Assertion
-		public RuleCall getAssertionParserRuleCall_1_39() { return cAssertionParserRuleCall_1_39; }
+		public RuleCall getAssertionParserRuleCall_1_40() { return cAssertionParserRuleCall_1_40; }
 
 		//GDisplay
-		public RuleCall getGDisplayParserRuleCall_1_40() { return cGDisplayParserRuleCall_1_40; }
+		public RuleCall getGDisplayParserRuleCall_1_41() { return cGDisplayParserRuleCall_1_41; }
 
 		//GListing
-		public RuleCall getGListingParserRuleCall_1_41() { return cGListingParserRuleCall_1_41; }
+		public RuleCall getGListingParserRuleCall_1_42() { return cGListingParserRuleCall_1_42; }
 
 		//CleanUp
-		public RuleCall getCleanUpParserRuleCall_1_42() { return cCleanUpParserRuleCall_1_42; }
+		public RuleCall getCleanUpParserRuleCall_1_43() { return cCleanUpParserRuleCall_1_43; }
 
 		//AsFM
-		public RuleCall getAsFMParserRuleCall_1_43() { return cAsFMParserRuleCall_1_43; }
+		public RuleCall getAsFMParserRuleCall_1_44() { return cAsFMParserRuleCall_1_44; }
 
 		//ModifyVOperator
-		public RuleCall getModifyVOperatorParserRuleCall_1_44() { return cModifyVOperatorParserRuleCall_1_44; }
+		public RuleCall getModifyVOperatorParserRuleCall_1_45() { return cModifyVOperatorParserRuleCall_1_45; }
 
 		//FMLSave
-		public RuleCall getFMLSaveParserRuleCall_1_45() { return cFMLSaveParserRuleCall_1_45; }
+		public RuleCall getFMLSaveParserRuleCall_1_46() { return cFMLSaveParserRuleCall_1_46; }
 
 		//ConfigurationCmd
-		public RuleCall getConfigurationCmdParserRuleCall_1_46() { return cConfigurationCmdParserRuleCall_1_46; }
+		public RuleCall getConfigurationCmdParserRuleCall_1_47() { return cConfigurationCmdParserRuleCall_1_47; }
 
 		//ScriptDefinition
-		public RuleCall getScriptDefinitionParserRuleCall_1_47() { return cScriptDefinitionParserRuleCall_1_47; }
+		public RuleCall getScriptDefinitionParserRuleCall_1_48() { return cScriptDefinitionParserRuleCall_1_48; }
 
 		//Shell
-		public RuleCall getShellParserRuleCall_1_48() { return cShellParserRuleCall_1_48; }
+		public RuleCall getShellParserRuleCall_1_49() { return cShellParserRuleCall_1_49; }
 
 		//CopyVariable
-		public RuleCall getCopyVariableParserRuleCall_1_49() { return cCopyVariableParserRuleCall_1_49; }
+		public RuleCall getCopyVariableParserRuleCall_1_50() { return cCopyVariableParserRuleCall_1_50; }
 
 		//RemoveVariable
-		public RuleCall getRemoveVariableParserRuleCall_1_50() { return cRemoveVariableParserRuleCall_1_50; }
+		public RuleCall getRemoveVariableParserRuleCall_1_51() { return cRemoveVariableParserRuleCall_1_51; }
 
 		//CTCRCommand
-		public RuleCall getCTCRCommandParserRuleCall_1_51() { return cCTCRCommandParserRuleCall_1_51; }
+		public RuleCall getCTCRCommandParserRuleCall_1_52() { return cCTCRCommandParserRuleCall_1_52; }
 
 		//PairwiseCommand
-		public RuleCall getPairwiseCommandParserRuleCall_1_52() { return cPairwiseCommandParserRuleCall_1_52; }
+		public RuleCall getPairwiseCommandParserRuleCall_1_53() { return cPairwiseCommandParserRuleCall_1_53; }
 	}
 
 	public class IntegerExprElements extends AbstractParserRuleElementFinder {
@@ -1284,27 +1288,28 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cFullMandatorysParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
 		private final RuleCall cSetToNamesParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
 		private final RuleCall cSetUnionOrIntersectionParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
-		private final RuleCall cSetEmptyParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
-		private final RuleCall cSelectedConfigurationParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
-		private final RuleCall cDeselectedConfigurationParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
-		private final RuleCall cConstraintExprParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
-		private final RuleCall cGetConstraintsParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
-		private final RuleCall cComputeConstraintsParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
-		private final RuleCall cGetFGroupsParserRuleCall_15 = (RuleCall)cAlternatives.eContents().get(15);
-		private final RuleCall cComputeFGroupsParserRuleCall_16 = (RuleCall)cAlternatives.eContents().get(16);
-		private final RuleCall cPairwiseCommandParserRuleCall_17 = (RuleCall)cAlternatives.eContents().get(17);
+		private final RuleCall cLeavesParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
+		private final RuleCall cSetEmptyParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
+		private final RuleCall cSelectedConfigurationParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
+		private final RuleCall cDeselectedConfigurationParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
+		private final RuleCall cConstraintExprParserRuleCall_13 = (RuleCall)cAlternatives.eContents().get(13);
+		private final RuleCall cGetConstraintsParserRuleCall_14 = (RuleCall)cAlternatives.eContents().get(14);
+		private final RuleCall cComputeConstraintsParserRuleCall_15 = (RuleCall)cAlternatives.eContents().get(15);
+		private final RuleCall cGetFGroupsParserRuleCall_16 = (RuleCall)cAlternatives.eContents().get(16);
+		private final RuleCall cComputeFGroupsParserRuleCall_17 = (RuleCall)cAlternatives.eContents().get(17);
+		private final RuleCall cPairwiseCommandParserRuleCall_18 = (RuleCall)cAlternatives.eContents().get(18);
 		
 		//SetCommand:
 		//	IdentifierExpr // TODO: AnalysisOperation due to 'features'
-		//	| SetExpr | FeatureOperation | Cliques | Cores | Deads | FullMandatorys | SetToNames | SetUnionOrIntersection |
-		//	SetEmpty | SelectedConfiguration | DeselectedConfiguration | ConstraintExpr | GetConstraints | ComputeConstraints |
+		//	| SetExpr | FeatureOperation | Cliques | Cores | Deads | FullMandatorys | SetToNames | SetUnionOrIntersection | Leaves
+		//	| SetEmpty | SelectedConfiguration | DeselectedConfiguration | ConstraintExpr | GetConstraints | ComputeConstraints |
 		//	GetFGroups | ComputeFGroups | PairwiseCommand;
 		public ParserRule getRule() { return rule; }
 
 		//IdentifierExpr // TODO: AnalysisOperation due to 'features'
-		//| SetExpr | FeatureOperation | Cliques | Cores | Deads | FullMandatorys | SetToNames | SetUnionOrIntersection | SetEmpty
-		//| SelectedConfiguration | DeselectedConfiguration | ConstraintExpr | GetConstraints | ComputeConstraints | GetFGroups |
-		//ComputeFGroups | PairwiseCommand
+		//| SetExpr | FeatureOperation | Cliques | Cores | Deads | FullMandatorys | SetToNames | SetUnionOrIntersection | Leaves |
+		//SetEmpty | SelectedConfiguration | DeselectedConfiguration | ConstraintExpr | GetConstraints | ComputeConstraints |
+		//GetFGroups | ComputeFGroups | PairwiseCommand
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//IdentifierExpr
@@ -1334,32 +1339,60 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 		//SetUnionOrIntersection
 		public RuleCall getSetUnionOrIntersectionParserRuleCall_8() { return cSetUnionOrIntersectionParserRuleCall_8; }
 
+		//Leaves
+		public RuleCall getLeavesParserRuleCall_9() { return cLeavesParserRuleCall_9; }
+
 		//SetEmpty
-		public RuleCall getSetEmptyParserRuleCall_9() { return cSetEmptyParserRuleCall_9; }
+		public RuleCall getSetEmptyParserRuleCall_10() { return cSetEmptyParserRuleCall_10; }
 
 		//SelectedConfiguration
-		public RuleCall getSelectedConfigurationParserRuleCall_10() { return cSelectedConfigurationParserRuleCall_10; }
+		public RuleCall getSelectedConfigurationParserRuleCall_11() { return cSelectedConfigurationParserRuleCall_11; }
 
 		//DeselectedConfiguration
-		public RuleCall getDeselectedConfigurationParserRuleCall_11() { return cDeselectedConfigurationParserRuleCall_11; }
+		public RuleCall getDeselectedConfigurationParserRuleCall_12() { return cDeselectedConfigurationParserRuleCall_12; }
 
 		//ConstraintExpr
-		public RuleCall getConstraintExprParserRuleCall_12() { return cConstraintExprParserRuleCall_12; }
+		public RuleCall getConstraintExprParserRuleCall_13() { return cConstraintExprParserRuleCall_13; }
 
 		//GetConstraints
-		public RuleCall getGetConstraintsParserRuleCall_13() { return cGetConstraintsParserRuleCall_13; }
+		public RuleCall getGetConstraintsParserRuleCall_14() { return cGetConstraintsParserRuleCall_14; }
 
 		//ComputeConstraints
-		public RuleCall getComputeConstraintsParserRuleCall_14() { return cComputeConstraintsParserRuleCall_14; }
+		public RuleCall getComputeConstraintsParserRuleCall_15() { return cComputeConstraintsParserRuleCall_15; }
 
 		//GetFGroups
-		public RuleCall getGetFGroupsParserRuleCall_15() { return cGetFGroupsParserRuleCall_15; }
+		public RuleCall getGetFGroupsParserRuleCall_16() { return cGetFGroupsParserRuleCall_16; }
 
 		//ComputeFGroups
-		public RuleCall getComputeFGroupsParserRuleCall_16() { return cComputeFGroupsParserRuleCall_16; }
+		public RuleCall getComputeFGroupsParserRuleCall_17() { return cComputeFGroupsParserRuleCall_17; }
 
 		//PairwiseCommand
-		public RuleCall getPairwiseCommandParserRuleCall_17() { return cPairwiseCommandParserRuleCall_17; }
+		public RuleCall getPairwiseCommandParserRuleCall_18() { return cPairwiseCommandParserRuleCall_18; }
+	}
+
+	public class LeavesElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Leaves");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cLeavesKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cFmAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cFmFMCommandParserRuleCall_1_0 = (RuleCall)cFmAssignment_1.eContents().get(0);
+		
+		//// return the set of leaves in the feature hierarchy 
+		//Leaves:
+		//	"leaves" fm=FMCommand;
+		public ParserRule getRule() { return rule; }
+
+		//"leaves" fm=FMCommand
+		public Group getGroup() { return cGroup; }
+
+		//"leaves"
+		public Keyword getLeavesKeyword_0() { return cLeavesKeyword_0; }
+
+		//fm=FMCommand
+		public Assignment getFmAssignment_1() { return cFmAssignment_1; }
+
+		//FMCommand
+		public RuleCall getFmFMCommandParserRuleCall_1_0() { return cFmFMCommandParserRuleCall_1_0; }
 	}
 
 	public class ConstraintCommandElements extends AbstractParserRuleElementFinder {
@@ -6254,6 +6287,7 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 	private StrCommandElements pStrCommand;
 	private ConfigurationCommandElements pConfigurationCommand;
 	private SetCommandElements pSetCommand;
+	private LeavesElements pLeaves;
 	private ConstraintCommandElements pConstraintCommand;
 	private GetConstraintsElements pGetConstraints;
 	private KindOfGetElements unknownRuleKindOfGet;
@@ -6496,7 +6530,7 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 	//	RemoveConstraint | SetOperations | AnalysisOperation | // children, sibling, parent, operator
 	//	FeatureOperation | StringOperation | Compare | LoadGeneric | Merge | AggregateMerge | Synthesis | Hierarchy | // insert, remove, rename, extract
 	//	FeatureModelOperation | Aggregate | Slice | Map | UnMap | AtomicConstraintExpr | ConstraintExpr | GetConstraints |
-	//	ComputeConstraints | GetFGroups | ComputeFGroups | VariableNull | Cores | Deads | Cliques | FullMandatorys |
+	//	ComputeConstraints | GetFGroups | ComputeFGroups | VariableNull | Cores | Deads | Cliques | Leaves | FullMandatorys |
 	//	PrinterUtility | Convert | Assertion | GDisplay | GListing | CleanUp | AsFM | ModifyVOperator | FMLSave |
 	//	ConfigurationCmd | ScriptDefinition | Shell | CopyVariable | RemoveVariable | CTCRCommand | PairwiseCommand);
 	public CommandElements getCommandAccess() {
@@ -6713,8 +6747,8 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 
 	//SetCommand:
 	//	IdentifierExpr // TODO: AnalysisOperation due to 'features'
-	//	| SetExpr | FeatureOperation | Cliques | Cores | Deads | FullMandatorys | SetToNames | SetUnionOrIntersection |
-	//	SetEmpty | SelectedConfiguration | DeselectedConfiguration | ConstraintExpr | GetConstraints | ComputeConstraints |
+	//	| SetExpr | FeatureOperation | Cliques | Cores | Deads | FullMandatorys | SetToNames | SetUnionOrIntersection | Leaves
+	//	| SetEmpty | SelectedConfiguration | DeselectedConfiguration | ConstraintExpr | GetConstraints | ComputeConstraints |
 	//	GetFGroups | ComputeFGroups | PairwiseCommand;
 	public SetCommandElements getSetCommandAccess() {
 		return (pSetCommand != null) ? pSetCommand : (pSetCommand = new SetCommandElements());
@@ -6722,6 +6756,17 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getSetCommandRule() {
 		return getSetCommandAccess().getRule();
+	}
+
+	//// return the set of leaves in the feature hierarchy 
+	//Leaves:
+	//	"leaves" fm=FMCommand;
+	public LeavesElements getLeavesAccess() {
+		return (pLeaves != null) ? pLeaves : (pLeaves = new LeavesElements());
+	}
+	
+	public ParserRule getLeavesRule() {
+		return getLeavesAccess().getRule();
 	}
 
 	//ConstraintCommand:

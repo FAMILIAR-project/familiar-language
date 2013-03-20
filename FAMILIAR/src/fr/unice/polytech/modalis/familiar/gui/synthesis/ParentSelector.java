@@ -8,7 +8,6 @@ import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Map.Entry;
 import java.util.Set;
 
 import javax.swing.JMenuItem;
@@ -87,24 +86,22 @@ public class ParentSelector extends JPanel {
 			public void treeExpanded(TreeExpansionEvent event) {
 				String feature = event.getPath().getLastPathComponent().toString();
 				expandedFeatures.add(feature);
-				System.out.println("expand : " + feature);
 			}
 			
 			@Override
 			public void treeCollapsed(TreeExpansionEvent event) {
 				String feature = event.getPath().getLastPathComponent().toString();
 				expandedFeatures.remove(feature);
-				System.out.println("collaspe : " + feature);
 			}
 		});
 		
 	}
 
-	public void updateParents(List<Entry<String, List<String>>> list) {
+	public void updateParents(List<KeyValue<String, List<String>>> list) {
 		List<TreePath> pathsToExpand = new ArrayList<TreePath>();
 		root.removeAllChildren();
 
-		for (Entry<String, List<String>> entry : list) {
+		for (KeyValue<String, List<String>> entry : list) {
 			DefaultMutableTreeNode feature = new DefaultMutableTreeNode(entry.getKey());
 			root.add(feature);
 			for (String parent : entry.getValue()) {

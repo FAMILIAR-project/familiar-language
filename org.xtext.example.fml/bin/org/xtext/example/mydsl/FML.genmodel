@@ -162,6 +162,9 @@
     <genClasses ecoreClass="FML.ecore#//StrCommand"/>
     <genClasses ecoreClass="FML.ecore#//ConfigurationCommand"/>
     <genClasses ecoreClass="FML.ecore#//SetCommand"/>
+    <genClasses ecoreClass="FML.ecore#//Leaves">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FML.ecore#//Leaves/fm"/>
+    </genClasses>
     <genClasses ecoreClass="FML.ecore#//ConstraintCommand"/>
     <genClasses ecoreClass="FML.ecore#//GetConstraints">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FML.ecore#//GetConstraints/kindOfGet"/>

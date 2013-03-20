@@ -126,6 +126,9 @@ public class AbstractFMLProposalProvider extends TerminalsProposalProvider {
 		// subclasses may override
 		// subclasses may override
 	}
+	public void completeLeaves_Fm(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+		completeRuleCall(((RuleCall)assignment.getTerminal()), context, acceptor);
+	}
 	public void completeGetConstraints_KindOfGet(EObject model, Assignment assignment, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		completeRuleCall(((RuleCall)assignment.getTerminal()), context, acceptor);
 	}
@@ -732,6 +735,9 @@ public class AbstractFMLProposalProvider extends TerminalsProposalProvider {
 		// subclasses may override
 	}
 	public void complete_SetCommand(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
+		// subclasses may override
+	}
+	public void complete_Leaves(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {
 		// subclasses may override
 	}
 	public void complete_ConstraintCommand(EObject model, RuleCall ruleCall, ContentAssistContext context, ICompletionProposalAcceptor acceptor) {

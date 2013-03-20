@@ -3,10 +3,14 @@
  */
 package fr.unice.polytech.modalis.familiar.test;
 
+import java.util.Set;
+
 import org.junit.Test;
 
 import fr.unice.polytech.modalis.familiar.operations.PacogenLauncher;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
+import fr.unice.polytech.modalis.familiar.variable.SetVariable;
+import fr.unice.polytech.modalis.familiar.variable.Variable;
 
 
 /**
@@ -22,13 +26,44 @@ public class PacogenIOperationTest extends FMLTest {
 		_shell.parse("fm1 = FM (A : B C [D]; D : (E|F|G); C : (H|I|J|K)+; D -> I ;)");
 
 		FeatureModelVariable fm1 = getFMVariable("fm1");
+		Set<Variable> sv = fm1.features().getVars();
+		
+		for (Variable variable : sv) {
+			System.out.println(variable.getValue());
+		}
+		System.out.println();
 		PacogenLauncher pacop = new PacogenLauncher(fm1) ;
+	
 	//	String dot = fm1.toDOT();
 		pacop.launchPacogen() ;
 		
 
 		
 	}
+	
+
+	@Test
+	public void testPaco2() throws Exception {
+		_shell.parse("fm1 = FM (A : B C [D]; D : (E|F|G); C : (H|I|J|K)+; D -> I ;)");
+
+		FeatureModelVariable fm1 = getFMVariable("fm1");
+		Set<Variable> sv = fm1.features().getVars();
+		
+		for (Variable variable : sv) {
+			System.out.println(variable.getValue());
+		}
+		System.out.println();
+		PacogenLauncher pacop = new PacogenLauncher(fm1) ;
+	
+	//	String dot = fm1.toDOT();
+		pacop.launchPacogenBug() ;
+		
+
+		
+	}
+	
+	
+	
 	/*
 	@Test
 	public void testPaco2() throws Exception {

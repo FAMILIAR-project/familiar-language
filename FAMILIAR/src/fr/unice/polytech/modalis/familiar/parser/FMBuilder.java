@@ -238,7 +238,13 @@ public class FMBuilder extends FMLAbstractCommandAnalyzer {
 					return;
 				}
 
-				strfm = new SPLOTtoFML().convert(featureModelSPLOT);
+				strfm = new SPLOTtoFML().convert(featureModelSPLOT); // @Deprecated
+				/*
+				gsd.synthesis.FeatureModel<String> rFM = new SPLOTtoFML().convertToFeatureModel(featureModelSPLOT);
+				setVariable(new FeatureModelVariable(_assigner, rFM));
+				return ;
+				*/
+				
 
 			}
 			
@@ -506,10 +512,14 @@ public class FMBuilder extends FMLAbstractCommandAnalyzer {
 	 */
 	private static String _normalize(String completeStrFM) {
 		
-		return completeStrFM.replaceAll("�", "c")
-				.replaceAll("�", "a")
-				.replaceAll("�", "e")
+		return completeStrFM.replaceAll("ç", "c")
+				.replaceAll("ã", "a")
+				.replaceAll("é", "e")
 				.replaceAll(",", "")
+				.replaceAll("ó", "o")
+				.replaceAll("í", "i")
+				.replaceAll("á", "a")
+				.replaceAll("ê", "e")
 				.replaceAll("Configuration", "Configuration_")
 				.replaceAll("name", "naMe")
 				.replaceAll("parameter", "paraMeter")

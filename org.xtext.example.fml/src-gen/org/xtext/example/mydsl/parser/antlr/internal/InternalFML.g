@@ -1094,11 +1094,11 @@ this_RIGHT_PAREN_2=RULE_RIGHT_PAREN
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getCommandAccess().getFullMandatorysParserRuleCall_1_36()); 
+        newCompositeNode(grammarAccess.getCommandAccess().getLeavesParserRuleCall_1_36()); 
     }
-    this_FullMandatorys_39=ruleFullMandatorys
+    this_Leaves_39=ruleLeaves
     { 
-        $current = $this_FullMandatorys_39.current; 
+        $current = $this_Leaves_39.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -1107,11 +1107,11 @@ this_RIGHT_PAREN_2=RULE_RIGHT_PAREN
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getCommandAccess().getPrinterUtilityParserRuleCall_1_37()); 
+        newCompositeNode(grammarAccess.getCommandAccess().getFullMandatorysParserRuleCall_1_37()); 
     }
-    this_PrinterUtility_40=rulePrinterUtility
+    this_FullMandatorys_40=ruleFullMandatorys
     { 
-        $current = $this_PrinterUtility_40.current; 
+        $current = $this_FullMandatorys_40.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -1120,11 +1120,11 @@ this_RIGHT_PAREN_2=RULE_RIGHT_PAREN
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getCommandAccess().getConvertParserRuleCall_1_38()); 
+        newCompositeNode(grammarAccess.getCommandAccess().getPrinterUtilityParserRuleCall_1_38()); 
     }
-    this_Convert_41=ruleConvert
+    this_PrinterUtility_41=rulePrinterUtility
     { 
-        $current = $this_Convert_41.current; 
+        $current = $this_PrinterUtility_41.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -1133,11 +1133,11 @@ this_RIGHT_PAREN_2=RULE_RIGHT_PAREN
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getCommandAccess().getAssertionParserRuleCall_1_39()); 
+        newCompositeNode(grammarAccess.getCommandAccess().getConvertParserRuleCall_1_39()); 
     }
-    this_Assertion_42=ruleAssertion
+    this_Convert_42=ruleConvert
     { 
-        $current = $this_Assertion_42.current; 
+        $current = $this_Convert_42.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -1146,11 +1146,11 @@ this_RIGHT_PAREN_2=RULE_RIGHT_PAREN
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getCommandAccess().getGDisplayParserRuleCall_1_40()); 
+        newCompositeNode(grammarAccess.getCommandAccess().getAssertionParserRuleCall_1_40()); 
     }
-    this_GDisplay_43=ruleGDisplay
+    this_Assertion_43=ruleAssertion
     { 
-        $current = $this_GDisplay_43.current; 
+        $current = $this_Assertion_43.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -1159,11 +1159,11 @@ this_RIGHT_PAREN_2=RULE_RIGHT_PAREN
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getCommandAccess().getGListingParserRuleCall_1_41()); 
+        newCompositeNode(grammarAccess.getCommandAccess().getGDisplayParserRuleCall_1_41()); 
     }
-    this_GListing_44=ruleGListing
+    this_GDisplay_44=ruleGDisplay
     { 
-        $current = $this_GListing_44.current; 
+        $current = $this_GDisplay_44.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -1172,11 +1172,11 @@ this_RIGHT_PAREN_2=RULE_RIGHT_PAREN
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getCommandAccess().getCleanUpParserRuleCall_1_42()); 
+        newCompositeNode(grammarAccess.getCommandAccess().getGListingParserRuleCall_1_42()); 
     }
-    this_CleanUp_45=ruleCleanUp
+    this_GListing_45=ruleGListing
     { 
-        $current = $this_CleanUp_45.current; 
+        $current = $this_GListing_45.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -1185,11 +1185,11 @@ this_RIGHT_PAREN_2=RULE_RIGHT_PAREN
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getCommandAccess().getAsFMParserRuleCall_1_43()); 
+        newCompositeNode(grammarAccess.getCommandAccess().getCleanUpParserRuleCall_1_43()); 
     }
-    this_AsFM_46=ruleAsFM
+    this_CleanUp_46=ruleCleanUp
     { 
-        $current = $this_AsFM_46.current; 
+        $current = $this_CleanUp_46.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -1198,11 +1198,11 @@ this_RIGHT_PAREN_2=RULE_RIGHT_PAREN
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getCommandAccess().getModifyVOperatorParserRuleCall_1_44()); 
+        newCompositeNode(grammarAccess.getCommandAccess().getAsFMParserRuleCall_1_44()); 
     }
-    this_ModifyVOperator_47=ruleModifyVOperator
+    this_AsFM_47=ruleAsFM
     { 
-        $current = $this_ModifyVOperator_47.current; 
+        $current = $this_AsFM_47.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -1211,11 +1211,11 @@ this_RIGHT_PAREN_2=RULE_RIGHT_PAREN
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getCommandAccess().getFMLSaveParserRuleCall_1_45()); 
+        newCompositeNode(grammarAccess.getCommandAccess().getModifyVOperatorParserRuleCall_1_45()); 
     }
-    this_FMLSave_48=ruleFMLSave
+    this_ModifyVOperator_48=ruleModifyVOperator
     { 
-        $current = $this_FMLSave_48.current; 
+        $current = $this_ModifyVOperator_48.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -1224,11 +1224,11 @@ this_RIGHT_PAREN_2=RULE_RIGHT_PAREN
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getCommandAccess().getConfigurationCmdParserRuleCall_1_46()); 
+        newCompositeNode(grammarAccess.getCommandAccess().getFMLSaveParserRuleCall_1_46()); 
     }
-    this_ConfigurationCmd_49=ruleConfigurationCmd
+    this_FMLSave_49=ruleFMLSave
     { 
-        $current = $this_ConfigurationCmd_49.current; 
+        $current = $this_FMLSave_49.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -1237,11 +1237,11 @@ this_RIGHT_PAREN_2=RULE_RIGHT_PAREN
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getCommandAccess().getScriptDefinitionParserRuleCall_1_47()); 
+        newCompositeNode(grammarAccess.getCommandAccess().getConfigurationCmdParserRuleCall_1_47()); 
     }
-    this_ScriptDefinition_50=ruleScriptDefinition
+    this_ConfigurationCmd_50=ruleConfigurationCmd
     { 
-        $current = $this_ScriptDefinition_50.current; 
+        $current = $this_ConfigurationCmd_50.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -1250,11 +1250,11 @@ this_RIGHT_PAREN_2=RULE_RIGHT_PAREN
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getCommandAccess().getShellParserRuleCall_1_48()); 
+        newCompositeNode(grammarAccess.getCommandAccess().getScriptDefinitionParserRuleCall_1_48()); 
     }
-    this_Shell_51=ruleShell
+    this_ScriptDefinition_51=ruleScriptDefinition
     { 
-        $current = $this_Shell_51.current; 
+        $current = $this_ScriptDefinition_51.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -1263,11 +1263,11 @@ this_RIGHT_PAREN_2=RULE_RIGHT_PAREN
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getCommandAccess().getCopyVariableParserRuleCall_1_49()); 
+        newCompositeNode(grammarAccess.getCommandAccess().getShellParserRuleCall_1_49()); 
     }
-    this_CopyVariable_52=ruleCopyVariable
+    this_Shell_52=ruleShell
     { 
-        $current = $this_CopyVariable_52.current; 
+        $current = $this_Shell_52.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -1276,11 +1276,11 @@ this_RIGHT_PAREN_2=RULE_RIGHT_PAREN
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getCommandAccess().getRemoveVariableParserRuleCall_1_50()); 
+        newCompositeNode(grammarAccess.getCommandAccess().getCopyVariableParserRuleCall_1_50()); 
     }
-    this_RemoveVariable_53=ruleRemoveVariable
+    this_CopyVariable_53=ruleCopyVariable
     { 
-        $current = $this_RemoveVariable_53.current; 
+        $current = $this_CopyVariable_53.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -1289,11 +1289,11 @@ this_RIGHT_PAREN_2=RULE_RIGHT_PAREN
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getCommandAccess().getCTCRCommandParserRuleCall_1_51()); 
+        newCompositeNode(grammarAccess.getCommandAccess().getRemoveVariableParserRuleCall_1_51()); 
     }
-    this_CTCRCommand_54=ruleCTCRCommand
+    this_RemoveVariable_54=ruleRemoveVariable
     { 
-        $current = $this_CTCRCommand_54.current; 
+        $current = $this_RemoveVariable_54.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -1302,11 +1302,24 @@ this_RIGHT_PAREN_2=RULE_RIGHT_PAREN
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getCommandAccess().getPairwiseCommandParserRuleCall_1_52()); 
+        newCompositeNode(grammarAccess.getCommandAccess().getCTCRCommandParserRuleCall_1_52()); 
     }
-    this_PairwiseCommand_55=rulePairwiseCommand
+    this_CTCRCommand_55=ruleCTCRCommand
     { 
-        $current = $this_PairwiseCommand_55.current; 
+        $current = $this_CTCRCommand_55.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+	{ 
+	  /* */ 
+	}
+    { 
+        newCompositeNode(grammarAccess.getCommandAccess().getPairwiseCommandParserRuleCall_1_53()); 
+    }
+    this_PairwiseCommand_56=rulePairwiseCommand
+    { 
+        $current = $this_PairwiseCommand_56.current; 
         afterParserOrEnumRuleCall();
     }
 ))
@@ -2621,11 +2634,11 @@ ruleSetCommand returns [EObject current=null]
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getSetCommandAccess().getSetEmptyParserRuleCall_9()); 
+        newCompositeNode(grammarAccess.getSetCommandAccess().getLeavesParserRuleCall_9()); 
     }
-    this_SetEmpty_9=ruleSetEmpty
+    this_Leaves_9=ruleLeaves
     { 
-        $current = $this_SetEmpty_9.current; 
+        $current = $this_Leaves_9.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -2634,11 +2647,11 @@ ruleSetCommand returns [EObject current=null]
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getSetCommandAccess().getSelectedConfigurationParserRuleCall_10()); 
+        newCompositeNode(grammarAccess.getSetCommandAccess().getSetEmptyParserRuleCall_10()); 
     }
-    this_SelectedConfiguration_10=ruleSelectedConfiguration
+    this_SetEmpty_10=ruleSetEmpty
     { 
-        $current = $this_SelectedConfiguration_10.current; 
+        $current = $this_SetEmpty_10.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -2647,11 +2660,11 @@ ruleSetCommand returns [EObject current=null]
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getSetCommandAccess().getDeselectedConfigurationParserRuleCall_11()); 
+        newCompositeNode(grammarAccess.getSetCommandAccess().getSelectedConfigurationParserRuleCall_11()); 
     }
-    this_DeselectedConfiguration_11=ruleDeselectedConfiguration
+    this_SelectedConfiguration_11=ruleSelectedConfiguration
     { 
-        $current = $this_DeselectedConfiguration_11.current; 
+        $current = $this_SelectedConfiguration_11.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -2660,11 +2673,11 @@ ruleSetCommand returns [EObject current=null]
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getSetCommandAccess().getConstraintExprParserRuleCall_12()); 
+        newCompositeNode(grammarAccess.getSetCommandAccess().getDeselectedConfigurationParserRuleCall_12()); 
     }
-    this_ConstraintExpr_12=ruleConstraintExpr
+    this_DeselectedConfiguration_12=ruleDeselectedConfiguration
     { 
-        $current = $this_ConstraintExpr_12.current; 
+        $current = $this_DeselectedConfiguration_12.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -2673,11 +2686,11 @@ ruleSetCommand returns [EObject current=null]
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getSetCommandAccess().getGetConstraintsParserRuleCall_13()); 
+        newCompositeNode(grammarAccess.getSetCommandAccess().getConstraintExprParserRuleCall_13()); 
     }
-    this_GetConstraints_13=ruleGetConstraints
+    this_ConstraintExpr_13=ruleConstraintExpr
     { 
-        $current = $this_GetConstraints_13.current; 
+        $current = $this_ConstraintExpr_13.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -2686,11 +2699,11 @@ ruleSetCommand returns [EObject current=null]
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getSetCommandAccess().getComputeConstraintsParserRuleCall_14()); 
+        newCompositeNode(grammarAccess.getSetCommandAccess().getGetConstraintsParserRuleCall_14()); 
     }
-    this_ComputeConstraints_14=ruleComputeConstraints
+    this_GetConstraints_14=ruleGetConstraints
     { 
-        $current = $this_ComputeConstraints_14.current; 
+        $current = $this_GetConstraints_14.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -2699,11 +2712,11 @@ ruleSetCommand returns [EObject current=null]
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getSetCommandAccess().getGetFGroupsParserRuleCall_15()); 
+        newCompositeNode(grammarAccess.getSetCommandAccess().getComputeConstraintsParserRuleCall_15()); 
     }
-    this_GetFGroups_15=ruleGetFGroups
+    this_ComputeConstraints_15=ruleComputeConstraints
     { 
-        $current = $this_GetFGroups_15.current; 
+        $current = $this_ComputeConstraints_15.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -2712,11 +2725,11 @@ ruleSetCommand returns [EObject current=null]
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getSetCommandAccess().getComputeFGroupsParserRuleCall_16()); 
+        newCompositeNode(grammarAccess.getSetCommandAccess().getGetFGroupsParserRuleCall_16()); 
     }
-    this_ComputeFGroups_16=ruleComputeFGroups
+    this_GetFGroups_16=ruleGetFGroups
     { 
-        $current = $this_ComputeFGroups_16.current; 
+        $current = $this_GetFGroups_16.current; 
         afterParserOrEnumRuleCall();
     }
 
@@ -2725,14 +2738,70 @@ ruleSetCommand returns [EObject current=null]
 	  /* */ 
 	}
     { 
-        newCompositeNode(grammarAccess.getSetCommandAccess().getPairwiseCommandParserRuleCall_17()); 
+        newCompositeNode(grammarAccess.getSetCommandAccess().getComputeFGroupsParserRuleCall_17()); 
     }
-    this_PairwiseCommand_17=rulePairwiseCommand
+    this_ComputeFGroups_17=ruleComputeFGroups
     { 
-        $current = $this_PairwiseCommand_17.current; 
+        $current = $this_ComputeFGroups_17.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+	{ 
+	  /* */ 
+	}
+    { 
+        newCompositeNode(grammarAccess.getSetCommandAccess().getPairwiseCommandParserRuleCall_18()); 
+    }
+    this_PairwiseCommand_18=rulePairwiseCommand
+    { 
+        $current = $this_PairwiseCommand_18.current; 
         afterParserOrEnumRuleCall();
     }
 )
+;
+
+
+
+
+
+// Entry rule entryRuleLeaves
+entryRuleLeaves returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getLeavesRule()); }
+	 iv_ruleLeaves=ruleLeaves 
+	 { $current=$iv_ruleLeaves.current; } 
+	 EOF 
+;
+
+// Rule Leaves
+ruleLeaves returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
+(	otherlv_0='leaves' 
+    {
+    	newLeafNode(otherlv_0, grammarAccess.getLeavesAccess().getLeavesKeyword_0());
+    }
+(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getLeavesAccess().getFmFMCommandParserRuleCall_1_0()); 
+	    }
+		lv_fm_1_0=ruleFMCommand		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getLeavesRule());
+	        }
+       		set(
+       			$current, 
+       			"fm",
+        		lv_fm_1_0, 
+        		"FMCommand");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))
 ;
 
 

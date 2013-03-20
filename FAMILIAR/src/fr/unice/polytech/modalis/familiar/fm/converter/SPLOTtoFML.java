@@ -149,11 +149,15 @@ public class SPLOTtoFML {
 		res = res.replace("-", "");
 		res = res.replace(" ", "");
 
-		res = res.replace("�", "o");
-		res = res.replace("�", "i");
-		res = res.replace("�", "a");
-		res = res.replace("�", "e");
+		res = res.replace("ó", "o");
+		res = res.replace("í", "i");
+		res = res.replace("á", "a");
+		res = res.replace("ã", "a");
+		res = res.replace("ç", "c");
+		res = res.replace("é", "e");
+		res = res.replace("ê", "e");
 		res = res.replace(".", "DOT");
+		
 		res = res.replace("/", "_");
 		res = res.replace("$", "USDollar");
 		res = res.replace("0", "Zero");

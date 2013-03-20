@@ -728,6 +728,34 @@ public interface FMLPackage extends EPackage
   int SET_COMMAND_FEATURE_COUNT = FML_ABSTRACT_COMMAND_FEATURE_COUNT + 0;
 
   /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.fML.impl.LeavesImpl <em>Leaves</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.fML.impl.LeavesImpl
+   * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getLeaves()
+   * @generated
+   */
+  int LEAVES = 22;
+
+  /**
+   * The feature id for the '<em><b>Fm</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LEAVES__FM = COMMAND_FEATURE_COUNT + 0;
+
+  /**
+   * The number of structural features of the '<em>Leaves</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int LEAVES_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 1;
+
+  /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.impl.ConstraintCommandImpl <em>Constraint Command</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -735,7 +763,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getConstraintCommand()
    * @generated
    */
-  int CONSTRAINT_COMMAND = 22;
+  int CONSTRAINT_COMMAND = 23;
 
   /**
    * The number of structural features of the '<em>Constraint Command</em>' class.
@@ -754,7 +782,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getGetConstraints()
    * @generated
    */
-  int GET_CONSTRAINTS = 23;
+  int GET_CONSTRAINTS = 24;
 
   /**
    * The feature id for the '<em><b>Kind Of Get</b></em>' attribute.
@@ -791,7 +819,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getComputeConstraints()
    * @generated
    */
-  int COMPUTE_CONSTRAINTS = 24;
+  int COMPUTE_CONSTRAINTS = 25;
 
   /**
    * The feature id for the '<em><b>Kind Of Compute</b></em>' attribute.
@@ -828,7 +856,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getGetFGroups()
    * @generated
    */
-  int GET_FGROUPS = 25;
+  int GET_FGROUPS = 26;
 
   /**
    * The feature id for the '<em><b>Kind Of Groups</b></em>' attribute.
@@ -865,7 +893,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getComputeFGroups()
    * @generated
    */
-  int COMPUTE_FGROUPS = 26;
+  int COMPUTE_FGROUPS = 27;
 
   /**
    * The feature id for the '<em><b>Kind Of Groups</b></em>' attribute.
@@ -902,7 +930,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getPairwiseCommand()
    * @generated
    */
-  int PAIRWISE_COMMAND = 27;
+  int PAIRWISE_COMMAND = 28;
 
   /**
    * The feature id for the '<em><b>Fm</b></em>' containment reference.
@@ -948,7 +976,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getIntegerCommand()
    * @generated
    */
-  int INTEGER_COMMAND = 28;
+  int INTEGER_COMMAND = 29;
 
   /**
    * The number of structural features of the '<em>Integer Command</em>' class.
@@ -967,7 +995,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getDoubleCommand()
    * @generated
    */
-  int DOUBLE_COMMAND = 29;
+  int DOUBLE_COMMAND = 30;
 
   /**
    * The number of structural features of the '<em>Double Command</em>' class.
@@ -986,7 +1014,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getVariabilityOpCommand()
    * @generated
    */
-  int VARIABILITY_OP_COMMAND = 30;
+  int VARIABILITY_OP_COMMAND = 31;
 
   /**
    * The number of structural features of the '<em>Variability Op Command</em>' class.
@@ -1005,7 +1033,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getAnalysisOperation()
    * @generated
    */
-  int ANALYSIS_OPERATION = 31;
+  int ANALYSIS_OPERATION = 32;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -1042,7 +1070,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getSetOperations()
    * @generated
    */
-  int SET_OPERATIONS = 32;
+  int SET_OPERATIONS = 33;
 
   /**
    * The number of structural features of the '<em>Set Operations</em>' class.
@@ -1061,7 +1089,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getSetCard()
    * @generated
    */
-  int SET_CARD = 33;
+  int SET_CARD = 34;
 
   /**
    * The feature id for the '<em><b>Set</b></em>' containment reference.
@@ -1089,7 +1117,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getSetBelongs()
    * @generated
    */
-  int SET_BELONGS = 34;
+  int SET_BELONGS = 35;
 
   /**
    * The feature id for the '<em><b>Setl</b></em>' attribute.
@@ -1126,7 +1154,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getSetUnionOrIntersection()
    * @generated
    */
-  int SET_UNION_OR_INTERSECTION = 35;
+  int SET_UNION_OR_INTERSECTION = 36;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -1172,7 +1200,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getSetEmpty()
    * @generated
    */
-  int SET_EMPTY = 36;
+  int SET_EMPTY = 37;
 
   /**
    * The feature id for the '<em><b>Val</b></em>' attribute.
@@ -1200,7 +1228,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getSetAddOrRemove()
    * @generated
    */
-  int SET_ADD_OR_REMOVE = 37;
+  int SET_ADD_OR_REMOVE = 38;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -1246,7 +1274,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getIsEmptySet()
    * @generated
    */
-  int IS_EMPTY_SET = 38;
+  int IS_EMPTY_SET = 39;
 
   /**
    * The feature id for the '<em><b>Set</b></em>' containment reference.
@@ -1274,7 +1302,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getSetToNames()
    * @generated
    */
-  int SET_TO_NAMES = 39;
+  int SET_TO_NAMES = 40;
 
   /**
    * The feature id for the '<em><b>Set</b></em>' containment reference.
@@ -1302,7 +1330,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getFeatureOperation()
    * @generated
    */
-  int FEATURE_OPERATION = 40;
+  int FEATURE_OPERATION = 41;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' containment reference.
@@ -1339,7 +1367,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getAncestorFeature()
    * @generated
    */
-  int ANCESTOR_FEATURE = 41;
+  int ANCESTOR_FEATURE = 42;
 
   /**
    * The feature id for the '<em><b>Val</b></em>' attribute.
@@ -1367,7 +1395,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getDescendantFeature()
    * @generated
    */
-  int DESCENDANT_FEATURE = 42;
+  int DESCENDANT_FEATURE = 43;
 
   /**
    * The feature id for the '<em><b>Val</b></em>' attribute.
@@ -1395,7 +1423,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getChildrenFeature()
    * @generated
    */
-  int CHILDREN_FEATURE = 43;
+  int CHILDREN_FEATURE = 44;
 
   /**
    * The feature id for the '<em><b>Val</b></em>' attribute.
@@ -1423,7 +1451,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getSiblingFeature()
    * @generated
    */
-  int SIBLING_FEATURE = 44;
+  int SIBLING_FEATURE = 45;
 
   /**
    * The feature id for the '<em><b>Val</b></em>' attribute.
@@ -1451,7 +1479,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getParentFeature()
    * @generated
    */
-  int PARENT_FEATURE = 45;
+  int PARENT_FEATURE = 46;
 
   /**
    * The feature id for the '<em><b>Val</b></em>' attribute.
@@ -1479,7 +1507,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getNameFeature()
    * @generated
    */
-  int NAME_FEATURE = 46;
+  int NAME_FEATURE = 47;
 
   /**
    * The feature id for the '<em><b>Val</b></em>' attribute.
@@ -1507,7 +1535,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getFMFeature()
    * @generated
    */
-  int FM_FEATURE = 47;
+  int FM_FEATURE = 48;
 
   /**
    * The feature id for the '<em><b>Val</b></em>' attribute.
@@ -1535,7 +1563,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getFeatureOperator()
    * @generated
    */
-  int FEATURE_OPERATOR = 48;
+  int FEATURE_OPERATOR = 49;
 
   /**
    * The feature id for the '<em><b>Val</b></em>' attribute.
@@ -1563,7 +1591,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getStringOperation()
    * @generated
    */
-  int STRING_OPERATION = 49;
+  int STRING_OPERATION = 50;
 
   /**
    * The number of structural features of the '<em>String Operation</em>' class.
@@ -1582,7 +1610,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getStringInit()
    * @generated
    */
-  int STRING_INIT = 50;
+  int STRING_INIT = 51;
 
   /**
    * The feature id for the '<em><b>Val</b></em>' attribute.
@@ -1610,7 +1638,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getStringConcat()
    * @generated
    */
-  int STRING_CONCAT = 51;
+  int STRING_CONCAT = 52;
 
   /**
    * The feature id for the '<em><b>Lstr</b></em>' containment reference.
@@ -1647,7 +1675,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getStringSubstring()
    * @generated
    */
-  int STRING_SUBSTRING = 52;
+  int STRING_SUBSTRING = 53;
 
   /**
    * The feature id for the '<em><b>Str</b></em>' containment reference.
@@ -1693,7 +1721,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getStringIndexOf()
    * @generated
    */
-  int STRING_INDEX_OF = 53;
+  int STRING_INDEX_OF = 54;
 
   /**
    * The feature id for the '<em><b>Str</b></em>' containment reference.
@@ -1730,7 +1758,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getStringLength()
    * @generated
    */
-  int STRING_LENGTH = 54;
+  int STRING_LENGTH = 55;
 
   /**
    * The feature id for the '<em><b>Str</b></em>' containment reference.
@@ -1758,7 +1786,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getCompare()
    * @generated
    */
-  int COMPARE = 55;
+  int COMPARE = 56;
 
   /**
    * The feature id for the '<em><b>Fm left</b></em>' containment reference.
@@ -1795,7 +1823,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getParameter()
    * @generated
    */
-  int PARAMETER = 56;
+  int PARAMETER = 57;
 
   /**
    * The feature id for the '<em><b>Param</b></em>' attribute.
@@ -1841,7 +1869,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getLoadGeneric()
    * @generated
    */
-  int LOAD_GENERIC = 57;
+  int LOAD_GENERIC = 58;
 
   /**
    * The feature id for the '<em><b>Stream</b></em>' attribute.
@@ -1887,7 +1915,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getCTCRCommand()
    * @generated
    */
-  int CTCR_COMMAND = 58;
+  int CTCR_COMMAND = 59;
 
   /**
    * The feature id for the '<em><b>Fm</b></em>' containment reference.
@@ -1915,7 +1943,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getMerge()
    * @generated
    */
-  int MERGE = 59;
+  int MERGE = 60;
 
   /**
    * The feature id for the '<em><b>Backend</b></em>' attribute.
@@ -1970,7 +1998,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getLFMArgs()
    * @generated
    */
-  int LFM_ARGS = 60;
+  int LFM_ARGS = 61;
 
   /**
    * The feature id for the '<em><b>Lfms</b></em>' containment reference list.
@@ -1998,7 +2026,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getAggregateMerge()
    * @generated
    */
-  int AGGREGATE_MERGE = 61;
+  int AGGREGATE_MERGE = 62;
 
   /**
    * The feature id for the '<em><b>Mode</b></em>' attribute.
@@ -2044,7 +2072,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getSynthesis()
    * @generated
    */
-  int SYNTHESIS = 62;
+  int SYNTHESIS = 63;
 
   /**
    * The feature id for the '<em><b>Interactive</b></em>' attribute.
@@ -2090,7 +2118,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getKnowledgeSpecification()
    * @generated
    */
-  int KNOWLEDGE_SPECIFICATION = 63;
+  int KNOWLEDGE_SPECIFICATION = 64;
 
   /**
    * The feature id for the '<em><b>Hierarchy</b></em>' containment reference.
@@ -2136,7 +2164,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getHierarchySpecification()
    * @generated
    */
-  int HIERARCHY_SPECIFICATION = 64;
+  int HIERARCHY_SPECIFICATION = 65;
 
   /**
    * The feature id for the '<em><b>Hierarchy</b></em>' containment reference.
@@ -2173,7 +2201,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getHProduction()
    * @generated
    */
-  int HPRODUCTION = 65;
+  int HPRODUCTION = 66;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2210,7 +2238,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getGroupsSpecification()
    * @generated
    */
-  int GROUPS_SPECIFICATION = 66;
+  int GROUPS_SPECIFICATION = 67;
 
   /**
    * The feature id for the '<em><b>Groups</b></em>' containment reference list.
@@ -2238,7 +2266,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getGroupSpec()
    * @generated
    */
-  int GROUP_SPEC = 67;
+  int GROUP_SPEC = 68;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2275,7 +2303,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getXorGroupSpec()
    * @generated
    */
-  int XOR_GROUP_SPEC = 68;
+  int XOR_GROUP_SPEC = 69;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2312,7 +2340,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getMtxGroupSpec()
    * @generated
    */
-  int MTX_GROUP_SPEC = 69;
+  int MTX_GROUP_SPEC = 70;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2349,7 +2377,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getOrGroupSpec()
    * @generated
    */
-  int OR_GROUP_SPEC = 70;
+  int OR_GROUP_SPEC = 71;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2386,7 +2414,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getConstraintsSpecification()
    * @generated
    */
-  int CONSTRAINTS_SPECIFICATION = 71;
+  int CONSTRAINTS_SPECIFICATION = 72;
 
   /**
    * The feature id for the '<em><b>Csts</b></em>' containment reference.
@@ -2414,7 +2442,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getSlice()
    * @generated
    */
-  int SLICE = 72;
+  int SLICE = 73;
 
   /**
    * The feature id for the '<em><b>Fm</b></em>' containment reference.
@@ -2460,7 +2488,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getAggregate()
    * @generated
    */
-  int AGGREGATE = 73;
+  int AGGREGATE = 74;
 
   /**
    * The feature id for the '<em><b>Fms</b></em>' containment reference list.
@@ -2506,7 +2534,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getFeatureModelOperation()
    * @generated
    */
-  int FEATURE_MODEL_OPERATION = 74;
+  int FEATURE_MODEL_OPERATION = 75;
 
   /**
    * The number of structural features of the '<em>Feature Model Operation</em>' class.
@@ -2525,7 +2553,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getEditOperation()
    * @generated
    */
-  int EDIT_OPERATION = 75;
+  int EDIT_OPERATION = 76;
 
   /**
    * The number of structural features of the '<em>Edit Operation</em>' class.
@@ -2544,7 +2572,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getInsert()
    * @generated
    */
-  int INSERT = 76;
+  int INSERT = 77;
 
   /**
    * The feature id for the '<em><b>Aspectfm</b></em>' containment reference.
@@ -2590,7 +2618,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getRemoveFeature()
    * @generated
    */
-  int REMOVE_FEATURE = 77;
+  int REMOVE_FEATURE = 78;
 
   /**
    * The feature id for the '<em><b>Feature</b></em>' containment reference.
@@ -2618,7 +2646,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getRenameFeature()
    * @generated
    */
-  int RENAME_FEATURE = 78;
+  int RENAME_FEATURE = 79;
 
   /**
    * The feature id for the '<em><b>Feature</b></em>' containment reference.
@@ -2655,7 +2683,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getExtract()
    * @generated
    */
-  int EXTRACT = 79;
+  int EXTRACT = 80;
 
   /**
    * The feature id for the '<em><b>Rootfeature</b></em>' containment reference.
@@ -2683,7 +2711,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getAssertion()
    * @generated
    */
-  int ASSERTION = 80;
+  int ASSERTION = 81;
 
   /**
    * The feature id for the '<em><b>Assertion</b></em>' containment reference.
@@ -2711,7 +2739,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getVariableNull()
    * @generated
    */
-  int VARIABLE_NULL = 81;
+  int VARIABLE_NULL = 82;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' attribute.
@@ -2739,7 +2767,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getExport()
    * @generated
    */
-  int EXPORT = 82;
+  int EXPORT = 83;
 
   /**
    * The feature id for the '<em><b>Arg</b></em>' containment reference.
@@ -2767,7 +2795,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getHidden()
    * @generated
    */
-  int HIDDEN = 83;
+  int HIDDEN = 84;
 
   /**
    * The feature id for the '<em><b>Arg</b></em>' containment reference.
@@ -2795,7 +2823,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getLVidentifier()
    * @generated
    */
-  int LVIDENTIFIER = 84;
+  int LVIDENTIFIER = 85;
 
   /**
    * The feature id for the '<em><b>Args</b></em>' attribute list.
@@ -2823,7 +2851,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getDependency()
    * @generated
    */
-  int DEPENDENCY = 85;
+  int DEPENDENCY = 86;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' attribute.
@@ -2851,7 +2879,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getConfigurationCmd()
    * @generated
    */
-  int CONFIGURATION_CMD = 86;
+  int CONFIGURATION_CMD = 87;
 
   /**
    * The number of structural features of the '<em>Configuration Cmd</em>' class.
@@ -2870,7 +2898,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getCreateConfiguration()
    * @generated
    */
-  int CREATE_CONFIGURATION = 87;
+  int CREATE_CONFIGURATION = 88;
 
   /**
    * The feature id for the '<em><b>Fm</b></em>' containment reference.
@@ -2898,7 +2926,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getCompleteConfiguration()
    * @generated
    */
-  int COMPLETE_CONFIGURATION = 88;
+  int COMPLETE_CONFIGURATION = 89;
 
   /**
    * The feature id for the '<em><b>Config</b></em>' containment reference.
@@ -2926,7 +2954,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getSelectionFeature()
    * @generated
    */
-  int SELECTION_FEATURE = 89;
+  int SELECTION_FEATURE = 90;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -2972,7 +3000,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getFeatureExpression()
    * @generated
    */
-  int FEATURE_EXPRESSION = 90;
+  int FEATURE_EXPRESSION = 91;
 
   /**
    * The feature id for the '<em><b>Ft</b></em>' containment reference.
@@ -3000,7 +3028,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getAutoConfiguration()
    * @generated
    */
-  int AUTO_CONFIGURATION = 91;
+  int AUTO_CONFIGURATION = 92;
 
   /**
    * The feature id for the '<em><b>Config</b></em>' containment reference.
@@ -3037,7 +3065,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getSelectedConfiguration()
    * @generated
    */
-  int SELECTED_CONFIGURATION = 92;
+  int SELECTED_CONFIGURATION = 93;
 
   /**
    * The feature id for the '<em><b>Config</b></em>' containment reference.
@@ -3065,7 +3093,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getDeselectedConfiguration()
    * @generated
    */
-  int DESELECTED_CONFIGURATION = 93;
+  int DESELECTED_CONFIGURATION = 94;
 
   /**
    * The feature id for the '<em><b>Config</b></em>' containment reference.
@@ -3093,7 +3121,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getUnselectedConfiguration()
    * @generated
    */
-  int UNSELECTED_CONFIGURATION = 94;
+  int UNSELECTED_CONFIGURATION = 95;
 
   /**
    * The feature id for the '<em><b>Config</b></em>' containment reference.
@@ -3121,7 +3149,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getAsFM()
    * @generated
    */
-  int AS_FM = 95;
+  int AS_FM = 96;
 
   /**
    * The feature id for the '<em><b>Conf</b></em>' containment reference.
@@ -3149,7 +3177,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getMap()
    * @generated
    */
-  int MAP = 96;
+  int MAP = 97;
 
   /**
    * The feature id for the '<em><b>Fm</b></em>' containment reference.
@@ -3186,7 +3214,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getUnMap()
    * @generated
    */
-  int UN_MAP = 97;
+  int UN_MAP = 98;
 
   /**
    * The feature id for the '<em><b>Fm</b></em>' containment reference.
@@ -3214,7 +3242,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getCleanUp()
    * @generated
    */
-  int CLEAN_UP = 98;
+  int CLEAN_UP = 99;
 
   /**
    * The feature id for the '<em><b>Fm</b></em>' containment reference.
@@ -3242,7 +3270,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getCores()
    * @generated
    */
-  int CORES = 99;
+  int CORES = 100;
 
   /**
    * The feature id for the '<em><b>Fm</b></em>' containment reference.
@@ -3270,7 +3298,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getDeads()
    * @generated
    */
-  int DEADS = 100;
+  int DEADS = 101;
 
   /**
    * The feature id for the '<em><b>Fm</b></em>' containment reference.
@@ -3298,7 +3326,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getFullMandatorys()
    * @generated
    */
-  int FULL_MANDATORYS = 101;
+  int FULL_MANDATORYS = 102;
 
   /**
    * The feature id for the '<em><b>Fm</b></em>' containment reference.
@@ -3326,7 +3354,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getCliques()
    * @generated
    */
-  int CLIQUES = 102;
+  int CLIQUES = 103;
 
   /**
    * The feature id for the '<em><b>Fm</b></em>' containment reference.
@@ -3354,7 +3382,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getScriptDefinition()
    * @generated
    */
-  int SCRIPT_DEFINITION = 103;
+  int SCRIPT_DEFINITION = 104;
 
   /**
    * The feature id for the '<em><b>Params</b></em>' containment reference list.
@@ -3400,7 +3428,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getShell()
    * @generated
    */
-  int SHELL = 104;
+  int SHELL = 105;
 
   /**
    * The feature id for the '<em><b>Cmd</b></em>' containment reference.
@@ -3428,7 +3456,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getExit()
    * @generated
    */
-  int EXIT = 105;
+  int EXIT = 106;
 
   /**
    * The feature id for the '<em><b>Val</b></em>' attribute.
@@ -3456,7 +3484,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getExist()
    * @generated
    */
-  int EXIST = 106;
+  int EXIST = 107;
 
   /**
    * The feature id for the '<em><b>Val</b></em>' attribute.
@@ -3493,7 +3521,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getIsConflicting()
    * @generated
    */
-  int IS_CONFLICTING = 107;
+  int IS_CONFLICTING = 108;
 
   /**
    * The feature id for the '<em><b>Val</b></em>' attribute.
@@ -3530,7 +3558,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getListing()
    * @generated
    */
-  int LISTING = 108;
+  int LISTING = 109;
 
   /**
    * The feature id for the '<em><b>Val</b></em>' attribute.
@@ -3567,7 +3595,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getState()
    * @generated
    */
-  int STATE = 109;
+  int STATE = 110;
 
   /**
    * The feature id for the '<em><b>Val</b></em>' attribute.
@@ -3595,7 +3623,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getCopyVariable()
    * @generated
    */
-  int COPY_VARIABLE = 110;
+  int COPY_VARIABLE = 111;
 
   /**
    * The feature id for the '<em><b>Vid</b></em>' attribute.
@@ -3623,7 +3651,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getRemoveVariable()
    * @generated
    */
-  int REMOVE_VARIABLE = 111;
+  int REMOVE_VARIABLE = 112;
 
   /**
    * The feature id for the '<em><b>Vid</b></em>' attribute.
@@ -3651,7 +3679,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getConvert()
    * @generated
    */
-  int CONVERT = 112;
+  int CONVERT = 113;
 
   /**
    * The feature id for the '<em><b>V</b></em>' containment reference.
@@ -3688,7 +3716,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getFMLSave()
    * @generated
    */
-  int FML_SAVE = 113;
+  int FML_SAVE = 114;
 
   /**
    * The feature id for the '<em><b>V</b></em>' containment reference.
@@ -3725,7 +3753,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getHierarchy()
    * @generated
    */
-  int HIERARCHY = 114;
+  int HIERARCHY = 115;
 
   /**
    * The feature id for the '<em><b>Fm</b></em>' containment reference.
@@ -3753,7 +3781,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getPrinterUtility()
    * @generated
    */
-  int PRINTER_UTILITY = 115;
+  int PRINTER_UTILITY = 116;
 
   /**
    * The feature id for the '<em><b>Op</b></em>' attribute.
@@ -3790,7 +3818,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getLArgs()
    * @generated
    */
-  int LARGS = 116;
+  int LARGS = 117;
 
   /**
    * The feature id for the '<em><b>Args</b></em>' containment reference list.
@@ -3818,7 +3846,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getGDisplay()
    * @generated
    */
-  int GDISPLAY = 117;
+  int GDISPLAY = 118;
 
   /**
    * The feature id for the '<em><b>Cmd Display</b></em>' attribute.
@@ -3855,7 +3883,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getGListing()
    * @generated
    */
-  int GLISTING = 118;
+  int GLISTING = 119;
 
   /**
    * The feature id for the '<em><b>Cmd</b></em>' attribute.
@@ -3883,7 +3911,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getModifyVOperator()
    * @generated
    */
-  int MODIFY_VOPERATOR = 119;
+  int MODIFY_VOPERATOR = 120;
 
   /**
    * The number of structural features of the '<em>Modify VOperator</em>' class.
@@ -3902,7 +3930,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getMandatoryEdit()
    * @generated
    */
-  int MANDATORY_EDIT = 120;
+  int MANDATORY_EDIT = 121;
 
   /**
    * The feature id for the '<em><b>Ft</b></em>' containment reference.
@@ -3930,7 +3958,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getOptionalEdit()
    * @generated
    */
-  int OPTIONAL_EDIT = 121;
+  int OPTIONAL_EDIT = 122;
 
   /**
    * The feature id for the '<em><b>Ft</b></em>' containment reference.
@@ -3958,7 +3986,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getAlternativeEdit()
    * @generated
    */
-  int ALTERNATIVE_EDIT = 122;
+  int ALTERNATIVE_EDIT = 123;
 
   /**
    * The feature id for the '<em><b>Fts</b></em>' containment reference.
@@ -3986,7 +4014,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getOrEdit()
    * @generated
    */
-  int OR_EDIT = 123;
+  int OR_EDIT = 124;
 
   /**
    * The feature id for the '<em><b>Fts</b></em>' containment reference.
@@ -4014,7 +4042,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getAddConstraint()
    * @generated
    */
-  int ADD_CONSTRAINT = 124;
+  int ADD_CONSTRAINT = 125;
 
   /**
    * The feature id for the '<em><b>Cst</b></em>' containment reference.
@@ -4051,7 +4079,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getRemoveConstraint()
    * @generated
    */
-  int REMOVE_CONSTRAINT = 125;
+  int REMOVE_CONSTRAINT = 126;
 
   /**
    * The feature id for the '<em><b>Cst</b></em>' containment reference.
@@ -4088,7 +4116,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getCNF()
    * @generated
    */
-  int CNF = 126;
+  int CNF = 127;
 
   /**
    * The number of structural features of the '<em>CNF</em>' class.
@@ -4107,7 +4135,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getCNFExpression()
    * @generated
    */
-  int CNF_EXPRESSION = 127;
+  int CNF_EXPRESSION = 128;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4135,7 +4163,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getNeg_expr()
    * @generated
    */
-  int NEG_EXPR = 128;
+  int NEG_EXPR = 129;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4172,7 +4200,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getFeatureModel()
    * @generated
    */
-  int FEATURE_MODEL = 129;
+  int FEATURE_MODEL = 130;
 
   /**
    * The feature id for the '<em><b>Root</b></em>' attribute.
@@ -4227,7 +4255,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getProduction()
    * @generated
    */
-  int PRODUCTION = 130;
+  int PRODUCTION = 131;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4264,7 +4292,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getChild()
    * @generated
    */
-  int CHILD = 131;
+  int CHILD = 132;
 
   /**
    * The number of structural features of the '<em>Child</em>' class.
@@ -4283,7 +4311,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getMandatory()
    * @generated
    */
-  int MANDATORY = 132;
+  int MANDATORY = 133;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4311,7 +4339,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getOptional()
    * @generated
    */
-  int OPTIONAL = 133;
+  int OPTIONAL = 134;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4339,7 +4367,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getXorgroup()
    * @generated
    */
-  int XORGROUP = 134;
+  int XORGROUP = 135;
 
   /**
    * The feature id for the '<em><b>Features</b></em>' attribute list.
@@ -4367,7 +4395,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getOrgroup()
    * @generated
    */
-  int ORGROUP = 135;
+  int ORGROUP = 136;
 
   /**
    * The feature id for the '<em><b>Features</b></em>' attribute list.
@@ -4395,7 +4423,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getMutexgroup()
    * @generated
    */
-  int MUTEXGROUP = 136;
+  int MUTEXGROUP = 137;
 
   /**
    * The feature id for the '<em><b>Features</b></em>' attribute list.
@@ -4423,7 +4451,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getIntegerOperation()
    * @generated
    */
-  int INTEGER_OPERATION = 137;
+  int INTEGER_OPERATION = 138;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' attribute.
@@ -4514,7 +4542,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getBoolOperation()
    * @generated
    */
-  int BOOL_OPERATION = 138;
+  int BOOL_OPERATION = 139;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' attribute.
@@ -4605,7 +4633,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getComparisonOperation()
    * @generated
    */
-  int COMPARISON_OPERATION = 139;
+  int COMPARISON_OPERATION = 140;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' attribute.
@@ -4696,7 +4724,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getSetOperation()
    * @generated
    */
-  int SET_OPERATION = 140;
+  int SET_OPERATION = 141;
 
   /**
    * The feature id for the '<em><b>Var</b></em>' attribute.
@@ -4787,7 +4815,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getIntLiteral()
    * @generated
    */
-  int INT_LITERAL = 141;
+  int INT_LITERAL = 142;
 
   /**
    * The feature id for the '<em><b>Value</b></em>' attribute.
@@ -4815,7 +4843,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getOr_expr()
    * @generated
    */
-  int OR_EXPR = 142;
+  int OR_EXPR = 143;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4861,7 +4889,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getAnd_expr()
    * @generated
    */
-  int AND_EXPR = 143;
+  int AND_EXPR = 144;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4907,7 +4935,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getImpl_expr()
    * @generated
    */
-  int IMPL_EXPR = 144;
+  int IMPL_EXPR = 145;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4953,7 +4981,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getBiimpl_expr()
    * @generated
    */
-  int BIIMPL_EXPR = 145;
+  int BIIMPL_EXPR = 146;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4999,7 +5027,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getEditConstant()
    * @generated
    */
-  int EDIT_CONSTANT = 146;
+  int EDIT_CONSTANT = 147;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.FeatureEdgeKind <em>Feature Edge Kind</em>}' enum.
@@ -5009,7 +5037,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getFeatureEdgeKind()
    * @generated
    */
-  int FEATURE_EDGE_KIND = 147;
+  int FEATURE_EDGE_KIND = 148;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.KindOfGet <em>Kind Of Get</em>}' enum.
@@ -5019,7 +5047,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getKindOfGet()
    * @generated
    */
-  int KIND_OF_GET = 148;
+  int KIND_OF_GET = 149;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.KindOfCompute <em>Kind Of Compute</em>}' enum.
@@ -5029,7 +5057,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getKindOfCompute()
    * @generated
    */
-  int KIND_OF_COMPUTE = 149;
+  int KIND_OF_COMPUTE = 150;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.KindOfGetGroups <em>Kind Of Get Groups</em>}' enum.
@@ -5039,7 +5067,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getKindOfGetGroups()
    * @generated
    */
-  int KIND_OF_GET_GROUPS = 150;
+  int KIND_OF_GET_GROUPS = 151;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.KindOfComputeGroups <em>Kind Of Compute Groups</em>}' enum.
@@ -5049,7 +5077,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getKindOfComputeGroups()
    * @generated
    */
-  int KIND_OF_COMPUTE_GROUPS = 151;
+  int KIND_OF_COMPUTE_GROUPS = 152;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.BDDBackend <em>BDD Backend</em>}' enum.
@@ -5059,7 +5087,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getBDDBackend()
    * @generated
    */
-  int BDD_BACKEND = 152;
+  int BDD_BACKEND = 153;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.MergeMode <em>Merge Mode</em>}' enum.
@@ -5069,7 +5097,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getMergeMode()
    * @generated
    */
-  int MERGE_MODE = 153;
+  int MERGE_MODE = 154;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.SliceMode <em>Slice Mode</em>}' enum.
@@ -5079,7 +5107,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getSliceMode()
    * @generated
    */
-  int SLICE_MODE = 154;
+  int SLICE_MODE = 155;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.ComparisonOperator <em>Comparison Operator</em>}' enum.
@@ -5089,7 +5117,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getComparisonOperator()
    * @generated
    */
-  int COMPARISON_OPERATOR = 155;
+  int COMPARISON_OPERATOR = 156;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.SetOperator <em>Set Operator</em>}' enum.
@@ -5099,7 +5127,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getSetOperator()
    * @generated
    */
-  int SET_OPERATOR = 156;
+  int SET_OPERATOR = 157;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.OpSelection <em>Op Selection</em>}' enum.
@@ -5109,7 +5137,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getOpSelection()
    * @generated
    */
-  int OP_SELECTION = 157;
+  int OP_SELECTION = 158;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.AutoConfMode <em>Auto Conf Mode</em>}' enum.
@@ -5119,7 +5147,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getAutoConfMode()
    * @generated
    */
-  int AUTO_CONF_MODE = 158;
+  int AUTO_CONF_MODE = 159;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.OPT_LISTING <em>OPT LISTING</em>}' enum.
@@ -5129,7 +5157,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getOPT_LISTING()
    * @generated
    */
-  int OPT_LISTING = 159;
+  int OPT_LISTING = 160;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.FMFormat <em>FM Format</em>}' enum.
@@ -5139,7 +5167,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getFMFormat()
    * @generated
    */
-  int FM_FORMAT = 160;
+  int FM_FORMAT = 161;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.BOOL_Operator <em>BOOL Operator</em>}' enum.
@@ -5149,7 +5177,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getBOOL_Operator()
    * @generated
    */
-  int BOOL_OPERATOR = 161;
+  int BOOL_OPERATOR = 162;
 
 
   /**
@@ -5646,6 +5674,27 @@ public interface FMLPackage extends EPackage
    * @generated
    */
   EClass getSetCommand();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.example.mydsl.fML.Leaves <em>Leaves</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Leaves</em>'.
+   * @see org.xtext.example.mydsl.fML.Leaves
+   * @generated
+   */
+  EClass getLeaves();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.fML.Leaves#getFm <em>Fm</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Fm</em>'.
+   * @see org.xtext.example.mydsl.fML.Leaves#getFm()
+   * @see #getLeaves()
+   * @generated
+   */
+  EReference getLeaves_Fm();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.fML.ConstraintCommand <em>Constraint Command</em>}'.

@@ -17,6 +17,7 @@ import org.xtext.example.mydsl.fML.FullMandatorys;
 import org.xtext.example.mydsl.fML.GetConstraints;
 import org.xtext.example.mydsl.fML.GetFGroups;
 import org.xtext.example.mydsl.fML.IdentifierExpr;
+import org.xtext.example.mydsl.fML.Leaves;
 import org.xtext.example.mydsl.fML.SetExpr;
 import org.xtext.example.mydsl.fML.SetOperations;
 
@@ -141,6 +142,14 @@ public class SetAnalyzer extends FMLAbstractCommandAnalyzer {
 		else if (setCmd instanceof Cliques) {
 			_LOGGER.debug("Cliques/Atomic feature: ");
 			pars = new CliquesAnalyzer((Command) setCmd, var, ns, _environment);
+			pars.parse();
+			v = pars.getVariable();
+
+		}
+		
+		else if (setCmd instanceof Leaves) {
+			_LOGGER.debug("Leaves feature: ");
+			pars = new LeavesAnalyzer((Command) setCmd, var, ns, _environment);
 			pars.parse();
 			v = pars.getVariable();
 

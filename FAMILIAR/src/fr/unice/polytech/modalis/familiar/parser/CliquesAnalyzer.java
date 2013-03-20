@@ -35,7 +35,7 @@ public class CliquesAnalyzer extends FMLAbstractCommandAnalyzer {
 	 */
 	@Override
 	public void eval() {
-		assert (_command instanceof Cores);
+		assert (_command instanceof Cliques);
 		Cliques cliquesCmd = (Cliques) _command;
 
 		FMCommand fmCmd = cliquesCmd.getFm();

@@ -70,6 +70,7 @@ Command :     (LEFT_PAREN ComplexCommand RIGHT_PAREN)
             |Cores
             |Deads
             |Cliques
+            |Leaves 
             |FullMandatorys 
             |PrinterUtility
             |Convert
@@ -161,10 +162,12 @@ ConfigurationCommand : (IdentifierExpr | CreateConfiguration)
 
 SetCommand : IdentifierExpr | SetExpr | FeatureOperation | 
 			Cliques | Cores | Deads | FullMandatorys | // TODO: AnalysisOperation due to 'features'
-			SetToNames | SetUnionOrIntersection | 
+			SetToNames | SetUnionOrIntersection | Leaves |
 			SetEmpty | SelectedConfiguration | DeselectedConfiguration | ConstraintExpr |	
 			GetConstraints 	| ComputeConstraints | GetFGroups | ComputeFGroups	| PairwiseCommand
 			;
+			
+Leaves : 'leaves' fm=FMCommand ; // return the set of leaves in the feature hierarchy 
 			
 ConstraintCommand :	IdentifierExpr | AtomicConstraintExpr ;
 

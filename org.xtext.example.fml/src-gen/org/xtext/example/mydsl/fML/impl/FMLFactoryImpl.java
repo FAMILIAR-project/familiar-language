@@ -87,6 +87,7 @@ public class FMLFactoryImpl extends EFactoryImpl implements FMLFactory
       case FMLPackage.STR_COMMAND: return createStrCommand();
       case FMLPackage.CONFIGURATION_COMMAND: return createConfigurationCommand();
       case FMLPackage.SET_COMMAND: return createSetCommand();
+      case FMLPackage.LEAVES: return createLeaves();
       case FMLPackage.CONSTRAINT_COMMAND: return createConstraintCommand();
       case FMLPackage.GET_CONSTRAINTS: return createGetConstraints();
       case FMLPackage.COMPUTE_CONSTRAINTS: return createComputeConstraints();
@@ -550,6 +551,17 @@ public class FMLFactoryImpl extends EFactoryImpl implements FMLFactory
   {
     SetCommandImpl setCommand = new SetCommandImpl();
     return setCommand;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Leaves createLeaves()
+  {
+    LeavesImpl leaves = new LeavesImpl();
+    return leaves;
   }
 
   /**

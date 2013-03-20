@@ -199,6 +199,13 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass leavesEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass constraintCommandEClass = null;
 
   /**
@@ -1798,11 +1805,35 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getLeaves()
+  {
+    if (leavesEClass == null)
+    {
+      leavesEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(24);
+    }
+    return leavesEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getLeaves_Fm()
+  {
+        return (EReference)getLeaves().getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getConstraintCommand()
   {
     if (constraintCommandEClass == null)
     {
-      constraintCommandEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(24);
+      constraintCommandEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(25);
     }
     return constraintCommandEClass;
   }
@@ -1816,7 +1847,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (getConstraintsEClass == null)
     {
-      getConstraintsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(25);
+      getConstraintsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(26);
     }
     return getConstraintsEClass;
   }
@@ -1850,7 +1881,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (computeConstraintsEClass == null)
     {
-      computeConstraintsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(27);
+      computeConstraintsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(28);
     }
     return computeConstraintsEClass;
   }
@@ -1884,7 +1915,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (getFGroupsEClass == null)
     {
-      getFGroupsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(29);
+      getFGroupsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(30);
     }
     return getFGroupsEClass;
   }
@@ -1918,7 +1949,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (computeFGroupsEClass == null)
     {
-      computeFGroupsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(31);
+      computeFGroupsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(32);
     }
     return computeFGroupsEClass;
   }
@@ -1952,7 +1983,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (pairwiseCommandEClass == null)
     {
-      pairwiseCommandEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(33);
+      pairwiseCommandEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(34);
     }
     return pairwiseCommandEClass;
   }
@@ -1996,7 +2027,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (integerCommandEClass == null)
     {
-      integerCommandEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(34);
+      integerCommandEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(35);
     }
     return integerCommandEClass;
   }
@@ -2010,7 +2041,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (doubleCommandEClass == null)
     {
-      doubleCommandEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(35);
+      doubleCommandEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(36);
     }
     return doubleCommandEClass;
   }
@@ -2024,7 +2055,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (variabilityOpCommandEClass == null)
     {
-      variabilityOpCommandEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(36);
+      variabilityOpCommandEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(37);
     }
     return variabilityOpCommandEClass;
   }
@@ -2038,7 +2069,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (analysisOperationEClass == null)
     {
-      analysisOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(37);
+      analysisOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(38);
     }
     return analysisOperationEClass;
   }
@@ -2072,7 +2103,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (setOperationsEClass == null)
     {
-      setOperationsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(38);
+      setOperationsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(39);
     }
     return setOperationsEClass;
   }
@@ -2086,7 +2117,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (setCardEClass == null)
     {
-      setCardEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(39);
+      setCardEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(40);
     }
     return setCardEClass;
   }
@@ -2110,7 +2141,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (setBelongsEClass == null)
     {
-      setBelongsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(40);
+      setBelongsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(41);
     }
     return setBelongsEClass;
   }
@@ -2144,7 +2175,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (setUnionOrIntersectionEClass == null)
     {
-      setUnionOrIntersectionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(41);
+      setUnionOrIntersectionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(42);
     }
     return setUnionOrIntersectionEClass;
   }
@@ -2188,7 +2219,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (setEmptyEClass == null)
     {
-      setEmptyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(42);
+      setEmptyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(43);
     }
     return setEmptyEClass;
   }
@@ -2212,7 +2243,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (setAddOrRemoveEClass == null)
     {
-      setAddOrRemoveEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(43);
+      setAddOrRemoveEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(44);
     }
     return setAddOrRemoveEClass;
   }
@@ -2256,7 +2287,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (isEmptySetEClass == null)
     {
-      isEmptySetEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(44);
+      isEmptySetEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(45);
     }
     return isEmptySetEClass;
   }
@@ -2280,7 +2311,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (setToNamesEClass == null)
     {
-      setToNamesEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(45);
+      setToNamesEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(46);
     }
     return setToNamesEClass;
   }
@@ -2304,7 +2335,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (featureOperationEClass == null)
     {
-      featureOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(46);
+      featureOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(47);
     }
     return featureOperationEClass;
   }
@@ -2338,7 +2369,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (ancestorFeatureEClass == null)
     {
-      ancestorFeatureEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(47);
+      ancestorFeatureEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(48);
     }
     return ancestorFeatureEClass;
   }
@@ -2362,7 +2393,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (descendantFeatureEClass == null)
     {
-      descendantFeatureEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(48);
+      descendantFeatureEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(49);
     }
     return descendantFeatureEClass;
   }
@@ -2386,7 +2417,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (childrenFeatureEClass == null)
     {
-      childrenFeatureEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(49);
+      childrenFeatureEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(50);
     }
     return childrenFeatureEClass;
   }
@@ -2410,7 +2441,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (siblingFeatureEClass == null)
     {
-      siblingFeatureEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(50);
+      siblingFeatureEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(51);
     }
     return siblingFeatureEClass;
   }
@@ -2434,7 +2465,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (parentFeatureEClass == null)
     {
-      parentFeatureEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(51);
+      parentFeatureEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(52);
     }
     return parentFeatureEClass;
   }
@@ -2458,7 +2489,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (nameFeatureEClass == null)
     {
-      nameFeatureEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(52);
+      nameFeatureEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(53);
     }
     return nameFeatureEClass;
   }
@@ -2482,7 +2513,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (fmFeatureEClass == null)
     {
-      fmFeatureEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(53);
+      fmFeatureEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(54);
     }
     return fmFeatureEClass;
   }
@@ -2506,7 +2537,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (featureOperatorEClass == null)
     {
-      featureOperatorEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(54);
+      featureOperatorEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(55);
     }
     return featureOperatorEClass;
   }
@@ -2530,7 +2561,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (stringOperationEClass == null)
     {
-      stringOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(55);
+      stringOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(56);
     }
     return stringOperationEClass;
   }
@@ -2544,7 +2575,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (stringInitEClass == null)
     {
-      stringInitEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(56);
+      stringInitEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(57);
     }
     return stringInitEClass;
   }
@@ -2568,7 +2599,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (stringConcatEClass == null)
     {
-      stringConcatEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(57);
+      stringConcatEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(58);
     }
     return stringConcatEClass;
   }
@@ -2602,7 +2633,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (stringSubstringEClass == null)
     {
-      stringSubstringEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(58);
+      stringSubstringEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(59);
     }
     return stringSubstringEClass;
   }
@@ -2646,7 +2677,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (stringIndexOfEClass == null)
     {
-      stringIndexOfEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(59);
+      stringIndexOfEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(60);
     }
     return stringIndexOfEClass;
   }
@@ -2680,7 +2711,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (stringLengthEClass == null)
     {
-      stringLengthEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(60);
+      stringLengthEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(61);
     }
     return stringLengthEClass;
   }
@@ -2704,7 +2735,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (compareEClass == null)
     {
-      compareEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(61);
+      compareEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(62);
     }
     return compareEClass;
   }
@@ -2738,7 +2769,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (parameterEClass == null)
     {
-      parameterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(62);
+      parameterEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(63);
     }
     return parameterEClass;
   }
@@ -2782,7 +2813,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (loadGenericEClass == null)
     {
-      loadGenericEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(63);
+      loadGenericEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(64);
     }
     return loadGenericEClass;
   }
@@ -2826,7 +2857,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (ctcrCommandEClass == null)
     {
-      ctcrCommandEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(64);
+      ctcrCommandEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(65);
     }
     return ctcrCommandEClass;
   }
@@ -2850,7 +2881,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (mergeEClass == null)
     {
-      mergeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(65);
+      mergeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(66);
     }
     return mergeEClass;
   }
@@ -2904,7 +2935,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (lfmArgsEClass == null)
     {
-      lfmArgsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(68);
+      lfmArgsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(69);
     }
     return lfmArgsEClass;
   }
@@ -2928,7 +2959,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (aggregateMergeEClass == null)
     {
-      aggregateMergeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(69);
+      aggregateMergeEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(70);
     }
     return aggregateMergeEClass;
   }
@@ -2972,7 +3003,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (synthesisEClass == null)
     {
-      synthesisEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(70);
+      synthesisEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(71);
     }
     return synthesisEClass;
   }
@@ -3016,7 +3047,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (knowledgeSpecificationEClass == null)
     {
-      knowledgeSpecificationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(71);
+      knowledgeSpecificationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(72);
     }
     return knowledgeSpecificationEClass;
   }
@@ -3060,7 +3091,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (hierarchySpecificationEClass == null)
     {
-      hierarchySpecificationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(72);
+      hierarchySpecificationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(73);
     }
     return hierarchySpecificationEClass;
   }
@@ -3094,7 +3125,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (hProductionEClass == null)
     {
-      hProductionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(73);
+      hProductionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(74);
     }
     return hProductionEClass;
   }
@@ -3128,7 +3159,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (groupsSpecificationEClass == null)
     {
-      groupsSpecificationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(74);
+      groupsSpecificationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(75);
     }
     return groupsSpecificationEClass;
   }
@@ -3152,7 +3183,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (groupSpecEClass == null)
     {
-      groupSpecEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(75);
+      groupSpecEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(76);
     }
     return groupSpecEClass;
   }
@@ -3186,7 +3217,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (xorGroupSpecEClass == null)
     {
-      xorGroupSpecEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(76);
+      xorGroupSpecEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(77);
     }
     return xorGroupSpecEClass;
   }
@@ -3200,7 +3231,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (mtxGroupSpecEClass == null)
     {
-      mtxGroupSpecEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(77);
+      mtxGroupSpecEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(78);
     }
     return mtxGroupSpecEClass;
   }
@@ -3214,7 +3245,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (orGroupSpecEClass == null)
     {
-      orGroupSpecEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(78);
+      orGroupSpecEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(79);
     }
     return orGroupSpecEClass;
   }
@@ -3228,7 +3259,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (constraintsSpecificationEClass == null)
     {
-      constraintsSpecificationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(79);
+      constraintsSpecificationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(80);
     }
     return constraintsSpecificationEClass;
   }
@@ -3252,7 +3283,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (sliceEClass == null)
     {
-      sliceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(80);
+      sliceEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(81);
     }
     return sliceEClass;
   }
@@ -3296,7 +3327,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (aggregateEClass == null)
     {
-      aggregateEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(82);
+      aggregateEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(83);
     }
     return aggregateEClass;
   }
@@ -3340,7 +3371,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (featureModelOperationEClass == null)
     {
-      featureModelOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(83);
+      featureModelOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(84);
     }
     return featureModelOperationEClass;
   }
@@ -3354,7 +3385,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (editOperationEClass == null)
     {
-      editOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(84);
+      editOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(85);
     }
     return editOperationEClass;
   }
@@ -3368,7 +3399,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (insertEClass == null)
     {
-      insertEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(85);
+      insertEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(86);
     }
     return insertEClass;
   }
@@ -3412,7 +3443,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (removeFeatureEClass == null)
     {
-      removeFeatureEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(86);
+      removeFeatureEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(87);
     }
     return removeFeatureEClass;
   }
@@ -3436,7 +3467,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (renameFeatureEClass == null)
     {
-      renameFeatureEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(87);
+      renameFeatureEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(88);
     }
     return renameFeatureEClass;
   }
@@ -3470,7 +3501,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (extractEClass == null)
     {
-      extractEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(88);
+      extractEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(89);
     }
     return extractEClass;
   }
@@ -3494,7 +3525,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (assertionEClass == null)
     {
-      assertionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(89);
+      assertionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(90);
     }
     return assertionEClass;
   }
@@ -3518,7 +3549,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (variableNullEClass == null)
     {
-      variableNullEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(92);
+      variableNullEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(93);
     }
     return variableNullEClass;
   }
@@ -3542,7 +3573,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (exportEClass == null)
     {
-      exportEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(93);
+      exportEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(94);
     }
     return exportEClass;
   }
@@ -3566,7 +3597,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (hiddenEClass == null)
     {
-      hiddenEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(94);
+      hiddenEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(95);
     }
     return hiddenEClass;
   }
@@ -3590,7 +3621,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (lVidentifierEClass == null)
     {
-      lVidentifierEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(95);
+      lVidentifierEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(96);
     }
     return lVidentifierEClass;
   }
@@ -3614,7 +3645,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (dependencyEClass == null)
     {
-      dependencyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(96);
+      dependencyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(97);
     }
     return dependencyEClass;
   }
@@ -3638,7 +3669,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (configurationCmdEClass == null)
     {
-      configurationCmdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(97);
+      configurationCmdEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(98);
     }
     return configurationCmdEClass;
   }
@@ -3652,7 +3683,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (createConfigurationEClass == null)
     {
-      createConfigurationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(98);
+      createConfigurationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(99);
     }
     return createConfigurationEClass;
   }
@@ -3676,7 +3707,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (completeConfigurationEClass == null)
     {
-      completeConfigurationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(99);
+      completeConfigurationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(100);
     }
     return completeConfigurationEClass;
   }
@@ -3700,7 +3731,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (selectionFeatureEClass == null)
     {
-      selectionFeatureEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(100);
+      selectionFeatureEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(101);
     }
     return selectionFeatureEClass;
   }
@@ -3744,7 +3775,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (featureExpressionEClass == null)
     {
-      featureExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(101);
+      featureExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(102);
     }
     return featureExpressionEClass;
   }
@@ -3768,7 +3799,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (autoConfigurationEClass == null)
     {
-      autoConfigurationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(103);
+      autoConfigurationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(104);
     }
     return autoConfigurationEClass;
   }
@@ -3802,7 +3833,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (selectedConfigurationEClass == null)
     {
-      selectedConfigurationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(105);
+      selectedConfigurationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(106);
     }
     return selectedConfigurationEClass;
   }
@@ -3826,7 +3857,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (deselectedConfigurationEClass == null)
     {
-      deselectedConfigurationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(106);
+      deselectedConfigurationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(107);
     }
     return deselectedConfigurationEClass;
   }
@@ -3850,7 +3881,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (unselectedConfigurationEClass == null)
     {
-      unselectedConfigurationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(107);
+      unselectedConfigurationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(108);
     }
     return unselectedConfigurationEClass;
   }
@@ -3874,7 +3905,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (asFMEClass == null)
     {
-      asFMEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(108);
+      asFMEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(109);
     }
     return asFMEClass;
   }
@@ -3898,7 +3929,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (mapEClass == null)
     {
-      mapEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(109);
+      mapEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(110);
     }
     return mapEClass;
   }
@@ -3932,7 +3963,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (unMapEClass == null)
     {
-      unMapEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(110);
+      unMapEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(111);
     }
     return unMapEClass;
   }
@@ -3956,7 +3987,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (cleanUpEClass == null)
     {
-      cleanUpEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(111);
+      cleanUpEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(112);
     }
     return cleanUpEClass;
   }
@@ -3980,7 +4011,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (coresEClass == null)
     {
-      coresEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(112);
+      coresEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(113);
     }
     return coresEClass;
   }
@@ -4004,7 +4035,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (deadsEClass == null)
     {
-      deadsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(113);
+      deadsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(114);
     }
     return deadsEClass;
   }
@@ -4028,7 +4059,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (fullMandatorysEClass == null)
     {
-      fullMandatorysEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(114);
+      fullMandatorysEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(115);
     }
     return fullMandatorysEClass;
   }
@@ -4052,7 +4083,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (cliquesEClass == null)
     {
-      cliquesEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(115);
+      cliquesEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(116);
     }
     return cliquesEClass;
   }
@@ -4076,7 +4107,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (scriptDefinitionEClass == null)
     {
-      scriptDefinitionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(116);
+      scriptDefinitionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(117);
     }
     return scriptDefinitionEClass;
   }
@@ -4120,7 +4151,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (shellEClass == null)
     {
-      shellEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(117);
+      shellEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(118);
     }
     return shellEClass;
   }
@@ -4144,7 +4175,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (exitEClass == null)
     {
-      exitEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(118);
+      exitEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(119);
     }
     return exitEClass;
   }
@@ -4168,7 +4199,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (existEClass == null)
     {
-      existEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(119);
+      existEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(120);
     }
     return existEClass;
   }
@@ -4202,7 +4233,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (isConflictingEClass == null)
     {
-      isConflictingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(120);
+      isConflictingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(121);
     }
     return isConflictingEClass;
   }
@@ -4236,7 +4267,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (listingEClass == null)
     {
-      listingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(121);
+      listingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(122);
     }
     return listingEClass;
   }
@@ -4270,7 +4301,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (stateEClass == null)
     {
-      stateEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(123);
+      stateEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(124);
     }
     return stateEClass;
   }
@@ -4294,7 +4325,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (copyVariableEClass == null)
     {
-      copyVariableEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(124);
+      copyVariableEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(125);
     }
     return copyVariableEClass;
   }
@@ -4318,7 +4349,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (removeVariableEClass == null)
     {
-      removeVariableEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(125);
+      removeVariableEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(126);
     }
     return removeVariableEClass;
   }
@@ -4342,7 +4373,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (convertEClass == null)
     {
-      convertEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(126);
+      convertEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(127);
     }
     return convertEClass;
   }
@@ -4376,7 +4407,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (fmlSaveEClass == null)
     {
-      fmlSaveEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(128);
+      fmlSaveEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(129);
     }
     return fmlSaveEClass;
   }
@@ -4410,7 +4441,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (hierarchyEClass == null)
     {
-      hierarchyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(129);
+      hierarchyEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(130);
     }
     return hierarchyEClass;
   }
@@ -4434,7 +4465,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (printerUtilityEClass == null)
     {
-      printerUtilityEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(130);
+      printerUtilityEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(131);
     }
     return printerUtilityEClass;
   }
@@ -4468,7 +4499,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (lArgsEClass == null)
     {
-      lArgsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(131);
+      lArgsEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(132);
     }
     return lArgsEClass;
   }
@@ -4492,7 +4523,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (gDisplayEClass == null)
     {
-      gDisplayEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(132);
+      gDisplayEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(133);
     }
     return gDisplayEClass;
   }
@@ -4526,7 +4557,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (gListingEClass == null)
     {
-      gListingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(133);
+      gListingEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(134);
     }
     return gListingEClass;
   }
@@ -4550,7 +4581,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (modifyVOperatorEClass == null)
     {
-      modifyVOperatorEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(134);
+      modifyVOperatorEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(135);
     }
     return modifyVOperatorEClass;
   }
@@ -4564,7 +4595,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (mandatoryEditEClass == null)
     {
-      mandatoryEditEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(135);
+      mandatoryEditEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(136);
     }
     return mandatoryEditEClass;
   }
@@ -4588,7 +4619,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (optionalEditEClass == null)
     {
-      optionalEditEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(136);
+      optionalEditEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(137);
     }
     return optionalEditEClass;
   }
@@ -4612,7 +4643,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (alternativeEditEClass == null)
     {
-      alternativeEditEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(137);
+      alternativeEditEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(138);
     }
     return alternativeEditEClass;
   }
@@ -4636,7 +4667,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (orEditEClass == null)
     {
-      orEditEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(138);
+      orEditEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(139);
     }
     return orEditEClass;
   }
@@ -4660,7 +4691,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (addConstraintEClass == null)
     {
-      addConstraintEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(139);
+      addConstraintEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(140);
     }
     return addConstraintEClass;
   }
@@ -4694,7 +4725,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (removeConstraintEClass == null)
     {
-      removeConstraintEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(140);
+      removeConstraintEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(141);
     }
     return removeConstraintEClass;
   }
@@ -4728,7 +4759,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (cnfEClass == null)
     {
-      cnfEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(141);
+      cnfEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(142);
     }
     return cnfEClass;
   }
@@ -4742,7 +4773,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (cnfExpressionEClass == null)
     {
-      cnfExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(142);
+      cnfExpressionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(143);
     }
     return cnfExpressionEClass;
   }
@@ -4766,7 +4797,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (neg_exprEClass == null)
     {
-      neg_exprEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(143);
+      neg_exprEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(144);
     }
     return neg_exprEClass;
   }
@@ -4790,7 +4821,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (featureModelEClass == null)
     {
-      featureModelEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(145);
+      featureModelEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(146);
     }
     return featureModelEClass;
   }
@@ -4844,7 +4875,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (productionEClass == null)
     {
-      productionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(146);
+      productionEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(147);
     }
     return productionEClass;
   }
@@ -4878,7 +4909,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (childEClass == null)
     {
-      childEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(147);
+      childEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(148);
     }
     return childEClass;
   }
@@ -4892,7 +4923,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (mandatoryEClass == null)
     {
-      mandatoryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(148);
+      mandatoryEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(149);
     }
     return mandatoryEClass;
   }
@@ -4916,7 +4947,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (optionalEClass == null)
     {
-      optionalEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(149);
+      optionalEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(150);
     }
     return optionalEClass;
   }
@@ -4940,7 +4971,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (xorgroupEClass == null)
     {
-      xorgroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(150);
+      xorgroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(151);
     }
     return xorgroupEClass;
   }
@@ -4964,7 +4995,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (orgroupEClass == null)
     {
-      orgroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(151);
+      orgroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(152);
     }
     return orgroupEClass;
   }
@@ -4988,7 +5019,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (mutexgroupEClass == null)
     {
-      mutexgroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(152);
+      mutexgroupEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(153);
     }
     return mutexgroupEClass;
   }
@@ -5012,7 +5043,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (integerOperationEClass == null)
     {
-      integerOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(153);
+      integerOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(154);
     }
     return integerOperationEClass;
   }
@@ -5046,7 +5077,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (boolOperationEClass == null)
     {
-      boolOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(154);
+      boolOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(155);
     }
     return boolOperationEClass;
   }
@@ -5080,7 +5111,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (comparisonOperationEClass == null)
     {
-      comparisonOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(155);
+      comparisonOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(156);
     }
     return comparisonOperationEClass;
   }
@@ -5114,7 +5145,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (setOperationEClass == null)
     {
-      setOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(156);
+      setOperationEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(157);
     }
     return setOperationEClass;
   }
@@ -5148,7 +5179,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (intLiteralEClass == null)
     {
-      intLiteralEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(157);
+      intLiteralEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(158);
     }
     return intLiteralEClass;
   }
@@ -5172,7 +5203,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (or_exprEClass == null)
     {
-      or_exprEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(158);
+      or_exprEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(159);
     }
     return or_exprEClass;
   }
@@ -5206,7 +5237,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (and_exprEClass == null)
     {
-      and_exprEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(159);
+      and_exprEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(160);
     }
     return and_exprEClass;
   }
@@ -5240,7 +5271,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (impl_exprEClass == null)
     {
-      impl_exprEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(160);
+      impl_exprEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(161);
     }
     return impl_exprEClass;
   }
@@ -5274,7 +5305,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (biimpl_exprEClass == null)
     {
-      biimpl_exprEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(161);
+      biimpl_exprEClass = (EClass)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(162);
     }
     return biimpl_exprEClass;
   }
@@ -5336,7 +5367,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (kindOfGetEEnum == null)
     {
-      kindOfGetEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(26);
+      kindOfGetEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(27);
     }
     return kindOfGetEEnum;
   }
@@ -5350,7 +5381,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (kindOfComputeEEnum == null)
     {
-      kindOfComputeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(28);
+      kindOfComputeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(29);
     }
     return kindOfComputeEEnum;
   }
@@ -5364,7 +5395,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (kindOfGetGroupsEEnum == null)
     {
-      kindOfGetGroupsEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(30);
+      kindOfGetGroupsEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(31);
     }
     return kindOfGetGroupsEEnum;
   }
@@ -5378,7 +5409,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (kindOfComputeGroupsEEnum == null)
     {
-      kindOfComputeGroupsEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(32);
+      kindOfComputeGroupsEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(33);
     }
     return kindOfComputeGroupsEEnum;
   }
@@ -5392,7 +5423,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (bddBackendEEnum == null)
     {
-      bddBackendEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(66);
+      bddBackendEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(67);
     }
     return bddBackendEEnum;
   }
@@ -5406,7 +5437,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (mergeModeEEnum == null)
     {
-      mergeModeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(67);
+      mergeModeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(68);
     }
     return mergeModeEEnum;
   }
@@ -5420,7 +5451,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (sliceModeEEnum == null)
     {
-      sliceModeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(81);
+      sliceModeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(82);
     }
     return sliceModeEEnum;
   }
@@ -5434,7 +5465,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (comparisonOperatorEEnum == null)
     {
-      comparisonOperatorEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(90);
+      comparisonOperatorEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(91);
     }
     return comparisonOperatorEEnum;
   }
@@ -5448,7 +5479,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (setOperatorEEnum == null)
     {
-      setOperatorEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(91);
+      setOperatorEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(92);
     }
     return setOperatorEEnum;
   }
@@ -5462,7 +5493,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (opSelectionEEnum == null)
     {
-      opSelectionEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(102);
+      opSelectionEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(103);
     }
     return opSelectionEEnum;
   }
@@ -5476,7 +5507,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (autoConfModeEEnum == null)
     {
-      autoConfModeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(104);
+      autoConfModeEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(105);
     }
     return autoConfModeEEnum;
   }
@@ -5490,7 +5521,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (opT_LISTINGEEnum == null)
     {
-      opT_LISTINGEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(122);
+      opT_LISTINGEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(123);
     }
     return opT_LISTINGEEnum;
   }
@@ -5504,7 +5535,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (fmFormatEEnum == null)
     {
-      fmFormatEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(127);
+      fmFormatEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(128);
     }
     return fmFormatEEnum;
   }
@@ -5518,7 +5549,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
   {
     if (booL_OperatorEEnum == null)
     {
-      booL_OperatorEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(144);
+      booL_OperatorEEnum = (EEnum)EPackage.Registry.INSTANCE.getEPackage(FMLPackage.eNS_URI).getEClassifiers().get(145);
     }
     return booL_OperatorEEnum;
   }
