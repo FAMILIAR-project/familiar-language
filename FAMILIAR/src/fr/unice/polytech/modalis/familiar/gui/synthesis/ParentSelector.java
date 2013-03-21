@@ -20,6 +20,8 @@ import javax.swing.JTree;
 import javax.swing.SwingUtilities;
 import javax.swing.event.TreeExpansionEvent;
 import javax.swing.event.TreeExpansionListener;
+import javax.swing.event.TreeSelectionEvent;
+import javax.swing.event.TreeSelectionListener;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreePath;
@@ -63,11 +65,17 @@ public class ParentSelector extends JPanel {
 		ignoreParentItem.addActionListener(new IgnoreParentActionListener());
 		popupMenu.add(ignoreParentItem);
 		
-		// Show popup menu when there is a right button event
+		// Handle user interaction
+
+		// Inform selected features
+		tree.addTreeSelectionListener(new SelectedFeaturesListener(environment));
+		
+		// Show popup menu		
 		tree.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if (SwingUtilities.isRightMouseButton(e)) {
+ 
 					int row = tree.getRowForLocation(e.getX(), e.getY());
 					TreePath path = tree.getPathForRow(row);
 					tree.setSelectionRow(row);
@@ -139,6 +147,5 @@ public class ParentSelector extends JPanel {
 		}
 		
 	}
-	
 
 }

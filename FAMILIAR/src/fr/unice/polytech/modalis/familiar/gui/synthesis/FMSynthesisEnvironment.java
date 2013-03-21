@@ -2,6 +2,7 @@ package fr.unice.polytech.modalis.familiar.gui.synthesis;
 
 import java.awt.Dimension;
 import java.awt.GridLayout;
+import java.util.List;
 import java.util.Observable;
 import java.util.Observer;
 import java.util.Set;
@@ -56,6 +57,11 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 
 	public void ignoreParent(String child, String parent) {
 		synthesizer.ignoreParent(child, parent);
+	}
+
+	public void updateSelectedFeatures(List<String> selectedFeatures, List<String> unselectedFeatures) {
+		clusterViewer.updateSelectedClusters(selectedFeatures, unselectedFeatures);
+		cliqueViewer.updateSelectedCliques(selectedFeatures, unselectedFeatures);
 	}
 
 }

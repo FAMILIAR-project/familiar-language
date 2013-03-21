@@ -2,6 +2,7 @@ package fr.unice.polytech.modalis.familiar.gui.synthesis;
 
 import java.awt.BorderLayout;
 import java.util.ArrayList;
+import java.util.Enumeration;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -22,6 +23,7 @@ public class CliqueViewer extends JPanel {
 	private DefaultTreeModel model;
 	private DefaultMutableTreeNode root;
 	private Set<Object> expandedCliques;
+	private Set<TreePath> selectedPaths;
 	
 	public CliqueViewer() {
 		// Create explorer view
@@ -29,6 +31,7 @@ public class CliqueViewer extends JPanel {
 		model = new DefaultTreeModel(root);
 		tree = new JTree(model);
 		tree.setRootVisible(false);
+		selectedPaths = new HashSet<TreePath>();
 		
 		// Set layout
 		this.setLayout(new BorderLayout());
@@ -71,9 +74,24 @@ public class CliqueViewer extends JPanel {
 		
 		model.reload();
 
-		// Keep features expanded
+		// Keep cliques expanded
 		for (TreePath path : pathsToExpand) {
 			tree.expandPath(path);	
 		}
+	}
+
+	public void updateSelectedCliques(List<String> selectedFeatures, List<String> unselectedFeatures) {
+		Enumeration<DefaultMutableTreeNode> it = root.depthFirstEnumeration();
+		while (it.hasMoreElements()) {
+			DefaultMutableTreeNode node = it.nextElement();
+			if (selectedFeatures.contains(node.toString())) {
+				selectedPaths.add(new TreePath(node.getPath()));
+			} else if (unselectedFeatures.contains(node.toString())) {
+				selectedPaths.remove(new TreePath(node.getPath()));
+			}
+		}
+		
+		tree.setSelectionPaths(selectedPaths.toArray(new TreePath[selectedPaths.size()]));
+		
 	}
 }
