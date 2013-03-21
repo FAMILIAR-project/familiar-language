@@ -16,15 +16,14 @@ import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreePath;
 
-public class ClusterViewer extends JPanel {
-
+public class CliqueViewer extends JPanel {
 	
 	private JTree tree;
 	private DefaultTreeModel model;
 	private DefaultMutableTreeNode root;
-	private Set<Object> expandedClusters;
+	private Set<Object> expandedCliques;
 	
-	public ClusterViewer() {
+	public CliqueViewer() {
 		// Create explorer view
 		root = new DefaultMutableTreeNode();
 		model = new DefaultTreeModel(root);
@@ -33,40 +32,40 @@ public class ClusterViewer extends JPanel {
 		
 		// Set layout
 		this.setLayout(new BorderLayout());
-		this.add(new JLabel("Clusters"), BorderLayout.NORTH);
+		this.add(new JLabel("Cliques"), BorderLayout.NORTH);
 		this.add(new JScrollPane(tree), BorderLayout.CENTER);
 		
 		// Update list of expanded features
-		expandedClusters = new HashSet<Object>();
+		expandedCliques = new HashSet<Object>();
 		tree.addTreeExpansionListener(new TreeExpansionListener() {
 			
 			@Override
 			public void treeExpanded(TreeExpansionEvent event) {
 				Object cluster = event.getPath().getLastPathComponent();
-				expandedClusters.add(cluster);
+				expandedCliques.add(cluster);
 			}
 			
 			@Override
 			public void treeCollapsed(TreeExpansionEvent event) {
 				Object cluster = event.getPath().getLastPathComponent();
-				expandedClusters.remove(cluster);
+				expandedCliques.remove(cluster);
 			}
 		});
 	}
 
-	public void updateClusters(Set<Set<String>> clusters) {
+	public void updateCliques(List<Set<String>> cliques) {
 		List<TreePath> pathsToExpand = new ArrayList<TreePath>();
 		root.removeAllChildren();
 
-		for (Set<String> cluster : clusters) {
-			DefaultMutableTreeNode clusterNode = new DefaultMutableTreeNode("Cluster");
-			root.add(clusterNode);
-			for (String feature : cluster) {
-				clusterNode.add(new DefaultMutableTreeNode(feature));
+		for (Set<String> clique : cliques) {
+			DefaultMutableTreeNode cliqueNode = new DefaultMutableTreeNode("Clique");
+			root.add(cliqueNode);
+			for (String feature : clique) {
+				cliqueNode.add(new DefaultMutableTreeNode(feature));
 			}
 			
-			if (expandedClusters.contains(cluster)) {
-				pathsToExpand.add(new TreePath(clusterNode.getPath()));
+			if (expandedCliques.contains(clique)) {
+				pathsToExpand.add(new TreePath(cliqueNode.getPath()));
 			}
 		}
 		
@@ -77,6 +76,4 @@ public class ClusterViewer extends JPanel {
 			tree.expandPath(path);	
 		}
 	}
-		
-	
 }

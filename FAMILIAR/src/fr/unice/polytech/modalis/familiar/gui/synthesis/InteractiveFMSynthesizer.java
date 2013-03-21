@@ -13,6 +13,7 @@ import fr.unice.polytech.modalis.familiar.operations.heuristics.clustering.Hiera
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.FeatureSimilarityMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.SimmetricsMetric;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
+import gsd.graph.DirectedCliqueFinder;
 import gsd.graph.ImplicationGraph;
 import gsd.graph.SimpleEdge;
 import gsd.synthesis.FeatureEdge;
@@ -154,6 +155,10 @@ public class InteractiveFMSynthesizer extends Observable{
 	 */
 	public Set<Set<String>> getSimilarityClusters() {
 		return similarityClusters;
+	}
+	
+	public List<Set<String>> getCliques() {
+		return DirectedCliqueFinder.INSTANCE.findAll(big);
 	}
 
 }

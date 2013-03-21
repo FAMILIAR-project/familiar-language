@@ -16,6 +16,7 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 	private BIGViewer bigViewer;
 	private ParentSelector parentSelector;
 	private ClusterViewer clusterViewer;
+	private CliqueViewer cliqueViewer;
 
 	public FMSynthesisEnvironment(InteractiveFMSynthesizer synthesizer) {
 		this.synthesizer = synthesizer;
@@ -26,11 +27,13 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 		bigViewer = new BIGPanel();
 		parentSelector = new ParentSelector(this);
 		clusterViewer = new ClusterViewer();
+		cliqueViewer = new CliqueViewer();
 
 		// Set layout
 		this.setLayout(new GridLayout(1, 1));
-		JSplitPane parentClusterSplitPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT, parentSelector, clusterViewer);
-		JSplitPane globalSplitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, parentClusterSplitPane, fmViewer);
+		JSplitPane topLeftSplitPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT, parentSelector, clusterViewer);
+		JSplitPane leftSplitPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT, topLeftSplitPane, cliqueViewer);
+		JSplitPane globalSplitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, leftSplitPane, fmViewer);
 		this.add(globalSplitPane);
 		
 		update(synthesizer, null); // Initialize display
@@ -44,6 +47,7 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 		if (similarityClusters != null) {
 			clusterViewer.updateClusters(similarityClusters);	
 		}
+		cliqueViewer.updateCliques(synthesizer.getCliques());
 	}
 
 	public void selectParent(String child, String parent) {
