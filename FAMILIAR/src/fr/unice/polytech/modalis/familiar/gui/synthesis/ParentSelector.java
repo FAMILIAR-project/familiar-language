@@ -1,5 +1,6 @@
 package fr.unice.polytech.modalis.familiar.gui.synthesis;
 
+import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,6 +11,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import javax.swing.JLabel;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
@@ -46,8 +48,9 @@ public class ParentSelector extends JPanel {
 		tree.setRootVisible(false);
 		
 		// Set layout and add explorer view
-		this.setLayout(new GridLayout(1, 1));
-		this.add(new JScrollPane(tree));
+		this.setLayout(new BorderLayout());
+		this.add(new JLabel("Parent selector"), BorderLayout.NORTH);
+		this.add(new JScrollPane(tree), BorderLayout.CENTER);
 		
 		// Create popup menu
 		popupMenu = new JPopupMenu();

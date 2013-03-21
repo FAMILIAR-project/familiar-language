@@ -11,6 +11,7 @@ import ch.usi.inf.sape.hac.dendrogram.Dendrogram;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.clustering.FMExperiment;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.clustering.HierarchicalFeatureClusterer;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.FeatureSimilarityMetric;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.SimmetricsMetric;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import gsd.graph.ImplicationGraph;
 import gsd.graph.SimpleEdge;
@@ -34,8 +35,10 @@ public class InteractiveFMSynthesizer extends Observable{
 		this.fmv = fmv;
 		big = fmv.computeImplicationGraph();
 //		fmv.setFm(new FeatureModel<String>(FeatureGraphFactory.mkStringFactory().mkTop()));
+		
+		// TODO : replace with final default parameters
+		setClusteringParameters(new SimmetricsMetric(SimmetricsMetric.MetricName.SMITHWATERMAN), 0.4);
 		featureComparator = new OutDegreeComparator(big);
-		similarityClusters = null;
 	}
 	
 	public FeatureModelVariable getFeatureModelVariable() {
@@ -141,6 +144,7 @@ public class InteractiveFMSynthesizer extends Observable{
 		FMExperiment experiment = new FMExperiment(big);
 		Dendrogram dendrogram = hierarchicalClustering.computeDendrogram(experiment, clusteringSimilarityMetric);
 		similarityClusters = hierarchicalClustering.extractClusters(experiment,dendrogram, clusteringThreshold);
+		setChanged();
 		notifyObservers();
 	}
 
