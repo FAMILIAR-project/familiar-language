@@ -64,4 +64,8 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 		cliqueViewer.updateSelectedCliques(selectedFeatures, unselectedFeatures);
 	}
 
+	public void setRoot(String root) {
+		synthesizer.setRoot(root);
+	}
+
 }

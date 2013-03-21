@@ -21,27 +21,27 @@ import gsd.synthesis.FeatureGraph;
 import gsd.synthesis.FeatureNode;
 
 public class InteractiveFMSynthesizer extends Observable{
-	
+
 	private FeatureModelVariable fmv;
 	private ImplicationGraph<String> big;
-	
+
 	private FeatureSimilarityMetric parentSimilarityMetric;
 	private FeatureComparator featureComparator;
-	
+
 	private FeatureSimilarityMetric clusteringSimilarityMetric;
 	private Set<Set<String>> similarityClusters;
 	private double clusteringThreshold;
-	
+
 	public InteractiveFMSynthesizer(FeatureModelVariable fmv) {
 		this.fmv = fmv;
 		big = fmv.computeImplicationGraph();
-//		fmv.setFm(new FeatureModel<String>(FeatureGraphFactory.mkStringFactory().mkTop()));
-		
+		//		fmv.setFm(new FeatureModel<String>(FeatureGraphFactory.mkStringFactory().mkTop()));
+
 		// TODO : replace with final default parameters
 		setClusteringParameters(new SimmetricsMetric(SimmetricsMetric.MetricName.SMITHWATERMAN), 0.4);
 		featureComparator = new OutDegreeComparator(big);
 	}
-	
+
 	public FeatureModelVariable getFeatureModelVariable() {
 		return fmv;
 	}
@@ -49,7 +49,7 @@ public class InteractiveFMSynthesizer extends Observable{
 	public ImplicationGraph<String> getImplicationGraph() {
 		return big;
 	}
-	
+
 	/**
 	 * Create the child/parent relation in the feature diagram
 	 * @param child
@@ -65,7 +65,7 @@ public class InteractiveFMSynthesizer extends Observable{
 			childNode = new FeatureNode<String>(child);
 			graph.addVertex(childNode);
 		}
-		
+
 		FeatureNode<String> parentNode;
 		try {
 			parentNode = graph.findVertex(parent);
@@ -73,14 +73,14 @@ public class InteractiveFMSynthesizer extends Observable{
 			parentNode = new FeatureNode<String>(parent);
 			graph.addVertex(parentNode);
 		}
-		
+
 		graph.addEdge(childNode, parentNode, FeatureEdge.HIERARCHY);
-		
+
 		// Modify the implication graph to represent this new relation
 		Set<SimpleEdge> removedEdges = new HashSet<SimpleEdge>(big.outgoingEdges(child));
 		removedEdges.remove(big.findEdge(child, parent));
 		big.removeAllEdges(removedEdges);
-		
+
 		setChanged();
 		notifyObservers();
 	}
@@ -99,7 +99,7 @@ public class InteractiveFMSynthesizer extends Observable{
 		setChanged();
 		notifyObservers();
 	}
-	
+
 	/**
 	 * List the parent candidates of each feature of the feature model
 	 * The list is sorted according to the current metrics
@@ -109,11 +109,11 @@ public class InteractiveFMSynthesizer extends Observable{
 		List<KeyValue<String, List<String>>> parents = new ArrayList<KeyValue<String,List<String>>>();
 		for (String feature : big.vertices()) {
 			List<String> parentList = new ArrayList<String>(big.parents(feature));
-			
+
 			if (parentSimilarityMetric != null) {
 				Collections.sort(parentList, new ParentComparator(feature, parentSimilarityMetric));	
 			}
-			
+
 			KeyValue<String, List<String>> parentEntry = new KeyValue<String, List<String>>(feature, parentList);
 			parents.add(parentEntry);
 		}
@@ -156,9 +156,33 @@ public class InteractiveFMSynthesizer extends Observable{
 	public Set<Set<String>> getSimilarityClusters() {
 		return similarityClusters;
 	}
-	
+
 	public List<Set<String>> getCliques() {
 		return DirectedCliqueFinder.INSTANCE.findAll(big);
 	}
 
+	/**
+	 * Set this feature as the root of the feature model
+	 * @param root
+	 */
+	public void setRoot(String root) {
+		// Add an edge to the feature graph to define the node as the root
+		FeatureGraph<String> graph = fmv.getFm().getDiagram();
+		FeatureNode<String> rootNode;
+		try {
+			rootNode = graph.findVertex(root);	
+		} catch (IllegalArgumentException e) {
+			rootNode = new FeatureNode<String>(root);
+			graph.addVertex(rootNode);
+		}
+
+		graph.addEdge(rootNode, graph.getTopVertex(), FeatureEdge.HIERARCHY);
+
+		// Delete every outgoing edges of the root node in the implication graph
+		Set<SimpleEdge> removedEdges = new HashSet<SimpleEdge>(big.outgoingEdges(root));
+		big.removeAllEdges(removedEdges);
+
+		setChanged();
+		notifyObservers();
+	}
 }

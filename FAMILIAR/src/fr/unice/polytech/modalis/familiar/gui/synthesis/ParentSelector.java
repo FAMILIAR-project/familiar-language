@@ -34,7 +34,8 @@ public class ParentSelector extends JPanel {
 	private DefaultTreeModel model;
 	private DefaultMutableTreeNode root;
 	
-	private JPopupMenu popupMenu;
+	private JPopupMenu parentPopupMenu;
+	private JPopupMenu featurePopupMenu;
 	private String lastSelectedParent;
 	private String lastSelectedFeature;
 	
@@ -54,16 +55,22 @@ public class ParentSelector extends JPanel {
 		this.add(new JLabel("Parent selector"), BorderLayout.NORTH);
 		this.add(new JScrollPane(tree), BorderLayout.CENTER);
 		
-		// Create popup menu
-		popupMenu = new JPopupMenu();
+		// Create parent popup menu
+		parentPopupMenu = new JPopupMenu();
 		JMenuItem selectParentItem = new JMenuItem("Select this parent");
 		
 		selectParentItem.addActionListener(new SelectParentActionListener());
-		popupMenu.add(selectParentItem);
+		parentPopupMenu.add(selectParentItem);
 		
 		JMenuItem ignoreParentItem = new JMenuItem("Ignore this parent");
 		ignoreParentItem.addActionListener(new IgnoreParentActionListener());
-		popupMenu.add(ignoreParentItem);
+		parentPopupMenu.add(ignoreParentItem);
+		
+		// Create feature popup menu
+		featurePopupMenu = new JPopupMenu();
+		JMenuItem selectAsRootItem = new JMenuItem("Select as root");
+		selectAsRootItem.addActionListener(new SelectAsRootActionListener());
+		featurePopupMenu.add(selectAsRootItem);
 		
 		// Handle user interaction
 
@@ -79,10 +86,15 @@ public class ParentSelector extends JPanel {
 					int row = tree.getRowForLocation(e.getX(), e.getY());
 					TreePath path = tree.getPathForRow(row);
 					tree.setSelectionRow(row);
-					if (path != null && path.getPathCount() == 3) {
-						lastSelectedFeature = path.getPathComponent(1).toString();
-						lastSelectedParent = path.getPathComponent(2).toString();
-						popupMenu.show(tree, e.getX(), e.getY());	
+					if (path != null) {
+						if (path.getPathCount() == 2) {
+							lastSelectedFeature = path.getPathComponent(1).toString();
+							featurePopupMenu.show(tree, e.getX(), e.getY());
+						} else if (path.getPathCount() == 3) {
+							lastSelectedFeature = path.getPathComponent(1).toString();
+							lastSelectedParent = path.getPathComponent(2).toString();
+							parentPopupMenu.show(tree, e.getX(), e.getY());		
+						}
 					}
 					
 				}
@@ -144,6 +156,15 @@ public class ParentSelector extends JPanel {
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			environment.ignoreParent(lastSelectedFeature, lastSelectedParent);
+		}
+		
+	}
+	
+	private class SelectAsRootActionListener implements ActionListener {
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			environment.setRoot(lastSelectedFeature);
 		}
 		
 	}
