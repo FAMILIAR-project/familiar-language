@@ -8,6 +8,8 @@ import fr.unice.polytech.modalis.familiar.operations.KnowledgeSynthesis;
 import fr.unice.polytech.modalis.familiar.operations.SlicerBDDFormula;
 import gsd.graph.ImplicationGraph;
 import gsd.synthesis.BDDBuilder;
+import gsd.synthesis.Expression;
+import gsd.synthesis.ExpressionUtil;
 import gsd.synthesis.Formula;
 import gsd.synthesis.IGBuilder;
 
@@ -37,6 +39,14 @@ public class FeatureModelVariableBDDFormula extends FeatureModelVariable  {
 	public FeatureVariable root() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	@Override
+	public boolean addConstraint(Expression<String> e) {
+		BDDBuilder<String> builder = getBuilder() ; 
+		Set<String> domain = ExpressionUtil.getAllFeatures(e) ; 
+		_formula.andWith(new Formula<String>(builder.mkExpression(e), domain, builder));
+		return features().names().containsAll(domain) ; 
 	}
 
 	@Override

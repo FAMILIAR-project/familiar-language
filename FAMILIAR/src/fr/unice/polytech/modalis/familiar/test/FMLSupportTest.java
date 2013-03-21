@@ -6,6 +6,7 @@ package fr.unice.polytech.modalis.familiar.test;
 import fr.unice.polytech.modalis.familiar.parser.FMBuilder;
 import fr.unice.polytech.modalis.familiar.variable.ConstraintVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
+import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariableBDDFormula;
 import gsd.graph.ImplicationGraph;
 import gsd.graph.SimpleEdge;
 import gsd.synthesis.Expression;
@@ -47,7 +48,7 @@ public class FMLSupportTest extends FMLTest {
 		Collection<SimpleEdge> ed = big.edges() ;
 		for (SimpleEdge e : ed) {
 			
-			//phiR=new FeatureModelVariableBDDFormula("", phiR.getFormula().clone(), _builder);
+			phiR=new FeatureModelVariableBDDFormula("", phiR.getFormula().clone(), _builder);
 			System.err.println("phiR before calcul support =" + phiR);
 			getSupport(phiR, big, e, trans_nb);
 			System.err.println("phiR after calcul support =" + phiR + "\n");
