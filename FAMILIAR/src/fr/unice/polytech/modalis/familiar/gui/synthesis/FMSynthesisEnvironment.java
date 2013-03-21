@@ -1,6 +1,5 @@
 package fr.unice.polytech.modalis.familiar.gui.synthesis;
 
-import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.util.List;
 import java.util.Observable;
@@ -32,14 +31,16 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 
 		// Set layout
 		this.setLayout(new GridLayout(1, 1));
-		JSplitPane topLeftSplitPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT, parentSelector, clusterViewer);
-		JSplitPane leftSplitPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT, topLeftSplitPane, cliqueViewer);
-		JSplitPane globalSplitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, leftSplitPane, fmViewer);
+		JSplitPane cliqueClusterSplitPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT, clusterViewer, cliqueViewer);
+		JSplitPane leftSplitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, parentSelector, cliqueClusterSplitPane);
+		JSplitPane fmBigSplitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, fmViewer, bigViewer); 
+		JSplitPane globalSplitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, leftSplitPane, fmBigSplitPane);
 		this.add(globalSplitPane);
 		
 		update(synthesizer, null); // Initialize display
 	}
 
+	
 	@Override
 	public void update(Observable o, Object arg) {
 		fmViewer.updateFM(synthesizer.getFeatureModelVariable());
