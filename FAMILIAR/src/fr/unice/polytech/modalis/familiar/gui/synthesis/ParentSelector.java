@@ -1,7 +1,6 @@
 package fr.unice.polytech.modalis.familiar.gui.synthesis;
 
 import java.awt.BorderLayout;
-import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -20,8 +19,6 @@ import javax.swing.JTree;
 import javax.swing.SwingUtilities;
 import javax.swing.event.TreeExpansionEvent;
 import javax.swing.event.TreeExpansionListener;
-import javax.swing.event.TreeSelectionEvent;
-import javax.swing.event.TreeSelectionListener;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreePath;
@@ -72,8 +69,6 @@ public class ParentSelector extends JPanel {
 		selectAsRootItem.addActionListener(new SelectAsRootActionListener());
 		featurePopupMenu.add(selectAsRootItem);
 		
-		// Handle user interaction
-
 		// Inform selected features
 		tree.addTreeSelectionListener(new SelectedFeaturesListener(environment));
 		

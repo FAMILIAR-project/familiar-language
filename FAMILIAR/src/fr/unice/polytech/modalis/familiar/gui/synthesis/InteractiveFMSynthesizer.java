@@ -12,18 +12,22 @@ import fr.unice.polytech.modalis.familiar.operations.heuristics.clustering.FMExp
 import fr.unice.polytech.modalis.familiar.operations.heuristics.clustering.HierarchicalFeatureClusterer;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.FeatureSimilarityMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.SimmetricsMetric;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.mst.OptimumBranchingFinder;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.mst.WeightedImplicationGraph;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import gsd.graph.DirectedCliqueFinder;
 import gsd.graph.ImplicationGraph;
 import gsd.graph.SimpleEdge;
 import gsd.synthesis.FeatureEdge;
 import gsd.synthesis.FeatureGraph;
+import gsd.synthesis.FeatureGraphFactory;
+import gsd.synthesis.FeatureModel;
 import gsd.synthesis.FeatureNode;
 
 public class InteractiveFMSynthesizer extends Observable{
 
 	private FeatureModelVariable fmv;
-	private ImplicationGraph<String> big;
+	private WeightedImplicationGraph<String> big;
 
 	private FeatureSimilarityMetric parentSimilarityMetric;
 	private FeatureComparator featureComparator;
@@ -34,12 +38,12 @@ public class InteractiveFMSynthesizer extends Observable{
 
 	public InteractiveFMSynthesizer(FeatureModelVariable fmv) {
 		this.fmv = fmv;
-		big = fmv.computeImplicationGraph();
+		big = new WeightedImplicationGraph<String>(fmv.computeImplicationGraph());
 		//		fmv.setFm(new FeatureModel<String>(FeatureGraphFactory.mkStringFactory().mkTop()));
 
 		// TODO : replace with final default parameters
 		setClusteringParameters(new SimmetricsMetric(SimmetricsMetric.MetricName.SMITHWATERMAN), 0.4);
-		featureComparator = new OutDegreeComparator(big);
+		featureComparator = new OutDegreeComparator(big.getImplicationGraph());
 	}
 
 	public FeatureModelVariable getFeatureModelVariable() {
@@ -47,7 +51,7 @@ public class InteractiveFMSynthesizer extends Observable{
 	}
 
 	public ImplicationGraph<String> getImplicationGraph() {
-		return big;
+		return big.getImplicationGraph();
 	}
 
 	/**
@@ -121,9 +125,20 @@ public class InteractiveFMSynthesizer extends Observable{
 		return parents;
 	}
 
+	/**
+	 * Set the similarity metric used in choosing the parent of each feature
+	 * It also computes the associated weighted implication graph
+	 * @param parentSimilarityMetric
+	 */
 	public void setParentSimilarityMetric(
 			FeatureSimilarityMetric parentSimilarityMetric) {
 		this.parentSimilarityMetric = parentSimilarityMetric;
+		for (SimpleEdge edge : big.edges()) {
+			String source = big.getSource(edge);
+			String target = big.getTarget(edge);
+			double weight = parentSimilarityMetric.similarity(source, target);
+			big.setEdgeWeight(edge, weight);
+		}
 	}
 
 	/**
@@ -142,7 +157,7 @@ public class InteractiveFMSynthesizer extends Observable{
 	 */
 	private void computeClusters() {
 		HierarchicalFeatureClusterer hierarchicalClustering = new HierarchicalFeatureClusterer();
-		FMExperiment experiment = new FMExperiment(big);
+		FMExperiment experiment = new FMExperiment(big.getImplicationGraph());
 		Dendrogram dendrogram = hierarchicalClustering.computeDendrogram(experiment, clusteringSimilarityMetric);
 		similarityClusters = hierarchicalClustering.extractClusters(experiment,dendrogram, clusteringThreshold);
 		setChanged();
@@ -158,7 +173,7 @@ public class InteractiveFMSynthesizer extends Observable{
 	}
 
 	public List<Set<String>> getCliques() {
-		return DirectedCliqueFinder.INSTANCE.findAll(big);
+		return DirectedCliqueFinder.INSTANCE.findAll(big.getImplicationGraph());
 	}
 
 	/**
@@ -184,5 +199,34 @@ public class InteractiveFMSynthesizer extends Observable{
 
 		setChanged();
 		notifyObservers();
+	}
+	
+	/**
+	 * Compute a feature model with a complete feature diagram
+	 * according to the parent similarity metric
+	 * @return a complete feature model
+	 */
+	public FeatureModelVariable computeCompleteFeatureModel() {
+		
+		// Compute optimum branching for the implication graph
+		OptimumBranchingFinder<String> branchingFinder = new OptimumBranchingFinder<String>();
+		ImplicationGraph<String> hierarchy = branchingFinder.findOptimumBranching(big);
+		
+		// Create the corresponding feature model
+		FeatureGraph<String> fg = FeatureGraphFactory.mkStringFactory().mkTop();
+		for (String feature : hierarchy.vertices()) {
+			fg.addVertex(new FeatureNode<String>(feature));
+		}
+		for (SimpleEdge edge : hierarchy.edges()) {
+			String source = hierarchy.getSource(edge);
+			String target = hierarchy.getTarget(edge);
+			FeatureNode<String> sourceNode = fg.findVertex(source);
+			FeatureNode<String> targetNode = fg.findVertex(target);
+			fg.addEdge(sourceNode, targetNode, FeatureEdge.HIERARCHY);
+		}
+		
+		FeatureModel<String> fm = new FeatureModel<String>(fg);
+		FeatureModelVariable completeFM = new FeatureModelVariable(fmv.getIdentifier() + "_completed", fm);
+		return completeFM;
 	}
 }
