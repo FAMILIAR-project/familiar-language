@@ -27,7 +27,7 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 		bigViewer = new BIGPanel();
 		parentSelector = new ParentSelector(this);
 		clusterViewer = new ClusterViewer();
-		cliqueViewer = new CliqueViewer();
+		cliqueViewer = new CliqueViewer(); 
 
 		// Set layout
 		this.setLayout(new GridLayout(1, 1));

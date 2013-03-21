@@ -56,7 +56,7 @@ public class BIGPanel extends BIGViewer {
 			String source = seekVertex(debut,big_AnalysisGraph);
 			String destination = seekVertex(fin,big_AnalysisGraph);
 		
-			big_AnalysisGraph.addEdge(source, destination);
+			big_AnalysisGraph.addEdge(source, destination);  
 			//big_AnalysisGraph.setEdgeWeight(big_AnalysisGraph.getEdge(source, destination), weight);
 	}
 	}
