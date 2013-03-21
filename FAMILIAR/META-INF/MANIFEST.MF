@@ -73,9 +73,9 @@ Require-Bundle: de.ovgu.featureide.core;bundle-version="2.6.4",
  org.eclipse.ui.workbench;bundle-version="3.6.0",
  TVLPackagedAsPlugin;bundle-version="1.0.0",
  org.xtext.example.fmlero.ui;bundle-version="1.0.0",
- SPLAR-plugin;bundle-version="1.0.0";visibility:=reexport,
  FML3rdPartiesForSynthesis;bundle-version="1.0.0",
  FML3rdPartiesMisc;bundle-version="1.0.0",
+ SPLAR-plugin;bundle-version="1.0.0";visibility:=reexport,
  org.xtext.example.fml;bundle-version="1.0.0",
  org.xtext.example.fml.ui;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
