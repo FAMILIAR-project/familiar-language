@@ -32,13 +32,10 @@ public class SimmetricsMetric implements FeatureSimilarityMetric {
 	
 	public void setMetric(MetricName metricName) {
 		switch (metricName) {
-		case SMITHWATERMAN:
+		case SIMMETRICS_SMITHWATERMAN:
 			metric = new SmithWaterman();
 			break;
 		}
 	}
 
-	public enum MetricName {
-		SMITHWATERMAN
-	}
 }

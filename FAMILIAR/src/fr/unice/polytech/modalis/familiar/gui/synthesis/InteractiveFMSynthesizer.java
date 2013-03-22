@@ -10,7 +10,10 @@ import java.util.Set;
 import ch.usi.inf.sape.hac.dendrogram.Dendrogram;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.clustering.FMExperiment;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.clustering.HierarchicalFeatureClusterer;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.AlwaysZeroMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.FeatureSimilarityMetric;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.MetricName;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.RandomMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.SimmetricsMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.mst.OptimumBranchingFinder;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.mst.WeightedImplicationGraph;
@@ -25,7 +28,10 @@ import gsd.synthesis.FeatureModel;
 import gsd.synthesis.FeatureNode;
 
 public class InteractiveFMSynthesizer extends Observable{
-
+	
+	public static final MetricName defaultParentSimilarityMetric = MetricName.ALWAYS_ZERO;
+	public static final MetricName defaultClusteringSimilarityMetric = MetricName.SIMMETRICS_SMITHWATERMAN;
+	
 	private FeatureModelVariable fmv;
 	private WeightedImplicationGraph<String> big;
 
@@ -41,8 +47,8 @@ public class InteractiveFMSynthesizer extends Observable{
 		big = new WeightedImplicationGraph<String>(fmv.computeImplicationGraph());
 		//		fmv.setFm(new FeatureModel<String>(FeatureGraphFactory.mkStringFactory().mkTop()));
 
-		// TODO : replace with final default parameters
-		setClusteringParameters(new SimmetricsMetric(SimmetricsMetric.MetricName.SMITHWATERMAN), 0.4);
+		setParentSimilarityMetric(new AlwaysZeroMetric());
+		setClusteringParameters(new SimmetricsMetric(MetricName.SIMMETRICS_SMITHWATERMAN), 0.4);
 		featureComparator = new OutDegreeComparator(big.getImplicationGraph());
 	}
 
@@ -139,6 +145,8 @@ public class InteractiveFMSynthesizer extends Observable{
 			double weight = parentSimilarityMetric.similarity(source, target);
 			big.setEdgeWeight(edge, weight);
 		}
+		setChanged();
+		notifyObservers();
 	}
 
 	/**
@@ -228,5 +236,13 @@ public class InteractiveFMSynthesizer extends Observable{
 		FeatureModel<String> fm = new FeatureModel<String>(fg);
 		FeatureModelVariable completeFM = new FeatureModelVariable(fmv.getIdentifier() + "_completed", fm);
 		return completeFM;
+	}
+
+	public double getClusteringThreshold() {
+		return clusteringThreshold;
+	}
+
+	public FeatureSimilarityMetric getClusteringSimilarityMetric() {
+		return clusteringSimilarityMetric;
 	}
 }
