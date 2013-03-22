@@ -18,6 +18,7 @@ import org.xtext.example.mydsl.fML.GetConstraints;
 import org.xtext.example.mydsl.fML.GetFGroups;
 import org.xtext.example.mydsl.fML.IdentifierExpr;
 import org.xtext.example.mydsl.fML.Leaves;
+import org.xtext.example.mydsl.fML.PairwiseCommand;
 import org.xtext.example.mydsl.fML.SetExpr;
 import org.xtext.example.mydsl.fML.SetOperations;
 
@@ -153,6 +154,13 @@ public class SetAnalyzer extends FMLAbstractCommandAnalyzer {
 			pars.parse();
 			v = pars.getVariable();
 
+		}
+		
+		else if (setCmd instanceof PairwiseCommand) {
+			_LOGGER.debug("Pariwise: ");
+			pars = new PairwiseAnalyzer((Command) setCmd, var, ns, _environment);
+			pars.parse();
+			v = pars.getVariable();
 		}
 
 		else if (setCmd instanceof FullMandatorys) {

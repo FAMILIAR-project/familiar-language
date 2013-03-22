@@ -6,8 +6,16 @@ import java.util.Observable;
 import java.util.Observer;
 import java.util.Set;
 
+import javax.swing.ButtonGroup;
+import javax.swing.JMenu;
+import javax.swing.JMenuItem;
 import javax.swing.JPanel;
+import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JSplitPane;
+
+import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.AlwaysZeroMetric;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.FeatureSimilarityMetric;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.MetricName;
 
 public class FMSynthesisEnvironment extends JPanel implements Observer{
 
@@ -27,8 +35,8 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 		bigViewer = new BIGPanel();
 		parentSelector = new ParentSelector(this);
 		clusterViewer = new ClusterViewer();
-		cliqueViewer = new CliqueViewer(); 
-
+		cliqueViewer = new CliqueViewer();
+		
 		// Set layout
 		this.setLayout(new GridLayout(1, 1));
 		JSplitPane cliqueClusterSplitPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT, clusterViewer, cliqueViewer);
@@ -68,6 +76,68 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 
 	public void setRoot(String root) {
 		synthesizer.setRoot(root);
+	}
+
+
+	public static JMenu createSynthesisMenu() {
+		
+		
+		// Parent similarity metric selection
+		JMenu parentSimilarityMetricMenu = new JMenu("Similarity metric");
+		ButtonGroup parentSimilarityMetricGroup = new ButtonGroup();
+		
+		for (MetricName metric : MetricName.values()) {
+			JRadioButtonMenuItem metricItem = new JRadioButtonMenuItem(metric.toString());
+			metricItem.addActionListener(new SimilarityMetricSelectionListener(metric));
+			parentSimilarityMetricMenu.add(metricItem);
+			parentSimilarityMetricGroup.add(metricItem);
+			if (metric.equals(InteractiveFMSynthesizer.defaultParentSimilarityMetric)) {
+				metricItem.setSelected(true);	
+			}
+		}
+		
+		
+		// Clustering metric selection
+		JMenu clusteringMetricMenu = new JMenu("Clustering metric");
+		ButtonGroup clusteringMetricGroup = new ButtonGroup();
+		
+		for (MetricName metric : MetricName.values()) {
+			JRadioButtonMenuItem metricItem = new JRadioButtonMenuItem(metric.toString());
+			metricItem.addActionListener(new ClusteringMetricSelectionListener(metric));
+			clusteringMetricMenu.add(metricItem);
+			clusteringMetricGroup.add(metricItem);
+			if (metric.equals(InteractiveFMSynthesizer.defaultClusteringSimilarityMetric)) {  
+				metricItem.setSelected(true);
+			}
+		}
+		
+		// Complete FM according to a heuristic
+		JMenuItem completeFM = new JMenuItem("Complete FM");
+		
+		// Create menu
+		JMenu synthesisMenu = new JMenu("Synthesis");
+//		synthesisMenu.setEnabled(false);
+		
+		synthesisMenu.add(parentSimilarityMetricMenu);
+		synthesisMenu.add(clusteringMetricMenu);
+		synthesisMenu.add(completeFM);
+		
+		
+		return synthesisMenu;
+	}
+
+
+	public void setParentSimilarityMetric(FeatureSimilarityMetric metric) {
+		synthesizer.setParentSimilarityMetric(metric);
+	}
+
+
+	public void setClusteringMetric(FeatureSimilarityMetric metric) {
+		synthesizer.setClusteringParameters(metric, synthesizer.getClusteringThreshold());
+	}
+	
+	public void setClusteringThreshold(double threshold) {
+		synthesizer.setClusteringParameters(synthesizer.getClusteringSimilarityMetric(), threshold);
 	}
 
 }

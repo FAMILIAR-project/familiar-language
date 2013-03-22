@@ -84,11 +84,28 @@ public class PacogenLauncher {
 
 	public void launchPacogen()
 	{
-		if(System.getProperty("os.name").equals("Linux") && System.getProperty("os.arch").equals("amd64") )
-		{
-
 		
-	 File pac = new File("Pacogen") ;
+		String pacogenFilename = null ; 
+		
+		
+		if(System.getProperty("os.name").equals("Linux") && System.getProperty("os.arch").equals("amd64"))
+		{
+			pacogenFilename = "Pacogen" ;
+		}
+		else if(isOSX())
+		{
+			pacogenFilename = "PacogenForMacOS" ;
+		}
+		else
+		{
+			FMLShell.getInstance().printError("Sorry your architecture is not supported") ;
+			return ; 
+		}
+		
+		assert (pacogenFilename != null); 
+		
+		File pac = new File (pacogenFilename);		
+	  
 		if(pac.exists())
 		{
 			 File sol = new File("solution.txt") ;
@@ -112,8 +129,8 @@ public class PacogenLauncher {
 		Runtime runtime = Runtime.getRuntime();
 		try {
 		
-			runtime.exec("chmod +x Pacogen");
-			Process p = runtime.exec("./Pacogen") ;
+			runtime.exec("chmod +x " + pacogenFilename);
+			Process p = runtime.exec("./" + pacogenFilename) ;
 			try {
 				p.waitFor();
 			} catch (InterruptedException e) {
@@ -121,19 +138,25 @@ public class PacogenLauncher {
 				e.printStackTrace();
 			}
 			
+			if(!sol.exists())
+			{
+				FMLShell.getInstance().printError("An error with pacogen occured, please report a bug on github with the associated feature model") ;
+			}
+			else
+			{
 			LinkedList<String> configLst = solutionReader();
 			int i = 0 ;
 			Set<Variable> LstConf = new HashSet<Variable>();
 			for (Iterator<String> iterator = configLst.iterator(); iterator.hasNext();) {
 				String string = (String) iterator.next();
-				System.out.println(string);
-				
-				
 				LstConf.add(confBuilder(string, LstFt, i)) ;
 			}
 			
 		SetVariable stVar = new SetVariable(LstConf, "pwConfig")	;
 		testConfig	= stVar;
+		mod.delete() ;
+		sol.delete() ;
+			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -142,45 +165,29 @@ public class PacogenLauncher {
 		{
 			FMLShell.getInstance().printError("Pacogen Runtime is missing") ;
 		}
-		}else
-		{
-			FMLShell.getInstance().printError("Sorry your architecture is not supported") ;
-		}
+		
 	}
 		
 	
-	public void launchPacogenBug()
-	{
-				 
-		SplotAdapter splAdapt = new SplotAdapter() ;
-		splAdapt.parse(fm.toSPLOT());
-		fr.pacogen.model.treeStructure.FeatureModel FmPaco = splAdapt.getModel() ;
+	/**
+	 * TODO move to another place 
+	 * https://developer.apple.com/library/mac/#technotes/tn2002/tn2110.html
+	 * @return
+	 */
+	public static boolean isOSX() {
+		String osName = System.getProperty("os.name");
+		return osName.contains("OS X");
+	}
 
-	String LstFt = FmPaco.getFeatureLst();
-		outputgenerator(FmPaco); 
-	
-		Set<Variable> LstConf = new HashSet<Variable>();
-				
-		LstConf.add(confBuilder("1,1,1,1,1,1,1,1,0,1,0", LstFt, 0)) ;
-			
-			
-		SetVariable stVar = new SetVariable(LstConf, "pwConfig")	;
-		testConfig	= stVar;
-}
-		
 		
 	private ConfigurationVariable confBuilder(String ConfigPaco, String LstFt, int ConfNb)
 	{
-		System.out.println(ConfNb);
 		ConfigurationVariableSPLOTImpl Ci = new ConfigurationVariableSPLOTImpl(fm, "c" + Integer.toString(ConfNb)) ;
-		System.out.println(fm);
 		Collection<String> varcoll = Ci.getUnselected() ;
-		System.out.println("la");
-		
 		for (String variable : varcoll) {
 			System.out.println(variable);
 		}
-		System.out.println("Finla");
+		
 		String[] FtTab = LstFt.split(",");
 		String[] confTab = ConfigPaco.split(",");
 		
