@@ -110,7 +110,7 @@ public class FMLMergerWithConstraints extends FMLMerger {
 
 		/* FMi1 x FMi2 x ... x FMin = FMI */
 		FeatureModelVariable fmInput = new AggregatorFM().build(primeLfms,
-				new ArrayList<Expression<String>>(), "InputFMs");
+				new HashSet<Expression<String>>(), "InputFMs");
 
 		if (mode == Mode.StrictUnion) { // in intersection mandatory is OK
 			boolean edit = ModifyVOperatorParser.setAlternative(rootFts, fmInput.getFm());
@@ -118,7 +118,7 @@ public class FMLMergerWithConstraints extends FMLMerger {
 		}
 
 		// we construct constraints
-		List<Expression<String>> constraints = new ArrayList<Expression<String>>();
+		Set<Expression<String>> constraints = new HashSet<Expression<String>>();
 		Set<String> fts = fmExp.features().names();
 		for (String ft : fts) {
 

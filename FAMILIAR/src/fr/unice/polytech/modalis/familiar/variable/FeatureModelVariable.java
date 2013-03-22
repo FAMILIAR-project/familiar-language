@@ -115,6 +115,7 @@ import fr.unice.polytech.modalis.familiar.parser.FMLCommandInterpreter;
 import fr.unice.polytech.modalis.familiar.parser.HierarchyMerger;
 import fr.unice.polytech.modalis.familiar.parser.HierarchyMergerFactory;
 import fr.unice.polytech.modalis.familiar.parser.HierarchyMergerStrategy;
+import fr.unice.polytech.modalis.familiar.parser.MyExpressionParser;
 import fr.unice.polytech.modalis.familiar.parser.NameSpace;
 import fr.unice.polytech.modalis.familiar.test.featureide.SATFeatureIDEFormula;
 import fr.unice.polytech.modalis.familiar.test.regression.SPLOTUtility;
@@ -1777,6 +1778,7 @@ public class FeatureModelVariable extends VariableImpl implements FMLFeatureMode
 
 	}
 
+	@Deprecated
 	public void fixFreeVariables() {
 		// _LOGGER.debug("allFts=" +
 		// features().names());
@@ -1828,7 +1830,7 @@ public class FeatureModelVariable extends VariableImpl implements FMLFeatureMode
 	 * 
 	 * @param f
 	 */
-	private void addFreeVariableToRoot(String f) {
+	public void addFreeVariableToRoot(String f) {
 		_LOGGER.debug(
 				"adding free variable to root f=" + f);
 		String rootName = this.root().name();
@@ -2508,13 +2510,39 @@ public class FeatureModelVariable extends VariableImpl implements FMLFeatureMode
 	 * @return
 	 */
 	public boolean addConstraint(ConstraintVariable cv) {
-		Expression<String> expr = cv.getConstraint() ;
-		return addConstraint(expr);
-		
+		return addConstraint(cv.getConstraint());
+	}	
+	
+
+	protected boolean checkConstraintisInFM(Expression<String> cnf) {
+		Set<String> features = features().names() ;
+		Set<String> featuresOfCNF = new HashSet<String>();
+		findFeatures(cnf, featuresOfCNF);
+		return features.containsAll(featuresOfCNF);
+	}
+
+	private void findFeatures(Expression<String> expr, Set<String> acc) {
+		if (expr == null)
+			return;
+		if (expr.getType() == ExpressionType.FEATURE) {
+			String ft = expr.getFeature();
+			if (ft != null)
+				acc.add(ft);
+			return;
+		}
+
+		// iff, implies, and, not : binary
+		findFeatures(expr.getLeft(), acc);
+		findFeatures(expr.getRight(), acc);
+
 	}
 	
-	public boolean addConstraint(Expression<String> expr) {
-		return getFm().addConstraint(expr);
+	public boolean addConstraint(Expression<String> e) {
+		boolean isIn = checkConstraintisInFM(e);
+		if (isIn) {
+			return getFm().addConstraint(e);
+		} 
+		return false;
 		
 	}
 

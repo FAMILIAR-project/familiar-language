@@ -1,4 +1,0 @@
-[[a(aa,aa,[null,0,0]),a(aa,ab,[null,0,1]),a(aa,ac,[null,0,1]),a(ab,aa,[null,0,1]),a(ab,ab,[null,1,2]),a(ab,ac,[null,0,2]),a(ac,aa,[null,0,1]),a(ac,ab,[null,0,2]),a(ac,ac,[null,1,2])],[put_atts(AR0 ,ftAttr(aa)),
-put_atts(AR1 ,ftAttr(ab)),
-put_atts(AR2 ,ftAttr(ac))
-],[AR0,AR1,AR2],[and(AR0,[AR1]),opt(AR0,[AR2]),AR0= 1],200,'0',[ff],_,yes,yes,0,'fm'].

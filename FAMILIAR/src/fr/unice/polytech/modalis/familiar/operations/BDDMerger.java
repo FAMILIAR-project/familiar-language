@@ -122,13 +122,14 @@ public class BDDMerger {
 				Expression<String> nf = new Expression<String>(
 						ExpressionType.NOT, new Expression<String>(
 								featNotIncluded), null);
+				fm.addFreeVariableToRoot(featNotIncluded);
 				fm.addConstraint(nf);
 				// DONT REMOVE
 				// the following line is deprecated but we observed speed up: 1000%!!!! when recompiling the formula
 				//fm.getDiagram().addFreeVariable(featNotIncluded); 
 			}
 			
-			fm.fixFreeVariables() ; 
+			//fm.fixFreeVariables() ; 
 
 			// check
 			// _LOGGER.debug("\tafter negated=" +
@@ -232,7 +233,7 @@ public class BDDMerger {
 			// ser.toString(fm));
 
 			// TODO: free variable
-			String rootName = fm.root().name();
+			//String rootName = fm.root().name();
 			for (String featNotIncluded : diff) {
 				Expression<String> nf = new Expression<String>(featNotIncluded);
 				nf = nf.not();
@@ -262,12 +263,12 @@ public class BDDMerger {
 				 * 
 				 * }
 				 */
-
+				fm.addFreeVariableToRoot(featNotIncluded);
 				fm.addConstraint(nf);
 
 			}
 			
-			fm.fixFreeVariables() ; 
+			//fm.fixFreeVariables() ; 
 
 			// fm = FeatureModelParser.parseString(fm.toString()) ;
 			// check

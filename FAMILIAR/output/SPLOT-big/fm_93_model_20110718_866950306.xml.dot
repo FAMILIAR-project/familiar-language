@@ -2,8 +2,8 @@ digraph{
 graph [rankdir=TB];
 node [shape=box];
 edge [arrowhead=normal];
-0[label="agenda",]
-1[label="Preco",]
+0[label="Preco",]
+1[label="agenda",]
 2[label="Numero",]
 3[label="Website",]
 4[label="Variavel",]

@@ -20,6 +20,7 @@
 package fr.unice.polytech.modalis.familiar.parser;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -115,7 +116,7 @@ public class AggregatorAnalyzer extends FMLAbstractCommandAnalyzer {
 		// process constraints
 		SetCommand cstCmd = aggCmd.getMapping();
 		
-		List<Expression<String>> constraints = new ArrayList<Expression<String>>();
+		Set<Expression<String>> constraints = new HashSet<Expression<String>>();
 		if (cstCmd != null) {
 			SetVariable vs = _environment.parseSetCommand(cstCmd,
 					null);

@@ -287,7 +287,7 @@ public class FMLMergeAndAggregateTest extends FMLSlicerUtilityTest {
 										)),
 										Arrays.asList(new String[] { "FM (A : B C D E G S ; E : M N O ; D : P Q R I J T U V W ; )" }) },*/
 									
-						 {
+						/* scale {
 									Arrays.asList(mkInputFMs(275, 
 											new String[] { "FM (A : (B|C|D)+ ; D : (I|J)+ ; )",
 											"FM (A : (B|D|E) ; D : [I] ; E : M N O [J] ; I -> E ;  )",
@@ -295,7 +295,7 @@ public class FMLMergeAndAggregateTest extends FMLSlicerUtilityTest {
 											"FM (A : (B|G)+ [I] S ; )",
 											"FM (A : (B|D|E|C) ; D : (I|J) T U V W; )", }									
 									)),
-									Arrays.asList(new String[] { "FM (A : B C D E G S ; E : M N O ; D : P Q R I J T U V W ; )" }) },
+									Arrays.asList(new String[] { "FM (A : B C D E G S ; E : M N O ; D : P Q R I J T U V W ; )" }) },*/
 
 				});
 	}

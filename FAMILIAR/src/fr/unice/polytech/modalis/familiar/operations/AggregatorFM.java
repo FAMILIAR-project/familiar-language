@@ -5,6 +5,7 @@ package fr.unice.polytech.modalis.familiar.operations;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import org.apache.log4j.Logger;
 
@@ -48,7 +49,7 @@ public class AggregatorFM {
 	 */
 	public FeatureModelVariable build(
 			List<FeatureModelVariable> lfmvs,
-			List<Expression<String>> constraints, String fakeRootName) {
+			Set<Expression<String>> constraints, String fakeRootName) {
 
 		List<FeatureModel<String>> lfms = new ArrayList<FeatureModel<String>>();
 		for (FeatureModelVariable fmv : lfmvs) {
@@ -68,7 +69,7 @@ public class AggregatorFM {
 	 */
 	private FeatureModelVariable aggregate(
 			List<FeatureModel<String>> lfms,
-			List<Expression<String>> constraints, String fakeRootName) {
+			Set<Expression<String>> constraints, String fakeRootName) {
 
 		FeatureModel<String> aggregatedFM = FMBuilder.getInternalFM(fakeRootName + " ;");
 
@@ -162,11 +163,15 @@ public class AggregatorFM {
 		FeatureModelVariable rFM = new FeatureModelVariable("", aggregatedFM);
 		
 		_LOGGER.debug("constraints=" + constraints);
+	
+		// FIXME: 
+		rFM.addAllConstraints(constraints); // should be better but here we negate when needs be
+		/*
 		for (Expression<String> constraint : constraints) {
 			ConstraintInternBinder binder = new ConstraintInternBinder(
 					constraint);
 			binder.bind(rFM);
-		}
+		}*/
 //		rFM.fixFreeVariables() ; 
 
 		// reparses

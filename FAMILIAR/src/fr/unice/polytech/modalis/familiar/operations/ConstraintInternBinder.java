@@ -33,6 +33,7 @@ import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import gsd.synthesis.Expression;
 import gsd.synthesis.ExpressionType;
 
+@Deprecated
 public class ConstraintInternBinder {
 	
 	

@@ -23,10 +23,12 @@ import org.xtext.example.mydsl.fML.AddConstraint;
 import org.xtext.example.mydsl.fML.Command;
 import org.xtext.example.mydsl.fML.FMCommand;
 
+import fr.unice.polytech.modalis.familiar.operations.ConstraintInternBinder;
 import fr.unice.polytech.modalis.familiar.variable.BooleanVariable;
 import fr.unice.polytech.modalis.familiar.variable.ConstraintVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import fr.unice.polytech.modalis.familiar.variable.RType;
+import gsd.synthesis.Expression;
 
 /**
  * @author mathieuacher add an internal constraint to a feature model raise an
@@ -87,11 +89,15 @@ public class AddConstraintAnalyzer extends FMLAbstractCommandAnalyzer {
 		ConstraintVariable cv = _environment.parseConstraint(addCstCmd.getCst(), null);
 		
 		boolean bound = fmv.addConstraint(cv);
+		
+		// DEPRECATED version
 		/*
-		 * DEPRECATED version
 		Expression<String> expression = cv.getConstraint() ;
 		ConstraintInternBinder binder = new ConstraintInternBinder(expression);
-		boolean bound = binder.bind(fmv);*/
+		boolean bound = binder.bind(fmv);
+		*/
+		
+		
 
 		setVariable(new BooleanVariable(_assigner, bound));
 			

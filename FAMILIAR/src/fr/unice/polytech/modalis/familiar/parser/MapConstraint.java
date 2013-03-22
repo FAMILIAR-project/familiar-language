@@ -107,9 +107,7 @@ public class MapConstraint extends FMLAbstractCommandAnalyzer {
 		lfmv.add(fmv);
 		boolean isCorrect = true;
 		for (Expression<String> constraint : constraints) {
-			ConstraintInternBinder binder = new ConstraintInternBinder(
-					constraint);
-			if (!binder.bind(fmv))
+			if (!fmv.addConstraint(constraint))
 				isCorrect = false;
 		}
 
