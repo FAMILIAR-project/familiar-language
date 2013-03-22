@@ -84,11 +84,28 @@ public class PacogenLauncher {
 
 	public void launchPacogen()
 	{
-		if(System.getProperty("os.name").equals("Linux") && System.getProperty("os.arch").equals("amd64") )
-		{
-
 		
-	 File pac = new File("Pacogen") ;
+		String pacogenFilename = null ; 
+		
+		
+		if(System.getProperty("os.name").equals("Linux") && System.getProperty("os.arch").equals("amd64"))
+		{
+			pacogenFilename = "Pacogen" ;
+		}
+		else if(isOSX())
+		{
+			pacogenFilename = "PacogenForMacOS" ;
+		}
+		else
+		{
+			FMLShell.getInstance().printError("Sorry your architecture is not supported") ;
+			return ; 
+		}
+		
+		assert (pacogenFilename != null); 
+		
+		File pac = new File (pacogenFilename);		
+	  
 		if(pac.exists())
 		{
 			 File sol = new File("solution.txt") ;
@@ -112,8 +129,8 @@ public class PacogenLauncher {
 		Runtime runtime = Runtime.getRuntime();
 		try {
 		
-			runtime.exec("chmod +x Pacogen");
-			Process p = runtime.exec("./Pacogen") ;
+			runtime.exec("chmod +x " + pacogenFilename);
+			Process p = runtime.exec("./" + pacogenFilename) ;
 			try {
 				p.waitFor();
 			} catch (InterruptedException e) {
@@ -142,13 +159,20 @@ public class PacogenLauncher {
 		{
 			FMLShell.getInstance().printError("Pacogen Runtime is missing") ;
 		}
-		}else
-		{
-			FMLShell.getInstance().printError("Sorry your architecture is not supported") ;
-		}
+		
 	}
 		
 	
+	/**
+	 * TODO move to another place 
+	 * https://developer.apple.com/library/mac/#technotes/tn2002/tn2110.html
+	 * @return
+	 */
+	public static boolean isOSX() {
+		String osName = System.getProperty("os.name");
+		return osName.contains("OS X");
+	}
+
 	public void launchPacogenBug()
 	{
 				 
