@@ -138,19 +138,25 @@ public class PacogenLauncher {
 				e.printStackTrace();
 			}
 			
+			if(!sol.exists())
+			{
+				FMLShell.getInstance().printError("An error with pacogen occured, please report a bug on github with the associated feature model") ;
+			}
+			else
+			{
 			LinkedList<String> configLst = solutionReader();
 			int i = 0 ;
 			Set<Variable> LstConf = new HashSet<Variable>();
 			for (Iterator<String> iterator = configLst.iterator(); iterator.hasNext();) {
 				String string = (String) iterator.next();
-				System.out.println(string);
-				
-				
 				LstConf.add(confBuilder(string, LstFt, i)) ;
 			}
 			
 		SetVariable stVar = new SetVariable(LstConf, "pwConfig")	;
 		testConfig	= stVar;
+		mod.delete() ;
+		sol.delete() ;
+			}
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -173,38 +179,15 @@ public class PacogenLauncher {
 		return osName.contains("OS X");
 	}
 
-	public void launchPacogenBug()
-	{
-				 
-		SplotAdapter splAdapt = new SplotAdapter() ;
-		splAdapt.parse(fm.toSPLOT());
-		fr.pacogen.model.treeStructure.FeatureModel FmPaco = splAdapt.getModel() ;
-
-	String LstFt = FmPaco.getFeatureLst();
-		outputgenerator(FmPaco); 
-	
-		Set<Variable> LstConf = new HashSet<Variable>();
-				
-		LstConf.add(confBuilder("1,1,1,1,1,1,1,1,0,1,0", LstFt, 0)) ;
-			
-			
-		SetVariable stVar = new SetVariable(LstConf, "pwConfig")	;
-		testConfig	= stVar;
-}
-		
 		
 	private ConfigurationVariable confBuilder(String ConfigPaco, String LstFt, int ConfNb)
 	{
-		System.out.println(ConfNb);
 		ConfigurationVariableSPLOTImpl Ci = new ConfigurationVariableSPLOTImpl(fm, "c" + Integer.toString(ConfNb)) ;
-		System.out.println(fm);
 		Collection<String> varcoll = Ci.getUnselected() ;
-		System.out.println("la");
-		
 		for (String variable : varcoll) {
 			System.out.println(variable);
 		}
-		System.out.println("Finla");
+		
 		String[] FtTab = LstFt.split(",");
 		String[] confTab = ConfigPaco.split(",");
 		
