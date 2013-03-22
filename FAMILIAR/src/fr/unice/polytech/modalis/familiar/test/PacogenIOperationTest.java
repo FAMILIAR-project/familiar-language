@@ -56,7 +56,7 @@ public class PacogenIOperationTest extends FMLTest {
 		PacogenLauncher pacop = new PacogenLauncher(fm1) ;
 	
 	//	String dot = fm1.toDOT();
-		pacop.launchPacogenBug() ;
+		//pacop.launchPacogenBug() ;
 		
 
 		
