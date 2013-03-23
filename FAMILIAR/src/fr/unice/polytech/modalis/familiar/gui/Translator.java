@@ -24,10 +24,19 @@
  */
 package fr.unice.polytech.modalis.familiar.gui;
 
-import fr.unice.polytech.modalis.familiar.fm.FeatureModelCloner;
+import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
+import fr.unice.polytech.modalis.familiar.operations.CNFtoExpression;
+import fr.unice.polytech.modalis.familiar.operations.ImplicationGraphUtil;
+import fr.unice.polytech.modalis.familiar.parser.AtomicConstraintExprAnalyzer;
+import fr.unice.polytech.modalis.familiar.parser.FMLAbstractCommandAnalyzer;
+import fr.unice.polytech.modalis.familiar.parser.FMLCommandInterpreter;
+import fr.unice.polytech.modalis.familiar.parser.MyExpressionParser;
+import fr.unice.polytech.modalis.familiar.variable.ConstraintVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
+import fr.unice.polytech.modalis.familiar.variable.SetVariable;
+import fr.unice.polytech.modalis.familiar.variable.Variable;
 import gsd.synthesis.Expression;
-import gsd.synthesis.ExpressionUtil;
+import gsd.synthesis.ExpressionType;
 import gsd.synthesis.FeatureEdge;
 import gsd.synthesis.FeatureGraph;
 import gsd.synthesis.FeatureModel;
@@ -37,6 +46,13 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Observable;
 import java.util.Set;
+
+import org.xtext.example.mydsl.fML.AtomicConstraintExpr;
+import org.xtext.example.mydsl.fML.CNF;
+import org.xtext.example.mydsl.fML.Command;
+import org.xtext.example.mydsl.fML.FMCommand;
+import org.xtext.example.mydsl.fML.GetConstraints;
+import org.xtext.example.mydsl.fML.KindOfGet;
 
 import prefuse.data.Node;
 
@@ -55,31 +71,6 @@ public class Translator extends Observable {
 			return false;
 		}
 		return null != fn;
-	}
-	
-	// Verify if FM has well-formed rules. For example, a constraint referring to
-	// a feature that is not part of the feature model. 
-	private boolean isConstraintValid(FeatureModelVariable fmv, Expression<String> constr) {
-		FeatureModel<String> validateFm = null;
-		try {
-			FeatureModelVariable fmv2 = (FeatureModelVariable) fmv.copy();
-			fmv2.removeAllConstraints();
-			fmv2.getFm().addConstraint(constr);
-			validateFm = FeatureModelCloner.clone(fmv2.getFm());
-
-			Set<Expression<String>> constraints = validateFm.getConstraints();
-			for (Expression<String> expression : constraints) {
-				Set<String> features = ExpressionUtil.getAllFeatures(expression);
-				for (String feature : features) {
-					if (!containsFeature(fmv2.getFm().getDiagram(), feature)) {
-						return false;
-					}
-				}
-			}
-		} catch (Exception e) {
-			return false;
-		}
-		return true;
 	}
 	
 	public void changedFmv(FeatureModelVariable fmv) {
@@ -261,12 +252,8 @@ public class Translator extends Observable {
 			FamiliarConsole.INSTANCE.setMessage("Error: Adding a new constraint to a FM with single feature is not allowed.");
 			return null;
 		}
-		Expression<String> expr = new Expression<String>(constrStr);
-		if (!isConstraintValid(fmv, expr)) {
-			return null;
-		}
 		
-		boolean result = fmv.getFm().addConstraint(expr);
+		boolean result = fmv.addConstraint(MyExpressionParser.parseString(constrStr));
 		if (!fmv.isValid() || !result) {
 			return null;
 		}
@@ -279,12 +266,8 @@ public class Translator extends Observable {
 			return null;
 		}
 		
-		Expression<String> newExpr = new Expression<String>(newConstr);
-		if (null == fmv || !isConstraintValid(fmv, newExpr)) {
-			return null;
-		}
 		if (removeConstraint(fmv.getFm(), oldConstr)) {
-			boolean result = fmv.getFm().addConstraint(newExpr);
+			boolean result = fmv.addConstraint(MyExpressionParser.parseString(newConstr));
 			if (!fmv.isValid() || !result) {
 				return null;
 			}
@@ -367,4 +350,12 @@ public class Translator extends Observable {
 		}
 		return fmv;
 	}
+	
+	/*private boolean str2Constraint(String strConst) {
+		FMLAbstractCommandAnalyzer parser = AtomicConstraintExprAnalyzer(null, null, null, null);
+		AtomicConstraintExpr cstCmd = (AtomicConstraintExpr) parser;
+		CNF cnf = cstCmd.getExpr() ; 
+		Expression<String> expr = new CNFtoExpression(cnf).convert();
+
+	}*/
 } // end of class Translator
