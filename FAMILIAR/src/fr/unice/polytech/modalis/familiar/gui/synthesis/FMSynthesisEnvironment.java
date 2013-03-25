@@ -57,13 +57,18 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 	@Override
 	public void update(Observable o, Object arg) {
 		fmViewer.updateFM(synthesizer.getFeatureModelVariable());
-		bigViewer.updateBIG(synthesizer.getImplicationGraph());
+		bigViewer.updateBIG(synthesizer.getWeightedImplicationGraph());
 		parentSelector.updateParents(synthesizer.getParentCandidates());
 		Set<Set<String>> similarityClusters = synthesizer.getSimilarityClusters();
 		if (similarityClusters != null) {
 			clusterViewer.updateSimilarityClusters(similarityClusters);	
 		}
 		cliqueViewer.updateCliques(synthesizer.getCliques());
+		
+		Set<Set<String>> supportClusters = synthesizer.getSupportClusters();
+		if (supportClusters != null) {
+			clusterViewer.updateClusters(supportClusters);	
+		}
 	}
 
 	public void selectParent(String child, String parent) {

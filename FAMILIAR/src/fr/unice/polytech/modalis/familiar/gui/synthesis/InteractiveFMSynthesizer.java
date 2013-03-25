@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Observable;
 import java.util.Set;
 
+
+
 import ch.usi.inf.sape.hac.dendrogram.Dendrogram;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.clustering.FMExperiment;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.clustering.HierarchicalFeatureClusterer;
@@ -16,6 +18,9 @@ import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.MetricNa
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.SimmetricsMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.mst.OptimumBranchingFinder;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.mst.WeightedImplicationGraph;
+import fr.unice.polytech.modalis.familiar.operations.measures.cliques.BIGCliques_Threshold1;
+import fr.unice.polytech.modalis.familiar.operations.measures.cliques.BIGCliques_Threshold2;
+import fr.unice.polytech.modalis.familiar.operations.measures.cliques.BIGCliques_Threshold3;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import gsd.graph.DirectedCliqueFinder;
 import gsd.graph.ImplicationGraph;
@@ -39,6 +44,7 @@ public class InteractiveFMSynthesizer extends Observable{
 
 	private FeatureSimilarityMetric clusteringSimilarityMetric;
 	private Set<Set<String>> similarityClusters;
+	private List<Set<Set<String>>> supportClusters;
 	private double clusteringThreshold;
 
 	public InteractiveFMSynthesizer(FeatureModelVariable fmv) {
@@ -158,7 +164,11 @@ public class InteractiveFMSynthesizer extends Observable{
 		this.clusteringThreshold = threshold;
 		computeClusters();
 	}
-
+	
+	public void setSupportClusteringParameters(double threshold) {
+		this.clusteringThreshold = threshold;
+		computeSupportClusters();
+	}
 	/**
 	 * Compute clusters according to the previously specified similarity metric and threshold
 	 */
@@ -170,7 +180,25 @@ public class InteractiveFMSynthesizer extends Observable{
 		setChanged();
 		notifyObservers();
 	}
-
+	private void computeSupportClusters() {
+		supportClusters = new ArrayList<Set<Set<String>>>();
+		
+		BIGCliques_Threshold1 cliques1 = new BIGCliques_Threshold1();
+		cliques1.updateBIG(big);
+		supportClusters.add(cliques1.getCliques());
+		
+		BIGCliques_Threshold2 cliques2 = new BIGCliques_Threshold2();
+		cliques2.updateBIG(big);
+		supportClusters.add(cliques2.getCliques());
+		
+		BIGCliques_Threshold3 cliques3 = new BIGCliques_Threshold3();
+		cliques3.updateBIG(big);
+		supportClusters.add(cliques3.getCliques());
+		
+		setChanged();
+		notifyObservers();
+		
+	}
 	/**
 	 * Return similarity clusters or null if they have not been computed yet
 	 * @return
@@ -178,7 +206,10 @@ public class InteractiveFMSynthesizer extends Observable{
 	public Set<Set<String>> getSimilarityClusters() {
 		return similarityClusters;
 	}
-
+	
+	public List<Set<Set<String>>> getSupportClusters() {
+		return supportClusters;
+	}
 	public List<Set<String>> getCliques() {
 		return DirectedCliqueFinder.INSTANCE.findAll(big.getImplicationGraph());
 	}
@@ -243,5 +274,9 @@ public class InteractiveFMSynthesizer extends Observable{
 
 	public FeatureSimilarityMetric getClusteringSimilarityMetric() {
 		return clusteringSimilarityMetric;
+	}
+
+	public WeightedImplicationGraph<String> getWeightedImplicationGraph() {
+		return big;
 	}
 }
