@@ -163,7 +163,7 @@ public class MergeAggregateAnalyzer extends MergeAnalyzer {
 		for (FeatureModelVariable fm : fmsToMerge)
 			_lfmvs.add((FeatureModelVariable) fm.copy());
 
-		if (mergeCmd.getMode() == MergeMode.SUNION)
+		if (mergeCmd.getMode() == MergeMode.SUNION || mergeCmd.getMode() == MergeMode.UNION)
 			_mode = Mode.StrictUnion;
 		else if (mergeCmd.getMode() == MergeMode.INTER)
 			_mode = Mode.Intersection;

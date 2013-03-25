@@ -165,13 +165,14 @@ public class AggregatorFM {
 		_LOGGER.debug("constraints=" + constraints);
 	
 		// FIXME: 
-		rFM.addAllConstraints(constraints); // should be better but here we negate when needs be
-		/*
+		//rFM.addAllConstraints(constraints); // should be better but here we negate when needs be
+		
+		// FIXME
 		for (Expression<String> constraint : constraints) {
 			ConstraintInternBinder binder = new ConstraintInternBinder(
 					constraint);
 			binder.bind(rFM);
-		}*/
+		}
 //		rFM.fixFreeVariables() ; 
 
 		// reparses

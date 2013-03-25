@@ -225,7 +225,7 @@ public class MergeAnalyzer extends FMLAbstractCommandAnalyzer {
 		assert (_lfms.size() > 0);
 		/******* end (the list fmsToMerge is populated) ***********/
 
-		if (mergeCmd.getMode() == MergeMode.SUNION)
+		if (mergeCmd.getMode() == MergeMode.SUNION || mergeCmd.getMode() == MergeMode.UNION)
 			_mode = Mode.StrictUnion;
 		else if (mergeCmd.getMode() == MergeMode.INTER)
 			_mode = Mode.Intersection;
