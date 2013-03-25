@@ -9,22 +9,18 @@ import java.util.Observable;
 import java.util.Observer;
 import java.util.Set;
 
-import javax.swing.BoxLayout;
 import javax.swing.ButtonGroup;
-import javax.swing.JButton;
-import javax.swing.JDialog;
-import javax.swing.JLabel;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JSplitPane;
-import javax.swing.JTextField;
 
+import fr.unice.polytech.modalis.familiar.gui.FamiliarConsole;
 import fr.unice.polytech.modalis.familiar.gui.Tab2EnvVar;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.FeatureSimilarityMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.MetricName;
+import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 
 public class FMSynthesisEnvironment extends JPanel implements Observer{
 
@@ -101,7 +97,12 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 	}
 
 	public void computeCompleteFeatureModel() {
-		synthesizer.computeCompleteFeatureModel();
+		FeatureModelVariable computedFM = synthesizer.computeCompleteFeatureModel();
+		FamiliarConsole.INSTANCE.addOrReplaceFMVariable(computedFM);
+		FMPanel fmPanel = new FMPanel();
+		System.out.println(computedFM.toDOT());
+		fmPanel.updateFM(computedFM);
+		Tab2EnvVar.INSTANCE.createNewTab(computedFM.getIdentifier(), fmPanel);
 	}
 
 

@@ -39,7 +39,7 @@ public class ThresholdValueDialog {
 		ok.setEnabled(false);
 		cancel = new JButton("Cancel");
 		
-		JOptionPane pane = new JOptionPane(panel, JOptionPane.QUESTION_MESSAGE, JOptionPane.NO_OPTION, null, new JButton[]{ok, cancel}, ok);
+		JOptionPane pane = new JOptionPane(panel, JOptionPane.QUESTION_MESSAGE, JOptionPane.NO_OPTION, null, new JButton[]{cancel, ok}, ok);
 		dialog = pane.createDialog("Clustering threshold");
 		
 		// Set the behaviour of the components
