@@ -34,6 +34,7 @@ public class InteractiveFMSynthesizer extends Observable{
 	
 	private FeatureModelVariable fmv;
 	private WeightedImplicationGraph<String> big;
+	private WeightedImplicationGraph<String> originalBig;
 
 	private FeatureSimilarityMetric parentSimilarityMetric;
 	private FeatureComparator featureComparator;
@@ -46,6 +47,7 @@ public class InteractiveFMSynthesizer extends Observable{
 	public InteractiveFMSynthesizer(FeatureModelVariable fmv) {
 		this.fmv = fmv;
 		big = new WeightedImplicationGraph<String>(fmv.computeImplicationGraph());
+		originalBig = big.clone();
 		//		fmv.setFm(new FeatureModel<String>(FeatureGraphFactory.mkStringFactory().mkTop()));
 
 		setParentSimilarityMetric(new AlwaysZeroMetric());
@@ -68,8 +70,9 @@ public class InteractiveFMSynthesizer extends Observable{
 	 * @param parent
 	 */
 	public void selectParent(String child, String parent) {
-		// Add the edge to the feature graph
 		FeatureGraph<String> graph = fmv.getFm().getDiagram();
+		
+		// Add the edge to the feature graph
 		FeatureNode<String> childNode;
 		try {
 			childNode = graph.findVertex(child);	
@@ -77,7 +80,7 @@ public class InteractiveFMSynthesizer extends Observable{
 			childNode = new FeatureNode<String>(child);
 			graph.addVertex(childNode);
 		}
-
+		
 		FeatureNode<String> parentNode;
 		try {
 			parentNode = graph.findVertex(parent);
@@ -87,11 +90,18 @@ public class InteractiveFMSynthesizer extends Observable{
 		}
 
 		graph.addEdge(childNode, parentNode, FeatureEdge.HIERARCHY);
-
+		
 		// Modify the implication graph to represent this new relation
 		Set<SimpleEdge> removedEdges = new HashSet<SimpleEdge>(big.outgoingEdges(child));
 		removedEdges.remove(big.findEdge(child, parent));
 		big.removeAllEdges(removedEdges);
+		
+		// Remove the old child/parent relation if it exists
+		String selectedParent = getParentOf(child);
+		if (selectedParent != null) {
+			FeatureNode<String> selectedParentNode = graph.findVertex(selectedParent);
+			graph.removeEdge(graph.findEdge(selectedParentNode, selectedParentNode, FeatureEdge.HIERARCHY));
+		}
 
 		setChanged();
 		notifyObservers();
@@ -108,6 +118,13 @@ public class InteractiveFMSynthesizer extends Observable{
 		if (edge != null) {
 			big.removeEdge(edge);
 		}
+		
+		// if there is only one parent remaining, we select it
+		Set<String> parents = big.parents(child);
+		if (parents.size() == 1) {
+			selectParent(child, parents.iterator().next());
+		}
+
 		setChanged();
 		notifyObservers();
 	}
@@ -216,6 +233,14 @@ public class InteractiveFMSynthesizer extends Observable{
 	 * @param root
 	 */
 	public void setRoot(String root) {
+		// Restore the state of the old root if it exist
+		String selectedRoot = getRoot();
+		if (selectedRoot != null) {
+			for (String possibleParent : originalBig.parents(selectedRoot)) {
+				big.addEdge(selectedRoot, possibleParent);
+			}
+		}
+		 
 		// Add an edge to the feature graph to define the node as the root
 		FeatureGraph<String> graph = fmv.getFm().getDiagram();
 		FeatureNode<String> rootNode;
@@ -275,5 +300,34 @@ public class InteractiveFMSynthesizer extends Observable{
 
 	public WeightedImplicationGraph<String> getWeightedImplicationGraph() {
 		return big;
+	}
+	
+	/**
+	 * Returns the parent of the feature if defined, otherwise null
+	 * @param feature
+	 * @return
+	 */
+	public String getParentOf(String feature) {
+		FeatureGraph<String> hierarchy = fmv.getFm().getDiagram();
+		Set<FeatureNode<String>> parents = hierarchy.parents(hierarchy.findVertex(feature));
+		if (parents.isEmpty()) {
+			return null;
+		} else {
+			return parents.iterator().next().getFeature();
+		}
+	}
+
+	/**
+	 * Returns the root of the feature model if defined, otherwise null
+	 * @return
+	 */
+	public String getRoot() {
+		FeatureGraph<String> hierarchy = fmv.getFm().getDiagram();
+		Set<FeatureNode<String>> roots = hierarchy.children(hierarchy.getTopVertex());
+		if (roots.isEmpty()) {
+			return null;
+		} else {
+			return roots.iterator().next().getFeature();
+		}
 	}
 }

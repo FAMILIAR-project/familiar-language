@@ -40,7 +40,7 @@ public class ClusteringMetricSelectionListener implements ActionListener {
 			case WORDNET_WUP:
 				Dictionary dictionary = WordNetPropertyFileChooser.getInstance();
 				if (dictionary != null) {
-					environment.setParentSimilarityMetric(new WuPalmerMetric(dictionary));	
+					environment.setClusteringMetric(new WuPalmerMetric(dictionary));	
 				}
 				break;
 			default:

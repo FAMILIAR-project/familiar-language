@@ -12,6 +12,7 @@ import java.util.Set;
 import javax.swing.ButtonGroup;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JSplitPane;
@@ -72,10 +73,20 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 	}
 
 	public void selectParent(String child, String parent) {
-		synthesizer.selectParent(child, parent);
+		String selectedParent = synthesizer.getParentOf(child);
+		if (selectedParent == null) {
+			synthesizer.selectParent(child, parent);	
+		} else {
+			int choice = JOptionPane.showConfirmDialog(null, 
+					"Do you want to replace the current parent \"" + selectedParent + "\" by \"" + parent + "\"?");
+			if (choice == JOptionPane.YES_OPTION) {
+				synthesizer.selectParent(child, parent);
+			}
+		}
 	}
 
 	public void ignoreParent(String child, String parent) {
+		// TODO : avoid ignoring the last parent
 		synthesizer.ignoreParent(child, parent);
 	}
 
@@ -85,7 +96,17 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 	}
 
 	public void setRoot(String root) {
-		synthesizer.setRoot(root);
+		String selectedRoot = synthesizer.getRoot();
+		if (selectedRoot == null) {
+			synthesizer.setRoot(root);	
+		} else {
+			int choice = JOptionPane.showConfirmDialog(null, 
+					"Do you want to replace the current root \"" + selectedRoot + "\" by \"" + root + "\"?");
+			if (choice == JOptionPane.YES_OPTION) {
+				synthesizer.setRoot(root);
+			}
+		}
+		
 	}
 
 	public void setParentSimilarityMetric(FeatureSimilarityMetric metric) {
