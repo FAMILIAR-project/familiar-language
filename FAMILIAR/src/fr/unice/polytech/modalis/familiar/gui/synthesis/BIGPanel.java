@@ -20,6 +20,7 @@ import org.jgrapht.graph.ListenableDirectedWeightedGraph;
 
 
 
+import fr.unice.polytech.modalis.familiar.operations.heuristics.mst.WeightedImplicationGraph;
 import gsd.graph.ImplicationGraph;
 import gsd.graph.SimpleEdge;
 
@@ -45,7 +46,8 @@ public class BIGPanel extends BIGViewer {
 			this.add(new JScrollPane(this.big_Graph));
 		}
 	@Override
-	public void updateBIG(ImplicationGraph<String> big) {
+	public void updateBIG(WeightedImplicationGraph<String> wbig) {
+		ImplicationGraph<String> big = wbig.getImplicationGraph();
 		for (SimpleEdge edge : big.edges()) {
 			
 			String debut = big.getEdgeSource(edge);

@@ -2,10 +2,10 @@ package fr.unice.polytech.modalis.familiar.gui.synthesis;
 
 import javax.swing.JPanel;
 
-import gsd.graph.ImplicationGraph;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.mst.WeightedImplicationGraph;
 
 public abstract class BIGViewer extends JPanel{
 
-	public abstract void updateBIG(ImplicationGraph<String> big);
+	public abstract void updateBIG(WeightedImplicationGraph<String> big);
 	
 }
