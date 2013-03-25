@@ -65,10 +65,10 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 		}
 		cliqueViewer.updateCliques(synthesizer.getCliques());
 		
-//		List<Set<Set<String>>> supportClusters = synthesizer.getSupportClusters();
-//		if (supportClusters != null) {
-//			clusterViewer.updateClusters(supportClusters);	
-//		}
+		List<Set<Set<String>>> supportClusters = synthesizer.getSupportClusters();
+		if (supportClusters != null) {
+			clusterViewer.updateSupportClusters(supportClusters);	
+		}
 	}
 
 	public void selectParent(String child, String parent) {

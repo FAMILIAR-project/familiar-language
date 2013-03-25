@@ -7,8 +7,6 @@ import java.util.List;
 import java.util.Observable;
 import java.util.Set;
 
-
-
 import ch.usi.inf.sape.hac.dendrogram.Dendrogram;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.clustering.FMExperiment;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.clustering.HierarchicalFeatureClusterer;
@@ -18,9 +16,7 @@ import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.MetricNa
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.SimmetricsMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.mst.OptimumBranchingFinder;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.mst.WeightedImplicationGraph;
-import fr.unice.polytech.modalis.familiar.operations.measures.cliques.BIGCliques_Threshold1;
-import fr.unice.polytech.modalis.familiar.operations.measures.cliques.BIGCliques_Threshold2;
-import fr.unice.polytech.modalis.familiar.operations.measures.cliques.BIGCliques_Threshold3;
+import fr.unice.polytech.modalis.familiar.operations.measures.cliques.BIGCliques_Threshold;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import gsd.graph.DirectedCliqueFinder;
 import gsd.graph.ImplicationGraph;
@@ -54,6 +50,7 @@ public class InteractiveFMSynthesizer extends Observable{
 
 		setParentSimilarityMetric(new AlwaysZeroMetric());
 		setClusteringParameters(new SimmetricsMetric(MetricName.SIMMETRICS_SMITHWATERMAN), 0.4);
+		setSupportClusteringParameters(0);
 		featureComparator = new OutDegreeComparator(big.getImplicationGraph());
 	}
 
@@ -183,17 +180,17 @@ public class InteractiveFMSynthesizer extends Observable{
 	private void computeSupportClusters() {
 		supportClusters = new ArrayList<Set<Set<String>>>();
 		
-		BIGCliques_Threshold1 cliques1 = new BIGCliques_Threshold1();
+		BIGCliques_Threshold cliques1 = new BIGCliques_Threshold(0.2);
 		cliques1.updateBIG(big);
-		supportClusters.add(cliques1.getCliques());
+		supportClusters.add(new HashSet<Set<String>>(cliques1.getCliques()));
 		
-		BIGCliques_Threshold2 cliques2 = new BIGCliques_Threshold2();
+		BIGCliques_Threshold cliques2 = new BIGCliques_Threshold(0.6);
 		cliques2.updateBIG(big);
-		supportClusters.add(cliques2.getCliques());
+		supportClusters.add(new HashSet<Set<String>>(cliques2.getCliques()));
 		
-		BIGCliques_Threshold3 cliques3 = new BIGCliques_Threshold3();
+		BIGCliques_Threshold cliques3 = new BIGCliques_Threshold(0.8);
 		cliques3.updateBIG(big);
-		supportClusters.add(cliques3.getCliques());
+		supportClusters.add(new HashSet<Set<String>>(cliques3.getCliques()));
 		
 		setChanged();
 		notifyObservers();

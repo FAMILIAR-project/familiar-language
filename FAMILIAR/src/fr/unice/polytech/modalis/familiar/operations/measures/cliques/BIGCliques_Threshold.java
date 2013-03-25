@@ -27,17 +27,20 @@ import org.jgrapht.ext.JGraphModelAdapter;
 import org.jgrapht.graph.DefaultWeightedEdge;
 import org.jgrapht.graph.ListenableDirectedWeightedGraph;
 
-public class BIGCliques_Threshold3 extends BIGViewer{
+
+public class BIGCliques_Threshold extends BIGViewer{
 	 private ListenableDirectedWeightedGraph  big_AnalysisGraph; 
 	 private JGraphModelAdapter big_jgAdapter;
 	 protected JGraph big_Graph;
 	 private  static  List<String> existingVertexs = new ArrayList<String>();
 	 private static final Dimension DEFAULT_SIZE = new Dimension( 320, 320 );
 	 private static final Color     DEFAULT_BG_COLOR = Color.decode( "#FAFBFF" );
-	 private Set<Set<String>> cliques;
+	 private Collection<Set<String>> cliques;
+	private double threshold;
 	 
-	 public BIGCliques_Threshold3() {
+	 public BIGCliques_Threshold(double threshold) {
 			
+		this.threshold = threshold;
 		// create a JGraphT FM
 		   this.big_AnalysisGraph = new ListenableDirectedWeightedGraph( DefaultWeightedEdge.class );
 		// create a visualization using JGraph, via an adapter
@@ -55,18 +58,18 @@ public class BIGCliques_Threshold3 extends BIGViewer{
 			String fin = big.getEdgeTarget(edge);
 			String source = seekVertex(debut,big_AnalysisGraph);
 			String destination = seekVertex(fin,big_AnalysisGraph);
-			if(wbig.getEdgeWeight(edge)>=0.8){
+			if(wbig.getEdgeWeight(edge)>=threshold){
 			big_AnalysisGraph.addEdge(source, destination);  
 			}
 	}
-		BronKerboschCliqueFinder finder =  new BronKerboschCliqueFinder(big_AnalysisGraph);
-	    cliques = (Set<Set<String>>) finder.getAllMaximalCliques();
+		BronKerboschCliqueFinder<String, DefaultWeightedEdge> finder =  new BronKerboschCliqueFinder<String, DefaultWeightedEdge>(big_AnalysisGraph);
+	    cliques = finder.getAllMaximalCliques();
 	}
 	 
-	 public Set<Set<String>> getCliques() {
-			return cliques;
+	public Collection<Set<String>> getCliques() {
+		return cliques;
 	}
-	 
+	
 	static  String seekVertex(String v_name, ListenableDirectedWeightedGraph myAnalysisGraph) {
 		
 		 boolean existe = false;
