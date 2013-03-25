@@ -24,7 +24,7 @@ public class FMPanel extends FMViewer{
 	private ListenableUndirectedGraph<FeatureNode<String>, DefaultEdge>  fm_AnalysisGraph; 
 	private JGraphModelAdapter<FeatureNode<String>, DefaultEdge> fm_jgAdapter;
 	protected JGraph fm_Graph;
-	private  static  List<FeatureNode<String>> existingVertexs = new ArrayList<FeatureNode<String>>();
+	private List<FeatureNode<String>> existingVertexs = new ArrayList<FeatureNode<String>>();
 	private static final Dimension DEFAULT_SIZE = new Dimension( 320, 320 );
 	private static final Color     DEFAULT_BG_COLOR = Color.decode( "#FAFBFF" );
 	private FeatureModelVariable lastFM;
@@ -56,7 +56,7 @@ public class FMPanel extends FMViewer{
 			if (edge.getType() == FeatureEdge.HIERARCHY && (last_graph == null || ! last_graph.edges().contains(edge))) {	
 				FeatureNode<String> source = graph.getSource(edge);
 				FeatureNode<String> target = graph.getTarget(edge);
-				if (!target.equals(graph.isTop())) {
+				if (!target.isTop()) {
 					FeatureNode<String> sourceVertex = seekVertex(source.getFeature(), graph);
 					FeatureNode<String> targetVertex = seekVertex(target.getFeature(), graph);
 					this.fm_AnalysisGraph.addEdge(sourceVertex, targetVertex);	
@@ -86,7 +86,7 @@ public class FMPanel extends FMViewer{
 		FeatureNode<String> newNode = null;
 
 		for (FeatureNode<String> n : existingVertexs){
-			if (n.toString().equals(v_name)){
+			if (n.getFeature().equals(v_name)){
 				existe= true;
 				newNode = n;
 				break;

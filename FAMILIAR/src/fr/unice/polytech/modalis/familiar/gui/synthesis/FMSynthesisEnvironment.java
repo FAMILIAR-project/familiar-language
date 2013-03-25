@@ -36,7 +36,7 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 		synthesizer.addObserver(this);
 
 		// Create views
-		fmViewer = new FMPanel();
+		fmViewer = new JGraphXFMViewer();
 		bigViewer = new BIGPanel();
 		parentSelector = new ParentSelector(this);
 		clusterViewer = new ClusterViewer();
@@ -61,7 +61,7 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 		parentSelector.updateParents(synthesizer.getParentCandidates());
 		Set<Set<String>> similarityClusters = synthesizer.getSimilarityClusters();
 		if (similarityClusters != null) {
-			clusterViewer.updateClusters(similarityClusters);	
+			clusterViewer.updateSimilarityClusters(similarityClusters);	
 		}
 		cliqueViewer.updateCliques(synthesizer.getCliques());
 	}
@@ -99,10 +99,10 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 	public void computeCompleteFeatureModel() {
 		FeatureModelVariable computedFM = synthesizer.computeCompleteFeatureModel();
 		FamiliarConsole.INSTANCE.addOrReplaceFMVariable(computedFM);
-		FMPanel fmPanel = new FMPanel();
-		System.out.println(computedFM.toDOT());
-		fmPanel.updateFM(computedFM);
-		Tab2EnvVar.INSTANCE.createNewTab(computedFM.getIdentifier(), fmPanel);
+		FMViewer computedFMViewer = new JGraphXFMViewer();
+		computedFMViewer.updateFM(computedFM);
+		Tab2EnvVar.INSTANCE.createNewTab(computedFM.getIdentifier(), computedFMViewer);
+		
 	}
 
 
