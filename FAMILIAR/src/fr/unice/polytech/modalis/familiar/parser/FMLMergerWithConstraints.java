@@ -12,6 +12,9 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 
+import com.google.common.collect.Sets;
+import com.google.common.collect.Sets.SetView;
+
 import fr.unice.polytech.modalis.familiar.operations.AggregatorFM;
 import fr.unice.polytech.modalis.familiar.operations.ExpressionUtility;
 import fr.unice.polytech.modalis.familiar.operations.FMLMerger;
@@ -88,6 +91,21 @@ public class FMLMergerWithConstraints extends FMLMerger {
 		HierarchyMerger hMerger = HierarchyMergerFactory.mkMerger(_hierarchyMergerStrategy, mode, fla);
 		FeatureModelVariable fmExp = new FeatureModelVariable("", hMerger.build(lfms));
 
+		// first we collect all feature names
+		Set<String> allFts = new HashSet<String>() ;  
+		for (FeatureModelVariable fm : lfms) {
+			allFts.addAll(fm.features().names());			
+		}
+		
+		// we add "free variable" and negate them
+		for (FeatureModelVariable fm : lfms) {
+			Set<String> fts = fm.features().names();
+			Set<String> ftsToNegate = Sets.difference(allFts, fts);
+			for (String ftToNegate : ftsToNegate) {
+				fm.addFreeVariableToRoot(ftToNegate);
+				fm.addConstraint(new Expression<String>(ftToNegate).not());
+			}
+		}
 		
 		/**
 		 * 
@@ -95,17 +113,23 @@ public class FMLMergerWithConstraints extends FMLMerger {
 		 * have an unique name
 		 * 
 		 */
+		
 		List<FeatureModelVariable> primeLfms = new ArrayList<FeatureModelVariable>();
 		Set<String> rootFts = new HashSet<String>();
 		Iterator<FeatureModelVariable> it = lfms.iterator() ; 
 		for (int i = 0; i < lfms.size(); i++) {
 			FeatureModelVariable fmi = it.next(); 
+			allFts.addAll(fmi.features().names());
 			FeatureModelVariable pfm = primeFTs(fmi, i);
 
 			primeLfms.add(pfm);
 			rootFts.add(pfm.root().name());
 		}
 		
+		
+		for (FeatureModelVariable fm : lfms) {
+			
+		}
 		
 
 		/* FMi1 x FMi2 x ... x FMin = FMI */
@@ -154,7 +178,7 @@ public class FMLMergerWithConstraints extends FMLMerger {
 					constraints.add(cstPChild);
 			}
 			else if (mode == Mode.Intersection) {
-				if (ftExprs.size() < lfms.size()) {
+				if (ftExprs.size() < lfms.size()) { // FIXME: very strange (AM)
 					// no corresponding features
 					constraints.add(ftTarget.not());
 					for (Expression<String> ftExpr : ftExprs) {

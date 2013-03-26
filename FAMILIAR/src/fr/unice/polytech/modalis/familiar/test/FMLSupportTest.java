@@ -48,10 +48,10 @@ public class FMLSupportTest extends FMLTest {
 		Collection<SimpleEdge> ed = big.edges() ;
 		for (SimpleEdge e : ed) {
 			
-			phiR=new FeatureModelVariableBDDFormula("", phiR.getFormula().clone(), _builder);
-			System.err.println("phiR before calcul support =" + phiR);
-			getSupport(phiR, big, e, trans_nb);
-			System.err.println("phiR after calcul support =" + phiR + "\n");
+			FeatureModelVariable phiRprime = new FeatureModelVariableBDDFormula("", phiR.getFormula().clone(), _builder);
+			System.err.println("phiR before calcul support =" + phiRprime.getFormula());
+			getSupport(phiRprime, big, e, trans_nb);
+			System.err.println("phiR after calcul support =" + phiRprime + "\n");
 		
 		}
 		
