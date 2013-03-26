@@ -10,6 +10,7 @@ import javax.swing.SwingConstants;
 import com.mxgraph.layout.hierarchical.mxHierarchicalLayout;
 import com.mxgraph.model.mxCell;
 import com.mxgraph.swing.mxGraphComponent;
+import com.mxgraph.util.mxConstants;
 import com.mxgraph.view.mxGraph;
 
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
@@ -50,7 +51,8 @@ public class JGraphXFMViewer extends FMViewer {
 				if (!target.isTop()) {
 					mxCell sourceCell = seekVertex(vertices, source.getFeature());
 					mxCell targetCell = seekVertex(vertices, target.getFeature());
-					graph.insertEdge(graph.getDefaultParent(), null, null, targetCell, sourceCell, "startArrow=none;endArrow=none");	
+					String style = "startArrow=none;endArrow=none";
+					graph.insertEdge(graph.getDefaultParent(), null, null, targetCell, sourceCell, style);	
 				}
 			}
 		}
