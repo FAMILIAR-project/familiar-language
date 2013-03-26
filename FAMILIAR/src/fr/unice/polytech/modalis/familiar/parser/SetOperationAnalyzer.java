@@ -19,6 +19,7 @@
  */
 package fr.unice.polytech.modalis.familiar.parser;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -44,7 +45,12 @@ import fr.unice.polytech.modalis.familiar.variable.SetVariable;
 import fr.unice.polytech.modalis.familiar.variable.StringVariable;
 import fr.unice.polytech.modalis.familiar.variable.Variable;
 
-public class SetOperationAnalyzer extends FMLAbstractCommandAnalyzer {
+/**
+ * TODO we should refactor the Xtext grammar its really weird 
+ * @author macher1
+ *
+ */
+public class SetOperationAnalyzer extends SetOperationParser {
 	
 	private static Logger _LOGGER = Logger.getLogger(SetOperationAnalyzer.class);
 
@@ -331,18 +337,21 @@ public class SetOperationAnalyzer extends FMLAbstractCommandAnalyzer {
 
 		boolean correct = true;
 		if (op.equals("setAdd"))
-			correct = lsw.add(rVar);
+			correct = safeAdd (rVar, lsw); // lsw.add(rVar);
 		else if (op.equals("setRemove"))
-			correct = lsw.remove(rVar);
+			try {
+				correct = safeRemove (rVar, lsw);
+			} catch (Exception e) {
+				FMLShell.getInstance().setError("error when removing " + rVar + " in the set " + lsw);
+				return null;
+			}
 		else {
-			FMLShell.getInstance().setError(
-					"unknown operator " + op + " for adding/removing SET");
+			FMLShell.getInstance().setError("unknown operator " + op + " for adding/removing SET");
 			return null;
 		}
 
 		if (!correct) {
-			FMLShell.getInstance().printWarning(
-					"unable to remove/add variable " + rVar.getVid() + "");
+			_LOGGER.debug("unable to remove/add variable " + rVar.getVid() + "");
 		} else
 			_LOGGER.debug(
 					"succesfully adding/removing variable " + rVar.getVid()
