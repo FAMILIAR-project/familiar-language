@@ -10,7 +10,6 @@ import javax.swing.SwingConstants;
 import com.mxgraph.layout.hierarchical.mxHierarchicalLayout;
 import com.mxgraph.model.mxCell;
 import com.mxgraph.swing.mxGraphComponent;
-import com.mxgraph.util.mxConstants;
 import com.mxgraph.view.mxGraph;
 
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
@@ -29,7 +28,7 @@ public class JGraphXFMViewer extends FMViewer {
 		graph = new mxGraph();
 		layout = new mxHierarchicalLayout(graph, SwingConstants.NORTH);
 		mxGraphComponent graphComponent = new mxGraphComponent(graph);
-		graphComponent.setEnabled(true);
+		graphComponent.setEnabled(false);
 		// Set layout
 		this.setPreferredSize(new Dimension(100, 100));
 		this.setLayout(new GridLayout(1, 1));

@@ -15,8 +15,11 @@ import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
 import javax.swing.JScrollPane;
+import javax.swing.JTextField;
 import javax.swing.JTree;
 import javax.swing.SwingUtilities;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import javax.swing.event.TreeExpansionEvent;
 import javax.swing.event.TreeExpansionListener;
 import javax.swing.tree.DefaultMutableTreeNode;
@@ -24,60 +27,67 @@ import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreePath;
 
 public class ParentSelector extends JPanel {
-	
+
 	private FMSynthesisEnvironment environment;
-	
+
 	private JTree tree;
 	private DefaultTreeModel model;
 	private DefaultMutableTreeNode root;
-	
+
 	private JPopupMenu parentPopupMenu;
 	private JPopupMenu featurePopupMenu;
 	private String lastSelectedParent;
 	private String lastSelectedFeature;
-	
+
 	private Set<String> expandedFeatures;
-	
+
+	private JTextField search;
+
+	private List<KeyValue<String, List<String>>> parentsList;
+
 	public ParentSelector(FMSynthesisEnvironment environment) {
 		this.environment = environment;
-		
+
 		// Create explorer view
 		root = new DefaultMutableTreeNode();
 		model = new DefaultTreeModel(root);
 		tree = new JTree(model);
 		tree.setRootVisible(false);
-		
+		search = new JTextField();
+		search.getDocument().addDocumentListener(new SearchFieldListener());
+
 		// Set layout and add explorer view
 		this.setLayout(new BorderLayout());
 		this.add(new JLabel("Parent selector"), BorderLayout.NORTH);
 		this.add(new JScrollPane(tree), BorderLayout.CENTER);
-		
+		this.add(search, BorderLayout.SOUTH);
+
 		// Create parent popup menu
 		parentPopupMenu = new JPopupMenu();
 		JMenuItem selectParentItem = new JMenuItem("Select this parent");
-		
+
 		selectParentItem.addActionListener(new SelectParentActionListener());
 		parentPopupMenu.add(selectParentItem);
-		
+
 		JMenuItem ignoreParentItem = new JMenuItem("Ignore this parent");
 		ignoreParentItem.addActionListener(new IgnoreParentActionListener());
 		parentPopupMenu.add(ignoreParentItem);
-		
+
 		// Create feature popup menu
 		featurePopupMenu = new JPopupMenu();
 		JMenuItem selectAsRootItem = new JMenuItem("Select as root");
 		selectAsRootItem.addActionListener(new SelectAsRootActionListener());
 		featurePopupMenu.add(selectAsRootItem);
-		
+
 		// Inform selected features
 		tree.addTreeSelectionListener(new SelectedFeaturesListener(environment));
-		
+
 		// Show popup menu		
 		tree.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
 				if (SwingUtilities.isRightMouseButton(e)) {
- 
+
 					int row = tree.getRowForLocation(e.getX(), e.getY());
 					TreePath path = tree.getPathForRow(row);
 					tree.setSelectionRow(row);
@@ -91,46 +101,54 @@ public class ParentSelector extends JPanel {
 							parentPopupMenu.show(tree, e.getX(), e.getY());		
 						}
 					}
-					
+
 				}
 			}
 		});
-		
+
 		// Update list of expanded features
 		expandedFeatures = new HashSet<String>();
 		tree.addTreeExpansionListener(new TreeExpansionListener() {
-			
+
 			@Override
 			public void treeExpanded(TreeExpansionEvent event) {
 				String feature = event.getPath().getLastPathComponent().toString();
 				expandedFeatures.add(feature);
 			}
-			
+
 			@Override
 			public void treeCollapsed(TreeExpansionEvent event) {
 				String feature = event.getPath().getLastPathComponent().toString();
 				expandedFeatures.remove(feature);
 			}
 		});
-		
+
 	}
 
 	public void updateParents(List<KeyValue<String, List<String>>> list) {
+		parentsList = list;
+		updateParents();
+	}
+
+	private void updateParents() {
 		List<TreePath> pathsToExpand = new ArrayList<TreePath>();
 		root.removeAllChildren();
 
-		for (KeyValue<String, List<String>> entry : list) {
-			DefaultMutableTreeNode feature = new DefaultMutableTreeNode(entry.getKey());
-			root.add(feature);
-			for (String parent : entry.getValue()) {
-				feature.add(new DefaultMutableTreeNode(parent));
-			}
-			
-			if (expandedFeatures.contains(entry.getKey())) {
-				pathsToExpand.add(new TreePath(feature.getPath()));
+		for (KeyValue<String, List<String>> entry : parentsList) {
+			String feature = entry.getKey();
+			if (feature.toLowerCase().startsWith(search.getText().toLowerCase())) {
+				DefaultMutableTreeNode featureNode = new DefaultMutableTreeNode(feature);
+				root.add(featureNode);
+				for (String parent : entry.getValue()) {
+					featureNode.add(new DefaultMutableTreeNode(parent));
+				}
+
+				if (expandedFeatures.contains(feature)) {
+					pathsToExpand.add(new TreePath(featureNode.getPath()));
+				}
 			}
 		}
-		
+
 		model.reload();
 
 		// Keep features expanded
@@ -145,23 +163,41 @@ public class ParentSelector extends JPanel {
 			environment.selectParent(lastSelectedFeature, lastSelectedParent);
 		}
 	}
-	
+
 	private class IgnoreParentActionListener implements ActionListener {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			environment.ignoreParent(lastSelectedFeature, lastSelectedParent);
 		}
-		
+
 	}
-	
+
 	private class SelectAsRootActionListener implements ActionListener {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			environment.setRoot(lastSelectedFeature);
 		}
-		
+
 	}
 
+	private class SearchFieldListener implements DocumentListener {
+
+		@Override
+		public void insertUpdate(DocumentEvent e) {
+			updateParents();
+		}
+
+		@Override
+		public void removeUpdate(DocumentEvent e) {
+			updateParents();
+		}
+
+		@Override
+		public void changedUpdate(DocumentEvent e) {
+
+		}
+
+	}
 }
