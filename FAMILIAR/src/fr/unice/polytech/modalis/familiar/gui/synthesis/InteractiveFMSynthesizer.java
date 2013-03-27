@@ -11,7 +11,9 @@ import ch.usi.inf.sape.hac.dendrogram.Dendrogram;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.clustering.FMExperiment;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.clustering.HierarchicalFeatureClusterer;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.AlwaysZeroMetric;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.FeatureFrequencyMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.FeatureSimilarityMetric;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.FrequencyMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.MetricName;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.SimmetricsMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.mst.OptimumBranchingFinder;
@@ -37,6 +39,7 @@ public class InteractiveFMSynthesizer extends Observable{
 	private WeightedImplicationGraph<String> originalBig;
 
 	private FeatureSimilarityMetric parentSimilarityMetric;
+	private FeatureFrequencyMetric featureFrequencyMetric;
 	private FeatureComparator featureComparator;
 
 	private FeatureSimilarityMetric clusteringSimilarityMetric;
@@ -70,9 +73,9 @@ public class InteractiveFMSynthesizer extends Observable{
 	 * @param child
 	 * @param parent
 	 */
-	public void selectParent(String child, String parent) {
+	
+public void selectParent(String child, String parent) {
 		FeatureGraph<String> graph = fmv.getFm().getDiagram();
-
 		FeatureNode<String> childNode;
 		try {
 			childNode = graph.findVertex(child);	
@@ -171,7 +174,20 @@ public class InteractiveFMSynthesizer extends Observable{
 		setChanged();
 		notifyObservers();
 	}
-
+	
+	public void selectFeatureFrequencyMetric() {
+		featureFrequencyMetric = new FrequencyMetric (fmv);
+		
+		for (SimpleEdge edge : big.edges()) {
+			String source = big.getSource(edge);
+			String target = big.getTarget(edge);
+			double weight = featureFrequencyMetric.support(source, target);
+			big.setEdgeWeight(edge, weight);
+			
+		}
+		setChanged();
+		notifyObservers();
+	}
 	/**
 	 * Set clustering parameters and compute clusters
 	 * @param clusteringSimilarityMetric

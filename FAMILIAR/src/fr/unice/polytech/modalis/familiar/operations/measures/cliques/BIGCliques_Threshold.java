@@ -53,13 +53,16 @@ public class BIGCliques_Threshold extends BIGViewer{
 	 @Override
 		public void updateBIG(WeightedImplicationGraph wbig) {
 		ImplicationGraph<String> big = wbig.getImplicationGraph();
+		Map<SimpleEdge, Double> weights = wbig.getWeights();
 		for (SimpleEdge edge : big.edges()) {
 			String debut = big.getEdgeSource(edge);
 			String fin = big.getEdgeTarget(edge);
 			String source = seekVertex(debut,big_AnalysisGraph);
 			String destination = seekVertex(fin,big_AnalysisGraph);
 			if(wbig.getEdgeWeight(edge)>=threshold){
-			big_AnalysisGraph.addEdge(source, destination);  
+			big_AnalysisGraph.addEdge(source, destination); 
+			SimpleEdge e = (SimpleEdge) big_AnalysisGraph.getEdge(source, destination);
+			big_AnalysisGraph.setEdgeWeight(e, weights.get(e));
 			}
 	}
 		BronKerboschCliqueFinder<String, DefaultWeightedEdge> finder =  new BronKerboschCliqueFinder<String, DefaultWeightedEdge>(big_AnalysisGraph);
