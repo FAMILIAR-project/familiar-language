@@ -48,7 +48,7 @@ public class InteractiveFMSynthesizer extends Observable{
 		this.fmv = fmv;
 		big = new WeightedImplicationGraph<String>(fmv.computeImplicationGraph());
 		originalBig = big.clone();
-		//		fmv.setFm(new FeatureModel<String>(FeatureGraphFactory.mkStringFactory().mkTop()));
+				fmv.setFm(new FeatureModel<String>(FeatureGraphFactory.mkStringFactory().mkTop()));
 
 		setParentSimilarityMetric(new AlwaysZeroMetric());
 		setClusteringParameters(new SimmetricsMetric(MetricName.SIMMETRICS_SMITHWATERMAN), 0.4);
@@ -184,6 +184,7 @@ public class InteractiveFMSynthesizer extends Observable{
 		this.clusteringThreshold = threshold;
 		computeSupportClusters();
 	}
+	
 	/**
 	 * Compute clusters according to the previously specified similarity metric and threshold
 	 */
@@ -195,6 +196,7 @@ public class InteractiveFMSynthesizer extends Observable{
 		setChanged();
 		notifyObservers();
 	}
+	
 	private void computeSupportClusters() {
 		supportClusters = new ArrayList<Set<Set<String>>>();
 
@@ -242,13 +244,10 @@ public class InteractiveFMSynthesizer extends Observable{
 			for (String possibleParent : originalBig.parents(selectedRoot)) {
 				big.addEdge(selectedRoot, possibleParent);
 			}
+			FeatureNode<String> selectedRootNode = graph.findVertex(selectedRoot);
+			graph.removeEdge(graph.findEdge(selectedRootNode, graph.getTopVertex(), FeatureEdge.HIERARCHY));
 		}
-		FeatureNode<String> selectedRootNode = graph.findVertex(selectedRoot);
-		graph.removeEdge(graph.findEdge(selectedRootNode, graph.getTopVertex(), FeatureEdge.HIERARCHY));
 
-		// TODO : remove the current parent of the new root
-		
-		// Add an edge to the feature graph to define the node as the root
 		FeatureNode<String> rootNode;
 		try {
 			rootNode = graph.findVertex(root);	
@@ -256,7 +255,13 @@ public class InteractiveFMSynthesizer extends Observable{
 			rootNode = new FeatureNode<String>(root);
 			graph.addVertex(rootNode);
 		}
+		
+		// Remove the current parent of the new root		
+		for (FeatureNode<String> parent : graph.parents(rootNode)) {
+			graph.removeEdge(graph.findEdge(rootNode, parent, FeatureEdge.HIERARCHY));
+		}
 
+		// Add an edge to the feature graph to define the node as the root
 		graph.addEdge(rootNode, graph.getTopVertex(), FeatureEdge.HIERARCHY);
 
 		// Delete every outgoing edges of the root node in the implication graph
@@ -314,13 +319,21 @@ public class InteractiveFMSynthesizer extends Observable{
 	 * @return
 	 */
 	public String getParentOf(String feature) {
+		String parent = null;
 		FeatureGraph<String> hierarchy = fmv.getFm().getDiagram();
-		Set<FeatureNode<String>> parents = hierarchy.parents(hierarchy.findVertex(feature));
-		if (parents.isEmpty()) {
-			return null;
-		} else {
-			return parents.iterator().next().getFeature();
+		FeatureNode<String> featureNode = null;
+		try {
+			featureNode = hierarchy.findVertex(feature);	
+		} catch (IllegalArgumentException e) {
+			
 		}
+		if (featureNode != null) {
+			Set<FeatureNode<String>> parents = hierarchy.parents(featureNode);
+			if (!parents.isEmpty()) {
+				parent = parents.iterator().next().getFeature();
+			}	
+		}
+		return parent;
 	}
 
 	/**
@@ -335,5 +348,20 @@ public class InteractiveFMSynthesizer extends Observable{
 		} else {
 			return roots.iterator().next().getFeature();
 		}
+	}
+
+	/**
+	 * Returns the possible children among the cluster's features
+	 * @param feature
+	 * @param cluster
+	 */
+	public Set<String> getPossibleChildren(String feature, Set<String> cluster) {
+		Set<String> possibleChildren = new HashSet<String>();
+		for (String possibleChild : cluster) {
+			if (big.containsEdge(possibleChild, feature)) {
+				possibleChildren.add(possibleChild);
+			}
+		}
+		return possibleChildren;
 	}
 }

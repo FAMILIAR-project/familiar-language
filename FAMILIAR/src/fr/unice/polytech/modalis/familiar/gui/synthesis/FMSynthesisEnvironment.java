@@ -40,7 +40,7 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 		fmViewer = new JGraphXFMViewer();
 		bigViewer = new BIGPanel();
 		parentSelector = new ParentSelector(this);
-		clusterViewer = new ClusterViewer();
+		clusterViewer = new ClusterViewer(this);
 		cliqueViewer = new CliqueViewer();
 
 		// Set layout
@@ -78,7 +78,7 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 			synthesizer.selectParent(child, parent);	
 		} else {
 			int choice = JOptionPane.showConfirmDialog(null, 
-					"Do you want to replace the current parent \"" + selectedParent + "\" by \"" + parent + "\"?");
+					"Do you want to replace the current parent \"" + selectedParent + "\" of \"" + child + "\" by \"" + parent + "\"?");
 			if (choice == JOptionPane.YES_OPTION) {
 				synthesizer.selectParent(child, parent);
 			}
@@ -213,6 +213,29 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 		Tab2EnvVar.INSTANCE.getTab().addChangeListener(new SynthesisTabListener(synthesisMenu));
 
 		return synthesisMenu;
+	}
+
+
+	public void selectClusterParent(Set<String> cluster) {
+		// TODO : select children
+		// TODO : determine possible parents
+		// TODO : select parent
+		
+	}
+
+
+	public void selectFeatureAsParentOf(String feature, Set<String> cluster) {
+		Set<String> possibleChildren = synthesizer.getPossibleChildren(feature, cluster);
+		if (possibleChildren.isEmpty()) {
+			JOptionPane.showMessageDialog(null, "\"" + feature + "\" can not be a parent of one of these features.");
+		} else {
+			Set<String> selectedChildren = CheckBoxDialog.showCheckBoxDialog(
+					"Select the children of \"" + feature + "\"", 
+					possibleChildren, possibleChildren);
+			for (String possibleChild : selectedChildren) {
+				this.selectParent(possibleChild, feature);
+			}
+		}
 	}
 
 

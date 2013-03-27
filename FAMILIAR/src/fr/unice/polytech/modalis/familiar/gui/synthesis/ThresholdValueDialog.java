@@ -43,8 +43,8 @@ public class ThresholdValueDialog {
 		dialog = pane.createDialog("Clustering threshold");
 		
 		// Set the behaviour of the components
-		ok.addActionListener(new ButtonListener(dialog));
-		cancel.addActionListener(new ButtonListener(dialog));
+		ok.addActionListener(new ButtonListener());
+		cancel.addActionListener(new ButtonListener());
 		
 		// Display the dialog
 		dialog.setVisible(true);
@@ -61,9 +61,6 @@ public class ThresholdValueDialog {
 
 	private class ButtonListener implements ActionListener {
 		
-
-		public ButtonListener(JDialog dialog) {
-		}
 
 		@Override
 		public void actionPerformed(ActionEvent e) {

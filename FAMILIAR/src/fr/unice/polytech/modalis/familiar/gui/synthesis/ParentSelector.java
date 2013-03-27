@@ -64,8 +64,8 @@ public class ParentSelector extends JPanel {
 
 		// Create parent popup menu
 		parentPopupMenu = new JPopupMenu();
+		
 		JMenuItem selectParentItem = new JMenuItem("Select this parent");
-
 		selectParentItem.addActionListener(new SelectParentActionListener());
 		parentPopupMenu.add(selectParentItem);
 
@@ -136,7 +136,7 @@ public class ParentSelector extends JPanel {
 
 		for (KeyValue<String, List<String>> entry : parentsList) {
 			String feature = entry.getKey();
-			if (feature.toLowerCase().startsWith(search.getText().toLowerCase())) {
+			if (feature.toLowerCase().contains(search.getText().toLowerCase())) {
 				DefaultMutableTreeNode featureNode = new DefaultMutableTreeNode(feature);
 				root.add(featureNode);
 				for (String parent : entry.getValue()) {
