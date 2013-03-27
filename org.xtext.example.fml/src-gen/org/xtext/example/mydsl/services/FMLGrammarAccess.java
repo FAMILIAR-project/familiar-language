@@ -2654,56 +2654,78 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "AggregateMerge");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cAggregateMergeKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cModeAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cModeMergeModeEnumRuleCall_1_0 = (RuleCall)cModeAssignment_1.eContents().get(0);
-		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
-		private final Group cGroup_2_0 = (Group)cAlternatives_2.eContents().get(0);
-		private final RuleCall cLEFT_BRACKETTerminalRuleCall_2_0_0 = (RuleCall)cGroup_2_0.eContents().get(0);
-		private final Assignment cLfmsAssignment_2_0_1 = (Assignment)cGroup_2_0.eContents().get(1);
-		private final RuleCall cLfmsFMCommandParserRuleCall_2_0_1_0 = (RuleCall)cLfmsAssignment_2_0_1.eContents().get(0);
-		private final RuleCall cRIGHT_BRACKETTerminalRuleCall_2_0_2 = (RuleCall)cGroup_2_0.eContents().get(2);
-		private final Assignment cFmsAssignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
-		private final RuleCall cFmsLFMArgsParserRuleCall_2_1_0 = (RuleCall)cFmsAssignment_2_1.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Assignment cHierarchySpecifiedAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
+		private final Keyword cHierarchySpecifiedHierarchyKeyword_1_0_0 = (Keyword)cHierarchySpecifiedAssignment_1_0.eContents().get(0);
+		private final Assignment cHierarchyStrategyAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cHierarchyStrategyHierarchyStrategyEnumRuleCall_1_1_0 = (RuleCall)cHierarchyStrategyAssignment_1_1.eContents().get(0);
+		private final Assignment cModeAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cModeMergeModeEnumRuleCall_2_0 = (RuleCall)cModeAssignment_2.eContents().get(0);
+		private final Alternatives cAlternatives_3 = (Alternatives)cGroup.eContents().get(3);
+		private final Group cGroup_3_0 = (Group)cAlternatives_3.eContents().get(0);
+		private final RuleCall cLEFT_BRACKETTerminalRuleCall_3_0_0 = (RuleCall)cGroup_3_0.eContents().get(0);
+		private final Assignment cLfmsAssignment_3_0_1 = (Assignment)cGroup_3_0.eContents().get(1);
+		private final RuleCall cLfmsFMCommandParserRuleCall_3_0_1_0 = (RuleCall)cLfmsAssignment_3_0_1.eContents().get(0);
+		private final RuleCall cRIGHT_BRACKETTerminalRuleCall_3_0_2 = (RuleCall)cGroup_3_0.eContents().get(2);
+		private final Assignment cFmsAssignment_3_1 = (Assignment)cAlternatives_3.eContents().get(1);
+		private final RuleCall cFmsLFMArgsParserRuleCall_3_1_0 = (RuleCall)cFmsAssignment_3_1.eContents().get(0);
 		
 		//AggregateMerge:
-		//	"aggregateMerge" mode=MergeMode (LEFT_BRACKET lfms+=FMCommand+ RIGHT_BRACKET | fms=LFMArgs);
+		//	"aggregateMerge" (hierarchySpecified?="--hierarchy=" hierarchyStrategy=HierarchyStrategy)? mode=MergeMode
+		//	(LEFT_BRACKET lfms+=FMCommand+ RIGHT_BRACKET | fms=LFMArgs);
 		public ParserRule getRule() { return rule; }
 
-		//"aggregateMerge" mode=MergeMode (LEFT_BRACKET lfms+=FMCommand+ RIGHT_BRACKET | fms=LFMArgs)
+		//"aggregateMerge" (hierarchySpecified?="--hierarchy=" hierarchyStrategy=HierarchyStrategy)? mode=MergeMode (LEFT_BRACKET
+		//lfms+=FMCommand+ RIGHT_BRACKET | fms=LFMArgs)
 		public Group getGroup() { return cGroup; }
 
 		//"aggregateMerge"
 		public Keyword getAggregateMergeKeyword_0() { return cAggregateMergeKeyword_0; }
 
+		//(hierarchySpecified?="--hierarchy=" hierarchyStrategy=HierarchyStrategy)?
+		public Group getGroup_1() { return cGroup_1; }
+
+		//hierarchySpecified?="--hierarchy="
+		public Assignment getHierarchySpecifiedAssignment_1_0() { return cHierarchySpecifiedAssignment_1_0; }
+
+		//"--hierarchy="
+		public Keyword getHierarchySpecifiedHierarchyKeyword_1_0_0() { return cHierarchySpecifiedHierarchyKeyword_1_0_0; }
+
+		//hierarchyStrategy=HierarchyStrategy
+		public Assignment getHierarchyStrategyAssignment_1_1() { return cHierarchyStrategyAssignment_1_1; }
+
+		//HierarchyStrategy
+		public RuleCall getHierarchyStrategyHierarchyStrategyEnumRuleCall_1_1_0() { return cHierarchyStrategyHierarchyStrategyEnumRuleCall_1_1_0; }
+
 		//mode=MergeMode
-		public Assignment getModeAssignment_1() { return cModeAssignment_1; }
+		public Assignment getModeAssignment_2() { return cModeAssignment_2; }
 
 		//MergeMode
-		public RuleCall getModeMergeModeEnumRuleCall_1_0() { return cModeMergeModeEnumRuleCall_1_0; }
+		public RuleCall getModeMergeModeEnumRuleCall_2_0() { return cModeMergeModeEnumRuleCall_2_0; }
 
 		//LEFT_BRACKET lfms+=FMCommand+ RIGHT_BRACKET | fms=LFMArgs
-		public Alternatives getAlternatives_2() { return cAlternatives_2; }
+		public Alternatives getAlternatives_3() { return cAlternatives_3; }
 
 		//LEFT_BRACKET lfms+=FMCommand+ RIGHT_BRACKET
-		public Group getGroup_2_0() { return cGroup_2_0; }
+		public Group getGroup_3_0() { return cGroup_3_0; }
 
 		//LEFT_BRACKET
-		public RuleCall getLEFT_BRACKETTerminalRuleCall_2_0_0() { return cLEFT_BRACKETTerminalRuleCall_2_0_0; }
+		public RuleCall getLEFT_BRACKETTerminalRuleCall_3_0_0() { return cLEFT_BRACKETTerminalRuleCall_3_0_0; }
 
 		//lfms+=FMCommand+
-		public Assignment getLfmsAssignment_2_0_1() { return cLfmsAssignment_2_0_1; }
+		public Assignment getLfmsAssignment_3_0_1() { return cLfmsAssignment_3_0_1; }
 
 		//FMCommand
-		public RuleCall getLfmsFMCommandParserRuleCall_2_0_1_0() { return cLfmsFMCommandParserRuleCall_2_0_1_0; }
+		public RuleCall getLfmsFMCommandParserRuleCall_3_0_1_0() { return cLfmsFMCommandParserRuleCall_3_0_1_0; }
 
 		//RIGHT_BRACKET
-		public RuleCall getRIGHT_BRACKETTerminalRuleCall_2_0_2() { return cRIGHT_BRACKETTerminalRuleCall_2_0_2; }
+		public RuleCall getRIGHT_BRACKETTerminalRuleCall_3_0_2() { return cRIGHT_BRACKETTerminalRuleCall_3_0_2; }
 
 		//fms=LFMArgs
-		public Assignment getFmsAssignment_2_1() { return cFmsAssignment_2_1; }
+		public Assignment getFmsAssignment_3_1() { return cFmsAssignment_3_1; }
 
 		//LFMArgs
-		public RuleCall getFmsLFMArgsParserRuleCall_2_1_0() { return cFmsLFMArgsParserRuleCall_2_1_0; }
+		public RuleCall getFmsLFMArgsParserRuleCall_3_1_0() { return cFmsLFMArgsParserRuleCall_3_1_0; }
 	}
 
 	public class SynthesisElements extends AbstractParserRuleElementFinder {
@@ -3158,64 +3180,74 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Aggregate");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cAggregateKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
-		private final Group cGroup_1_0 = (Group)cAlternatives_1.eContents().get(0);
-		private final RuleCall cLEFT_BRACKETTerminalRuleCall_1_0_0 = (RuleCall)cGroup_1_0.eContents().get(0);
-		private final Assignment cFmsAssignment_1_0_1 = (Assignment)cGroup_1_0.eContents().get(1);
-		private final RuleCall cFmsFMCommandParserRuleCall_1_0_1_0 = (RuleCall)cFmsAssignment_1_0_1.eContents().get(0);
-		private final RuleCall cRIGHT_BRACKETTerminalRuleCall_1_0_2 = (RuleCall)cGroup_1_0.eContents().get(2);
-		private final Assignment cSfmsAssignment_1_1 = (Assignment)cAlternatives_1.eContents().get(1);
-		private final RuleCall cSfmsIdentifierExprParserRuleCall_1_1_0 = (RuleCall)cSfmsAssignment_1_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cWithMappingKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cMappingAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cMappingSetCommandParserRuleCall_2_1_0 = (RuleCall)cMappingAssignment_2_1.eContents().get(0);
+		private final Assignment cRenamingsAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final Keyword cRenamingsRenamingsKeyword_1_0 = (Keyword)cRenamingsAssignment_1.eContents().get(0);
+		private final Alternatives cAlternatives_2 = (Alternatives)cGroup.eContents().get(2);
+		private final Group cGroup_2_0 = (Group)cAlternatives_2.eContents().get(0);
+		private final RuleCall cLEFT_BRACKETTerminalRuleCall_2_0_0 = (RuleCall)cGroup_2_0.eContents().get(0);
+		private final Assignment cFmsAssignment_2_0_1 = (Assignment)cGroup_2_0.eContents().get(1);
+		private final RuleCall cFmsFMCommandParserRuleCall_2_0_1_0 = (RuleCall)cFmsAssignment_2_0_1.eContents().get(0);
+		private final RuleCall cRIGHT_BRACKETTerminalRuleCall_2_0_2 = (RuleCall)cGroup_2_0.eContents().get(2);
+		private final Assignment cSfmsAssignment_2_1 = (Assignment)cAlternatives_2.eContents().get(1);
+		private final RuleCall cSfmsIdentifierExprParserRuleCall_2_1_0 = (RuleCall)cSfmsAssignment_2_1.eContents().get(0);
+		private final Group cGroup_3 = (Group)cGroup.eContents().get(3);
+		private final Keyword cWithMappingKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final Assignment cMappingAssignment_3_1 = (Assignment)cGroup_3.eContents().get(1);
+		private final RuleCall cMappingSetCommandParserRuleCall_3_1_0 = (RuleCall)cMappingAssignment_3_1.eContents().get(0);
 		
 		//Aggregate:
-		//	"aggregate" (LEFT_BRACKET fms+=FMCommand+ RIGHT_BRACKET | sfms=IdentifierExpr) ("withMapping" mapping=SetCommand)?;
+		//	"aggregate" renamings?="--renamings"? (LEFT_BRACKET fms+=FMCommand+ RIGHT_BRACKET | sfms=IdentifierExpr)
+		//	("withMapping" mapping=SetCommand)?;
 		public ParserRule getRule() { return rule; }
 
-		//"aggregate" (LEFT_BRACKET fms+=FMCommand+ RIGHT_BRACKET | sfms=IdentifierExpr) ("withMapping" mapping=SetCommand)?
+		//"aggregate" renamings?="--renamings"? (LEFT_BRACKET fms+=FMCommand+ RIGHT_BRACKET | sfms=IdentifierExpr) ("withMapping"
+		//mapping=SetCommand)?
 		public Group getGroup() { return cGroup; }
 
 		//"aggregate"
 		public Keyword getAggregateKeyword_0() { return cAggregateKeyword_0; }
 
+		//renamings?="--renamings"?
+		public Assignment getRenamingsAssignment_1() { return cRenamingsAssignment_1; }
+
+		//"--renamings"
+		public Keyword getRenamingsRenamingsKeyword_1_0() { return cRenamingsRenamingsKeyword_1_0; }
+
 		//LEFT_BRACKET fms+=FMCommand+ RIGHT_BRACKET | sfms=IdentifierExpr
-		public Alternatives getAlternatives_1() { return cAlternatives_1; }
+		public Alternatives getAlternatives_2() { return cAlternatives_2; }
 
 		//LEFT_BRACKET fms+=FMCommand+ RIGHT_BRACKET
-		public Group getGroup_1_0() { return cGroup_1_0; }
+		public Group getGroup_2_0() { return cGroup_2_0; }
 
 		//LEFT_BRACKET
-		public RuleCall getLEFT_BRACKETTerminalRuleCall_1_0_0() { return cLEFT_BRACKETTerminalRuleCall_1_0_0; }
+		public RuleCall getLEFT_BRACKETTerminalRuleCall_2_0_0() { return cLEFT_BRACKETTerminalRuleCall_2_0_0; }
 
 		//fms+=FMCommand+
-		public Assignment getFmsAssignment_1_0_1() { return cFmsAssignment_1_0_1; }
+		public Assignment getFmsAssignment_2_0_1() { return cFmsAssignment_2_0_1; }
 
 		//FMCommand
-		public RuleCall getFmsFMCommandParserRuleCall_1_0_1_0() { return cFmsFMCommandParserRuleCall_1_0_1_0; }
+		public RuleCall getFmsFMCommandParserRuleCall_2_0_1_0() { return cFmsFMCommandParserRuleCall_2_0_1_0; }
 
 		//RIGHT_BRACKET
-		public RuleCall getRIGHT_BRACKETTerminalRuleCall_1_0_2() { return cRIGHT_BRACKETTerminalRuleCall_1_0_2; }
+		public RuleCall getRIGHT_BRACKETTerminalRuleCall_2_0_2() { return cRIGHT_BRACKETTerminalRuleCall_2_0_2; }
 
 		//sfms=IdentifierExpr
-		public Assignment getSfmsAssignment_1_1() { return cSfmsAssignment_1_1; }
+		public Assignment getSfmsAssignment_2_1() { return cSfmsAssignment_2_1; }
 
 		//IdentifierExpr
-		public RuleCall getSfmsIdentifierExprParserRuleCall_1_1_0() { return cSfmsIdentifierExprParserRuleCall_1_1_0; }
+		public RuleCall getSfmsIdentifierExprParserRuleCall_2_1_0() { return cSfmsIdentifierExprParserRuleCall_2_1_0; }
 
 		//("withMapping" mapping=SetCommand)?
-		public Group getGroup_2() { return cGroup_2; }
+		public Group getGroup_3() { return cGroup_3; }
 
 		//"withMapping"
-		public Keyword getWithMappingKeyword_2_0() { return cWithMappingKeyword_2_0; }
+		public Keyword getWithMappingKeyword_3_0() { return cWithMappingKeyword_3_0; }
 
 		//mapping=SetCommand
-		public Assignment getMappingAssignment_2_1() { return cMappingAssignment_2_1; }
+		public Assignment getMappingAssignment_3_1() { return cMappingAssignment_3_1; }
 
 		//SetCommand
-		public RuleCall getMappingSetCommandParserRuleCall_2_1_0() { return cMappingSetCommandParserRuleCall_2_1_0; }
+		public RuleCall getMappingSetCommandParserRuleCall_3_1_0() { return cMappingSetCommandParserRuleCall_3_1_0; }
 	}
 
 	public class FeatureModelOperationElements extends AbstractParserRuleElementFinder {
@@ -5914,6 +5946,42 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getDIFFDiffKeyword_4_0() { return cDIFFDiffKeyword_4_0; }
 	}
 
+	public class HierarchyStrategyElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "HierarchyStrategy");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cBASICEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cBASICBasicKeyword_0_0 = (Keyword)cBASICEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cFLATEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cFLATFlatKeyword_1_0 = (Keyword)cFLATEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cMSTEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cMSTMstKeyword_2_0 = (Keyword)cMSTEnumLiteralDeclaration_2.eContents().get(0);
+		
+		//enum HierarchyStrategy:
+		//	BASIC="basic" | FLAT="flat" | MST="mst";
+		public EnumRule getRule() { return rule; }
+
+		//BASIC="basic" | FLAT="flat" | MST="mst"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//BASIC="basic"
+		public EnumLiteralDeclaration getBASICEnumLiteralDeclaration_0() { return cBASICEnumLiteralDeclaration_0; }
+
+		//"basic"
+		public Keyword getBASICBasicKeyword_0_0() { return cBASICBasicKeyword_0_0; }
+
+		//FLAT="flat"
+		public EnumLiteralDeclaration getFLATEnumLiteralDeclaration_1() { return cFLATEnumLiteralDeclaration_1; }
+
+		//"flat"
+		public Keyword getFLATFlatKeyword_1_0() { return cFLATFlatKeyword_1_0; }
+
+		//MST="mst"
+		public EnumLiteralDeclaration getMSTEnumLiteralDeclaration_2() { return cMSTEnumLiteralDeclaration_2; }
+
+		//"mst"
+		public Keyword getMSTMstKeyword_2_0() { return cMSTMstKeyword_2_0; }
+	}
+
 	public class SliceModeElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "SliceMode");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -6334,6 +6402,7 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 	private MergeModeElements unknownRuleMergeMode;
 	private LFMArgsElements pLFMArgs;
 	private AggregateMergeElements pAggregateMerge;
+	private HierarchyStrategyElements unknownRuleHierarchyStrategy;
 	private SynthesisElements pSynthesis;
 	private KnowledgeSpecificationElements pKnowledgeSpecification;
 	private HierarchySpecificationElements pHierarchySpecification;
@@ -7250,13 +7319,24 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//AggregateMerge:
-	//	"aggregateMerge" mode=MergeMode (LEFT_BRACKET lfms+=FMCommand+ RIGHT_BRACKET | fms=LFMArgs);
+	//	"aggregateMerge" (hierarchySpecified?="--hierarchy=" hierarchyStrategy=HierarchyStrategy)? mode=MergeMode
+	//	(LEFT_BRACKET lfms+=FMCommand+ RIGHT_BRACKET | fms=LFMArgs);
 	public AggregateMergeElements getAggregateMergeAccess() {
 		return (pAggregateMerge != null) ? pAggregateMerge : (pAggregateMerge = new AggregateMergeElements());
 	}
 	
 	public ParserRule getAggregateMergeRule() {
 		return getAggregateMergeAccess().getRule();
+	}
+
+	//enum HierarchyStrategy:
+	//	BASIC="basic" | FLAT="flat" | MST="mst";
+	public HierarchyStrategyElements getHierarchyStrategyAccess() {
+		return (unknownRuleHierarchyStrategy != null) ? unknownRuleHierarchyStrategy : (unknownRuleHierarchyStrategy = new HierarchyStrategyElements());
+	}
+	
+	public EnumRule getHierarchyStrategyRule() {
+		return getHierarchyStrategyAccess().getRule();
 	}
 
 	/// *
@@ -7395,7 +7475,8 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Aggregate:
-	//	"aggregate" (LEFT_BRACKET fms+=FMCommand+ RIGHT_BRACKET | sfms=IdentifierExpr) ("withMapping" mapping=SetCommand)?;
+	//	"aggregate" renamings?="--renamings"? (LEFT_BRACKET fms+=FMCommand+ RIGHT_BRACKET | sfms=IdentifierExpr)
+	//	("withMapping" mapping=SetCommand)?;
 	public AggregateElements getAggregateAccess() {
 		return (pAggregate != null) ? pAggregate : (pAggregate = new AggregateElements());
 	}

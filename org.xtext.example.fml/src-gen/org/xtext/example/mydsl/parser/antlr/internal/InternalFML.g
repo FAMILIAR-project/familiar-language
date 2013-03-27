@@ -5309,64 +5309,97 @@ ruleAggregateMerge returns [EObject current=null]
     {
     	newLeafNode(otherlv_0, grammarAccess.getAggregateMergeAccess().getAggregateMergeKeyword_0());
     }
+((
 (
+		lv_hierarchySpecified_1_0=	'--hierarchy=' 
+    {
+        newLeafNode(lv_hierarchySpecified_1_0, grammarAccess.getAggregateMergeAccess().getHierarchySpecifiedHierarchyKeyword_1_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getAggregateMergeRule());
+	        }
+       		setWithLastConsumed($current, "hierarchySpecified", true, "--hierarchy=");
+	    }
+
+)
+)(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getAggregateMergeAccess().getModeMergeModeEnumRuleCall_1_0()); 
+	        newCompositeNode(grammarAccess.getAggregateMergeAccess().getHierarchyStrategyHierarchyStrategyEnumRuleCall_1_1_0()); 
 	    }
-		lv_mode_1_0=ruleMergeMode		{
+		lv_hierarchyStrategy_2_0=ruleHierarchyStrategy		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getAggregateMergeRule());
+	        }
+       		set(
+       			$current, 
+       			"hierarchyStrategy",
+        		lv_hierarchyStrategy_2_0, 
+        		"HierarchyStrategy");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))?(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getAggregateMergeAccess().getModeMergeModeEnumRuleCall_2_0()); 
+	    }
+		lv_mode_3_0=ruleMergeMode		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getAggregateMergeRule());
 	        }
        		set(
        			$current, 
        			"mode",
-        		lv_mode_1_0, 
+        		lv_mode_3_0, 
         		"MergeMode");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)((this_LEFT_BRACKET_2=RULE_LEFT_BRACKET
+)((this_LEFT_BRACKET_4=RULE_LEFT_BRACKET
     { 
-    newLeafNode(this_LEFT_BRACKET_2, grammarAccess.getAggregateMergeAccess().getLEFT_BRACKETTerminalRuleCall_2_0_0()); 
+    newLeafNode(this_LEFT_BRACKET_4, grammarAccess.getAggregateMergeAccess().getLEFT_BRACKETTerminalRuleCall_3_0_0()); 
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getAggregateMergeAccess().getLfmsFMCommandParserRuleCall_2_0_1_0()); 
+	        newCompositeNode(grammarAccess.getAggregateMergeAccess().getLfmsFMCommandParserRuleCall_3_0_1_0()); 
 	    }
-		lv_lfms_3_0=ruleFMCommand		{
+		lv_lfms_5_0=ruleFMCommand		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getAggregateMergeRule());
 	        }
        		add(
        			$current, 
        			"lfms",
-        		lv_lfms_3_0, 
+        		lv_lfms_5_0, 
         		"FMCommand");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)+this_RIGHT_BRACKET_4=RULE_RIGHT_BRACKET
+)+this_RIGHT_BRACKET_6=RULE_RIGHT_BRACKET
     { 
-    newLeafNode(this_RIGHT_BRACKET_4, grammarAccess.getAggregateMergeAccess().getRIGHT_BRACKETTerminalRuleCall_2_0_2()); 
+    newLeafNode(this_RIGHT_BRACKET_6, grammarAccess.getAggregateMergeAccess().getRIGHT_BRACKETTerminalRuleCall_3_0_2()); 
     }
 )
     |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getAggregateMergeAccess().getFmsLFMArgsParserRuleCall_2_1_0()); 
+	        newCompositeNode(grammarAccess.getAggregateMergeAccess().getFmsLFMArgsParserRuleCall_3_1_0()); 
 	    }
-		lv_fms_5_0=ruleLFMArgs		{
+		lv_fms_7_0=ruleLFMArgs		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getAggregateMergeRule());
 	        }
        		set(
        			$current, 
        			"fms",
-        		lv_fms_5_0, 
+        		lv_fms_7_0, 
         		"LFMArgs");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -6143,68 +6176,83 @@ ruleAggregate returns [EObject current=null]
     {
     	newLeafNode(otherlv_0, grammarAccess.getAggregateAccess().getAggregateKeyword_0());
     }
-((this_LEFT_BRACKET_1=RULE_LEFT_BRACKET
+(
+(
+		lv_renamings_1_0=	'--renamings' 
+    {
+        newLeafNode(lv_renamings_1_0, grammarAccess.getAggregateAccess().getRenamingsRenamingsKeyword_1_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getAggregateRule());
+	        }
+       		setWithLastConsumed($current, "renamings", true, "--renamings");
+	    }
+
+)
+)?((this_LEFT_BRACKET_2=RULE_LEFT_BRACKET
     { 
-    newLeafNode(this_LEFT_BRACKET_1, grammarAccess.getAggregateAccess().getLEFT_BRACKETTerminalRuleCall_1_0_0()); 
+    newLeafNode(this_LEFT_BRACKET_2, grammarAccess.getAggregateAccess().getLEFT_BRACKETTerminalRuleCall_2_0_0()); 
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getAggregateAccess().getFmsFMCommandParserRuleCall_1_0_1_0()); 
+	        newCompositeNode(grammarAccess.getAggregateAccess().getFmsFMCommandParserRuleCall_2_0_1_0()); 
 	    }
-		lv_fms_2_0=ruleFMCommand		{
+		lv_fms_3_0=ruleFMCommand		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getAggregateRule());
 	        }
        		add(
        			$current, 
        			"fms",
-        		lv_fms_2_0, 
+        		lv_fms_3_0, 
         		"FMCommand");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)+this_RIGHT_BRACKET_3=RULE_RIGHT_BRACKET
+)+this_RIGHT_BRACKET_4=RULE_RIGHT_BRACKET
     { 
-    newLeafNode(this_RIGHT_BRACKET_3, grammarAccess.getAggregateAccess().getRIGHT_BRACKETTerminalRuleCall_1_0_2()); 
+    newLeafNode(this_RIGHT_BRACKET_4, grammarAccess.getAggregateAccess().getRIGHT_BRACKETTerminalRuleCall_2_0_2()); 
     }
 )
     |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getAggregateAccess().getSfmsIdentifierExprParserRuleCall_1_1_0()); 
+	        newCompositeNode(grammarAccess.getAggregateAccess().getSfmsIdentifierExprParserRuleCall_2_1_0()); 
 	    }
-		lv_sfms_4_0=ruleIdentifierExpr		{
+		lv_sfms_5_0=ruleIdentifierExpr		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getAggregateRule());
 	        }
        		set(
        			$current, 
        			"sfms",
-        		lv_sfms_4_0, 
+        		lv_sfms_5_0, 
         		"IdentifierExpr");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-))(	otherlv_5='withMapping' 
+))(	otherlv_6='withMapping' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getAggregateAccess().getWithMappingKeyword_2_0());
+    	newLeafNode(otherlv_6, grammarAccess.getAggregateAccess().getWithMappingKeyword_3_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getAggregateAccess().getMappingSetCommandParserRuleCall_2_1_0()); 
+	        newCompositeNode(grammarAccess.getAggregateAccess().getMappingSetCommandParserRuleCall_3_1_0()); 
 	    }
-		lv_mapping_6_0=ruleSetCommand		{
+		lv_mapping_7_0=ruleSetCommand		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getAggregateRule());
 	        }
        		set(
        			$current, 
        			"mapping",
-        		lv_mapping_6_0, 
+        		lv_mapping_7_0, 
         		"SetCommand");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -10476,6 +10524,31 @@ ruleMergeMode returns [Enumerator current=null]
 	{
         $current = grammarAccess.getMergeModeAccess().getDIFFEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
         newLeafNode(enumLiteral_4, grammarAccess.getMergeModeAccess().getDIFFEnumLiteralDeclaration_4()); 
+    }
+));
+
+
+
+// Rule HierarchyStrategy
+ruleHierarchyStrategy returns [Enumerator current=null] 
+    @init { enterRule(); }
+    @after { leaveRule(); }:
+((	enumLiteral_0='basic' 
+	{
+        $current = grammarAccess.getHierarchyStrategyAccess().getBASICEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_0, grammarAccess.getHierarchyStrategyAccess().getBASICEnumLiteralDeclaration_0()); 
+    }
+)
+    |(	enumLiteral_1='flat' 
+	{
+        $current = grammarAccess.getHierarchyStrategyAccess().getFLATEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_1, grammarAccess.getHierarchyStrategyAccess().getFLATEnumLiteralDeclaration_1()); 
+    }
+)
+    |(	enumLiteral_2='mst' 
+	{
+        $current = grammarAccess.getHierarchyStrategyAccess().getMSTEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_2, grammarAccess.getHierarchyStrategyAccess().getMSTEnumLiteralDeclaration_2()); 
     }
 ));
 

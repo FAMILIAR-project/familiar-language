@@ -12,6 +12,8 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link org.xtext.example.mydsl.fML.AggregateMerge#isHierarchySpecified <em>Hierarchy Specified</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.fML.AggregateMerge#getHierarchyStrategy <em>Hierarchy Strategy</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.fML.AggregateMerge#getMode <em>Mode</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.fML.AggregateMerge#getLfms <em>Lfms</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.fML.AggregateMerge#getFms <em>Fms</em>}</li>
@@ -24,6 +26,61 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface AggregateMerge extends Command, FMCommand
 {
+  /**
+   * Returns the value of the '<em><b>Hierarchy Specified</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Hierarchy Specified</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Hierarchy Specified</em>' attribute.
+   * @see #setHierarchySpecified(boolean)
+   * @see org.xtext.example.mydsl.fML.FMLPackage#getAggregateMerge_HierarchySpecified()
+   * @model
+   * @generated
+   */
+  boolean isHierarchySpecified();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.mydsl.fML.AggregateMerge#isHierarchySpecified <em>Hierarchy Specified</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Hierarchy Specified</em>' attribute.
+   * @see #isHierarchySpecified()
+   * @generated
+   */
+  void setHierarchySpecified(boolean value);
+
+  /**
+   * Returns the value of the '<em><b>Hierarchy Strategy</b></em>' attribute.
+   * The literals are from the enumeration {@link org.xtext.example.mydsl.fML.HierarchyStrategy}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Hierarchy Strategy</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Hierarchy Strategy</em>' attribute.
+   * @see org.xtext.example.mydsl.fML.HierarchyStrategy
+   * @see #setHierarchyStrategy(HierarchyStrategy)
+   * @see org.xtext.example.mydsl.fML.FMLPackage#getAggregateMerge_HierarchyStrategy()
+   * @model
+   * @generated
+   */
+  HierarchyStrategy getHierarchyStrategy();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.mydsl.fML.AggregateMerge#getHierarchyStrategy <em>Hierarchy Strategy</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Hierarchy Strategy</em>' attribute.
+   * @see org.xtext.example.mydsl.fML.HierarchyStrategy
+   * @see #getHierarchyStrategy()
+   * @generated
+   */
+  void setHierarchyStrategy(HierarchyStrategy value);
+
   /**
    * Returns the value of the '<em><b>Mode</b></em>' attribute.
    * The literals are from the enumeration {@link org.xtext.example.mydsl.fML.MergeMode}.

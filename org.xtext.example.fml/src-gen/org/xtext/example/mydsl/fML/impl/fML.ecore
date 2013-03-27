@@ -292,11 +292,18 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AggregateMerge" eSuperTypes="#//Command #//FMCommand">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hierarchySpecified" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="hierarchyStrategy" eType="#//HierarchyStrategy"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mode" eType="#//MergeMode"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="lfms" upperBound="-1" eType="#//FMCommand"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="fms" eType="#//LFMArgs"
         containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="HierarchyStrategy">
+    <eLiterals name="BASIC" literal="basic"/>
+    <eLiterals name="FLAT" value="1" literal="flat"/>
+    <eLiterals name="MST" value="2" literal="mst"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Synthesis" eSuperTypes="#//Command #//FMCommand">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="interactive" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
@@ -352,6 +359,7 @@
     <eLiterals name="EXCLUDING" value="1" literal="excluding"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Aggregate" eSuperTypes="#//Command #//FMCommand">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="renamings" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="fms" upperBound="-1" eType="#//FMCommand"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="sfms" eType="#//IdentifierExpr"

@@ -273,13 +273,17 @@ enum BDDBackend : BDD_DEFAULT='@backend=DEFAULT'|BDD_BASIC='@backend=BDD'|BDD_SP
 enum MergeMode : CROSS='crossproduct'|UNION='union'|SUNION='sunion'|INTER='intersection'|DIFF='diff' ;
 LFMArgs : lfms+=FMCommand (COMMA lfms+=FMCommand)* ;
 
-AggregateMerge: 'aggregateMerge' mode=MergeMode 
+AggregateMerge: 'aggregateMerge' 
+	            
+	             (hierarchySpecified?='--hierarchy=' hierarchyStrategy=HierarchyStrategy)?
+	             mode=MergeMode 
             ((LEFT_BRACKET
                 (lfms+=FMCommand)+
             RIGHT_BRACKET) 
           	 | fms=LFMArgs) ;
       	 
-      	 
+    
+ enum HierarchyStrategy : BASIC='basic'|FLAT='flat'|MST='mst' ;   	 
  /*
  could be ksynthesis fm0 with fm1
  BUT
@@ -320,7 +324,7 @@ Slice : 'slice' fm=FMCommand mode=SliceMode fts=SetCommand ; // issue: side effe
 
 enum SliceMode : INCLUDING='including' | EXCLUDING='excluding' ;
 
-Aggregate : 'aggregate' ((LEFT_BRACKET
+Aggregate : 'aggregate' (renamings?='--renamings')? ((LEFT_BRACKET
                			 (fms+=FMCommand)+
            				 RIGHT_BRACKET) 
           				 | sfms=IdentifierExpr) ('withMapping' mapping=SetCommand)?;

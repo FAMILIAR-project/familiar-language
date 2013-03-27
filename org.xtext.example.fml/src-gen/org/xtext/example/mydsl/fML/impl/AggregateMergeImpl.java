@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.xtext.example.mydsl.fML.AggregateMerge;
 import org.xtext.example.mydsl.fML.FMCommand;
 import org.xtext.example.mydsl.fML.FMLPackage;
+import org.xtext.example.mydsl.fML.HierarchyStrategy;
 import org.xtext.example.mydsl.fML.LFMArgs;
 import org.xtext.example.mydsl.fML.MergeMode;
 
@@ -30,6 +31,8 @@ import org.xtext.example.mydsl.fML.MergeMode;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.xtext.example.mydsl.fML.impl.AggregateMergeImpl#isHierarchySpecified <em>Hierarchy Specified</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.fML.impl.AggregateMergeImpl#getHierarchyStrategy <em>Hierarchy Strategy</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.fML.impl.AggregateMergeImpl#getMode <em>Mode</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.fML.impl.AggregateMergeImpl#getLfms <em>Lfms</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.fML.impl.AggregateMergeImpl#getFms <em>Fms</em>}</li>
@@ -40,6 +43,46 @@ import org.xtext.example.mydsl.fML.MergeMode;
  */
 public class AggregateMergeImpl extends CommandImpl implements AggregateMerge
 {
+  /**
+   * The default value of the '{@link #isHierarchySpecified() <em>Hierarchy Specified</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isHierarchySpecified()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean HIERARCHY_SPECIFIED_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isHierarchySpecified() <em>Hierarchy Specified</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isHierarchySpecified()
+   * @generated
+   * @ordered
+   */
+  protected boolean hierarchySpecified = HIERARCHY_SPECIFIED_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getHierarchyStrategy() <em>Hierarchy Strategy</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getHierarchyStrategy()
+   * @generated
+   * @ordered
+   */
+  protected static final HierarchyStrategy HIERARCHY_STRATEGY_EDEFAULT = HierarchyStrategy.BASIC;
+
+  /**
+   * The cached value of the '{@link #getHierarchyStrategy() <em>Hierarchy Strategy</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getHierarchyStrategy()
+   * @generated
+   * @ordered
+   */
+  protected HierarchyStrategy hierarchyStrategy = HIERARCHY_STRATEGY_EDEFAULT;
+
   /**
    * The default value of the '{@link #getMode() <em>Mode</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -99,6 +142,52 @@ public class AggregateMergeImpl extends CommandImpl implements AggregateMerge
   protected EClass eStaticClass()
   {
     return FMLPackage.eINSTANCE.getAggregateMerge();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public boolean isHierarchySpecified()
+  {
+    return hierarchySpecified;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setHierarchySpecified(boolean newHierarchySpecified)
+  {
+    boolean oldHierarchySpecified = hierarchySpecified;
+    hierarchySpecified = newHierarchySpecified;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, FMLPackage.AGGREGATE_MERGE__HIERARCHY_SPECIFIED, oldHierarchySpecified, hierarchySpecified));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public HierarchyStrategy getHierarchyStrategy()
+  {
+    return hierarchyStrategy;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setHierarchyStrategy(HierarchyStrategy newHierarchyStrategy)
+  {
+    HierarchyStrategy oldHierarchyStrategy = hierarchyStrategy;
+    hierarchyStrategy = newHierarchyStrategy == null ? HIERARCHY_STRATEGY_EDEFAULT : newHierarchyStrategy;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, FMLPackage.AGGREGATE_MERGE__HIERARCHY_STRATEGY, oldHierarchyStrategy, hierarchyStrategy));
   }
 
   /**
@@ -214,6 +303,10 @@ public class AggregateMergeImpl extends CommandImpl implements AggregateMerge
   {
     switch (featureID)
     {
+      case FMLPackage.AGGREGATE_MERGE__HIERARCHY_SPECIFIED:
+        return isHierarchySpecified();
+      case FMLPackage.AGGREGATE_MERGE__HIERARCHY_STRATEGY:
+        return getHierarchyStrategy();
       case FMLPackage.AGGREGATE_MERGE__MODE:
         return getMode();
       case FMLPackage.AGGREGATE_MERGE__LFMS:
@@ -235,6 +328,12 @@ public class AggregateMergeImpl extends CommandImpl implements AggregateMerge
   {
     switch (featureID)
     {
+      case FMLPackage.AGGREGATE_MERGE__HIERARCHY_SPECIFIED:
+        setHierarchySpecified((Boolean)newValue);
+        return;
+      case FMLPackage.AGGREGATE_MERGE__HIERARCHY_STRATEGY:
+        setHierarchyStrategy((HierarchyStrategy)newValue);
+        return;
       case FMLPackage.AGGREGATE_MERGE__MODE:
         setMode((MergeMode)newValue);
         return;
@@ -259,6 +358,12 @@ public class AggregateMergeImpl extends CommandImpl implements AggregateMerge
   {
     switch (featureID)
     {
+      case FMLPackage.AGGREGATE_MERGE__HIERARCHY_SPECIFIED:
+        setHierarchySpecified(HIERARCHY_SPECIFIED_EDEFAULT);
+        return;
+      case FMLPackage.AGGREGATE_MERGE__HIERARCHY_STRATEGY:
+        setHierarchyStrategy(HIERARCHY_STRATEGY_EDEFAULT);
+        return;
       case FMLPackage.AGGREGATE_MERGE__MODE:
         setMode(MODE_EDEFAULT);
         return;
@@ -282,6 +387,10 @@ public class AggregateMergeImpl extends CommandImpl implements AggregateMerge
   {
     switch (featureID)
     {
+      case FMLPackage.AGGREGATE_MERGE__HIERARCHY_SPECIFIED:
+        return hierarchySpecified != HIERARCHY_SPECIFIED_EDEFAULT;
+      case FMLPackage.AGGREGATE_MERGE__HIERARCHY_STRATEGY:
+        return hierarchyStrategy != HIERARCHY_STRATEGY_EDEFAULT;
       case FMLPackage.AGGREGATE_MERGE__MODE:
         return mode != MODE_EDEFAULT;
       case FMLPackage.AGGREGATE_MERGE__LFMS:
@@ -303,7 +412,11 @@ public class AggregateMergeImpl extends CommandImpl implements AggregateMerge
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (mode: ");
+    result.append(" (hierarchySpecified: ");
+    result.append(hierarchySpecified);
+    result.append(", hierarchyStrategy: ");
+    result.append(hierarchyStrategy);
+    result.append(", mode: ");
     result.append(mode);
     result.append(')');
     return result.toString();

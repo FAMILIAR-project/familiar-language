@@ -2029,13 +2029,31 @@ public interface FMLPackage extends EPackage
   int AGGREGATE_MERGE = 62;
 
   /**
+   * The feature id for the '<em><b>Hierarchy Specified</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AGGREGATE_MERGE__HIERARCHY_SPECIFIED = COMMAND_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Hierarchy Strategy</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AGGREGATE_MERGE__HIERARCHY_STRATEGY = COMMAND_FEATURE_COUNT + 1;
+
+  /**
    * The feature id for the '<em><b>Mode</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int AGGREGATE_MERGE__MODE = COMMAND_FEATURE_COUNT + 0;
+  int AGGREGATE_MERGE__MODE = COMMAND_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Lfms</b></em>' containment reference list.
@@ -2044,7 +2062,7 @@ public interface FMLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int AGGREGATE_MERGE__LFMS = COMMAND_FEATURE_COUNT + 1;
+  int AGGREGATE_MERGE__LFMS = COMMAND_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Fms</b></em>' containment reference.
@@ -2053,7 +2071,7 @@ public interface FMLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int AGGREGATE_MERGE__FMS = COMMAND_FEATURE_COUNT + 2;
+  int AGGREGATE_MERGE__FMS = COMMAND_FEATURE_COUNT + 4;
 
   /**
    * The number of structural features of the '<em>Aggregate Merge</em>' class.
@@ -2062,7 +2080,7 @@ public interface FMLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int AGGREGATE_MERGE_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 3;
+  int AGGREGATE_MERGE_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.impl.SynthesisImpl <em>Synthesis</em>}' class.
@@ -2491,13 +2509,22 @@ public interface FMLPackage extends EPackage
   int AGGREGATE = 74;
 
   /**
+   * The feature id for the '<em><b>Renamings</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int AGGREGATE__RENAMINGS = COMMAND_FEATURE_COUNT + 0;
+
+  /**
    * The feature id for the '<em><b>Fms</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int AGGREGATE__FMS = COMMAND_FEATURE_COUNT + 0;
+  int AGGREGATE__FMS = COMMAND_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Sfms</b></em>' containment reference.
@@ -2506,7 +2533,7 @@ public interface FMLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int AGGREGATE__SFMS = COMMAND_FEATURE_COUNT + 1;
+  int AGGREGATE__SFMS = COMMAND_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Mapping</b></em>' containment reference.
@@ -2515,7 +2542,7 @@ public interface FMLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int AGGREGATE__MAPPING = COMMAND_FEATURE_COUNT + 2;
+  int AGGREGATE__MAPPING = COMMAND_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Aggregate</em>' class.
@@ -2524,7 +2551,7 @@ public interface FMLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int AGGREGATE_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 3;
+  int AGGREGATE_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.impl.FeatureModelOperationImpl <em>Feature Model Operation</em>}' class.
@@ -5100,6 +5127,16 @@ public interface FMLPackage extends EPackage
   int MERGE_MODE = 154;
 
   /**
+   * The meta object id for the '{@link org.xtext.example.mydsl.fML.HierarchyStrategy <em>Hierarchy Strategy</em>}' enum.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.example.mydsl.fML.HierarchyStrategy
+   * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getHierarchyStrategy()
+   * @generated
+   */
+  int HIERARCHY_STRATEGY = 155;
+
+  /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.SliceMode <em>Slice Mode</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -5107,7 +5144,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getSliceMode()
    * @generated
    */
-  int SLICE_MODE = 155;
+  int SLICE_MODE = 156;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.ComparisonOperator <em>Comparison Operator</em>}' enum.
@@ -5117,7 +5154,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getComparisonOperator()
    * @generated
    */
-  int COMPARISON_OPERATOR = 156;
+  int COMPARISON_OPERATOR = 157;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.SetOperator <em>Set Operator</em>}' enum.
@@ -5127,7 +5164,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getSetOperator()
    * @generated
    */
-  int SET_OPERATOR = 157;
+  int SET_OPERATOR = 158;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.OpSelection <em>Op Selection</em>}' enum.
@@ -5137,7 +5174,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getOpSelection()
    * @generated
    */
-  int OP_SELECTION = 158;
+  int OP_SELECTION = 159;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.AutoConfMode <em>Auto Conf Mode</em>}' enum.
@@ -5147,7 +5184,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getAutoConfMode()
    * @generated
    */
-  int AUTO_CONF_MODE = 159;
+  int AUTO_CONF_MODE = 160;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.OPT_LISTING <em>OPT LISTING</em>}' enum.
@@ -5157,7 +5194,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getOPT_LISTING()
    * @generated
    */
-  int OPT_LISTING = 160;
+  int OPT_LISTING = 161;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.FMFormat <em>FM Format</em>}' enum.
@@ -5167,7 +5204,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getFMFormat()
    * @generated
    */
-  int FM_FORMAT = 161;
+  int FM_FORMAT = 162;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.BOOL_Operator <em>BOOL Operator</em>}' enum.
@@ -5177,7 +5214,7 @@ public interface FMLPackage extends EPackage
    * @see org.xtext.example.mydsl.fML.impl.FMLPackageImpl#getBOOL_Operator()
    * @generated
    */
-  int BOOL_OPERATOR = 162;
+  int BOOL_OPERATOR = 163;
 
 
   /**
@@ -6735,6 +6772,28 @@ public interface FMLPackage extends EPackage
   EClass getAggregateMerge();
 
   /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.fML.AggregateMerge#isHierarchySpecified <em>Hierarchy Specified</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Hierarchy Specified</em>'.
+   * @see org.xtext.example.mydsl.fML.AggregateMerge#isHierarchySpecified()
+   * @see #getAggregateMerge()
+   * @generated
+   */
+  EAttribute getAggregateMerge_HierarchySpecified();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.fML.AggregateMerge#getHierarchyStrategy <em>Hierarchy Strategy</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Hierarchy Strategy</em>'.
+   * @see org.xtext.example.mydsl.fML.AggregateMerge#getHierarchyStrategy()
+   * @see #getAggregateMerge()
+   * @generated
+   */
+  EAttribute getAggregateMerge_HierarchyStrategy();
+
+  /**
    * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.fML.AggregateMerge#getMode <em>Mode</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -7073,6 +7132,17 @@ public interface FMLPackage extends EPackage
    * @generated
    */
   EClass getAggregate();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.fML.Aggregate#isRenamings <em>Renamings</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Renamings</em>'.
+   * @see org.xtext.example.mydsl.fML.Aggregate#isRenamings()
+   * @see #getAggregate()
+   * @generated
+   */
+  EAttribute getAggregate_Renamings();
 
   /**
    * Returns the meta object for the containment reference list '{@link org.xtext.example.mydsl.fML.Aggregate#getFms <em>Fms</em>}'.
@@ -8962,6 +9032,16 @@ public interface FMLPackage extends EPackage
    * @generated
    */
   EEnum getMergeMode();
+
+  /**
+   * Returns the meta object for enum '{@link org.xtext.example.mydsl.fML.HierarchyStrategy <em>Hierarchy Strategy</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for enum '<em>Hierarchy Strategy</em>'.
+   * @see org.xtext.example.mydsl.fML.HierarchyStrategy
+   * @generated
+   */
+  EEnum getHierarchyStrategy();
 
   /**
    * Returns the meta object for enum '{@link org.xtext.example.mydsl.fML.SliceMode <em>Slice Mode</em>}'.

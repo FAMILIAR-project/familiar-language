@@ -55,6 +55,11 @@
       <genEnumLiterals ecoreEnumLiteral="FML.ecore#//MergeMode/INTER"/>
       <genEnumLiterals ecoreEnumLiteral="FML.ecore#//MergeMode/DIFF"/>
     </genEnums>
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="FML.ecore#//HierarchyStrategy">
+      <genEnumLiterals ecoreEnumLiteral="FML.ecore#//HierarchyStrategy/BASIC"/>
+      <genEnumLiterals ecoreEnumLiteral="FML.ecore#//HierarchyStrategy/FLAT"/>
+      <genEnumLiterals ecoreEnumLiteral="FML.ecore#//HierarchyStrategy/MST"/>
+    </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="FML.ecore#//SliceMode">
       <genEnumLiterals ecoreEnumLiteral="FML.ecore#//SliceMode/INCLUDING"/>
       <genEnumLiterals ecoreEnumLiteral="FML.ecore#//SliceMode/EXCLUDING"/>
@@ -296,6 +301,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FML.ecore#//LFMArgs/lfms"/>
     </genClasses>
     <genClasses ecoreClass="FML.ecore#//AggregateMerge">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FML.ecore#//AggregateMerge/hierarchySpecified"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FML.ecore#//AggregateMerge/hierarchyStrategy"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FML.ecore#//AggregateMerge/mode"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FML.ecore#//AggregateMerge/lfms"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FML.ecore#//AggregateMerge/fms"/>
@@ -337,6 +344,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FML.ecore#//Slice/fts"/>
     </genClasses>
     <genClasses ecoreClass="FML.ecore#//Aggregate">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FML.ecore#//Aggregate/renamings"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FML.ecore#//Aggregate/fms"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FML.ecore#//Aggregate/sfms"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FML.ecore#//Aggregate/mapping"/>

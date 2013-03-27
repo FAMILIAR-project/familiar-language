@@ -243,6 +243,8 @@ public class FMLFactoryImpl extends EFactoryImpl implements FMLFactory
         return createBDDBackendFromString(eDataType, initialValue);
       case FMLPackage.MERGE_MODE:
         return createMergeModeFromString(eDataType, initialValue);
+      case FMLPackage.HIERARCHY_STRATEGY:
+        return createHierarchyStrategyFromString(eDataType, initialValue);
       case FMLPackage.SLICE_MODE:
         return createSliceModeFromString(eDataType, initialValue);
       case FMLPackage.COMPARISON_OPERATOR:
@@ -290,6 +292,8 @@ public class FMLFactoryImpl extends EFactoryImpl implements FMLFactory
         return convertBDDBackendToString(eDataType, instanceValue);
       case FMLPackage.MERGE_MODE:
         return convertMergeModeToString(eDataType, instanceValue);
+      case FMLPackage.HIERARCHY_STRATEGY:
+        return convertHierarchyStrategyToString(eDataType, instanceValue);
       case FMLPackage.SLICE_MODE:
         return convertSliceModeToString(eDataType, instanceValue);
       case FMLPackage.COMPARISON_OPERATOR:
@@ -2100,6 +2104,28 @@ public class FMLFactoryImpl extends EFactoryImpl implements FMLFactory
    * @generated
    */
   public String convertMergeModeToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public HierarchyStrategy createHierarchyStrategyFromString(EDataType eDataType, String initialValue)
+  {
+    HierarchyStrategy result = HierarchyStrategy.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertHierarchyStrategyToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

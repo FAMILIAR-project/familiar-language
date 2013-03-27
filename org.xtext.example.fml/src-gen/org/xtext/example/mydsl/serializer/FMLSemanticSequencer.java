@@ -1266,7 +1266,7 @@ public class FMLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (mode=MergeMode (lfms+=FMCommand+ | fms=LFMArgs))
+	 *     ((hierarchySpecified?='--hierarchy=' hierarchyStrategy=HierarchyStrategy)? mode=MergeMode (lfms+=FMCommand+ | fms=LFMArgs))
 	 */
 	protected void sequence_AggregateMerge(EObject context, AggregateMerge semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1275,7 +1275,7 @@ public class FMLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     ((fms+=FMCommand+ | sfms=IdentifierExpr) mapping=SetCommand?)
+	 *     (renamings?='--renamings'? (fms+=FMCommand+ | sfms=IdentifierExpr) mapping=SetCommand?)
 	 */
 	protected void sequence_Aggregate(EObject context, Aggregate semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

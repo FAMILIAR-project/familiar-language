@@ -30,6 +30,7 @@ import org.xtext.example.mydsl.fML.SetCommand;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.xtext.example.mydsl.fML.impl.AggregateImpl#isRenamings <em>Renamings</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.fML.impl.AggregateImpl#getFms <em>Fms</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.fML.impl.AggregateImpl#getSfms <em>Sfms</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.fML.impl.AggregateImpl#getMapping <em>Mapping</em>}</li>
@@ -40,6 +41,26 @@ import org.xtext.example.mydsl.fML.SetCommand;
  */
 public class AggregateImpl extends CommandImpl implements Aggregate
 {
+  /**
+   * The default value of the '{@link #isRenamings() <em>Renamings</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isRenamings()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean RENAMINGS_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isRenamings() <em>Renamings</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isRenamings()
+   * @generated
+   * @ordered
+   */
+  protected boolean renamings = RENAMINGS_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getFms() <em>Fms</em>}' containment reference list.
    * <!-- begin-user-doc -->
@@ -89,6 +110,29 @@ public class AggregateImpl extends CommandImpl implements Aggregate
   protected EClass eStaticClass()
   {
     return FMLPackage.eINSTANCE.getAggregate();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public boolean isRenamings()
+  {
+    return renamings;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRenamings(boolean newRenamings)
+  {
+    boolean oldRenamings = renamings;
+    renamings = newRenamings;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, FMLPackage.AGGREGATE__RENAMINGS, oldRenamings, renamings));
   }
 
   /**
@@ -231,6 +275,8 @@ public class AggregateImpl extends CommandImpl implements Aggregate
   {
     switch (featureID)
     {
+      case FMLPackage.AGGREGATE__RENAMINGS:
+        return isRenamings();
       case FMLPackage.AGGREGATE__FMS:
         return getFms();
       case FMLPackage.AGGREGATE__SFMS:
@@ -252,6 +298,9 @@ public class AggregateImpl extends CommandImpl implements Aggregate
   {
     switch (featureID)
     {
+      case FMLPackage.AGGREGATE__RENAMINGS:
+        setRenamings((Boolean)newValue);
+        return;
       case FMLPackage.AGGREGATE__FMS:
         getFms().clear();
         getFms().addAll((Collection<? extends FMCommand>)newValue);
@@ -276,6 +325,9 @@ public class AggregateImpl extends CommandImpl implements Aggregate
   {
     switch (featureID)
     {
+      case FMLPackage.AGGREGATE__RENAMINGS:
+        setRenamings(RENAMINGS_EDEFAULT);
+        return;
       case FMLPackage.AGGREGATE__FMS:
         getFms().clear();
         return;
@@ -299,6 +351,8 @@ public class AggregateImpl extends CommandImpl implements Aggregate
   {
     switch (featureID)
     {
+      case FMLPackage.AGGREGATE__RENAMINGS:
+        return renamings != RENAMINGS_EDEFAULT;
       case FMLPackage.AGGREGATE__FMS:
         return fms != null && !fms.isEmpty();
       case FMLPackage.AGGREGATE__SFMS:
@@ -307,6 +361,23 @@ public class AggregateImpl extends CommandImpl implements Aggregate
         return mapping != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (renamings: ");
+    result.append(renamings);
+    result.append(')');
+    return result.toString();
   }
 
 } //AggregateImpl

@@ -12,6 +12,7 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link org.xtext.example.mydsl.fML.Aggregate#isRenamings <em>Renamings</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.fML.Aggregate#getFms <em>Fms</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.fML.Aggregate#getSfms <em>Sfms</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.fML.Aggregate#getMapping <em>Mapping</em>}</li>
@@ -24,6 +25,32 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Aggregate extends Command, FMCommand
 {
+  /**
+   * Returns the value of the '<em><b>Renamings</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Renamings</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Renamings</em>' attribute.
+   * @see #setRenamings(boolean)
+   * @see org.xtext.example.mydsl.fML.FMLPackage#getAggregate_Renamings()
+   * @model
+   * @generated
+   */
+  boolean isRenamings();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.mydsl.fML.Aggregate#isRenamings <em>Renamings</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Renamings</em>' attribute.
+   * @see #isRenamings()
+   * @generated
+   */
+  void setRenamings(boolean value);
+
   /**
    * Returns the value of the '<em><b>Fms</b></em>' containment reference list.
    * The list contents are of type {@link org.xtext.example.mydsl.fML.FMCommand}.
