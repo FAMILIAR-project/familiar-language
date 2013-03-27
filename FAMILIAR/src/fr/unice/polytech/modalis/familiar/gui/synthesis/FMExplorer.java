@@ -87,6 +87,12 @@ public class FMExplorer extends FMViewer{
 		}
 	}
 
+	@Override
+	public void updateSelectedClusters(List<Set<String>> selectedClusters,
+			List<Set<String>> unselectedClusters) {
+		
+	}
+
 	
 
 }

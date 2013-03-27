@@ -11,6 +11,7 @@ import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import javax.swing.JScrollPane;
 
@@ -101,6 +102,12 @@ public class FMPanel extends FMViewer{
 		}
 		return newNode;
 
+	}
+
+	@Override
+	public void updateSelectedClusters(List<Set<String>> selectedClusters,
+			List<Set<String>> unselectedClusters) {
+		
 	}
 	
 //	private void adjustDisplaySettings( JGraph jg ) {

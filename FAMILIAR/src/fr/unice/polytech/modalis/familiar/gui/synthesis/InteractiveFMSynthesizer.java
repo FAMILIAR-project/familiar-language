@@ -358,7 +358,7 @@ public class InteractiveFMSynthesizer extends Observable{
 	public Set<String> getPossibleChildren(String feature, Set<String> cluster) {
 		Set<String> possibleChildren = new HashSet<String>();
 		for (String possibleChild : cluster) {
-			if (big.containsEdge(possibleChild, feature)) {
+			if (big.containsEdge(possibleChild, feature)) { // TODO : with the original big?
 				possibleChildren.add(possibleChild);
 			}
 		}
@@ -376,11 +376,12 @@ public class InteractiveFMSynthesizer extends Observable{
 		for (String feature : features) {
 			if (first) {
 				first = false;
-				possibleParents.addAll(big.parents(feature));
+				possibleParents.addAll(big.parents(feature)); // TODO : with the original big?
 			} else {
 				possibleParents.retainAll(big.parents(feature));	
 			}
 		}
 		return possibleParents;
 	}
+
 }

@@ -21,6 +21,8 @@ import javax.swing.JTree;
 import javax.swing.SwingUtilities;
 import javax.swing.event.TreeExpansionEvent;
 import javax.swing.event.TreeExpansionListener;
+import javax.swing.event.TreeSelectionEvent;
+import javax.swing.event.TreeSelectionListener;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreePath;
@@ -70,7 +72,9 @@ public class ClusterViewer extends JPanel {
 		// Update list of expanded features
 		expandedClusters = new HashSet<Object>();
 		similarityTree.addTreeExpansionListener(new ClusterExpansionListener());
-		
+
+		// Update selected clusters
+		similarityTree.addTreeSelectionListener(new ClusterSelectionListener());
 
 		// Create popp menus
 		similarityTree.addMouseListener(new ClusterTreeMouseListener());
@@ -223,5 +227,39 @@ public class ClusterViewer extends JPanel {
 
 			}
 		}
+	}
+	
+	private class ClusterSelectionListener implements TreeSelectionListener {
+
+		@Override
+		public void valueChanged(TreeSelectionEvent e) {
+			List<Set<String>> selectedClusters = new ArrayList<Set<String>>();
+			List<Set<String>> unselectedClusters = new ArrayList<Set<String>>();
+			for (TreePath path : e.getPaths()) {
+				if (e.isAddedPath(path)) {
+					selectedClusters.add(findCluster(path));	
+				} else {
+					unselectedClusters.add(findCluster(path));
+				}
+			}
+			environment.updateSelectedClusters(selectedClusters, unselectedClusters);
+		}
+
+		/**
+		 * Find the cluster corresponding to the path
+		 * @param path
+		 * @return the corresponding cluster or an empty cluster if it is not found
+		 */
+		private Set<String> findCluster(TreePath path) {
+			for (Object o : path.getPath()) {
+				if (clusterMap.containsKey(o)){
+					return clusterMap.get(o);
+				}
+			}
+			return new HashSet<String>();
+		}
+		
+		
+		
 	}
 }

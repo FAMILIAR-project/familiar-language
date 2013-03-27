@@ -68,7 +68,7 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 			clusterViewer.updateSimilarityClusters(similarityClusters);	
 		}
 		cliqueViewer.updateCliques(synthesizer.getCliques());
-		
+
 		List<Set<Set<String>>> supportClusters = synthesizer.getSupportClusters();
 		if (supportClusters != null) {
 			clusterViewer.updateSupportClusters(supportClusters);	
@@ -79,7 +79,7 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 		String selectedParent = synthesizer.getParentOf(child);
 		if (selectedParent == null) {
 			synthesizer.selectParent(child, parent);	
-		} else {
+		} else if (!selectedParent.equals(parent)){
 			int choice = JOptionPane.showConfirmDialog(null, 
 					"Do you want to replace the current parent \"" + selectedParent + "\" of \"" + child + "\" by \"" + parent + "\"?");
 			if (choice == JOptionPane.YES_OPTION) {
@@ -109,7 +109,7 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 				synthesizer.setRoot(root);
 			}
 		}
-		
+
 	}
 
 	public void setParentSimilarityMetric(FeatureSimilarityMetric metric) {
@@ -131,7 +131,7 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 		FMViewer computedFMViewer = new JGraphXFMViewer();
 		computedFMViewer.updateFM(computedFM);
 		Tab2EnvVar.INSTANCE.createNewTab(computedFM.getIdentifier(), computedFMViewer);
-		
+
 	}
 
 
@@ -176,15 +176,15 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 
 				if (tab instanceof FMSynthesisEnvironment) {
 					FMSynthesisEnvironment environment = (FMSynthesisEnvironment) tab;
-					
+
 					// Display a input dialog to enter the threshold
 					ThresholdValueDialog dialog = new ThresholdValueDialog();
-					
+
 					double threshold = dialog.getValue();
 					if (threshold != -1) {
 						environment.setClusteringThreshold(threshold);	
 					}
-					
+
 				}
 			}
 		});
@@ -230,7 +230,7 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 				synthesizer.selectParent(selectedChild, selectedParent);
 			}	
 		}
-		
+
 	}
 
 
@@ -252,6 +252,11 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 
 	public Set<String> getPossibleParents(Set<String> features) {
 		return synthesizer.getPossibleParents(features);
+	}
+
+
+	public void updateSelectedClusters(List<Set<String>> selectedClusters, List<Set<String>> unselectedClusters) {
+		fmViewer.updateSelectedClusters(selectedClusters, unselectedClusters);
 	}
 
 
