@@ -132,7 +132,7 @@ public class SetOperationParser extends FMLAbstractCommandAnalyzer {
 
 	}
 
-	private boolean safeRemove(Variable rvar, Set<Variable> vars)
+	protected boolean safeRemove(Variable rvar, Set<Variable> vars)
 			throws SecurityException, IllegalArgumentException,
 			NoSuchMethodException, IllegalAccessException,
 			InvocationTargetException {
@@ -157,7 +157,7 @@ public class SetOperationParser extends FMLAbstractCommandAnalyzer {
 
 	}
 
-	private boolean safeAdd(Variable rvar, Set<Variable> vars) {
+	protected boolean safeAdd(Variable rvar, Set<Variable> vars) {
 		boolean found = false;
 		for (Variable var : vars) {
 			try {
@@ -165,21 +165,8 @@ public class SetOperationParser extends FMLAbstractCommandAnalyzer {
 						.eval()) {
 					found = true;
 				}
-			} catch (SecurityException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IllegalArgumentException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (NoSuchMethodException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (IllegalAccessException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			} catch (InvocationTargetException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+			} catch (Exception e) {
+				// 
 			}
 		}
 		if (!found)

@@ -126,11 +126,7 @@ public class FMLMergerWithConstraints extends FMLMerger {
 			rootFts.add(pfm.root().name());
 		}
 		
-		
-		for (FeatureModelVariable fm : lfms) {
-			
-		}
-		
+				
 
 		/* FMi1 x FMi2 x ... x FMin = FMI */
 		FeatureModelVariable fmInput = new AggregatorFM().build(primeLfms,
@@ -153,7 +149,7 @@ public class FMLMergerWithConstraints extends FMLMerger {
 			// (1) we first collect corresponding features' name
 			Set<String> correspondingFts = new HashSet<String>();
 			for (int i = 0; i < primeLfms.size(); i++) {
-				String fti = primeFt(ft, i);
+				String fti = primeFt(ft, i, primeLfms.get(i));
 				correspondingFts.add(fti);
 			}
 
@@ -226,18 +222,24 @@ public class FMLMergerWithConstraints extends FMLMerger {
 
 		Set<String> ftsName = rFM.features().names() ; 
 	
-
+		
 		for (String ftName : ftsName) {
-			String newFeatureName = primeFt(ftName, i);
+			String newFeatureName = primeFt(ftName, i, featureModel);
 			rFM.renameFeature(ftName, newFeatureName) ; 
 		}
 
 		return rFM;
 	}
 
-	private String primeFt(String ftName, int i) {
-		return ftName + "" + Math.abs((i * 1000000) + 1000);
+	private String primeFt(String ftName, int i, FeatureModelVariable fm) {
+		String fmIdentifier = fm.getIdentifier() ; 
+		if (!fmIdentifier.isEmpty())
+			return fmIdentifier + "_" + ftName ;
+		else 
+			return ftName + "" + Math.abs((i * 1000000) + 1000) ; 
 
 	}
+	
+	
 
 }
