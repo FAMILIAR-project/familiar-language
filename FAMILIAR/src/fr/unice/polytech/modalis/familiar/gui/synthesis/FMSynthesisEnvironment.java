@@ -4,6 +4,7 @@ import java.awt.Component;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Observable;
 import java.util.Observer;
@@ -16,6 +17,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JSplitPane;
+
+import com.sun.xml.internal.bind.v2.runtime.unmarshaller.LocatorEx.Snapshot;
 
 import fr.unice.polytech.modalis.familiar.gui.FamiliarConsole;
 import fr.unice.polytech.modalis.familiar.gui.Tab2EnvVar;
@@ -217,9 +220,16 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 
 
 	public void selectClusterParent(Set<String> cluster) {
-		// TODO : select children
-		// TODO : determine possible parents
-		// TODO : select parent
+		CommonParentSelectionDialog dialog = new CommonParentSelectionDialog(
+				this, "Cluster's parent selection", "Select the parent of this cluster.", cluster, cluster);
+		dialog.show();
+		Set<String> selectedChildren = dialog.getSelectedChildren();
+		String selectedParent = dialog.getSelectedParent();
+		if (selectedParent != null) {
+			for (String selectedChild : selectedChildren) {
+				synthesizer.selectParent(selectedChild, selectedParent);
+			}	
+		}
 		
 	}
 
@@ -230,12 +240,18 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 			JOptionPane.showMessageDialog(null, "\"" + feature + "\" can not be a parent of one of these features.");
 		} else {
 			Set<String> selectedChildren = CheckBoxDialog.showCheckBoxDialog(
+					"Cluster's parent selection",
 					"Select the children of \"" + feature + "\"", 
 					possibleChildren, possibleChildren);
-			for (String possibleChild : selectedChildren) {
-				this.selectParent(possibleChild, feature);
+			for (String selectedChild : selectedChildren) {
+				this.selectParent(selectedChild, feature);
 			}
 		}
+	}
+
+
+	public Set<String> getPossibleParents(Set<String> features) {
+		return synthesizer.getPossibleParents(features);
 	}
 
 

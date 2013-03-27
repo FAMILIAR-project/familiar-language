@@ -18,7 +18,7 @@ import javax.swing.JPanel;
 
 public class CheckBoxDialog {
 
-	public static <T> Set<T> showCheckBoxDialog(String message, Set<T> options, Set<T> initialOptions) {
+	public static <T> Set<T> showCheckBoxDialog(String title, String message, Set<T> options, Set<T> initialOptions) {
 		final Set<T> selection = new HashSet<T>();
 
 		JPanel panel = new JPanel();
@@ -34,10 +34,7 @@ public class CheckBoxDialog {
 			JCheckBox checkBox = new JCheckBox(option.toString(), initialOptions.contains(option));
 			optionMap.put(checkBox, option);
 			input.add(checkBox);
-		}
-		
-		for (JCheckBox checkBox : input) {
-			panel.add(checkBox);	
+			panel.add(checkBox);
 		}
 		
 		// Define buttons
@@ -45,7 +42,7 @@ public class CheckBoxDialog {
 		JButton cancel = new JButton("Cancel");
 
 		JOptionPane pane = new JOptionPane(panel, JOptionPane.QUESTION_MESSAGE, JOptionPane.NO_OPTION, null, new JButton[]{ok, cancel}, ok);
-		final JDialog dialog = pane.createDialog("Clustering threshold");
+		final JDialog dialog = pane.createDialog(title);
 
 		// Set the behaviour of the buttons
 		ok.addActionListener(new ActionListener() {

@@ -364,4 +364,23 @@ public class InteractiveFMSynthesizer extends Observable{
 		}
 		return possibleChildren;
 	}
+
+	/**
+	 * Returns the possible parents of these features 
+	 * @param features
+	 * @return 
+	 */
+	public Set<String> getPossibleParents(Set<String> features) {
+		Set<String> possibleParents = new HashSet<String>();
+		boolean first = true;
+		for (String feature : features) {
+			if (first) {
+				first = false;
+				possibleParents.addAll(big.parents(feature));
+			} else {
+				possibleParents.retainAll(big.parents(feature));	
+			}
+		}
+		return possibleParents;
+	}
 }
