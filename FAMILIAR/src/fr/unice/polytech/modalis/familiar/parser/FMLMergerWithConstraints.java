@@ -32,8 +32,10 @@ public class FMLMergerWithConstraints extends FMLMerger {
 	
 	private static Logger _LOGGER = Logger.getLogger(FMLMergerWithConstraints.class) ; 
 
-	
-	private HierarchyMergerStrategy _hierarchyMergerStrategy = HierarchyMergerStrategy.BASIC ; 
+
+	// DEFAULT
+	public static HierarchyMergerStrategy _DEFAULT_HIERARCHY_STRATEGY = HierarchyMergerStrategy.BASIC ; 
+	private HierarchyMergerStrategy _hierarchyMergerStrategy = _DEFAULT_HIERARCHY_STRATEGY ; 
 
 	public FMLMergerWithConstraints(List<FeatureModelVariable> lfmvs) {
 		super (lfmvs);
@@ -60,7 +62,10 @@ public class FMLMergerWithConstraints extends FMLMerger {
 	private FeatureModelVariable mergeFMVsWithConstraints(
 			Collection<FeatureModelVariable> lfmvs, Mode mode) {
 
-		assert (_hierarchyMergerStrategy == HierarchyMergerStrategy.BASIC);
+		assert (_hierarchyMergerStrategy == HierarchyMergerStrategy.BASIC
+				|| 
+			   _hierarchyMergerStrategy == HierarchyMergerStrategy.FLAT
+				);
 		FeatureModelVariable fm = mergeWithConstraints(lfmvs, mode, null);
 		return fm ; 
 
@@ -119,7 +124,6 @@ public class FMLMergerWithConstraints extends FMLMerger {
 		Iterator<FeatureModelVariable> it = lfms.iterator() ; 
 		for (int i = 0; i < lfms.size(); i++) {
 			FeatureModelVariable fmi = it.next(); 
-			allFts.addAll(fmi.features().names());
 			FeatureModelVariable pfm = primeFTs(fmi, i);
 
 			primeLfms.add(pfm);
@@ -238,6 +242,10 @@ public class FMLMergerWithConstraints extends FMLMerger {
 		else 
 			return ftName + "" + Math.abs((i * 1000000) + 1000) ; 
 
+	}
+
+	public void setHierarchyStrategy(HierarchyMergerStrategy hierarchyStrategy) {
+		_hierarchyMergerStrategy = hierarchyStrategy ; 		
 	}
 	
 	

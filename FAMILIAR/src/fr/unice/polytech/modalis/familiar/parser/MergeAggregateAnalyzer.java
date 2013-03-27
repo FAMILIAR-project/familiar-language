@@ -12,6 +12,7 @@ import org.eclipse.emf.common.util.EList;
 import org.xtext.example.mydsl.fML.AggregateMerge;
 import org.xtext.example.mydsl.fML.Command;
 import org.xtext.example.mydsl.fML.FMCommand;
+import org.xtext.example.mydsl.fML.HierarchyStrategy;
 import org.xtext.example.mydsl.fML.LFMArgs;
 import org.xtext.example.mydsl.fML.MergeMode;
 
@@ -33,7 +34,7 @@ public class MergeAggregateAnalyzer extends MergeAnalyzer {
 	
 	private static Logger _LOGGER = Logger.getLogger(MergeAggregateAnalyzer.class);
 
-	
+	private HierarchyMergerStrategy _hierarchyMergerStrategy = FMLMergerWithConstraints._DEFAULT_HIERARCHY_STRATEGY ; 
 	
 	
 	private List<FeatureModelVariable> _lfmvs = new ArrayList<FeatureModelVariable>();
@@ -85,6 +86,7 @@ public class MergeAggregateAnalyzer extends MergeAnalyzer {
 		// TODO		
 		FeatureModelVariable fmv = null ; 
 		FMLMergerWithConstraints merger = new FMLMergerWithConstraints(_lfmvs) ;
+		merger.setHierarchyStrategy(_hierarchyMergerStrategy);
 		if (_mode == Mode.StrictUnion) 
 			fmv = merger.union() ;
 		else if (_mode == Mode.Intersection)
@@ -102,6 +104,22 @@ public class MergeAggregateAnalyzer extends MergeAnalyzer {
 
 		_LOGGER.debug(
 				"merge aggregate " + mergeCmd.getMode() + " " + mergeCmd.getLfms());
+		
+		
+		HierarchyStrategy hierarchyStrategy = mergeCmd.getHierarchyStrategy() ; 
+		boolean hasHierarchyStrategy = mergeCmd.isHierarchySpecified() ; 
+		if (hasHierarchyStrategy) {
+			if (hierarchyStrategy == HierarchyStrategy.BASIC) {
+				_hierarchyMergerStrategy = HierarchyMergerStrategy.BASIC ; 
+			}
+			else if (hierarchyStrategy == HierarchyStrategy.FLAT) {
+				_hierarchyMergerStrategy = HierarchyMergerStrategy.FLAT ; 
+			}
+			else if (hierarchyStrategy == HierarchyStrategy.MST) {
+				_hierarchyMergerStrategy = HierarchyMergerStrategy.MST ; 
+			}
+						
+		}
 
 		/*******
 		 * 1. populate fmsToMerge: type checking + retrieve the FMs in the set

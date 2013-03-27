@@ -2,8 +2,8 @@ digraph{
 graph [rankdir=TB];
 node [shape=box];
 edge [arrowhead=normal];
-0[label="Colour",]
-1[label="Basic",]
+0[label="Basic",]
+1[label="Colour",]
 2[label="Screen",]
 3[label="Media",]
 4[label="Camera",]

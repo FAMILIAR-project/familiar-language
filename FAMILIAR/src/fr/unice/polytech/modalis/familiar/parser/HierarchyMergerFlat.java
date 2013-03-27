@@ -41,10 +41,17 @@ public class HierarchyMergerFlat extends HierarchyMerger {
 		}
 
 		FeatureModelVariable firstFM = lfms.iterator().next() ; 
-		Set<FeatureNode<String>> roots = KSynthesis
-				.findMyRoots(firstFM.getHierarchy().getDiagram());
-		assert (roots.size() == 1);
-		FeatureNode<String> rootVertex = roots.iterator().next();
+		
+		
+		String rootName = firstFM.root().name() ; 
+		FeatureNode<String> rootVertex = null ; 
+		for (FeatureNode<String> fn : fnodes) {
+			if (fn.getFeature().equals(rootName)) {
+				rootVertex = fn ;
+				break ; 
+			}
+		}
+	
 
 		for (FeatureNode<String> featureNode : fnodes) {
 			if (!featureNode.isBottom() && !featureNode.isTop()
@@ -54,12 +61,12 @@ public class HierarchyMergerFlat extends HierarchyMerger {
 
 		for (FeatureNode<String> featureNode : fnodes) {
 			if (!featureNode.isBottom() && !featureNode.isTop()
-					&& featureNode != rootVertex)
-				fg.addEdge(featureNode, rootVertex, FeatureEdge.HIERARCHY);
+					&& !featureNode.getFeature().equals(rootName))
+				fg.addEdge (featureNode, rootVertex, FeatureEdge.HIERARCHY);
 		}
 
-		fg.addEdge(rootVertex, topVertex, FeatureEdge.HIERARCHY);
-		fg.addEdge(rootVertex, topVertex, FeatureEdge.MANDATORY);
+		fg.addEdge (rootVertex, topVertex, FeatureEdge.HIERARCHY);
+		fg.addEdge (rootVertex, topVertex, FeatureEdge.MANDATORY);
 
 		return basis;
 	}
