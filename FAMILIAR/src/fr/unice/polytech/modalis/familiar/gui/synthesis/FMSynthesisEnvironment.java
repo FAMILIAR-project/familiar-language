@@ -44,7 +44,7 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 		bigViewer = new BIGPanel();
 		parentSelector = new ParentSelector(this);
 		clusterViewer = new ClusterViewer(this);
-		cliqueViewer = new CliqueViewer();
+		cliqueViewer = new CliqueViewer(this);
 
 		// Set layout
 		this.setLayout(new GridLayout(1, 1));
@@ -240,7 +240,7 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 			JOptionPane.showMessageDialog(null, "\"" + feature + "\" can not be a parent of one of these features.");
 		} else {
 			Set<String> selectedChildren = CheckBoxDialog.showCheckBoxDialog(
-					"Cluster's parent selection",
+					"Children selection",
 					"Select the children of \"" + feature + "\"", 
 					possibleChildren, possibleChildren);
 			for (String selectedChild : selectedChildren) {

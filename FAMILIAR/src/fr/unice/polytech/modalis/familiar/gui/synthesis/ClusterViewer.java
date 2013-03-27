@@ -38,8 +38,8 @@ public class ClusterViewer extends JPanel {
 	
 	private JPopupMenu clusterMenu;
 	private JPopupMenu featureMenu;
-	public Set<String> lastSelectedCluster;
-	public String lastSelectedFeature;
+	private Set<String> lastSelectedCluster;
+	private String lastSelectedFeature;
 	
 
 	public ClusterViewer(FMSynthesisEnvironment environment) {
@@ -87,6 +87,7 @@ public class ClusterViewer extends JPanel {
 	}
 
 	public void updateSimilarityClusters(Set<Set<String>> clusters) {
+		clusterMap = new HashMap<DefaultMutableTreeNode, Set<String>>();
 		List<TreePath> pathsToExpand = new ArrayList<TreePath>();
 		similarityRoot.removeAllChildren();
 

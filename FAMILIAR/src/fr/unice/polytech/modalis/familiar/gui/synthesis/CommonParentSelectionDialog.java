@@ -112,14 +112,16 @@ public class CommonParentSelectionDialog {
 		
 		@Override
 		public void itemStateChanged(ItemEvent e) {
+			// Update selected children
 			if (e.getStateChange() == ItemEvent.SELECTED) {
 				selectedChildren.add(feature);
 			} else {
 				selectedChildren.remove(feature);
 			}
+			
+			// Update common parents
 			parentSelector.removeAllItems();
 			Set<String> possibleParents = environment.getPossibleParents(selectedChildren);
-			System.out.println(possibleParents);
 			for (String possibleParent : possibleParents) {
 				parentSelector.addItem(possibleParent);	
 			}
