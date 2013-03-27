@@ -4,7 +4,6 @@ import java.awt.Component;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Observable;
 import java.util.Observer;
@@ -17,8 +16,6 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JSplitPane;
-
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.LocatorEx.Snapshot;
 
 import fr.unice.polytech.modalis.familiar.gui.FamiliarConsole;
 import fr.unice.polytech.modalis.familiar.gui.Tab2EnvVar;
@@ -41,7 +38,7 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 
 		// Create views
 		fmViewer = new JGraphXFMViewer();
-		bigViewer = new BIGPanel();
+		bigViewer = new JGraphXBIGViewer();
 		parentSelector = new ParentSelector(this);
 		clusterViewer = new ClusterViewer(this);
 		cliqueViewer = new CliqueViewer(this);

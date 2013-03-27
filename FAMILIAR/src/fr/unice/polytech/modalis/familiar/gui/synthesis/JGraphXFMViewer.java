@@ -7,9 +7,9 @@ import java.util.List;
 import java.util.Set;
 
 import javax.swing.JScrollPane;
-import javax.swing.SwingConstants;
 
-import com.mxgraph.layout.hierarchical.mxHierarchicalLayout;
+import com.mxgraph.layout.mxCompactTreeLayout;
+import com.mxgraph.layout.mxIGraphLayout;
 import com.mxgraph.model.mxCell;
 import com.mxgraph.swing.mxGraphComponent;
 import com.mxgraph.util.mxConstants;
@@ -26,13 +26,14 @@ public class JGraphXFMViewer extends FMViewer {
 	private final static String VERTEX_SELECTED_COLOR = "orange";
 	
 	private mxGraph graph;
-	private mxHierarchicalLayout layout;
+	private mxIGraphLayout layout;
 	private HashMap<String, mxCell> vertices;
 	
 	public JGraphXFMViewer() {
 		// Create graph
 		graph = new mxGraph();
-		layout = new mxHierarchicalLayout(graph, SwingConstants.NORTH);
+//		layout = new mxHierarchicalLayout(graph, SwingConstants.NORTH);
+		layout = new mxCompactTreeLayout(graph, false);
 		mxGraphComponent graphComponent = new mxGraphComponent(graph);
 		graphComponent.setEnabled(false);
 		// Set layout
@@ -57,7 +58,8 @@ public class JGraphXFMViewer extends FMViewer {
 					mxCell sourceCell = seekVertex(source.getFeature());
 					mxCell targetCell = seekVertex(target.getFeature());
 					String style = "startArrow=none;endArrow=none";
-					graph.insertEdge(graph.getDefaultParent(), null, null, targetCell, sourceCell, style);	
+					// Add an inverted edge to avoid layout bugs 
+					graph.insertEdge(graph.getDefaultParent(), null, null, targetCell, sourceCell, style); 	
 				}
 			}
 		}
