@@ -275,7 +275,7 @@ LFMArgs : lfms+=FMCommand (COMMA lfms+=FMCommand)* ;
 
 AggregateMerge: 'aggregateMerge' 
 	            
-	             (hierarchySpecified?='--hierarchy=' hierarchyStrategy=HierarchyStrategy)?
+	             (hierarchySpecified?='--hierarchy' hierarchyStrategy=HierarchyStrategy)?
 	             mode=MergeMode 
             ((LEFT_BRACKET
                 (lfms+=FMCommand)+
@@ -283,7 +283,7 @@ AggregateMerge: 'aggregateMerge'
           	 | fms=LFMArgs) ;
       	 
     
- enum HierarchyStrategy : BASIC='basic'|FLAT='flat'|MST='mst' ;   	 
+ enum HierarchyStrategy : BASIC='=basic'|FLAT='=flat'|MST='=mst' ;   	 
  /*
  could be ksynthesis fm0 with fm1
  BUT

@@ -6867,21 +6867,21 @@ rule__HierarchyStrategy__Alternatives
 :
 (
 { before(grammarAccess.getHierarchyStrategyAccess().getBASICEnumLiteralDeclaration_0()); }
-(	'basic' 
+(	'=basic' 
 )
 { after(grammarAccess.getHierarchyStrategyAccess().getBASICEnumLiteralDeclaration_0()); }
 )
 
     |(
 { before(grammarAccess.getHierarchyStrategyAccess().getFLATEnumLiteralDeclaration_1()); }
-(	'flat' 
+(	'=flat' 
 )
 { after(grammarAccess.getHierarchyStrategyAccess().getFLATEnumLiteralDeclaration_1()); }
 )
 
     |(
 { before(grammarAccess.getHierarchyStrategyAccess().getMSTEnumLiteralDeclaration_2()); }
-(	'mst' 
+(	'=mst' 
 )
 { after(grammarAccess.getHierarchyStrategyAccess().getMSTEnumLiteralDeclaration_2()); }
 )
@@ -21578,7 +21578,7 @@ rule__AggregateMerge__HierarchySpecifiedAssignment_1_0
 (
 { before(grammarAccess.getAggregateMergeAccess().getHierarchySpecifiedHierarchyKeyword_1_0_0()); }
 
-	'--hierarchy=' 
+	'--hierarchy' 
 
 { after(grammarAccess.getAggregateMergeAccess().getHierarchySpecifiedHierarchyKeyword_1_0_0()); }
 )

@@ -1213,7 +1213,7 @@
         <elements xsi:type="xtext:Keyword" value="aggregateMerge"/>
         <elements xsi:type="xtext:Group" cardinality="?">
           <elements xsi:type="xtext:Assignment" feature="hierarchySpecified" operator="?=">
-            <terminal xsi:type="xtext:Keyword" value="--hierarchy="/>
+            <terminal xsi:type="xtext:Keyword" value="--hierarchy"/>
           </elements>
           <elements xsi:type="xtext:Assignment" feature="hierarchyStrategy" operator="=">
             <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.71"/>
@@ -1243,15 +1243,15 @@
       <alternatives xsi:type="xtext:Alternatives">
         <elements xsi:type="xtext:EnumLiteralDeclaration">
           <enumLiteral href="http://www.xtext.org/example/mydsl/FML#//HierarchyStrategy/BASIC"/>
-          <literal value="basic"/>
+          <literal value="=basic"/>
         </elements>
         <elements xsi:type="xtext:EnumLiteralDeclaration">
           <enumLiteral href="http://www.xtext.org/example/mydsl/FML#//HierarchyStrategy/FLAT"/>
-          <literal value="flat"/>
+          <literal value="=flat"/>
         </elements>
         <elements xsi:type="xtext:EnumLiteralDeclaration">
           <enumLiteral href="http://www.xtext.org/example/mydsl/FML#//HierarchyStrategy/MST"/>
-          <literal value="mst"/>
+          <literal value="=mst"/>
         </elements>
       </alternatives>
     </rules>

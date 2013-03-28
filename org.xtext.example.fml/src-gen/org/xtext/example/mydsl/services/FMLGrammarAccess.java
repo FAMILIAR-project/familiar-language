@@ -2691,24 +2691,24 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cFmsLFMArgsParserRuleCall_3_1_0 = (RuleCall)cFmsAssignment_3_1.eContents().get(0);
 		
 		//AggregateMerge:
-		//	"aggregateMerge" (hierarchySpecified?="--hierarchy=" hierarchyStrategy=HierarchyStrategy)? mode=MergeMode
-		//	(LEFT_BRACKET lfms+=FMCommand+ RIGHT_BRACKET | fms=LFMArgs);
+		//	"aggregateMerge" (hierarchySpecified?="--hierarchy" hierarchyStrategy=HierarchyStrategy)? mode=MergeMode (LEFT_BRACKET
+		//	lfms+=FMCommand+ RIGHT_BRACKET | fms=LFMArgs);
 		public ParserRule getRule() { return rule; }
 
-		//"aggregateMerge" (hierarchySpecified?="--hierarchy=" hierarchyStrategy=HierarchyStrategy)? mode=MergeMode (LEFT_BRACKET
+		//"aggregateMerge" (hierarchySpecified?="--hierarchy" hierarchyStrategy=HierarchyStrategy)? mode=MergeMode (LEFT_BRACKET
 		//lfms+=FMCommand+ RIGHT_BRACKET | fms=LFMArgs)
 		public Group getGroup() { return cGroup; }
 
 		//"aggregateMerge"
 		public Keyword getAggregateMergeKeyword_0() { return cAggregateMergeKeyword_0; }
 
-		//(hierarchySpecified?="--hierarchy=" hierarchyStrategy=HierarchyStrategy)?
+		//(hierarchySpecified?="--hierarchy" hierarchyStrategy=HierarchyStrategy)?
 		public Group getGroup_1() { return cGroup_1; }
 
-		//hierarchySpecified?="--hierarchy="
+		//hierarchySpecified?="--hierarchy"
 		public Assignment getHierarchySpecifiedAssignment_1_0() { return cHierarchySpecifiedAssignment_1_0; }
 
-		//"--hierarchy="
+		//"--hierarchy"
 		public Keyword getHierarchySpecifiedHierarchyKeyword_1_0_0() { return cHierarchySpecifiedHierarchyKeyword_1_0_0; }
 
 		//hierarchyStrategy=HierarchyStrategy
@@ -5977,28 +5977,28 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cMSTMstKeyword_2_0 = (Keyword)cMSTEnumLiteralDeclaration_2.eContents().get(0);
 		
 		//enum HierarchyStrategy:
-		//	BASIC="basic" | FLAT="flat" | MST="mst";
+		//	BASIC="=basic" | FLAT="=flat" | MST="=mst";
 		public EnumRule getRule() { return rule; }
 
-		//BASIC="basic" | FLAT="flat" | MST="mst"
+		//BASIC="=basic" | FLAT="=flat" | MST="=mst"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//BASIC="basic"
+		//BASIC="=basic"
 		public EnumLiteralDeclaration getBASICEnumLiteralDeclaration_0() { return cBASICEnumLiteralDeclaration_0; }
 
-		//"basic"
+		//"=basic"
 		public Keyword getBASICBasicKeyword_0_0() { return cBASICBasicKeyword_0_0; }
 
-		//FLAT="flat"
+		//FLAT="=flat"
 		public EnumLiteralDeclaration getFLATEnumLiteralDeclaration_1() { return cFLATEnumLiteralDeclaration_1; }
 
-		//"flat"
+		//"=flat"
 		public Keyword getFLATFlatKeyword_1_0() { return cFLATFlatKeyword_1_0; }
 
-		//MST="mst"
+		//MST="=mst"
 		public EnumLiteralDeclaration getMSTEnumLiteralDeclaration_2() { return cMSTEnumLiteralDeclaration_2; }
 
-		//"mst"
+		//"=mst"
 		public Keyword getMSTMstKeyword_2_0() { return cMSTMstKeyword_2_0; }
 	}
 
@@ -7339,8 +7339,8 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//AggregateMerge:
-	//	"aggregateMerge" (hierarchySpecified?="--hierarchy=" hierarchyStrategy=HierarchyStrategy)? mode=MergeMode
-	//	(LEFT_BRACKET lfms+=FMCommand+ RIGHT_BRACKET | fms=LFMArgs);
+	//	"aggregateMerge" (hierarchySpecified?="--hierarchy" hierarchyStrategy=HierarchyStrategy)? mode=MergeMode (LEFT_BRACKET
+	//	lfms+=FMCommand+ RIGHT_BRACKET | fms=LFMArgs);
 	public AggregateMergeElements getAggregateMergeAccess() {
 		return (pAggregateMerge != null) ? pAggregateMerge : (pAggregateMerge = new AggregateMergeElements());
 	}
@@ -7350,7 +7350,7 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum HierarchyStrategy:
-	//	BASIC="basic" | FLAT="flat" | MST="mst";
+	//	BASIC="=basic" | FLAT="=flat" | MST="=mst";
 	public HierarchyStrategyElements getHierarchyStrategyAccess() {
 		return (unknownRuleHierarchyStrategy != null) ? unknownRuleHierarchyStrategy : (unknownRuleHierarchyStrategy = new HierarchyStrategyElements());
 	}

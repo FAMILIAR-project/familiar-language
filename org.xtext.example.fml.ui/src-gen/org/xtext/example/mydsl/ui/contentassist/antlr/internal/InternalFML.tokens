@@ -223,6 +223,7 @@ RULE_WS=28
 T__169=169
 RULE_B_NOT=24
 'removeVariable'=65
+'=basic'=102
 'end'=139
 'extract'=179
 'isConflicting'=225
@@ -252,7 +253,6 @@ RULE_B_NOT=24
 'setOr'=203
 'unselectedF'=189
 'deselect'=53
-'basic'=102
 'assert'=180
 'cleanup'=193
 'fmlbdd'=122
@@ -282,6 +282,7 @@ RULE_B_NOT=24
 'sibling'=215
 '--verbose'=119
 'then'=138
+'=mst'=104
 'computeXORGroups'=92
 '>'=110
 'getImpliesHierarchy'=79
@@ -305,7 +306,6 @@ RULE_B_NOT=24
 'children'=214
 'FM'=71
 'deselectedF'=188
-'flat'=103
 'in'=142
 'save'=67
 'hide'=183
@@ -332,7 +332,6 @@ RULE_B_NOT=24
 'configs'=43
 'strSubstring'=153
 'Feature'=33
-'mst'=104
 'isNull'=181
 'computeMUTEXGroups'=93
 '=='=111
@@ -345,7 +344,6 @@ RULE_B_NOT=24
 'setIsEmpty'=150
 'hierarchy'=198
 'S2T2'=130
-'--hierarchy='=221
 'configuration'=184
 'xmi'=129
 'Or'=77
@@ -376,6 +374,7 @@ RULE_B_NOT=24
 'getBiimpliesHierarchy'=81
 '@backend=BDD'=95
 'leaves'=144
+'=flat'=103
 'gls'=199
 'setRemove'=51
 'Constraint'=40
@@ -403,6 +402,7 @@ RULE_B_NOT=24
 'names'=151
 'computeImplies'=85
 'isValid'=41
+'--hierarchy'=221
 '--interactive'=222
 'map'=191
 'vars'=60

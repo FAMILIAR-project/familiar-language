@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalFMLParser extends AbstractInternalContentAssistParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_PLUS", "RULE_MINUS", "RULE_MULT", "RULE_DIV", "RULE_EXP", "RULE_STRING", "RULE_ID", "RULE_STAR", "RULE_LEFT_HOOK", "RULE_META_ATTRIBUTE_SYMBOL", "RULE_RIGHT_HOOK", "RULE_LEFT_PAREN", "RULE_RIGHT_PAREN", "RULE_LEFT_BRACKET", "RULE_RIGHT_BRACKET", "RULE_COMMA", "RULE_B_OR", "RULE_B_AND", "RULE_B_IMPLY", "RULE_B_BIMPLY", "RULE_B_NOT", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'true'", "'false'", "'FeatureModel'", "'Feature'", "'Boolean'", "'String'", "'Configuration'", "'Set'", "'Double'", "'Integer'", "'Constraint'", "'isValid'", "'counting'", "'configs'", "'nbFeatures'", "'root'", "'features'", "'setUnion'", "'setIntersection'", "'setDiff'", "'setAdd'", "'setRemove'", "'select'", "'deselect'", "'unselect'", "'fullMandatorys'", "'falseOptionals'", "'quit'", "'exit'", "'ls'", "'vars'", "'memory'", "'cpu'", "'copy'", "'cp'", "'removeVariable'", "'rm'", "'save'", "'serialize'", "'print'", "'println'", "'FM'", "'featuremodel'", "'$'", "'mand'", "'opt'", "'Xor'", "'Or'", "'Mutex'", "'getImpliesHierarchy'", "'getExcludesHierarchy'", "'getBiimpliesHierarchy'", "'getImpliesConstraint'", "'getExcludesConstraint'", "'getBiimpliesConstraint'", "'computeImplies'", "'computeExcludes'", "'computeBiimplies'", "'getORGroups'", "'getXORGroups'", "'getMUTEXGroups'", "'computeORGroups'", "'computeXORGroups'", "'computeMUTEXGroups'", "'@backend=DEFAULT'", "'@backend=BDD'", "'@backend=BDD_SPLOT'", "'crossproduct'", "'union'", "'sunion'", "'intersection'", "'diff'", "'basic'", "'flat'", "'mst'", "'including'", "'excluding'", "'eq'", "'neq'", "'<'", "'>'", "'=='", "'!='", "'++'", "'--'", "'RANDOM'", "'MAX'", "'MIN'", "'--normal'", "'--verbose'", "'--withValues'", "'DIMACS'", "'fmlbdd'", "'featureide'", "'fmcalc'", "'fml'", "'SPLOT'", "'TVL'", "'fd'", "'xmi'", "'S2T2'", "'||'", "'&&'", "'='", "'constraint'", "'constraints'", "';'", "'if'", "'then'", "'end'", "'else'", "'foreach'", "'in'", "'do'", "'leaves'", "'pw'", "'minimization='", "'partial='", "'size'", "'setBelongs'", "'setIsEmpty'", "'names'", "'strConcat'", "'strSubstring'", "'strIndexOf'", "'strLength'", "'compare'", "'parameter'", "'run'", "'into'", "'ctcr'", "'merge'", "'aggregateMerge'", "'ksynthesis'", "'with'", "'hierarchy='", "':'", "'groups='", "'xorGroup'", "'mtxGroup'", "'orGroup'", "'constraints='", "'slice'", "'aggregate'", "'withMapping'", "'insert'", "'removeFeature'", "'renameFeature'", "'as'", "'extract'", "'assert'", "'isNull'", "'export'", "'hide'", "'configuration'", "'isComplete'", "'autoSelect'", "'selectedF'", "'deselectedF'", "'unselectedF'", "'asFM'", "'map'", "'unmap'", "'cleanup'", "'cores'", "'deads'", "'cliques'", "'convert'", "'hierarchy'", "'gls'", "'setMandatory'", "'setOptional'", "'setAlternative'", "'setOr'", "'addConstraint'", "'to'", "'removeConstraint'", "')?'", "'.'", "'not'", "'over'", "'setEmpty'", "'ancestors'", "'descendants'", "'children'", "'sibling'", "'parent'", "'name'", "'whichfm'", "'operator'", "'strInit'", "'--hierarchy='", "'--interactive'", "'--renamings'", "'isExisting'", "'isConflicting'", "'gdisplay'", "'glisting'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_PLUS", "RULE_MINUS", "RULE_MULT", "RULE_DIV", "RULE_EXP", "RULE_STRING", "RULE_ID", "RULE_STAR", "RULE_LEFT_HOOK", "RULE_META_ATTRIBUTE_SYMBOL", "RULE_RIGHT_HOOK", "RULE_LEFT_PAREN", "RULE_RIGHT_PAREN", "RULE_LEFT_BRACKET", "RULE_RIGHT_BRACKET", "RULE_COMMA", "RULE_B_OR", "RULE_B_AND", "RULE_B_IMPLY", "RULE_B_BIMPLY", "RULE_B_NOT", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'true'", "'false'", "'FeatureModel'", "'Feature'", "'Boolean'", "'String'", "'Configuration'", "'Set'", "'Double'", "'Integer'", "'Constraint'", "'isValid'", "'counting'", "'configs'", "'nbFeatures'", "'root'", "'features'", "'setUnion'", "'setIntersection'", "'setDiff'", "'setAdd'", "'setRemove'", "'select'", "'deselect'", "'unselect'", "'fullMandatorys'", "'falseOptionals'", "'quit'", "'exit'", "'ls'", "'vars'", "'memory'", "'cpu'", "'copy'", "'cp'", "'removeVariable'", "'rm'", "'save'", "'serialize'", "'print'", "'println'", "'FM'", "'featuremodel'", "'$'", "'mand'", "'opt'", "'Xor'", "'Or'", "'Mutex'", "'getImpliesHierarchy'", "'getExcludesHierarchy'", "'getBiimpliesHierarchy'", "'getImpliesConstraint'", "'getExcludesConstraint'", "'getBiimpliesConstraint'", "'computeImplies'", "'computeExcludes'", "'computeBiimplies'", "'getORGroups'", "'getXORGroups'", "'getMUTEXGroups'", "'computeORGroups'", "'computeXORGroups'", "'computeMUTEXGroups'", "'@backend=DEFAULT'", "'@backend=BDD'", "'@backend=BDD_SPLOT'", "'crossproduct'", "'union'", "'sunion'", "'intersection'", "'diff'", "'=basic'", "'=flat'", "'=mst'", "'including'", "'excluding'", "'eq'", "'neq'", "'<'", "'>'", "'=='", "'!='", "'++'", "'--'", "'RANDOM'", "'MAX'", "'MIN'", "'--normal'", "'--verbose'", "'--withValues'", "'DIMACS'", "'fmlbdd'", "'featureide'", "'fmcalc'", "'fml'", "'SPLOT'", "'TVL'", "'fd'", "'xmi'", "'S2T2'", "'||'", "'&&'", "'='", "'constraint'", "'constraints'", "';'", "'if'", "'then'", "'end'", "'else'", "'foreach'", "'in'", "'do'", "'leaves'", "'pw'", "'minimization='", "'partial='", "'size'", "'setBelongs'", "'setIsEmpty'", "'names'", "'strConcat'", "'strSubstring'", "'strIndexOf'", "'strLength'", "'compare'", "'parameter'", "'run'", "'into'", "'ctcr'", "'merge'", "'aggregateMerge'", "'ksynthesis'", "'with'", "'hierarchy='", "':'", "'groups='", "'xorGroup'", "'mtxGroup'", "'orGroup'", "'constraints='", "'slice'", "'aggregate'", "'withMapping'", "'insert'", "'removeFeature'", "'renameFeature'", "'as'", "'extract'", "'assert'", "'isNull'", "'export'", "'hide'", "'configuration'", "'isComplete'", "'autoSelect'", "'selectedF'", "'deselectedF'", "'unselectedF'", "'asFM'", "'map'", "'unmap'", "'cleanup'", "'cores'", "'deads'", "'cliques'", "'convert'", "'hierarchy'", "'gls'", "'setMandatory'", "'setOptional'", "'setAlternative'", "'setOr'", "'addConstraint'", "'to'", "'removeConstraint'", "')?'", "'.'", "'not'", "'over'", "'setEmpty'", "'ancestors'", "'descendants'", "'children'", "'sibling'", "'parent'", "'name'", "'whichfm'", "'operator'", "'strInit'", "'--hierarchy'", "'--interactive'", "'--renamings'", "'isExisting'", "'isConflicting'", "'gdisplay'", "'glisting'"
     };
     public static final int RULE_ID=10;
     public static final int T__159=159;
@@ -21245,13 +21245,13 @@ public class InternalFMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__HierarchyStrategy__Alternatives"
-    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6863:1: rule__HierarchyStrategy__Alternatives : ( ( ( 'basic' ) ) | ( ( 'flat' ) ) | ( ( 'mst' ) ) );
+    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6863:1: rule__HierarchyStrategy__Alternatives : ( ( ( '=basic' ) ) | ( ( '=flat' ) ) | ( ( '=mst' ) ) );
     public final void rule__HierarchyStrategy__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6867:1: ( ( ( 'basic' ) ) | ( ( 'flat' ) ) | ( ( 'mst' ) ) )
+            // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6867:1: ( ( ( '=basic' ) ) | ( ( '=flat' ) ) | ( ( '=mst' ) ) )
             int alt69=3;
             switch ( input.LA(1) ) {
             case 102:
@@ -21278,14 +21278,14 @@ public class InternalFMLParser extends AbstractInternalContentAssistParser {
 
             switch (alt69) {
                 case 1 :
-                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6868:1: ( ( 'basic' ) )
+                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6868:1: ( ( '=basic' ) )
                     {
-                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6868:1: ( ( 'basic' ) )
-                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6869:1: ( 'basic' )
+                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6868:1: ( ( '=basic' ) )
+                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6869:1: ( '=basic' )
                     {
                      before(grammarAccess.getHierarchyStrategyAccess().getBASICEnumLiteralDeclaration_0()); 
-                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6870:1: ( 'basic' )
-                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6870:3: 'basic'
+                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6870:1: ( '=basic' )
+                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6870:3: '=basic'
                     {
                     match(input,102,FOLLOW_102_in_rule__HierarchyStrategy__Alternatives15347); 
 
@@ -21299,14 +21299,14 @@ public class InternalFMLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6875:6: ( ( 'flat' ) )
+                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6875:6: ( ( '=flat' ) )
                     {
-                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6875:6: ( ( 'flat' ) )
-                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6876:1: ( 'flat' )
+                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6875:6: ( ( '=flat' ) )
+                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6876:1: ( '=flat' )
                     {
                      before(grammarAccess.getHierarchyStrategyAccess().getFLATEnumLiteralDeclaration_1()); 
-                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6877:1: ( 'flat' )
-                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6877:3: 'flat'
+                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6877:1: ( '=flat' )
+                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6877:3: '=flat'
                     {
                     match(input,103,FOLLOW_103_in_rule__HierarchyStrategy__Alternatives15368); 
 
@@ -21320,14 +21320,14 @@ public class InternalFMLParser extends AbstractInternalContentAssistParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6882:6: ( ( 'mst' ) )
+                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6882:6: ( ( '=mst' ) )
                     {
-                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6882:6: ( ( 'mst' ) )
-                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6883:1: ( 'mst' )
+                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6882:6: ( ( '=mst' ) )
+                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6883:1: ( '=mst' )
                     {
                      before(grammarAccess.getHierarchyStrategyAccess().getMSTEnumLiteralDeclaration_2()); 
-                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6884:1: ( 'mst' )
-                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6884:3: 'mst'
+                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6884:1: ( '=mst' )
+                    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:6884:3: '=mst'
                     {
                     match(input,104,FOLLOW_104_in_rule__HierarchyStrategy__Alternatives15389); 
 
@@ -59937,21 +59937,21 @@ public class InternalFMLParser extends AbstractInternalContentAssistParser {
 
 
     // $ANTLR start "rule__AggregateMerge__HierarchySpecifiedAssignment_1_0"
-    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:21571:1: rule__AggregateMerge__HierarchySpecifiedAssignment_1_0 : ( ( '--hierarchy=' ) ) ;
+    // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:21571:1: rule__AggregateMerge__HierarchySpecifiedAssignment_1_0 : ( ( '--hierarchy' ) ) ;
     public final void rule__AggregateMerge__HierarchySpecifiedAssignment_1_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:21575:1: ( ( ( '--hierarchy=' ) ) )
-            // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:21576:1: ( ( '--hierarchy=' ) )
+            // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:21575:1: ( ( ( '--hierarchy' ) ) )
+            // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:21576:1: ( ( '--hierarchy' ) )
             {
-            // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:21576:1: ( ( '--hierarchy=' ) )
-            // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:21577:1: ( '--hierarchy=' )
+            // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:21576:1: ( ( '--hierarchy' ) )
+            // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:21577:1: ( '--hierarchy' )
             {
              before(grammarAccess.getAggregateMergeAccess().getHierarchySpecifiedHierarchyKeyword_1_0_0()); 
-            // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:21578:1: ( '--hierarchy=' )
-            // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:21579:1: '--hierarchy='
+            // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:21578:1: ( '--hierarchy' )
+            // ../org.xtext.example.fml.ui/src-gen/org/xtext/example/mydsl/ui/contentassist/antlr/internal/InternalFML.g:21579:1: '--hierarchy'
             {
              before(grammarAccess.getAggregateMergeAccess().getHierarchySpecifiedHierarchyKeyword_1_0_0()); 
             match(input,221,FOLLOW_221_in_rule__AggregateMerge__HierarchySpecifiedAssignment_1_044650); 

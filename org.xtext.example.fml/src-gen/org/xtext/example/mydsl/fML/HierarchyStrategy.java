@@ -27,7 +27,7 @@ public enum HierarchyStrategy implements Enumerator
    * @generated
    * @ordered
    */
-  BASIC(0, "BASIC", "basic"),
+  BASIC(0, "BASIC", "=basic"),
 
   /**
    * The '<em><b>FLAT</b></em>' literal object.
@@ -37,7 +37,7 @@ public enum HierarchyStrategy implements Enumerator
    * @generated
    * @ordered
    */
-  FLAT(1, "FLAT", "flat"),
+  FLAT(1, "FLAT", "=flat"),
 
   /**
    * The '<em><b>MST</b></em>' literal object.
@@ -47,7 +47,7 @@ public enum HierarchyStrategy implements Enumerator
    * @generated
    * @ordered
    */
-  MST(2, "MST", "mst");
+  MST(2, "MST", "=mst");
 
   /**
    * The '<em><b>BASIC</b></em>' literal value.
@@ -58,7 +58,7 @@ public enum HierarchyStrategy implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #BASIC
-   * @model literal="basic"
+   * @model literal="=basic"
    * @generated
    * @ordered
    */
@@ -73,7 +73,7 @@ public enum HierarchyStrategy implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #FLAT
-   * @model literal="flat"
+   * @model literal="=flat"
    * @generated
    * @ordered
    */
@@ -88,7 +88,7 @@ public enum HierarchyStrategy implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #MST
-   * @model literal="mst"
+   * @model literal="=mst"
    * @generated
    * @ordered
    */

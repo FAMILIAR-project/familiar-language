@@ -304,9 +304,9 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="HierarchyStrategy">
-    <eLiterals name="BASIC" literal="basic"/>
-    <eLiterals name="FLAT" value="1" literal="flat"/>
-    <eLiterals name="MST" value="2" literal="mst"/>
+    <eLiterals name="BASIC" literal="=basic"/>
+    <eLiterals name="FLAT" value="1" literal="=flat"/>
+    <eLiterals name="MST" value="2" literal="=mst"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Synthesis" eSuperTypes="#//Command #//FMCommand">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="interactive" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>

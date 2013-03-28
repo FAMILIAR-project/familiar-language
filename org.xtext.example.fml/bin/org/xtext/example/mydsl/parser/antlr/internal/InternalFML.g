@@ -5344,7 +5344,7 @@ ruleAggregateMerge returns [EObject current=null]
     }
 ((
 (
-		lv_hierarchySpecified_1_0=	'--hierarchy=' 
+		lv_hierarchySpecified_1_0=	'--hierarchy' 
     {
         newLeafNode(lv_hierarchySpecified_1_0, grammarAccess.getAggregateMergeAccess().getHierarchySpecifiedHierarchyKeyword_1_0_0());
     }
@@ -5353,7 +5353,7 @@ ruleAggregateMerge returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getAggregateMergeRule());
 	        }
-       		setWithLastConsumed($current, "hierarchySpecified", true, "--hierarchy=");
+       		setWithLastConsumed($current, "hierarchySpecified", true, "--hierarchy");
 	    }
 
 )
@@ -10566,19 +10566,19 @@ ruleMergeMode returns [Enumerator current=null]
 ruleHierarchyStrategy returns [Enumerator current=null] 
     @init { enterRule(); }
     @after { leaveRule(); }:
-((	enumLiteral_0='basic' 
+((	enumLiteral_0='=basic' 
 	{
         $current = grammarAccess.getHierarchyStrategyAccess().getBASICEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
         newLeafNode(enumLiteral_0, grammarAccess.getHierarchyStrategyAccess().getBASICEnumLiteralDeclaration_0()); 
     }
 )
-    |(	enumLiteral_1='flat' 
+    |(	enumLiteral_1='=flat' 
 	{
         $current = grammarAccess.getHierarchyStrategyAccess().getFLATEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
         newLeafNode(enumLiteral_1, grammarAccess.getHierarchyStrategyAccess().getFLATEnumLiteralDeclaration_1()); 
     }
 )
-    |(	enumLiteral_2='mst' 
+    |(	enumLiteral_2='=mst' 
 	{
         $current = grammarAccess.getHierarchyStrategyAccess().getMSTEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
         newLeafNode(enumLiteral_2, grammarAccess.getHierarchyStrategyAccess().getMSTEnumLiteralDeclaration_2()); 

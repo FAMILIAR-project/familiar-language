@@ -23,7 +23,7 @@ import java.util.HashMap;
 @SuppressWarnings("all")
 public class InternalFMLParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_LEFT_HOOK", "RULE_META_ATTRIBUTE_SYMBOL", "RULE_RIGHT_HOOK", "RULE_PLUS", "RULE_MINUS", "RULE_MULT", "RULE_DIV", "RULE_EXP", "RULE_LEFT_PAREN", "RULE_RIGHT_PAREN", "RULE_INT", "RULE_STRING", "RULE_LEFT_BRACKET", "RULE_RIGHT_BRACKET", "RULE_COMMA", "RULE_ID", "RULE_B_OR", "RULE_B_AND", "RULE_B_IMPLY", "RULE_B_BIMPLY", "RULE_B_NOT", "RULE_STAR", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'='", "'not'", "'true'", "'false'", "'constraint'", "'constraints'", "';'", "'if'", "'then'", "'else'", "'end'", "'foreach'", "'in'", "'do'", "'FeatureModel'", "'Feature'", "'Boolean'", "'String'", "'Configuration'", "'Set'", "'Double'", "'Integer'", "'Constraint'", "'leaves'", "'over'", "'pw'", "'minimization='", "'partial='", "'isValid'", "'counting'", "'configs'", "'nbFeatures'", "'root'", "'features'", "'size'", "'setBelongs'", "'setUnion'", "'setIntersection'", "'setDiff'", "'setEmpty'", "'setAdd'", "'setRemove'", "'setIsEmpty'", "'names'", "'ancestors'", "'descendants'", "'children'", "'sibling'", "'parent'", "'name'", "'whichfm'", "'operator'", "'strInit'", "'strConcat'", "'strSubstring'", "'strIndexOf'", "'strLength'", "'compare'", "'parameter'", "':'", "'run'", "'into'", "'ctcr'", "'merge'", "'aggregateMerge'", "'--hierarchy='", "'ksynthesis'", "'--interactive'", "'with'", "'hierarchy='", "'groups='", "'xorGroup'", "'mtxGroup'", "'orGroup'", "'constraints='", "'slice'", "'aggregate'", "'--renamings'", "'withMapping'", "'insert'", "'removeFeature'", "'renameFeature'", "'as'", "'extract'", "'assert'", "'isNull'", "'export'", "'hide'", "'configuration'", "'isComplete'", "'select'", "'deselect'", "'unselect'", "'autoSelect'", "'selectedF'", "'deselectedF'", "'unselectedF'", "'asFM'", "'map'", "'unmap'", "'cleanup'", "'cores'", "'deads'", "'fullMandatorys'", "'falseOptionals'", "'cliques'", "'quit'", "'exit'", "'isExisting'", "'isConflicting'", "'ls'", "'vars'", "'memory'", "'cpu'", "'copy'", "'cp'", "'removeVariable'", "'rm'", "'convert'", "'save'", "'serialize'", "'hierarchy'", "'print'", "'println'", "'gdisplay'", "'glisting'", "'gls'", "'setMandatory'", "'setOptional'", "'setAlternative'", "'setOr'", "'addConstraint'", "'to'", "'removeConstraint'", "'FM'", "'featuremodel'", "')?'", "'$'", "'.'", "'mand'", "'opt'", "'Xor'", "'Or'", "'Mutex'", "'getImpliesHierarchy'", "'getExcludesHierarchy'", "'getBiimpliesHierarchy'", "'getImpliesConstraint'", "'getExcludesConstraint'", "'getBiimpliesConstraint'", "'computeImplies'", "'computeExcludes'", "'computeBiimplies'", "'getORGroups'", "'getXORGroups'", "'getMUTEXGroups'", "'computeORGroups'", "'computeXORGroups'", "'computeMUTEXGroups'", "'@backend=DEFAULT'", "'@backend=BDD'", "'@backend=BDD_SPLOT'", "'crossproduct'", "'union'", "'sunion'", "'intersection'", "'diff'", "'basic'", "'flat'", "'mst'", "'including'", "'excluding'", "'eq'", "'neq'", "'<'", "'>'", "'=='", "'!='", "'++'", "'--'", "'RANDOM'", "'MAX'", "'MIN'", "'--normal'", "'--verbose'", "'--withValues'", "'DIMACS'", "'fmlbdd'", "'featureide'", "'fmcalc'", "'fml'", "'SPLOT'", "'TVL'", "'fd'", "'xmi'", "'S2T2'", "'||'", "'&&'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_LEFT_HOOK", "RULE_META_ATTRIBUTE_SYMBOL", "RULE_RIGHT_HOOK", "RULE_PLUS", "RULE_MINUS", "RULE_MULT", "RULE_DIV", "RULE_EXP", "RULE_LEFT_PAREN", "RULE_RIGHT_PAREN", "RULE_INT", "RULE_STRING", "RULE_LEFT_BRACKET", "RULE_RIGHT_BRACKET", "RULE_COMMA", "RULE_ID", "RULE_B_OR", "RULE_B_AND", "RULE_B_IMPLY", "RULE_B_BIMPLY", "RULE_B_NOT", "RULE_STAR", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'='", "'not'", "'true'", "'false'", "'constraint'", "'constraints'", "';'", "'if'", "'then'", "'else'", "'end'", "'foreach'", "'in'", "'do'", "'FeatureModel'", "'Feature'", "'Boolean'", "'String'", "'Configuration'", "'Set'", "'Double'", "'Integer'", "'Constraint'", "'leaves'", "'over'", "'pw'", "'minimization='", "'partial='", "'isValid'", "'counting'", "'configs'", "'nbFeatures'", "'root'", "'features'", "'size'", "'setBelongs'", "'setUnion'", "'setIntersection'", "'setDiff'", "'setEmpty'", "'setAdd'", "'setRemove'", "'setIsEmpty'", "'names'", "'ancestors'", "'descendants'", "'children'", "'sibling'", "'parent'", "'name'", "'whichfm'", "'operator'", "'strInit'", "'strConcat'", "'strSubstring'", "'strIndexOf'", "'strLength'", "'compare'", "'parameter'", "':'", "'run'", "'into'", "'ctcr'", "'merge'", "'aggregateMerge'", "'--hierarchy'", "'ksynthesis'", "'--interactive'", "'with'", "'hierarchy='", "'groups='", "'xorGroup'", "'mtxGroup'", "'orGroup'", "'constraints='", "'slice'", "'aggregate'", "'--renamings'", "'withMapping'", "'insert'", "'removeFeature'", "'renameFeature'", "'as'", "'extract'", "'assert'", "'isNull'", "'export'", "'hide'", "'configuration'", "'isComplete'", "'select'", "'deselect'", "'unselect'", "'autoSelect'", "'selectedF'", "'deselectedF'", "'unselectedF'", "'asFM'", "'map'", "'unmap'", "'cleanup'", "'cores'", "'deads'", "'fullMandatorys'", "'falseOptionals'", "'cliques'", "'quit'", "'exit'", "'isExisting'", "'isConflicting'", "'ls'", "'vars'", "'memory'", "'cpu'", "'copy'", "'cp'", "'removeVariable'", "'rm'", "'convert'", "'save'", "'serialize'", "'hierarchy'", "'print'", "'println'", "'gdisplay'", "'glisting'", "'gls'", "'setMandatory'", "'setOptional'", "'setAlternative'", "'setOr'", "'addConstraint'", "'to'", "'removeConstraint'", "'FM'", "'featuremodel'", "')?'", "'$'", "'.'", "'mand'", "'opt'", "'Xor'", "'Or'", "'Mutex'", "'getImpliesHierarchy'", "'getExcludesHierarchy'", "'getBiimpliesHierarchy'", "'getImpliesConstraint'", "'getExcludesConstraint'", "'getBiimpliesConstraint'", "'computeImplies'", "'computeExcludes'", "'computeBiimplies'", "'getORGroups'", "'getXORGroups'", "'getMUTEXGroups'", "'computeORGroups'", "'computeXORGroups'", "'computeMUTEXGroups'", "'@backend=DEFAULT'", "'@backend=BDD'", "'@backend=BDD_SPLOT'", "'crossproduct'", "'union'", "'sunion'", "'intersection'", "'diff'", "'=basic'", "'=flat'", "'=mst'", "'including'", "'excluding'", "'eq'", "'neq'", "'<'", "'>'", "'=='", "'!='", "'++'", "'--'", "'RANDOM'", "'MAX'", "'MIN'", "'--normal'", "'--verbose'", "'--withValues'", "'DIMACS'", "'fmlbdd'", "'featureide'", "'fmcalc'", "'fml'", "'SPLOT'", "'TVL'", "'fd'", "'xmi'", "'S2T2'", "'||'", "'&&'"
     };
     public static final int RULE_ID=19;
     public static final int T__159=159;
@@ -15002,7 +15002,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAggregateMerge"
-    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:5337:1: ruleAggregateMerge returns [EObject current=null] : (otherlv_0= 'aggregateMerge' ( ( (lv_hierarchySpecified_1_0= '--hierarchy=' ) ) ( (lv_hierarchyStrategy_2_0= ruleHierarchyStrategy ) ) )? ( (lv_mode_3_0= ruleMergeMode ) ) ( (this_LEFT_BRACKET_4= RULE_LEFT_BRACKET ( (lv_lfms_5_0= ruleFMCommand ) )+ this_RIGHT_BRACKET_6= RULE_RIGHT_BRACKET ) | ( (lv_fms_7_0= ruleLFMArgs ) ) ) ) ;
+    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:5337:1: ruleAggregateMerge returns [EObject current=null] : (otherlv_0= 'aggregateMerge' ( ( (lv_hierarchySpecified_1_0= '--hierarchy' ) ) ( (lv_hierarchyStrategy_2_0= ruleHierarchyStrategy ) ) )? ( (lv_mode_3_0= ruleMergeMode ) ) ( (this_LEFT_BRACKET_4= RULE_LEFT_BRACKET ( (lv_lfms_5_0= ruleFMCommand ) )+ this_RIGHT_BRACKET_6= RULE_RIGHT_BRACKET ) | ( (lv_fms_7_0= ruleLFMArgs ) ) ) ) ;
     public final EObject ruleAggregateMerge() throws RecognitionException {
         EObject current = null;
 
@@ -15022,11 +15022,11 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:5340:28: ( (otherlv_0= 'aggregateMerge' ( ( (lv_hierarchySpecified_1_0= '--hierarchy=' ) ) ( (lv_hierarchyStrategy_2_0= ruleHierarchyStrategy ) ) )? ( (lv_mode_3_0= ruleMergeMode ) ) ( (this_LEFT_BRACKET_4= RULE_LEFT_BRACKET ( (lv_lfms_5_0= ruleFMCommand ) )+ this_RIGHT_BRACKET_6= RULE_RIGHT_BRACKET ) | ( (lv_fms_7_0= ruleLFMArgs ) ) ) ) )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:5341:1: (otherlv_0= 'aggregateMerge' ( ( (lv_hierarchySpecified_1_0= '--hierarchy=' ) ) ( (lv_hierarchyStrategy_2_0= ruleHierarchyStrategy ) ) )? ( (lv_mode_3_0= ruleMergeMode ) ) ( (this_LEFT_BRACKET_4= RULE_LEFT_BRACKET ( (lv_lfms_5_0= ruleFMCommand ) )+ this_RIGHT_BRACKET_6= RULE_RIGHT_BRACKET ) | ( (lv_fms_7_0= ruleLFMArgs ) ) ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:5340:28: ( (otherlv_0= 'aggregateMerge' ( ( (lv_hierarchySpecified_1_0= '--hierarchy' ) ) ( (lv_hierarchyStrategy_2_0= ruleHierarchyStrategy ) ) )? ( (lv_mode_3_0= ruleMergeMode ) ) ( (this_LEFT_BRACKET_4= RULE_LEFT_BRACKET ( (lv_lfms_5_0= ruleFMCommand ) )+ this_RIGHT_BRACKET_6= RULE_RIGHT_BRACKET ) | ( (lv_fms_7_0= ruleLFMArgs ) ) ) ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:5341:1: (otherlv_0= 'aggregateMerge' ( ( (lv_hierarchySpecified_1_0= '--hierarchy' ) ) ( (lv_hierarchyStrategy_2_0= ruleHierarchyStrategy ) ) )? ( (lv_mode_3_0= ruleMergeMode ) ) ( (this_LEFT_BRACKET_4= RULE_LEFT_BRACKET ( (lv_lfms_5_0= ruleFMCommand ) )+ this_RIGHT_BRACKET_6= RULE_RIGHT_BRACKET ) | ( (lv_fms_7_0= ruleLFMArgs ) ) ) )
             {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:5341:1: (otherlv_0= 'aggregateMerge' ( ( (lv_hierarchySpecified_1_0= '--hierarchy=' ) ) ( (lv_hierarchyStrategy_2_0= ruleHierarchyStrategy ) ) )? ( (lv_mode_3_0= ruleMergeMode ) ) ( (this_LEFT_BRACKET_4= RULE_LEFT_BRACKET ( (lv_lfms_5_0= ruleFMCommand ) )+ this_RIGHT_BRACKET_6= RULE_RIGHT_BRACKET ) | ( (lv_fms_7_0= ruleLFMArgs ) ) ) )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:5341:3: otherlv_0= 'aggregateMerge' ( ( (lv_hierarchySpecified_1_0= '--hierarchy=' ) ) ( (lv_hierarchyStrategy_2_0= ruleHierarchyStrategy ) ) )? ( (lv_mode_3_0= ruleMergeMode ) ) ( (this_LEFT_BRACKET_4= RULE_LEFT_BRACKET ( (lv_lfms_5_0= ruleFMCommand ) )+ this_RIGHT_BRACKET_6= RULE_RIGHT_BRACKET ) | ( (lv_fms_7_0= ruleLFMArgs ) ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:5341:1: (otherlv_0= 'aggregateMerge' ( ( (lv_hierarchySpecified_1_0= '--hierarchy' ) ) ( (lv_hierarchyStrategy_2_0= ruleHierarchyStrategy ) ) )? ( (lv_mode_3_0= ruleMergeMode ) ) ( (this_LEFT_BRACKET_4= RULE_LEFT_BRACKET ( (lv_lfms_5_0= ruleFMCommand ) )+ this_RIGHT_BRACKET_6= RULE_RIGHT_BRACKET ) | ( (lv_fms_7_0= ruleLFMArgs ) ) ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:5341:3: otherlv_0= 'aggregateMerge' ( ( (lv_hierarchySpecified_1_0= '--hierarchy' ) ) ( (lv_hierarchyStrategy_2_0= ruleHierarchyStrategy ) ) )? ( (lv_mode_3_0= ruleMergeMode ) ) ( (this_LEFT_BRACKET_4= RULE_LEFT_BRACKET ( (lv_lfms_5_0= ruleFMCommand ) )+ this_RIGHT_BRACKET_6= RULE_RIGHT_BRACKET ) | ( (lv_fms_7_0= ruleLFMArgs ) ) )
             {
             otherlv_0=(Token)match(input,94,FOLLOW_94_in_ruleAggregateMerge11795); if (state.failed) return current;
             if ( state.backtracking==0 ) {
@@ -15034,7 +15034,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                   	newLeafNode(otherlv_0, grammarAccess.getAggregateMergeAccess().getAggregateMergeKeyword_0());
                   
             }
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:5345:1: ( ( (lv_hierarchySpecified_1_0= '--hierarchy=' ) ) ( (lv_hierarchyStrategy_2_0= ruleHierarchyStrategy ) ) )?
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:5345:1: ( ( (lv_hierarchySpecified_1_0= '--hierarchy' ) ) ( (lv_hierarchyStrategy_2_0= ruleHierarchyStrategy ) ) )?
             int alt49=2;
             int LA49_0 = input.LA(1);
 
@@ -15043,13 +15043,13 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             }
             switch (alt49) {
                 case 1 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:5345:2: ( (lv_hierarchySpecified_1_0= '--hierarchy=' ) ) ( (lv_hierarchyStrategy_2_0= ruleHierarchyStrategy ) )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:5345:2: ( (lv_hierarchySpecified_1_0= '--hierarchy' ) ) ( (lv_hierarchyStrategy_2_0= ruleHierarchyStrategy ) )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:5345:2: ( (lv_hierarchySpecified_1_0= '--hierarchy=' ) )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:5346:1: (lv_hierarchySpecified_1_0= '--hierarchy=' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:5345:2: ( (lv_hierarchySpecified_1_0= '--hierarchy' ) )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:5346:1: (lv_hierarchySpecified_1_0= '--hierarchy' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:5346:1: (lv_hierarchySpecified_1_0= '--hierarchy=' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:5347:3: lv_hierarchySpecified_1_0= '--hierarchy='
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:5346:1: (lv_hierarchySpecified_1_0= '--hierarchy' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:5347:3: lv_hierarchySpecified_1_0= '--hierarchy'
                     {
                     lv_hierarchySpecified_1_0=(Token)match(input,95,FOLLOW_95_in_ruleAggregateMerge11814); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -15062,7 +15062,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                       	        if (current==null) {
                       	            current = createModelElement(grammarAccess.getAggregateMergeRule());
                       	        }
-                             		setWithLastConsumed(current, "hierarchySpecified", true, "--hierarchy=");
+                             		setWithLastConsumed(current, "hierarchySpecified", true, "--hierarchy");
                       	    
                     }
 
@@ -30628,7 +30628,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleHierarchyStrategy"
-    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10566:1: ruleHierarchyStrategy returns [Enumerator current=null] : ( (enumLiteral_0= 'basic' ) | (enumLiteral_1= 'flat' ) | (enumLiteral_2= 'mst' ) ) ;
+    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10566:1: ruleHierarchyStrategy returns [Enumerator current=null] : ( (enumLiteral_0= '=basic' ) | (enumLiteral_1= '=flat' ) | (enumLiteral_2= '=mst' ) ) ;
     public final Enumerator ruleHierarchyStrategy() throws RecognitionException {
         Enumerator current = null;
 
@@ -30638,10 +30638,10 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10568:28: ( ( (enumLiteral_0= 'basic' ) | (enumLiteral_1= 'flat' ) | (enumLiteral_2= 'mst' ) ) )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10569:1: ( (enumLiteral_0= 'basic' ) | (enumLiteral_1= 'flat' ) | (enumLiteral_2= 'mst' ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10568:28: ( ( (enumLiteral_0= '=basic' ) | (enumLiteral_1= '=flat' ) | (enumLiteral_2= '=mst' ) ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10569:1: ( (enumLiteral_0= '=basic' ) | (enumLiteral_1= '=flat' ) | (enumLiteral_2= '=mst' ) )
             {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10569:1: ( (enumLiteral_0= 'basic' ) | (enumLiteral_1= 'flat' ) | (enumLiteral_2= 'mst' ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10569:1: ( (enumLiteral_0= '=basic' ) | (enumLiteral_1= '=flat' ) | (enumLiteral_2= '=mst' ) )
             int alt124=3;
             switch ( input.LA(1) ) {
             case 197:
@@ -30669,10 +30669,10 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
             switch (alt124) {
                 case 1 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10569:2: (enumLiteral_0= 'basic' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10569:2: (enumLiteral_0= '=basic' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10569:2: (enumLiteral_0= 'basic' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10569:4: enumLiteral_0= 'basic'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10569:2: (enumLiteral_0= '=basic' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10569:4: enumLiteral_0= '=basic'
                     {
                     enumLiteral_0=(Token)match(input,197,FOLLOW_197_in_ruleHierarchyStrategy23887); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -30688,10 +30688,10 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10575:6: (enumLiteral_1= 'flat' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10575:6: (enumLiteral_1= '=flat' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10575:6: (enumLiteral_1= 'flat' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10575:8: enumLiteral_1= 'flat'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10575:6: (enumLiteral_1= '=flat' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10575:8: enumLiteral_1= '=flat'
                     {
                     enumLiteral_1=(Token)match(input,198,FOLLOW_198_in_ruleHierarchyStrategy23904); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
@@ -30707,10 +30707,10 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10581:6: (enumLiteral_2= 'mst' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10581:6: (enumLiteral_2= '=mst' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10581:6: (enumLiteral_2= 'mst' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10581:8: enumLiteral_2= 'mst'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10581:6: (enumLiteral_2= '=mst' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10581:8: enumLiteral_2= '=mst'
                     {
                     enumLiteral_2=(Token)match(input,199,FOLLOW_199_in_ruleHierarchyStrategy23921); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
