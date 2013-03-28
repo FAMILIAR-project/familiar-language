@@ -10,12 +10,14 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
 import javax.swing.JScrollPane;
 import javax.swing.JTextField;
+import javax.swing.JToolBar;
 import javax.swing.JTree;
 import javax.swing.SwingUtilities;
 import javax.swing.event.DocumentEvent;
@@ -45,8 +47,12 @@ public class ParentSelector extends JPanel {
 
 	private List<KeyValue<String, List<String>>> parentsList;
 
+	private boolean hideDefinedFeatures;
+	private JButton hideDefinedFeaturesButton;
+
 	public ParentSelector(FMSynthesisEnvironment environment) {
 		this.environment = environment;
+		hideDefinedFeatures = true;
 
 		// Create explorer view
 		root = new DefaultMutableTreeNode();
@@ -56,10 +62,24 @@ public class ParentSelector extends JPanel {
 		search = new JTextField();
 		search.getDocument().addDocumentListener(new SearchFieldListener());
 
-		// Set layout and add explorer view
+		// Create tool bar
+		JToolBar toolBar = new JToolBar();
+		toolBar.setFloatable(false);
+		
+		hideDefinedFeaturesButton = new JButton("Hide");
+		hideDefinedFeaturesButton.setToolTipText("Hide features with a defined parent.");
+		hideDefinedFeaturesButton.addActionListener(new HideDefinedFeaturesListener());
+		hideDefinedFeaturesButton.setSelected(hideDefinedFeatures);
+		toolBar.add(hideDefinedFeaturesButton);
+		
+		// Set layout and add components
 		this.setLayout(new BorderLayout());
 		this.add(new JLabel("Parent selector"), BorderLayout.NORTH);
-		this.add(new JScrollPane(tree), BorderLayout.CENTER);
+		JPanel centerPanel = new JPanel();
+		centerPanel.setLayout(new BorderLayout());
+		centerPanel.add(toolBar, BorderLayout.NORTH);
+		centerPanel.add(new JScrollPane(tree), BorderLayout.CENTER);
+		this.add(centerPanel, BorderLayout.CENTER);
 		this.add(search, BorderLayout.SOUTH);
 
 		// Create parent popup menu
@@ -83,46 +103,11 @@ public class ParentSelector extends JPanel {
 		tree.addTreeSelectionListener(new SelectedFeaturesListener(environment));
 
 		// Show popup menu		
-		tree.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				if (SwingUtilities.isRightMouseButton(e)) {
-
-					int row = tree.getRowForLocation(e.getX(), e.getY());
-					TreePath path = tree.getPathForRow(row);
-					tree.setSelectionRow(row);
-					if (path != null) {
-						if (path.getPathCount() == 2) {
-							lastSelectedFeature = path.getPathComponent(1).toString();
-							featurePopupMenu.show(tree, e.getX(), e.getY());
-						} else if (path.getPathCount() == 3) {
-							lastSelectedFeature = path.getPathComponent(1).toString();
-							lastSelectedParent = path.getPathComponent(2).toString();
-							parentPopupMenu.show(tree, e.getX(), e.getY());		
-						}
-					}
-
-				}
-			}
-		});
+		tree.addMouseListener(new PopupMenuAdapter());
 
 		// Update list of expanded features
 		expandedFeatures = new HashSet<String>();
-		tree.addTreeExpansionListener(new TreeExpansionListener() {
-
-			@Override
-			public void treeExpanded(TreeExpansionEvent event) {
-				String feature = event.getPath().getLastPathComponent().toString();
-				expandedFeatures.add(feature);
-			}
-
-			@Override
-			public void treeCollapsed(TreeExpansionEvent event) {
-				String feature = event.getPath().getLastPathComponent().toString();
-				expandedFeatures.remove(feature);
-			}
-		});
-
+		tree.addTreeExpansionListener(new FeatureExpansionListener());
 	}
 
 	public void updateParents(List<KeyValue<String, List<String>>> list) {
@@ -136,10 +121,15 @@ public class ParentSelector extends JPanel {
 
 		for (KeyValue<String, List<String>> entry : parentsList) {
 			String feature = entry.getKey();
-			if (feature.toLowerCase().contains(search.getText().toLowerCase())) {
+			List<String> parents = entry.getValue();
+			
+			boolean containsSearchedWord = feature.toLowerCase().contains(search.getText().toLowerCase());
+			boolean hidden = hideDefinedFeatures && parents.size() < 2;
+			
+			if (containsSearchedWord && !hidden) {
 				DefaultMutableTreeNode featureNode = new DefaultMutableTreeNode(feature);
 				root.add(featureNode);
-				for (String parent : entry.getValue()) {
+				for (String parent : parents) {
 					featureNode.add(new DefaultMutableTreeNode(parent));
 				}
 
@@ -199,5 +189,51 @@ public class ParentSelector extends JPanel {
 
 		}
 
+	}
+	
+	private class PopupMenuAdapter extends MouseAdapter {
+		@Override
+		public void mouseClicked(MouseEvent e) {
+			if (SwingUtilities.isRightMouseButton(e)) {
+
+				int row = tree.getRowForLocation(e.getX(), e.getY());
+				TreePath path = tree.getPathForRow(row);
+				tree.setSelectionRow(row);
+				if (path != null) {
+					if (path.getPathCount() == 2) {
+						lastSelectedFeature = path.getPathComponent(1).toString();
+						featurePopupMenu.show(tree, e.getX(), e.getY());
+					} else if (path.getPathCount() == 3) {
+						lastSelectedFeature = path.getPathComponent(1).toString();
+						lastSelectedParent = path.getPathComponent(2).toString();
+						parentPopupMenu.show(tree, e.getX(), e.getY());		
+					}
+				}
+
+			}
+		}
+	}
+	
+	private class FeatureExpansionListener implements TreeExpansionListener {
+		@Override
+		public void treeExpanded(TreeExpansionEvent event) {
+			String feature = event.getPath().getLastPathComponent().toString();
+			expandedFeatures.add(feature);
+		}
+
+		@Override
+		public void treeCollapsed(TreeExpansionEvent event) {
+			String feature = event.getPath().getLastPathComponent().toString();
+			expandedFeatures.remove(feature);
+		}
+	}
+	
+	private class HideDefinedFeaturesListener implements ActionListener {
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			hideDefinedFeatures = !hideDefinedFeatures;
+			hideDefinedFeaturesButton.setSelected(hideDefinedFeatures);
+			updateParents();
+		}
 	}
 }

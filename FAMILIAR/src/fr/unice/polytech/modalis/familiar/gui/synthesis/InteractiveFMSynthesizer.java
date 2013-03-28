@@ -45,14 +45,15 @@ public class InteractiveFMSynthesizer extends Observable{
 	private double clusteringThreshold;
 
 	public InteractiveFMSynthesizer(FeatureModelVariable fmv) {
-		this.fmv = fmv;
 		big = new WeightedImplicationGraph<String>(fmv.computeImplicationGraph());
 		originalBig = big.clone();
-				fmv.setFm(new FeatureModel<String>(FeatureGraphFactory.mkStringFactory().mkTop()));
+		this.fmv = new FeatureModelVariable(fmv.getIdentifier(),
+				new FeatureModel<String>(FeatureGraphFactory.mkStringFactory().mkTop()),
+				fmv.getFormula().clone());
 
 		setParentSimilarityMetric(new AlwaysZeroMetric());
 		setClusteringParameters(new SimmetricsMetric(MetricName.SIMMETRICS_SMITHWATERMAN), 0.4);
-		setSupportClusteringParameters(0);
+//		setSupportClusteringParameters(0);
 		featureComparator = new OutDegreeComparator(big.getImplicationGraph());
 	}
 
@@ -192,7 +193,7 @@ public class InteractiveFMSynthesizer extends Observable{
 		HierarchicalFeatureClusterer hierarchicalClustering = new HierarchicalFeatureClusterer();
 		FMExperiment experiment = new FMExperiment(big.getImplicationGraph());
 		Dendrogram dendrogram = hierarchicalClustering.computeDendrogram(experiment, clusteringSimilarityMetric);
-		similarityClusters = hierarchicalClustering.extractClusters(experiment,dendrogram, clusteringThreshold);
+		similarityClusters = hierarchicalClustering.extractClusters(experiment, dendrogram, clusteringThreshold);
 		setChanged();
 		notifyObservers();
 	}

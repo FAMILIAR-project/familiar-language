@@ -47,8 +47,9 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 		this.setLayout(new GridLayout(1, 1));
 		JSplitPane cliqueClusterSplitPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT, clusterViewer, cliqueViewer);
 		JSplitPane leftSplitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, parentSelector, cliqueClusterSplitPane);
-		JSplitPane fmBigSplitPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT, fmViewer, bigViewer); 
-		JSplitPane globalSplitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, leftSplitPane, fmBigSplitPane);
+//		JSplitPane fmBigSplitPane = new JSplitPane(JSplitPane.VERTICAL_SPLIT, fmViewer, bigViewer); 
+//		JSplitPane globalSplitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, leftSplitPane, fmBigSplitPane);
+		JSplitPane globalSplitPane = new JSplitPane(JSplitPane.HORIZONTAL_SPLIT, leftSplitPane, fmViewer);
 		this.add(globalSplitPane);
 
 		update(synthesizer, null); // Initialize display
@@ -58,7 +59,7 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 	@Override
 	public void update(Observable o, Object arg) {
 		fmViewer.updateFM(synthesizer.getFeatureModelVariable());
-		bigViewer.updateBIG(synthesizer.getWeightedImplicationGraph());
+//		bigViewer.updateBIG(synthesizer.getWeightedImplicationGraph());
 		parentSelector.updateParents(synthesizer.getParentCandidates());
 		Set<Set<String>> similarityClusters = synthesizer.getSimilarityClusters();
 		if (similarityClusters != null) {
