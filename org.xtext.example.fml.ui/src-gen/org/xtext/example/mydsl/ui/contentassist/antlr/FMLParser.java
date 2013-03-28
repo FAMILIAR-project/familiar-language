@@ -141,6 +141,7 @@ public class FMLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLeavesAccess().getGroup(), "rule__Leaves__Group__0");
 					put(grammarAccess.getGetConstraintsAccess().getGroup(), "rule__GetConstraints__Group__0");
 					put(grammarAccess.getComputeConstraintsAccess().getGroup(), "rule__ComputeConstraints__Group__0");
+					put(grammarAccess.getComputeConstraintsAccess().getGroup_2(), "rule__ComputeConstraints__Group_2__0");
 					put(grammarAccess.getGetFGroupsAccess().getGroup(), "rule__GetFGroups__Group__0");
 					put(grammarAccess.getComputeFGroupsAccess().getGroup(), "rule__ComputeFGroups__Group__0");
 					put(grammarAccess.getPairwiseCommandAccess().getGroup(), "rule__PairwiseCommand__Group__0");
@@ -303,6 +304,8 @@ public class FMLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getGetConstraintsAccess().getFmAssignment_1(), "rule__GetConstraints__FmAssignment_1");
 					put(grammarAccess.getComputeConstraintsAccess().getKindOfComputeAssignment_0(), "rule__ComputeConstraints__KindOfComputeAssignment_0");
 					put(grammarAccess.getComputeConstraintsAccess().getFmAssignment_1(), "rule__ComputeConstraints__FmAssignment_1");
+					put(grammarAccess.getComputeConstraintsAccess().getOverAssignment_2_0(), "rule__ComputeConstraints__OverAssignment_2_0");
+					put(grammarAccess.getComputeConstraintsAccess().getFtsAssignment_2_1(), "rule__ComputeConstraints__FtsAssignment_2_1");
 					put(grammarAccess.getGetFGroupsAccess().getKindOfGroupsAssignment_0(), "rule__GetFGroups__KindOfGroupsAssignment_0");
 					put(grammarAccess.getGetFGroupsAccess().getFmAssignment_1(), "rule__GetFGroups__FmAssignment_1");
 					put(grammarAccess.getComputeFGroupsAccess().getKindOfGroupsAssignment_0(), "rule__ComputeFGroups__KindOfGroupsAssignment_0");

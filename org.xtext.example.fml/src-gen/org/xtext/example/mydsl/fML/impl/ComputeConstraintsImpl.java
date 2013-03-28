@@ -14,6 +14,7 @@ import org.xtext.example.mydsl.fML.ComputeConstraints;
 import org.xtext.example.mydsl.fML.FMCommand;
 import org.xtext.example.mydsl.fML.FMLPackage;
 import org.xtext.example.mydsl.fML.KindOfCompute;
+import org.xtext.example.mydsl.fML.SetCommand;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,6 +25,8 @@ import org.xtext.example.mydsl.fML.KindOfCompute;
  * <ul>
  *   <li>{@link org.xtext.example.mydsl.fML.impl.ComputeConstraintsImpl#getKindOfCompute <em>Kind Of Compute</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.fML.impl.ComputeConstraintsImpl#getFm <em>Fm</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.fML.impl.ComputeConstraintsImpl#isOver <em>Over</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.fML.impl.ComputeConstraintsImpl#getFts <em>Fts</em>}</li>
  * </ul>
  * </p>
  *
@@ -60,6 +63,36 @@ public class ComputeConstraintsImpl extends CommandImpl implements ComputeConstr
    * @ordered
    */
   protected FMCommand fm;
+
+  /**
+   * The default value of the '{@link #isOver() <em>Over</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isOver()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean OVER_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isOver() <em>Over</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isOver()
+   * @generated
+   * @ordered
+   */
+  protected boolean over = OVER_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getFts() <em>Fts</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFts()
+   * @generated
+   * @ordered
+   */
+  protected SetCommand fts;
 
   /**
    * <!-- begin-user-doc -->
@@ -158,6 +191,77 @@ public class ComputeConstraintsImpl extends CommandImpl implements ComputeConstr
    * <!-- end-user-doc -->
    * @generated
    */
+  public boolean isOver()
+  {
+    return over;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setOver(boolean newOver)
+  {
+    boolean oldOver = over;
+    over = newOver;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, FMLPackage.COMPUTE_CONSTRAINTS__OVER, oldOver, over));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SetCommand getFts()
+  {
+    return fts;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetFts(SetCommand newFts, NotificationChain msgs)
+  {
+    SetCommand oldFts = fts;
+    fts = newFts;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FMLPackage.COMPUTE_CONSTRAINTS__FTS, oldFts, newFts);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setFts(SetCommand newFts)
+  {
+    if (newFts != fts)
+    {
+      NotificationChain msgs = null;
+      if (fts != null)
+        msgs = ((InternalEObject)fts).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FMLPackage.COMPUTE_CONSTRAINTS__FTS, null, msgs);
+      if (newFts != null)
+        msgs = ((InternalEObject)newFts).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FMLPackage.COMPUTE_CONSTRAINTS__FTS, null, msgs);
+      msgs = basicSetFts(newFts, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, FMLPackage.COMPUTE_CONSTRAINTS__FTS, newFts, newFts));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -165,6 +269,8 @@ public class ComputeConstraintsImpl extends CommandImpl implements ComputeConstr
     {
       case FMLPackage.COMPUTE_CONSTRAINTS__FM:
         return basicSetFm(null, msgs);
+      case FMLPackage.COMPUTE_CONSTRAINTS__FTS:
+        return basicSetFts(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -183,6 +289,10 @@ public class ComputeConstraintsImpl extends CommandImpl implements ComputeConstr
         return getKindOfCompute();
       case FMLPackage.COMPUTE_CONSTRAINTS__FM:
         return getFm();
+      case FMLPackage.COMPUTE_CONSTRAINTS__OVER:
+        return isOver();
+      case FMLPackage.COMPUTE_CONSTRAINTS__FTS:
+        return getFts();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -202,6 +312,12 @@ public class ComputeConstraintsImpl extends CommandImpl implements ComputeConstr
         return;
       case FMLPackage.COMPUTE_CONSTRAINTS__FM:
         setFm((FMCommand)newValue);
+        return;
+      case FMLPackage.COMPUTE_CONSTRAINTS__OVER:
+        setOver((Boolean)newValue);
+        return;
+      case FMLPackage.COMPUTE_CONSTRAINTS__FTS:
+        setFts((SetCommand)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -223,6 +339,12 @@ public class ComputeConstraintsImpl extends CommandImpl implements ComputeConstr
       case FMLPackage.COMPUTE_CONSTRAINTS__FM:
         setFm((FMCommand)null);
         return;
+      case FMLPackage.COMPUTE_CONSTRAINTS__OVER:
+        setOver(OVER_EDEFAULT);
+        return;
+      case FMLPackage.COMPUTE_CONSTRAINTS__FTS:
+        setFts((SetCommand)null);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -241,6 +363,10 @@ public class ComputeConstraintsImpl extends CommandImpl implements ComputeConstr
         return kindOfCompute != KIND_OF_COMPUTE_EDEFAULT;
       case FMLPackage.COMPUTE_CONSTRAINTS__FM:
         return fm != null;
+      case FMLPackage.COMPUTE_CONSTRAINTS__OVER:
+        return over != OVER_EDEFAULT;
+      case FMLPackage.COMPUTE_CONSTRAINTS__FTS:
+        return fts != null;
     }
     return super.eIsSet(featureID);
   }
@@ -258,6 +384,8 @@ public class ComputeConstraintsImpl extends CommandImpl implements ComputeConstr
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (kindOfCompute: ");
     result.append(kindOfCompute);
+    result.append(", over: ");
+    result.append(over);
     result.append(')');
     return result.toString();
   }

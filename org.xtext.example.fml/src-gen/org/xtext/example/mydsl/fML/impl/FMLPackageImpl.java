@@ -1918,6 +1918,26 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getComputeConstraints_Over()
+  {
+        return (EAttribute)getComputeConstraints().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getComputeConstraints_Fts()
+  {
+        return (EReference)getComputeConstraints().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getGetFGroups()
   {
     if (getFGroupsEClass == null)

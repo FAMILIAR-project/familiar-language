@@ -176,7 +176,7 @@ GetConstraints : kindOfGet=KindOfGet fm=FMCommand ;
 enum KindOfGet : HIERARCHY_IMPLIES='getImpliesHierarchy'|HIERARCHY_EXCLUDES='getExcludesHierarchy'|HIERARCHY_BIIMPLIES='getBiimpliesHierarchy'|
 				CONSTRAINT_IMPLIES='getImpliesConstraint'|CONSTRAINT_EXCLUDES='getExcludesConstraint'|CONSTRAINT_BIIMPLIES='getBiimpliesConstraint' ;
 
-ComputeConstraints : kindOfCompute=KindOfCompute fm=FMCommand ;
+ComputeConstraints : kindOfCompute=KindOfCompute fm=FMCommand (over?='over' fts=SetCommand)?;
 enum KindOfCompute : IMPLIES='computeImplies'|EXCLUDES='computeExcludes'|BIIMPLIES='computeBiimplies' ;
 
 

@@ -1572,20 +1572,10 @@ public class FMLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (kindOfCompute=KindOfCompute fm=FMCommand)
+	 *     (kindOfCompute=KindOfCompute fm=FMCommand (over?='over' fts=SetCommand)?)
 	 */
 	protected void sequence_ComputeConstraints(EObject context, ComputeConstraints semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, FMLPackage.eINSTANCE.getComputeConstraints_KindOfCompute()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FMLPackage.eINSTANCE.getComputeConstraints_KindOfCompute()));
-			if(transientValues.isValueTransient(semanticObject, FMLPackage.eINSTANCE.getComputeConstraints_Fm()) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, FMLPackage.eINSTANCE.getComputeConstraints_Fm()));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getComputeConstraintsAccess().getKindOfComputeKindOfComputeEnumRuleCall_0_0(), semanticObject.getKindOfCompute());
-		feeder.accept(grammarAccess.getComputeConstraintsAccess().getFmFMCommandParserRuleCall_1_0(), semanticObject.getFm());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

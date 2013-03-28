@@ -9631,6 +9631,7 @@ rule__ComputeConstraints__Group__1
     }
 :
 	rule__ComputeConstraints__Group__1__Impl
+	rule__ComputeConstraints__Group__2
 ;
 finally {
 	restoreStackSize(stackSize);
@@ -9645,6 +9646,97 @@ rule__ComputeConstraints__Group__1__Impl
 { before(grammarAccess.getComputeConstraintsAccess().getFmAssignment_1()); }
 (rule__ComputeConstraints__FmAssignment_1)
 { after(grammarAccess.getComputeConstraintsAccess().getFmAssignment_1()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__ComputeConstraints__Group__2
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ComputeConstraints__Group__2__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ComputeConstraints__Group__2__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getComputeConstraintsAccess().getGroup_2()); }
+(rule__ComputeConstraints__Group_2__0)?
+{ after(grammarAccess.getComputeConstraintsAccess().getGroup_2()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+
+
+
+
+
+
+rule__ComputeConstraints__Group_2__0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ComputeConstraints__Group_2__0__Impl
+	rule__ComputeConstraints__Group_2__1
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ComputeConstraints__Group_2__0__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getComputeConstraintsAccess().getOverAssignment_2_0()); }
+(rule__ComputeConstraints__OverAssignment_2_0)
+{ after(grammarAccess.getComputeConstraintsAccess().getOverAssignment_2_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+
+rule__ComputeConstraints__Group_2__1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+	rule__ComputeConstraints__Group_2__1__Impl
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ComputeConstraints__Group_2__1__Impl
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getComputeConstraintsAccess().getFtsAssignment_2_1()); }
+(rule__ComputeConstraints__FtsAssignment_2_1)
+{ after(grammarAccess.getComputeConstraintsAccess().getFtsAssignment_2_1()); }
 )
 
 ;
@@ -20512,6 +20604,44 @@ rule__ComputeConstraints__FmAssignment_1
 (
 { before(grammarAccess.getComputeConstraintsAccess().getFmFMCommandParserRuleCall_1_0()); }
 	ruleFMCommand{ after(grammarAccess.getComputeConstraintsAccess().getFmFMCommandParserRuleCall_1_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ComputeConstraints__OverAssignment_2_0
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getComputeConstraintsAccess().getOverOverKeyword_2_0_0()); }
+(
+{ before(grammarAccess.getComputeConstraintsAccess().getOverOverKeyword_2_0_0()); }
+
+	'over' 
+
+{ after(grammarAccess.getComputeConstraintsAccess().getOverOverKeyword_2_0_0()); }
+)
+
+{ after(grammarAccess.getComputeConstraintsAccess().getOverOverKeyword_2_0_0()); }
+)
+
+;
+finally {
+	restoreStackSize(stackSize);
+}
+
+rule__ComputeConstraints__FtsAssignment_2_1
+    @init {
+		int stackSize = keepStackSize();
+    }
+:
+(
+{ before(grammarAccess.getComputeConstraintsAccess().getFtsSetCommandParserRuleCall_2_1_0()); }
+	ruleSetCommand{ after(grammarAccess.getComputeConstraintsAccess().getFtsSetCommandParserRuleCall_2_1_0()); }
 )
 
 ;

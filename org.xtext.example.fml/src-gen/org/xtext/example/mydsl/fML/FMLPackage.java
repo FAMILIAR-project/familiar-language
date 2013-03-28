@@ -840,13 +840,31 @@ public interface FMLPackage extends EPackage
   int COMPUTE_CONSTRAINTS__FM = COMMAND_FEATURE_COUNT + 1;
 
   /**
+   * The feature id for the '<em><b>Over</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPUTE_CONSTRAINTS__OVER = COMMAND_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Fts</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int COMPUTE_CONSTRAINTS__FTS = COMMAND_FEATURE_COUNT + 3;
+
+  /**
    * The number of structural features of the '<em>Compute Constraints</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int COMPUTE_CONSTRAINTS_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 2;
+  int COMPUTE_CONSTRAINTS_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.impl.GetFGroupsImpl <em>Get FGroups</em>}' class.
@@ -5806,6 +5824,28 @@ public interface FMLPackage extends EPackage
    * @generated
    */
   EReference getComputeConstraints_Fm();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.fML.ComputeConstraints#isOver <em>Over</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Over</em>'.
+   * @see org.xtext.example.mydsl.fML.ComputeConstraints#isOver()
+   * @see #getComputeConstraints()
+   * @generated
+   */
+  EAttribute getComputeConstraints_Over();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.fML.ComputeConstraints#getFts <em>Fts</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Fts</em>'.
+   * @see org.xtext.example.mydsl.fML.ComputeConstraints#getFts()
+   * @see #getComputeConstraints()
+   * @generated
+   */
+  EReference getComputeConstraints_Fts();
 
   /**
    * Returns the meta object for class '{@link org.xtext.example.mydsl.fML.GetFGroups <em>Get FGroups</em>}'.

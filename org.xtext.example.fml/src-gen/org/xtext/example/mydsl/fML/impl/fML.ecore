@@ -111,6 +111,9 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="kindOfCompute" eType="#//KindOfCompute"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="fm" eType="#//FMCommand"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="over" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fts" eType="#//SetCommand"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="KindOfCompute">
     <eLiterals name="IMPLIES" literal="computeImplies"/>

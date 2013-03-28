@@ -2961,7 +2961,40 @@ ruleComputeConstraints returns [EObject current=null]
 	    }
 
 )
-))
+)((
+(
+		lv_over_2_0=	'over' 
+    {
+        newLeafNode(lv_over_2_0, grammarAccess.getComputeConstraintsAccess().getOverOverKeyword_2_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getComputeConstraintsRule());
+	        }
+       		setWithLastConsumed($current, "over", true, "over");
+	    }
+
+)
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getComputeConstraintsAccess().getFtsSetCommandParserRuleCall_2_1_0()); 
+	    }
+		lv_fts_3_0=ruleSetCommand		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getComputeConstraintsRule());
+	        }
+       		set(
+       			$current, 
+       			"fts",
+        		lv_fts_3_0, 
+        		"SetCommand");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))?)
 ;
 
 

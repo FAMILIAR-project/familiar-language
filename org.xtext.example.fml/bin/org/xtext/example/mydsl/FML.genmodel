@@ -178,6 +178,8 @@
     <genClasses ecoreClass="FML.ecore#//ComputeConstraints">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FML.ecore#//ComputeConstraints/kindOfCompute"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FML.ecore#//ComputeConstraints/fm"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FML.ecore#//ComputeConstraints/over"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FML.ecore#//ComputeConstraints/fts"/>
     </genClasses>
     <genClasses ecoreClass="FML.ecore#//GetFGroups">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FML.ecore#//GetFGroups/kindOfGroups"/>

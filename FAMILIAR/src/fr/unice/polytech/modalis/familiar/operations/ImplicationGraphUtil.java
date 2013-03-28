@@ -251,6 +251,29 @@ public class ImplicationGraphUtil {
 
 		return excludes; //
 	}
+	
+	
+	public static Set<Expression<String>> computeExcludesEdge(FeatureModelVariable fmv1,
+			BDDBuilder<String> builder, Set<String> fts) {
+		
+		ExclusionGraph<String> excl1 = fmv1.computeExclusionGraph(builder, fts);
+		
+		ExclusionGraph<String> exclE = new ExclusionGraph<String>() ; 
+		/*TODO: fixme why this => fmv1.getExclusionGraphFromFeatureHierarchy(builder);*/
+
+		Set<SimpleExtendedEdge<String>> des = diffExclEdges(excl1, exclE);
+		Set<Expression<String>> excludes = new HashSet<Expression<String>>();
+		for (SimpleExtendedEdge<String> de : des) {
+			String source = de.getSource();
+			String target = de.getTarget();
+			excludes.add(new Expression<String>(ExpressionType.IMPLIES,
+					new Expression<String>(target), new Expression<String>(
+							source).not()));
+		}
+
+		return excludes; //
+	}
+	
 
 	public static <T> Set<SimpleExtendedEdge<T>> diffExclEdges(
 			ExclusionGraph<T> excl1, ExclusionGraph<T> excl2) {
@@ -358,5 +381,7 @@ public class ImplicationGraphUtil {
 		return true ; 
 		
 	}
+
+	
 
 }

@@ -1450,12 +1450,17 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cKindOfComputeKindOfComputeEnumRuleCall_0_0 = (RuleCall)cKindOfComputeAssignment_0.eContents().get(0);
 		private final Assignment cFmAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cFmFMCommandParserRuleCall_1_0 = (RuleCall)cFmAssignment_1.eContents().get(0);
+		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
+		private final Assignment cOverAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
+		private final Keyword cOverOverKeyword_2_0_0 = (Keyword)cOverAssignment_2_0.eContents().get(0);
+		private final Assignment cFtsAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cFtsSetCommandParserRuleCall_2_1_0 = (RuleCall)cFtsAssignment_2_1.eContents().get(0);
 		
 		//ComputeConstraints:
-		//	kindOfCompute=KindOfCompute fm=FMCommand;
+		//	kindOfCompute=KindOfCompute fm=FMCommand (over?="over" fts=SetCommand)?;
 		public ParserRule getRule() { return rule; }
 
-		//kindOfCompute=KindOfCompute fm=FMCommand
+		//kindOfCompute=KindOfCompute fm=FMCommand (over?="over" fts=SetCommand)?
 		public Group getGroup() { return cGroup; }
 
 		//kindOfCompute=KindOfCompute
@@ -1469,6 +1474,21 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//FMCommand
 		public RuleCall getFmFMCommandParserRuleCall_1_0() { return cFmFMCommandParserRuleCall_1_0; }
+
+		//(over?="over" fts=SetCommand)?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//over?="over"
+		public Assignment getOverAssignment_2_0() { return cOverAssignment_2_0; }
+
+		//"over"
+		public Keyword getOverOverKeyword_2_0_0() { return cOverOverKeyword_2_0_0; }
+
+		//fts=SetCommand
+		public Assignment getFtsAssignment_2_1() { return cFtsAssignment_2_1; }
+
+		//SetCommand
+		public RuleCall getFtsSetCommandParserRuleCall_2_1_0() { return cFtsSetCommandParserRuleCall_2_1_0; }
 	}
 
 	public class GetFGroupsElements extends AbstractParserRuleElementFinder {
@@ -6871,7 +6891,7 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//ComputeConstraints:
-	//	kindOfCompute=KindOfCompute fm=FMCommand;
+	//	kindOfCompute=KindOfCompute fm=FMCommand (over?="over" fts=SetCommand)?;
 	public ComputeConstraintsElements getComputeConstraintsAccess() {
 		return (pComputeConstraints != null) ? pComputeConstraints : (pComputeConstraints = new ComputeConstraintsElements());
 	}

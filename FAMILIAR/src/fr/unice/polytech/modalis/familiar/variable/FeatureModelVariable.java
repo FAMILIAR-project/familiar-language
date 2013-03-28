@@ -93,6 +93,7 @@ import fr.unice.polytech.modalis.familiar.operations.FMSlicerBDD;
 import fr.unice.polytech.modalis.familiar.operations.FMSlicerBDDWithSPLOT;
 import fr.unice.polytech.modalis.familiar.operations.FormulaAnalyzer;
 import fr.unice.polytech.modalis.familiar.operations.IConstraintReasoner;
+import fr.unice.polytech.modalis.familiar.operations.IGBuilderDomain;
 import fr.unice.polytech.modalis.familiar.operations.ImplicationGraphUtil;
 import fr.unice.polytech.modalis.familiar.operations.KSTReport;
 import fr.unice.polytech.modalis.familiar.operations.KSynthesis;
@@ -1691,6 +1692,12 @@ public class FeatureModelVariable extends VariableImpl implements FMLFeatureMode
 		return IGBuilder.build(getFormula(), builder);
 
 	}
+	
+	public ImplicationGraph<String> computeImplicationGraph(
+			Set<String> fts) {
+		return IGBuilderDomain.build(getFormula(), getBuilder(), fts) ; 
+
+	}
 
 	/**
 	 * @param builder
@@ -1719,6 +1726,11 @@ public class FeatureModelVariable extends VariableImpl implements FMLFeatureMode
 		return EGBuilder.build(getFormula(), builder);
 
 	}
+	
+	public ExclusionGraph<String> computeExclusionGraph(BDDBuilder<String> builder, Set<String> fts) {
+		return EGBuilder.build(getFormula().getBDD(), builder, fts);
+
+	}
 
 	public ExclusionGraph<String> getExclusionGraphFromFeatureHierarchy(
 			BDDBuilder<String> builder) {
@@ -1734,6 +1746,10 @@ public class FeatureModelVariable extends VariableImpl implements FMLFeatureMode
 	public Set<Expression<String>> computeExcludesEdge(
 			BDDBuilder<String> builder) {
 		return ImplicationGraphUtil.computeExcludesEdge(this, builder);
+	}
+	
+	public Set<Expression<String>> computeExcludesEdge(Set<String> fts) {
+		return ImplicationGraphUtil.computeExcludesEdge(this, getBuilder(), fts);
 	}
 
 	/**
@@ -2664,6 +2680,8 @@ public class FeatureModelVariable extends VariableImpl implements FMLFeatureMode
 				
 		return rFM ; 
 	}
+
+	
 
 	
 }
