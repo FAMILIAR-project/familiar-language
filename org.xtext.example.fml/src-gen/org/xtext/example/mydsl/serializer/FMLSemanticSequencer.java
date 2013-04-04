@@ -2360,7 +2360,7 @@ public class FMLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     name=FT_ID
 	 */
 	protected void sequence_Optional(EObject context, Optional semanticObject) {
 		if(errorAcceptor != null) {
@@ -2369,7 +2369,7 @@ public class FMLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getOptionalAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getOptionalAccess().getNameFT_IDParserRuleCall_1_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	
@@ -2453,7 +2453,7 @@ public class FMLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID | name='true' | name='false')
+	 *     (name=FT_ID | name='true' | name='false')
 	 */
 	protected void sequence_Primary_expr(EObject context, CNFExpression semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -2471,7 +2471,7 @@ public class FMLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (name=ID features+=Child+)
+	 *     (name=FT_ID features+=Child+)
 	 */
 	protected void sequence_Production(EObject context, Production semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

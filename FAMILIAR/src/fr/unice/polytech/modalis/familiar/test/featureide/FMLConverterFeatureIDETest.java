@@ -118,7 +118,7 @@ public class FMLConverterFeatureIDETest extends FMLTest {
 		_shell.parse("fm1 =" + _fm);
 
 		FeatureModelVariable fm1 = getFMVariable("fm1");
-		String representation = new FMLtoFeatureIDE(fm1).transform();
+		String representation = new FMLtoFeatureIDE(fm1).transformToText();
 		assertMyStringEquals(_expected.trim(), representation.trim());
 
 	}
@@ -152,7 +152,7 @@ public class FMLConverterFeatureIDETest extends FMLTest {
 		_shell.parse("fm1 =" + _fm);
 
 		FeatureModelVariable fm1 = getFMVariable("fm1");
-		String representation = new FMLtoFeatureIDE(fm1).transform();
+		String representation = new FMLtoFeatureIDE(fm1).transformToText();
 
 		FeatureModel fmide = parseFMIDEfromString(_expected);
 		assertNotNull(fmide);

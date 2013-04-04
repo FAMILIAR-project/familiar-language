@@ -9580,19 +9580,19 @@ rulePrimary_expr returns [EObject current=null]
 ((
 (
 (
-		lv_name_0_1=RULE_ID
-		{
-			newLeafNode(lv_name_0_1, grammarAccess.getPrimary_exprAccess().getNameIDTerminalRuleCall_0_0_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getPrimary_exprAccess().getNameFT_IDParserRuleCall_0_0_0()); 
+	    }
+		lv_name_0_1=ruleFT_ID		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getPrimary_exprRule());
+	            $current = createModelElementForParent(grammarAccess.getPrimary_exprRule());
 	        }
-       		setWithLastConsumed(
+       		set(
        			$current, 
        			"name",
         		lv_name_0_1, 
-        		"ID");
+        		"FT_ID");
+	        afterParserOrEnumRuleCall();
 	    }
 
     |		lv_name_0_2=	'true' 
@@ -9790,19 +9790,19 @@ ruleProduction returns [EObject current=null]
     @after { leaveRule(); }:
 ((
 (
-		lv_name_0_0=RULE_ID
-		{
-			newLeafNode(lv_name_0_0, grammarAccess.getProductionAccess().getNameIDTerminalRuleCall_0_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getProductionAccess().getNameFT_IDParserRuleCall_0_0()); 
+	    }
+		lv_name_0_0=ruleFT_ID		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getProductionRule());
+	            $current = createModelElementForParent(grammarAccess.getProductionRule());
 	        }
-       		setWithLastConsumed(
+       		set(
        			$current, 
        			"name",
         		lv_name_0_0, 
-        		"ID");
+        		"FT_ID");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
@@ -9979,19 +9979,19 @@ ruleOptional returns [EObject current=null]
     }
 (
 (
-		lv_name_1_0=RULE_ID
-		{
-			newLeafNode(lv_name_1_0, grammarAccess.getOptionalAccess().getNameIDTerminalRuleCall_1_0()); 
-		}
-		{
+		{ 
+	        newCompositeNode(grammarAccess.getOptionalAccess().getNameFT_IDParserRuleCall_1_0()); 
+	    }
+		lv_name_1_0=ruleFT_ID		{
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getOptionalRule());
+	            $current = createModelElementForParent(grammarAccess.getOptionalRule());
 	        }
-       		setWithLastConsumed(
+       		set(
        			$current, 
        			"name",
         		lv_name_1_0, 
-        		"ID");
+        		"FT_ID");
+	        afterParserOrEnumRuleCall();
 	    }
 
 )
@@ -10231,34 +10231,29 @@ ruleFT_ID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-((    this_ID_0=RULE_ID    {
+(    this_ID_0=RULE_ID    {
 		$current.merge(this_ID_0);
     }
 
     { 
-    newLeafNode(this_ID_0, grammarAccess.getFT_IDAccess().getIDTerminalRuleCall_0_0()); 
+    newLeafNode(this_ID_0, grammarAccess.getFT_IDAccess().getIDTerminalRuleCall_0()); 
     }
 
     |
 	kw='$' 
     {
         $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getFT_IDAccess().getDollarSignKeyword_0_1()); 
+        newLeafNode(kw, grammarAccess.getFT_IDAccess().getDollarSignKeyword_1()); 
     }
-)(
-	kw='.' 
-    {
-        $current.merge(kw);
-        newLeafNode(kw, grammarAccess.getFT_IDAccess().getFullStopKeyword_1_0()); 
-    }
-    this_ID_3=RULE_ID    {
-		$current.merge(this_ID_3);
+
+    |    this_STRING_2=RULE_STRING    {
+		$current.merge(this_STRING_2);
     }
 
     { 
-    newLeafNode(this_ID_3, grammarAccess.getFT_IDAccess().getIDTerminalRuleCall_1_1()); 
+    newLeafNode(this_STRING_2, grammarAccess.getFT_IDAccess().getSTRINGTerminalRuleCall_2()); 
     }
-)*)
+)
     ;
 
 
@@ -10321,20 +10316,28 @@ ruleFML_IDENTIFIER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRule
     { 
     newLeafNode(this_STAR_5, grammarAccess.getFML_IDENTIFIERAccess().getSTARTerminalRuleCall_0_1_1_2()); 
     }
+
+    |    this_STRING_6=RULE_STRING    {
+		$current.merge(this_STRING_6);
+    }
+
+    { 
+    newLeafNode(this_STRING_6, grammarAccess.getFML_IDENTIFIERAccess().getSTRINGTerminalRuleCall_0_1_1_3()); 
+    }
 ))*)
-    |(    this_ID_6=RULE_ID    {
-		$current.merge(this_ID_6);
+    |(    this_ID_7=RULE_ID    {
+		$current.merge(this_ID_7);
     }
 
     { 
-    newLeafNode(this_ID_6, grammarAccess.getFML_IDENTIFIERAccess().getIDTerminalRuleCall_1_0()); 
+    newLeafNode(this_ID_7, grammarAccess.getFML_IDENTIFIERAccess().getIDTerminalRuleCall_1_0()); 
     }
-    this_STAR_7=RULE_STAR    {
-		$current.merge(this_STAR_7);
+    this_STAR_8=RULE_STAR    {
+		$current.merge(this_STAR_8);
     }
 
     { 
-    newLeafNode(this_STAR_7, grammarAccess.getFML_IDENTIFIERAccess().getSTARTerminalRuleCall_1_1()); 
+    newLeafNode(this_STAR_8, grammarAccess.getFML_IDENTIFIERAccess().getSTARTerminalRuleCall_1_1()); 
     }
 ))
     ;

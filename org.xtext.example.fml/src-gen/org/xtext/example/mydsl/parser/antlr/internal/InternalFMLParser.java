@@ -4734,7 +4734,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                         int alt15=2;
                         int LA15_0 = input.LA(1);
 
-                        if ( (LA15_0==RULE_LEFT_PAREN||LA15_0==RULE_ID||LA15_0==RULE_B_NOT||(LA15_0>=32 && LA15_0<=33)) ) {
+                        if ( (LA15_0==RULE_LEFT_PAREN||LA15_0==RULE_STRING||LA15_0==RULE_ID||LA15_0==RULE_B_NOT||(LA15_0>=32 && LA15_0<=33)||LA15_0==167) ) {
                             alt15=1;
                         }
 
@@ -16136,7 +16136,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                 int alt58=2;
                 int LA58_0 = input.LA(1);
 
-                if ( (LA58_0==RULE_ID||LA58_0==167) ) {
+                if ( (LA58_0==RULE_STRING||LA58_0==RULE_ID||LA58_0==167) ) {
                     alt58=1;
                 }
 
@@ -16673,7 +16673,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                 int alt61=2;
                 int LA61_0 = input.LA(1);
 
-                if ( (LA61_0==RULE_ID||LA61_0==167) ) {
+                if ( (LA61_0==RULE_STRING||LA61_0==RULE_ID||LA61_0==167) ) {
                     alt61=1;
                 }
 
@@ -16870,7 +16870,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                 int alt62=2;
                 int LA62_0 = input.LA(1);
 
-                if ( (LA62_0==RULE_ID||LA62_0==167) ) {
+                if ( (LA62_0==RULE_STRING||LA62_0==RULE_ID||LA62_0==167) ) {
                     alt62=1;
                 }
 
@@ -17067,7 +17067,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                 int alt63=2;
                 int LA63_0 = input.LA(1);
 
-                if ( (LA63_0==RULE_ID||LA63_0==167) ) {
+                if ( (LA63_0==RULE_STRING||LA63_0==RULE_ID||LA63_0==167) ) {
                     alt63=1;
                 }
 
@@ -26966,7 +26966,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             if ( (LA98_0==RULE_B_NOT) ) {
                 alt98=1;
             }
-            else if ( (LA98_0==RULE_LEFT_PAREN||LA98_0==RULE_ID||(LA98_0>=32 && LA98_0<=33)) ) {
+            else if ( (LA98_0==RULE_LEFT_PAREN||LA98_0==RULE_STRING||LA98_0==RULE_ID||(LA98_0>=32 && LA98_0<=33)||LA98_0==167) ) {
                 alt98=2;
             }
             else {
@@ -27215,29 +27215,30 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulePrimary_expr"
-    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9576:1: rulePrimary_expr returns [EObject current=null] : ( ( ( (lv_name_0_1= RULE_ID | lv_name_0_2= 'true' | lv_name_0_3= 'false' ) ) ) | (this_LEFT_PAREN_1= RULE_LEFT_PAREN this_Or_expr_2= ruleOr_expr this_RIGHT_PAREN_3= RULE_RIGHT_PAREN ) ) ;
+    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9576:1: rulePrimary_expr returns [EObject current=null] : ( ( ( (lv_name_0_1= ruleFT_ID | lv_name_0_2= 'true' | lv_name_0_3= 'false' ) ) ) | (this_LEFT_PAREN_1= RULE_LEFT_PAREN this_Or_expr_2= ruleOr_expr this_RIGHT_PAREN_3= RULE_RIGHT_PAREN ) ) ;
     public final EObject rulePrimary_expr() throws RecognitionException {
         EObject current = null;
 
-        Token lv_name_0_1=null;
         Token lv_name_0_2=null;
         Token lv_name_0_3=null;
         Token this_LEFT_PAREN_1=null;
         Token this_RIGHT_PAREN_3=null;
+        AntlrDatatypeRuleToken lv_name_0_1 = null;
+
         EObject this_Or_expr_2 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9579:28: ( ( ( ( (lv_name_0_1= RULE_ID | lv_name_0_2= 'true' | lv_name_0_3= 'false' ) ) ) | (this_LEFT_PAREN_1= RULE_LEFT_PAREN this_Or_expr_2= ruleOr_expr this_RIGHT_PAREN_3= RULE_RIGHT_PAREN ) ) )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9580:1: ( ( ( (lv_name_0_1= RULE_ID | lv_name_0_2= 'true' | lv_name_0_3= 'false' ) ) ) | (this_LEFT_PAREN_1= RULE_LEFT_PAREN this_Or_expr_2= ruleOr_expr this_RIGHT_PAREN_3= RULE_RIGHT_PAREN ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9579:28: ( ( ( ( (lv_name_0_1= ruleFT_ID | lv_name_0_2= 'true' | lv_name_0_3= 'false' ) ) ) | (this_LEFT_PAREN_1= RULE_LEFT_PAREN this_Or_expr_2= ruleOr_expr this_RIGHT_PAREN_3= RULE_RIGHT_PAREN ) ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9580:1: ( ( ( (lv_name_0_1= ruleFT_ID | lv_name_0_2= 'true' | lv_name_0_3= 'false' ) ) ) | (this_LEFT_PAREN_1= RULE_LEFT_PAREN this_Or_expr_2= ruleOr_expr this_RIGHT_PAREN_3= RULE_RIGHT_PAREN ) )
             {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9580:1: ( ( ( (lv_name_0_1= RULE_ID | lv_name_0_2= 'true' | lv_name_0_3= 'false' ) ) ) | (this_LEFT_PAREN_1= RULE_LEFT_PAREN this_Or_expr_2= ruleOr_expr this_RIGHT_PAREN_3= RULE_RIGHT_PAREN ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9580:1: ( ( ( (lv_name_0_1= ruleFT_ID | lv_name_0_2= 'true' | lv_name_0_3= 'false' ) ) ) | (this_LEFT_PAREN_1= RULE_LEFT_PAREN this_Or_expr_2= ruleOr_expr this_RIGHT_PAREN_3= RULE_RIGHT_PAREN ) )
             int alt100=2;
             int LA100_0 = input.LA(1);
 
-            if ( (LA100_0==RULE_ID||(LA100_0>=32 && LA100_0<=33)) ) {
+            if ( (LA100_0==RULE_STRING||LA100_0==RULE_ID||(LA100_0>=32 && LA100_0<=33)||LA100_0==167) ) {
                 alt100=1;
             }
             else if ( (LA100_0==RULE_LEFT_PAREN) ) {
@@ -27252,18 +27253,20 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             }
             switch (alt100) {
                 case 1 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9580:2: ( ( (lv_name_0_1= RULE_ID | lv_name_0_2= 'true' | lv_name_0_3= 'false' ) ) )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9580:2: ( ( (lv_name_0_1= ruleFT_ID | lv_name_0_2= 'true' | lv_name_0_3= 'false' ) ) )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9580:2: ( ( (lv_name_0_1= RULE_ID | lv_name_0_2= 'true' | lv_name_0_3= 'false' ) ) )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9581:1: ( (lv_name_0_1= RULE_ID | lv_name_0_2= 'true' | lv_name_0_3= 'false' ) )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9580:2: ( ( (lv_name_0_1= ruleFT_ID | lv_name_0_2= 'true' | lv_name_0_3= 'false' ) ) )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9581:1: ( (lv_name_0_1= ruleFT_ID | lv_name_0_2= 'true' | lv_name_0_3= 'false' ) )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9581:1: ( (lv_name_0_1= RULE_ID | lv_name_0_2= 'true' | lv_name_0_3= 'false' ) )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9582:1: (lv_name_0_1= RULE_ID | lv_name_0_2= 'true' | lv_name_0_3= 'false' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9581:1: ( (lv_name_0_1= ruleFT_ID | lv_name_0_2= 'true' | lv_name_0_3= 'false' ) )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9582:1: (lv_name_0_1= ruleFT_ID | lv_name_0_2= 'true' | lv_name_0_3= 'false' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9582:1: (lv_name_0_1= RULE_ID | lv_name_0_2= 'true' | lv_name_0_3= 'false' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9582:1: (lv_name_0_1= ruleFT_ID | lv_name_0_2= 'true' | lv_name_0_3= 'false' )
                     int alt99=3;
                     switch ( input.LA(1) ) {
+                    case RULE_STRING:
                     case RULE_ID:
+                    case 167:
                         {
                         alt99=1;
                         }
@@ -27288,24 +27291,29 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
                     switch (alt99) {
                         case 1 :
-                            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9583:3: lv_name_0_1= RULE_ID
+                            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9583:3: lv_name_0_1= ruleFT_ID
                             {
-                            lv_name_0_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulePrimary_expr21375); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
-
-                              			newLeafNode(lv_name_0_1, grammarAccess.getPrimary_exprAccess().getNameIDTerminalRuleCall_0_0_0()); 
-                              		
+                               
+                              	        newCompositeNode(grammarAccess.getPrimary_exprAccess().getNameFT_IDParserRuleCall_0_0_0()); 
+                              	    
                             }
+                            pushFollow(FOLLOW_ruleFT_ID_in_rulePrimary_expr21379);
+                            lv_name_0_1=ruleFT_ID();
+
+                            state._fsp--;
+                            if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                               	        if (current==null) {
-                              	            current = createModelElement(grammarAccess.getPrimary_exprRule());
+                              	            current = createModelElementForParent(grammarAccess.getPrimary_exprRule());
                               	        }
-                                     		setWithLastConsumed(
+                                     		set(
                                      			current, 
                                      			"name",
                                       		lv_name_0_1, 
-                                      		"ID");
+                                      		"FT_ID");
+                              	        afterParserOrEnumRuleCall();
                               	    
                             }
 
@@ -27314,7 +27322,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                         case 2 :
                             // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9598:8: lv_name_0_2= 'true'
                             {
-                            lv_name_0_2=(Token)match(input,32,FOLLOW_32_in_rulePrimary_expr21396); if (state.failed) return current;
+                            lv_name_0_2=(Token)match(input,32,FOLLOW_32_in_rulePrimary_expr21395); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                       newLeafNode(lv_name_0_2, grammarAccess.getPrimary_exprAccess().getNameTrueKeyword_0_0_1());
@@ -27334,7 +27342,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                         case 3 :
                             // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9610:8: lv_name_0_3= 'false'
                             {
-                            lv_name_0_3=(Token)match(input,33,FOLLOW_33_in_rulePrimary_expr21425); if (state.failed) return current;
+                            lv_name_0_3=(Token)match(input,33,FOLLOW_33_in_rulePrimary_expr21424); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                       newLeafNode(lv_name_0_3, grammarAccess.getPrimary_exprAccess().getNameFalseKeyword_0_0_2());
@@ -27369,7 +27377,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9626:6: (this_LEFT_PAREN_1= RULE_LEFT_PAREN this_Or_expr_2= ruleOr_expr this_RIGHT_PAREN_3= RULE_RIGHT_PAREN )
                     // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9626:7: this_LEFT_PAREN_1= RULE_LEFT_PAREN this_Or_expr_2= ruleOr_expr this_RIGHT_PAREN_3= RULE_RIGHT_PAREN
                     {
-                    this_LEFT_PAREN_1=(Token)match(input,RULE_LEFT_PAREN,FOLLOW_RULE_LEFT_PAREN_in_rulePrimary_expr21459); if (state.failed) return current;
+                    this_LEFT_PAREN_1=(Token)match(input,RULE_LEFT_PAREN,FOLLOW_RULE_LEFT_PAREN_in_rulePrimary_expr21458); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
                        
                           newLeafNode(this_LEFT_PAREN_1, grammarAccess.getPrimary_exprAccess().getLEFT_PARENTerminalRuleCall_1_0()); 
@@ -27385,7 +27393,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getPrimary_exprAccess().getOr_exprParserRuleCall_1_1()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleOr_expr_in_rulePrimary_expr21483);
+                    pushFollow(FOLLOW_ruleOr_expr_in_rulePrimary_expr21482);
                     this_Or_expr_2=ruleOr_expr();
 
                     state._fsp--;
@@ -27396,7 +27404,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                               afterParserOrEnumRuleCall();
                           
                     }
-                    this_RIGHT_PAREN_3=(Token)match(input,RULE_RIGHT_PAREN,FOLLOW_RULE_RIGHT_PAREN_in_rulePrimary_expr21493); if (state.failed) return current;
+                    this_RIGHT_PAREN_3=(Token)match(input,RULE_RIGHT_PAREN,FOLLOW_RULE_RIGHT_PAREN_in_rulePrimary_expr21492); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
                        
                           newLeafNode(this_RIGHT_PAREN_3, grammarAccess.getPrimary_exprAccess().getRIGHT_PARENTerminalRuleCall_1_2()); 
@@ -27445,7 +27453,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getFeatureModelRule()); 
             }
-            pushFollow(FOLLOW_ruleFeatureModel_in_entryRuleFeatureModel21529);
+            pushFollow(FOLLOW_ruleFeatureModel_in_entryRuleFeatureModel21528);
             iv_ruleFeatureModel=ruleFeatureModel();
 
             state._fsp--;
@@ -27453,7 +27461,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleFeatureModel; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFeatureModel21539); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFeatureModel21538); if (state.failed) return current;
 
             }
 
@@ -27520,7 +27528,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9667:4: otherlv_0= 'FM'
                     {
-                    otherlv_0=(Token)match(input,164,FOLLOW_164_in_ruleFeatureModel21577); if (state.failed) return current;
+                    otherlv_0=(Token)match(input,164,FOLLOW_164_in_ruleFeatureModel21576); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_0, grammarAccess.getFeatureModelAccess().getFMKeyword_0_0());
@@ -27532,7 +27540,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                 case 2 :
                     // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9672:7: otherlv_1= 'featuremodel'
                     {
-                    otherlv_1=(Token)match(input,165,FOLLOW_165_in_ruleFeatureModel21595); if (state.failed) return current;
+                    otherlv_1=(Token)match(input,165,FOLLOW_165_in_ruleFeatureModel21594); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                           	newLeafNode(otherlv_1, grammarAccess.getFeatureModelAccess().getFeaturemodelKeyword_0_1());
@@ -27544,7 +27552,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_LEFT_PAREN_2=(Token)match(input,RULE_LEFT_PAREN,FOLLOW_RULE_LEFT_PAREN_in_ruleFeatureModel21607); if (state.failed) return current;
+            this_LEFT_PAREN_2=(Token)match(input,RULE_LEFT_PAREN,FOLLOW_RULE_LEFT_PAREN_in_ruleFeatureModel21606); if (state.failed) return current;
             if ( state.backtracking==0 ) {
                
                   newLeafNode(this_LEFT_PAREN_2, grammarAccess.getFeatureModelAccess().getLEFT_PARENTerminalRuleCall_1()); 
@@ -27554,11 +27562,25 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             int alt105=2;
             int LA105_0 = input.LA(1);
 
-            if ( (LA105_0==RULE_ID) ) {
+            if ( (LA105_0==RULE_ID||LA105_0==167) ) {
                 alt105=1;
             }
             else if ( (LA105_0==RULE_STRING) ) {
-                alt105=2;
+                int LA105_2 = input.LA(2);
+
+                if ( (LA105_2==89) ) {
+                    alt105=1;
+                }
+                else if ( (LA105_2==RULE_RIGHT_PAREN) ) {
+                    alt105=2;
+                }
+                else {
+                    if (state.backtracking>0) {state.failed=true; return current;}
+                    NoViableAltException nvae =
+                        new NoViableAltException("", 105, 2, input);
+
+                    throw nvae;
+                }
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
@@ -27592,6 +27614,9 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                             throw nvae;
                         }
                     }
+                    else if ( (LA104_0==RULE_STRING||LA104_0==167) ) {
+                        alt104=2;
+                    }
                     else {
                         if (state.backtracking>0) {state.failed=true; return current;}
                         NoViableAltException nvae =
@@ -27612,7 +27637,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9681:1: (lv_root_3_0= RULE_ID )
                             // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9682:3: lv_root_3_0= RULE_ID
                             {
-                            lv_root_3_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFeatureModel21626); if (state.failed) return current;
+                            lv_root_3_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFeatureModel21625); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                               			newLeafNode(lv_root_3_0, grammarAccess.getFeatureModelAccess().getRootIDTerminalRuleCall_2_0_0_0_0()); 
@@ -27636,7 +27661,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
                             }
 
-                            otherlv_4=(Token)match(input,36,FOLLOW_36_in_ruleFeatureModel21643); if (state.failed) return current;
+                            otherlv_4=(Token)match(input,36,FOLLOW_36_in_ruleFeatureModel21642); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                   	newLeafNode(otherlv_4, grammarAccess.getFeatureModelAccess().getSemicolonKeyword_2_0_0_1());
@@ -27659,9 +27684,9 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                             loop102:
                             do {
                                 int alt102=2;
-                                int LA102_0 = input.LA(1);
-
-                                if ( (LA102_0==RULE_ID) ) {
+                                switch ( input.LA(1) ) {
+                                case RULE_ID:
+                                    {
                                     int LA102_2 = input.LA(2);
 
                                     if ( (LA102_2==89) ) {
@@ -27669,8 +27694,32 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                                     }
 
 
-                                }
+                                    }
+                                    break;
+                                case 167:
+                                    {
+                                    int LA102_3 = input.LA(2);
 
+                                    if ( (LA102_3==89) ) {
+                                        alt102=1;
+                                    }
+
+
+                                    }
+                                    break;
+                                case RULE_STRING:
+                                    {
+                                    int LA102_4 = input.LA(2);
+
+                                    if ( (LA102_4==89) ) {
+                                        alt102=1;
+                                    }
+
+
+                                    }
+                                    break;
+
+                                }
 
                                 switch (alt102) {
                             	case 1 :
@@ -27687,7 +27736,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                             	      	        newCompositeNode(grammarAccess.getFeatureModelAccess().getFeaturesProductionParserRuleCall_2_0_1_0_0_0()); 
                             	      	    
                             	    }
-                            	    pushFollow(FOLLOW_ruleProduction_in_ruleFeatureModel21673);
+                            	    pushFollow(FOLLOW_ruleProduction_in_ruleFeatureModel21672);
                             	    lv_features_5_0=ruleProduction();
 
                             	    state._fsp--;
@@ -27711,7 +27760,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
                             	    }
 
-                            	    otherlv_6=(Token)match(input,36,FOLLOW_36_in_ruleFeatureModel21685); if (state.failed) return current;
+                            	    otherlv_6=(Token)match(input,36,FOLLOW_36_in_ruleFeatureModel21684); if (state.failed) return current;
                             	    if ( state.backtracking==0 ) {
 
                             	          	newLeafNode(otherlv_6, grammarAccess.getFeatureModelAccess().getSemicolonKeyword_2_0_1_0_1());
@@ -27737,7 +27786,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                                 int alt103=2;
                                 int LA103_0 = input.LA(1);
 
-                                if ( (LA103_0==RULE_LEFT_PAREN||LA103_0==RULE_ID||LA103_0==RULE_B_NOT||(LA103_0>=32 && LA103_0<=33)) ) {
+                                if ( (LA103_0==RULE_LEFT_PAREN||LA103_0==RULE_STRING||LA103_0==RULE_ID||LA103_0==RULE_B_NOT||(LA103_0>=32 && LA103_0<=33)||LA103_0==167) ) {
                                     alt103=1;
                                 }
 
@@ -27757,7 +27806,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                             	      	        newCompositeNode(grammarAccess.getFeatureModelAccess().getExprCNFParserRuleCall_2_0_1_1_0_0()); 
                             	      	    
                             	    }
-                            	    pushFollow(FOLLOW_ruleCNF_in_ruleFeatureModel21709);
+                            	    pushFollow(FOLLOW_ruleCNF_in_ruleFeatureModel21708);
                             	    lv_expr_7_0=ruleCNF();
 
                             	    state._fsp--;
@@ -27781,7 +27830,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
                             	    }
 
-                            	    otherlv_8=(Token)match(input,36,FOLLOW_36_in_ruleFeatureModel21721); if (state.failed) return current;
+                            	    otherlv_8=(Token)match(input,36,FOLLOW_36_in_ruleFeatureModel21720); if (state.failed) return current;
                             	    if ( state.backtracking==0 ) {
 
                             	          	newLeafNode(otherlv_8, grammarAccess.getFeatureModelAccess().getSemicolonKeyword_2_0_1_1_1());
@@ -27822,7 +27871,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                       	        newCompositeNode(grammarAccess.getFeatureModelAccess().getFileStringExprParserRuleCall_2_1_0()); 
                       	    
                     }
-                    pushFollow(FOLLOW_ruleStringExpr_in_ruleFeatureModel21752);
+                    pushFollow(FOLLOW_ruleStringExpr_in_ruleFeatureModel21751);
                     lv_file_9_0=ruleStringExpr();
 
                     state._fsp--;
@@ -27852,7 +27901,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_RIGHT_PAREN_10=(Token)match(input,RULE_RIGHT_PAREN,FOLLOW_RULE_RIGHT_PAREN_in_ruleFeatureModel21764); if (state.failed) return current;
+            this_RIGHT_PAREN_10=(Token)match(input,RULE_RIGHT_PAREN,FOLLOW_RULE_RIGHT_PAREN_in_ruleFeatureModel21763); if (state.failed) return current;
             if ( state.backtracking==0 ) {
                
                   newLeafNode(this_RIGHT_PAREN_10, grammarAccess.getFeatureModelAccess().getRIGHT_PARENTerminalRuleCall_3()); 
@@ -27895,7 +27944,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getProductionRule()); 
             }
-            pushFollow(FOLLOW_ruleProduction_in_entryRuleProduction21799);
+            pushFollow(FOLLOW_ruleProduction_in_entryRuleProduction21798);
             iv_ruleProduction=ruleProduction();
 
             state._fsp--;
@@ -27903,7 +27952,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleProduction; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleProduction21809); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleProduction21808); if (state.failed) return current;
 
             }
 
@@ -27921,46 +27970,52 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleProduction"
-    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9787:1: ruleProduction returns [EObject current=null] : ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_features_2_0= ruleChild ) )+ ) ;
+    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9787:1: ruleProduction returns [EObject current=null] : ( ( (lv_name_0_0= ruleFT_ID ) ) otherlv_1= ':' ( (lv_features_2_0= ruleChild ) )+ ) ;
     public final EObject ruleProduction() throws RecognitionException {
         EObject current = null;
 
-        Token lv_name_0_0=null;
         Token otherlv_1=null;
+        AntlrDatatypeRuleToken lv_name_0_0 = null;
+
         EObject lv_features_2_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9790:28: ( ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_features_2_0= ruleChild ) )+ ) )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9791:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_features_2_0= ruleChild ) )+ )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9790:28: ( ( ( (lv_name_0_0= ruleFT_ID ) ) otherlv_1= ':' ( (lv_features_2_0= ruleChild ) )+ ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9791:1: ( ( (lv_name_0_0= ruleFT_ID ) ) otherlv_1= ':' ( (lv_features_2_0= ruleChild ) )+ )
             {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9791:1: ( ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_features_2_0= ruleChild ) )+ )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9791:2: ( (lv_name_0_0= RULE_ID ) ) otherlv_1= ':' ( (lv_features_2_0= ruleChild ) )+
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9791:1: ( ( (lv_name_0_0= ruleFT_ID ) ) otherlv_1= ':' ( (lv_features_2_0= ruleChild ) )+ )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9791:2: ( (lv_name_0_0= ruleFT_ID ) ) otherlv_1= ':' ( (lv_features_2_0= ruleChild ) )+
             {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9791:2: ( (lv_name_0_0= RULE_ID ) )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9792:1: (lv_name_0_0= RULE_ID )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9791:2: ( (lv_name_0_0= ruleFT_ID ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9792:1: (lv_name_0_0= ruleFT_ID )
             {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9792:1: (lv_name_0_0= RULE_ID )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9793:3: lv_name_0_0= RULE_ID
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9792:1: (lv_name_0_0= ruleFT_ID )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9793:3: lv_name_0_0= ruleFT_ID
             {
-            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleProduction21851); if (state.failed) return current;
             if ( state.backtracking==0 ) {
-
-              			newLeafNode(lv_name_0_0, grammarAccess.getProductionAccess().getNameIDTerminalRuleCall_0_0()); 
-              		
+               
+              	        newCompositeNode(grammarAccess.getProductionAccess().getNameFT_IDParserRuleCall_0_0()); 
+              	    
             }
+            pushFollow(FOLLOW_ruleFT_ID_in_ruleProduction21854);
+            lv_name_0_0=ruleFT_ID();
+
+            state._fsp--;
+            if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               	        if (current==null) {
-              	            current = createModelElement(grammarAccess.getProductionRule());
+              	            current = createModelElementForParent(grammarAccess.getProductionRule());
               	        }
-                     		setWithLastConsumed(
+                     		set(
                      			current, 
                      			"name",
                       		lv_name_0_0, 
-                      		"ID");
+                      		"FT_ID");
+              	        afterParserOrEnumRuleCall();
               	    
             }
 
@@ -27969,7 +28024,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,89,FOLLOW_89_in_ruleProduction21868); if (state.failed) return current;
+            otherlv_1=(Token)match(input,89,FOLLOW_89_in_ruleProduction21866); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_1, grammarAccess.getProductionAccess().getColonKeyword_1());
@@ -27982,7 +28037,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                 int alt106=2;
                 int LA106_0 = input.LA(1);
 
-                if ( (LA106_0==RULE_LEFT_HOOK||LA106_0==RULE_LEFT_PAREN||LA106_0==RULE_ID||LA106_0==167) ) {
+                if ( (LA106_0==RULE_LEFT_HOOK||LA106_0==RULE_LEFT_PAREN||LA106_0==RULE_STRING||LA106_0==RULE_ID||LA106_0==167) ) {
                     alt106=1;
                 }
 
@@ -27999,7 +28054,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             	      	        newCompositeNode(grammarAccess.getProductionAccess().getFeaturesChildParserRuleCall_2_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleChild_in_ruleProduction21889);
+            	    pushFollow(FOLLOW_ruleChild_in_ruleProduction21887);
             	    lv_features_2_0=ruleChild();
 
             	    state._fsp--;
@@ -28071,7 +28126,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getChildRule()); 
             }
-            pushFollow(FOLLOW_ruleChild_in_entryRuleChild21926);
+            pushFollow(FOLLOW_ruleChild_in_entryRuleChild21924);
             iv_ruleChild=ruleChild();
 
             state._fsp--;
@@ -28079,7 +28134,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleChild; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleChild21936); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleChild21934); if (state.failed) return current;
 
             }
 
@@ -28135,7 +28190,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getChildAccess().getMandatoryParserRuleCall_0()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleMandatory_in_ruleChild21986);
+                    pushFollow(FOLLOW_ruleMandatory_in_ruleChild21984);
                     this_Mandatory_0=ruleMandatory();
 
                     state._fsp--;
@@ -28162,7 +28217,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getChildAccess().getOptionalParserRuleCall_1()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleOptional_in_ruleChild22016);
+                    pushFollow(FOLLOW_ruleOptional_in_ruleChild22014);
                     this_Optional_1=ruleOptional();
 
                     state._fsp--;
@@ -28189,7 +28244,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getChildAccess().getXorgroupParserRuleCall_2()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleXorgroup_in_ruleChild22046);
+                    pushFollow(FOLLOW_ruleXorgroup_in_ruleChild22044);
                     this_Xorgroup_2=ruleXorgroup();
 
                     state._fsp--;
@@ -28216,7 +28271,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getChildAccess().getOrgroupParserRuleCall_3()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleOrgroup_in_ruleChild22076);
+                    pushFollow(FOLLOW_ruleOrgroup_in_ruleChild22074);
                     this_Orgroup_3=ruleOrgroup();
 
                     state._fsp--;
@@ -28243,7 +28298,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                               newCompositeNode(grammarAccess.getChildAccess().getMutexgroupParserRuleCall_4()); 
                           
                     }
-                    pushFollow(FOLLOW_ruleMutexgroup_in_ruleChild22106);
+                    pushFollow(FOLLOW_ruleMutexgroup_in_ruleChild22104);
                     this_Mutexgroup_4=ruleMutexgroup();
 
                     state._fsp--;
@@ -28294,7 +28349,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMandatoryRule()); 
             }
-            pushFollow(FOLLOW_ruleMandatory_in_entryRuleMandatory22141);
+            pushFollow(FOLLOW_ruleMandatory_in_entryRuleMandatory22139);
             iv_ruleMandatory=ruleMandatory();
 
             state._fsp--;
@@ -28302,7 +28357,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleMandatory; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMandatory22151); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMandatory22149); if (state.failed) return current;
 
             }
 
@@ -28344,7 +28399,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getMandatoryAccess().getNameFT_IDParserRuleCall_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleFT_ID_in_ruleMandatory22196);
+            pushFollow(FOLLOW_ruleFT_ID_in_ruleMandatory22194);
             lv_name_0_0=ruleFT_ID();
 
             state._fsp--;
@@ -28402,7 +28457,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOptionalRule()); 
             }
-            pushFollow(FOLLOW_ruleOptional_in_entryRuleOptional22231);
+            pushFollow(FOLLOW_ruleOptional_in_entryRuleOptional22229);
             iv_ruleOptional=ruleOptional();
 
             state._fsp--;
@@ -28410,7 +28465,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleOptional; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleOptional22241); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleOptional22239); if (state.failed) return current;
 
             }
 
@@ -28428,51 +28483,57 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOptional"
-    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9972:1: ruleOptional returns [EObject current=null] : (this_LEFT_HOOK_0= RULE_LEFT_HOOK ( (lv_name_1_0= RULE_ID ) ) this_RIGHT_HOOK_2= RULE_RIGHT_HOOK ) ;
+    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9972:1: ruleOptional returns [EObject current=null] : (this_LEFT_HOOK_0= RULE_LEFT_HOOK ( (lv_name_1_0= ruleFT_ID ) ) this_RIGHT_HOOK_2= RULE_RIGHT_HOOK ) ;
     public final EObject ruleOptional() throws RecognitionException {
         EObject current = null;
 
         Token this_LEFT_HOOK_0=null;
-        Token lv_name_1_0=null;
         Token this_RIGHT_HOOK_2=null;
+        AntlrDatatypeRuleToken lv_name_1_0 = null;
+
 
          enterRule(); 
             
         try {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9975:28: ( (this_LEFT_HOOK_0= RULE_LEFT_HOOK ( (lv_name_1_0= RULE_ID ) ) this_RIGHT_HOOK_2= RULE_RIGHT_HOOK ) )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9976:1: (this_LEFT_HOOK_0= RULE_LEFT_HOOK ( (lv_name_1_0= RULE_ID ) ) this_RIGHT_HOOK_2= RULE_RIGHT_HOOK )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9975:28: ( (this_LEFT_HOOK_0= RULE_LEFT_HOOK ( (lv_name_1_0= ruleFT_ID ) ) this_RIGHT_HOOK_2= RULE_RIGHT_HOOK ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9976:1: (this_LEFT_HOOK_0= RULE_LEFT_HOOK ( (lv_name_1_0= ruleFT_ID ) ) this_RIGHT_HOOK_2= RULE_RIGHT_HOOK )
             {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9976:1: (this_LEFT_HOOK_0= RULE_LEFT_HOOK ( (lv_name_1_0= RULE_ID ) ) this_RIGHT_HOOK_2= RULE_RIGHT_HOOK )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9976:2: this_LEFT_HOOK_0= RULE_LEFT_HOOK ( (lv_name_1_0= RULE_ID ) ) this_RIGHT_HOOK_2= RULE_RIGHT_HOOK
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9976:1: (this_LEFT_HOOK_0= RULE_LEFT_HOOK ( (lv_name_1_0= ruleFT_ID ) ) this_RIGHT_HOOK_2= RULE_RIGHT_HOOK )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9976:2: this_LEFT_HOOK_0= RULE_LEFT_HOOK ( (lv_name_1_0= ruleFT_ID ) ) this_RIGHT_HOOK_2= RULE_RIGHT_HOOK
             {
-            this_LEFT_HOOK_0=(Token)match(input,RULE_LEFT_HOOK,FOLLOW_RULE_LEFT_HOOK_in_ruleOptional22277); if (state.failed) return current;
+            this_LEFT_HOOK_0=(Token)match(input,RULE_LEFT_HOOK,FOLLOW_RULE_LEFT_HOOK_in_ruleOptional22275); if (state.failed) return current;
             if ( state.backtracking==0 ) {
                
                   newLeafNode(this_LEFT_HOOK_0, grammarAccess.getOptionalAccess().getLEFT_HOOKTerminalRuleCall_0()); 
                   
             }
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9980:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9981:1: (lv_name_1_0= RULE_ID )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9980:1: ( (lv_name_1_0= ruleFT_ID ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9981:1: (lv_name_1_0= ruleFT_ID )
             {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9981:1: (lv_name_1_0= RULE_ID )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9982:3: lv_name_1_0= RULE_ID
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9981:1: (lv_name_1_0= ruleFT_ID )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:9982:3: lv_name_1_0= ruleFT_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleOptional22293); if (state.failed) return current;
             if ( state.backtracking==0 ) {
-
-              			newLeafNode(lv_name_1_0, grammarAccess.getOptionalAccess().getNameIDTerminalRuleCall_1_0()); 
-              		
+               
+              	        newCompositeNode(grammarAccess.getOptionalAccess().getNameFT_IDParserRuleCall_1_0()); 
+              	    
             }
+            pushFollow(FOLLOW_ruleFT_ID_in_ruleOptional22295);
+            lv_name_1_0=ruleFT_ID();
+
+            state._fsp--;
+            if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
               	        if (current==null) {
-              	            current = createModelElement(grammarAccess.getOptionalRule());
+              	            current = createModelElementForParent(grammarAccess.getOptionalRule());
               	        }
-                     		setWithLastConsumed(
+                     		set(
                      			current, 
                      			"name",
                       		lv_name_1_0, 
-                      		"ID");
+                      		"FT_ID");
+              	        afterParserOrEnumRuleCall();
               	    
             }
 
@@ -28481,7 +28542,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_RIGHT_HOOK_2=(Token)match(input,RULE_RIGHT_HOOK,FOLLOW_RULE_RIGHT_HOOK_in_ruleOptional22309); if (state.failed) return current;
+            this_RIGHT_HOOK_2=(Token)match(input,RULE_RIGHT_HOOK,FOLLOW_RULE_RIGHT_HOOK_in_ruleOptional22306); if (state.failed) return current;
             if ( state.backtracking==0 ) {
                
                   newLeafNode(this_RIGHT_HOOK_2, grammarAccess.getOptionalAccess().getRIGHT_HOOKTerminalRuleCall_2()); 
@@ -28524,7 +28585,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getXorgroupRule()); 
             }
-            pushFollow(FOLLOW_ruleXorgroup_in_entryRuleXorgroup22344);
+            pushFollow(FOLLOW_ruleXorgroup_in_entryRuleXorgroup22341);
             iv_ruleXorgroup=ruleXorgroup();
 
             state._fsp--;
@@ -28532,7 +28593,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleXorgroup; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleXorgroup22354); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleXorgroup22351); if (state.failed) return current;
 
             }
 
@@ -28571,7 +28632,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10023:1: (this_LEFT_PAREN_0= RULE_LEFT_PAREN ( (lv_features_1_0= ruleFT_ID ) ) (this_B_OR_2= RULE_B_OR ( (lv_features_3_0= ruleFT_ID ) ) )+ this_RIGHT_PAREN_4= RULE_RIGHT_PAREN )
             // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10023:2: this_LEFT_PAREN_0= RULE_LEFT_PAREN ( (lv_features_1_0= ruleFT_ID ) ) (this_B_OR_2= RULE_B_OR ( (lv_features_3_0= ruleFT_ID ) ) )+ this_RIGHT_PAREN_4= RULE_RIGHT_PAREN
             {
-            this_LEFT_PAREN_0=(Token)match(input,RULE_LEFT_PAREN,FOLLOW_RULE_LEFT_PAREN_in_ruleXorgroup22390); if (state.failed) return current;
+            this_LEFT_PAREN_0=(Token)match(input,RULE_LEFT_PAREN,FOLLOW_RULE_LEFT_PAREN_in_ruleXorgroup22387); if (state.failed) return current;
             if ( state.backtracking==0 ) {
                
                   newLeafNode(this_LEFT_PAREN_0, grammarAccess.getXorgroupAccess().getLEFT_PARENTerminalRuleCall_0()); 
@@ -28588,7 +28649,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getXorgroupAccess().getFeaturesFT_IDParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleFT_ID_in_ruleXorgroup22410);
+            pushFollow(FOLLOW_ruleFT_ID_in_ruleXorgroup22407);
             lv_features_1_0=ruleFT_ID();
 
             state._fsp--;
@@ -28628,7 +28689,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10045:3: this_B_OR_2= RULE_B_OR ( (lv_features_3_0= ruleFT_ID ) )
             	    {
-            	    this_B_OR_2=(Token)match(input,RULE_B_OR,FOLLOW_RULE_B_OR_in_ruleXorgroup22422); if (state.failed) return current;
+            	    this_B_OR_2=(Token)match(input,RULE_B_OR,FOLLOW_RULE_B_OR_in_ruleXorgroup22419); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
             	       
             	          newLeafNode(this_B_OR_2, grammarAccess.getXorgroupAccess().getB_ORTerminalRuleCall_2_0()); 
@@ -28645,7 +28706,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             	      	        newCompositeNode(grammarAccess.getXorgroupAccess().getFeaturesFT_IDParserRuleCall_2_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleFT_ID_in_ruleXorgroup22442);
+            	    pushFollow(FOLLOW_ruleFT_ID_in_ruleXorgroup22439);
             	    lv_features_3_0=ruleFT_ID();
 
             	    state._fsp--;
@@ -28683,7 +28744,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                 cnt108++;
             } while (true);
 
-            this_RIGHT_PAREN_4=(Token)match(input,RULE_RIGHT_PAREN,FOLLOW_RULE_RIGHT_PAREN_in_ruleXorgroup22455); if (state.failed) return current;
+            this_RIGHT_PAREN_4=(Token)match(input,RULE_RIGHT_PAREN,FOLLOW_RULE_RIGHT_PAREN_in_ruleXorgroup22452); if (state.failed) return current;
             if ( state.backtracking==0 ) {
                
                   newLeafNode(this_RIGHT_PAREN_4, grammarAccess.getXorgroupAccess().getRIGHT_PARENTerminalRuleCall_3()); 
@@ -28726,7 +28787,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getOrgroupRule()); 
             }
-            pushFollow(FOLLOW_ruleOrgroup_in_entryRuleOrgroup22490);
+            pushFollow(FOLLOW_ruleOrgroup_in_entryRuleOrgroup22487);
             iv_ruleOrgroup=ruleOrgroup();
 
             state._fsp--;
@@ -28734,7 +28795,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleOrgroup; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleOrgroup22500); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleOrgroup22497); if (state.failed) return current;
 
             }
 
@@ -28774,7 +28835,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10092:1: (this_LEFT_PAREN_0= RULE_LEFT_PAREN ( (lv_features_1_0= ruleFT_ID ) ) (this_B_OR_2= RULE_B_OR ( (lv_features_3_0= ruleFT_ID ) ) )+ this_RIGHT_PAREN_4= RULE_RIGHT_PAREN this_PLUS_5= RULE_PLUS )
             // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10092:2: this_LEFT_PAREN_0= RULE_LEFT_PAREN ( (lv_features_1_0= ruleFT_ID ) ) (this_B_OR_2= RULE_B_OR ( (lv_features_3_0= ruleFT_ID ) ) )+ this_RIGHT_PAREN_4= RULE_RIGHT_PAREN this_PLUS_5= RULE_PLUS
             {
-            this_LEFT_PAREN_0=(Token)match(input,RULE_LEFT_PAREN,FOLLOW_RULE_LEFT_PAREN_in_ruleOrgroup22536); if (state.failed) return current;
+            this_LEFT_PAREN_0=(Token)match(input,RULE_LEFT_PAREN,FOLLOW_RULE_LEFT_PAREN_in_ruleOrgroup22533); if (state.failed) return current;
             if ( state.backtracking==0 ) {
                
                   newLeafNode(this_LEFT_PAREN_0, grammarAccess.getOrgroupAccess().getLEFT_PARENTerminalRuleCall_0()); 
@@ -28791,7 +28852,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getOrgroupAccess().getFeaturesFT_IDParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleFT_ID_in_ruleOrgroup22556);
+            pushFollow(FOLLOW_ruleFT_ID_in_ruleOrgroup22553);
             lv_features_1_0=ruleFT_ID();
 
             state._fsp--;
@@ -28831,7 +28892,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10114:3: this_B_OR_2= RULE_B_OR ( (lv_features_3_0= ruleFT_ID ) )
             	    {
-            	    this_B_OR_2=(Token)match(input,RULE_B_OR,FOLLOW_RULE_B_OR_in_ruleOrgroup22568); if (state.failed) return current;
+            	    this_B_OR_2=(Token)match(input,RULE_B_OR,FOLLOW_RULE_B_OR_in_ruleOrgroup22565); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
             	       
             	          newLeafNode(this_B_OR_2, grammarAccess.getOrgroupAccess().getB_ORTerminalRuleCall_2_0()); 
@@ -28848,7 +28909,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             	      	        newCompositeNode(grammarAccess.getOrgroupAccess().getFeaturesFT_IDParserRuleCall_2_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleFT_ID_in_ruleOrgroup22588);
+            	    pushFollow(FOLLOW_ruleFT_ID_in_ruleOrgroup22585);
             	    lv_features_3_0=ruleFT_ID();
 
             	    state._fsp--;
@@ -28886,13 +28947,13 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                 cnt109++;
             } while (true);
 
-            this_RIGHT_PAREN_4=(Token)match(input,RULE_RIGHT_PAREN,FOLLOW_RULE_RIGHT_PAREN_in_ruleOrgroup22601); if (state.failed) return current;
+            this_RIGHT_PAREN_4=(Token)match(input,RULE_RIGHT_PAREN,FOLLOW_RULE_RIGHT_PAREN_in_ruleOrgroup22598); if (state.failed) return current;
             if ( state.backtracking==0 ) {
                
                   newLeafNode(this_RIGHT_PAREN_4, grammarAccess.getOrgroupAccess().getRIGHT_PARENTerminalRuleCall_3()); 
                   
             }
-            this_PLUS_5=(Token)match(input,RULE_PLUS,FOLLOW_RULE_PLUS_in_ruleOrgroup22611); if (state.failed) return current;
+            this_PLUS_5=(Token)match(input,RULE_PLUS,FOLLOW_RULE_PLUS_in_ruleOrgroup22608); if (state.failed) return current;
             if ( state.backtracking==0 ) {
                
                   newLeafNode(this_PLUS_5, grammarAccess.getOrgroupAccess().getPLUSTerminalRuleCall_4()); 
@@ -28935,7 +28996,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getMutexgroupRule()); 
             }
-            pushFollow(FOLLOW_ruleMutexgroup_in_entryRuleMutexgroup22646);
+            pushFollow(FOLLOW_ruleMutexgroup_in_entryRuleMutexgroup22643);
             iv_ruleMutexgroup=ruleMutexgroup();
 
             state._fsp--;
@@ -28943,7 +29004,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleMutexgroup; 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleMutexgroup22656); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleMutexgroup22653); if (state.failed) return current;
 
             }
 
@@ -28982,7 +29043,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10165:1: (this_LEFT_PAREN_0= RULE_LEFT_PAREN ( (lv_features_1_0= ruleFT_ID ) ) (this_B_OR_2= RULE_B_OR ( (lv_features_3_0= ruleFT_ID ) ) )+ otherlv_4= ')?' )
             // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10165:2: this_LEFT_PAREN_0= RULE_LEFT_PAREN ( (lv_features_1_0= ruleFT_ID ) ) (this_B_OR_2= RULE_B_OR ( (lv_features_3_0= ruleFT_ID ) ) )+ otherlv_4= ')?'
             {
-            this_LEFT_PAREN_0=(Token)match(input,RULE_LEFT_PAREN,FOLLOW_RULE_LEFT_PAREN_in_ruleMutexgroup22692); if (state.failed) return current;
+            this_LEFT_PAREN_0=(Token)match(input,RULE_LEFT_PAREN,FOLLOW_RULE_LEFT_PAREN_in_ruleMutexgroup22689); if (state.failed) return current;
             if ( state.backtracking==0 ) {
                
                   newLeafNode(this_LEFT_PAREN_0, grammarAccess.getMutexgroupAccess().getLEFT_PARENTerminalRuleCall_0()); 
@@ -28999,7 +29060,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
               	        newCompositeNode(grammarAccess.getMutexgroupAccess().getFeaturesFT_IDParserRuleCall_1_0()); 
               	    
             }
-            pushFollow(FOLLOW_ruleFT_ID_in_ruleMutexgroup22712);
+            pushFollow(FOLLOW_ruleFT_ID_in_ruleMutexgroup22709);
             lv_features_1_0=ruleFT_ID();
 
             state._fsp--;
@@ -29039,7 +29100,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10187:3: this_B_OR_2= RULE_B_OR ( (lv_features_3_0= ruleFT_ID ) )
             	    {
-            	    this_B_OR_2=(Token)match(input,RULE_B_OR,FOLLOW_RULE_B_OR_in_ruleMutexgroup22724); if (state.failed) return current;
+            	    this_B_OR_2=(Token)match(input,RULE_B_OR,FOLLOW_RULE_B_OR_in_ruleMutexgroup22721); if (state.failed) return current;
             	    if ( state.backtracking==0 ) {
             	       
             	          newLeafNode(this_B_OR_2, grammarAccess.getMutexgroupAccess().getB_ORTerminalRuleCall_2_0()); 
@@ -29056,7 +29117,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             	      	        newCompositeNode(grammarAccess.getMutexgroupAccess().getFeaturesFT_IDParserRuleCall_2_1_0()); 
             	      	    
             	    }
-            	    pushFollow(FOLLOW_ruleFT_ID_in_ruleMutexgroup22744);
+            	    pushFollow(FOLLOW_ruleFT_ID_in_ruleMutexgroup22741);
             	    lv_features_3_0=ruleFT_ID();
 
             	    state._fsp--;
@@ -29094,7 +29155,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                 cnt110++;
             } while (true);
 
-            otherlv_4=(Token)match(input,166,FOLLOW_166_in_ruleMutexgroup22758); if (state.failed) return current;
+            otherlv_4=(Token)match(input,166,FOLLOW_166_in_ruleMutexgroup22755); if (state.failed) return current;
             if ( state.backtracking==0 ) {
 
                   	newLeafNode(otherlv_4, grammarAccess.getMutexgroupAccess().getRightParenthesisQuestionMarkKeyword_3());
@@ -29137,7 +29198,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getFT_IDRule()); 
             }
-            pushFollow(FOLLOW_ruleFT_ID_in_entryRuleFT_ID22795);
+            pushFollow(FOLLOW_ruleFT_ID_in_entryRuleFT_ID22792);
             iv_ruleFT_ID=ruleFT_ID();
 
             state._fsp--;
@@ -29145,7 +29206,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleFT_ID.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFT_ID22806); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFT_ID22803); if (state.failed) return current;
 
             }
 
@@ -29163,45 +29224,51 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFT_ID"
-    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10230:1: ruleFT_ID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( (this_ID_0= RULE_ID | kw= '$' ) (kw= '.' this_ID_3= RULE_ID )* ) ;
+    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10230:1: ruleFT_ID returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : (this_ID_0= RULE_ID | kw= '$' | this_STRING_2= RULE_STRING ) ;
     public final AntlrDatatypeRuleToken ruleFT_ID() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
         Token this_ID_0=null;
         Token kw=null;
-        Token this_ID_3=null;
+        Token this_STRING_2=null;
 
          enterRule(); 
             
         try {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10233:28: ( ( (this_ID_0= RULE_ID | kw= '$' ) (kw= '.' this_ID_3= RULE_ID )* ) )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10234:1: ( (this_ID_0= RULE_ID | kw= '$' ) (kw= '.' this_ID_3= RULE_ID )* )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10233:28: ( (this_ID_0= RULE_ID | kw= '$' | this_STRING_2= RULE_STRING ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10234:1: (this_ID_0= RULE_ID | kw= '$' | this_STRING_2= RULE_STRING )
             {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10234:1: ( (this_ID_0= RULE_ID | kw= '$' ) (kw= '.' this_ID_3= RULE_ID )* )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10234:2: (this_ID_0= RULE_ID | kw= '$' ) (kw= '.' this_ID_3= RULE_ID )*
-            {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10234:2: (this_ID_0= RULE_ID | kw= '$' )
-            int alt111=2;
-            int LA111_0 = input.LA(1);
-
-            if ( (LA111_0==RULE_ID) ) {
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10234:1: (this_ID_0= RULE_ID | kw= '$' | this_STRING_2= RULE_STRING )
+            int alt111=3;
+            switch ( input.LA(1) ) {
+            case RULE_ID:
+                {
                 alt111=1;
-            }
-            else if ( (LA111_0==167) ) {
+                }
+                break;
+            case 167:
+                {
                 alt111=2;
-            }
-            else {
+                }
+                break;
+            case RULE_STRING:
+                {
+                alt111=3;
+                }
+                break;
+            default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
                     new NoViableAltException("", 111, 0, input);
 
                 throw nvae;
             }
+
             switch (alt111) {
                 case 1 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10234:7: this_ID_0= RULE_ID
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10234:6: this_ID_0= RULE_ID
                     {
-                    this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFT_ID22847); if (state.failed) return current;
+                    this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFT_ID22843); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                       		current.merge(this_ID_0);
@@ -29209,7 +29276,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     if ( state.backtracking==0 ) {
                        
-                          newLeafNode(this_ID_0, grammarAccess.getFT_IDAccess().getIDTerminalRuleCall_0_0()); 
+                          newLeafNode(this_ID_0, grammarAccess.getFT_IDAccess().getIDTerminalRuleCall_0()); 
                           
                     }
 
@@ -29218,61 +29285,33 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                 case 2 :
                     // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10243:2: kw= '$'
                     {
-                    kw=(Token)match(input,167,FOLLOW_167_in_ruleFT_ID22871); if (state.failed) return current;
+                    kw=(Token)match(input,167,FOLLOW_167_in_ruleFT_ID22867); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current.merge(kw);
-                              newLeafNode(kw, grammarAccess.getFT_IDAccess().getDollarSignKeyword_0_1()); 
+                              newLeafNode(kw, grammarAccess.getFT_IDAccess().getDollarSignKeyword_1()); 
                           
                     }
 
                     }
                     break;
+                case 3 :
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10249:10: this_STRING_2= RULE_STRING
+                    {
+                    this_STRING_2=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleFT_ID22888); if (state.failed) return current;
+                    if ( state.backtracking==0 ) {
 
-            }
+                      		current.merge(this_STRING_2);
+                          
+                    }
+                    if ( state.backtracking==0 ) {
+                       
+                          newLeafNode(this_STRING_2, grammarAccess.getFT_IDAccess().getSTRINGTerminalRuleCall_2()); 
+                          
+                    }
 
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10248:2: (kw= '.' this_ID_3= RULE_ID )*
-            loop112:
-            do {
-                int alt112=2;
-                int LA112_0 = input.LA(1);
-
-                if ( (LA112_0==168) ) {
-                    alt112=1;
-                }
-
-
-                switch (alt112) {
-            	case 1 :
-            	    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10249:2: kw= '.' this_ID_3= RULE_ID
-            	    {
-            	    kw=(Token)match(input,168,FOLLOW_168_in_ruleFT_ID22886); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	              current.merge(kw);
-            	              newLeafNode(kw, grammarAccess.getFT_IDAccess().getFullStopKeyword_1_0()); 
-            	          
-            	    }
-            	    this_ID_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFT_ID22901); if (state.failed) return current;
-            	    if ( state.backtracking==0 ) {
-
-            	      		current.merge(this_ID_3);
-            	          
-            	    }
-            	    if ( state.backtracking==0 ) {
-            	       
-            	          newLeafNode(this_ID_3, grammarAccess.getFT_IDAccess().getIDTerminalRuleCall_1_1()); 
-            	          
-            	    }
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop112;
-                }
-            } while (true);
-
+                    }
+                    break;
 
             }
 
@@ -29296,7 +29335,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFML_IDENTIFIER"
-    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10269:1: entryRuleFML_IDENTIFIER returns [String current=null] : iv_ruleFML_IDENTIFIER= ruleFML_IDENTIFIER EOF ;
+    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10264:1: entryRuleFML_IDENTIFIER returns [String current=null] : iv_ruleFML_IDENTIFIER= ruleFML_IDENTIFIER EOF ;
     public final String entryRuleFML_IDENTIFIER() throws RecognitionException {
         String current = null;
 
@@ -29304,13 +29343,13 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10270:2: (iv_ruleFML_IDENTIFIER= ruleFML_IDENTIFIER EOF )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10271:2: iv_ruleFML_IDENTIFIER= ruleFML_IDENTIFIER EOF
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10265:2: (iv_ruleFML_IDENTIFIER= ruleFML_IDENTIFIER EOF )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10266:2: iv_ruleFML_IDENTIFIER= ruleFML_IDENTIFIER EOF
             {
             if ( state.backtracking==0 ) {
                newCompositeNode(grammarAccess.getFML_IDENTIFIERRule()); 
             }
-            pushFollow(FOLLOW_ruleFML_IDENTIFIER_in_entryRuleFML_IDENTIFIER22949);
+            pushFollow(FOLLOW_ruleFML_IDENTIFIER_in_entryRuleFML_IDENTIFIER22934);
             iv_ruleFML_IDENTIFIER=ruleFML_IDENTIFIER();
 
             state._fsp--;
@@ -29318,7 +29357,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             if ( state.backtracking==0 ) {
                current =iv_ruleFML_IDENTIFIER.getText(); 
             }
-            match(input,EOF,FOLLOW_EOF_in_entryRuleFML_IDENTIFIER22960); if (state.failed) return current;
+            match(input,EOF,FOLLOW_EOF_in_entryRuleFML_IDENTIFIER22945); if (state.failed) return current;
 
             }
 
@@ -29336,7 +29375,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFML_IDENTIFIER"
-    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10278:1: ruleFML_IDENTIFIER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( ( (this_ID_0= RULE_ID | kw= '$' ) (kw= '.' (this_ID_3= RULE_ID | kw= '$' | this_STAR_5= RULE_STAR ) )* ) | (this_ID_6= RULE_ID this_STAR_7= RULE_STAR ) ) ;
+    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10273:1: ruleFML_IDENTIFIER returns [AntlrDatatypeRuleToken current=new AntlrDatatypeRuleToken()] : ( ( (this_ID_0= RULE_ID | kw= '$' ) (kw= '.' (this_ID_3= RULE_ID | kw= '$' | this_STAR_5= RULE_STAR | this_STRING_6= RULE_STRING ) )* ) | (this_ID_7= RULE_ID this_STAR_8= RULE_STAR ) ) ;
     public final AntlrDatatypeRuleToken ruleFML_IDENTIFIER() throws RecognitionException {
         AntlrDatatypeRuleToken current = new AntlrDatatypeRuleToken();
 
@@ -29344,75 +29383,76 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
         Token kw=null;
         Token this_ID_3=null;
         Token this_STAR_5=null;
-        Token this_ID_6=null;
-        Token this_STAR_7=null;
+        Token this_STRING_6=null;
+        Token this_ID_7=null;
+        Token this_STAR_8=null;
 
          enterRule(); 
             
         try {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10281:28: ( ( ( (this_ID_0= RULE_ID | kw= '$' ) (kw= '.' (this_ID_3= RULE_ID | kw= '$' | this_STAR_5= RULE_STAR ) )* ) | (this_ID_6= RULE_ID this_STAR_7= RULE_STAR ) ) )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10282:1: ( ( (this_ID_0= RULE_ID | kw= '$' ) (kw= '.' (this_ID_3= RULE_ID | kw= '$' | this_STAR_5= RULE_STAR ) )* ) | (this_ID_6= RULE_ID this_STAR_7= RULE_STAR ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10276:28: ( ( ( (this_ID_0= RULE_ID | kw= '$' ) (kw= '.' (this_ID_3= RULE_ID | kw= '$' | this_STAR_5= RULE_STAR | this_STRING_6= RULE_STRING ) )* ) | (this_ID_7= RULE_ID this_STAR_8= RULE_STAR ) ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10277:1: ( ( (this_ID_0= RULE_ID | kw= '$' ) (kw= '.' (this_ID_3= RULE_ID | kw= '$' | this_STAR_5= RULE_STAR | this_STRING_6= RULE_STRING ) )* ) | (this_ID_7= RULE_ID this_STAR_8= RULE_STAR ) )
             {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10282:1: ( ( (this_ID_0= RULE_ID | kw= '$' ) (kw= '.' (this_ID_3= RULE_ID | kw= '$' | this_STAR_5= RULE_STAR ) )* ) | (this_ID_6= RULE_ID this_STAR_7= RULE_STAR ) )
-            int alt116=2;
-            int LA116_0 = input.LA(1);
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10277:1: ( ( (this_ID_0= RULE_ID | kw= '$' ) (kw= '.' (this_ID_3= RULE_ID | kw= '$' | this_STAR_5= RULE_STAR | this_STRING_6= RULE_STRING ) )* ) | (this_ID_7= RULE_ID this_STAR_8= RULE_STAR ) )
+            int alt115=2;
+            int LA115_0 = input.LA(1);
 
-            if ( (LA116_0==RULE_ID) ) {
-                int LA116_1 = input.LA(2);
+            if ( (LA115_0==RULE_ID) ) {
+                int LA115_1 = input.LA(2);
 
-                if ( (LA116_1==RULE_STAR) ) {
-                    alt116=2;
+                if ( (LA115_1==RULE_STAR) ) {
+                    alt115=2;
                 }
-                else if ( (LA116_1==EOF||LA116_1==RULE_LEFT_HOOK||(LA116_1>=RULE_RIGHT_HOOK && LA116_1<=RULE_ID)||(LA116_1>=30 && LA116_1<=35)||LA116_1==37||(LA116_1>=39 && LA116_1<=42)||(LA116_1>=53 && LA116_1<=94)||LA116_1==96||LA116_1==98||(LA116_1>=105 && LA116_1<=106)||(LA116_1>=108 && LA116_1<=165)||(LA116_1>=167 && LA116_1<=188)||(LA116_1>=200 && LA116_1<=212)||(LA116_1>=226 && LA116_1<=227)) ) {
-                    alt116=1;
+                else if ( (LA115_1==EOF||LA115_1==RULE_LEFT_HOOK||(LA115_1>=RULE_RIGHT_HOOK && LA115_1<=RULE_ID)||(LA115_1>=30 && LA115_1<=35)||LA115_1==37||(LA115_1>=39 && LA115_1<=42)||(LA115_1>=53 && LA115_1<=94)||LA115_1==96||LA115_1==98||(LA115_1>=105 && LA115_1<=106)||(LA115_1>=108 && LA115_1<=165)||(LA115_1>=167 && LA115_1<=188)||(LA115_1>=200 && LA115_1<=212)||(LA115_1>=226 && LA115_1<=227)) ) {
+                    alt115=1;
                 }
                 else {
                     if (state.backtracking>0) {state.failed=true; return current;}
                     NoViableAltException nvae =
-                        new NoViableAltException("", 116, 1, input);
+                        new NoViableAltException("", 115, 1, input);
 
                     throw nvae;
                 }
             }
-            else if ( (LA116_0==167) ) {
-                alt116=1;
+            else if ( (LA115_0==167) ) {
+                alt115=1;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 116, 0, input);
+                    new NoViableAltException("", 115, 0, input);
 
                 throw nvae;
             }
-            switch (alt116) {
+            switch (alt115) {
                 case 1 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10282:2: ( (this_ID_0= RULE_ID | kw= '$' ) (kw= '.' (this_ID_3= RULE_ID | kw= '$' | this_STAR_5= RULE_STAR ) )* )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10277:2: ( (this_ID_0= RULE_ID | kw= '$' ) (kw= '.' (this_ID_3= RULE_ID | kw= '$' | this_STAR_5= RULE_STAR | this_STRING_6= RULE_STRING ) )* )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10282:2: ( (this_ID_0= RULE_ID | kw= '$' ) (kw= '.' (this_ID_3= RULE_ID | kw= '$' | this_STAR_5= RULE_STAR ) )* )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10282:3: (this_ID_0= RULE_ID | kw= '$' ) (kw= '.' (this_ID_3= RULE_ID | kw= '$' | this_STAR_5= RULE_STAR ) )*
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10277:2: ( (this_ID_0= RULE_ID | kw= '$' ) (kw= '.' (this_ID_3= RULE_ID | kw= '$' | this_STAR_5= RULE_STAR | this_STRING_6= RULE_STRING ) )* )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10277:3: (this_ID_0= RULE_ID | kw= '$' ) (kw= '.' (this_ID_3= RULE_ID | kw= '$' | this_STAR_5= RULE_STAR | this_STRING_6= RULE_STRING ) )*
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10282:3: (this_ID_0= RULE_ID | kw= '$' )
-                    int alt113=2;
-                    int LA113_0 = input.LA(1);
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10277:3: (this_ID_0= RULE_ID | kw= '$' )
+                    int alt112=2;
+                    int LA112_0 = input.LA(1);
 
-                    if ( (LA113_0==RULE_ID) ) {
-                        alt113=1;
+                    if ( (LA112_0==RULE_ID) ) {
+                        alt112=1;
                     }
-                    else if ( (LA113_0==167) ) {
-                        alt113=2;
+                    else if ( (LA112_0==167) ) {
+                        alt112=2;
                     }
                     else {
                         if (state.backtracking>0) {state.failed=true; return current;}
                         NoViableAltException nvae =
-                            new NoViableAltException("", 113, 0, input);
+                            new NoViableAltException("", 112, 0, input);
 
                         throw nvae;
                     }
-                    switch (alt113) {
+                    switch (alt112) {
                         case 1 :
-                            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10282:8: this_ID_0= RULE_ID
+                            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10277:8: this_ID_0= RULE_ID
                             {
-                            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFML_IDENTIFIER23002); if (state.failed) return current;
+                            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFML_IDENTIFIER22987); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                               		current.merge(this_ID_0);
@@ -29427,9 +29467,9 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10291:2: kw= '$'
+                            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10286:2: kw= '$'
                             {
-                            kw=(Token)match(input,167,FOLLOW_167_in_ruleFML_IDENTIFIER23026); if (state.failed) return current;
+                            kw=(Token)match(input,167,FOLLOW_167_in_ruleFML_IDENTIFIER23011); if (state.failed) return current;
                             if ( state.backtracking==0 ) {
 
                                       current.merge(kw);
@@ -29442,59 +29482,64 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10296:2: (kw= '.' (this_ID_3= RULE_ID | kw= '$' | this_STAR_5= RULE_STAR ) )*
-                    loop115:
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10291:2: (kw= '.' (this_ID_3= RULE_ID | kw= '$' | this_STAR_5= RULE_STAR | this_STRING_6= RULE_STRING ) )*
+                    loop114:
                     do {
-                        int alt115=2;
-                        int LA115_0 = input.LA(1);
+                        int alt114=2;
+                        int LA114_0 = input.LA(1);
 
-                        if ( (LA115_0==168) ) {
-                            alt115=1;
+                        if ( (LA114_0==168) ) {
+                            alt114=1;
                         }
 
 
-                        switch (alt115) {
+                        switch (alt114) {
                     	case 1 :
-                    	    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10297:2: kw= '.' (this_ID_3= RULE_ID | kw= '$' | this_STAR_5= RULE_STAR )
+                    	    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10292:2: kw= '.' (this_ID_3= RULE_ID | kw= '$' | this_STAR_5= RULE_STAR | this_STRING_6= RULE_STRING )
                     	    {
-                    	    kw=(Token)match(input,168,FOLLOW_168_in_ruleFML_IDENTIFIER23041); if (state.failed) return current;
+                    	    kw=(Token)match(input,168,FOLLOW_168_in_ruleFML_IDENTIFIER23026); if (state.failed) return current;
                     	    if ( state.backtracking==0 ) {
 
                     	              current.merge(kw);
                     	              newLeafNode(kw, grammarAccess.getFML_IDENTIFIERAccess().getFullStopKeyword_0_1_0()); 
                     	          
                     	    }
-                    	    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10302:1: (this_ID_3= RULE_ID | kw= '$' | this_STAR_5= RULE_STAR )
-                    	    int alt114=3;
+                    	    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10297:1: (this_ID_3= RULE_ID | kw= '$' | this_STAR_5= RULE_STAR | this_STRING_6= RULE_STRING )
+                    	    int alt113=4;
                     	    switch ( input.LA(1) ) {
                     	    case RULE_ID:
                     	        {
-                    	        alt114=1;
+                    	        alt113=1;
                     	        }
                     	        break;
                     	    case 167:
                     	        {
-                    	        alt114=2;
+                    	        alt113=2;
                     	        }
                     	        break;
                     	    case RULE_STAR:
                     	        {
-                    	        alt114=3;
+                    	        alt113=3;
+                    	        }
+                    	        break;
+                    	    case RULE_STRING:
+                    	        {
+                    	        alt113=4;
                     	        }
                     	        break;
                     	    default:
                     	        if (state.backtracking>0) {state.failed=true; return current;}
                     	        NoViableAltException nvae =
-                    	            new NoViableAltException("", 114, 0, input);
+                    	            new NoViableAltException("", 113, 0, input);
 
                     	        throw nvae;
                     	    }
 
-                    	    switch (alt114) {
+                    	    switch (alt113) {
                     	        case 1 :
-                    	            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10302:6: this_ID_3= RULE_ID
+                    	            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10297:6: this_ID_3= RULE_ID
                     	            {
-                    	            this_ID_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFML_IDENTIFIER23057); if (state.failed) return current;
+                    	            this_ID_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFML_IDENTIFIER23042); if (state.failed) return current;
                     	            if ( state.backtracking==0 ) {
 
                     	              		current.merge(this_ID_3);
@@ -29509,9 +29554,9 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     	            }
                     	            break;
                     	        case 2 :
-                    	            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10311:2: kw= '$'
+                    	            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10306:2: kw= '$'
                     	            {
-                    	            kw=(Token)match(input,167,FOLLOW_167_in_ruleFML_IDENTIFIER23081); if (state.failed) return current;
+                    	            kw=(Token)match(input,167,FOLLOW_167_in_ruleFML_IDENTIFIER23066); if (state.failed) return current;
                     	            if ( state.backtracking==0 ) {
 
                     	                      current.merge(kw);
@@ -29522,9 +29567,9 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     	            }
                     	            break;
                     	        case 3 :
-                    	            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10317:10: this_STAR_5= RULE_STAR
+                    	            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10312:10: this_STAR_5= RULE_STAR
                     	            {
-                    	            this_STAR_5=(Token)match(input,RULE_STAR,FOLLOW_RULE_STAR_in_ruleFML_IDENTIFIER23102); if (state.failed) return current;
+                    	            this_STAR_5=(Token)match(input,RULE_STAR,FOLLOW_RULE_STAR_in_ruleFML_IDENTIFIER23087); if (state.failed) return current;
                     	            if ( state.backtracking==0 ) {
 
                     	              		current.merge(this_STAR_5);
@@ -29538,6 +29583,23 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
                     	            }
                     	            break;
+                    	        case 4 :
+                    	            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10320:10: this_STRING_6= RULE_STRING
+                    	            {
+                    	            this_STRING_6=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_ruleFML_IDENTIFIER23113); if (state.failed) return current;
+                    	            if ( state.backtracking==0 ) {
+
+                    	              		current.merge(this_STRING_6);
+                    	                  
+                    	            }
+                    	            if ( state.backtracking==0 ) {
+                    	               
+                    	                  newLeafNode(this_STRING_6, grammarAccess.getFML_IDENTIFIERAccess().getSTRINGTerminalRuleCall_0_1_1_3()); 
+                    	                  
+                    	            }
+
+                    	            }
+                    	            break;
 
                     	    }
 
@@ -29546,7 +29608,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop115;
+                    	    break loop114;
                         }
                     } while (true);
 
@@ -29557,31 +29619,31 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10325:6: (this_ID_6= RULE_ID this_STAR_7= RULE_STAR )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10328:6: (this_ID_7= RULE_ID this_STAR_8= RULE_STAR )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10325:6: (this_ID_6= RULE_ID this_STAR_7= RULE_STAR )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10325:11: this_ID_6= RULE_ID this_STAR_7= RULE_STAR
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10328:6: (this_ID_7= RULE_ID this_STAR_8= RULE_STAR )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10328:11: this_ID_7= RULE_ID this_STAR_8= RULE_STAR
                     {
-                    this_ID_6=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFML_IDENTIFIER23133); if (state.failed) return current;
+                    this_ID_7=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleFML_IDENTIFIER23144); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_ID_6);
+                      		current.merge(this_ID_7);
                           
                     }
                     if ( state.backtracking==0 ) {
                        
-                          newLeafNode(this_ID_6, grammarAccess.getFML_IDENTIFIERAccess().getIDTerminalRuleCall_1_0()); 
+                          newLeafNode(this_ID_7, grammarAccess.getFML_IDENTIFIERAccess().getIDTerminalRuleCall_1_0()); 
                           
                     }
-                    this_STAR_7=(Token)match(input,RULE_STAR,FOLLOW_RULE_STAR_in_ruleFML_IDENTIFIER23153); if (state.failed) return current;
+                    this_STAR_8=(Token)match(input,RULE_STAR,FOLLOW_RULE_STAR_in_ruleFML_IDENTIFIER23164); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
-                      		current.merge(this_STAR_7);
+                      		current.merge(this_STAR_8);
                           
                     }
                     if ( state.backtracking==0 ) {
                        
-                          newLeafNode(this_STAR_7, grammarAccess.getFML_IDENTIFIERAccess().getSTARTerminalRuleCall_1_1()); 
+                          newLeafNode(this_STAR_8, grammarAccess.getFML_IDENTIFIERAccess().getSTARTerminalRuleCall_1_1()); 
                           
                     }
 
@@ -29613,7 +29675,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFeatureEdgeKind"
-    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10349:1: ruleFeatureEdgeKind returns [Enumerator current=null] : ( (enumLiteral_0= 'mand' ) | (enumLiteral_1= 'opt' ) | (enumLiteral_2= 'Xor' ) | (enumLiteral_3= 'Or' ) | (enumLiteral_4= 'Mutex' ) ) ;
+    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10352:1: ruleFeatureEdgeKind returns [Enumerator current=null] : ( (enumLiteral_0= 'mand' ) | (enumLiteral_1= 'opt' ) | (enumLiteral_2= 'Xor' ) | (enumLiteral_3= 'Or' ) | (enumLiteral_4= 'Mutex' ) ) ;
     public final Enumerator ruleFeatureEdgeKind() throws RecognitionException {
         Enumerator current = null;
 
@@ -29625,53 +29687,53 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10351:28: ( ( (enumLiteral_0= 'mand' ) | (enumLiteral_1= 'opt' ) | (enumLiteral_2= 'Xor' ) | (enumLiteral_3= 'Or' ) | (enumLiteral_4= 'Mutex' ) ) )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10352:1: ( (enumLiteral_0= 'mand' ) | (enumLiteral_1= 'opt' ) | (enumLiteral_2= 'Xor' ) | (enumLiteral_3= 'Or' ) | (enumLiteral_4= 'Mutex' ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10354:28: ( ( (enumLiteral_0= 'mand' ) | (enumLiteral_1= 'opt' ) | (enumLiteral_2= 'Xor' ) | (enumLiteral_3= 'Or' ) | (enumLiteral_4= 'Mutex' ) ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10355:1: ( (enumLiteral_0= 'mand' ) | (enumLiteral_1= 'opt' ) | (enumLiteral_2= 'Xor' ) | (enumLiteral_3= 'Or' ) | (enumLiteral_4= 'Mutex' ) )
             {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10352:1: ( (enumLiteral_0= 'mand' ) | (enumLiteral_1= 'opt' ) | (enumLiteral_2= 'Xor' ) | (enumLiteral_3= 'Or' ) | (enumLiteral_4= 'Mutex' ) )
-            int alt117=5;
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10355:1: ( (enumLiteral_0= 'mand' ) | (enumLiteral_1= 'opt' ) | (enumLiteral_2= 'Xor' ) | (enumLiteral_3= 'Or' ) | (enumLiteral_4= 'Mutex' ) )
+            int alt116=5;
             switch ( input.LA(1) ) {
             case 169:
                 {
-                alt117=1;
+                alt116=1;
                 }
                 break;
             case 170:
                 {
-                alt117=2;
+                alt116=2;
                 }
                 break;
             case 171:
                 {
-                alt117=3;
+                alt116=3;
                 }
                 break;
             case 172:
                 {
-                alt117=4;
+                alt116=4;
                 }
                 break;
             case 173:
                 {
-                alt117=5;
+                alt116=5;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 117, 0, input);
+                    new NoViableAltException("", 116, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt117) {
+            switch (alt116) {
                 case 1 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10352:2: (enumLiteral_0= 'mand' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10355:2: (enumLiteral_0= 'mand' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10352:2: (enumLiteral_0= 'mand' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10352:4: enumLiteral_0= 'mand'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10355:2: (enumLiteral_0= 'mand' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10355:4: enumLiteral_0= 'mand'
                     {
-                    enumLiteral_0=(Token)match(input,169,FOLLOW_169_in_ruleFeatureEdgeKind23215); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,169,FOLLOW_169_in_ruleFeatureEdgeKind23226); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getFeatureEdgeKindAccess().getMANDATORYEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -29685,12 +29747,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10358:6: (enumLiteral_1= 'opt' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10361:6: (enumLiteral_1= 'opt' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10358:6: (enumLiteral_1= 'opt' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10358:8: enumLiteral_1= 'opt'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10361:6: (enumLiteral_1= 'opt' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10361:8: enumLiteral_1= 'opt'
                     {
-                    enumLiteral_1=(Token)match(input,170,FOLLOW_170_in_ruleFeatureEdgeKind23232); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,170,FOLLOW_170_in_ruleFeatureEdgeKind23243); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getFeatureEdgeKindAccess().getOPTIONALEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -29704,12 +29766,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10364:6: (enumLiteral_2= 'Xor' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10367:6: (enumLiteral_2= 'Xor' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10364:6: (enumLiteral_2= 'Xor' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10364:8: enumLiteral_2= 'Xor'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10367:6: (enumLiteral_2= 'Xor' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10367:8: enumLiteral_2= 'Xor'
                     {
-                    enumLiteral_2=(Token)match(input,171,FOLLOW_171_in_ruleFeatureEdgeKind23249); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,171,FOLLOW_171_in_ruleFeatureEdgeKind23260); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getFeatureEdgeKindAccess().getALTERNATIVEEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -29723,12 +29785,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10370:6: (enumLiteral_3= 'Or' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10373:6: (enumLiteral_3= 'Or' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10370:6: (enumLiteral_3= 'Or' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10370:8: enumLiteral_3= 'Or'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10373:6: (enumLiteral_3= 'Or' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10373:8: enumLiteral_3= 'Or'
                     {
-                    enumLiteral_3=(Token)match(input,172,FOLLOW_172_in_ruleFeatureEdgeKind23266); if (state.failed) return current;
+                    enumLiteral_3=(Token)match(input,172,FOLLOW_172_in_ruleFeatureEdgeKind23277); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getFeatureEdgeKindAccess().getOREnumLiteralDeclaration_3().getEnumLiteral().getInstance();
@@ -29742,12 +29804,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10376:6: (enumLiteral_4= 'Mutex' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10379:6: (enumLiteral_4= 'Mutex' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10376:6: (enumLiteral_4= 'Mutex' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10376:8: enumLiteral_4= 'Mutex'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10379:6: (enumLiteral_4= 'Mutex' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10379:8: enumLiteral_4= 'Mutex'
                     {
-                    enumLiteral_4=(Token)match(input,173,FOLLOW_173_in_ruleFeatureEdgeKind23283); if (state.failed) return current;
+                    enumLiteral_4=(Token)match(input,173,FOLLOW_173_in_ruleFeatureEdgeKind23294); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getFeatureEdgeKindAccess().getMUTEXEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
@@ -29783,7 +29845,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleKindOfGet"
-    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10386:1: ruleKindOfGet returns [Enumerator current=null] : ( (enumLiteral_0= 'getImpliesHierarchy' ) | (enumLiteral_1= 'getExcludesHierarchy' ) | (enumLiteral_2= 'getBiimpliesHierarchy' ) | (enumLiteral_3= 'getImpliesConstraint' ) | (enumLiteral_4= 'getExcludesConstraint' ) | (enumLiteral_5= 'getBiimpliesConstraint' ) ) ;
+    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10389:1: ruleKindOfGet returns [Enumerator current=null] : ( (enumLiteral_0= 'getImpliesHierarchy' ) | (enumLiteral_1= 'getExcludesHierarchy' ) | (enumLiteral_2= 'getBiimpliesHierarchy' ) | (enumLiteral_3= 'getImpliesConstraint' ) | (enumLiteral_4= 'getExcludesConstraint' ) | (enumLiteral_5= 'getBiimpliesConstraint' ) ) ;
     public final Enumerator ruleKindOfGet() throws RecognitionException {
         Enumerator current = null;
 
@@ -29796,58 +29858,58 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10388:28: ( ( (enumLiteral_0= 'getImpliesHierarchy' ) | (enumLiteral_1= 'getExcludesHierarchy' ) | (enumLiteral_2= 'getBiimpliesHierarchy' ) | (enumLiteral_3= 'getImpliesConstraint' ) | (enumLiteral_4= 'getExcludesConstraint' ) | (enumLiteral_5= 'getBiimpliesConstraint' ) ) )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10389:1: ( (enumLiteral_0= 'getImpliesHierarchy' ) | (enumLiteral_1= 'getExcludesHierarchy' ) | (enumLiteral_2= 'getBiimpliesHierarchy' ) | (enumLiteral_3= 'getImpliesConstraint' ) | (enumLiteral_4= 'getExcludesConstraint' ) | (enumLiteral_5= 'getBiimpliesConstraint' ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10391:28: ( ( (enumLiteral_0= 'getImpliesHierarchy' ) | (enumLiteral_1= 'getExcludesHierarchy' ) | (enumLiteral_2= 'getBiimpliesHierarchy' ) | (enumLiteral_3= 'getImpliesConstraint' ) | (enumLiteral_4= 'getExcludesConstraint' ) | (enumLiteral_5= 'getBiimpliesConstraint' ) ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10392:1: ( (enumLiteral_0= 'getImpliesHierarchy' ) | (enumLiteral_1= 'getExcludesHierarchy' ) | (enumLiteral_2= 'getBiimpliesHierarchy' ) | (enumLiteral_3= 'getImpliesConstraint' ) | (enumLiteral_4= 'getExcludesConstraint' ) | (enumLiteral_5= 'getBiimpliesConstraint' ) )
             {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10389:1: ( (enumLiteral_0= 'getImpliesHierarchy' ) | (enumLiteral_1= 'getExcludesHierarchy' ) | (enumLiteral_2= 'getBiimpliesHierarchy' ) | (enumLiteral_3= 'getImpliesConstraint' ) | (enumLiteral_4= 'getExcludesConstraint' ) | (enumLiteral_5= 'getBiimpliesConstraint' ) )
-            int alt118=6;
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10392:1: ( (enumLiteral_0= 'getImpliesHierarchy' ) | (enumLiteral_1= 'getExcludesHierarchy' ) | (enumLiteral_2= 'getBiimpliesHierarchy' ) | (enumLiteral_3= 'getImpliesConstraint' ) | (enumLiteral_4= 'getExcludesConstraint' ) | (enumLiteral_5= 'getBiimpliesConstraint' ) )
+            int alt117=6;
             switch ( input.LA(1) ) {
             case 174:
                 {
-                alt118=1;
+                alt117=1;
                 }
                 break;
             case 175:
                 {
-                alt118=2;
+                alt117=2;
                 }
                 break;
             case 176:
                 {
-                alt118=3;
+                alt117=3;
                 }
                 break;
             case 177:
                 {
-                alt118=4;
+                alt117=4;
                 }
                 break;
             case 178:
                 {
-                alt118=5;
+                alt117=5;
                 }
                 break;
             case 179:
                 {
-                alt118=6;
+                alt117=6;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 118, 0, input);
+                    new NoViableAltException("", 117, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt118) {
+            switch (alt117) {
                 case 1 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10389:2: (enumLiteral_0= 'getImpliesHierarchy' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10392:2: (enumLiteral_0= 'getImpliesHierarchy' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10389:2: (enumLiteral_0= 'getImpliesHierarchy' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10389:4: enumLiteral_0= 'getImpliesHierarchy'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10392:2: (enumLiteral_0= 'getImpliesHierarchy' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10392:4: enumLiteral_0= 'getImpliesHierarchy'
                     {
-                    enumLiteral_0=(Token)match(input,174,FOLLOW_174_in_ruleKindOfGet23328); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,174,FOLLOW_174_in_ruleKindOfGet23339); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getKindOfGetAccess().getHIERARCHY_IMPLIESEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -29861,12 +29923,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10395:6: (enumLiteral_1= 'getExcludesHierarchy' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10398:6: (enumLiteral_1= 'getExcludesHierarchy' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10395:6: (enumLiteral_1= 'getExcludesHierarchy' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10395:8: enumLiteral_1= 'getExcludesHierarchy'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10398:6: (enumLiteral_1= 'getExcludesHierarchy' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10398:8: enumLiteral_1= 'getExcludesHierarchy'
                     {
-                    enumLiteral_1=(Token)match(input,175,FOLLOW_175_in_ruleKindOfGet23345); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,175,FOLLOW_175_in_ruleKindOfGet23356); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getKindOfGetAccess().getHIERARCHY_EXCLUDESEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -29880,12 +29942,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10401:6: (enumLiteral_2= 'getBiimpliesHierarchy' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10404:6: (enumLiteral_2= 'getBiimpliesHierarchy' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10401:6: (enumLiteral_2= 'getBiimpliesHierarchy' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10401:8: enumLiteral_2= 'getBiimpliesHierarchy'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10404:6: (enumLiteral_2= 'getBiimpliesHierarchy' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10404:8: enumLiteral_2= 'getBiimpliesHierarchy'
                     {
-                    enumLiteral_2=(Token)match(input,176,FOLLOW_176_in_ruleKindOfGet23362); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,176,FOLLOW_176_in_ruleKindOfGet23373); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getKindOfGetAccess().getHIERARCHY_BIIMPLIESEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -29899,12 +29961,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10407:6: (enumLiteral_3= 'getImpliesConstraint' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10410:6: (enumLiteral_3= 'getImpliesConstraint' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10407:6: (enumLiteral_3= 'getImpliesConstraint' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10407:8: enumLiteral_3= 'getImpliesConstraint'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10410:6: (enumLiteral_3= 'getImpliesConstraint' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10410:8: enumLiteral_3= 'getImpliesConstraint'
                     {
-                    enumLiteral_3=(Token)match(input,177,FOLLOW_177_in_ruleKindOfGet23379); if (state.failed) return current;
+                    enumLiteral_3=(Token)match(input,177,FOLLOW_177_in_ruleKindOfGet23390); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getKindOfGetAccess().getCONSTRAINT_IMPLIESEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
@@ -29918,12 +29980,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10413:6: (enumLiteral_4= 'getExcludesConstraint' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10416:6: (enumLiteral_4= 'getExcludesConstraint' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10413:6: (enumLiteral_4= 'getExcludesConstraint' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10413:8: enumLiteral_4= 'getExcludesConstraint'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10416:6: (enumLiteral_4= 'getExcludesConstraint' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10416:8: enumLiteral_4= 'getExcludesConstraint'
                     {
-                    enumLiteral_4=(Token)match(input,178,FOLLOW_178_in_ruleKindOfGet23396); if (state.failed) return current;
+                    enumLiteral_4=(Token)match(input,178,FOLLOW_178_in_ruleKindOfGet23407); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getKindOfGetAccess().getCONSTRAINT_EXCLUDESEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
@@ -29937,12 +29999,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10419:6: (enumLiteral_5= 'getBiimpliesConstraint' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10422:6: (enumLiteral_5= 'getBiimpliesConstraint' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10419:6: (enumLiteral_5= 'getBiimpliesConstraint' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10419:8: enumLiteral_5= 'getBiimpliesConstraint'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10422:6: (enumLiteral_5= 'getBiimpliesConstraint' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10422:8: enumLiteral_5= 'getBiimpliesConstraint'
                     {
-                    enumLiteral_5=(Token)match(input,179,FOLLOW_179_in_ruleKindOfGet23413); if (state.failed) return current;
+                    enumLiteral_5=(Token)match(input,179,FOLLOW_179_in_ruleKindOfGet23424); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getKindOfGetAccess().getCONSTRAINT_BIIMPLIESEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
@@ -29978,7 +30040,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleKindOfCompute"
-    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10429:1: ruleKindOfCompute returns [Enumerator current=null] : ( (enumLiteral_0= 'computeImplies' ) | (enumLiteral_1= 'computeExcludes' ) | (enumLiteral_2= 'computeBiimplies' ) ) ;
+    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10432:1: ruleKindOfCompute returns [Enumerator current=null] : ( (enumLiteral_0= 'computeImplies' ) | (enumLiteral_1= 'computeExcludes' ) | (enumLiteral_2= 'computeBiimplies' ) ) ;
     public final Enumerator ruleKindOfCompute() throws RecognitionException {
         Enumerator current = null;
 
@@ -29988,43 +30050,43 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10431:28: ( ( (enumLiteral_0= 'computeImplies' ) | (enumLiteral_1= 'computeExcludes' ) | (enumLiteral_2= 'computeBiimplies' ) ) )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10432:1: ( (enumLiteral_0= 'computeImplies' ) | (enumLiteral_1= 'computeExcludes' ) | (enumLiteral_2= 'computeBiimplies' ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10434:28: ( ( (enumLiteral_0= 'computeImplies' ) | (enumLiteral_1= 'computeExcludes' ) | (enumLiteral_2= 'computeBiimplies' ) ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10435:1: ( (enumLiteral_0= 'computeImplies' ) | (enumLiteral_1= 'computeExcludes' ) | (enumLiteral_2= 'computeBiimplies' ) )
             {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10432:1: ( (enumLiteral_0= 'computeImplies' ) | (enumLiteral_1= 'computeExcludes' ) | (enumLiteral_2= 'computeBiimplies' ) )
-            int alt119=3;
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10435:1: ( (enumLiteral_0= 'computeImplies' ) | (enumLiteral_1= 'computeExcludes' ) | (enumLiteral_2= 'computeBiimplies' ) )
+            int alt118=3;
             switch ( input.LA(1) ) {
             case 180:
                 {
-                alt119=1;
+                alt118=1;
                 }
                 break;
             case 181:
                 {
-                alt119=2;
+                alt118=2;
                 }
                 break;
             case 182:
                 {
-                alt119=3;
+                alt118=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 119, 0, input);
+                    new NoViableAltException("", 118, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt119) {
+            switch (alt118) {
                 case 1 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10432:2: (enumLiteral_0= 'computeImplies' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10435:2: (enumLiteral_0= 'computeImplies' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10432:2: (enumLiteral_0= 'computeImplies' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10432:4: enumLiteral_0= 'computeImplies'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10435:2: (enumLiteral_0= 'computeImplies' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10435:4: enumLiteral_0= 'computeImplies'
                     {
-                    enumLiteral_0=(Token)match(input,180,FOLLOW_180_in_ruleKindOfCompute23458); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,180,FOLLOW_180_in_ruleKindOfCompute23469); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getKindOfComputeAccess().getIMPLIESEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -30038,12 +30100,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10438:6: (enumLiteral_1= 'computeExcludes' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10441:6: (enumLiteral_1= 'computeExcludes' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10438:6: (enumLiteral_1= 'computeExcludes' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10438:8: enumLiteral_1= 'computeExcludes'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10441:6: (enumLiteral_1= 'computeExcludes' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10441:8: enumLiteral_1= 'computeExcludes'
                     {
-                    enumLiteral_1=(Token)match(input,181,FOLLOW_181_in_ruleKindOfCompute23475); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,181,FOLLOW_181_in_ruleKindOfCompute23486); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getKindOfComputeAccess().getEXCLUDESEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -30057,12 +30119,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10444:6: (enumLiteral_2= 'computeBiimplies' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10447:6: (enumLiteral_2= 'computeBiimplies' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10444:6: (enumLiteral_2= 'computeBiimplies' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10444:8: enumLiteral_2= 'computeBiimplies'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10447:6: (enumLiteral_2= 'computeBiimplies' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10447:8: enumLiteral_2= 'computeBiimplies'
                     {
-                    enumLiteral_2=(Token)match(input,182,FOLLOW_182_in_ruleKindOfCompute23492); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,182,FOLLOW_182_in_ruleKindOfCompute23503); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getKindOfComputeAccess().getBIIMPLIESEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -30098,7 +30160,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleKindOfGetGroups"
-    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10454:1: ruleKindOfGetGroups returns [Enumerator current=null] : ( (enumLiteral_0= 'getORGroups' ) | (enumLiteral_1= 'getXORGroups' ) | (enumLiteral_2= 'getMUTEXGroups' ) ) ;
+    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10457:1: ruleKindOfGetGroups returns [Enumerator current=null] : ( (enumLiteral_0= 'getORGroups' ) | (enumLiteral_1= 'getXORGroups' ) | (enumLiteral_2= 'getMUTEXGroups' ) ) ;
     public final Enumerator ruleKindOfGetGroups() throws RecognitionException {
         Enumerator current = null;
 
@@ -30108,43 +30170,43 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10456:28: ( ( (enumLiteral_0= 'getORGroups' ) | (enumLiteral_1= 'getXORGroups' ) | (enumLiteral_2= 'getMUTEXGroups' ) ) )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10457:1: ( (enumLiteral_0= 'getORGroups' ) | (enumLiteral_1= 'getXORGroups' ) | (enumLiteral_2= 'getMUTEXGroups' ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10459:28: ( ( (enumLiteral_0= 'getORGroups' ) | (enumLiteral_1= 'getXORGroups' ) | (enumLiteral_2= 'getMUTEXGroups' ) ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10460:1: ( (enumLiteral_0= 'getORGroups' ) | (enumLiteral_1= 'getXORGroups' ) | (enumLiteral_2= 'getMUTEXGroups' ) )
             {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10457:1: ( (enumLiteral_0= 'getORGroups' ) | (enumLiteral_1= 'getXORGroups' ) | (enumLiteral_2= 'getMUTEXGroups' ) )
-            int alt120=3;
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10460:1: ( (enumLiteral_0= 'getORGroups' ) | (enumLiteral_1= 'getXORGroups' ) | (enumLiteral_2= 'getMUTEXGroups' ) )
+            int alt119=3;
             switch ( input.LA(1) ) {
             case 183:
                 {
-                alt120=1;
+                alt119=1;
                 }
                 break;
             case 184:
                 {
-                alt120=2;
+                alt119=2;
                 }
                 break;
             case 185:
                 {
-                alt120=3;
+                alt119=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 120, 0, input);
+                    new NoViableAltException("", 119, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt120) {
+            switch (alt119) {
                 case 1 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10457:2: (enumLiteral_0= 'getORGroups' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10460:2: (enumLiteral_0= 'getORGroups' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10457:2: (enumLiteral_0= 'getORGroups' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10457:4: enumLiteral_0= 'getORGroups'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10460:2: (enumLiteral_0= 'getORGroups' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10460:4: enumLiteral_0= 'getORGroups'
                     {
-                    enumLiteral_0=(Token)match(input,183,FOLLOW_183_in_ruleKindOfGetGroups23537); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,183,FOLLOW_183_in_ruleKindOfGetGroups23548); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getKindOfGetGroupsAccess().getOREnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -30158,12 +30220,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10463:6: (enumLiteral_1= 'getXORGroups' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10466:6: (enumLiteral_1= 'getXORGroups' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10463:6: (enumLiteral_1= 'getXORGroups' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10463:8: enumLiteral_1= 'getXORGroups'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10466:6: (enumLiteral_1= 'getXORGroups' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10466:8: enumLiteral_1= 'getXORGroups'
                     {
-                    enumLiteral_1=(Token)match(input,184,FOLLOW_184_in_ruleKindOfGetGroups23554); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,184,FOLLOW_184_in_ruleKindOfGetGroups23565); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getKindOfGetGroupsAccess().getXOREnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -30177,12 +30239,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10469:6: (enumLiteral_2= 'getMUTEXGroups' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10472:6: (enumLiteral_2= 'getMUTEXGroups' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10469:6: (enumLiteral_2= 'getMUTEXGroups' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10469:8: enumLiteral_2= 'getMUTEXGroups'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10472:6: (enumLiteral_2= 'getMUTEXGroups' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10472:8: enumLiteral_2= 'getMUTEXGroups'
                     {
-                    enumLiteral_2=(Token)match(input,185,FOLLOW_185_in_ruleKindOfGetGroups23571); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,185,FOLLOW_185_in_ruleKindOfGetGroups23582); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getKindOfGetGroupsAccess().getMUTEXEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -30218,7 +30280,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleKindOfComputeGroups"
-    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10479:1: ruleKindOfComputeGroups returns [Enumerator current=null] : ( (enumLiteral_0= 'computeORGroups' ) | (enumLiteral_1= 'computeXORGroups' ) | (enumLiteral_2= 'computeMUTEXGroups' ) ) ;
+    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10482:1: ruleKindOfComputeGroups returns [Enumerator current=null] : ( (enumLiteral_0= 'computeORGroups' ) | (enumLiteral_1= 'computeXORGroups' ) | (enumLiteral_2= 'computeMUTEXGroups' ) ) ;
     public final Enumerator ruleKindOfComputeGroups() throws RecognitionException {
         Enumerator current = null;
 
@@ -30228,43 +30290,43 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10481:28: ( ( (enumLiteral_0= 'computeORGroups' ) | (enumLiteral_1= 'computeXORGroups' ) | (enumLiteral_2= 'computeMUTEXGroups' ) ) )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10482:1: ( (enumLiteral_0= 'computeORGroups' ) | (enumLiteral_1= 'computeXORGroups' ) | (enumLiteral_2= 'computeMUTEXGroups' ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10484:28: ( ( (enumLiteral_0= 'computeORGroups' ) | (enumLiteral_1= 'computeXORGroups' ) | (enumLiteral_2= 'computeMUTEXGroups' ) ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10485:1: ( (enumLiteral_0= 'computeORGroups' ) | (enumLiteral_1= 'computeXORGroups' ) | (enumLiteral_2= 'computeMUTEXGroups' ) )
             {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10482:1: ( (enumLiteral_0= 'computeORGroups' ) | (enumLiteral_1= 'computeXORGroups' ) | (enumLiteral_2= 'computeMUTEXGroups' ) )
-            int alt121=3;
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10485:1: ( (enumLiteral_0= 'computeORGroups' ) | (enumLiteral_1= 'computeXORGroups' ) | (enumLiteral_2= 'computeMUTEXGroups' ) )
+            int alt120=3;
             switch ( input.LA(1) ) {
             case 186:
                 {
-                alt121=1;
+                alt120=1;
                 }
                 break;
             case 187:
                 {
-                alt121=2;
+                alt120=2;
                 }
                 break;
             case 188:
                 {
-                alt121=3;
+                alt120=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 121, 0, input);
+                    new NoViableAltException("", 120, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt121) {
+            switch (alt120) {
                 case 1 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10482:2: (enumLiteral_0= 'computeORGroups' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10485:2: (enumLiteral_0= 'computeORGroups' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10482:2: (enumLiteral_0= 'computeORGroups' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10482:4: enumLiteral_0= 'computeORGroups'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10485:2: (enumLiteral_0= 'computeORGroups' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10485:4: enumLiteral_0= 'computeORGroups'
                     {
-                    enumLiteral_0=(Token)match(input,186,FOLLOW_186_in_ruleKindOfComputeGroups23616); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,186,FOLLOW_186_in_ruleKindOfComputeGroups23627); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getKindOfComputeGroupsAccess().getOREnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -30278,12 +30340,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10488:6: (enumLiteral_1= 'computeXORGroups' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10491:6: (enumLiteral_1= 'computeXORGroups' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10488:6: (enumLiteral_1= 'computeXORGroups' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10488:8: enumLiteral_1= 'computeXORGroups'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10491:6: (enumLiteral_1= 'computeXORGroups' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10491:8: enumLiteral_1= 'computeXORGroups'
                     {
-                    enumLiteral_1=(Token)match(input,187,FOLLOW_187_in_ruleKindOfComputeGroups23633); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,187,FOLLOW_187_in_ruleKindOfComputeGroups23644); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getKindOfComputeGroupsAccess().getXOREnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -30297,12 +30359,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10494:6: (enumLiteral_2= 'computeMUTEXGroups' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10497:6: (enumLiteral_2= 'computeMUTEXGroups' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10494:6: (enumLiteral_2= 'computeMUTEXGroups' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10494:8: enumLiteral_2= 'computeMUTEXGroups'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10497:6: (enumLiteral_2= 'computeMUTEXGroups' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10497:8: enumLiteral_2= 'computeMUTEXGroups'
                     {
-                    enumLiteral_2=(Token)match(input,188,FOLLOW_188_in_ruleKindOfComputeGroups23650); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,188,FOLLOW_188_in_ruleKindOfComputeGroups23661); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getKindOfComputeGroupsAccess().getMUTEXEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -30338,7 +30400,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBDDBackend"
-    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10504:1: ruleBDDBackend returns [Enumerator current=null] : ( (enumLiteral_0= '@backend=DEFAULT' ) | (enumLiteral_1= '@backend=BDD' ) | (enumLiteral_2= '@backend=BDD_SPLOT' ) ) ;
+    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10507:1: ruleBDDBackend returns [Enumerator current=null] : ( (enumLiteral_0= '@backend=DEFAULT' ) | (enumLiteral_1= '@backend=BDD' ) | (enumLiteral_2= '@backend=BDD_SPLOT' ) ) ;
     public final Enumerator ruleBDDBackend() throws RecognitionException {
         Enumerator current = null;
 
@@ -30348,43 +30410,43 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10506:28: ( ( (enumLiteral_0= '@backend=DEFAULT' ) | (enumLiteral_1= '@backend=BDD' ) | (enumLiteral_2= '@backend=BDD_SPLOT' ) ) )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10507:1: ( (enumLiteral_0= '@backend=DEFAULT' ) | (enumLiteral_1= '@backend=BDD' ) | (enumLiteral_2= '@backend=BDD_SPLOT' ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10509:28: ( ( (enumLiteral_0= '@backend=DEFAULT' ) | (enumLiteral_1= '@backend=BDD' ) | (enumLiteral_2= '@backend=BDD_SPLOT' ) ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10510:1: ( (enumLiteral_0= '@backend=DEFAULT' ) | (enumLiteral_1= '@backend=BDD' ) | (enumLiteral_2= '@backend=BDD_SPLOT' ) )
             {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10507:1: ( (enumLiteral_0= '@backend=DEFAULT' ) | (enumLiteral_1= '@backend=BDD' ) | (enumLiteral_2= '@backend=BDD_SPLOT' ) )
-            int alt122=3;
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10510:1: ( (enumLiteral_0= '@backend=DEFAULT' ) | (enumLiteral_1= '@backend=BDD' ) | (enumLiteral_2= '@backend=BDD_SPLOT' ) )
+            int alt121=3;
             switch ( input.LA(1) ) {
             case 189:
                 {
-                alt122=1;
+                alt121=1;
                 }
                 break;
             case 190:
                 {
-                alt122=2;
+                alt121=2;
                 }
                 break;
             case 191:
                 {
-                alt122=3;
+                alt121=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 122, 0, input);
+                    new NoViableAltException("", 121, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt122) {
+            switch (alt121) {
                 case 1 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10507:2: (enumLiteral_0= '@backend=DEFAULT' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10510:2: (enumLiteral_0= '@backend=DEFAULT' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10507:2: (enumLiteral_0= '@backend=DEFAULT' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10507:4: enumLiteral_0= '@backend=DEFAULT'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10510:2: (enumLiteral_0= '@backend=DEFAULT' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10510:4: enumLiteral_0= '@backend=DEFAULT'
                     {
-                    enumLiteral_0=(Token)match(input,189,FOLLOW_189_in_ruleBDDBackend23695); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,189,FOLLOW_189_in_ruleBDDBackend23706); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getBDDBackendAccess().getBDD_DEFAULTEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -30398,12 +30460,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10513:6: (enumLiteral_1= '@backend=BDD' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10516:6: (enumLiteral_1= '@backend=BDD' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10513:6: (enumLiteral_1= '@backend=BDD' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10513:8: enumLiteral_1= '@backend=BDD'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10516:6: (enumLiteral_1= '@backend=BDD' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10516:8: enumLiteral_1= '@backend=BDD'
                     {
-                    enumLiteral_1=(Token)match(input,190,FOLLOW_190_in_ruleBDDBackend23712); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,190,FOLLOW_190_in_ruleBDDBackend23723); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getBDDBackendAccess().getBDD_BASICEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -30417,12 +30479,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10519:6: (enumLiteral_2= '@backend=BDD_SPLOT' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10522:6: (enumLiteral_2= '@backend=BDD_SPLOT' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10519:6: (enumLiteral_2= '@backend=BDD_SPLOT' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10519:8: enumLiteral_2= '@backend=BDD_SPLOT'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10522:6: (enumLiteral_2= '@backend=BDD_SPLOT' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10522:8: enumLiteral_2= '@backend=BDD_SPLOT'
                     {
-                    enumLiteral_2=(Token)match(input,191,FOLLOW_191_in_ruleBDDBackend23729); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,191,FOLLOW_191_in_ruleBDDBackend23740); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getBDDBackendAccess().getBDD_SPLOTEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -30458,7 +30520,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMergeMode"
-    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10529:1: ruleMergeMode returns [Enumerator current=null] : ( (enumLiteral_0= 'crossproduct' ) | (enumLiteral_1= 'union' ) | (enumLiteral_2= 'sunion' ) | (enumLiteral_3= 'intersection' ) | (enumLiteral_4= 'diff' ) ) ;
+    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10532:1: ruleMergeMode returns [Enumerator current=null] : ( (enumLiteral_0= 'crossproduct' ) | (enumLiteral_1= 'union' ) | (enumLiteral_2= 'sunion' ) | (enumLiteral_3= 'intersection' ) | (enumLiteral_4= 'diff' ) ) ;
     public final Enumerator ruleMergeMode() throws RecognitionException {
         Enumerator current = null;
 
@@ -30470,53 +30532,53 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10531:28: ( ( (enumLiteral_0= 'crossproduct' ) | (enumLiteral_1= 'union' ) | (enumLiteral_2= 'sunion' ) | (enumLiteral_3= 'intersection' ) | (enumLiteral_4= 'diff' ) ) )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10532:1: ( (enumLiteral_0= 'crossproduct' ) | (enumLiteral_1= 'union' ) | (enumLiteral_2= 'sunion' ) | (enumLiteral_3= 'intersection' ) | (enumLiteral_4= 'diff' ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10534:28: ( ( (enumLiteral_0= 'crossproduct' ) | (enumLiteral_1= 'union' ) | (enumLiteral_2= 'sunion' ) | (enumLiteral_3= 'intersection' ) | (enumLiteral_4= 'diff' ) ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10535:1: ( (enumLiteral_0= 'crossproduct' ) | (enumLiteral_1= 'union' ) | (enumLiteral_2= 'sunion' ) | (enumLiteral_3= 'intersection' ) | (enumLiteral_4= 'diff' ) )
             {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10532:1: ( (enumLiteral_0= 'crossproduct' ) | (enumLiteral_1= 'union' ) | (enumLiteral_2= 'sunion' ) | (enumLiteral_3= 'intersection' ) | (enumLiteral_4= 'diff' ) )
-            int alt123=5;
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10535:1: ( (enumLiteral_0= 'crossproduct' ) | (enumLiteral_1= 'union' ) | (enumLiteral_2= 'sunion' ) | (enumLiteral_3= 'intersection' ) | (enumLiteral_4= 'diff' ) )
+            int alt122=5;
             switch ( input.LA(1) ) {
             case 192:
                 {
-                alt123=1;
+                alt122=1;
                 }
                 break;
             case 193:
                 {
-                alt123=2;
+                alt122=2;
                 }
                 break;
             case 194:
                 {
-                alt123=3;
+                alt122=3;
                 }
                 break;
             case 195:
                 {
-                alt123=4;
+                alt122=4;
                 }
                 break;
             case 196:
                 {
-                alt123=5;
+                alt122=5;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 123, 0, input);
+                    new NoViableAltException("", 122, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt123) {
+            switch (alt122) {
                 case 1 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10532:2: (enumLiteral_0= 'crossproduct' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10535:2: (enumLiteral_0= 'crossproduct' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10532:2: (enumLiteral_0= 'crossproduct' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10532:4: enumLiteral_0= 'crossproduct'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10535:2: (enumLiteral_0= 'crossproduct' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10535:4: enumLiteral_0= 'crossproduct'
                     {
-                    enumLiteral_0=(Token)match(input,192,FOLLOW_192_in_ruleMergeMode23774); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,192,FOLLOW_192_in_ruleMergeMode23785); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getMergeModeAccess().getCROSSEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -30530,12 +30592,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10538:6: (enumLiteral_1= 'union' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10541:6: (enumLiteral_1= 'union' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10538:6: (enumLiteral_1= 'union' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10538:8: enumLiteral_1= 'union'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10541:6: (enumLiteral_1= 'union' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10541:8: enumLiteral_1= 'union'
                     {
-                    enumLiteral_1=(Token)match(input,193,FOLLOW_193_in_ruleMergeMode23791); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,193,FOLLOW_193_in_ruleMergeMode23802); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getMergeModeAccess().getUNIONEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -30549,12 +30611,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10544:6: (enumLiteral_2= 'sunion' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10547:6: (enumLiteral_2= 'sunion' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10544:6: (enumLiteral_2= 'sunion' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10544:8: enumLiteral_2= 'sunion'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10547:6: (enumLiteral_2= 'sunion' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10547:8: enumLiteral_2= 'sunion'
                     {
-                    enumLiteral_2=(Token)match(input,194,FOLLOW_194_in_ruleMergeMode23808); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,194,FOLLOW_194_in_ruleMergeMode23819); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getMergeModeAccess().getSUNIONEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -30568,12 +30630,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10550:6: (enumLiteral_3= 'intersection' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10553:6: (enumLiteral_3= 'intersection' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10550:6: (enumLiteral_3= 'intersection' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10550:8: enumLiteral_3= 'intersection'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10553:6: (enumLiteral_3= 'intersection' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10553:8: enumLiteral_3= 'intersection'
                     {
-                    enumLiteral_3=(Token)match(input,195,FOLLOW_195_in_ruleMergeMode23825); if (state.failed) return current;
+                    enumLiteral_3=(Token)match(input,195,FOLLOW_195_in_ruleMergeMode23836); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getMergeModeAccess().getINTEREnumLiteralDeclaration_3().getEnumLiteral().getInstance();
@@ -30587,12 +30649,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10556:6: (enumLiteral_4= 'diff' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10559:6: (enumLiteral_4= 'diff' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10556:6: (enumLiteral_4= 'diff' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10556:8: enumLiteral_4= 'diff'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10559:6: (enumLiteral_4= 'diff' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10559:8: enumLiteral_4= 'diff'
                     {
-                    enumLiteral_4=(Token)match(input,196,FOLLOW_196_in_ruleMergeMode23842); if (state.failed) return current;
+                    enumLiteral_4=(Token)match(input,196,FOLLOW_196_in_ruleMergeMode23853); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getMergeModeAccess().getDIFFEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
@@ -30628,7 +30690,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleHierarchyStrategy"
-    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10566:1: ruleHierarchyStrategy returns [Enumerator current=null] : ( (enumLiteral_0= '=basic' ) | (enumLiteral_1= '=flat' ) | (enumLiteral_2= '=mst' ) ) ;
+    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10569:1: ruleHierarchyStrategy returns [Enumerator current=null] : ( (enumLiteral_0= '=basic' ) | (enumLiteral_1= '=flat' ) | (enumLiteral_2= '=mst' ) ) ;
     public final Enumerator ruleHierarchyStrategy() throws RecognitionException {
         Enumerator current = null;
 
@@ -30638,43 +30700,43 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10568:28: ( ( (enumLiteral_0= '=basic' ) | (enumLiteral_1= '=flat' ) | (enumLiteral_2= '=mst' ) ) )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10569:1: ( (enumLiteral_0= '=basic' ) | (enumLiteral_1= '=flat' ) | (enumLiteral_2= '=mst' ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10571:28: ( ( (enumLiteral_0= '=basic' ) | (enumLiteral_1= '=flat' ) | (enumLiteral_2= '=mst' ) ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10572:1: ( (enumLiteral_0= '=basic' ) | (enumLiteral_1= '=flat' ) | (enumLiteral_2= '=mst' ) )
             {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10569:1: ( (enumLiteral_0= '=basic' ) | (enumLiteral_1= '=flat' ) | (enumLiteral_2= '=mst' ) )
-            int alt124=3;
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10572:1: ( (enumLiteral_0= '=basic' ) | (enumLiteral_1= '=flat' ) | (enumLiteral_2= '=mst' ) )
+            int alt123=3;
             switch ( input.LA(1) ) {
             case 197:
                 {
-                alt124=1;
+                alt123=1;
                 }
                 break;
             case 198:
                 {
-                alt124=2;
+                alt123=2;
                 }
                 break;
             case 199:
                 {
-                alt124=3;
+                alt123=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 124, 0, input);
+                    new NoViableAltException("", 123, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt124) {
+            switch (alt123) {
                 case 1 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10569:2: (enumLiteral_0= '=basic' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10572:2: (enumLiteral_0= '=basic' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10569:2: (enumLiteral_0= '=basic' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10569:4: enumLiteral_0= '=basic'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10572:2: (enumLiteral_0= '=basic' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10572:4: enumLiteral_0= '=basic'
                     {
-                    enumLiteral_0=(Token)match(input,197,FOLLOW_197_in_ruleHierarchyStrategy23887); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,197,FOLLOW_197_in_ruleHierarchyStrategy23898); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getHierarchyStrategyAccess().getBASICEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -30688,12 +30750,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10575:6: (enumLiteral_1= '=flat' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10578:6: (enumLiteral_1= '=flat' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10575:6: (enumLiteral_1= '=flat' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10575:8: enumLiteral_1= '=flat'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10578:6: (enumLiteral_1= '=flat' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10578:8: enumLiteral_1= '=flat'
                     {
-                    enumLiteral_1=(Token)match(input,198,FOLLOW_198_in_ruleHierarchyStrategy23904); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,198,FOLLOW_198_in_ruleHierarchyStrategy23915); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getHierarchyStrategyAccess().getFLATEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -30707,12 +30769,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10581:6: (enumLiteral_2= '=mst' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10584:6: (enumLiteral_2= '=mst' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10581:6: (enumLiteral_2= '=mst' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10581:8: enumLiteral_2= '=mst'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10584:6: (enumLiteral_2= '=mst' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10584:8: enumLiteral_2= '=mst'
                     {
-                    enumLiteral_2=(Token)match(input,199,FOLLOW_199_in_ruleHierarchyStrategy23921); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,199,FOLLOW_199_in_ruleHierarchyStrategy23932); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getHierarchyStrategyAccess().getMSTEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -30748,7 +30810,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSliceMode"
-    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10591:1: ruleSliceMode returns [Enumerator current=null] : ( (enumLiteral_0= 'including' ) | (enumLiteral_1= 'excluding' ) ) ;
+    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10594:1: ruleSliceMode returns [Enumerator current=null] : ( (enumLiteral_0= 'including' ) | (enumLiteral_1= 'excluding' ) ) ;
     public final Enumerator ruleSliceMode() throws RecognitionException {
         Enumerator current = null;
 
@@ -30757,34 +30819,34 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10593:28: ( ( (enumLiteral_0= 'including' ) | (enumLiteral_1= 'excluding' ) ) )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10594:1: ( (enumLiteral_0= 'including' ) | (enumLiteral_1= 'excluding' ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10596:28: ( ( (enumLiteral_0= 'including' ) | (enumLiteral_1= 'excluding' ) ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10597:1: ( (enumLiteral_0= 'including' ) | (enumLiteral_1= 'excluding' ) )
             {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10594:1: ( (enumLiteral_0= 'including' ) | (enumLiteral_1= 'excluding' ) )
-            int alt125=2;
-            int LA125_0 = input.LA(1);
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10597:1: ( (enumLiteral_0= 'including' ) | (enumLiteral_1= 'excluding' ) )
+            int alt124=2;
+            int LA124_0 = input.LA(1);
 
-            if ( (LA125_0==200) ) {
-                alt125=1;
+            if ( (LA124_0==200) ) {
+                alt124=1;
             }
-            else if ( (LA125_0==201) ) {
-                alt125=2;
+            else if ( (LA124_0==201) ) {
+                alt124=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 125, 0, input);
+                    new NoViableAltException("", 124, 0, input);
 
                 throw nvae;
             }
-            switch (alt125) {
+            switch (alt124) {
                 case 1 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10594:2: (enumLiteral_0= 'including' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10597:2: (enumLiteral_0= 'including' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10594:2: (enumLiteral_0= 'including' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10594:4: enumLiteral_0= 'including'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10597:2: (enumLiteral_0= 'including' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10597:4: enumLiteral_0= 'including'
                     {
-                    enumLiteral_0=(Token)match(input,200,FOLLOW_200_in_ruleSliceMode23966); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,200,FOLLOW_200_in_ruleSliceMode23977); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getSliceModeAccess().getINCLUDINGEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -30798,12 +30860,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10600:6: (enumLiteral_1= 'excluding' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10603:6: (enumLiteral_1= 'excluding' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10600:6: (enumLiteral_1= 'excluding' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10600:8: enumLiteral_1= 'excluding'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10603:6: (enumLiteral_1= 'excluding' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10603:8: enumLiteral_1= 'excluding'
                     {
-                    enumLiteral_1=(Token)match(input,201,FOLLOW_201_in_ruleSliceMode23983); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,201,FOLLOW_201_in_ruleSliceMode23994); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getSliceModeAccess().getEXCLUDINGEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -30839,7 +30901,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleComparisonOperator"
-    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10610:1: ruleComparisonOperator returns [Enumerator current=null] : ( (enumLiteral_0= 'eq' ) | (enumLiteral_1= 'neq' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>' ) | (enumLiteral_4= '==' ) | (enumLiteral_5= '!=' ) ) ;
+    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10613:1: ruleComparisonOperator returns [Enumerator current=null] : ( (enumLiteral_0= 'eq' ) | (enumLiteral_1= 'neq' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>' ) | (enumLiteral_4= '==' ) | (enumLiteral_5= '!=' ) ) ;
     public final Enumerator ruleComparisonOperator() throws RecognitionException {
         Enumerator current = null;
 
@@ -30852,58 +30914,58 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10612:28: ( ( (enumLiteral_0= 'eq' ) | (enumLiteral_1= 'neq' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>' ) | (enumLiteral_4= '==' ) | (enumLiteral_5= '!=' ) ) )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10613:1: ( (enumLiteral_0= 'eq' ) | (enumLiteral_1= 'neq' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>' ) | (enumLiteral_4= '==' ) | (enumLiteral_5= '!=' ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10615:28: ( ( (enumLiteral_0= 'eq' ) | (enumLiteral_1= 'neq' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>' ) | (enumLiteral_4= '==' ) | (enumLiteral_5= '!=' ) ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10616:1: ( (enumLiteral_0= 'eq' ) | (enumLiteral_1= 'neq' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>' ) | (enumLiteral_4= '==' ) | (enumLiteral_5= '!=' ) )
             {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10613:1: ( (enumLiteral_0= 'eq' ) | (enumLiteral_1= 'neq' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>' ) | (enumLiteral_4= '==' ) | (enumLiteral_5= '!=' ) )
-            int alt126=6;
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10616:1: ( (enumLiteral_0= 'eq' ) | (enumLiteral_1= 'neq' ) | (enumLiteral_2= '<' ) | (enumLiteral_3= '>' ) | (enumLiteral_4= '==' ) | (enumLiteral_5= '!=' ) )
+            int alt125=6;
             switch ( input.LA(1) ) {
             case 202:
                 {
-                alt126=1;
+                alt125=1;
                 }
                 break;
             case 203:
                 {
-                alt126=2;
+                alt125=2;
                 }
                 break;
             case 204:
                 {
-                alt126=3;
+                alt125=3;
                 }
                 break;
             case 205:
                 {
-                alt126=4;
+                alt125=4;
                 }
                 break;
             case 206:
                 {
-                alt126=5;
+                alt125=5;
                 }
                 break;
             case 207:
                 {
-                alt126=6;
+                alt125=6;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 126, 0, input);
+                    new NoViableAltException("", 125, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt126) {
+            switch (alt125) {
                 case 1 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10613:2: (enumLiteral_0= 'eq' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10616:2: (enumLiteral_0= 'eq' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10613:2: (enumLiteral_0= 'eq' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10613:4: enumLiteral_0= 'eq'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10616:2: (enumLiteral_0= 'eq' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10616:4: enumLiteral_0= 'eq'
                     {
-                    enumLiteral_0=(Token)match(input,202,FOLLOW_202_in_ruleComparisonOperator24028); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,202,FOLLOW_202_in_ruleComparisonOperator24039); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getComparisonOperatorAccess().getEQUALEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -30917,12 +30979,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10619:6: (enumLiteral_1= 'neq' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10622:6: (enumLiteral_1= 'neq' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10619:6: (enumLiteral_1= 'neq' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10619:8: enumLiteral_1= 'neq'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10622:6: (enumLiteral_1= 'neq' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10622:8: enumLiteral_1= 'neq'
                     {
-                    enumLiteral_1=(Token)match(input,203,FOLLOW_203_in_ruleComparisonOperator24045); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,203,FOLLOW_203_in_ruleComparisonOperator24056); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getComparisonOperatorAccess().getNotEqualEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -30936,12 +30998,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10625:6: (enumLiteral_2= '<' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10628:6: (enumLiteral_2= '<' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10625:6: (enumLiteral_2= '<' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10625:8: enumLiteral_2= '<'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10628:6: (enumLiteral_2= '<' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10628:8: enumLiteral_2= '<'
                     {
-                    enumLiteral_2=(Token)match(input,204,FOLLOW_204_in_ruleComparisonOperator24062); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,204,FOLLOW_204_in_ruleComparisonOperator24073); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getComparisonOperatorAccess().getLesserThanEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -30955,12 +31017,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10631:6: (enumLiteral_3= '>' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10634:6: (enumLiteral_3= '>' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10631:6: (enumLiteral_3= '>' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10631:8: enumLiteral_3= '>'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10634:6: (enumLiteral_3= '>' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10634:8: enumLiteral_3= '>'
                     {
-                    enumLiteral_3=(Token)match(input,205,FOLLOW_205_in_ruleComparisonOperator24079); if (state.failed) return current;
+                    enumLiteral_3=(Token)match(input,205,FOLLOW_205_in_ruleComparisonOperator24090); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getComparisonOperatorAccess().getGreaterThanEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
@@ -30974,12 +31036,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10637:6: (enumLiteral_4= '==' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10640:6: (enumLiteral_4= '==' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10637:6: (enumLiteral_4= '==' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10637:8: enumLiteral_4= '=='
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10640:6: (enumLiteral_4= '==' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10640:8: enumLiteral_4= '=='
                     {
-                    enumLiteral_4=(Token)match(input,206,FOLLOW_206_in_ruleComparisonOperator24096); if (state.failed) return current;
+                    enumLiteral_4=(Token)match(input,206,FOLLOW_206_in_ruleComparisonOperator24107); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getComparisonOperatorAccess().getREF_EQUALEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
@@ -30993,12 +31055,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10643:6: (enumLiteral_5= '!=' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10646:6: (enumLiteral_5= '!=' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10643:6: (enumLiteral_5= '!=' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10643:8: enumLiteral_5= '!='
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10646:6: (enumLiteral_5= '!=' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10646:8: enumLiteral_5= '!='
                     {
-                    enumLiteral_5=(Token)match(input,207,FOLLOW_207_in_ruleComparisonOperator24113); if (state.failed) return current;
+                    enumLiteral_5=(Token)match(input,207,FOLLOW_207_in_ruleComparisonOperator24124); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getComparisonOperatorAccess().getREF_NotEqualEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
@@ -31034,7 +31096,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleSetOperator"
-    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10653:1: ruleSetOperator returns [Enumerator current=null] : ( (enumLiteral_0= '++' ) | (enumLiteral_1= '--' ) ) ;
+    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10656:1: ruleSetOperator returns [Enumerator current=null] : ( (enumLiteral_0= '++' ) | (enumLiteral_1= '--' ) ) ;
     public final Enumerator ruleSetOperator() throws RecognitionException {
         Enumerator current = null;
 
@@ -31043,34 +31105,34 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10655:28: ( ( (enumLiteral_0= '++' ) | (enumLiteral_1= '--' ) ) )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10656:1: ( (enumLiteral_0= '++' ) | (enumLiteral_1= '--' ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10658:28: ( ( (enumLiteral_0= '++' ) | (enumLiteral_1= '--' ) ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10659:1: ( (enumLiteral_0= '++' ) | (enumLiteral_1= '--' ) )
             {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10656:1: ( (enumLiteral_0= '++' ) | (enumLiteral_1= '--' ) )
-            int alt127=2;
-            int LA127_0 = input.LA(1);
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10659:1: ( (enumLiteral_0= '++' ) | (enumLiteral_1= '--' ) )
+            int alt126=2;
+            int LA126_0 = input.LA(1);
 
-            if ( (LA127_0==208) ) {
-                alt127=1;
+            if ( (LA126_0==208) ) {
+                alt126=1;
             }
-            else if ( (LA127_0==209) ) {
-                alt127=2;
+            else if ( (LA126_0==209) ) {
+                alt126=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 127, 0, input);
+                    new NoViableAltException("", 126, 0, input);
 
                 throw nvae;
             }
-            switch (alt127) {
+            switch (alt126) {
                 case 1 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10656:2: (enumLiteral_0= '++' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10659:2: (enumLiteral_0= '++' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10656:2: (enumLiteral_0= '++' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10656:4: enumLiteral_0= '++'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10659:2: (enumLiteral_0= '++' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10659:4: enumLiteral_0= '++'
                     {
-                    enumLiteral_0=(Token)match(input,208,FOLLOW_208_in_ruleSetOperator24158); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,208,FOLLOW_208_in_ruleSetOperator24169); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getSetOperatorAccess().getSUNIONEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -31084,12 +31146,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10662:6: (enumLiteral_1= '--' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10665:6: (enumLiteral_1= '--' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10662:6: (enumLiteral_1= '--' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10662:8: enumLiteral_1= '--'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10665:6: (enumLiteral_1= '--' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10665:8: enumLiteral_1= '--'
                     {
-                    enumLiteral_1=(Token)match(input,209,FOLLOW_209_in_ruleSetOperator24175); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,209,FOLLOW_209_in_ruleSetOperator24186); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getSetOperatorAccess().getSDIFFEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -31125,7 +31187,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAutoConfMode"
-    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10674:1: ruleAutoConfMode returns [Enumerator current=null] : ( (enumLiteral_0= 'RANDOM' ) | (enumLiteral_1= 'MAX' ) | (enumLiteral_2= 'MIN' ) ) ;
+    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10677:1: ruleAutoConfMode returns [Enumerator current=null] : ( (enumLiteral_0= 'RANDOM' ) | (enumLiteral_1= 'MAX' ) | (enumLiteral_2= 'MIN' ) ) ;
     public final Enumerator ruleAutoConfMode() throws RecognitionException {
         Enumerator current = null;
 
@@ -31135,43 +31197,43 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10676:28: ( ( (enumLiteral_0= 'RANDOM' ) | (enumLiteral_1= 'MAX' ) | (enumLiteral_2= 'MIN' ) ) )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10677:1: ( (enumLiteral_0= 'RANDOM' ) | (enumLiteral_1= 'MAX' ) | (enumLiteral_2= 'MIN' ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10679:28: ( ( (enumLiteral_0= 'RANDOM' ) | (enumLiteral_1= 'MAX' ) | (enumLiteral_2= 'MIN' ) ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10680:1: ( (enumLiteral_0= 'RANDOM' ) | (enumLiteral_1= 'MAX' ) | (enumLiteral_2= 'MIN' ) )
             {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10677:1: ( (enumLiteral_0= 'RANDOM' ) | (enumLiteral_1= 'MAX' ) | (enumLiteral_2= 'MIN' ) )
-            int alt128=3;
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10680:1: ( (enumLiteral_0= 'RANDOM' ) | (enumLiteral_1= 'MAX' ) | (enumLiteral_2= 'MIN' ) )
+            int alt127=3;
             switch ( input.LA(1) ) {
             case 210:
                 {
-                alt128=1;
+                alt127=1;
                 }
                 break;
             case 211:
                 {
-                alt128=2;
+                alt127=2;
                 }
                 break;
             case 212:
                 {
-                alt128=3;
+                alt127=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 128, 0, input);
+                    new NoViableAltException("", 127, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt128) {
+            switch (alt127) {
                 case 1 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10677:2: (enumLiteral_0= 'RANDOM' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10680:2: (enumLiteral_0= 'RANDOM' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10677:2: (enumLiteral_0= 'RANDOM' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10677:4: enumLiteral_0= 'RANDOM'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10680:2: (enumLiteral_0= 'RANDOM' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10680:4: enumLiteral_0= 'RANDOM'
                     {
-                    enumLiteral_0=(Token)match(input,210,FOLLOW_210_in_ruleAutoConfMode24222); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,210,FOLLOW_210_in_ruleAutoConfMode24233); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getAutoConfModeAccess().getRANDOMEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -31185,12 +31247,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10683:6: (enumLiteral_1= 'MAX' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10686:6: (enumLiteral_1= 'MAX' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10683:6: (enumLiteral_1= 'MAX' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10683:8: enumLiteral_1= 'MAX'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10686:6: (enumLiteral_1= 'MAX' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10686:8: enumLiteral_1= 'MAX'
                     {
-                    enumLiteral_1=(Token)match(input,211,FOLLOW_211_in_ruleAutoConfMode24239); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,211,FOLLOW_211_in_ruleAutoConfMode24250); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getAutoConfModeAccess().getMAXEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -31204,12 +31266,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10689:6: (enumLiteral_2= 'MIN' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10692:6: (enumLiteral_2= 'MIN' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10689:6: (enumLiteral_2= 'MIN' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10689:8: enumLiteral_2= 'MIN'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10692:6: (enumLiteral_2= 'MIN' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10692:8: enumLiteral_2= 'MIN'
                     {
-                    enumLiteral_2=(Token)match(input,212,FOLLOW_212_in_ruleAutoConfMode24256); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,212,FOLLOW_212_in_ruleAutoConfMode24267); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getAutoConfModeAccess().getMINEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -31245,7 +31307,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleOPT_LISTING"
-    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10699:1: ruleOPT_LISTING returns [Enumerator current=null] : ( (enumLiteral_0= '--normal' ) | (enumLiteral_1= '--verbose' ) | (enumLiteral_2= '--withValues' ) ) ;
+    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10702:1: ruleOPT_LISTING returns [Enumerator current=null] : ( (enumLiteral_0= '--normal' ) | (enumLiteral_1= '--verbose' ) | (enumLiteral_2= '--withValues' ) ) ;
     public final Enumerator ruleOPT_LISTING() throws RecognitionException {
         Enumerator current = null;
 
@@ -31255,43 +31317,43 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10701:28: ( ( (enumLiteral_0= '--normal' ) | (enumLiteral_1= '--verbose' ) | (enumLiteral_2= '--withValues' ) ) )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10702:1: ( (enumLiteral_0= '--normal' ) | (enumLiteral_1= '--verbose' ) | (enumLiteral_2= '--withValues' ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10704:28: ( ( (enumLiteral_0= '--normal' ) | (enumLiteral_1= '--verbose' ) | (enumLiteral_2= '--withValues' ) ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10705:1: ( (enumLiteral_0= '--normal' ) | (enumLiteral_1= '--verbose' ) | (enumLiteral_2= '--withValues' ) )
             {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10702:1: ( (enumLiteral_0= '--normal' ) | (enumLiteral_1= '--verbose' ) | (enumLiteral_2= '--withValues' ) )
-            int alt129=3;
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10705:1: ( (enumLiteral_0= '--normal' ) | (enumLiteral_1= '--verbose' ) | (enumLiteral_2= '--withValues' ) )
+            int alt128=3;
             switch ( input.LA(1) ) {
             case 213:
                 {
-                alt129=1;
+                alt128=1;
                 }
                 break;
             case 214:
                 {
-                alt129=2;
+                alt128=2;
                 }
                 break;
             case 215:
                 {
-                alt129=3;
+                alt128=3;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 129, 0, input);
+                    new NoViableAltException("", 128, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt129) {
+            switch (alt128) {
                 case 1 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10702:2: (enumLiteral_0= '--normal' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10705:2: (enumLiteral_0= '--normal' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10702:2: (enumLiteral_0= '--normal' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10702:4: enumLiteral_0= '--normal'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10705:2: (enumLiteral_0= '--normal' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10705:4: enumLiteral_0= '--normal'
                     {
-                    enumLiteral_0=(Token)match(input,213,FOLLOW_213_in_ruleOPT_LISTING24301); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,213,FOLLOW_213_in_ruleOPT_LISTING24312); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getOPT_LISTINGAccess().getNORMALEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -31305,12 +31367,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10708:6: (enumLiteral_1= '--verbose' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10711:6: (enumLiteral_1= '--verbose' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10708:6: (enumLiteral_1= '--verbose' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10708:8: enumLiteral_1= '--verbose'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10711:6: (enumLiteral_1= '--verbose' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10711:8: enumLiteral_1= '--verbose'
                     {
-                    enumLiteral_1=(Token)match(input,214,FOLLOW_214_in_ruleOPT_LISTING24318); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,214,FOLLOW_214_in_ruleOPT_LISTING24329); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getOPT_LISTINGAccess().getVERBOSEEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -31324,12 +31386,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10714:6: (enumLiteral_2= '--withValues' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10717:6: (enumLiteral_2= '--withValues' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10714:6: (enumLiteral_2= '--withValues' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10714:8: enumLiteral_2= '--withValues'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10717:6: (enumLiteral_2= '--withValues' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10717:8: enumLiteral_2= '--withValues'
                     {
-                    enumLiteral_2=(Token)match(input,215,FOLLOW_215_in_ruleOPT_LISTING24335); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,215,FOLLOW_215_in_ruleOPT_LISTING24346); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getOPT_LISTINGAccess().getVALUE_ONLYEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -31365,7 +31427,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFMFormat"
-    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10724:1: ruleFMFormat returns [Enumerator current=null] : ( (enumLiteral_0= 'DIMACS' ) | (enumLiteral_1= 'fmlbdd' ) | (enumLiteral_2= 'featureide' ) | (enumLiteral_3= 'fmcalc' ) | (enumLiteral_4= 'fml' ) | (enumLiteral_5= 'SPLOT' ) | (enumLiteral_6= 'TVL' ) | (enumLiteral_7= 'fd' ) | (enumLiteral_8= 'xmi' ) | (enumLiteral_9= 'S2T2' ) ) ;
+    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10727:1: ruleFMFormat returns [Enumerator current=null] : ( (enumLiteral_0= 'DIMACS' ) | (enumLiteral_1= 'fmlbdd' ) | (enumLiteral_2= 'featureide' ) | (enumLiteral_3= 'fmcalc' ) | (enumLiteral_4= 'fml' ) | (enumLiteral_5= 'SPLOT' ) | (enumLiteral_6= 'TVL' ) | (enumLiteral_7= 'fd' ) | (enumLiteral_8= 'xmi' ) | (enumLiteral_9= 'S2T2' ) ) ;
     public final Enumerator ruleFMFormat() throws RecognitionException {
         Enumerator current = null;
 
@@ -31382,78 +31444,78 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10726:28: ( ( (enumLiteral_0= 'DIMACS' ) | (enumLiteral_1= 'fmlbdd' ) | (enumLiteral_2= 'featureide' ) | (enumLiteral_3= 'fmcalc' ) | (enumLiteral_4= 'fml' ) | (enumLiteral_5= 'SPLOT' ) | (enumLiteral_6= 'TVL' ) | (enumLiteral_7= 'fd' ) | (enumLiteral_8= 'xmi' ) | (enumLiteral_9= 'S2T2' ) ) )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10727:1: ( (enumLiteral_0= 'DIMACS' ) | (enumLiteral_1= 'fmlbdd' ) | (enumLiteral_2= 'featureide' ) | (enumLiteral_3= 'fmcalc' ) | (enumLiteral_4= 'fml' ) | (enumLiteral_5= 'SPLOT' ) | (enumLiteral_6= 'TVL' ) | (enumLiteral_7= 'fd' ) | (enumLiteral_8= 'xmi' ) | (enumLiteral_9= 'S2T2' ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10729:28: ( ( (enumLiteral_0= 'DIMACS' ) | (enumLiteral_1= 'fmlbdd' ) | (enumLiteral_2= 'featureide' ) | (enumLiteral_3= 'fmcalc' ) | (enumLiteral_4= 'fml' ) | (enumLiteral_5= 'SPLOT' ) | (enumLiteral_6= 'TVL' ) | (enumLiteral_7= 'fd' ) | (enumLiteral_8= 'xmi' ) | (enumLiteral_9= 'S2T2' ) ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10730:1: ( (enumLiteral_0= 'DIMACS' ) | (enumLiteral_1= 'fmlbdd' ) | (enumLiteral_2= 'featureide' ) | (enumLiteral_3= 'fmcalc' ) | (enumLiteral_4= 'fml' ) | (enumLiteral_5= 'SPLOT' ) | (enumLiteral_6= 'TVL' ) | (enumLiteral_7= 'fd' ) | (enumLiteral_8= 'xmi' ) | (enumLiteral_9= 'S2T2' ) )
             {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10727:1: ( (enumLiteral_0= 'DIMACS' ) | (enumLiteral_1= 'fmlbdd' ) | (enumLiteral_2= 'featureide' ) | (enumLiteral_3= 'fmcalc' ) | (enumLiteral_4= 'fml' ) | (enumLiteral_5= 'SPLOT' ) | (enumLiteral_6= 'TVL' ) | (enumLiteral_7= 'fd' ) | (enumLiteral_8= 'xmi' ) | (enumLiteral_9= 'S2T2' ) )
-            int alt130=10;
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10730:1: ( (enumLiteral_0= 'DIMACS' ) | (enumLiteral_1= 'fmlbdd' ) | (enumLiteral_2= 'featureide' ) | (enumLiteral_3= 'fmcalc' ) | (enumLiteral_4= 'fml' ) | (enumLiteral_5= 'SPLOT' ) | (enumLiteral_6= 'TVL' ) | (enumLiteral_7= 'fd' ) | (enumLiteral_8= 'xmi' ) | (enumLiteral_9= 'S2T2' ) )
+            int alt129=10;
             switch ( input.LA(1) ) {
             case 216:
                 {
-                alt130=1;
+                alt129=1;
                 }
                 break;
             case 217:
                 {
-                alt130=2;
+                alt129=2;
                 }
                 break;
             case 218:
                 {
-                alt130=3;
+                alt129=3;
                 }
                 break;
             case 219:
                 {
-                alt130=4;
+                alt129=4;
                 }
                 break;
             case 220:
                 {
-                alt130=5;
+                alt129=5;
                 }
                 break;
             case 221:
                 {
-                alt130=6;
+                alt129=6;
                 }
                 break;
             case 222:
                 {
-                alt130=7;
+                alt129=7;
                 }
                 break;
             case 223:
                 {
-                alt130=8;
+                alt129=8;
                 }
                 break;
             case 224:
                 {
-                alt130=9;
+                alt129=9;
                 }
                 break;
             case 225:
                 {
-                alt130=10;
+                alt129=10;
                 }
                 break;
             default:
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 130, 0, input);
+                    new NoViableAltException("", 129, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt130) {
+            switch (alt129) {
                 case 1 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10727:2: (enumLiteral_0= 'DIMACS' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10730:2: (enumLiteral_0= 'DIMACS' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10727:2: (enumLiteral_0= 'DIMACS' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10727:4: enumLiteral_0= 'DIMACS'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10730:2: (enumLiteral_0= 'DIMACS' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10730:4: enumLiteral_0= 'DIMACS'
                     {
-                    enumLiteral_0=(Token)match(input,216,FOLLOW_216_in_ruleFMFormat24380); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,216,FOLLOW_216_in_ruleFMFormat24391); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getFMFormatAccess().getDIMACSEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -31467,12 +31529,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10733:6: (enumLiteral_1= 'fmlbdd' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10736:6: (enumLiteral_1= 'fmlbdd' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10733:6: (enumLiteral_1= 'fmlbdd' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10733:8: enumLiteral_1= 'fmlbdd'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10736:6: (enumLiteral_1= 'fmlbdd' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10736:8: enumLiteral_1= 'fmlbdd'
                     {
-                    enumLiteral_1=(Token)match(input,217,FOLLOW_217_in_ruleFMFormat24397); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,217,FOLLOW_217_in_ruleFMFormat24408); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getFMFormatAccess().getFMLBDDEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -31486,12 +31548,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10739:6: (enumLiteral_2= 'featureide' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10742:6: (enumLiteral_2= 'featureide' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10739:6: (enumLiteral_2= 'featureide' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10739:8: enumLiteral_2= 'featureide'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10742:6: (enumLiteral_2= 'featureide' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10742:8: enumLiteral_2= 'featureide'
                     {
-                    enumLiteral_2=(Token)match(input,218,FOLLOW_218_in_ruleFMFormat24414); if (state.failed) return current;
+                    enumLiteral_2=(Token)match(input,218,FOLLOW_218_in_ruleFMFormat24425); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getFMFormatAccess().getFIDEEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
@@ -31505,12 +31567,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10745:6: (enumLiteral_3= 'fmcalc' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10748:6: (enumLiteral_3= 'fmcalc' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10745:6: (enumLiteral_3= 'fmcalc' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10745:8: enumLiteral_3= 'fmcalc'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10748:6: (enumLiteral_3= 'fmcalc' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10748:8: enumLiteral_3= 'fmcalc'
                     {
-                    enumLiteral_3=(Token)match(input,219,FOLLOW_219_in_ruleFMFormat24431); if (state.failed) return current;
+                    enumLiteral_3=(Token)match(input,219,FOLLOW_219_in_ruleFMFormat24442); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getFMFormatAccess().getFCALCEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
@@ -31524,12 +31586,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10751:6: (enumLiteral_4= 'fml' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10754:6: (enumLiteral_4= 'fml' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10751:6: (enumLiteral_4= 'fml' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10751:8: enumLiteral_4= 'fml'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10754:6: (enumLiteral_4= 'fml' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10754:8: enumLiteral_4= 'fml'
                     {
-                    enumLiteral_4=(Token)match(input,220,FOLLOW_220_in_ruleFMFormat24448); if (state.failed) return current;
+                    enumLiteral_4=(Token)match(input,220,FOLLOW_220_in_ruleFMFormat24459); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getFMFormatAccess().getFFMLEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
@@ -31543,12 +31605,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10757:6: (enumLiteral_5= 'SPLOT' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10760:6: (enumLiteral_5= 'SPLOT' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10757:6: (enumLiteral_5= 'SPLOT' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10757:8: enumLiteral_5= 'SPLOT'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10760:6: (enumLiteral_5= 'SPLOT' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10760:8: enumLiteral_5= 'SPLOT'
                     {
-                    enumLiteral_5=(Token)match(input,221,FOLLOW_221_in_ruleFMFormat24465); if (state.failed) return current;
+                    enumLiteral_5=(Token)match(input,221,FOLLOW_221_in_ruleFMFormat24476); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getFMFormatAccess().getFSPLOTEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
@@ -31562,12 +31624,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10763:6: (enumLiteral_6= 'TVL' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10766:6: (enumLiteral_6= 'TVL' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10763:6: (enumLiteral_6= 'TVL' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10763:8: enumLiteral_6= 'TVL'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10766:6: (enumLiteral_6= 'TVL' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10766:8: enumLiteral_6= 'TVL'
                     {
-                    enumLiteral_6=(Token)match(input,222,FOLLOW_222_in_ruleFMFormat24482); if (state.failed) return current;
+                    enumLiteral_6=(Token)match(input,222,FOLLOW_222_in_ruleFMFormat24493); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getFMFormatAccess().getFTVLEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
@@ -31581,12 +31643,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10769:6: (enumLiteral_7= 'fd' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10772:6: (enumLiteral_7= 'fd' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10769:6: (enumLiteral_7= 'fd' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10769:8: enumLiteral_7= 'fd'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10772:6: (enumLiteral_7= 'fd' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10772:8: enumLiteral_7= 'fd'
                     {
-                    enumLiteral_7=(Token)match(input,223,FOLLOW_223_in_ruleFMFormat24499); if (state.failed) return current;
+                    enumLiteral_7=(Token)match(input,223,FOLLOW_223_in_ruleFMFormat24510); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getFMFormatAccess().getFTRISKELLEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
@@ -31600,12 +31662,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10775:6: (enumLiteral_8= 'xmi' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10778:6: (enumLiteral_8= 'xmi' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10775:6: (enumLiteral_8= 'xmi' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10775:8: enumLiteral_8= 'xmi'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10778:6: (enumLiteral_8= 'xmi' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10778:8: enumLiteral_8= 'xmi'
                     {
-                    enumLiteral_8=(Token)match(input,224,FOLLOW_224_in_ruleFMFormat24516); if (state.failed) return current;
+                    enumLiteral_8=(Token)match(input,224,FOLLOW_224_in_ruleFMFormat24527); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getFMFormatAccess().getFFML2EnumLiteralDeclaration_8().getEnumLiteral().getInstance();
@@ -31619,12 +31681,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 10 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10781:6: (enumLiteral_9= 'S2T2' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10784:6: (enumLiteral_9= 'S2T2' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10781:6: (enumLiteral_9= 'S2T2' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10781:8: enumLiteral_9= 'S2T2'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10784:6: (enumLiteral_9= 'S2T2' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10784:8: enumLiteral_9= 'S2T2'
                     {
-                    enumLiteral_9=(Token)match(input,225,FOLLOW_225_in_ruleFMFormat24533); if (state.failed) return current;
+                    enumLiteral_9=(Token)match(input,225,FOLLOW_225_in_ruleFMFormat24544); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getFMFormatAccess().getS2T2EnumLiteralDeclaration_9().getEnumLiteral().getInstance();
@@ -31660,7 +31722,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBOOL_Operator"
-    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10791:1: ruleBOOL_Operator returns [Enumerator current=null] : ( (enumLiteral_0= '||' ) | (enumLiteral_1= '&&' ) ) ;
+    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10794:1: ruleBOOL_Operator returns [Enumerator current=null] : ( (enumLiteral_0= '||' ) | (enumLiteral_1= '&&' ) ) ;
     public final Enumerator ruleBOOL_Operator() throws RecognitionException {
         Enumerator current = null;
 
@@ -31669,34 +31731,34 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
 
          enterRule(); 
         try {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10793:28: ( ( (enumLiteral_0= '||' ) | (enumLiteral_1= '&&' ) ) )
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10794:1: ( (enumLiteral_0= '||' ) | (enumLiteral_1= '&&' ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10796:28: ( ( (enumLiteral_0= '||' ) | (enumLiteral_1= '&&' ) ) )
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10797:1: ( (enumLiteral_0= '||' ) | (enumLiteral_1= '&&' ) )
             {
-            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10794:1: ( (enumLiteral_0= '||' ) | (enumLiteral_1= '&&' ) )
-            int alt131=2;
-            int LA131_0 = input.LA(1);
+            // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10797:1: ( (enumLiteral_0= '||' ) | (enumLiteral_1= '&&' ) )
+            int alt130=2;
+            int LA130_0 = input.LA(1);
 
-            if ( (LA131_0==226) ) {
-                alt131=1;
+            if ( (LA130_0==226) ) {
+                alt130=1;
             }
-            else if ( (LA131_0==227) ) {
-                alt131=2;
+            else if ( (LA130_0==227) ) {
+                alt130=2;
             }
             else {
                 if (state.backtracking>0) {state.failed=true; return current;}
                 NoViableAltException nvae =
-                    new NoViableAltException("", 131, 0, input);
+                    new NoViableAltException("", 130, 0, input);
 
                 throw nvae;
             }
-            switch (alt131) {
+            switch (alt130) {
                 case 1 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10794:2: (enumLiteral_0= '||' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10797:2: (enumLiteral_0= '||' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10794:2: (enumLiteral_0= '||' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10794:4: enumLiteral_0= '||'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10797:2: (enumLiteral_0= '||' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10797:4: enumLiteral_0= '||'
                     {
-                    enumLiteral_0=(Token)match(input,226,FOLLOW_226_in_ruleBOOL_Operator24578); if (state.failed) return current;
+                    enumLiteral_0=(Token)match(input,226,FOLLOW_226_in_ruleBOOL_Operator24589); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getBOOL_OperatorAccess().getBOOL_OREnumLiteralDeclaration_0().getEnumLiteral().getInstance();
@@ -31710,12 +31772,12 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10800:6: (enumLiteral_1= '&&' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10803:6: (enumLiteral_1= '&&' )
                     {
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10800:6: (enumLiteral_1= '&&' )
-                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10800:8: enumLiteral_1= '&&'
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10803:6: (enumLiteral_1= '&&' )
+                    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:10803:8: enumLiteral_1= '&&'
                     {
-                    enumLiteral_1=(Token)match(input,227,FOLLOW_227_in_ruleBOOL_Operator24595); if (state.failed) return current;
+                    enumLiteral_1=(Token)match(input,227,FOLLOW_227_in_ruleBOOL_Operator24606); if (state.failed) return current;
                     if ( state.backtracking==0 ) {
 
                               current = grammarAccess.getBOOL_OperatorAccess().getBOOL_ANDEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
@@ -31907,17 +31969,17 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
         {
         this_LEFT_BRACKET_2=(Token)match(input,RULE_LEFT_BRACKET,FOLLOW_RULE_LEFT_BRACKET_in_synpred166_InternalFML11214); if (state.failed) return ;
         // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:5066:1: ( (lv_params_3_0= ruleFML_IDENTIFIER ) )*
-        loop139:
+        loop138:
         do {
-            int alt139=2;
-            int LA139_0 = input.LA(1);
+            int alt138=2;
+            int LA138_0 = input.LA(1);
 
-            if ( (LA139_0==RULE_ID||LA139_0==167) ) {
-                alt139=1;
+            if ( (LA138_0==RULE_ID||LA138_0==167) ) {
+                alt138=1;
             }
 
 
-            switch (alt139) {
+            switch (alt138) {
         	case 1 :
         	    // ../org.xtext.example.fml/src-gen/org/xtext/example/mydsl/parser/antlr/internal/InternalFML.g:5067:1: (lv_params_3_0= ruleFML_IDENTIFIER )
         	    {
@@ -31942,7 +32004,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
         	    break;
 
         	default :
-        	    break loop139;
+        	    break loop138;
             }
         } while (true);
 
@@ -32322,18 +32384,18 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
     protected DFA43 dfa43 = new DFA43(this);
     protected DFA107 dfa107 = new DFA107(this);
     static final String DFA6_eotS =
-        "\16\uffff";
+        "\17\uffff";
     static final String DFA6_eofS =
-        "\1\uffff\2\3\4\uffff\4\3\2\uffff\1\3";
+        "\1\uffff\2\3\4\uffff\5\3\2\uffff\1\3";
     static final String DFA6_minS =
-        "\3\4\1\uffff\1\23\1\4\1\uffff\4\4\1\17\1\6\1\4";
+        "\3\4\1\uffff\1\17\1\4\1\uffff\5\4\1\17\1\6\1\4";
     static final String DFA6_maxS =
-        "\1\u00bc\2\u00e3\1\uffff\1\u00a7\1\u00bc\1\uffff\4\u00e3\1\17\1"+
+        "\1\u00bc\2\u00e3\1\uffff\1\u00a7\1\u00bc\1\uffff\5\u00e3\1\17\1"+
         "\6\1\u00e3";
     static final String DFA6_acceptS =
-        "\3\uffff\1\2\2\uffff\1\1\7\uffff";
+        "\3\uffff\1\2\2\uffff\1\1\10\uffff";
     static final String DFA6_specialS =
-        "\16\uffff}>";
+        "\17\uffff}>";
     static final String[] DFA6_transitionS = {
             "\1\3\7\uffff\1\3\1\uffff\3\3\2\uffff\1\1\13\uffff\5\3\1\uffff"+
             "\1\3\3\uffff\1\3\13\uffff\1\3\1\uffff\1\3\2\uffff\36\3\2\uffff"+
@@ -32350,8 +32412,8 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             "\3\1\uffff\61\3\1\uffff\3\3\1\uffff\1\3\1\4\24\3\15\uffff\10"+
             "\3\20\uffff\2\3",
             "",
-            "\1\10\5\uffff\1\12\u008d\uffff\1\11",
-            "\1\3\1\13\6\uffff\1\3\1\uffff\3\3\2\uffff\1\3\13\uffff\5\3"+
+            "\1\13\3\uffff\1\10\5\uffff\1\12\u008d\uffff\1\11",
+            "\1\3\1\14\6\uffff\1\3\1\uffff\3\3\2\uffff\1\3\13\uffff\5\3"+
             "\1\uffff\1\3\3\uffff\1\3\13\uffff\1\3\1\uffff\1\3\2\uffff\37"+
             "\3\1\uffff\1\3\1\uffff\3\3\1\uffff\1\3\10\uffff\2\3\2\uffff"+
             "\3\3\1\uffff\3\3\2\uffff\54\3\1\uffff\3\3\1\uffff\1\3\1\uffff"+
@@ -32377,8 +32439,13 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             "\2\uffff\1\3\1\uffff\3\3\1\uffff\1\3\10\uffff\2\3\2\uffff\3"+
             "\3\1\uffff\61\3\1\uffff\3\3\1\uffff\1\3\1\4\24\3\15\uffff\10"+
             "\3\20\uffff\2\3",
-            "\1\14",
+            "\1\5\1\uffff\7\3\1\uffff\3\3\2\uffff\1\3\12\uffff\1\6\5\3\1"+
+            "\uffff\1\3\1\uffff\3\3\13\uffff\1\3\1\uffff\1\3\2\uffff\36\3"+
+            "\2\uffff\1\3\1\uffff\3\3\1\uffff\1\3\10\uffff\2\3\2\uffff\3"+
+            "\3\1\uffff\61\3\1\uffff\3\3\1\uffff\1\3\1\4\24\3\15\uffff\10"+
+            "\3\20\uffff\2\3",
             "\1\15",
+            "\1\16",
             "\1\3\1\uffff\7\3\1\uffff\3\3\2\uffff\1\3\12\uffff\1\6\5\3\1"+
             "\uffff\1\3\1\uffff\3\3\13\uffff\1\3\1\uffff\1\3\2\uffff\36\3"+
             "\2\uffff\1\3\1\uffff\3\3\1\uffff\1\3\10\uffff\2\3\2\uffff\3"+
@@ -32420,17 +32487,17 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
         }
     }
     static final String DFA43_eotS =
-        "\14\uffff";
+        "\15\uffff";
     static final String DFA43_eofS =
-        "\1\2\13\uffff";
+        "\1\2\14\uffff";
     static final String DFA43_minS =
-        "\2\4\1\uffff\2\4\1\uffff\1\23\1\0\4\4";
+        "\2\4\1\uffff\2\4\1\uffff\1\4\1\17\1\0\4\4";
     static final String DFA43_maxS =
-        "\1\u00e3\1\u00bc\1\uffff\2\u00e3\1\uffff\1\u00a7\1\0\4\u00e3";
+        "\1\u00e3\1\u00bc\1\uffff\2\u00e3\1\uffff\1\u00e3\1\u00a7\1\0\4\u00e3";
     static final String DFA43_acceptS =
-        "\2\uffff\1\2\2\uffff\1\1\6\uffff";
+        "\2\uffff\1\2\2\uffff\1\1\7\uffff";
     static final String DFA43_specialS =
-        "\7\uffff\1\0\4\uffff}>";
+        "\10\uffff\1\0\4\uffff}>";
     static final String[] DFA43_transitionS = {
             "\1\2\1\uffff\12\2\1\1\3\2\13\uffff\5\2\1\uffff\1\2\1\uffff\3"+
             "\2\13\uffff\1\2\1\uffff\1\2\2\uffff\36\2\2\uffff\5\2\1\uffff"+
@@ -32442,39 +32509,44 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
             "\2\1\uffff\3\2\2\uffff\54\2\1\uffff\3\2\1\uffff\1\4\1\uffff"+
             "\24\2",
             "",
-            "\1\2\2\uffff\6\2\1\uffff\3\2\1\7\1\uffff\1\3\5\uffff\1\10\5"+
+            "\1\2\2\uffff\6\2\1\uffff\3\2\1\10\1\uffff\1\3\5\uffff\1\6\5"+
             "\uffff\5\2\1\uffff\1\2\3\uffff\1\2\13\uffff\1\2\1\uffff\1\2"+
             "\2\uffff\36\2\2\uffff\1\2\1\uffff\3\2\1\uffff\1\2\10\uffff\2"+
             "\2\2\uffff\3\2\1\uffff\3\2\2\uffff\54\2\1\uffff\3\2\1\uffff"+
-            "\1\4\1\6\24\2\15\uffff\10\2\20\uffff\2\2",
-            "\1\2\2\uffff\6\2\1\uffff\3\2\1\7\1\uffff\1\3\13\uffff\5\2\1"+
-            "\uffff\1\2\3\uffff\1\2\13\uffff\1\2\1\uffff\1\2\2\uffff\36\2"+
-            "\2\uffff\1\2\1\uffff\3\2\1\uffff\1\2\10\uffff\2\2\2\uffff\3"+
-            "\2\1\uffff\3\2\2\uffff\54\2\1\uffff\3\2\1\uffff\1\4\1\6\24\2"+
-            "\15\uffff\10\2\20\uffff\2\2",
+            "\1\4\1\7\24\2\15\uffff\10\2\20\uffff\2\2",
+            "\1\2\2\uffff\6\2\1\uffff\3\2\1\10\1\uffff\1\3\13\uffff\5\2"+
+            "\1\uffff\1\2\3\uffff\1\2\13\uffff\1\2\1\uffff\1\2\2\uffff\36"+
+            "\2\2\uffff\1\2\1\uffff\3\2\1\uffff\1\2\10\uffff\2\2\2\uffff"+
+            "\3\2\1\uffff\3\2\2\uffff\54\2\1\uffff\3\2\1\uffff\1\4\1\7\24"+
+            "\2\15\uffff\10\2\20\uffff\2\2",
             "",
-            "\1\11\5\uffff\1\13\u008d\uffff\1\12",
-            "\1\uffff",
-            "\1\2\2\uffff\6\2\1\uffff\3\2\1\7\1\uffff\1\3\13\uffff\5\2\1"+
-            "\uffff\1\2\3\uffff\1\2\13\uffff\1\2\1\uffff\1\2\2\uffff\36\2"+
-            "\2\uffff\1\2\1\uffff\3\2\1\uffff\1\2\10\uffff\2\2\2\uffff\3"+
-            "\2\1\uffff\3\2\2\uffff\54\2\1\uffff\3\2\1\uffff\1\4\1\uffff"+
+            "\1\2\2\uffff\6\2\1\uffff\3\2\1\10\1\uffff\1\3\13\uffff\5\2"+
+            "\1\uffff\1\2\3\uffff\1\2\13\uffff\1\2\1\uffff\1\2\2\uffff\36"+
+            "\2\2\uffff\1\2\1\uffff\3\2\1\uffff\1\2\10\uffff\2\2\2\uffff"+
+            "\3\2\1\uffff\3\2\2\uffff\54\2\1\uffff\3\2\1\uffff\1\4\1\uffff"+
             "\24\2\15\uffff\10\2\20\uffff\2\2",
-            "\1\2\2\uffff\6\2\1\uffff\3\2\1\7\1\uffff\1\3\13\uffff\5\2\1"+
-            "\uffff\1\2\3\uffff\1\2\13\uffff\1\2\1\uffff\1\2\2\uffff\36\2"+
-            "\2\uffff\1\2\1\uffff\3\2\1\uffff\1\2\10\uffff\2\2\2\uffff\3"+
-            "\2\1\uffff\3\2\2\uffff\54\2\1\uffff\3\2\1\uffff\1\4\1\6\24\2"+
-            "\15\uffff\10\2\20\uffff\2\2",
-            "\1\2\2\uffff\6\2\1\uffff\3\2\1\7\1\uffff\1\3\13\uffff\5\2\1"+
-            "\uffff\1\2\3\uffff\1\2\13\uffff\1\2\1\uffff\1\2\2\uffff\36\2"+
-            "\2\uffff\1\2\1\uffff\3\2\1\uffff\1\2\10\uffff\2\2\2\uffff\3"+
-            "\2\1\uffff\3\2\2\uffff\54\2\1\uffff\3\2\1\uffff\1\4\1\6\24\2"+
-            "\15\uffff\10\2\20\uffff\2\2",
-            "\1\2\2\uffff\6\2\1\uffff\3\2\1\7\1\uffff\1\3\13\uffff\5\2\1"+
-            "\uffff\1\2\3\uffff\1\2\13\uffff\1\2\1\uffff\1\2\2\uffff\36\2"+
-            "\2\uffff\1\2\1\uffff\3\2\1\uffff\1\2\10\uffff\2\2\2\uffff\3"+
-            "\2\1\uffff\3\2\2\uffff\54\2\1\uffff\3\2\1\uffff\1\4\1\6\24\2"+
-            "\15\uffff\10\2\20\uffff\2\2"
+            "\1\14\3\uffff\1\11\5\uffff\1\13\u008d\uffff\1\12",
+            "\1\uffff",
+            "\1\2\2\uffff\6\2\1\uffff\3\2\1\10\1\uffff\1\3\13\uffff\5\2"+
+            "\1\uffff\1\2\3\uffff\1\2\13\uffff\1\2\1\uffff\1\2\2\uffff\36"+
+            "\2\2\uffff\1\2\1\uffff\3\2\1\uffff\1\2\10\uffff\2\2\2\uffff"+
+            "\3\2\1\uffff\3\2\2\uffff\54\2\1\uffff\3\2\1\uffff\1\4\1\7\24"+
+            "\2\15\uffff\10\2\20\uffff\2\2",
+            "\1\2\2\uffff\6\2\1\uffff\3\2\1\10\1\uffff\1\3\13\uffff\5\2"+
+            "\1\uffff\1\2\3\uffff\1\2\13\uffff\1\2\1\uffff\1\2\2\uffff\36"+
+            "\2\2\uffff\1\2\1\uffff\3\2\1\uffff\1\2\10\uffff\2\2\2\uffff"+
+            "\3\2\1\uffff\3\2\2\uffff\54\2\1\uffff\3\2\1\uffff\1\4\1\7\24"+
+            "\2\15\uffff\10\2\20\uffff\2\2",
+            "\1\2\2\uffff\6\2\1\uffff\3\2\1\10\1\uffff\1\3\13\uffff\5\2"+
+            "\1\uffff\1\2\3\uffff\1\2\13\uffff\1\2\1\uffff\1\2\2\uffff\36"+
+            "\2\2\uffff\1\2\1\uffff\3\2\1\uffff\1\2\10\uffff\2\2\2\uffff"+
+            "\3\2\1\uffff\3\2\2\uffff\54\2\1\uffff\3\2\1\uffff\1\4\1\7\24"+
+            "\2\15\uffff\10\2\20\uffff\2\2",
+            "\1\2\2\uffff\6\2\1\uffff\3\2\1\10\1\uffff\1\3\13\uffff\5\2"+
+            "\1\uffff\1\2\3\uffff\1\2\13\uffff\1\2\1\uffff\1\2\2\uffff\36"+
+            "\2\2\uffff\1\2\1\uffff\3\2\1\uffff\1\2\10\uffff\2\2\2\uffff"+
+            "\3\2\1\uffff\3\2\2\uffff\54\2\1\uffff\3\2\1\uffff\1\4\1\7\24"+
+            "\2\15\uffff\10\2\20\uffff\2\2"
     };
 
     static final short[] DFA43_eot = DFA.unpackEncodedString(DFA43_eotS);
@@ -32514,10 +32586,10 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA43_7 = input.LA(1);
+                        int LA43_8 = input.LA(1);
 
                          
-                        int index43_7 = input.index();
+                        int index43_8 = input.index();
                         input.rewind();
                         s = -1;
                         if ( (synpred166_InternalFML()) ) {s = 5;}
@@ -32525,7 +32597,7 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
                         else if ( (true) ) {s = 2;}
 
                          
-                        input.seek(index43_7);
+                        input.seek(index43_8);
                         if ( s>=0 ) return s;
                         break;
             }
@@ -32537,35 +32609,32 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
         }
     }
     static final String DFA107_eotS =
-        "\21\uffff";
+        "\17\uffff";
     static final String DFA107_eofS =
-        "\14\uffff\1\20\4\uffff";
+        "\13\uffff\1\16\3\uffff";
     static final String DFA107_minS =
-        "\1\4\2\uffff\1\23\2\24\2\23\1\24\2\15\1\23\1\4\1\uffff\1\15\2\uffff";
+        "\1\4\2\uffff\1\17\3\24\1\17\3\15\1\4\3\uffff";
     static final String DFA107_maxS =
-        "\1\u00a7\2\uffff\1\u00a7\2\u00a8\1\23\1\u00a7\3\u00a8\1\23\1\u00a7"+
-        "\1\uffff\1\u00a8\2\uffff";
+        "\1\u00a7\2\uffff\1\u00a7\3\24\1\u00a7\3\u00a6\1\u00a7\3\uffff";
     static final String DFA107_acceptS =
-        "\1\uffff\1\1\1\2\12\uffff\1\5\1\uffff\1\4\1\3";
+        "\1\uffff\1\1\1\2\11\uffff\1\5\1\4\1\3";
     static final String DFA107_specialS =
-        "\21\uffff}>";
+        "\17\uffff}>";
     static final String[] DFA107_transitionS = {
-            "\1\2\7\uffff\1\3\6\uffff\1\1\u0093\uffff\1\1",
+            "\1\2\7\uffff\1\3\2\uffff\1\1\3\uffff\1\1\u0093\uffff\1\1",
             "",
             "",
-            "\1\4\u0093\uffff\1\5",
-            "\1\7\u0093\uffff\1\6",
-            "\1\7\u0093\uffff\1\6",
-            "\1\10",
-            "\1\11\u0093\uffff\1\12",
-            "\1\7\u0093\uffff\1\6",
-            "\1\14\6\uffff\1\7\u0091\uffff\1\15\1\uffff\1\13",
-            "\1\14\6\uffff\1\7\u0091\uffff\1\15\1\uffff\1\13",
-            "\1\16",
-            "\1\20\2\uffff\1\17\4\uffff\1\20\6\uffff\1\20\20\uffff\1\20"+
-            "\u0082\uffff\1\20",
+            "\1\6\3\uffff\1\4\u0093\uffff\1\5",
+            "\1\7",
+            "\1\7",
+            "\1\7",
+            "\1\12\3\uffff\1\10\u0093\uffff\1\11",
+            "\1\13\6\uffff\1\7\u0091\uffff\1\14",
+            "\1\13\6\uffff\1\7\u0091\uffff\1\14",
+            "\1\13\6\uffff\1\7\u0091\uffff\1\14",
+            "\1\16\2\uffff\1\15\4\uffff\1\16\2\uffff\1\16\3\uffff\1\16\20"+
+            "\uffff\1\16\u0082\uffff\1\16",
             "",
-            "\1\14\6\uffff\1\7\u0091\uffff\1\15\1\uffff\1\13",
             "",
             ""
     };
@@ -32722,15 +32791,15 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleAtomicConstraintExpr_in_entryRuleAtomicConstraintExpr3280 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleAtomicConstraintExpr3290 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_34_in_ruleAtomicConstraintExpr3327 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_RULE_LEFT_PAREN_in_ruleAtomicConstraintExpr3338 = new BitSet(new long[]{0x0000000301081000L});
+    public static final BitSet FOLLOW_RULE_LEFT_PAREN_in_ruleAtomicConstraintExpr3338 = new BitSet(new long[]{0x0000000301089000L,0x0000000000000000L,0x0000008000000000L});
     public static final BitSet FOLLOW_ruleCNF_in_ruleAtomicConstraintExpr3358 = new BitSet(new long[]{0x0000000000002000L});
     public static final BitSet FOLLOW_RULE_RIGHT_PAREN_in_ruleAtomicConstraintExpr3369 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleConstraintExpr_in_entryRuleConstraintExpr3404 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleConstraintExpr3414 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_35_in_ruleConstraintExpr3451 = new BitSet(new long[]{0x0000000000081000L,0x8002E60160010000L,0x000000B000830000L});
-    public static final BitSet FOLLOW_RULE_LEFT_PAREN_in_ruleConstraintExpr3464 = new BitSet(new long[]{0x0000000301081000L});
+    public static final BitSet FOLLOW_RULE_LEFT_PAREN_in_ruleConstraintExpr3464 = new BitSet(new long[]{0x0000000301089000L,0x0000000000000000L,0x0000008000000000L});
     public static final BitSet FOLLOW_ruleCNF_in_ruleConstraintExpr3485 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_ruleConstraintExpr3497 = new BitSet(new long[]{0x0000000301083000L});
+    public static final BitSet FOLLOW_36_in_ruleConstraintExpr3497 = new BitSet(new long[]{0x000000030108B000L,0x0000000000000000L,0x0000008000000000L});
     public static final BitSet FOLLOW_RULE_RIGHT_PAREN_in_ruleConstraintExpr3510 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleFMCommand_in_ruleConstraintExpr3537 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleFeatureVariabilityOperator_in_entryRuleFeatureVariabilityOperator3574 = new BitSet(new long[]{0x0000000000000000L});
@@ -33062,8 +33131,8 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleHProduction_in_entryRuleHProduction12472 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleHProduction12482 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleHProduction12524 = new BitSet(new long[]{0x0000000000000000L,0x0000000002000000L});
-    public static final BitSet FOLLOW_89_in_ruleHProduction12541 = new BitSet(new long[]{0x0000000000080000L,0x0000000000000000L,0x0000008000000000L});
-    public static final BitSet FOLLOW_ruleFT_ID_in_ruleHProduction12562 = new BitSet(new long[]{0x0000000000080002L,0x0000000000000000L,0x0000008000000000L});
+    public static final BitSet FOLLOW_89_in_ruleHProduction12541 = new BitSet(new long[]{0x0000000000088000L,0x0000000000000000L,0x0000008000000000L});
+    public static final BitSet FOLLOW_ruleFT_ID_in_ruleHProduction12562 = new BitSet(new long[]{0x0000000000088002L,0x0000000000000000L,0x0000008000000000L});
     public static final BitSet FOLLOW_ruleGroupsSpecification_in_entryRuleGroupsSpecification12599 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleGroupsSpecification12609 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_100_in_ruleGroupsSpecification12646 = new BitSet(new long[]{0x0000000000000000L,0x000000E000000000L});
@@ -33079,24 +33148,24 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_101_in_ruleXorGroupSpec12920 = new BitSet(new long[]{0x0000000000001000L});
     public static final BitSet FOLLOW_RULE_LEFT_PAREN_in_ruleXorGroupSpec12931 = new BitSet(new long[]{0x0000000000080000L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleXorGroupSpec12947 = new BitSet(new long[]{0x0000000000000000L,0x0000000002000000L});
-    public static final BitSet FOLLOW_89_in_ruleXorGroupSpec12964 = new BitSet(new long[]{0x0000000000080000L,0x0000000000000000L,0x0000008000000000L});
-    public static final BitSet FOLLOW_ruleFT_ID_in_ruleXorGroupSpec12985 = new BitSet(new long[]{0x0000000000082000L,0x0000000000000000L,0x0000008000000000L});
+    public static final BitSet FOLLOW_89_in_ruleXorGroupSpec12964 = new BitSet(new long[]{0x0000000000088000L,0x0000000000000000L,0x0000008000000000L});
+    public static final BitSet FOLLOW_ruleFT_ID_in_ruleXorGroupSpec12985 = new BitSet(new long[]{0x000000000008A000L,0x0000000000000000L,0x0000008000000000L});
     public static final BitSet FOLLOW_RULE_RIGHT_PAREN_in_ruleXorGroupSpec12997 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleMtxGroupSpec_in_entryRuleMtxGroupSpec13032 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleMtxGroupSpec13042 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_102_in_ruleMtxGroupSpec13079 = new BitSet(new long[]{0x0000000000001000L});
     public static final BitSet FOLLOW_RULE_LEFT_PAREN_in_ruleMtxGroupSpec13090 = new BitSet(new long[]{0x0000000000080000L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleMtxGroupSpec13106 = new BitSet(new long[]{0x0000000000000000L,0x0000000002000000L});
-    public static final BitSet FOLLOW_89_in_ruleMtxGroupSpec13123 = new BitSet(new long[]{0x0000000000080000L,0x0000000000000000L,0x0000008000000000L});
-    public static final BitSet FOLLOW_ruleFT_ID_in_ruleMtxGroupSpec13144 = new BitSet(new long[]{0x0000000000082000L,0x0000000000000000L,0x0000008000000000L});
+    public static final BitSet FOLLOW_89_in_ruleMtxGroupSpec13123 = new BitSet(new long[]{0x0000000000088000L,0x0000000000000000L,0x0000008000000000L});
+    public static final BitSet FOLLOW_ruleFT_ID_in_ruleMtxGroupSpec13144 = new BitSet(new long[]{0x000000000008A000L,0x0000000000000000L,0x0000008000000000L});
     public static final BitSet FOLLOW_RULE_RIGHT_PAREN_in_ruleMtxGroupSpec13156 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleOrGroupSpec_in_entryRuleOrGroupSpec13191 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleOrGroupSpec13201 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_103_in_ruleOrGroupSpec13238 = new BitSet(new long[]{0x0000000000001000L});
     public static final BitSet FOLLOW_RULE_LEFT_PAREN_in_ruleOrGroupSpec13249 = new BitSet(new long[]{0x0000000000080000L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleOrGroupSpec13265 = new BitSet(new long[]{0x0000000000000000L,0x0000000002000000L});
-    public static final BitSet FOLLOW_89_in_ruleOrGroupSpec13282 = new BitSet(new long[]{0x0000000000080000L,0x0000000000000000L,0x0000008000000000L});
-    public static final BitSet FOLLOW_ruleFT_ID_in_ruleOrGroupSpec13303 = new BitSet(new long[]{0x0000000000082000L,0x0000000000000000L,0x0000008000000000L});
+    public static final BitSet FOLLOW_89_in_ruleOrGroupSpec13282 = new BitSet(new long[]{0x0000000000088000L,0x0000000000000000L,0x0000008000000000L});
+    public static final BitSet FOLLOW_ruleFT_ID_in_ruleOrGroupSpec13303 = new BitSet(new long[]{0x000000000008A000L,0x0000000000000000L,0x0000008000000000L});
     public static final BitSet FOLLOW_RULE_RIGHT_PAREN_in_ruleOrGroupSpec13315 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleConstraintsSpecification_in_entryRuleConstraintsSpecification13350 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleConstraintsSpecification13360 = new BitSet(new long[]{0x0000000000000002L});
@@ -33375,22 +33444,22 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleOr_expr_in_entryRuleOr_expr20530 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleOr_expr20540 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleAnd_expr_in_ruleOr_expr20590 = new BitSet(new long[]{0x0000000000100002L});
-    public static final BitSet FOLLOW_RULE_B_OR_in_ruleOr_expr20613 = new BitSet(new long[]{0x0000000301081000L});
+    public static final BitSet FOLLOW_RULE_B_OR_in_ruleOr_expr20613 = new BitSet(new long[]{0x0000000301089000L,0x0000000000000000L,0x0000008000000000L});
     public static final BitSet FOLLOW_ruleAnd_expr_in_ruleOr_expr20633 = new BitSet(new long[]{0x0000000000100002L});
     public static final BitSet FOLLOW_ruleAnd_expr_in_entryRuleAnd_expr20671 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleAnd_expr20681 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleImpl_expr_in_ruleAnd_expr20731 = new BitSet(new long[]{0x0000000000200002L});
-    public static final BitSet FOLLOW_RULE_B_AND_in_ruleAnd_expr20754 = new BitSet(new long[]{0x0000000301081000L});
+    public static final BitSet FOLLOW_RULE_B_AND_in_ruleAnd_expr20754 = new BitSet(new long[]{0x0000000301089000L,0x0000000000000000L,0x0000008000000000L});
     public static final BitSet FOLLOW_ruleImpl_expr_in_ruleAnd_expr20774 = new BitSet(new long[]{0x0000000000200002L});
     public static final BitSet FOLLOW_ruleImpl_expr_in_entryRuleImpl_expr20812 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleImpl_expr20822 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleBiimpl_expr_in_ruleImpl_expr20872 = new BitSet(new long[]{0x0000000000400002L});
-    public static final BitSet FOLLOW_RULE_B_IMPLY_in_ruleImpl_expr20895 = new BitSet(new long[]{0x0000000301081000L});
+    public static final BitSet FOLLOW_RULE_B_IMPLY_in_ruleImpl_expr20895 = new BitSet(new long[]{0x0000000301089000L,0x0000000000000000L,0x0000008000000000L});
     public static final BitSet FOLLOW_ruleBiimpl_expr_in_ruleImpl_expr20915 = new BitSet(new long[]{0x0000000000400002L});
     public static final BitSet FOLLOW_ruleBiimpl_expr_in_entryRuleBiimpl_expr20953 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleBiimpl_expr20963 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleUnary_expr_in_ruleBiimpl_expr21013 = new BitSet(new long[]{0x0000000000800002L});
-    public static final BitSet FOLLOW_RULE_B_BIMPLY_in_ruleBiimpl_expr21036 = new BitSet(new long[]{0x0000000301081000L});
+    public static final BitSet FOLLOW_RULE_B_BIMPLY_in_ruleBiimpl_expr21036 = new BitSet(new long[]{0x0000000301089000L,0x0000000000000000L,0x0000008000000000L});
     public static final BitSet FOLLOW_ruleUnary_expr_in_ruleBiimpl_expr21056 = new BitSet(new long[]{0x0000000000800002L});
     public static final BitSet FOLLOW_ruleUnary_expr_in_entryRuleUnary_expr21094 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleUnary_expr21104 = new BitSet(new long[]{0x0000000000000002L});
@@ -33398,146 +33467,146 @@ public class InternalFMLParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_rulePrimary_expr_in_ruleUnary_expr21184 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleNeg_expr_in_entryRuleNeg_expr21219 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleNeg_expr21229 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_B_NOT_in_ruleNeg_expr21265 = new BitSet(new long[]{0x0000000301081000L});
+    public static final BitSet FOLLOW_RULE_B_NOT_in_ruleNeg_expr21265 = new BitSet(new long[]{0x0000000301089000L,0x0000000000000000L,0x0000008000000000L});
     public static final BitSet FOLLOW_rulePrimary_expr_in_ruleNeg_expr21285 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulePrimary_expr_in_entryRulePrimary_expr21321 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulePrimary_expr21331 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulePrimary_expr21375 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rulePrimary_expr21396 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_33_in_rulePrimary_expr21425 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_LEFT_PAREN_in_rulePrimary_expr21459 = new BitSet(new long[]{0x0000000301081000L});
-    public static final BitSet FOLLOW_ruleOr_expr_in_rulePrimary_expr21483 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_RULE_RIGHT_PAREN_in_rulePrimary_expr21493 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFeatureModel_in_entryRuleFeatureModel21529 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFeatureModel21539 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_164_in_ruleFeatureModel21577 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_165_in_ruleFeatureModel21595 = new BitSet(new long[]{0x0000000000001000L});
-    public static final BitSet FOLLOW_RULE_LEFT_PAREN_in_ruleFeatureModel21607 = new BitSet(new long[]{0x0000000000088000L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleFeatureModel21626 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_ruleFeatureModel21643 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_ruleProduction_in_ruleFeatureModel21673 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_ruleFeatureModel21685 = new BitSet(new long[]{0x0000000301083000L});
-    public static final BitSet FOLLOW_ruleCNF_in_ruleFeatureModel21709 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_ruleFeatureModel21721 = new BitSet(new long[]{0x0000000301083000L});
-    public static final BitSet FOLLOW_ruleStringExpr_in_ruleFeatureModel21752 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_RULE_RIGHT_PAREN_in_ruleFeatureModel21764 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleProduction_in_entryRuleProduction21799 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleProduction21809 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleProduction21851 = new BitSet(new long[]{0x0000000000000000L,0x0000000002000000L});
-    public static final BitSet FOLLOW_89_in_ruleProduction21868 = new BitSet(new long[]{0x0000000000081010L,0x0000000000000000L,0x0000008000000000L});
-    public static final BitSet FOLLOW_ruleChild_in_ruleProduction21889 = new BitSet(new long[]{0x0000000000081012L,0x0000000000000000L,0x0000008000000000L});
-    public static final BitSet FOLLOW_ruleChild_in_entryRuleChild21926 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleChild21936 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMandatory_in_ruleChild21986 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOptional_in_ruleChild22016 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXorgroup_in_ruleChild22046 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOrgroup_in_ruleChild22076 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMutexgroup_in_ruleChild22106 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMandatory_in_entryRuleMandatory22141 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMandatory22151 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFT_ID_in_ruleMandatory22196 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOptional_in_entryRuleOptional22231 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleOptional22241 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_LEFT_HOOK_in_ruleOptional22277 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleOptional22293 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_RIGHT_HOOK_in_ruleOptional22309 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleXorgroup_in_entryRuleXorgroup22344 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleXorgroup22354 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_LEFT_PAREN_in_ruleXorgroup22390 = new BitSet(new long[]{0x0000000000080000L,0x0000000000000000L,0x0000008000000000L});
-    public static final BitSet FOLLOW_ruleFT_ID_in_ruleXorgroup22410 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_RULE_B_OR_in_ruleXorgroup22422 = new BitSet(new long[]{0x0000000000080000L,0x0000000000000000L,0x0000008000000000L});
-    public static final BitSet FOLLOW_ruleFT_ID_in_ruleXorgroup22442 = new BitSet(new long[]{0x0000000000102000L});
-    public static final BitSet FOLLOW_RULE_RIGHT_PAREN_in_ruleXorgroup22455 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleOrgroup_in_entryRuleOrgroup22490 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleOrgroup22500 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_LEFT_PAREN_in_ruleOrgroup22536 = new BitSet(new long[]{0x0000000000080000L,0x0000000000000000L,0x0000008000000000L});
-    public static final BitSet FOLLOW_ruleFT_ID_in_ruleOrgroup22556 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_RULE_B_OR_in_ruleOrgroup22568 = new BitSet(new long[]{0x0000000000080000L,0x0000000000000000L,0x0000008000000000L});
-    public static final BitSet FOLLOW_ruleFT_ID_in_ruleOrgroup22588 = new BitSet(new long[]{0x0000000000102000L});
-    public static final BitSet FOLLOW_RULE_RIGHT_PAREN_in_ruleOrgroup22601 = new BitSet(new long[]{0x0000000000000080L});
-    public static final BitSet FOLLOW_RULE_PLUS_in_ruleOrgroup22611 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleMutexgroup_in_entryRuleMutexgroup22646 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleMutexgroup22656 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_LEFT_PAREN_in_ruleMutexgroup22692 = new BitSet(new long[]{0x0000000000080000L,0x0000000000000000L,0x0000008000000000L});
-    public static final BitSet FOLLOW_ruleFT_ID_in_ruleMutexgroup22712 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_RULE_B_OR_in_ruleMutexgroup22724 = new BitSet(new long[]{0x0000000000080000L,0x0000000000000000L,0x0000008000000000L});
-    public static final BitSet FOLLOW_ruleFT_ID_in_ruleMutexgroup22744 = new BitSet(new long[]{0x0000000000100000L,0x0000000000000000L,0x0000004000000000L});
-    public static final BitSet FOLLOW_166_in_ruleMutexgroup22758 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleFT_ID_in_entryRuleFT_ID22795 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFT_ID22806 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleFT_ID22847 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000010000000000L});
-    public static final BitSet FOLLOW_167_in_ruleFT_ID22871 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000010000000000L});
-    public static final BitSet FOLLOW_168_in_ruleFT_ID22886 = new BitSet(new long[]{0x0000000000080000L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleFT_ID22901 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000010000000000L});
-    public static final BitSet FOLLOW_ruleFML_IDENTIFIER_in_entryRuleFML_IDENTIFIER22949 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleFML_IDENTIFIER22960 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleFML_IDENTIFIER23002 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000010000000000L});
-    public static final BitSet FOLLOW_167_in_ruleFML_IDENTIFIER23026 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000010000000000L});
-    public static final BitSet FOLLOW_168_in_ruleFML_IDENTIFIER23041 = new BitSet(new long[]{0x0000000002080000L,0x0000000000000000L,0x0000008000000000L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleFML_IDENTIFIER23057 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000010000000000L});
-    public static final BitSet FOLLOW_167_in_ruleFML_IDENTIFIER23081 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000010000000000L});
-    public static final BitSet FOLLOW_RULE_STAR_in_ruleFML_IDENTIFIER23102 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000010000000000L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleFML_IDENTIFIER23133 = new BitSet(new long[]{0x0000000002000000L});
-    public static final BitSet FOLLOW_RULE_STAR_in_ruleFML_IDENTIFIER23153 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_169_in_ruleFeatureEdgeKind23215 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_170_in_ruleFeatureEdgeKind23232 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_171_in_ruleFeatureEdgeKind23249 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_172_in_ruleFeatureEdgeKind23266 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_173_in_ruleFeatureEdgeKind23283 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_174_in_ruleKindOfGet23328 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_175_in_ruleKindOfGet23345 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_176_in_ruleKindOfGet23362 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_177_in_ruleKindOfGet23379 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_178_in_ruleKindOfGet23396 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_179_in_ruleKindOfGet23413 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_180_in_ruleKindOfCompute23458 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_181_in_ruleKindOfCompute23475 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_182_in_ruleKindOfCompute23492 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_183_in_ruleKindOfGetGroups23537 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_184_in_ruleKindOfGetGroups23554 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_185_in_ruleKindOfGetGroups23571 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_186_in_ruleKindOfComputeGroups23616 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_187_in_ruleKindOfComputeGroups23633 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_188_in_ruleKindOfComputeGroups23650 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_189_in_ruleBDDBackend23695 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_190_in_ruleBDDBackend23712 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_191_in_ruleBDDBackend23729 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_192_in_ruleMergeMode23774 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_193_in_ruleMergeMode23791 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_194_in_ruleMergeMode23808 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_195_in_ruleMergeMode23825 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_196_in_ruleMergeMode23842 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_197_in_ruleHierarchyStrategy23887 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_198_in_ruleHierarchyStrategy23904 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_199_in_ruleHierarchyStrategy23921 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_200_in_ruleSliceMode23966 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_201_in_ruleSliceMode23983 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_202_in_ruleComparisonOperator24028 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_203_in_ruleComparisonOperator24045 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_204_in_ruleComparisonOperator24062 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_205_in_ruleComparisonOperator24079 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_206_in_ruleComparisonOperator24096 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_207_in_ruleComparisonOperator24113 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_208_in_ruleSetOperator24158 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_209_in_ruleSetOperator24175 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_210_in_ruleAutoConfMode24222 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_211_in_ruleAutoConfMode24239 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_212_in_ruleAutoConfMode24256 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_213_in_ruleOPT_LISTING24301 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_214_in_ruleOPT_LISTING24318 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_215_in_ruleOPT_LISTING24335 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_216_in_ruleFMFormat24380 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_217_in_ruleFMFormat24397 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_218_in_ruleFMFormat24414 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_219_in_ruleFMFormat24431 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_220_in_ruleFMFormat24448 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_221_in_ruleFMFormat24465 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_222_in_ruleFMFormat24482 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_223_in_ruleFMFormat24499 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_224_in_ruleFMFormat24516 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_225_in_ruleFMFormat24533 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_226_in_ruleBOOL_Operator24578 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_227_in_ruleBOOL_Operator24595 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFT_ID_in_rulePrimary_expr21379 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_32_in_rulePrimary_expr21395 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rulePrimary_expr21424 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_LEFT_PAREN_in_rulePrimary_expr21458 = new BitSet(new long[]{0x0000000301089000L,0x0000000000000000L,0x0000008000000000L});
+    public static final BitSet FOLLOW_ruleOr_expr_in_rulePrimary_expr21482 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_RULE_RIGHT_PAREN_in_rulePrimary_expr21492 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFeatureModel_in_entryRuleFeatureModel21528 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFeatureModel21538 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_164_in_ruleFeatureModel21576 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_165_in_ruleFeatureModel21594 = new BitSet(new long[]{0x0000000000001000L});
+    public static final BitSet FOLLOW_RULE_LEFT_PAREN_in_ruleFeatureModel21606 = new BitSet(new long[]{0x0000000000088000L,0x0000000000000000L,0x0000008000000000L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleFeatureModel21625 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_ruleFeatureModel21642 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_ruleProduction_in_ruleFeatureModel21672 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_ruleFeatureModel21684 = new BitSet(new long[]{0x000000030108B000L,0x0000000000000000L,0x0000008000000000L});
+    public static final BitSet FOLLOW_ruleCNF_in_ruleFeatureModel21708 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_ruleFeatureModel21720 = new BitSet(new long[]{0x000000030108B000L,0x0000000000000000L,0x0000008000000000L});
+    public static final BitSet FOLLOW_ruleStringExpr_in_ruleFeatureModel21751 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_RULE_RIGHT_PAREN_in_ruleFeatureModel21763 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleProduction_in_entryRuleProduction21798 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleProduction21808 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFT_ID_in_ruleProduction21854 = new BitSet(new long[]{0x0000000000000000L,0x0000000002000000L});
+    public static final BitSet FOLLOW_89_in_ruleProduction21866 = new BitSet(new long[]{0x0000000000089010L,0x0000000000000000L,0x0000008000000000L});
+    public static final BitSet FOLLOW_ruleChild_in_ruleProduction21887 = new BitSet(new long[]{0x0000000000089012L,0x0000000000000000L,0x0000008000000000L});
+    public static final BitSet FOLLOW_ruleChild_in_entryRuleChild21924 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleChild21934 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMandatory_in_ruleChild21984 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOptional_in_ruleChild22014 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXorgroup_in_ruleChild22044 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOrgroup_in_ruleChild22074 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMutexgroup_in_ruleChild22104 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMandatory_in_entryRuleMandatory22139 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMandatory22149 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFT_ID_in_ruleMandatory22194 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOptional_in_entryRuleOptional22229 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleOptional22239 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_LEFT_HOOK_in_ruleOptional22275 = new BitSet(new long[]{0x0000000000088000L,0x0000000000000000L,0x0000008000000000L});
+    public static final BitSet FOLLOW_ruleFT_ID_in_ruleOptional22295 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_RIGHT_HOOK_in_ruleOptional22306 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleXorgroup_in_entryRuleXorgroup22341 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleXorgroup22351 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_LEFT_PAREN_in_ruleXorgroup22387 = new BitSet(new long[]{0x0000000000088000L,0x0000000000000000L,0x0000008000000000L});
+    public static final BitSet FOLLOW_ruleFT_ID_in_ruleXorgroup22407 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_RULE_B_OR_in_ruleXorgroup22419 = new BitSet(new long[]{0x0000000000088000L,0x0000000000000000L,0x0000008000000000L});
+    public static final BitSet FOLLOW_ruleFT_ID_in_ruleXorgroup22439 = new BitSet(new long[]{0x0000000000102000L});
+    public static final BitSet FOLLOW_RULE_RIGHT_PAREN_in_ruleXorgroup22452 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleOrgroup_in_entryRuleOrgroup22487 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleOrgroup22497 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_LEFT_PAREN_in_ruleOrgroup22533 = new BitSet(new long[]{0x0000000000088000L,0x0000000000000000L,0x0000008000000000L});
+    public static final BitSet FOLLOW_ruleFT_ID_in_ruleOrgroup22553 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_RULE_B_OR_in_ruleOrgroup22565 = new BitSet(new long[]{0x0000000000088000L,0x0000000000000000L,0x0000008000000000L});
+    public static final BitSet FOLLOW_ruleFT_ID_in_ruleOrgroup22585 = new BitSet(new long[]{0x0000000000102000L});
+    public static final BitSet FOLLOW_RULE_RIGHT_PAREN_in_ruleOrgroup22598 = new BitSet(new long[]{0x0000000000000080L});
+    public static final BitSet FOLLOW_RULE_PLUS_in_ruleOrgroup22608 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleMutexgroup_in_entryRuleMutexgroup22643 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleMutexgroup22653 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_LEFT_PAREN_in_ruleMutexgroup22689 = new BitSet(new long[]{0x0000000000088000L,0x0000000000000000L,0x0000008000000000L});
+    public static final BitSet FOLLOW_ruleFT_ID_in_ruleMutexgroup22709 = new BitSet(new long[]{0x0000000000100000L});
+    public static final BitSet FOLLOW_RULE_B_OR_in_ruleMutexgroup22721 = new BitSet(new long[]{0x0000000000088000L,0x0000000000000000L,0x0000008000000000L});
+    public static final BitSet FOLLOW_ruleFT_ID_in_ruleMutexgroup22741 = new BitSet(new long[]{0x0000000000100000L,0x0000000000000000L,0x0000004000000000L});
+    public static final BitSet FOLLOW_166_in_ruleMutexgroup22755 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFT_ID_in_entryRuleFT_ID22792 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFT_ID22803 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleFT_ID22843 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_167_in_ruleFT_ID22867 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleFT_ID22888 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleFML_IDENTIFIER_in_entryRuleFML_IDENTIFIER22934 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleFML_IDENTIFIER22945 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleFML_IDENTIFIER22987 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000010000000000L});
+    public static final BitSet FOLLOW_167_in_ruleFML_IDENTIFIER23011 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000010000000000L});
+    public static final BitSet FOLLOW_168_in_ruleFML_IDENTIFIER23026 = new BitSet(new long[]{0x0000000002088000L,0x0000000000000000L,0x0000008000000000L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleFML_IDENTIFIER23042 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000010000000000L});
+    public static final BitSet FOLLOW_167_in_ruleFML_IDENTIFIER23066 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000010000000000L});
+    public static final BitSet FOLLOW_RULE_STAR_in_ruleFML_IDENTIFIER23087 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000010000000000L});
+    public static final BitSet FOLLOW_RULE_STRING_in_ruleFML_IDENTIFIER23113 = new BitSet(new long[]{0x0000000000000002L,0x0000000000000000L,0x0000010000000000L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleFML_IDENTIFIER23144 = new BitSet(new long[]{0x0000000002000000L});
+    public static final BitSet FOLLOW_RULE_STAR_in_ruleFML_IDENTIFIER23164 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_169_in_ruleFeatureEdgeKind23226 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_170_in_ruleFeatureEdgeKind23243 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_171_in_ruleFeatureEdgeKind23260 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_172_in_ruleFeatureEdgeKind23277 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_173_in_ruleFeatureEdgeKind23294 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_174_in_ruleKindOfGet23339 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_175_in_ruleKindOfGet23356 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_176_in_ruleKindOfGet23373 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_177_in_ruleKindOfGet23390 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_178_in_ruleKindOfGet23407 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_179_in_ruleKindOfGet23424 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_180_in_ruleKindOfCompute23469 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_181_in_ruleKindOfCompute23486 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_182_in_ruleKindOfCompute23503 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_183_in_ruleKindOfGetGroups23548 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_184_in_ruleKindOfGetGroups23565 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_185_in_ruleKindOfGetGroups23582 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_186_in_ruleKindOfComputeGroups23627 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_187_in_ruleKindOfComputeGroups23644 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_188_in_ruleKindOfComputeGroups23661 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_189_in_ruleBDDBackend23706 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_190_in_ruleBDDBackend23723 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_191_in_ruleBDDBackend23740 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_192_in_ruleMergeMode23785 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_193_in_ruleMergeMode23802 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_194_in_ruleMergeMode23819 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_195_in_ruleMergeMode23836 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_196_in_ruleMergeMode23853 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_197_in_ruleHierarchyStrategy23898 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_198_in_ruleHierarchyStrategy23915 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_199_in_ruleHierarchyStrategy23932 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_200_in_ruleSliceMode23977 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_201_in_ruleSliceMode23994 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_202_in_ruleComparisonOperator24039 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_203_in_ruleComparisonOperator24056 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_204_in_ruleComparisonOperator24073 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_205_in_ruleComparisonOperator24090 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_206_in_ruleComparisonOperator24107 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_207_in_ruleComparisonOperator24124 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_208_in_ruleSetOperator24169 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_209_in_ruleSetOperator24186 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_210_in_ruleAutoConfMode24233 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_211_in_ruleAutoConfMode24250 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_212_in_ruleAutoConfMode24267 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_213_in_ruleOPT_LISTING24312 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_214_in_ruleOPT_LISTING24329 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_215_in_ruleOPT_LISTING24346 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_216_in_ruleFMFormat24391 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_217_in_ruleFMFormat24408 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_218_in_ruleFMFormat24425 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_219_in_ruleFMFormat24442 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_220_in_ruleFMFormat24459 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_221_in_ruleFMFormat24476 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_222_in_ruleFMFormat24493 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_223_in_ruleFMFormat24510 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_224_in_ruleFMFormat24527 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_225_in_ruleFMFormat24544 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_226_in_ruleBOOL_Operator24589 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_227_in_ruleBOOL_Operator24606 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_54_in_synpred127_InternalFML6498 = new BitSet(new long[]{0xFCA0022F0009D010L,0xFFCEE60174FFFFFFL,0x1FFFFEBBFFFFFFFFL});
     public static final BitSet FOLLOW_ruleSetCommand_in_synpred127_InternalFML6532 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_56_in_synpred128_InternalFML6877 = new BitSet(new long[]{0x0000000000084000L,0x00000000107C0001L,0x0000008000000000L});

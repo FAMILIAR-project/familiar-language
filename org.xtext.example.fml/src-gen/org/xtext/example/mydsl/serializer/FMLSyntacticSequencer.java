@@ -228,7 +228,7 @@ public class FMLSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	/**
 	 * Syntax:
-	 *     'cp' | 'copy'
+	 *     'copy' | 'cp'
 	 */
 	protected void emit_CopyVariable_CopyKeyword_0_0_or_CpKeyword_0_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -244,7 +244,7 @@ public class FMLSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     'featuremodel' | 'FM'
+	 *     'FM' | 'featuremodel'
 	 */
 	protected void emit_FeatureModel_FMKeyword_0_0_or_FeaturemodelKeyword_0_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

@@ -28,7 +28,9 @@ public class FMLSupportTest extends FMLTest {
 	 private Map<SimpleEdge, Double> suppMap = new HashMap<SimpleEdge, Double>();
 	 private Map<SimpleEdge, Double> confMap = new HashMap<SimpleEdge, Double>();
 	 private ImplicationGraph<String> big;
-	@Test
+	
+	 
+	 @Test
 	public void testSupp1() throws Exception {    
 		
 						

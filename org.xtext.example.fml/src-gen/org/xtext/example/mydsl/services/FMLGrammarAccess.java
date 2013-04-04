@@ -5095,7 +5095,7 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
 		private final Alternatives cNameAlternatives_0_0 = (Alternatives)cNameAssignment_0.eContents().get(0);
-		private final RuleCall cNameIDTerminalRuleCall_0_0_0 = (RuleCall)cNameAlternatives_0_0.eContents().get(0);
+		private final RuleCall cNameFT_IDParserRuleCall_0_0_0 = (RuleCall)cNameAlternatives_0_0.eContents().get(0);
 		private final Keyword cNameTrueKeyword_0_0_1 = (Keyword)cNameAlternatives_0_0.eContents().get(1);
 		private final Keyword cNameFalseKeyword_0_0_2 = (Keyword)cNameAlternatives_0_0.eContents().get(2);
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
@@ -5104,20 +5104,20 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRIGHT_PARENTerminalRuleCall_1_2 = (RuleCall)cGroup_1.eContents().get(2);
 		
 		//Primary_expr returns CNFExpression:
-		//	name=(ID | "true" | "false") | LEFT_PAREN Or_expr RIGHT_PAREN;
+		//	name=(FT_ID | "true" | "false") | LEFT_PAREN Or_expr RIGHT_PAREN;
 		public ParserRule getRule() { return rule; }
 
-		//name=(ID | "true" | "false") | LEFT_PAREN Or_expr RIGHT_PAREN
+		//name=(FT_ID | "true" | "false") | LEFT_PAREN Or_expr RIGHT_PAREN
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//name=(ID | "true" | "false")
+		//name=(FT_ID | "true" | "false")
 		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 
-		//ID | "true" | "false"
+		//FT_ID | "true" | "false"
 		public Alternatives getNameAlternatives_0_0() { return cNameAlternatives_0_0; }
 
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_0_0_0() { return cNameIDTerminalRuleCall_0_0_0; }
+		//FT_ID
+		public RuleCall getNameFT_IDParserRuleCall_0_0_0() { return cNameFT_IDParserRuleCall_0_0_0; }
 
 		//"true"
 		public Keyword getNameTrueKeyword_0_0_1() { return cNameTrueKeyword_0_0_1; }
@@ -5244,7 +5244,7 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Production");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final RuleCall cNameIDTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final RuleCall cNameFT_IDParserRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
 		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cFeaturesAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cFeaturesChildParserRuleCall_2_0 = (RuleCall)cFeaturesAssignment_2.eContents().get(0);
@@ -5252,17 +5252,17 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 		////expr+=Fexpr
 		////FeatureDescription : Production | Expr ;
 		//Production:
-		//	name=ID ":" features+=Child+;
+		//	name=FT_ID ":" features+=Child+;
 		public ParserRule getRule() { return rule; }
 
-		//name=ID ":" features+=Child+
+		//name=FT_ID ":" features+=Child+
 		public Group getGroup() { return cGroup; }
 
-		//name=ID
+		//name=FT_ID
 		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_0_0() { return cNameIDTerminalRuleCall_0_0; }
+		//FT_ID
+		public RuleCall getNameFT_IDParserRuleCall_0_0() { return cNameFT_IDParserRuleCall_0_0; }
 
 		//":"
 		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
@@ -5330,25 +5330,25 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final RuleCall cLEFT_HOOKTerminalRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final RuleCall cNameFT_IDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final RuleCall cRIGHT_HOOKTerminalRuleCall_2 = (RuleCall)cGroup.eContents().get(2);
 		
 		////Optional    : name=FML_IDENTIFIER '?' | '[' name=FML_IDENTIFIER ']' ;
 		//Optional:
-		//	LEFT_HOOK name=ID RIGHT_HOOK;
+		//	LEFT_HOOK name=FT_ID RIGHT_HOOK;
 		public ParserRule getRule() { return rule; }
 
-		//LEFT_HOOK name=ID RIGHT_HOOK
+		//LEFT_HOOK name=FT_ID RIGHT_HOOK
 		public Group getGroup() { return cGroup; }
 
 		//LEFT_HOOK
 		public RuleCall getLEFT_HOOKTerminalRuleCall_0() { return cLEFT_HOOKTerminalRuleCall_0; }
 
-		//name=ID
+		//name=FT_ID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
 
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		//FT_ID
+		public RuleCall getNameFT_IDParserRuleCall_1_0() { return cNameFT_IDParserRuleCall_1_0; }
 
 		//RIGHT_HOOK
 		public RuleCall getRIGHT_HOOKTerminalRuleCall_2() { return cRIGHT_HOOKTerminalRuleCall_2; }
@@ -5493,44 +5493,32 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class FT_IDElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "FT_ID");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
-		private final RuleCall cIDTerminalRuleCall_0_0 = (RuleCall)cAlternatives_0.eContents().get(0);
-		private final Keyword cDollarSignKeyword_0_1 = (Keyword)cAlternatives_0.eContents().get(1);
-		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
-		private final Keyword cFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
-		private final RuleCall cIDTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cIDTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final Keyword cDollarSignKeyword_1 = (Keyword)cAlternatives.eContents().get(1);
+		private final RuleCall cSTRINGTerminalRuleCall_2 = (RuleCall)cAlternatives.eContents().get(2);
 		
 		////terminal QUOTE :  '"' ;
 		////IDENTIFIER :
 		////terminal FML_IDENTIFIER : ID ; //Letter (Letter | DIGIT)*;
 		//// TODO: abstract feature / concrete feature
 		//// setAbstract or FM (A : B C D ; abstract D : (E|F|G) ; )
-		//// feature ID
+		//// ('.' ID)* ; // feature ID // FIXME the second part (. ID) is not used so remove it ? 
 		//FT_ID:
-		//	(ID | "$") ("." ID)*;
+		//	ID | "$" | STRING;
 		public ParserRule getRule() { return rule; }
 
-		//(ID | "$") ("." ID)*
-		public Group getGroup() { return cGroup; }
-
-		//ID | "$"
-		public Alternatives getAlternatives_0() { return cAlternatives_0; }
+		//ID | "$" | STRING
+		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//ID
-		public RuleCall getIDTerminalRuleCall_0_0() { return cIDTerminalRuleCall_0_0; }
+		public RuleCall getIDTerminalRuleCall_0() { return cIDTerminalRuleCall_0; }
 
 		//"$"
-		public Keyword getDollarSignKeyword_0_1() { return cDollarSignKeyword_0_1; }
+		public Keyword getDollarSignKeyword_1() { return cDollarSignKeyword_1; }
 
-		//("." ID)*
-		public Group getGroup_1() { return cGroup_1; }
-
-		//"."
-		public Keyword getFullStopKeyword_1_0() { return cFullStopKeyword_1_0; }
-
-		//ID
-		public RuleCall getIDTerminalRuleCall_1_1() { return cIDTerminalRuleCall_1_1; }
+		//STRING
+		public RuleCall getSTRINGTerminalRuleCall_2() { return cSTRINGTerminalRuleCall_2; }
 	}
 
 	public class FML_IDENTIFIERElements extends AbstractParserRuleElementFinder {
@@ -5546,6 +5534,7 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cIDTerminalRuleCall_0_1_1_0 = (RuleCall)cAlternatives_0_1_1.eContents().get(0);
 		private final Keyword cDollarSignKeyword_0_1_1_1 = (Keyword)cAlternatives_0_1_1.eContents().get(1);
 		private final RuleCall cSTARTerminalRuleCall_0_1_1_2 = (RuleCall)cAlternatives_0_1_1.eContents().get(2);
+		private final RuleCall cSTRINGTerminalRuleCall_0_1_1_3 = (RuleCall)cAlternatives_0_1_1.eContents().get(3);
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
 		private final RuleCall cIDTerminalRuleCall_1_0 = (RuleCall)cGroup_1.eContents().get(0);
 		private final RuleCall cSTARTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
@@ -5553,15 +5542,15 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 		////terminal Letter :  'a'..'z' |  'A'..'Z' |  '_' |  '.' ;
 		////terminal DIGIT :  '0'..'9';
 		//FML_IDENTIFIER:
-		//	(ID | "$") ("." (ID | "$" | STAR))* | ID STAR;
+		//	(ID | "$") ("." (ID | "$" | STAR | STRING))* | ID STAR;
 		public ParserRule getRule() { return rule; }
 
-		//(ID | "$") ("." (ID | "$" | STAR))* //terminal Letter :  'a'..'z' |  'A'..'Z' |  '_' |  '.' ;
+		//(ID | "$") ("." (ID | "$" | STAR | STRING))* //terminal Letter :  'a'..'z' |  'A'..'Z' |  '_' |  '.' ;
 		////terminal DIGIT :  '0'..'9';
 		//| ID STAR
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//(ID | "$") ("." (ID | "$" | STAR))*
+		//(ID | "$") ("." (ID | "$" | STAR | STRING))*
 		public Group getGroup_0() { return cGroup_0; }
 
 		//ID | "$"
@@ -5573,13 +5562,13 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 		//"$"
 		public Keyword getDollarSignKeyword_0_0_1() { return cDollarSignKeyword_0_0_1; }
 
-		//("." (ID | "$" | STAR))*
+		//("." (ID | "$" | STAR | STRING))*
 		public Group getGroup_0_1() { return cGroup_0_1; }
 
 		//"."
 		public Keyword getFullStopKeyword_0_1_0() { return cFullStopKeyword_0_1_0; }
 
-		//ID | "$" | STAR
+		//ID | "$" | STAR | STRING
 		public Alternatives getAlternatives_0_1_1() { return cAlternatives_0_1_1; }
 
 		//ID
@@ -5590,6 +5579,9 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 
 		//STAR
 		public RuleCall getSTARTerminalRuleCall_0_1_1_2() { return cSTARTerminalRuleCall_0_1_1_2; }
+
+		//STRING
+		public RuleCall getSTRINGTerminalRuleCall_0_1_1_3() { return cSTRINGTerminalRuleCall_0_1_1_3; }
 
 		//ID STAR //terminal Letter :  'a'..'z' |  'A'..'Z' |  '_' |  '.' ;
 		////terminal DIGIT :  '0'..'9';
@@ -8222,7 +8214,7 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Primary_expr returns CNFExpression:
-	//	name=(ID | "true" | "false") | LEFT_PAREN Or_expr RIGHT_PAREN;
+	//	name=(FT_ID | "true" | "false") | LEFT_PAREN Or_expr RIGHT_PAREN;
 	public Primary_exprElements getPrimary_exprAccess() {
 		return (pPrimary_expr != null) ? pPrimary_expr : (pPrimary_expr = new Primary_exprElements());
 	}
@@ -8256,7 +8248,7 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 	////expr+=Fexpr
 	////FeatureDescription : Production | Expr ;
 	//Production:
-	//	name=ID ":" features+=Child+;
+	//	name=FT_ID ":" features+=Child+;
 	public ProductionElements getProductionAccess() {
 		return (pProduction != null) ? pProduction : (pProduction = new ProductionElements());
 	}
@@ -8289,7 +8281,7 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 
 	////Optional    : name=FML_IDENTIFIER '?' | '[' name=FML_IDENTIFIER ']' ;
 	//Optional:
-	//	LEFT_HOOK name=ID RIGHT_HOOK;
+	//	LEFT_HOOK name=FT_ID RIGHT_HOOK;
 	public OptionalElements getOptionalAccess() {
 		return (pOptional != null) ? pOptional : (pOptional = new OptionalElements());
 	}
@@ -8490,9 +8482,9 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 	////terminal FML_IDENTIFIER : ID ; //Letter (Letter | DIGIT)*;
 	//// TODO: abstract feature / concrete feature
 	//// setAbstract or FM (A : B C D ; abstract D : (E|F|G) ; )
-	//// feature ID
+	//// ('.' ID)* ; // feature ID // FIXME the second part (. ID) is not used so remove it ? 
 	//FT_ID:
-	//	(ID | "$") ("." ID)*;
+	//	ID | "$" | STRING;
 	public FT_IDElements getFT_IDAccess() {
 		return (pFT_ID != null) ? pFT_ID : (pFT_ID = new FT_IDElements());
 	}
@@ -8504,7 +8496,7 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 	////terminal Letter :  'a'..'z' |  'A'..'Z' |  '_' |  '.' ;
 	////terminal DIGIT :  '0'..'9';
 	//FML_IDENTIFIER:
-	//	(ID | "$") ("." (ID | "$" | STAR))* | ID STAR;
+	//	(ID | "$") ("." (ID | "$" | STAR | STRING))* | ID STAR;
 	public FML_IDENTIFIERElements getFML_IDENTIFIERAccess() {
 		return (pFML_IDENTIFIER != null) ? pFML_IDENTIFIER : (pFML_IDENTIFIER = new FML_IDENTIFIERElements());
 	}

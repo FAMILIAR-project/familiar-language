@@ -2423,7 +2423,7 @@
       <alternatives xsi:type="xtext:Alternatives">
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
           <terminal xsi:type="xtext:Alternatives">
-            <elements xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+            <elements xsi:type="xtext:RuleCall" rule="/0/@rules.179"/>
             <elements xsi:type="xtext:Keyword" value="true"/>
             <elements xsi:type="xtext:Keyword" value="false"/>
           </terminal>
@@ -2496,7 +2496,7 @@
       </type>
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.179"/>
         </elements>
         <elements xsi:type="xtext:Keyword" value=":"/>
         <elements xsi:type="xtext:Assignment" cardinality="+" feature="features" operator="+=">
@@ -2531,7 +2531,7 @@
       <alternatives xsi:type="xtext:Group">
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.175"/>
         <elements xsi:type="xtext:Assignment" feature="name" operator="=">
-          <terminal xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+          <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.179"/>
         </elements>
         <elements xsi:type="xtext:RuleCall" rule="/0/@rules.176"/>
       </alternatives>
@@ -2725,15 +2725,10 @@
       <type metamodel="/1/@metamodelDeclarations.0">
         <classifier xsi:type="ecore:EDataType" href="http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       </type>
-      <alternatives xsi:type="xtext:Group">
-        <elements xsi:type="xtext:Alternatives">
-          <elements xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-          <elements xsi:type="xtext:Keyword" value="$"/>
-        </elements>
-        <elements xsi:type="xtext:Group" cardinality="*">
-          <elements xsi:type="xtext:Keyword" value="."/>
-          <elements xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
-        </elements>
+      <alternatives xsi:type="xtext:Alternatives">
+        <elements xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
+        <elements xsi:type="xtext:Keyword" value="$"/>
+        <elements xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
       </alternatives>
     </rules>
     <rules xsi:type="xtext:ParserRule" name="FML_IDENTIFIER">
@@ -2752,6 +2747,7 @@
               <elements xsi:type="xtext:RuleCall" rule="/1/@rules.0"/>
               <elements xsi:type="xtext:Keyword" value="$"/>
               <elements xsi:type="xtext:RuleCall" rule="/0/@rules.169"/>
+              <elements xsi:type="xtext:RuleCall" rule="/1/@rules.2"/>
             </elements>
           </elements>
         </elements>

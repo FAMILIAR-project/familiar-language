@@ -160,6 +160,7 @@ public class SPLOTtoFML {
 		
 		res = res.replace("/", "_");
 		res = res.replace("$", "USDollar");
+		
 		res = res.replace("0", "Zero");
 		res = res.replace("1", "One");
 		res = res.replace("2", "Two");
@@ -170,6 +171,7 @@ public class SPLOTtoFML {
 		res = res.replace("7", "Seven");
 		res = res.replace("8", "Eight");
 		res = res.replace("9", "Nine");
+		
 		res = res.replace("+", "PLUS");
 
 		return res;

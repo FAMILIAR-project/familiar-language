@@ -6,14 +6,13 @@
       <shortcut
             class="fr.unice.polytech.modalis.familiar.views.featureide.FamiliarRun"
             id="FAMILIAR.Familiar"
-            label="%shortcut.label.0"
+            label="Excute FAMILIAR Script…"
             modes="run">
          <contextualLaunch>
             <contextLabel
-                  label="%contextLabel.label.0"
+                  label="Excute FAMILIAR script"
                   mode="run">
             </contextLabel>
-            <enablement></enablement>
          </contextualLaunch>
       </shortcut>
    </extension>
@@ -103,7 +102,7 @@
             locationURI="menu:org.eclipse.ui.main.menu?after=additions">
          <menu
                id="FAMILIAR.menus.sampleMenu"
-               label="%menu.label"
+               label="FAMILIAR"
                mnemonic="%menu.mnemonic">
             <command
                   commandId="FAMILIAR.commands.sampleCommand"
@@ -188,6 +187,20 @@
       <contexts
             file="contexts.xml">
       </contexts>
+   </extension>
+   <extension
+         point="org.eclipse.ui.newWizards">
+      <category
+            id="FAMILIAR"
+            name="Sample Wizards">
+      </category>
+      <wizard
+            category="FAMILIAR"
+            class="familiar.wizards.SampleNewWizard"
+            icon="icons/sample.gif"
+            id="familiar.wizards.SampleNewWizard"
+            name="FAMILIAR script">
+      </wizard>
    </extension>
 
 </plugin>

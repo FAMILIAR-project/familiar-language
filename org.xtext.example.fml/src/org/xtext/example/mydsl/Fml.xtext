@@ -290,7 +290,7 @@ AggregateMerge: 'aggregateMerge'
  it is preferable to have a decomposed specification with all parts optional
  importantly, KST can be specified using accessors of FML
  */     	 
-Synthesis: 'ksynthesis' interactive ?=('--interactive') fm=FMCommand ('with' kst=KnowledgeSpecification)? ;
+Synthesis: 'ksynthesis' interactive?=('--interactive') fm=FMCommand ('with' kst=KnowledgeSpecification)? ;
 // ('withKST' kst=KnowledgeSpecification)? ;
 
 //('with' LEFT_HOOK kst=KnowledgeSpecification RIGHT_HOOK)? ;
@@ -511,7 +511,7 @@ Unary_expr returns CNFExpression:
  
 Neg_expr : B_NOT expr=Primary_expr ; 
 Primary_expr returns CNFExpression : 
- 	name=(ID|'true'|'false') | 
+ 	name=(FT_ID|'true'|'false') | 
  	LEFT_PAREN Or_expr RIGHT_PAREN ;
  	
  //	not?='!' expr=Primary_expr | 	
@@ -540,7 +540,7 @@ FeatureModel : ('FM'|'featuremodel') LEFT_PAREN
 //expr+=Fexpr
 //FeatureDescription : Production | Expr ;
 
-Production  : name=ID ':' features+=Child+ ;
+Production  : name=FT_ID ':' features+=Child+ ;
 
 Child       : (Mandatory
                 | Optional
@@ -555,7 +555,7 @@ Mandatory   : name=FT_ID ;
 
 //Optional    : name=FML_IDENTIFIER '?' | '[' name=FML_IDENTIFIER ']' ;
 
-Optional    : LEFT_HOOK name=ID RIGHT_HOOK ;
+Optional    : LEFT_HOOK name=FT_ID RIGHT_HOOK ;
 Xorgroup   : LEFT_PAREN features+=FT_ID  (B_OR features+=FT_ID)+ RIGHT_PAREN ;
 Orgroup    : LEFT_PAREN features+=FT_ID  (B_OR features+=FT_ID)+ RIGHT_PAREN PLUS ;
 // Andgroup   : LEFT_PAREN features+=FT_ID ('|' features+=FT_ID)+ RIGHT_PAREN ; // TODO: (identifier=FML_IDENTIFIER '=')?
@@ -642,8 +642,10 @@ terminal META_ATTRIBUTE_SYMBOL : '@' ;
 //terminal FML_IDENTIFIER : ID ; //Letter (Letter | DIGIT)*;
 // TODO: abstract feature / concrete feature
 // setAbstract or FM (A : B C D ; abstract D : (E|F|G) ; )
-FT_ID : (ID|'$') ('.' ID)* ; // feature ID
-FML_IDENTIFIER :  (ID|'$') ('.' (ID|'$'|STAR))* | ID STAR;
+FT_ID : (ID|'$'|STRING) ; // ('.' ID)* ; // feature ID // FIXME the second part (. ID) is not used so remove it ? 
+FML_IDENTIFIER :  (ID|'$') ('.' (ID|'$'|STAR|STRING))* | ID STAR;
+
+
 //terminal Letter :  'a'..'z' |  'A'..'Z' |  '_' |  '.' ;
 
 //terminal DIGIT :  '0'..'9';

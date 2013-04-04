@@ -95,7 +95,7 @@ public class FMLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getFeatureModelAccess().getAlternatives_2(), "rule__FeatureModel__Alternatives_2");
 					put(grammarAccess.getFeatureModelAccess().getAlternatives_2_0(), "rule__FeatureModel__Alternatives_2_0");
 					put(grammarAccess.getChildAccess().getAlternatives(), "rule__Child__Alternatives");
-					put(grammarAccess.getFT_IDAccess().getAlternatives_0(), "rule__FT_ID__Alternatives_0");
+					put(grammarAccess.getFT_IDAccess().getAlternatives(), "rule__FT_ID__Alternatives");
 					put(grammarAccess.getFML_IDENTIFIERAccess().getAlternatives(), "rule__FML_IDENTIFIER__Alternatives");
 					put(grammarAccess.getFML_IDENTIFIERAccess().getAlternatives_0_0(), "rule__FML_IDENTIFIER__Alternatives_0_0");
 					put(grammarAccess.getFML_IDENTIFIERAccess().getAlternatives_0_1_1(), "rule__FML_IDENTIFIER__Alternatives_0_1_1");
@@ -260,8 +260,6 @@ public class FMLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getOrgroupAccess().getGroup_2(), "rule__Orgroup__Group_2__0");
 					put(grammarAccess.getMutexgroupAccess().getGroup(), "rule__Mutexgroup__Group__0");
 					put(grammarAccess.getMutexgroupAccess().getGroup_2(), "rule__Mutexgroup__Group_2__0");
-					put(grammarAccess.getFT_IDAccess().getGroup(), "rule__FT_ID__Group__0");
-					put(grammarAccess.getFT_IDAccess().getGroup_1(), "rule__FT_ID__Group_1__0");
 					put(grammarAccess.getFML_IDENTIFIERAccess().getGroup_0(), "rule__FML_IDENTIFIER__Group_0__0");
 					put(grammarAccess.getFML_IDENTIFIERAccess().getGroup_0_1(), "rule__FML_IDENTIFIER__Group_0_1__0");
 					put(grammarAccess.getFML_IDENTIFIERAccess().getGroup_1(), "rule__FML_IDENTIFIER__Group_1__0");
