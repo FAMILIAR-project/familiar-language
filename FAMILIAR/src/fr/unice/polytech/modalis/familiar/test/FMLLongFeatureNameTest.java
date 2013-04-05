@@ -14,6 +14,8 @@ import org.xtext.example.mydsl.fML.FMFormat;
 import org.xtext.example.mydsl.fML.FeatureEdgeKind;
 import org.xtext.example.mydsl.fML.SliceMode;
 
+
+import fr.unice.polytech.modalis.familiar.variable.Comparison;
 import fr.unice.polytech.modalis.familiar.variable.ConstraintVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureVariable;
@@ -62,13 +64,19 @@ public class FMLLongFeatureNameTest extends FMLTest {
 		System.err.println("fm1=" + fm1);
 		
 		String splot1 = fm1.convert(FMFormat.FSPLOT);
-		//String fide1 = fm1.convert(FMFormat.FIDE);
+		System.err.println("splot1=" + splot1);
+		String fide1 = fm1.convert(FMFormat.FIDE);
+		System.err.println("fide1=" + fide1);
 		String s2t21 = fm1.convert(FMFormat.S2T2);
 		String tvl1 = fm1.convert(FMFormat.FTVL);
 		
 		FeatureModelVariable idFm1 = fm1.slice(SliceMode.INCLUDING, fm1.features().names()) ;
 		assertEquals(fm1.features().names(), idFm1.features().names());
-		System.err.println("fm1=" + idFm1);
+		System.err.println("fm1=" + fm1);
+		System.err.println("idFm1=" + idFm1);
+		
+		assertEquals(Comparison.REFACTORING, idFm1.compare(fm1));
+		assertEquals(Comparison.REFACTORING, fm1.compare(idFm1));
 		
 	}
 

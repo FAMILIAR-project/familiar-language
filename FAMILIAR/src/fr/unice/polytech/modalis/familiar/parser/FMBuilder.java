@@ -238,12 +238,13 @@ public class FMBuilder extends FMLAbstractCommandAnalyzer {
 					return;
 				}
 
-				strfm = new SPLOTtoFML().convert(featureModelSPLOT); // @Deprecated
-				/*
+				// strfm = new SPLOTtoFML().convert(featureModelSPLOT); // @Deprecated
+			
+				
 				gsd.synthesis.FeatureModel<String> rFM = new SPLOTtoFML().convertToFeatureModel(featureModelSPLOT);
 				setVariable(new FeatureModelVariable(_assigner, rFM));
 				return ;
-				*/
+				
 				
 
 			}

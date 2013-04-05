@@ -71,6 +71,9 @@ public class FMLKSyntehsisingSPLOTTest extends FMLSPLOTTest {
 		
 		
 		for (FeatureModelVariable fm : fms) {
+			/*
+			System.err.println(fm.getIdentifier() + " = ");
+			System.err.println(fm);*/
 			FeatureModelVariableSATFormula satFla = new FeatureModelVariableSATFormula("", new SATFMLFormula(fm)) ;
 			ImplicationGraph<String> big = satFla.computeImplicationGraph() ;
 			String viz = big.toString() ;			

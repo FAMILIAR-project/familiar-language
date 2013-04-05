@@ -24,7 +24,6 @@ public class FMLSPLOTTest extends FMLTest {
 	
 	final protected List<String> excludeFiles = Arrays.asList(new String[] {
 			//"stack_fm.xml", 
-			//"smart_home_fm.xml",
 			//"movies_app_fm.xml", 
 			//"arcade_game_pl_fm.xml", // FeatureIDE failure
 			 //two features with the same name (parent)
@@ -40,10 +39,9 @@ public class FMLSPLOTTest extends FMLTest {
 			"model_20120328_663906927.xml",
 			"model_20120418_828883554.xml",
 			"model_20120424_1703152596.xml",
-			"REAL-FM-1.xml",	
-			"REAL-FM-11.xml",
-			"REAL-FM-16.xml",
-			"REAL-FM-4.xml",
+			
+			"REAL-FM-4.xml",			
+			
 			// group with one element
 			"model_20101120_2091447559.xml", 
 			"model_20101123_920943759.xml", 
@@ -59,7 +57,16 @@ public class FMLSPLOTTest extends FMLTest {
 			"model_20120205_24117969.xml",
 			"model_20120328_288933955.xml",
 			"model_20120801_1784537083.xml",
-		
+			
+			"model_20110216_608697455.xml",
+			"model_20110926_400852996.xml", // same feature names
+			"smart_home_fm.xml", // same feature names
+			"model_20120725_1460954667.xml",
+			
+			"model_20110516_1331478109.xml"
+			
+			
+			
 	});
 
 	
@@ -84,6 +91,7 @@ public class FMLSPLOTTest extends FMLTest {
 			String fileName = splotFile.getName() ; 
 			
 			String fmName = fileName.replace("-", "");
+			//System.err.println("fm" + i + ": " + fmName);
 			String mkFmlInput = "fm_" + i + "_" + fmName + "" + " = " + "FM (" + "\"" +  fileName + "\"" + ")\n\n" ;
 			//System.err.println("" + mkFmlInput) ;
 			Variable v = null ;
