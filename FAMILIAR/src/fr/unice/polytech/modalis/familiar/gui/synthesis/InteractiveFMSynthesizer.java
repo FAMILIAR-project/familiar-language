@@ -8,6 +8,7 @@ import java.util.Observable;
 import java.util.Set;
 
 import ch.usi.inf.sape.hac.dendrogram.Dendrogram;
+import fr.unice.polytech.modalis.familiar.gui.FamiliarConsole;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.clustering.FMExperiment;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.clustering.HierarchicalFeatureClusterer;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.AlwaysZeroMetric;
@@ -47,13 +48,16 @@ public class InteractiveFMSynthesizer extends Observable{
 	public InteractiveFMSynthesizer(FeatureModelVariable fmv) {
 		big = new WeightedImplicationGraph<String>(fmv.computeImplicationGraph());
 		originalBig = big.clone();
-		this.fmv = new FeatureModelVariable(fmv.getIdentifier(),
+		this.fmv = new FeatureModelVariable(fmv.getIdentifier() + "_synthesis",
 				new FeatureModel<String>(FeatureGraphFactory.mkStringFactory().mkTop()),
 				fmv.getFormula().clone());
-
+//		FeatureNode<String> v = new FeatureNode<String>("fake root");
+//		this.fmv.getFm().getDiagram().addVertex(v);
+//		this.fmv.getFm().getDiagram().addEdge(v, this.fmv.getFm().getDiagram().getTopVertex(), FeatureEdge.HIERARCHY);
+		
 		setParentSimilarityMetric(new AlwaysZeroMetric());
 		setClusteringParameters(new SimmetricsMetric(MetricName.SIMMETRICS_SMITHWATERMAN), 0.4);
-//		setSupportClusteringParameters(0);
+		//		setSupportClusteringParameters(0);
 		featureComparator = new OutDegreeComparator(big.getImplicationGraph());
 	}
 
@@ -115,20 +119,22 @@ public class InteractiveFMSynthesizer extends Observable{
 	 * @param parent
 	 */
 	public void ignoreParent(String child, String parent) {
-		// Suppress the corresponding edge from the implication graph
-		SimpleEdge edge = big.findEdge(child, parent);
-		if (edge != null) {
-			big.removeEdge(edge);
-		}
+		if (big.parents(child).size() > 1) {
+			// Suppress the corresponding edge from the implication graph
+			SimpleEdge edge = big.findEdge(child, parent);
+			if (edge != null) {
+				big.removeEdge(edge);
+			}
 
-		// if there is only one parent remaining, we select it
-		Set<String> parents = big.parents(child);
-		if (parents.size() == 1) {
-			selectParent(child, parents.iterator().next());
-		}
+			// if there is only one parent remaining, we select it
+			Set<String> parents = big.parents(child);
+			if (parents.size() == 1) {
+				selectParent(child, parents.iterator().next());
+			}
 
-		setChanged();
-		notifyObservers();
+			setChanged();
+			notifyObservers();
+		}
 	}
 
 	/**
@@ -142,7 +148,7 @@ public class InteractiveFMSynthesizer extends Observable{
 			List<String> parentList = new ArrayList<String>(big.parents(feature));
 
 			if (parentSimilarityMetric != null) {
-				Collections.sort(parentList, new ParentComparator(feature, parentSimilarityMetric));	
+				Collections.sort(parentList, new ParentComparator(feature, big));	
 			}
 
 			KeyValue<String, List<String>> parentEntry = new KeyValue<String, List<String>>(feature, parentList);
@@ -185,7 +191,7 @@ public class InteractiveFMSynthesizer extends Observable{
 		this.clusteringThreshold = threshold;
 		computeSupportClusters();
 	}
-	
+
 	/**
 	 * Compute clusters according to the previously specified similarity metric and threshold
 	 */
@@ -197,7 +203,7 @@ public class InteractiveFMSynthesizer extends Observable{
 		setChanged();
 		notifyObservers();
 	}
-	
+
 	private void computeSupportClusters() {
 		supportClusters = new ArrayList<Set<Set<String>>>();
 
@@ -256,7 +262,7 @@ public class InteractiveFMSynthesizer extends Observable{
 			rootNode = new FeatureNode<String>(root);
 			graph.addVertex(rootNode);
 		}
-		
+
 		// Remove the current parent of the new root		
 		for (FeatureNode<String> parent : graph.parents(rootNode)) {
 			graph.removeEdge(graph.findEdge(rootNode, parent, FeatureEdge.HIERARCHY));
@@ -326,7 +332,7 @@ public class InteractiveFMSynthesizer extends Observable{
 		try {
 			featureNode = hierarchy.findVertex(feature);	
 		} catch (IllegalArgumentException e) {
-			
+
 		}
 		if (featureNode != null) {
 			Set<FeatureNode<String>> parents = hierarchy.parents(featureNode);

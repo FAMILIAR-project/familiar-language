@@ -7,9 +7,10 @@ import java.util.List;
 import java.util.Set;
 
 import javax.swing.JScrollPane;
+import javax.swing.SwingConstants;
 
-import com.mxgraph.layout.mxCompactTreeLayout;
 import com.mxgraph.layout.mxIGraphLayout;
+import com.mxgraph.layout.hierarchical.mxHierarchicalLayout;
 import com.mxgraph.model.mxCell;
 import com.mxgraph.swing.mxGraphComponent;
 import com.mxgraph.util.mxConstants;
@@ -32,8 +33,8 @@ public class JGraphXFMViewer extends FMViewer {
 	public JGraphXFMViewer() {
 		// Create graph
 		graph = new mxGraph();
-//		layout = new mxHierarchicalLayout(graph, SwingConstants.NORTH);
-		layout = new mxCompactTreeLayout(graph, false);
+		layout = new mxHierarchicalLayout(graph, SwingConstants.NORTH);
+//		layout = new mxCompactTreeLayout(graph, false);
 		mxGraphComponent graphComponent = new mxGraphComponent(graph);
 		graphComponent.setEnabled(false);
 		// Set layout
