@@ -9,6 +9,7 @@ edge [arrowhead=normal];
 97[label="Y",]
 98[label="KK",]
 100[label="G",]
+92->97[arrowhead=odot];
 102[label="OR",shape="triangle",style="filled",color="black",fontcolor="white"]
 93->102[arrowhead=none];
 102->94[arrowhead=none];
@@ -17,7 +18,6 @@ edge [arrowhead=normal];
 93->103[arrowhead=none];
 103->92[arrowhead=none];
 103->95[arrowhead=none];
-92->97[arrowhead=odot];
 104[label="OR",shape="triangle",style="filled",color="black",fontcolor="white"]
 93->104[arrowhead=none];
 104->94[arrowhead=none];

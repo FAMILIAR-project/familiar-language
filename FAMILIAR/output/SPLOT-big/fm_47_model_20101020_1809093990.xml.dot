@@ -2,8 +2,8 @@ digraph{
 graph [rankdir=TB];
 node [shape=box];
 edge [arrowhead=normal];
-0[label="Nombrearchivofuente",]
-1[label="Nombrearchivo",]
+0[label="Nombrearchivo",]
+1[label="Nombrearchivofuente",]
 2[label="Funcionrespaldo",]
 3[label="Valorrutarespaldo",]
 4[label="com",]

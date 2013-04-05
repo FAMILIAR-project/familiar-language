@@ -24,6 +24,7 @@ import static fr.unice.polytech.modalis.familiar.fm.FeatureNodeUtils.hasXorGroup
 
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Map;
@@ -37,9 +38,12 @@ import org.apache.log4j.Logger;
 import org.prop4j.Node;
 import org.prop4j.NodeWriter;
 
+import de.ovgu.featureide.fm.core.Constraint;
+import de.ovgu.featureide.fm.core.Feature;
 import de.ovgu.featureide.fm.core.io.UnsupportedModelException;
 import de.ovgu.featureide.fm.core.io.guidsl.GuidslReader;
 import fr.unice.polytech.modalis.familiar.fm.FeatureModelCloner;
+import fr.unice.polytech.modalis.familiar.fm.FeatureNodeUtils;
 import fr.unice.polytech.modalis.familiar.fm.converter.FeatureModelUtil;
 import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
 import fr.unice.polytech.modalis.familiar.operations.featureide.NodeUtility;
@@ -266,8 +270,8 @@ public class FMLtoFeatureIDE extends FeatureIDEConverterUtils {
 	
 	public de.ovgu.featureide.fm.core.FeatureModel convert() {
 		// FIXME (parameterized)
-		return convertWithModelToText() ; 
-		// return convertWithModelToModel() ; 
+		//return convertWithModelToText() ; 
+		return convertWithModelToModel() ; 
 	}
 	
 
@@ -293,8 +297,109 @@ public class FMLtoFeatureIDE extends FeatureIDEConverterUtils {
 	}
 
 	private de.ovgu.featureide.fm.core.FeatureModel transformToModel() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		FeatureModelUtil.normalizeMultiGroups(_fm);
+		
+		de.ovgu.featureide.fm.core.FeatureModel rFM = new de.ovgu.featureide.fm.core.FeatureModel();
+		
+		Set<String> fts = new HashSet<String>() ;
+		Set<FeatureNode<String>> ftNodes = _g.vertices() ;
+		String rootName = null ; 
+		for (FeatureNode<String> fnNode : ftNodes) {
+			if (fnNode.isBottom() || fnNode.isTop())
+				continue ; 
+			String ft = fnNode.getFeature() ;
+			Feature fture = new Feature(rFM, ft) ; 
+			rFM.addFeature(fture);
+			fts.add(ft);
+			if (FeatureVariable.isRoot(fnNode, _g)) {
+				rootName = fnNode.getFeature() ;
+				fture.setAbstract(true);
+				rFM.setRoot(fture);
+			}
+		}
+		
+		assert (rootName != null);
+		
+		for (String ft : fts) {
+			
+			Feature parent = rFM.getFeature(ft) ;
+			FeatureNode<String> v = _g.findVertex(ft);
+			
+			// process groups
+			for (FeatureEdge e : _g.incomingEdges(v)) {
+				
+				// no abstact
+				parent.setAbstract(true);
+				
+				if (e.getType() == FeatureEdge.MUTEX)
+					throw new UnsupportedOperationException(
+							"Does not support MUTEX group -- refactoring needed !");
+				Set<FeatureNode<String>> sources = _g.getSources(e);
+	
+				if (sources.size() == 1) {
+					// opt or mand
+					FeatureNode<String> childFt = sources.iterator().next();
+					if (FeatureNodeUtils.isMandatory(_g, childFt)
+							&& e.getType() != FeatureEdge.HIERARCHY) {
+						
+						Feature child = rFM.getFeature(childFt.getFeature());
+						parent.addChild(child);
+						child.setParent(parent);
+						child.setMandatory(true);
+						
+						
+						/*sb.append(newIndent + ":m " + ftName(childFt) + "("
+								+ featureID(childFt) + ")\n");
+						sb.append(processFt(childFt, fg, newIndent));*/
+					} else if (FeatureNodeUtils.isOptional(_g, childFt)) {
+						Feature child = rFM.getFeature(childFt.getFeature());
+						parent.addChild(child);
+						child.setParent(parent);
+						
+					} else {
+						/*
+						 * _LOGGER.debug
+						 * ("not optional and mandatory while being alone:" +
+						 * " childFt=" + childFt );
+						 */
+						continue;
+					}
+	
+				}
+	
+				switch (e.getType()) {
+				case FeatureEdge.XOR:
+					
+					for (FeatureNode<String> source : sources) {
+						Feature child = rFM.getFeature(source.getFeature());
+						parent.addChild(child);
+						child.setParent(parent);						
+					}
+					parent.changeToAlternative() ; 
+					break;
+				case FeatureEdge.OR:
+								
+					for (FeatureNode<String> source : sources) {
+						Feature child = rFM.getFeature(source.getFeature());
+						parent.addChild(child);
+						child.setParent(parent);		
+					}
+					parent.changeToOr() ; 
+					break;
+				}
+	
+			}
+		}
+		
+		for (Expression<String> e : _fm.getConstraints()) {
+			Node node = NodeUtility.toNode(e, rootName.toString()) ; 
+			if (node != null)
+				rFM.addConstraint(new Constraint(rFM, node));
+			
+		}
+		
+		return rFM ; 
 	}
 
 

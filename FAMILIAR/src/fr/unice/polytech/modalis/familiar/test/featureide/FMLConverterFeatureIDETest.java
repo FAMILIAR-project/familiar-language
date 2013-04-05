@@ -24,6 +24,7 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 import org.junit.Test;
@@ -31,9 +32,11 @@ import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 
+import de.ovgu.featureide.fm.core.Feature;
 import de.ovgu.featureide.fm.core.FeatureModel;
 import de.ovgu.featureide.fm.core.editing.ModelComparator;
 import de.ovgu.featureide.fm.core.io.guidsl.GuidslReader;
+import de.ovgu.featureide.fm.core.io.guidsl.GuidslWriter;
 import fr.unice.polytech.modalis.familiar.experimental.featureide.FMComparator;
 import fr.unice.polytech.modalis.familiar.fm.featureide.FMLtoFeatureIDE;
 import fr.unice.polytech.modalis.familiar.test.FMLTest;
@@ -178,10 +181,24 @@ public class FMLConverterFeatureIDETest extends FMLTest {
 
 		FeatureModel fmide = parseFMIDEfromString(_expected);
 		assertNotNull(fmide);
+		System.err.println("fmide=" + fmide);
+		System.err.println("fmide=" + new GuidslWriter(fmide).writeToString());
 		FeatureModel fmactual = new FMLtoFeatureIDE(fm1).convert();
 		assertNotNull(fmactual);
-
-		ModelComparator comparator = new ModelComparator(20000);
+		System.err.println("fmactual=" + fmactual);
+		System.err.println("fmactual=" + new GuidslWriter(fmactual).writeToString());
+		
+		Collection<Feature> ftsA = fmide.getFeatures() ; // fmactual.getFeatures() ;
+		for (Feature ftA : ftsA) {
+			System.err.println("ft=" + ftA.getName() + " " + ftA.isAbstract());
+		}
+		System.err.println("\n\n");
+		Collection<Feature> ftsB = fmactual.getFeatures() ;
+		for (Feature ftB : ftsB) {
+			System.err.println("ft=" + ftB.getName() + " " + ftB.isAbstract());
+		}
+		
+		ModelComparator comparator = new ModelComparator(60000);
 		Comparison comparison = FMComparator.convert(comparator.compare(fmide, fmactual));
 		assertEquals(Comparison.REFACTORING, comparison);
 
