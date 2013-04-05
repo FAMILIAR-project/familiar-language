@@ -52,6 +52,7 @@ public class SPLOTtoFML {
 	 * @param featureModelSPLOT
 	 * @return string-based representation of FML feature model
 	 */
+	@Deprecated
 	public String convert(FeatureModel featureModelSPLOT) {
 
 		StringBuilder sb = new StringBuilder();

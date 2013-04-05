@@ -45,10 +45,9 @@ public class ImportSPLOTAction extends ImportAction {
  		try {
  			splar.core.fm.FeatureModel fmSPLOT = new XMLFeatureModel(
  	    		f.getAbsolutePath(), XMLFeatureModel.USE_VARIABLE_NAME_AS_ID);
- 			fmSPLOT.loadModel();
- 			String fmlText = new SPLOTtoFML(true).convert(fmSPLOT);
+ 			fmSPLOT.loadModel(); 		
  			fmv = Converter.INSTANCE.createNewFMV(
- 				Converter.INSTANCE.getInternalFM(fmlText), fmSPLOT.getName());
+ 					new SPLOTtoFML(true).convertToFeatureModel(fmSPLOT), fmSPLOT.getName());
  		} catch (Exception e) {
  			return null;
  		}
