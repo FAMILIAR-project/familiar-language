@@ -2681,6 +2681,39 @@ public class FeatureModelVariable extends VariableImpl implements FMLFeatureMode
 		return rFM ; 
 	}
 
+	/**
+	 *  
+	 * @param kn
+	 * @param fts
+	 * @return
+	 */
+	public FeatureModelVariable ksynthesisOver(KnowledgeSynthesis kn, SynthesisStrategy synthStrategy, Set<String> fts) {
+		KSynthesis synth = null ; 
+		if (synthStrategy == SynthesisStrategy.BDD)
+			synth = new KSynthesisBDD(getFormula(), kn, getBuilder());
+		else if (synthStrategy == SynthesisStrategy.SAT) {
+			// FIXME @FeatureIDE 
+			synth = new KSynthesisSAT(this, kn) ;
+		}
+		else {
+			FMLShell.getInstance().printError("Unknown synthesis strategy: " + synthStrategy) ; 
+			return null ; 
+		}
+		assert (synth != null);
+		FeatureModelVariable rFM = synth.buildOver(fts) ;
+		
+		if (synth.hasConflictingChoices()) {
+			FMLShell.getInstance().printWarning("Knowledge specification is not complete:" + 
+						synth.getConflictReport());
+		}
+				
+		return rFM ; 
+	}
+
+	public FeatureModelVariable ksynthesisOver(KnowledgeSynthesis kst1,	Set<String> fts) {
+		return ksynthesisOver(kst1, _DEFAULT_SYNTHESIS_STRATEGY, fts);
+	}
+
 	
 
 	

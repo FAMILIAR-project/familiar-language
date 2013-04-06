@@ -278,4 +278,11 @@ public class KSynthesisSAT extends KSynthesis {
 		return false ; // yep, at this step, we have not integrated support for OR-groups with SAT (SPLC'12 of Andersen et al. is an efficient alternative)
 	}
 
+
+	@Override
+	public FeatureModelVariable buildOver(Set<String> fts) {
+		FMLShell.getInstance().printError("Synthesis 'over' is not currently supported in SAT");
+		return null ; 
+	}
+
 }

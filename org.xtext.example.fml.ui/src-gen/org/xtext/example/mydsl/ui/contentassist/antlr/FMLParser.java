@@ -175,6 +175,7 @@ public class FMLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAggregateMergeAccess().getGroup_3_0(), "rule__AggregateMerge__Group_3_0__0");
 					put(grammarAccess.getSynthesisAccess().getGroup(), "rule__Synthesis__Group__0");
 					put(grammarAccess.getSynthesisAccess().getGroup_3(), "rule__Synthesis__Group_3__0");
+					put(grammarAccess.getSynthesisAccess().getGroup_4(), "rule__Synthesis__Group_4__0");
 					put(grammarAccess.getKnowledgeSpecificationAccess().getGroup(), "rule__KnowledgeSpecification__Group__0");
 					put(grammarAccess.getKnowledgeSpecificationAccess().getGroup_2(), "rule__KnowledgeSpecification__Group_2__0");
 					put(grammarAccess.getKnowledgeSpecificationAccess().getGroup_3(), "rule__KnowledgeSpecification__Group_3__0");
@@ -366,7 +367,9 @@ public class FMLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getAggregateMergeAccess().getFmsAssignment_3_1(), "rule__AggregateMerge__FmsAssignment_3_1");
 					put(grammarAccess.getSynthesisAccess().getInteractiveAssignment_1(), "rule__Synthesis__InteractiveAssignment_1");
 					put(grammarAccess.getSynthesisAccess().getFmAssignment_2(), "rule__Synthesis__FmAssignment_2");
-					put(grammarAccess.getSynthesisAccess().getKstAssignment_3_1(), "rule__Synthesis__KstAssignment_3_1");
+					put(grammarAccess.getSynthesisAccess().getOverAssignment_3_0(), "rule__Synthesis__OverAssignment_3_0");
+					put(grammarAccess.getSynthesisAccess().getFtsAssignment_3_1(), "rule__Synthesis__FtsAssignment_3_1");
+					put(grammarAccess.getSynthesisAccess().getKstAssignment_4_1(), "rule__Synthesis__KstAssignment_4_1");
 					put(grammarAccess.getKnowledgeSpecificationAccess().getHierarchyAssignment_1(), "rule__KnowledgeSpecification__HierarchyAssignment_1");
 					put(grammarAccess.getKnowledgeSpecificationAccess().getGroupsAssignment_2_1(), "rule__KnowledgeSpecification__GroupsAssignment_2_1");
 					put(grammarAccess.getKnowledgeSpecificationAccess().getConstraintsAssignment_3_1(), "rule__KnowledgeSpecification__ConstraintsAssignment_3_1");

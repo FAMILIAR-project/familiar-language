@@ -312,6 +312,8 @@
     <genClasses ecoreClass="FML.ecore#//Synthesis">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FML.ecore#//Synthesis/interactive"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FML.ecore#//Synthesis/fm"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FML.ecore#//Synthesis/over"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FML.ecore#//Synthesis/fts"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FML.ecore#//Synthesis/kst"/>
     </genClasses>
     <genClasses ecoreClass="FML.ecore#//KnowledgeSpecification">

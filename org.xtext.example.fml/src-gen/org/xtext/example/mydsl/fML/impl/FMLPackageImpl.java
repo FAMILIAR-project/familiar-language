@@ -3080,9 +3080,29 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getSynthesis_Over()
+  {
+        return (EAttribute)getSynthesis().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSynthesis_Fts()
+  {
+        return (EReference)getSynthesis().getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getSynthesis_Kst()
   {
-        return (EReference)getSynthesis().getEStructuralFeatures().get(2);
+        return (EReference)getSynthesis().getEStructuralFeatures().get(4);
   }
 
   /**

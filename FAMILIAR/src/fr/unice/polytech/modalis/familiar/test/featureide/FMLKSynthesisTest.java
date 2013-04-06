@@ -242,6 +242,28 @@ public class FMLKSynthesisTest extends FMLTest {
 		System.err.println("#fm1bis4=" + fmv1bis4.counting());
 	}
 	
+	
+	@Test
+	public void testSimple4() throws Exception {
+		
+		FeatureModelVariable fmv1 = FM ("fm1", "A : B C D ; C : (H|I) ; D : (E|F|G) ; ");
+		KnowledgeSynthesis kn1 = new KnowledgeSynthesis() ;
+		KSynthesisBDD ksynthesis = new KSynthesisBDD(fmv1, kn1, _builder) ; 
+		FeatureGraph<String> h2 = mkHierarchy("A : B D ; D : E F ; "); 
+		kn1.setHierarchy(h2);
+		
+		assertTrue(kn1.isConsistent());
+		assertTrue(kn1.isHierarchySpecified());
+		_shell.setVerbose(true);
+		FeatureModelVariable fmv1bis2 = ksynthesis.buildOver(h2.features()) ;
+		_shell.setVerbose(false);
+		assertNotNull(fmv1bis2);
+		
+		System.err.println("fmv1bis2=" + fmv1bis2);
+		
+	
+	}
+	
 	@Test
 	public void testLopez() throws Exception {
 		

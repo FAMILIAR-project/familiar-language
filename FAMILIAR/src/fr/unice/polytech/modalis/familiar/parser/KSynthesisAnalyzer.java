@@ -26,7 +26,9 @@ import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
 import fr.unice.polytech.modalis.familiar.operations.KnowledgeSynthesis;
 import fr.unice.polytech.modalis.familiar.variable.ConstraintVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
+import fr.unice.polytech.modalis.familiar.variable.FeatureVariable;
 import fr.unice.polytech.modalis.familiar.variable.RType;
+import fr.unice.polytech.modalis.familiar.variable.RefVariable;
 import fr.unice.polytech.modalis.familiar.variable.SetVariable;
 import fr.unice.polytech.modalis.familiar.variable.Variable;
 import gsd.synthesis.Expression;
@@ -129,6 +131,49 @@ public class KSynthesisAnalyzer extends FMLAbstractCommandAnalyzer {
 		
 		// TODO backend analysis for defining the synthesis strateg
 		// no interactive mode
+		
+		
+		
+		/*
+		 * The synthesis can be "over" a formula (local synthesis, a kind of slicing)
+		 * It computes a feature diagram 
+		 * 
+		 */
+		// TODO interactive mode 
+		// + with (partial) knowledge
+		// + backend 
+		boolean isOver = ksCmd.isOver() ;
+		if (isOver) {
+			// TODO refactor with ComputeConstraints "over" to have a commun function for parsing it
+			SetVariable setFts = _environment.parseSetCommand(ksCmd.getFts(), null) ;
+			
+			Set<String> fts = new HashSet<String>();
+			Set<Variable> svars = setFts.getVars();
+			for (Variable var : svars) {
+
+				if (var instanceof RefVariable)
+					var = ((RefVariable) var).getValueReference();
+
+				if (!(var instanceof FeatureVariable)) {
+					FMLShell.getInstance().printError(
+							"var=" + var + " is not a feature in the set feature");
+					return;
+				}
+
+				assert (var instanceof FeatureVariable);
+				FeatureVariable ftv = (FeatureVariable) var;
+
+				// TODO: check that ftv truly belongs to variables of the formula
+				fts.add(ftv.getFtName());
+
+			}
+			
+			FeatureModelVariable fmSynthesised = fmToSynthesis.ksynthesisOver(kst1, fts);
+			setVariable(fmSynthesised) ;
+			return ; 
+		}
+		
+		
 		FeatureModelVariable fmSynthesised = fmToSynthesis.ksynthesis(kst1);
 			
 		setVariable(fmSynthesised) ; 

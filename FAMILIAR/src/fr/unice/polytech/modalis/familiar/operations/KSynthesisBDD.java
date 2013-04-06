@@ -621,4 +621,153 @@ public class KSynthesisBDD extends KSynthesis  {
 		return result;
 	}
 
+	/* refactor (copy and paste style)
+	 * (non-Javadoc)
+	 * 
+	 * @see fr.unice.polytech.modalis.familiar.operations.KSynthesis#buildOver(java.util.Set)
+	 */
+	@Override
+	public FeatureModelVariable buildOver(Set<String> fts) {
+		// 1. PREPROCESSING STEP (of the formula)
+		// Note that we actually assume that "fla" has no dead features
+		Formula<String> lFla = new FormulaAnalyzer<String>((BDDFormula) _fla, _builder).uniformize() ; 
+		Set<String> support = fts ; // lFla.getDomain() ;
+		
+		
+		if (!_kn.isHierarchySpecified()) {
+			FMLShell.getInstance().printTODO("Currently, we expect that at least the hierarchy is specified... (will be fixed soon)") ;
+			return null ; 
+		}
+		
+		
+		FeatureGraph<String> fmHierarchy = _kn.getHierarchy() ; 
+		// FIXME could be a pre-condition 
+		// in some situations (merge intersection, slice with "anomalies", cleanup, etc.) 
+		// we should remove the features included in the intended hierarchy but actually dead features 
+		Set<String> deadFtsHiearchy = Sets.difference(fmHierarchy.features(), support);
+		_LOGGER.debug("deadFtsHiearchy: " + deadFtsHiearchy);
+		cleanHierarchy(new FeatureModel<String>(fmHierarchy), deadFtsHiearchy);
+		
+		assert (support.equals(fmHierarchy.features()));
+		
+		FeatureModel<String> synthesisedFM = new FeatureModel<String>(fmHierarchy.clone());
+		FeatureGraph<String> synthesisedFD = synthesisedFM.getDiagram();
+
+		mkSyntheticRoot(synthesisedFD);
+			
+		
+		// 2. IMPLICATION/EXCLUSION (aka MUTEX) GRAPH
+
+		_LOGGER.debug("Implication graph");
+		ImplicationGraph<String> impl = IGBuilderDomain.build(lFla, _builder, fts) ; 		
+		
+		_LOGGER.debug("Exclusion graph");
+		ExclusionGraph<String> excl = EGBuilder.build(lFla.getBDD(), _builder, fts); 
+
+		List<Set<String>> cliques = DirectedCliqueFinder.INSTANCE.findAll(impl);
+		_LOGGER.debug("Cliques: " + cliques);
+
+		
+		// 3. FIXING mandatory features
+		_LOGGER.debug("And-groups");
+		mkHierarchyAndGroups(synthesisedFD, cliques); 
+
+
+		// 4. FIXING groups
+		_LOGGER.debug("Mutex graph / groups");
+		Set<MutexGroup> mutexes = computeMutexGroups(synthesisedFD, lFla); // replace by excl!
+		_LOGGER.debug("Mutex computation (based on hierarchy)=" + mutexes);
+		
+		Set<FGroup> allGroups = new HashSet<FGroup>();
+		if (!hasOrGroupSupport()) {
+			Set<XorGroup> xors = computeXorBasedOnMutexGroups(lFla, mutexes);
+			_LOGGER.debug("xors=" + xors);
+			allGroups = Sets.union(xors, mutexes);
+		} else {
+			_LOGGER.debug("Prime implicants / Or/Xor groups");
+			Set<FGroup> xOrOrs = computeXorOrGroups(synthesisedFD, lFla);
+			_LOGGER.debug("Xor/Or computation (based on hierarchy)=" + xOrOrs);
+			allGroups = Sets.union(xOrOrs, mutexes);
+		}
+
+		// normalization
+		_LOGGER.debug("All groups computation (based on hierarchy)=" + allGroups);
+				
+		Set<FGroup> allGroupsNormalized = simplifyMutexXor(allGroups);
+		_LOGGER.debug("After Xor/Mtx subsume: " + allGroupsNormalized);
+		
+		// sort ambigous groups by "feature"
+		Set<AmbigousGroup> ambigousGroups = ambigousGroups(allGroupsNormalized);
+		
+		
+		Set<FGroup> resolvedGroups = allGroupsNormalized ;
+		Set<FGroup> unsynthesisedGroups = new HashSet<FGroup> () ; 
+		if (ambigousGroups.size() > 0) {
+			// TODO: knowledge needed!
+			Set<FGroup> knGroups = _kn.getGroups() ;
+			// TODO implement the resolving strategy
+			if (knGroups.size() > 0) {
+					// TODO: it can be not sufficient!
+			}
+			else { // no knowledge related to groups!
+				setConflictingGroups(new HashSet<AmbigousGroup>(ambigousGroups)); 				
+				resolvedGroups = performBasicResolvingGroupStrategy(allGroupsNormalized, ambigousGroups) ;
+				
+				// unsynthesised feature groups can be restitued as arbitary set of constraints
+				unsynthesisedGroups = Sets.difference(allGroupsNormalized, resolvedGroups) ;
+				
+			}
+			// if knowledge is not sufficient
+		}
+		else {
+			_LOGGER.debug("No ambiguity!");
+		}
+				
+		
+		_LOGGER.debug("All groups (elected)=" + resolvedGroups);
+		
+		_LOGGER.debug("Setting variability information");
+		setFGroupsInformation(synthesisedFD, resolvedGroups);
+
+		_LOGGER.debug("-- end of feature DIAGRAM synthesis -- ");
+		_LOGGER.debug("resulting FD without implies/excludes constraints: " + synthesisedFD);
+		
+		
+		
+		
+		ConstraintAdder cAdder = getAdderConstraint(_fdAddingCstStrategy, synthesisedFM);
+		_LOGGER.debug("unsynthesized feature groups=" + unsynthesisedGroups);
+		for (FGroup fGroup : unsynthesisedGroups) {
+			Expression<String> expr = fGroup.toExpression() ;
+			Collection<Expression<String>> exprs = ExpressionUtil.splitConjunction(expr) ;
+			for (Expression<String> e : exprs) {
+				boolean b = cAdder.addNonEntailedConstraint(e) ;
+				_LOGGER.debug("Adding " + e + "? " + b); 
+			}
+			
+
+			
+		}
+			
+		//cAdder.apply() ; 
+	
+
+		// 5. SETTING CONSTRAINTS 
+		_LOGGER.debug("Implies / Excludes");
+	
+		synthesisedFM = complementWithImpliesAndExcludes(synthesisedFM, impl, excl); 
+		
+		_LOGGER.debug("...Eliminate redundant if any (FIXME since opt)...");
+		// simplify (not necessary normally since we add incrementally the edges)
+		if (_simplificatorStrategy != ConstraintSimplifierStrategy.NONE) {
+		// FIXME @FeatureIDE
+			synthesisedFM = new FMLConstraintReasoner(synthesisedFM, _builder).eliminateRedundantConstraints();
+		}
+		_LOGGER.debug("End synthesis");
+	
+		
+		
+		return new FeatureModelVariableWithSynchronizedFormula("", synthesisedFM, _builder.mkFeatureModel(synthesisedFM));
+	}
+
 }

@@ -5478,7 +5478,7 @@ ruleSynthesis returns [EObject current=null]
 	    }
 
 )
-)(
+)?(
 (
 		{ 
 	        newCompositeNode(grammarAccess.getSynthesisAccess().getFmFMCommandParserRuleCall_2_0()); 
@@ -5496,23 +5496,56 @@ ruleSynthesis returns [EObject current=null]
 	    }
 
 )
-)(	otherlv_3='with' 
+)((
+(
+		lv_over_3_0=	'over' 
     {
-    	newLeafNode(otherlv_3, grammarAccess.getSynthesisAccess().getWithKeyword_3_0());
+        newLeafNode(lv_over_3_0, grammarAccess.getSynthesisAccess().getOverOverKeyword_3_0_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getSynthesisRule());
+	        }
+       		setWithLastConsumed($current, "over", true, "over");
+	    }
+
+)
+)(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getSynthesisAccess().getFtsSetCommandParserRuleCall_3_1_0()); 
+	    }
+		lv_fts_4_0=ruleSetCommand		{
+	        if ($current==null) {
+	            $current = createModelElementForParent(grammarAccess.getSynthesisRule());
+	        }
+       		set(
+       			$current, 
+       			"fts",
+        		lv_fts_4_0, 
+        		"SetCommand");
+	        afterParserOrEnumRuleCall();
+	    }
+
+)
+))?(	otherlv_5='with' 
+    {
+    	newLeafNode(otherlv_5, grammarAccess.getSynthesisAccess().getWithKeyword_4_0());
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getSynthesisAccess().getKstKnowledgeSpecificationParserRuleCall_3_1_0()); 
+	        newCompositeNode(grammarAccess.getSynthesisAccess().getKstKnowledgeSpecificationParserRuleCall_4_1_0()); 
 	    }
-		lv_kst_4_0=ruleKnowledgeSpecification		{
+		lv_kst_6_0=ruleKnowledgeSpecification		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getSynthesisRule());
 	        }
        		set(
        			$current, 
        			"kst",
-        		lv_kst_4_0, 
+        		lv_kst_6_0, 
         		"KnowledgeSpecification");
 	        afterParserOrEnumRuleCall();
 	    }

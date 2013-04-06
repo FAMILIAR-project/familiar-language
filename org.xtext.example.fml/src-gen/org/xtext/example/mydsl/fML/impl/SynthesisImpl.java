@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.xtext.example.mydsl.fML.FMCommand;
 import org.xtext.example.mydsl.fML.FMLPackage;
 import org.xtext.example.mydsl.fML.KnowledgeSpecification;
+import org.xtext.example.mydsl.fML.SetCommand;
 import org.xtext.example.mydsl.fML.Synthesis;
 
 /**
@@ -24,6 +25,8 @@ import org.xtext.example.mydsl.fML.Synthesis;
  * <ul>
  *   <li>{@link org.xtext.example.mydsl.fML.impl.SynthesisImpl#isInteractive <em>Interactive</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.fML.impl.SynthesisImpl#getFm <em>Fm</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.fML.impl.SynthesisImpl#isOver <em>Over</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.fML.impl.SynthesisImpl#getFts <em>Fts</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.fML.impl.SynthesisImpl#getKst <em>Kst</em>}</li>
  * </ul>
  * </p>
@@ -61,6 +64,36 @@ public class SynthesisImpl extends CommandImpl implements Synthesis
    * @ordered
    */
   protected FMCommand fm;
+
+  /**
+   * The default value of the '{@link #isOver() <em>Over</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isOver()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean OVER_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isOver() <em>Over</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isOver()
+   * @generated
+   * @ordered
+   */
+  protected boolean over = OVER_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getFts() <em>Fts</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFts()
+   * @generated
+   * @ordered
+   */
+  protected SetCommand fts;
 
   /**
    * The cached value of the '{@link #getKst() <em>Kst</em>}' containment reference.
@@ -169,6 +202,77 @@ public class SynthesisImpl extends CommandImpl implements Synthesis
    * <!-- end-user-doc -->
    * @generated
    */
+  public boolean isOver()
+  {
+    return over;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setOver(boolean newOver)
+  {
+    boolean oldOver = over;
+    over = newOver;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, FMLPackage.SYNTHESIS__OVER, oldOver, over));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SetCommand getFts()
+  {
+    return fts;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetFts(SetCommand newFts, NotificationChain msgs)
+  {
+    SetCommand oldFts = fts;
+    fts = newFts;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, FMLPackage.SYNTHESIS__FTS, oldFts, newFts);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setFts(SetCommand newFts)
+  {
+    if (newFts != fts)
+    {
+      NotificationChain msgs = null;
+      if (fts != null)
+        msgs = ((InternalEObject)fts).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - FMLPackage.SYNTHESIS__FTS, null, msgs);
+      if (newFts != null)
+        msgs = ((InternalEObject)newFts).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - FMLPackage.SYNTHESIS__FTS, null, msgs);
+      msgs = basicSetFts(newFts, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, FMLPackage.SYNTHESIS__FTS, newFts, newFts));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public KnowledgeSpecification getKst()
   {
     return kst;
@@ -224,6 +328,8 @@ public class SynthesisImpl extends CommandImpl implements Synthesis
     {
       case FMLPackage.SYNTHESIS__FM:
         return basicSetFm(null, msgs);
+      case FMLPackage.SYNTHESIS__FTS:
+        return basicSetFts(null, msgs);
       case FMLPackage.SYNTHESIS__KST:
         return basicSetKst(null, msgs);
     }
@@ -244,6 +350,10 @@ public class SynthesisImpl extends CommandImpl implements Synthesis
         return isInteractive();
       case FMLPackage.SYNTHESIS__FM:
         return getFm();
+      case FMLPackage.SYNTHESIS__OVER:
+        return isOver();
+      case FMLPackage.SYNTHESIS__FTS:
+        return getFts();
       case FMLPackage.SYNTHESIS__KST:
         return getKst();
     }
@@ -265,6 +375,12 @@ public class SynthesisImpl extends CommandImpl implements Synthesis
         return;
       case FMLPackage.SYNTHESIS__FM:
         setFm((FMCommand)newValue);
+        return;
+      case FMLPackage.SYNTHESIS__OVER:
+        setOver((Boolean)newValue);
+        return;
+      case FMLPackage.SYNTHESIS__FTS:
+        setFts((SetCommand)newValue);
         return;
       case FMLPackage.SYNTHESIS__KST:
         setKst((KnowledgeSpecification)newValue);
@@ -289,6 +405,12 @@ public class SynthesisImpl extends CommandImpl implements Synthesis
       case FMLPackage.SYNTHESIS__FM:
         setFm((FMCommand)null);
         return;
+      case FMLPackage.SYNTHESIS__OVER:
+        setOver(OVER_EDEFAULT);
+        return;
+      case FMLPackage.SYNTHESIS__FTS:
+        setFts((SetCommand)null);
+        return;
       case FMLPackage.SYNTHESIS__KST:
         setKst((KnowledgeSpecification)null);
         return;
@@ -310,6 +432,10 @@ public class SynthesisImpl extends CommandImpl implements Synthesis
         return interactive != INTERACTIVE_EDEFAULT;
       case FMLPackage.SYNTHESIS__FM:
         return fm != null;
+      case FMLPackage.SYNTHESIS__OVER:
+        return over != OVER_EDEFAULT;
+      case FMLPackage.SYNTHESIS__FTS:
+        return fts != null;
       case FMLPackage.SYNTHESIS__KST:
         return kst != null;
     }
@@ -329,6 +455,8 @@ public class SynthesisImpl extends CommandImpl implements Synthesis
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (interactive: ");
     result.append(interactive);
+    result.append(", over: ");
+    result.append(over);
     result.append(')');
     return result.toString();
   }

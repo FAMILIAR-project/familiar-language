@@ -2129,13 +2129,31 @@ public interface FMLPackage extends EPackage
   int SYNTHESIS__FM = COMMAND_FEATURE_COUNT + 1;
 
   /**
+   * The feature id for the '<em><b>Over</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SYNTHESIS__OVER = COMMAND_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Fts</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SYNTHESIS__FTS = COMMAND_FEATURE_COUNT + 3;
+
+  /**
    * The feature id for the '<em><b>Kst</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SYNTHESIS__KST = COMMAND_FEATURE_COUNT + 2;
+  int SYNTHESIS__KST = COMMAND_FEATURE_COUNT + 4;
 
   /**
    * The number of structural features of the '<em>Synthesis</em>' class.
@@ -2144,7 +2162,7 @@ public interface FMLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SYNTHESIS_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 3;
+  int SYNTHESIS_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.impl.KnowledgeSpecificationImpl <em>Knowledge Specification</em>}' class.
@@ -6897,6 +6915,28 @@ public interface FMLPackage extends EPackage
    * @generated
    */
   EReference getSynthesis_Fm();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.fML.Synthesis#isOver <em>Over</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Over</em>'.
+   * @see org.xtext.example.mydsl.fML.Synthesis#isOver()
+   * @see #getSynthesis()
+   * @generated
+   */
+  EAttribute getSynthesis_Over();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.fML.Synthesis#getFts <em>Fts</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Fts</em>'.
+   * @see org.xtext.example.mydsl.fML.Synthesis#getFts()
+   * @see #getSynthesis()
+   * @generated
+   */
+  EReference getSynthesis_Fts();
 
   /**
    * Returns the meta object for the containment reference '{@link org.xtext.example.mydsl.fML.Synthesis#getKst <em>Kst</em>}'.

@@ -655,7 +655,13 @@ public abstract class KSynthesis {
 		return parents.iterator().next();
 	}
 
-	
+	/**
+	 * synthesise a feature model over a set of features (local synthesis)
+	 * @param fts
+	 * @return
+	 */
+	public abstract FeatureModelVariable buildOver(Set<String> fts) ;
+		
 	
 	
 	
