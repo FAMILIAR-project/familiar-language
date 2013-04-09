@@ -19,70 +19,70 @@
 				: ComputerLoad(_r3)
 				: ResponseTime(_r4)
 				: Quality(_r5)
-				:g [1,*]
+					:g [1,*]
 						: Sensitivity(_r6)
 						: Precision(_r7)
 							:o LessPrecision(_r8)
 		:m Scene(_r9)
-			:m Environment(_r10)
-				:m LightingType(_r11)
-				:g [1,*]
-						: ArtificialLight(_r12)
-						: NaturalLight(_r13)
-				:o Noise(_r14)
-					:o BackgroundMovement(_r15)
-						:g [1,*]
-							: SandOrDust(_r16)
-							: SeaOceanWaves(_r17)
-							: VegetationMovement(_r18)
-					:o LightingVariation(_r19)
-						:g [1,*]
-							: Flashes(_r20)
-							: HeadLight(_r21)
-							: Shadows(_r22)
-				:m LightingConditions(_r23)
-				:g [1,*]
-						: Indoors(_r24)
-						: Outdoors(_r25)
-							:m TimeOfDay(_r26)
-							:g [1,*]
-									: Day(_r27)
-									: Night(_r28)
-			:m APrioriKnowledge(_r29)
-				:m Scenery3DModel(_r30)
-				:o BehaviourLibrary(_r31)
-				:o DeploymentArchitecture(_r32)
-					:m Sensor(_r33)
-						:m Camera(_r34)
-							:m DepthOfField(_r35)
-							:m FramesPerSecond(_r36)
-								:g [1,1]
-									: HighFrameRate(_r37)
-										:m VingtCinqFrSec(_r38)
-									: LowFrameRate(_r39)
-									: IntermediateFrameRate(_r40)
-							:m CameraType(_r41)
-								:g [1,1]
-									: BlackAndWhite(_r42)
-									: Color(_r43)
-									: Infrared(_r44)
-							:m FieldOfView(_r45)
-								:g [1,1]
-									: Large(_r46)
-									: Narrow(_r47)
-							:m Resolution(_r48)
-						:m SensorProperty(_r49)
+			:m APrioriKnowledge(_r10)
+				:o BehaviourLibrary(_r11)
+				:m Scenery3DModel(_r12)
+				:o DeploymentArchitecture(_r13)
+					:m Server(_r14)
+					:m Sensor(_r15)
+						:m SensorView(_r16)
 							:g [1,1]
-								: MonoSensor(_r50)
-								: MultiSensor(_r51)
-						:m SensorView(_r52)
+								: SideView(_r17)
+								: TopView(_r18)
+								: NormalView(_r19)
+						:m SensorProperty(_r20)
 							:g [1,1]
-								: SideView(_r53)
-								: TopView(_r54)
-								: NormalView(_r55)
-					:o ClientDefined(_r56)
-					:m Server(_r57)
-					:o ProgrammerDefined(_r58)
+								: MonoSensor(_r21)
+								: MultiSensor(_r22)
+						:m Camera(_r23)
+							:m CameraType(_r24)
+								:g [1,1]
+									: BlackAndWhite(_r25)
+									: Color(_r26)
+									: Infrared(_r27)
+							:m DepthOfField(_r28)
+							:m Resolution(_r29)
+							:m FramesPerSecond(_r30)
+								:g [1,1]
+									: HighFrameRate(_r31)
+										:m VingtCinqFrSec(_r32)
+									: LowFrameRate(_r33)
+									: IntermediateFrameRate(_r34)
+							:m FieldOfView(_r35)
+								:g [1,1]
+									: Large(_r36)
+									: Narrow(_r37)
+					:o ClientDefined(_r38)
+					:o ProgrammerDefined(_r39)
+			:m Environment(_r40)
+				:m LightingType(_r41)
+					:g [1,*]
+						: ArtificialLight(_r42)
+						: NaturalLight(_r43)
+				:o Noise(_r44)
+					:o BackgroundMovement(_r45)
+						:g [1,*]
+							: SandOrDust(_r46)
+							: SeaOceanWaves(_r47)
+							: VegetationMovement(_r48)
+					:o LightingVariation(_r49)
+						:g [1,*]
+							: Flashes(_r50)
+							: HeadLight(_r51)
+							: Shadows(_r52)
+				:m LightingConditions(_r53)
+					:g [1,*]
+						: Indoors(_r54)
+						: Outdoors(_r55)
+							:m TimeOfDay(_r56)
+								:g [1,*]
+									: Day(_r57)
+									: Night(_r58)
 		:m Task(_r59)
 			:g [1,*]
 				: Counting(_r60)
@@ -90,16 +90,16 @@
 				: BehaviourRecognition(_r62)
 					:o IntrusionDetection(_r63)
 		:m ObjectOfInterest(_r64)
-			:m Sort(_r65)
-				:g [1,*]
-					: Natural(_r66)
-						:m Person(_r67)
-					: Manufactured(_r68)
-						:m Vehicle(_r69)
-			:m Cardinality(_r70)
+			:m Cardinality(_r65)
 				:g [1,1]
-					: SingleObject(_r71)
-					: GroupOfObjects(_r72)
+					: SingleObject(_r66)
+					: GroupOfObjects(_r67)
+			:m Sort(_r68)
+				:g [1,*]
+					: Natural(_r69)
+						:m Person(_r70)
+					: Manufactured(_r71)
+						:m Vehicle(_r72)
 			:m Mobility(_r73)
 				:g [1,1]
 					: Movable(_r74)
@@ -108,110 +108,110 @@
 							: SelfPropelled(_r76)
 					: Immovable(_r77)
 	:m VSPlatform(_r78)
-		:o ScenarioRecognition(_r79)
+		:o ReferenceImageUpdating(_r79)
 		:m ImageAcquisition(_r80)
-		:m FrameToFrameTracking(_r81)
-		:m SegmentationModule(_r82)
-			:m TraversalAlgorithm(_r83)
-				:m TraversalParameters(_r84)
-					:g [1,*]
-						: WithWindow(_r85)
-						: WithMask(_r86)
-						: Fast(_r87)
-				:m GridStep(_r88)
-					:g [1,1]
-						: HighGridStep(_r89)
-						: LowGridStep(_r90)
-			:m KernelFunction(_r91)
-				:o ShadowElimination(_r92)
-				:m ColorType(_r93)
+		:o ScenarioRecognition(_r81)
+		:o TrackingDataFusion(_r82)
+		:m ClassificationModule(_r83)
+			:m ClassificationStandard(_r84)
+				:o Density(_r85)
+			:m Model(_r86)
 				:g [1,1]
-						: GreyLevel(_r94)
-						: SystemColor(_r95)
-				:m ObjectAspect(_r96)
-					:g [1,1]
-						: Edge(_r97)
-						: Region(_r98)
-			:o SegmFineTune(_r99)
-			:m Threshold(_r100)
-			:g [1,1]
-					: LowThreshold(_r101)
-					: MidThreshold(_r102)
-					: HighThreshold(_r103)
-		:o LongTermTracking(_r104)
-		:o ReferenceImageUpdating(_r105)
-		:o TrackingDataFusion(_r106)
-		:m Clustering(_r107)
-			:g [1,1]
-				: DistanceRGBAnd3DClustering(_r108)
-				: FastClustering(_r109)
-				: KMeansClustering(_r110)
-		:m ClassificationModule(_r111)
-			:o Contour(_r112)
-			:m ClassificationStandard(_r113)
-				:o Density(_r114)
-			:o Split(_r115)
-			:g [1,1]
-					: SplitStandard(_r116)
-					: SplitGravityCenter(_r117)
-			:m Model(_r118)
-			:g [1,1]
-					: ModelType(_r119)
+					: ModelType(_r87)
 						:g [1,*]
-							: OmegaModel(_r120)
-							: ThreeDModel(_r121)
-					: Ellipse(_r122)
-					: Shape(_r123)
-					: Parallelepiped(_r124)
-					: GravityCenter(_r125)
-			:o Merge(_r126)
+							: OmegaModel(_r88)
+							: ThreeDModel(_r89)
+					: Ellipse(_r90)
+					: Shape(_r91)
+					: Parallelepiped(_r92)
+					: GravityCenter(_r93)
+			:o Merge(_r94)
+			:g [1,1]
+					: FusionGravityCenter(_r95)
+					: FusionStandard(_r96)
+			:o Split(_r97)
 				:g [1,1]
-					: FusionGravityCenter(_r127)
-					: FusionStandard(_r128)
+					: SplitStandard(_r98)
+					: SplitGravityCenter(_r99)
+			:o Contour(_r100)
+		:o LongTermTracking(_r101)
+		:m FrameToFrameTracking(_r102)
+		:m Clustering(_r103)
+			:g [1,1]
+				: DistanceRGBAnd3DClustering(_r104)
+				: FastClustering(_r105)
+				: KMeansClustering(_r106)
+		:m SegmentationModule(_r107)
+			:m TraversalAlgorithm(_r108)
+				:m TraversalParameters(_r109)
+				:g [1,*]
+						: WithWindow(_r110)
+						: WithMask(_r111)
+						: Fast(_r112)
+				:m GridStep(_r113)
+				:g [1,1]
+						: HighGridStep(_r114)
+						: LowGridStep(_r115)
+			:m KernelFunction(_r116)
+				:m ObjectAspect(_r117)
+					:g [1,1]
+						: Edge(_r118)
+						: Region(_r119)
+				:m ColorType(_r120)
+					:g [1,1]
+						: GreyLevel(_r121)
+						: SystemColor(_r122)
+				:o ShadowElimination(_r123)
+			:o SegmFineTune(_r124)
+			:m Threshold(_r125)
+				:g [1,1]
+					: LowThreshold(_r126)
+					: MidThreshold(_r127)
+					: HighThreshold(_r128)
 </feature_tree>
 <constraints>
 C0:~_r4 or _r61
-C1:~_r25 or _r97
-C2:_r99 or _r8
-C3:~_r89 or ~_r97
-C4:~_r22 or _r92
-C5:~_r85 or ~_r97
-C6:~_r7 or _r38
-C7:~_r63 or _r39
-C8:~_r67 or _r74
-C9:~_r19 or _r97
-C10:~_r6 or _r101
-C11:~_r60 or _r38
-C12:~_r69 or _r74
-C13:~_r12 or _r79
-C14:~_r60 or _r46
-C15:~_r85 or ~_r122
-C16:~_r43 or _r95
-C17:~_r67 or _r120
-C18:~_r60 or _r7
-C19:_r125 or _r128
-C20:~_r60 or _r105
-C21:~_r79 or _r12
-C22:~_r4 or _r104
-C23:~_r99 or ~_r123
-C24:~_r97 or ~_r114
-C25:_r85 or ~_r8
-C26:~_r8 or ~_r99
-C27:~_r54 or ~_r121
-C28:_r20 or ~_r21 or _r112
-C29:_r88 or ~_r8
-C30:~_r44 or ~_r46
-C31:~_r61 or _r37
-C32:_r55 or ~_r53 or _r104
-C33:~_r60 or _r90
-C34:~_r89 or ~_r122
-C35:~_r51 or _r106
-C36:~_r72 or _r86
-C37:~_r51 or _r104
-C38:~_r67 or _r76
-C39:~_r12 or _r105
-C40:_r125 or _r116
-C41:~_r24 or _r98
-C42:~_r106 or _r51
+C1:~_r118 or ~_r85
+C2:~_r110 or ~_r90
+C3:_r110 or ~_r8
+C4:_r124 or _r8
+C5:~_r7 or _r32
+C6:~_r70 or _r76
+C7:~_r70 or _r74
+C8:~_r60 or _r36
+C9:~_r18 or ~_r89
+C10:~_r60 or _r32
+C11:~_r52 or _r123
+C12:_r19 or ~_r17 or _r101
+C13:~_r42 or _r81
+C14:~_r26 or _r122
+C15:~_r22 or _r101
+C16:~_r42 or _r79
+C17:~_r8 or ~_r124
+C18:~_r61 or _r31
+C19:~_r60 or _r7
+C20:~_r114 or ~_r118
+C21:_r50 or ~_r51 or _r100
+C22:~_r72 or _r74
+C23:~_r4 or _r101
+C24:~_r22 or _r82
+C25:~_r70 or _r88
+C26:~_r49 or _r118
+C27:~_r55 or _r118
+C28:~_r6 or _r126
+C29:~_r63 or _r33
+C30:_r113 or ~_r8
+C31:~_r54 or _r119
+C32:_r93 or _r96
+C33:~_r67 or _r111
+C34:_r93 or _r98
+C35:~_r82 or _r22
+C36:~_r110 or ~_r118
+C37:~_r114 or ~_r90
+C38:~_r60 or _r79
+C39:~_r124 or ~_r91
+C40:~_r60 or _r115
+C41:~_r81 or _r42
+C42:~_r27 or ~_r36
 </constraints>
 </feature_model>

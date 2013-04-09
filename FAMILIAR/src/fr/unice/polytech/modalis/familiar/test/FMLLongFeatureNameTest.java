@@ -5,16 +5,19 @@ package fr.unice.polytech.modalis.familiar.test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import java.util.Set;
 
 import org.junit.Test;
+import org.prop4j.Literal;
 import org.xtext.example.mydsl.fML.FMFormat;
 import org.xtext.example.mydsl.fML.FeatureEdgeKind;
 import org.xtext.example.mydsl.fML.SliceMode;
 
-
+import de.ovgu.featureide.fm.core.Constraint;
+import fr.unice.polytech.modalis.familiar.fm.featureide.FMLtoFeatureIDE;
 import fr.unice.polytech.modalis.familiar.variable.Comparison;
 import fr.unice.polytech.modalis.familiar.variable.ConstraintVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
@@ -33,10 +36,14 @@ public class FMLLongFeatureNameTest extends FMLTest {
 		FeatureModelVariable fm1 = FM ("fm1", "A : \"B baby \" C [\"D\"] ; \"D\" : [E] \"F\" ; C : (\"H H H\"|I) ; ");
 		Set<String> fts1 = fm1.features().names() ;
 		FeatureModelVariable fm1bis = FM ("fm1bis", "A : B C [D] ; D : [E] F ; C : (H|I) ; ");
+		System.err.println("fts1=" + fts1);
+		
 		assertEquals (fm1bis.counting(), fm1.counting(), 0);
 		
-		System.err.println("fts1=" + fts1);
+		_shell.setVerbose(true);
 		FeatureVariable d = (FeatureVariable) _shell.parse("d = fm1.\"D\"");
+		_shell.setVerbose(false);
+		assertNotNull(d);
 		System.err.println("d=" + d.getFtName());
 		System.err.println("d=" + d.parent().getFtName());
 		VariabilityOperatorVariable dVop = fm1.getVOP(d.getFtName()) ;
@@ -77,6 +84,26 @@ public class FMLLongFeatureNameTest extends FMLTest {
 		
 		assertEquals(Comparison.REFACTORING, idFm1.compare(fm1));
 		assertEquals(Comparison.REFACTORING, fm1.compare(idFm1));
+		
+	}
+	
+	@Test
+	public void test2() throws Exception {
+		
+		FeatureModelVariable fm1 = FM ("fm1", "A : \"B baby \" C [\"D\"] ; \"D\" : [E] \"F\" ; C : (\"H H H\"|I) ; ");
+		assertTrue(fm1.renameFeature("D", "Dd"));
+		assertTrue(fm1.renameFeature("B baby ", "B "));
+		assertTrue(fm1.renameFeature("A", "A "));
+		assertTrue(fm1.renameFeature("E", "E @ 123 "));
+		
+		
+		_shell.parse("renameFeature fm1.\"H H H\" as \"Serie H Saison 1 @ \"");
+		
+		System.err.println("" + fm1.features().names());
+		
+		de.ovgu.featureide.fm.core.FeatureModel fmIDE1 = new FMLtoFeatureIDE(fm1).convert();
+		System.err.println("" + fmIDE1.getFeatureNames()); 
+		//fmIDE1.addConstraint(new Constraint(fmIDE1, new Literal("Bjjjjj", true)));
 		
 	}
 

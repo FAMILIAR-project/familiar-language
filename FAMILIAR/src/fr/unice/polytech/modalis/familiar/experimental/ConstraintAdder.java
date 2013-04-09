@@ -57,6 +57,7 @@ public abstract class ConstraintAdder {
 		int bi = 0; 
 		for (Expression<String> biimply : _biimplies) {
 			boolean b1 = addNonEntailedConstraint(biimply);
+			// time consuming: 
 			_LOGGER.debug("expr(" + bi++ + "/" + nBI + ") =" + biimply + " (" + b1 + ")");			
 		}
 		
@@ -69,6 +70,7 @@ public abstract class ConstraintAdder {
 		int i = 0 ; 
 		for (Expression<String> imply : implies2) {
 			boolean b1 = addNonEntailedConstraint(imply);
+			// time consuming: 
 			_LOGGER.debug("expr(" + i++ + "/" + nI + ") =" + imply + " (" + b1 + ")");			
 		}
 
@@ -80,7 +82,9 @@ public abstract class ConstraintAdder {
 		int e = 0 ; 
 		for (Expression<String> exclude : excludes2) {
 			boolean b1 = addNonEntailedConstraint(exclude);
+			// time consuming: 
 			_LOGGER.debug("expr(" + e++ + "/" + nE + ") =" + exclude + " (" + b1 + ")");
+			
 		}
 		return _fm ; 
 	}

@@ -105,6 +105,8 @@ import org.xtext.example.mydsl.fML.VariableNull;
 import org.xtext.example.mydsl.fML.impl.ComplexCommandImpl;
 import org.xtext.example.mydsl.ui.internal.FMLActivator;
 
+import FeatureName.FeatureName;
+
 import com.google.inject.Injector;
 
 import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
@@ -1056,6 +1058,9 @@ public class FMLCommandInterpreter {
 		_LOGGER.debug(
 				"(extraction) actualFeatureName=" + actualFeatureName);
 
+		if (FeatureName.isQuoted(actualFeatureName))
+			return actualFeatureName ;
+		
 		// hack (qualified or not)
 		// fm1.(B.A) is qualified
 		// A is not
@@ -1145,6 +1150,7 @@ public class FMLCommandInterpreter {
 						+ actualFeatureName + " does not work");
 			}
 
+			actualFeatureName = FeatureName.unquote(actualFeatureName);
 			_LOGGER.debug("actual feature name: " + actualFeatureName);
 
 			try {
@@ -1171,6 +1177,13 @@ public class FMLCommandInterpreter {
 				// hack (qualified or not)
 				// fm1.(B.A) is qualified
 				// A is not
+				
+				if (fmw.features().names().contains(actualFeatureName)) {
+					_LOGGER.debug(
+							"actualFeatureName seems to be a qualified feature name but it's a feature of the feature model");
+					return fmw ; 
+				}
+				
 				if (isQualifiedFtName(actualFeatureName)) {
 					_LOGGER.debug(
 							"actualFeatureName=" + actualFeatureName
@@ -1607,10 +1620,12 @@ public class FMLCommandInterpreter {
 		// TODO:
 		// can be a FEATURE!!!!
 		if (!found) {
+			
 			_LOGGER.debug(
 					"Determining if identifier= " + id + " is a feature!");
 			FeatureVariable fw = null;
 			FeatureModelVariable fmw = null;
+			
 			try {
 				fw = retrieveFeature(id);
 				variable = fw;
@@ -1628,7 +1643,7 @@ public class FMLCommandInterpreter {
 													// first part of the
 													// identifier
 					id = extractFeaturefromFeature(id);
-
+					id = FeatureName.unquote(id) ; 
 					// TODO
 					if (fmw != null) {
 						variable = new FeatureVariable(null, id, fmw);

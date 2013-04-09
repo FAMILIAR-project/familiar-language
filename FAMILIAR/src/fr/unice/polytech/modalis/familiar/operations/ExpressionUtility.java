@@ -39,6 +39,8 @@ import net.sf.javabdd.BDD;
 import org.apache.commons.collections15.CollectionUtils;
 import org.apache.log4j.Logger;
 
+import FeatureName.FeatureName;
+
 
 /**
  * @author mathieuacher
@@ -51,6 +53,27 @@ public class ExpressionUtility {
 	private static Logger _LOGGER = Logger.getLogger(ExpressionUtility.class);
 
 
+	
+	public static String toString(Expression<String> e) {
+		switch (e.getType()) {
+		case FEATURE:
+			return FeatureName.quoteNeedsBe(e.getFeature().toString());
+		case TRUE:
+			return "1";
+		case FALSE:
+			return "0";
+		case NOT:
+			return "!" + toString(e.getLeft());
+		default:
+			StringBuffer sb = new StringBuffer();
+			sb.append('(');
+			sb.append(toString(e.getLeft()));
+			sb.append(" " + e.getType() + " ");
+			sb.append(toString(e.getRight()));
+			sb.append(')');
+			return sb.toString();
+		}
+	}
 	
 	/**
 	 * @param oldvalue

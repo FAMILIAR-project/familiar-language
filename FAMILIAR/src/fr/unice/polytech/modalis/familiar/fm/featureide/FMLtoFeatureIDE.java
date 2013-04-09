@@ -297,9 +297,7 @@ public class FMLtoFeatureIDE extends FeatureIDEConverterUtils {
 	}
 
 	private de.ovgu.featureide.fm.core.FeatureModel transformToModel() {
-		
 		FeatureModelUtil.normalizeMultiGroups(_fm);
-		
 		de.ovgu.featureide.fm.core.FeatureModel rFM = new de.ovgu.featureide.fm.core.FeatureModel();
 		
 		Set<String> fts = new HashSet<String>() ;
@@ -320,7 +318,8 @@ public class FMLtoFeatureIDE extends FeatureIDEConverterUtils {
 		}
 		
 		assert (rootName != null);
-		
+		_LOGGER.debug ("fts: " + fts + " rootName: " + rootName);
+
 		for (String ft : fts) {
 			
 			Feature parent = rFM.getFeature(ft) ;
@@ -398,6 +397,7 @@ public class FMLtoFeatureIDE extends FeatureIDEConverterUtils {
 				rFM.addConstraint(new Constraint(rFM, node));
 			
 		}
+		
 		
 		return rFM ; 
 	}

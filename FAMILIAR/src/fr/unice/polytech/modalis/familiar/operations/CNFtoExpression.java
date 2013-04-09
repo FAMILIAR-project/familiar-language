@@ -31,6 +31,8 @@ import org.xtext.example.mydsl.fML.Neg_expr;
 import org.xtext.example.mydsl.fML.Or_expr;
 import org.xtext.example.mydsl.fML.impl.CNFExpressionImpl;
 
+import FeatureName.FeatureName;
+
 public class CNFtoExpression {
 
 	private CNF _cnf;
@@ -116,7 +118,7 @@ public class CNFtoExpression {
 		else if (name.equals("false")) {
 			return "0" ; 
 		}
-		return name ; 
+		return FeatureName.unquote(name) ; 
 	}
 
 }
