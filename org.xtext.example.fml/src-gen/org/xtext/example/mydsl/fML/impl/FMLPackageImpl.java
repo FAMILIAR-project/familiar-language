@@ -2928,7 +2928,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getMerge_Mode()
+  public EAttribute getMerge_Lazy()
   {
         return (EAttribute)getMerge().getEStructuralFeatures().get(1);
   }
@@ -2938,9 +2938,19 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getMerge_Mode()
+  {
+        return (EAttribute)getMerge().getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getMerge_Lfms()
   {
-        return (EReference)getMerge().getEStructuralFeatures().get(2);
+        return (EReference)getMerge().getEStructuralFeatures().get(3);
   }
 
   /**
@@ -2950,7 +2960,7 @@ public class FMLPackageImpl extends EPackageImpl implements FMLPackage
    */
   public EReference getMerge_Fms()
   {
-        return (EReference)getMerge().getEStructuralFeatures().get(3);
+        return (EReference)getMerge().getEStructuralFeatures().get(4);
   }
 
   /**

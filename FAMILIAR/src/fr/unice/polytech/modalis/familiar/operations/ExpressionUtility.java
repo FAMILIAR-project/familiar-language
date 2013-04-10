@@ -20,6 +20,7 @@
 package fr.unice.polytech.modalis.familiar.operations;
 
 import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
+import fr.unice.polytech.modalis.familiar.variable.FeatureName;
 import gsd.synthesis.BDDBuilder;
 import gsd.synthesis.Expression;
 import gsd.synthesis.ExpressionType;
@@ -39,7 +40,6 @@ import net.sf.javabdd.BDD;
 import org.apache.commons.collections15.CollectionUtils;
 import org.apache.log4j.Logger;
 
-import FeatureName.FeatureName;
 
 
 /**

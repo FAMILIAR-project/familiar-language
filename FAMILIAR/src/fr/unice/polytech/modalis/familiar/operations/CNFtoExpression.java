@@ -19,6 +19,7 @@
  */
 package fr.unice.polytech.modalis.familiar.operations;
 
+import fr.unice.polytech.modalis.familiar.variable.FeatureName;
 import gsd.synthesis.Expression;
 import gsd.synthesis.ExpressionType;
 
@@ -31,7 +32,6 @@ import org.xtext.example.mydsl.fML.Neg_expr;
 import org.xtext.example.mydsl.fML.Or_expr;
 import org.xtext.example.mydsl.fML.impl.CNFExpressionImpl;
 
-import FeatureName.FeatureName;
 
 public class CNFtoExpression {
 

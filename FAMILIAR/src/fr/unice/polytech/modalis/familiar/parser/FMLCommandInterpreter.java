@@ -105,7 +105,6 @@ import org.xtext.example.mydsl.fML.VariableNull;
 import org.xtext.example.mydsl.fML.impl.ComplexCommandImpl;
 import org.xtext.example.mydsl.ui.internal.FMLActivator;
 
-import FeatureName.FeatureName;
 
 import com.google.inject.Injector;
 
@@ -119,6 +118,7 @@ import fr.unice.polytech.modalis.familiar.variable.Comparison;
 import fr.unice.polytech.modalis.familiar.variable.ConfigurationVariable;
 import fr.unice.polytech.modalis.familiar.variable.ConstraintVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
+import fr.unice.polytech.modalis.familiar.variable.FeatureName;
 import fr.unice.polytech.modalis.familiar.variable.FeatureVariable;
 import fr.unice.polytech.modalis.familiar.variable.IntegerVariable;
 import fr.unice.polytech.modalis.familiar.variable.RefVariable;

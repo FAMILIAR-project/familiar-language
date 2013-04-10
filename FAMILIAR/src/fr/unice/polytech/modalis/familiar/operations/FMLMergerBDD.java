@@ -22,6 +22,7 @@ import fr.unice.polytech.modalis.familiar.parser.HierarchyMergerFactory;
 import fr.unice.polytech.modalis.familiar.parser.HierarchyMergerStrategy;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelLazyVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
+import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariableBDDFormula;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariableWithSynchronizedFormula;
 import gsd.synthesis.BDDBuilder;
 import gsd.synthesis.Expression;
@@ -341,22 +342,28 @@ public class FMLMergerBDD extends FMLMerger {
 
 	
 
-
-	
-	
 	/**
-	 * @param lfmvs
-	 *            list of feature model variables
 	 * @param mode
 	 * @return wrapper/utility function
 	 */
 	public FeatureModelVariable mergeFMs(Mode mode) {		
+		return mergeFMs(mode, false);
+	}
+	
+	
+
+	/**
+	 * @param mode
+	 * @param lazy if true only the formula is computed
+	 * @return
+	 */
+	public FeatureModelVariable mergeFMs(Mode mode, boolean lazy) {		
 
 
 		
 		/****** we have obtained the formula *****/
 		Formula<String> flaMerged = calculateFormula(mode);
-
+		
 		if (flaMerged.isZero()) // false
 			return FeatureModelVariable.mkFalse(flaMerged, 
 					HierarchyMergerFactory.mkMerger(HierarchyMergerStrategy.BASIC, null, null).build(_lfms)); // FIXME parametereize HierarchyMergerStrategy.MST_IMPLICATION_GRAPH
@@ -372,7 +379,8 @@ public class FMLMergerBDD extends FMLMerger {
 		// at this step, the formula represents *exactly* the set of
 		// configurations expected
 		Formula<String> originalFlaMerged = flaMerged ; //s.clone();
-
+		if (lazy)
+			return new FeatureModelVariableBDDFormula("", originalFlaMerged, builder);
 		
 		
 		
@@ -407,7 +415,7 @@ public class FMLMergerBDD extends FMLMerger {
 				flaMerged);
 
 
-		if (mode != Mode.StrictUnion)
+		if (mode != Mode.StrictUnion && mode != Mode.Union)
 			originalFlaMerged = new FormulaAnalyzer<String>(originalFlaMerged,
 					builder).removeDeadFeatures();
 		if (_flaStrategy == FDOverApproximationStrategy.LAZY_WITH_DIFF_FLA) {

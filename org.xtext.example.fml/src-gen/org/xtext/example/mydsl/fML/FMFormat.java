@@ -117,7 +117,17 @@ public enum FMFormat implements Enumerator
    * @generated
    * @ordered
    */
-  S2T2(9, "S2T2", "S2T2");
+  S2T2(9, "S2T2", "S2T2"),
+
+  /**
+   * The '<em><b>FMLBDD ONLY</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #FMLBDD_ONLY_VALUE
+   * @generated
+   * @ordered
+   */
+  FMLBDD_ONLY(10, "FMLBDD_ONLY", "bdd");
 
   /**
    * The '<em><b>DIMACS</b></em>' literal value.
@@ -270,6 +280,21 @@ public enum FMFormat implements Enumerator
   public static final int S2T2_VALUE = 9;
 
   /**
+   * The '<em><b>FMLBDD ONLY</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>FMLBDD ONLY</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #FMLBDD_ONLY
+   * @model literal="bdd"
+   * @generated
+   * @ordered
+   */
+  public static final int FMLBDD_ONLY_VALUE = 10;
+
+  /**
    * An array of all the '<em><b>FM Format</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -288,6 +313,7 @@ public enum FMFormat implements Enumerator
       FTRISKELL,
       FFML2,
       S2T2,
+      FMLBDD_ONLY,
     };
 
   /**
@@ -356,6 +382,7 @@ public enum FMFormat implements Enumerator
       case FTRISKELL_VALUE: return FTRISKELL;
       case FFML2_VALUE: return FFML2;
       case S2T2_VALUE: return S2T2;
+      case FMLBDD_ONLY_VALUE: return FMLBDD_ONLY;
     }
     return null;
   }

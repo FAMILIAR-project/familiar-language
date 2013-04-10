@@ -2292,7 +2292,7 @@ public class FMLSemanticSequencer extends AbstractDelegatingSemanticSequencer {
 	
 	/**
 	 * Constraint:
-	 *     (backend=BDDBackend? mode=MergeMode (lfms+=FMCommand+ | fms=LFMArgs))
+	 *     (backend=BDDBackend? lazy?='--lazy'? mode=MergeMode (lfms+=FMCommand+ | fms=LFMArgs))
 	 */
 	protected void sequence_Merge(EObject context, Merge semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

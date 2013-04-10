@@ -155,6 +155,8 @@ public class FMLSaveAnalyzer extends FMLAbstractCommandAnalyzer {
 			return "fmprimitives";
 		else if (format == FMFormat.FMLBDD)
 			return "fmlbdd";
+		else if (format == FMFormat.FMLBDD_ONLY)
+			return "bdd";
 		else
 			return "unknown";
 	}

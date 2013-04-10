@@ -65,7 +65,7 @@ public class FMLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getFeatureOperationAccess().getOpAlternatives_0_0(), "rule__FeatureOperation__OpAlternatives_0_0");
 					put(grammarAccess.getStringOperationAccess().getAlternatives(), "rule__StringOperation__Alternatives");
 					put(grammarAccess.getLoadGenericAccess().getStreamAlternatives_1_0(), "rule__LoadGeneric__StreamAlternatives_1_0");
-					put(grammarAccess.getMergeAccess().getAlternatives_3(), "rule__Merge__Alternatives_3");
+					put(grammarAccess.getMergeAccess().getAlternatives_4(), "rule__Merge__Alternatives_4");
 					put(grammarAccess.getAggregateMergeAccess().getAlternatives_3(), "rule__AggregateMerge__Alternatives_3");
 					put(grammarAccess.getHierarchySpecificationAccess().getAlternatives_1(), "rule__HierarchySpecification__Alternatives_1");
 					put(grammarAccess.getGroupSpecAccess().getAlternatives(), "rule__GroupSpec__Alternatives");
@@ -167,7 +167,7 @@ public class FMLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLoadGenericAccess().getGroup_3(), "rule__LoadGeneric__Group_3__0");
 					put(grammarAccess.getCTCRCommandAccess().getGroup(), "rule__CTCRCommand__Group__0");
 					put(grammarAccess.getMergeAccess().getGroup(), "rule__Merge__Group__0");
-					put(grammarAccess.getMergeAccess().getGroup_3_0(), "rule__Merge__Group_3_0__0");
+					put(grammarAccess.getMergeAccess().getGroup_4_0(), "rule__Merge__Group_4_0__0");
 					put(grammarAccess.getLFMArgsAccess().getGroup(), "rule__LFMArgs__Group__0");
 					put(grammarAccess.getLFMArgsAccess().getGroup_1(), "rule__LFMArgs__Group_1__0");
 					put(grammarAccess.getAggregateMergeAccess().getGroup(), "rule__AggregateMerge__Group__0");
@@ -355,9 +355,10 @@ public class FMLParser extends AbstractContentAssistParser {
 					put(grammarAccess.getLoadGenericAccess().getNsAssignment_3_1(), "rule__LoadGeneric__NsAssignment_3_1");
 					put(grammarAccess.getCTCRCommandAccess().getFmAssignment_1(), "rule__CTCRCommand__FmAssignment_1");
 					put(grammarAccess.getMergeAccess().getBackendAssignment_1(), "rule__Merge__BackendAssignment_1");
-					put(grammarAccess.getMergeAccess().getModeAssignment_2(), "rule__Merge__ModeAssignment_2");
-					put(grammarAccess.getMergeAccess().getLfmsAssignment_3_0_1(), "rule__Merge__LfmsAssignment_3_0_1");
-					put(grammarAccess.getMergeAccess().getFmsAssignment_3_1(), "rule__Merge__FmsAssignment_3_1");
+					put(grammarAccess.getMergeAccess().getLazyAssignment_2(), "rule__Merge__LazyAssignment_2");
+					put(grammarAccess.getMergeAccess().getModeAssignment_3(), "rule__Merge__ModeAssignment_3");
+					put(grammarAccess.getMergeAccess().getLfmsAssignment_4_0_1(), "rule__Merge__LfmsAssignment_4_0_1");
+					put(grammarAccess.getMergeAccess().getFmsAssignment_4_1(), "rule__Merge__FmsAssignment_4_1");
 					put(grammarAccess.getLFMArgsAccess().getLfmsAssignment_0(), "rule__LFMArgs__LfmsAssignment_0");
 					put(grammarAccess.getLFMArgsAccess().getLfmsAssignment_1_1(), "rule__LFMArgs__LfmsAssignment_1_1");
 					put(grammarAccess.getAggregateMergeAccess().getHierarchySpecifiedAssignment_1_0(), "rule__AggregateMerge__HierarchySpecifiedAssignment_1_0");

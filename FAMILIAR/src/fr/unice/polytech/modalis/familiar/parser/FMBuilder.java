@@ -48,7 +48,6 @@ import org.xtext.example.mydsl.fML.Xorgroup;
 
 import splar.core.fm.FeatureModelException;
 import splar.core.fm.XMLFeatureModel;
-import FeatureName.FeatureName;
 import fr.unice.polytech.modalis.familiar.fm.FMLBDDReader;
 import fr.unice.polytech.modalis.familiar.fm.FeatureModelChecker;
 import fr.unice.polytech.modalis.familiar.fm.basic.FMLFeatureModel;
@@ -72,6 +71,7 @@ import fr.unice.polytech.modalis.familiar.operations.featureide.SATFMLFormula;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelLazyVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariableBDDFormula;
+import fr.unice.polytech.modalis.familiar.variable.FeatureName;
 import fr.unice.polytech.modalis.familiar.variable.RType;
 import fr.unice.polytech.modalis.familiar.variable.featureide.FeatureModelVariableConstraints;
 import fr.unice.polytech.modalis.familiar.variable.featureide.FeatureModelVariableSATFormula;
@@ -179,12 +179,32 @@ public class FMBuilder extends FMLAbstractCommandAnalyzer {
 				
 				
 				Formula<String> fla = new Formula<String>(bdd, map.keySet(), builder);
-				
-				
+							
 				gsd.synthesis.FeatureModel<String> ifm = FMBuilder.getInternalFM("FM (" + reader.getFMRepresentation() + ")");
 				assertNotNull (ifm);
 				Formula<String> diffFla = FMLMergerBDD.diff(fla, builder.mkFeatureModel(ifm), builder);
 				FeatureModelLazyVariable fmv = new FeatureModelLazyVariable("", ifm, diffFla);
+				setVariable(fmv);
+				return ; 
+			}
+			
+			else if (filename.endsWith(".bdd")) {
+				_LOGGER.debug("FML BDD import (BDD only)");
+				
+				FMLBDDReader reader = new FMLBDDReader(filename); // fixed interoperability
+				
+				BDDBuilder<String> builder = FMLCommandInterpreter.getBuilder() ; // reader.getBDDBuilder() ; //
+				
+				FMLCommandInterpreter.setMerger(new BDDMerger(builder));
+								
+				
+				Map<String, Integer> map = reader.getMapBuilder();
+				BDD bdd = reader.getBDD();
+				
+				
+				Formula<String> fla = new Formula<String>(bdd, map.keySet(), builder);
+							
+				FeatureModelVariable fmv = new FeatureModelVariableBDDFormula(getAssigner(), fla, builder);
 				setVariable(fmv);
 				return ; 
 			}

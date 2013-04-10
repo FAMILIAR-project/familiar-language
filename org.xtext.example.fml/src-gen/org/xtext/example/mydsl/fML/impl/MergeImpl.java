@@ -32,6 +32,7 @@ import org.xtext.example.mydsl.fML.MergeMode;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.example.mydsl.fML.impl.MergeImpl#getBackend <em>Backend</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.fML.impl.MergeImpl#isLazy <em>Lazy</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.fML.impl.MergeImpl#getMode <em>Mode</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.fML.impl.MergeImpl#getLfms <em>Lfms</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.fML.impl.MergeImpl#getFms <em>Fms</em>}</li>
@@ -61,6 +62,26 @@ public class MergeImpl extends CommandImpl implements Merge
    * @ordered
    */
   protected BDDBackend backend = BACKEND_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #isLazy() <em>Lazy</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isLazy()
+   * @generated
+   * @ordered
+   */
+  protected static final boolean LAZY_EDEFAULT = false;
+
+  /**
+   * The cached value of the '{@link #isLazy() <em>Lazy</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #isLazy()
+   * @generated
+   * @ordered
+   */
+  protected boolean lazy = LAZY_EDEFAULT;
 
   /**
    * The default value of the '{@link #getMode() <em>Mode</em>}' attribute.
@@ -144,6 +165,29 @@ public class MergeImpl extends CommandImpl implements Merge
     backend = newBackend == null ? BACKEND_EDEFAULT : newBackend;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, FMLPackage.MERGE__BACKEND, oldBackend, backend));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public boolean isLazy()
+  {
+    return lazy;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setLazy(boolean newLazy)
+  {
+    boolean oldLazy = lazy;
+    lazy = newLazy;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, FMLPackage.MERGE__LAZY, oldLazy, lazy));
   }
 
   /**
@@ -261,6 +305,8 @@ public class MergeImpl extends CommandImpl implements Merge
     {
       case FMLPackage.MERGE__BACKEND:
         return getBackend();
+      case FMLPackage.MERGE__LAZY:
+        return isLazy();
       case FMLPackage.MERGE__MODE:
         return getMode();
       case FMLPackage.MERGE__LFMS:
@@ -284,6 +330,9 @@ public class MergeImpl extends CommandImpl implements Merge
     {
       case FMLPackage.MERGE__BACKEND:
         setBackend((BDDBackend)newValue);
+        return;
+      case FMLPackage.MERGE__LAZY:
+        setLazy((Boolean)newValue);
         return;
       case FMLPackage.MERGE__MODE:
         setMode((MergeMode)newValue);
@@ -312,6 +361,9 @@ public class MergeImpl extends CommandImpl implements Merge
       case FMLPackage.MERGE__BACKEND:
         setBackend(BACKEND_EDEFAULT);
         return;
+      case FMLPackage.MERGE__LAZY:
+        setLazy(LAZY_EDEFAULT);
+        return;
       case FMLPackage.MERGE__MODE:
         setMode(MODE_EDEFAULT);
         return;
@@ -337,6 +389,8 @@ public class MergeImpl extends CommandImpl implements Merge
     {
       case FMLPackage.MERGE__BACKEND:
         return backend != BACKEND_EDEFAULT;
+      case FMLPackage.MERGE__LAZY:
+        return lazy != LAZY_EDEFAULT;
       case FMLPackage.MERGE__MODE:
         return mode != MODE_EDEFAULT;
       case FMLPackage.MERGE__LFMS:
@@ -360,6 +414,8 @@ public class MergeImpl extends CommandImpl implements Merge
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (backend: ");
     result.append(backend);
+    result.append(", lazy: ");
+    result.append(lazy);
     result.append(", mode: ");
     result.append(mode);
     result.append(')');

@@ -2,8 +2,8 @@ digraph{
 graph [rankdir=TB];
 node [shape=box];
 edge [arrowhead=normal];
-0[label="DATA INTERFACES",]
-1[label="YM_Test",]
+0[label="YM_Test",]
+1[label="DATA INTERFACES",]
 2[label="AUDIO and VIDEO DECODING",]
 3[label="DEMULTIPLEXER and DESCRAMBLING",]
 4[label="POWER SUPPLY",]

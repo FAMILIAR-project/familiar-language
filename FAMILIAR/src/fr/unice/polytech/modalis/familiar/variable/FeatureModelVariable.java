@@ -59,7 +59,6 @@ import splar.plugins.reasoners.bdd.javabdd.ReasoningWithBDD;
 import splar.plugins.reasoners.sat.sat4j.FMReasoningWithSAT;
 import splar.plugins.reasoners.sat.sat4j.ReasoningWithSAT;
 
-import FeatureName.FeatureName;
 
 import com.google.common.collect.Sets;
 
@@ -189,6 +188,10 @@ public class FeatureModelVariable extends VariableImpl implements FMLFeatureMode
 		Formula<String> fla = getBuilder().mkFeatureModel(_fm) ; //.id();
 		setFormula(fla);
 		return _formula;
+	}
+	
+	public Formula<String> getFormulaAsIs() {
+		return _formula ; 
 	}
 
 	public Formula<String> getSPLOTFormula() {

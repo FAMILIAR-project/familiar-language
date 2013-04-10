@@ -20,6 +20,7 @@
 package fr.unice.polytech.modalis.familiar.fm;
 
 import fr.unice.polytech.modalis.familiar.operations.ExpressionUtility;
+import fr.unice.polytech.modalis.familiar.variable.FeatureName;
 import gsd.synthesis.Expression;
 import gsd.synthesis.FeatureEdge;
 import gsd.synthesis.FeatureGraph;
@@ -40,7 +41,6 @@ import org.apache.commons.collections15.Closure;
 import org.apache.commons.collections15.Factory;
 import org.apache.commons.collections15.map.LazyMap;
 
-import FeatureName.FeatureName;
 
 public class FMLInternalFeatureModelSerializer<T extends Comparable<T>> {
 

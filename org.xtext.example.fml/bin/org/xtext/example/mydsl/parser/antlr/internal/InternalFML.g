@@ -5195,62 +5195,77 @@ ruleMerge returns [EObject current=null]
 )
 )?(
 (
-		{ 
-	        newCompositeNode(grammarAccess.getMergeAccess().getModeMergeModeEnumRuleCall_2_0()); 
+		lv_lazy_2_0=	'--lazy' 
+    {
+        newLeafNode(lv_lazy_2_0, grammarAccess.getMergeAccess().getLazyLazyKeyword_2_0());
+    }
+ 
+	    {
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getMergeRule());
+	        }
+       		setWithLastConsumed($current, "lazy", true, "--lazy");
 	    }
-		lv_mode_2_0=ruleMergeMode		{
+
+)
+)?(
+(
+		{ 
+	        newCompositeNode(grammarAccess.getMergeAccess().getModeMergeModeEnumRuleCall_3_0()); 
+	    }
+		lv_mode_3_0=ruleMergeMode		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getMergeRule());
 	        }
        		set(
        			$current, 
        			"mode",
-        		lv_mode_2_0, 
+        		lv_mode_3_0, 
         		"MergeMode");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)((this_LEFT_BRACKET_3=RULE_LEFT_BRACKET
+)((this_LEFT_BRACKET_4=RULE_LEFT_BRACKET
     { 
-    newLeafNode(this_LEFT_BRACKET_3, grammarAccess.getMergeAccess().getLEFT_BRACKETTerminalRuleCall_3_0_0()); 
+    newLeafNode(this_LEFT_BRACKET_4, grammarAccess.getMergeAccess().getLEFT_BRACKETTerminalRuleCall_4_0_0()); 
     }
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getMergeAccess().getLfmsFMCommandParserRuleCall_3_0_1_0()); 
+	        newCompositeNode(grammarAccess.getMergeAccess().getLfmsFMCommandParserRuleCall_4_0_1_0()); 
 	    }
-		lv_lfms_4_0=ruleFMCommand		{
+		lv_lfms_5_0=ruleFMCommand		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getMergeRule());
 	        }
        		add(
        			$current, 
        			"lfms",
-        		lv_lfms_4_0, 
+        		lv_lfms_5_0, 
         		"FMCommand");
 	        afterParserOrEnumRuleCall();
 	    }
 
 )
-)+this_RIGHT_BRACKET_5=RULE_RIGHT_BRACKET
+)+this_RIGHT_BRACKET_6=RULE_RIGHT_BRACKET
     { 
-    newLeafNode(this_RIGHT_BRACKET_5, grammarAccess.getMergeAccess().getRIGHT_BRACKETTerminalRuleCall_3_0_2()); 
+    newLeafNode(this_RIGHT_BRACKET_6, grammarAccess.getMergeAccess().getRIGHT_BRACKETTerminalRuleCall_4_0_2()); 
     }
 )
     |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getMergeAccess().getFmsLFMArgsParserRuleCall_3_1_0()); 
+	        newCompositeNode(grammarAccess.getMergeAccess().getFmsLFMArgsParserRuleCall_4_1_0()); 
 	    }
-		lv_fms_6_0=ruleLFMArgs		{
+		lv_fms_7_0=ruleLFMArgs		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getMergeRule());
 	        }
        		set(
        			$current, 
        			"fms",
-        		lv_fms_6_0, 
+        		lv_fms_7_0, 
         		"LFMArgs");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -10818,6 +10833,12 @@ ruleFMFormat returns [Enumerator current=null]
 	{
         $current = grammarAccess.getFMFormatAccess().getS2T2EnumLiteralDeclaration_9().getEnumLiteral().getInstance();
         newLeafNode(enumLiteral_9, grammarAccess.getFMFormatAccess().getS2T2EnumLiteralDeclaration_9()); 
+    }
+)
+    |(	enumLiteral_10='bdd' 
+	{
+        $current = grammarAccess.getFMFormatAccess().getFMLBDD_ONLYEnumLiteralDeclaration_10().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_10, grammarAccess.getFMFormatAccess().getFMLBDD_ONLYEnumLiteralDeclaration_10()); 
     }
 ));
 
