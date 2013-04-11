@@ -23,7 +23,7 @@ public enum ConfigurationSource implements Enumerator
    * The '<em><b>MODEL</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #MODEL_VALUE
+   * @see #MODEL_VALUE 
    * @generated
    * @ordered
    */
