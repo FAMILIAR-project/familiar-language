@@ -4,10 +4,32 @@ package org.xtext.example.mydsl.fmprimitives.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
-import org.eclipse.emf.ecore.util.Switch;
-
-import org.xtext.example.mydsl.fmprimitives.*;
+import org.xtext.example.mydsl.fmprimitives.AlternativeGroup;
+import org.xtext.example.mydsl.fmprimitives.AutoComplete;
+import org.xtext.example.mydsl.fmprimitives.CustomDirectedRelationship;
+import org.xtext.example.mydsl.fmprimitives.CustomUndirectedRelationship;
+import org.xtext.example.mydsl.fmprimitives.DirectedRelationship;
+import org.xtext.example.mydsl.fmprimitives.EliminatedFeature;
+import org.xtext.example.mydsl.fmprimitives.Explanation;
+import org.xtext.example.mydsl.fmprimitives.Feature;
+import org.xtext.example.mydsl.fmprimitives.FeatureGroup;
+import org.xtext.example.mydsl.fmprimitives.FeatureHasMandatorySubfeature;
+import org.xtext.example.mydsl.fmprimitives.FeatureHasOptionalSubfeature;
+import org.xtext.example.mydsl.fmprimitives.FeatureHasSubfeature;
+import org.xtext.example.mydsl.fmprimitives.FeatureIsRoot;
+import org.xtext.example.mydsl.fmprimitives.FeatureModel;
+import org.xtext.example.mydsl.fmprimitives.FeatureModelPrimitive;
+import org.xtext.example.mydsl.fmprimitives.FmprimitivesPackage;
+import org.xtext.example.mydsl.fmprimitives.GroupHasChild;
+import org.xtext.example.mydsl.fmprimitives.GroupHasMax;
+import org.xtext.example.mydsl.fmprimitives.GroupHasMin;
+import org.xtext.example.mydsl.fmprimitives.GroupHasParent;
+import org.xtext.example.mydsl.fmprimitives.MutualExclusive;
+import org.xtext.example.mydsl.fmprimitives.OrGroup;
+import org.xtext.example.mydsl.fmprimitives.Requires;
+import org.xtext.example.mydsl.fmprimitives.SelectedFeature;
+import org.xtext.example.mydsl.fmprimitives.TemporalOrderingSequential;
+import org.xtext.example.mydsl.fmprimitives.UndirectedRelationship;
 
 /**
  * <!-- begin-user-doc -->
@@ -22,7 +44,7 @@ import org.xtext.example.mydsl.fmprimitives.*;
  * @see org.xtext.example.mydsl.fmprimitives.FmprimitivesPackage
  * @generated
  */
-public class FmprimitivesSwitch<T> extends Switch<T>
+public class FmprimitivesSwitch<T>
 {
   /**
    * The cached model package
@@ -54,7 +76,6 @@ public class FmprimitivesSwitch<T> extends Switch<T>
    * @return whether this is a switch for the given package.
    * @generated
    */
-  @Override
   protected boolean isSwitchFor(EPackage ePackage)
   {
     return ePackage == modelPackage;
@@ -67,7 +88,6 @@ public class FmprimitivesSwitch<T> extends Switch<T>
    * @return the first non-null result returned by a <code>caseXXX</code> call.
    * @generated
    */
-  @Override
   protected T doSwitch(int classifierID, EObject theEObject)
   {
     switch (classifierID)
@@ -689,7 +709,6 @@ public class FmprimitivesSwitch<T> extends Switch<T>
    * @see #doSwitch(org.eclipse.emf.ecore.EObject)
    * @generated
    */
-  @Override
   public T defaultCase(EObject object)
   {
     return null;
