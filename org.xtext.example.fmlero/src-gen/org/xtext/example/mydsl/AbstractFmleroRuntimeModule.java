@@ -11,7 +11,7 @@ import org.eclipse.xtext.service.DefaultRuntimeModule;
 import com.google.inject.Binder;
 import com.google.inject.name.Names;
 
-/**
+/** 
  * Manual modifications go to {org.xtext.example.mydsl.FmleroRuntimeModule}
  */
  @SuppressWarnings("all")
@@ -37,7 +37,7 @@ public abstract class AbstractFmleroRuntimeModule extends DefaultRuntimeModule {
 	// contributed by org.eclipse.xtext.generator.grammarAccess.GrammarAccessFragment
 	public Class<? extends org.eclipse.xtext.IGrammarAccess> bindIGrammarAccess() {
 		return org.xtext.example.mydsl.services.FmleroGrammarAccess.class;
-	}
+	} 
 
 	// contributed by org.eclipse.xtext.generator.serializer.SerializerFragment
 	public Class<? extends org.eclipse.xtext.serializer.sequencer.ISemanticSequencer> bindISemanticSequencer() {
