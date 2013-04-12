@@ -259,7 +259,7 @@ CTCRCommand : 'ctcr' fm=FMCommand ;
 /****** COMPOSITION OPERATORS ***********/
 
 
-Merge: 'merge' (backend=BDDBackend)? mode=MergeMode 
+Merge: 'merge' (backend=BDDBackend)? (lazy?='--lazy')? mode=MergeMode 
             ((LEFT_BRACKET
                 (lfms+=FMCommand)+
             RIGHT_BRACKET) 
@@ -426,7 +426,7 @@ RemoveVariable : ('removeVariable'|'rm') vid=FML_IDENTIFIER ;
 // convert e.g., featureide, pure::variants, etc.
 
 Convert: 'convert' v=FMCommand 'into' format=FMFormat ; // returns a string
-enum FMFormat : DIMACS='DIMACS'|FMLBDD='fmlbdd'|FIDE='featureide'|FCALC='fmcalc'|FFML='fml'|FSPLOT='SPLOT'|FTVL='TVL'|FTRISKELL='fd'|FFML2='xmi'|S2T2='S2T2' ;
+enum FMFormat : DIMACS='DIMACS'|FMLBDD='fmlbdd'|FIDE='featureide'|FCALC='fmcalc'|FFML='fml'|FSPLOT='SPLOT'|FTVL='TVL'|FTRISKELL='fd'|FFML2='xmi'|S2T2='S2T2'|FMLBDD_ONLY='bdd' ;
 FMLSave : ('save'|'serialize') v=FMCommand 'into' format=FMFormat;
 
 

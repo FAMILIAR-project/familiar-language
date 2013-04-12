@@ -110,7 +110,16 @@ public class FeatureModelUtil {
 				}
 
 				fg.addEdge(group, fakeG, FeatureEdge.XOR);
-			} else
+			} 
+			else if (groupStatus == FeatureEdge.XOR) { 
+				for (FeatureNode<String> ft : group) {
+					fg.addEdge(ft, fakeG, FeatureEdge.HIERARCHY);
+				}
+
+				fg.addEdge(group, fakeG, FeatureEdge.XOR);
+			}		
+			
+			else
 				fg.addEdge(group, fakeG, groupStatus);
 
 		}

@@ -102,6 +102,7 @@
       <genEnumLiterals ecoreEnumLiteral="FML.ecore#//FMFormat/FTRISKELL"/>
       <genEnumLiterals ecoreEnumLiteral="FML.ecore#//FMFormat/FFML2"/>
       <genEnumLiterals ecoreEnumLiteral="FML.ecore#//FMFormat/S2T2"/>
+      <genEnumLiterals ecoreEnumLiteral="FML.ecore#//FMFormat/FMLBDD_ONLY"/>
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="FML.ecore#//BOOL_Operator">
       <genEnumLiterals ecoreEnumLiteral="FML.ecore#//BOOL_Operator/BOOL_OR"/>
@@ -295,6 +296,7 @@
     </genClasses>
     <genClasses ecoreClass="FML.ecore#//Merge">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FML.ecore#//Merge/backend"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FML.ecore#//Merge/lazy"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute FML.ecore#//Merge/mode"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FML.ecore#//Merge/lfms"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference FML.ecore#//Merge/fms"/>

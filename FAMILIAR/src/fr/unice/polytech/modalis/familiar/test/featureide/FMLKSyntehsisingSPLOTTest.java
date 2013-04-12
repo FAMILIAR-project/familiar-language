@@ -63,6 +63,7 @@ public class FMLKSyntehsisingSPLOTTest extends FMLSPLOTTest {
 		
 	}
 	
+	@Ignore
 	@Test
 	public void testBIG() throws Exception {
 		

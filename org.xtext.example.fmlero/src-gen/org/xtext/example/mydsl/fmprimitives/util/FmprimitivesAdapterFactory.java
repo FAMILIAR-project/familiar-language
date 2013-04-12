@@ -217,7 +217,8 @@ public class FmprimitivesAdapterFactory extends AdapterFactoryImpl
   @Override
   public Adapter createAdapter(Notifier target)
   {
-    return modelSwitch.doSwitch((EObject)target);
+	  //TODO to change
+    return modelSwitch.doSwitch(0,(EObject)target);
   }
 
 

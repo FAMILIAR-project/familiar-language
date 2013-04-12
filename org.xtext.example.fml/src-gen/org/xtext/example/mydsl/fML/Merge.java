@@ -13,6 +13,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.xtext.example.mydsl.fML.Merge#getBackend <em>Backend</em>}</li>
+ *   <li>{@link org.xtext.example.mydsl.fML.Merge#isLazy <em>Lazy</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.fML.Merge#getMode <em>Mode</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.fML.Merge#getLfms <em>Lfms</em>}</li>
  *   <li>{@link org.xtext.example.mydsl.fML.Merge#getFms <em>Fms</em>}</li>
@@ -53,6 +54,32 @@ public interface Merge extends Command, FMCommand
    * @generated
    */
   void setBackend(BDDBackend value);
+
+  /**
+   * Returns the value of the '<em><b>Lazy</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Lazy</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Lazy</em>' attribute.
+   * @see #setLazy(boolean)
+   * @see org.xtext.example.mydsl.fML.FMLPackage#getMerge_Lazy()
+   * @model
+   * @generated
+   */
+  boolean isLazy();
+
+  /**
+   * Sets the value of the '{@link org.xtext.example.mydsl.fML.Merge#isLazy <em>Lazy</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Lazy</em>' attribute.
+   * @see #isLazy()
+   * @generated
+   */
+  void setLazy(boolean value);
 
   /**
    * Returns the value of the '<em><b>Mode</b></em>' attribute.

@@ -59,6 +59,7 @@ import splar.plugins.reasoners.bdd.javabdd.ReasoningWithBDD;
 import splar.plugins.reasoners.sat.sat4j.FMReasoningWithSAT;
 import splar.plugins.reasoners.sat.sat4j.ReasoningWithSAT;
 
+
 import com.google.common.collect.Sets;
 
 import fr.unice.polytech.modalis.familiar.experimental.FGroup;
@@ -187,6 +188,10 @@ public class FeatureModelVariable extends VariableImpl implements FMLFeatureMode
 		Formula<String> fla = getBuilder().mkFeatureModel(_fm) ; //.id();
 		setFormula(fla);
 		return _formula;
+	}
+	
+	public Formula<String> getFormulaAsIs() {
+		return _formula ; 
 	}
 
 	public Formula<String> getSPLOTFormula() {
@@ -1422,18 +1427,17 @@ public class FeatureModelVariable extends VariableImpl implements FMLFeatureMode
 		} catch (IllegalArgumentException e) {
 			FMLShell.getInstance().printWarning(
 					"(old) " + oname + " does not exist (" + features + ")");
-			return false;
+			return false ; 
 		}
+		assert (oldNode != null) ; 
 
-		try {
-			fgraph.findVertex(newName);
-			// should not be executed if does not exist
+		
+		if (features.contains(newName)) {
 			FMLShell.getInstance().printWarning(
 					"(new) " + newName + " already exists (" + features + ")");
 			return false;
-		} catch (IllegalArgumentException e) {
-			// not found, cool!
 		}
+		
 
 		// we can actually perform the renaming
 		FeatureNode<String> newNode = new FeatureNode<String>(newName);

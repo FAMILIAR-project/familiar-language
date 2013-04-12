@@ -70,6 +70,8 @@ public class MergeAnalyzer extends FMLAbstractCommandAnalyzer {
 
 
 	private BDDBackend _backend ;
+
+	private boolean _lazy = false ;
 	
 
 	/**
@@ -115,6 +117,16 @@ public class MergeAnalyzer extends FMLAbstractCommandAnalyzer {
 		 *****/
 		_LOGGER.debug(
 				"starting the effective merging");
+		
+		if (_lazy) {
+			
+			_LOGGER.debug("LAZY computation (only formula) when merging");
+			FMLMergerBDD merger = (FMLMergerBDD) mkMerger () ;  					
+			FeatureModelVariable fmv = merger.mergeFMs(_mode, _lazy);
+			fmv.setIdentifier(_assigner) ;	
+			setVariable(fmv);
+			
+		}
 
 		if (_mode == Mode.Diff) {
 			assert (_lfms.size() == 2);
@@ -166,6 +178,8 @@ public class MergeAnalyzer extends FMLAbstractCommandAnalyzer {
 		_backend = mergeCmd.getBackend() ;
 		if (_backend == BDDBackend.BDD_DEFAULT)
 			_backend = DEFAULT_MERGER_BACKEND ; 
+		
+		_lazy  = mergeCmd.isLazy() ; 
 	
 
 		/*******

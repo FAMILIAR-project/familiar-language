@@ -169,6 +169,13 @@ public class ConvertAnalyzer extends FMLAbstractCommandAnalyzer {
 					.serializeToString();
 		}
 		
+		else if (format == FMFormat.FMLBDD_ONLY) {
+			boolean splot = FMLShell.getInstance().getBDDStrategy() == BDDStrategy.SPLOT;
+			convertion = new FMLBDDWriter(fmv,
+					FMLCommandInterpreter.getBuilder(), splot)
+					.serializeBDDOnlyToString();
+		}
+		
 		else if (format == FMFormat.DIMACS) {
 			// FIXME @FeatureIDE 
 			convertion =  new SATFMLFormula(fmv).toDIMACS() ; 			

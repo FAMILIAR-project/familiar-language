@@ -12,6 +12,7 @@ import java.util.Stack;
 
 import org.apache.log4j.Logger;
 
+
 import splar.core.constraints.BooleanVariable;
 import splar.core.constraints.PropositionalFormula;
 import splar.core.fm.FeatureGroup;
@@ -21,6 +22,7 @@ import splar.core.fm.FeatureTreeNode;
 import splar.core.fm.SolitaireFeature;
 import splar.core.fm.XMLFeatureModel;
 import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
+import fr.unice.polytech.modalis.familiar.variable.FeatureName;
 import gsd.synthesis.Expression;
 import gsd.synthesis.FeatureEdge;
 import gsd.synthesis.FeatureGraph;
@@ -146,17 +148,10 @@ public class SPLOTtoFML {
 	private String interoperableFtName(String ftName) {
 		if (!_needsToInterop)
 			return ftName;
-		String res = ftName;
+		String res = FeatureName.normalize(ftName);
+
 		res = res.replace("-", "");
 		res = res.replace(" ", "");
-
-		res = res.replace("ó", "o");
-		res = res.replace("í", "i");
-		res = res.replace("á", "a");
-		res = res.replace("ã", "a");
-		res = res.replace("ç", "c");
-		res = res.replace("é", "e");
-		res = res.replace("ê", "e");
 		res = res.replace(".", "DOT");
 		
 		res = res.replace("/", "_");

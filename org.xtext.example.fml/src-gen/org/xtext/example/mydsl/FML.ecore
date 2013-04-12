@@ -272,6 +272,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Merge" eSuperTypes="#//Command #//FMCommand">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="backend" eType="#//BDDBackend"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lazy" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="mode" eType="#//MergeMode"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="lfms" upperBound="-1" eType="#//FMCommand"
         containment="true"/>
@@ -569,6 +570,7 @@
     <eLiterals name="FTRISKELL" value="7" literal="fd"/>
     <eLiterals name="FFML2" value="8" literal="xmi"/>
     <eLiterals name="S2T2" value="9" literal="S2T2"/>
+    <eLiterals name="FMLBDD_ONLY" value="10" literal="bdd"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FMLSave" eSuperTypes="#//Command">
     <eStructuralFeatures xsi:type="ecore:EReference" name="v" eType="#//FMCommand"

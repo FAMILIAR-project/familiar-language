@@ -19,6 +19,8 @@
  */
 package fr.unice.polytech.modalis.familiar.fm;
 
+import fr.unice.polytech.modalis.familiar.operations.ExpressionUtility;
+import fr.unice.polytech.modalis.familiar.variable.FeatureName;
 import gsd.synthesis.Expression;
 import gsd.synthesis.FeatureEdge;
 import gsd.synthesis.FeatureGraph;
@@ -38,6 +40,7 @@ import java.util.Set;
 import org.apache.commons.collections15.Closure;
 import org.apache.commons.collections15.Factory;
 import org.apache.commons.collections15.map.LazyMap;
+
 
 public class FMLInternalFeatureModelSerializer<T extends Comparable<T>> {
 
@@ -74,7 +77,8 @@ public class FMLInternalFeatureModelSerializer<T extends Comparable<T>> {
 
 		// process Constraints
 		for (Expression<T> e : fm.getConstraints()) {
-			sb.append(e.toString()).append(";");
+			String strE = ExpressionUtility.toString((Expression<String>) e) ; 
+			sb.append(strE + ";");
 			if (_newLine)
 				sb.append("\n");
 		}
@@ -106,7 +110,7 @@ public class FMLInternalFeatureModelSerializer<T extends Comparable<T>> {
 					sb.append(_fgf.getTopFeature() + ": ");
 				else
 					sb.append((v.getType() == FeatureType.AND_GROUP ? groupToId
-							.get(v) : v.getFeature()) + ": ");
+							.get(v) : FeatureName.quoteNeedsBe(v.getFeature().toString())) + ": ");
 
 				// First, process AND-Groups
 				Iterator<FeatureNode<T>> iter = children.iterator();
@@ -138,7 +142,7 @@ public class FMLInternalFeatureModelSerializer<T extends Comparable<T>> {
 					for (FeatureNode<T> m : g.getSources(e)) {
 						sb.append(
 								m.getType() == FeatureType.AND_GROUP ? groupToId
-										.get(m) : m.getFeature()).append("|");
+										.get(m) : FeatureName.quoteNeedsBe(m.getFeature().toString())).append("|");
 					}
 					sb.deleteCharAt(sb.length() - 1);
 					sb.append(")");
@@ -158,10 +162,10 @@ public class FMLInternalFeatureModelSerializer<T extends Comparable<T>> {
 				for (FeatureNode<T> child : children) {
 					if (g.findEdge(child, v, FeatureEdge.MANDATORY) == null) {
 						sb.append("[");
-						sb.append(child.getFeature());
+						sb.append(FeatureName.quoteNeedsBe(child.getFeature().toString()));
 						sb.append("]");
 					} else
-						sb.append(child.getFeature());
+						sb.append(FeatureName.quoteNeedsBe(child.getFeature().toString()));
 
 					sb.append(" ");
 				}

@@ -4,9 +4,6 @@ package org.xtext.example.mydsl.fML.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
-
-import org.eclipse.emf.ecore.util.Switch;
-
 import org.xtext.example.mydsl.fML.*;
 
 /**
@@ -22,7 +19,7 @@ import org.xtext.example.mydsl.fML.*;
  * @see org.xtext.example.mydsl.fML.FMLPackage
  * @generated
  */
-public class FMLSwitch<T> extends Switch<T>
+public class FMLSwitch<T> 
 {
   /**
    * The cached model package
@@ -54,7 +51,6 @@ public class FMLSwitch<T> extends Switch<T>
    * @return whether this is a switch for the given package.
    * @generated
    */
-  @Override
   protected boolean isSwitchFor(EPackage ePackage)
   {
     return ePackage == modelPackage;
@@ -67,7 +63,6 @@ public class FMLSwitch<T> extends Switch<T>
    * @return the first non-null result returned by a <code>caseXXX</code> call.
    * @generated
    */
-  @Override
   protected T doSwitch(int classifierID, EObject theEObject)
   {
     switch (classifierID)
@@ -3781,7 +3776,6 @@ public class FMLSwitch<T> extends Switch<T>
    * @see #doSwitch(org.eclipse.emf.ecore.EObject)
    * @generated
    */
-  @Override
   public T defaultCase(EObject object)
   {
     return null;

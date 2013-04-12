@@ -1973,13 +1973,22 @@ public interface FMLPackage extends EPackage
   int MERGE__BACKEND = COMMAND_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Lazy</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int MERGE__LAZY = COMMAND_FEATURE_COUNT + 1;
+
+  /**
    * The feature id for the '<em><b>Mode</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int MERGE__MODE = COMMAND_FEATURE_COUNT + 1;
+  int MERGE__MODE = COMMAND_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Lfms</b></em>' containment reference list.
@@ -1988,7 +1997,7 @@ public interface FMLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MERGE__LFMS = COMMAND_FEATURE_COUNT + 2;
+  int MERGE__LFMS = COMMAND_FEATURE_COUNT + 3;
 
   /**
    * The feature id for the '<em><b>Fms</b></em>' containment reference.
@@ -1997,7 +2006,7 @@ public interface FMLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MERGE__FMS = COMMAND_FEATURE_COUNT + 3;
+  int MERGE__FMS = COMMAND_FEATURE_COUNT + 4;
 
   /**
    * The number of structural features of the '<em>Merge</em>' class.
@@ -2006,7 +2015,7 @@ public interface FMLPackage extends EPackage
    * @generated
    * @ordered
    */
-  int MERGE_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 4;
+  int MERGE_FEATURE_COUNT = COMMAND_FEATURE_COUNT + 5;
 
   /**
    * The meta object id for the '{@link org.xtext.example.mydsl.fML.impl.LFMArgsImpl <em>LFM Args</em>}' class.
@@ -6764,6 +6773,17 @@ public interface FMLPackage extends EPackage
    * @generated
    */
   EAttribute getMerge_Backend();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.fML.Merge#isLazy <em>Lazy</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Lazy</em>'.
+   * @see org.xtext.example.mydsl.fML.Merge#isLazy()
+   * @see #getMerge()
+   * @generated
+   */
+  EAttribute getMerge_Lazy();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.example.mydsl.fML.Merge#getMode <em>Mode</em>}'.

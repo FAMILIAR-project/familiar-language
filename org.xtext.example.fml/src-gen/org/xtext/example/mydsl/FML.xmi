@@ -1126,6 +1126,9 @@
         <elements xsi:type="xtext:Assignment" cardinality="?" feature="backend" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.67"/>
         </elements>
+        <elements xsi:type="xtext:Assignment" cardinality="?" feature="lazy" operator="?=">
+          <terminal xsi:type="xtext:Keyword" value="--lazy"/>
+        </elements>
         <elements xsi:type="xtext:Assignment" feature="mode" operator="=">
           <terminal xsi:type="xtext:RuleCall" rule="/0/@rules.68"/>
         </elements>
@@ -2139,6 +2142,10 @@
         <elements xsi:type="xtext:EnumLiteralDeclaration">
           <enumLiteral href="http://www.xtext.org/example/mydsl/FML#//FMFormat/S2T2"/>
           <literal value="S2T2"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.xtext.org/example/mydsl/FML#//FMFormat/FMLBDD_ONLY"/>
+          <literal value="bdd"/>
         </elements>
       </alternatives>
     </rules>

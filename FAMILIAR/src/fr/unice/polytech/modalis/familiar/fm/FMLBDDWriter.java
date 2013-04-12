@@ -64,14 +64,64 @@ public class FMLBDDWriter {
 					"Unable to serialize FML BDD " + e);
 		}
 	}
+	
+	public String serializeBDDOnlyToString() {
+
+		Formula<String> fla = _fmv.getFormulaAsIs() ;
+		if (fla == null) {
+			if (_splot) {
+				fla = _fmv.getSPLOTFormulaAligned(_builder);
+			} else {
+				fla = _fmv.getFormula();
+			}
+		}
+
+		StringBuilder sb = new StringBuilder();
+		sb.append(_BEGIN + _NEWLINE);
+
+		sb.append(_BEGIN_BUILDER + _NEWLINE);
+
+		Map<String, Integer> map = _builder.getFeatureMap();
+		Set<String> keys = map.keySet();
+		for (String key : keys) {
+			Integer i = map.get(key);
+			sb.append(i + "" + _ASSOCIATION + "" + key + "" + _COMMA + "");
+		}
+		sb.append(_NEWLINE);
+		sb.append(_END_BUILDER + _NEWLINE);
+
+		sb.append(_BEGIN_BDD + _NEWLINE);
+		BDD bdd = fla.getBDD();
+		StringWriter sw = new StringWriter();
+		BufferedWriter bw = new BufferedWriter(sw);
+		BDDBuilder<String> lbuilder = BDDBuilderFactory.mkBuilder(map);
+		try {
+			lbuilder.getFactory().save(bw, bdd);
+			bw.flush();
+		} catch (IOException e) {
+			FMLShell.getInstance().printError(
+					"Unable to serialize bdd -- FML BDD " + e);
+		}
+
+		sb.append(sw.getBuffer());
+		sb.append(_NEWLINE);
+		sb.append(_END_BDD + _NEWLINE);
+
+		sb.append(_END + _NEWLINE);
+
+		fla.free();
+		return sb.toString();
+	}
 
 	public String serializeToString() {
 
-		Formula<String> fla = null;
-		if (_splot) {
-			fla = _fmv.getSPLOTFormulaAligned(_builder);
-		} else {
-			fla = _fmv.getFormula();
+		Formula<String> fla = _fmv.getFormulaAsIs() ;
+		if (fla == null) {
+			if (_splot) {
+				fla = _fmv.getSPLOTFormulaAligned(_builder);
+			} else {
+				fla = _fmv.getFormula();
+			}
 		}
 
 		StringBuilder sb = new StringBuilder();

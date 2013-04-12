@@ -142,6 +142,8 @@ public class BDDMerger {
 		BDD currbdd = null;
 		if (mode == Mode.StrictUnion)
 			currbdd = _builder.zero(); // false | A = A
+		else if (mode == Mode.Union)
+			currbdd = _builder.zero(); // false | A = A
 		else if (mode == Mode.Intersection)
 			currbdd = _builder.one(); // true & A = A
 		Formula<String> mergedFla = new Formula<String>(currbdd, allFeatures,
@@ -167,6 +169,8 @@ public class BDDMerger {
 		for (Formula<String> fla : flas) {
 			_LOGGER.debug("nFla=" + nFla++);
 			if (mode == Mode.StrictUnion)
+				mergedFla.orWith(fla);
+			if (mode == Mode.Union)
 				mergedFla.orWith(fla);
 			else if (mode == Mode.Intersection)
 				mergedFla.andWith(fla);

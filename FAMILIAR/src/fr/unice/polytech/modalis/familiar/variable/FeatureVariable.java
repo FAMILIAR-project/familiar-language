@@ -368,11 +368,14 @@ public class FeatureVariable extends VariableImpl implements FMLFeature {
 	}
 
 	// TODO: buggy since for A : B C, B is root!
-	public static boolean isRoot(FeatureNode<String> fn,
+	// be careful about "feature hierarchy" edge
+	public static boolean isRoot (FeatureNode<String> fn,
 			FeatureGraph<String> fgraph) {
+		
+		
 		if (fn.isTop())
 			return true;
-
+		
 		Set<FeatureNode<String>> parents = fgraph.parents(fn);
 		if (parents.size() == 0)
 			return true;

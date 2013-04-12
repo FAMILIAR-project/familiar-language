@@ -71,6 +71,7 @@ import fr.unice.polytech.modalis.familiar.operations.featureide.SATFMLFormula;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelLazyVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariableBDDFormula;
+import fr.unice.polytech.modalis.familiar.variable.FeatureName;
 import fr.unice.polytech.modalis.familiar.variable.RType;
 import fr.unice.polytech.modalis.familiar.variable.featureide.FeatureModelVariableConstraints;
 import fr.unice.polytech.modalis.familiar.variable.featureide.FeatureModelVariableSATFormula;
@@ -178,12 +179,32 @@ public class FMBuilder extends FMLAbstractCommandAnalyzer {
 				
 				
 				Formula<String> fla = new Formula<String>(bdd, map.keySet(), builder);
-				
-				
+							
 				gsd.synthesis.FeatureModel<String> ifm = FMBuilder.getInternalFM("FM (" + reader.getFMRepresentation() + ")");
 				assertNotNull (ifm);
 				Formula<String> diffFla = FMLMergerBDD.diff(fla, builder.mkFeatureModel(ifm), builder);
 				FeatureModelLazyVariable fmv = new FeatureModelLazyVariable("", ifm, diffFla);
+				setVariable(fmv);
+				return ; 
+			}
+			
+			else if (filename.endsWith(".bdd")) {
+				_LOGGER.debug("FML BDD import (BDD only)");
+				
+				FMLBDDReader reader = new FMLBDDReader(filename); // fixed interoperability
+				
+				BDDBuilder<String> builder = FMLCommandInterpreter.getBuilder() ; // reader.getBDDBuilder() ; //
+				
+				FMLCommandInterpreter.setMerger(new BDDMerger(builder));
+								
+				
+				Map<String, Integer> map = reader.getMapBuilder();
+				BDD bdd = reader.getBDD();
+				
+				
+				Formula<String> fla = new Formula<String>(bdd, map.keySet(), builder);
+							
+				FeatureModelVariable fmv = new FeatureModelVariableBDDFormula(getAssigner(), fla, builder);
 				setVariable(fmv);
 				return ; 
 			}
@@ -242,7 +263,8 @@ public class FMBuilder extends FMLAbstractCommandAnalyzer {
 			
 				
 				gsd.synthesis.FeatureModel<String> rFM = new SPLOTtoFML().convertToFeatureModel(featureModelSPLOT);
-				setVariable(new FeatureModelVariable(_assigner, rFM));
+				FeatureModelVariable fmv = new FeatureModelVariable(_assigner, rFM) ; 
+				setVariable(fmv);
 				return ;
 				
 				
@@ -274,7 +296,8 @@ public class FMBuilder extends FMLAbstractCommandAnalyzer {
 			else {
 
 				fm = parseFile(filename);
-				setVariable(new FeatureModelVariable(_assigner, mkInternalFM(fm)));
+				FeatureModelVariable fmv = new FeatureModelVariable(_assigner, mkInternalFM(fm)) ; 
+				setVariable(fmv);
 				return ;				
 			}
 
@@ -290,13 +313,16 @@ public class FMBuilder extends FMLAbstractCommandAnalyzer {
 			
 			gsd.synthesis.FeatureModel<String> iFM = mkInternalFM(fm);
 			
+			
 			if (iFM == null) {
 				FMLShell.getInstance()
 						.setError("Unable to parse the feature model");
 				return;
 			}
 
-			setVariable(new FeatureModelVariable(_assigner, iFM));
+			FeatureModelVariable fmv = new FeatureModelVariable(_assigner, iFM) ; 
+			//_unquote (fmv);
+			setVariable(fmv);
 			return ;
 			
 		}
@@ -310,8 +336,27 @@ public class FMBuilder extends FMLAbstractCommandAnalyzer {
 			return;
 		}
 
-		setVariable(new FeatureModelVariable(_assigner, nfm));
+		FeatureModelVariable fmv = new FeatureModelVariable(_assigner, nfm) ; 
+		_unquote (fmv);
+		setVariable(fmv);
 	}
+
+
+
+	/** unquote feature names 
+	 * @param fmv
+	 */
+	@Deprecated
+	private void _unquote(FeatureModelVariable fmv) {
+		Set<String> fts = fmv.features().names() ;
+		for (String ft : fts) {
+			fmv.renameFeature(ft, FeatureName.unquote(ft));
+		}		
+	}
+	
+	
+
+	
 
 	public static FeatureModelVariable parseConstraints(File file,	BDDBuilder<String> builder) {
 		// FIXME @FeatureIDE
@@ -339,6 +384,7 @@ public class FMBuilder extends FMLAbstractCommandAnalyzer {
 
 	public static gsd.synthesis.FeatureModel<String> mkInternalFM(FeatureModel fm) {
 		// TODO: FeatureModelVisitor?
+		
 		gsd.synthesis.FeatureModel<String> irFM = FeatureGraphFactory.mkStringFactory().mkTopModel() ;
 		
 		/*
@@ -394,7 +440,7 @@ public class FMBuilder extends FMLAbstractCommandAnalyzer {
 			return fd.getBottomVertex() ; 
 		}
 		else {
-			return new FeatureNode<String>(ftName);
+			return new FeatureNode<String>(FeatureName.unquote(ftName));
 		}
 	}
 
@@ -441,14 +487,14 @@ public class FMBuilder extends FMLAbstractCommandAnalyzer {
 		else if (c instanceof Optional) {
 			Optional o = (Optional) c;
 			String ftName = o.getName() ;
-			FeatureNode<String> fnChild = new FeatureNode<String>(ftName);
+			FeatureNode<String> fnChild = mkFeatureNode(ftName, fd) ; // new FeatureNode<String>(ftName);
 			fd.addVertex(fnChild);
 			fd.addEdge(fnChild, fnParent, FeatureEdge.HIERARCHY);
 	
 		} else if (c instanceof Mandatory) {
 			Mandatory m = (Mandatory) c;
 			String ftName = m.getName() ;
-			FeatureNode<String> fnChild = new FeatureNode<String>(ftName);
+			FeatureNode<String> fnChild =  mkFeatureNode(ftName, fd) ; // new FeatureNode<String>(ftName);
 			fd.addVertex(fnChild);
 			fd.addEdge(fnChild, fnParent, FeatureEdge.HIERARCHY);
 			fd.addEdge(fnChild, fnParent, FeatureEdge.MANDATORY);
@@ -484,7 +530,7 @@ public class FMBuilder extends FMLAbstractCommandAnalyzer {
 			completeStrFM = "FM (" + strfm + " )" ; 
 		}
 		
-		String satanizeStrFM = _normalize(completeStrFM);
+		String satanizeStrFM = FeatureName.normalize(completeStrFM);
 		
 			
 		FeatureModelVariable fmv = null ;
@@ -504,41 +550,7 @@ public class FMBuilder extends FMLAbstractCommandAnalyzer {
 
 	}
 
-	/**
-	 * We remove exotic characters as well as reserved keywords
-	 * TODO one of the thing we can consider is to develop a separate parser (eg Xtext project) dedicated to only parsing
-	 * feature models ---- it will avoid this unelegant, limited and non comprehensive pre-processing step 
-	 * @param completeStrFM
-	 * @return
-	 */
-	private static String _normalize(String completeStrFM) {
-		
-		return completeStrFM.replaceAll("ç", "c")
-				.replaceAll("ã", "a")
-				.replaceAll("é", "e")
-				.replaceAll(",", "")
-				.replaceAll("ó", "o")
-				.replaceAll("í", "i")
-				.replaceAll("á", "a")
-				.replaceAll("ê", "e")
-				.replaceAll("Configuration", "Configuration_")
-				.replaceAll("name", "naMe")
-				.replaceAll("parameter", "paraMeter")
-				.replaceAll("export", "eXport")
-				.replaceAll("Set", "SeT")
-				.replaceAll("opt", "oPt")
-				.replaceAll("features", "feaTures")
-				.replaceAll("true", "trUe")
-				.replaceAll("false", "fAlse")
-				.replaceAll("run", "rUn")
-				.replaceAll("select", "sElect")
-				.replaceAll("size", "siZe")
-				.replaceAll("Integer", "InteGer")
-				.replaceAll("String", "StrinG")
-				; 
-				
-		
-	}
+	
 
 	/**
 	 * @param fm
