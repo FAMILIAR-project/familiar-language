@@ -125,7 +125,6 @@ public class MergeAnalyzer extends FMLAbstractCommandAnalyzer {
 			FeatureModelVariable fmv = merger.mergeFMs(_mode, _lazy);
 			fmv.setIdentifier(_assigner) ;	
 			setVariable(fmv);
-			return ; 
 			
 		}
 
