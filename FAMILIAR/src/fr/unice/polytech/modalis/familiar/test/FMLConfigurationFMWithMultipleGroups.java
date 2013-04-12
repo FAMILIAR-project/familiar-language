@@ -20,7 +20,7 @@ public class FMLConfigurationFMWithMultipleGroups extends FMLTest {
 		
 		ConfigurationVariable c1 =ConfigurationVariableFactory.INSTANCE.mkFeatureIDE(fm1, "c1");
 		assertEquals (0, c1.getDeselected().size());
-		assertEquals (4, c1.getSelected().size());
+		assertEquals (5, c1.getSelected().size());
 	}
 	
 	@Test
@@ -30,6 +30,6 @@ public class FMLConfigurationFMWithMultipleGroups extends FMLTest {
 		
 		ConfigurationVariable c1 =ConfigurationVariableFactory.INSTANCE.mkSPLOT(fm1, "c1"); 
 		assertEquals (0, c1.getDeselected().size());
-		assertEquals (4, c1.getSelected().size());
+		assertEquals (5, c1.getSelected().size());
 	}
 }
