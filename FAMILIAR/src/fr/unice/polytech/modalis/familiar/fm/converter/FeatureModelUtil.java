@@ -16,6 +16,15 @@ public class FeatureModelUtil {
 	
 	
 	public static final String SYNTHETIC_FT_NAME_START = "synth";
+
+
+	private static final String XOR_SUFFIX = "Xor";
+
+
+	private static final String OR_SUFFIX = "Or";
+
+
+	private static final String MUTEX_SUFFIX = "Mutex";
 	
 	/**
 	 * normalize the feature model _fm (no multi-groups)
@@ -85,8 +94,8 @@ public class FeatureModelUtil {
 				sbXor.append(xorFt + "");
 			}
 			String idGroup = "" + sbXor.hashCode();
-			String groupType = (groupStatus == FeatureEdge.XOR) ? "Xor"
-					: (groupStatus == FeatureEdge.OR) ? "Or" : "Mutex"; // string
+			String groupType = (groupStatus == FeatureEdge.XOR) ? XOR_SUFFIX
+					: (groupStatus == FeatureEdge.OR) ? OR_SUFFIX : MUTEX_SUFFIX; // string
 																		// representation
 			FeatureNode<String> fakeG = new FeatureNode<String>(
 					SYNTHETIC_FT_NAME_START + idGroup + groupType);
@@ -131,6 +140,16 @@ public class FeatureModelUtil {
 
 		}
 
+	}
+
+
+	public static boolean isSynthetic(String ftName) {
+		return ftName != null 
+				&& !ftName.isEmpty() 
+				&& ftName.startsWith(SYNTHETIC_FT_NAME_START)
+				&& (ftName.endsWith(XOR_SUFFIX)
+						|| ftName.endsWith(OR_SUFFIX)
+						|| ftName.endsWith(MUTEX_SUFFIX)) ; 
 	}
 
 }

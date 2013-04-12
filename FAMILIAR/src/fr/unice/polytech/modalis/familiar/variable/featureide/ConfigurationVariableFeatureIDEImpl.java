@@ -41,6 +41,7 @@ import de.ovgu.featureide.fm.core.configuration.Configuration;
 import de.ovgu.featureide.fm.core.configuration.Selection;
 import de.ovgu.featureide.fm.core.configuration.SelectionNotPossibleException;
 import de.ovgu.featureide.fm.ui.editors.configuration.ConfigurationEditor;
+import fr.unice.polytech.modalis.familiar.fm.converter.FeatureModelUtil;
 import fr.unice.polytech.modalis.familiar.fm.featureide.FMLtoFeatureIDE;
 import fr.unice.polytech.modalis.familiar.fm.featureide.MinMaxConfiguration;
 import fr.unice.polytech.modalis.familiar.gui.featureide.ConfigurationRegister;
@@ -172,7 +173,9 @@ public class ConfigurationVariableFeatureIDEImpl extends ConfigurationVariable {
 		invokeUpdateManualUndefinedValues(_configuration);
 		// _configuration.updateManualUndefinedValues();
 		for (Feature ft : _configuration.getSelectedFeatures()) {
-			res.add(ft.getName());
+			String ftName = ft.getName() ;
+			if (!FeatureModelUtil.isSynthetic(ftName))
+				res.add(ftName);
 		}
 		return res;
 	}
@@ -183,7 +186,9 @@ public class ConfigurationVariableFeatureIDEImpl extends ConfigurationVariable {
 		invokeUpdateManualUndefinedValues(_configuration);
 		// _configuration.updateManualUndefinedValues();
 		for (Feature ft : _configuration.getUnSelectedFeatures()) {
-			res.add(ft.getName());
+			String ftName = ft.getName() ;
+			if (!FeatureModelUtil.isSynthetic(ftName))
+				res.add(ftName);
 		}
 		return res;
 	}
