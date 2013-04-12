@@ -5,6 +5,7 @@ package fr.unice.polytech.modalis.familiar.test ;
 
 import java.util.List;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import fr.unice.polytech.modalis.familiar.operations.StructuralMetricsFM;
@@ -16,7 +17,7 @@ import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
  *
  */
 
-
+@Ignore
 public class FMLMetricsTest extends FMLSPLOTTest {
 	
 	
