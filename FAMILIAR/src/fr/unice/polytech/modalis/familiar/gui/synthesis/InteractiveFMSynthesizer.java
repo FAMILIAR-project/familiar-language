@@ -8,7 +8,6 @@ import java.util.Observable;
 import java.util.Set;
 
 import ch.usi.inf.sape.hac.dendrogram.Dendrogram;
-import fr.unice.polytech.modalis.familiar.gui.FamiliarConsole;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.clustering.FMExperiment;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.clustering.HierarchicalFeatureClusterer;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.AlwaysZeroMetric;
@@ -51,12 +50,9 @@ public class InteractiveFMSynthesizer extends Observable{
 		this.fmv = new FeatureModelVariable(fmv.getIdentifier() + "_synthesis",
 				new FeatureModel<String>(FeatureGraphFactory.mkStringFactory().mkTop()),
 				fmv.getFormula().clone());
-//		FeatureNode<String> v = new FeatureNode<String>("fake root");
-//		this.fmv.getFm().getDiagram().addVertex(v);
-//		this.fmv.getFm().getDiagram().addEdge(v, this.fmv.getFm().getDiagram().getTopVertex(), FeatureEdge.HIERARCHY);
 		
 		setParentSimilarityMetric(new AlwaysZeroMetric());
-		setClusteringParameters(new SimmetricsMetric(MetricName.SIMMETRICS_SMITHWATERMAN), 0.4);
+		setClusteringParameters(new SimmetricsMetric(MetricName.SIMMETRICS_SMITHWATERMAN), 0.5);
 		//		setSupportClusteringParameters(0);
 		featureComparator = new OutDegreeComparator(big.getImplicationGraph());
 	}
@@ -235,7 +231,7 @@ public class InteractiveFMSynthesizer extends Observable{
 		return supportClusters;
 	}
 	public List<Set<String>> getCliques() {
-		return DirectedCliqueFinder.INSTANCE.findAll(big.getImplicationGraph());
+		return DirectedCliqueFinder.INSTANCE.findAll(originalBig.getImplicationGraph());
 	}
 
 	/**
@@ -295,6 +291,7 @@ public class InteractiveFMSynthesizer extends Observable{
 		for (String feature : hierarchy.vertices()) {
 			fg.addVertex(new FeatureNode<String>(feature));
 		}
+		
 		for (SimpleEdge edge : hierarchy.edges()) {
 			String source = hierarchy.getSource(edge);
 			String target = hierarchy.getTarget(edge);
@@ -302,6 +299,11 @@ public class InteractiveFMSynthesizer extends Observable{
 			FeatureNode<String> targetNode = fg.findVertex(target);
 			fg.addEdge(sourceNode, targetNode, FeatureEdge.HIERARCHY);
 		}
+		
+		// Add edge root -> top
+		String root = hierarchy.roots().iterator().next();
+		fg.addEdge(fg.findVertex(root), fg.getTopVertex(), FeatureEdge.HIERARCHY);
+
 
 		FeatureModel<String> fm = new FeatureModel<String>(fg);
 		FeatureModelVariable completeFM = new FeatureModelVariable(fmv.getIdentifier() + "_completed", fm);

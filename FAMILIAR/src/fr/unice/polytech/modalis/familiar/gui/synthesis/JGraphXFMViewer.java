@@ -51,6 +51,12 @@ public class JGraphXFMViewer extends FMViewer {
 		graph.selectAll();
 		graph.removeCells();
 		
+		// Add root feature
+		for (FeatureNode<String> root : hierarchy.children(hierarchy.getTopVertex())) {
+			seekVertex(root.getFeature());
+		}
+		
+		// Add edges
 		for (FeatureEdge edge : hierarchy.edges()) {
 			if (edge.getType() == FeatureEdge.HIERARCHY) {
 				FeatureNode<String> source = hierarchy.getSource(edge);
