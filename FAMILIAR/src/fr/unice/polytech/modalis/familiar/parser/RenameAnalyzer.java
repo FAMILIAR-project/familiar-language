@@ -96,7 +96,7 @@ public class RenameAnalyzer extends FMLAbstractCommandAnalyzer {
 			setVariable(new BooleanVariable(_assigner, false));
 			return;
 		}
-		fmw = fw.getFmw();
+		fmw = fw.getFeatureModel();
 		assert (fmw != null);
 		assert (fw != null);
 

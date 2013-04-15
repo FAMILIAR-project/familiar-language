@@ -121,7 +121,7 @@ public class FMLTutorialTest extends FMLTest {
 		assertTrue("f2 refers to feature named 'GraphicCard' in gc3", f2
 				.getFtName().equals("GraphicCard"));
 		assertEquals(f2.getFtName(), getFMVariable("gc3").root().getFtName());
-		assertTrue("f2 is the root of gc3", f2.getFmw().root().getFtName()
+		assertTrue("f2 is the root of gc3", f2.getFeatureModel().root().getFtName()
 				.equals(getFMVariable("gc3").root().getFtName()));
 
 		// assertTrue("f2 is the root of gc3", f2 ==
@@ -129,9 +129,9 @@ public class FMLTutorialTest extends FMLTest {
 		// (eventually TODO)
 
 		assertTrue("feature model of f1 is gc3",
-				f1.getFmw() == getFMVariable("gc3"));
+				f1.getFeatureModel() == getFMVariable("gc3"));
 		assertTrue("feature model of f2 is gc3",
-				f2.getFmw() == getFMVariable("gc3"));
+				f2.getFeatureModel() == getFMVariable("gc3"));
 
 		StringVariable s1 = getStringVariable("s1");
 		assertEquals(s1.getVal(), "GraphicCard");
@@ -463,11 +463,11 @@ public class FMLTutorialTest extends FMLTest {
 
 		FeatureVariable GCgc2 = getFeatureVariable("GCgc2");
 		assertTrue("GCgc2 actually belongs to gc2",
-				GCgc2.getFmw() == getFMVariable("gc2"));
+				GCgc2.getFeatureModel() == getFMVariable("gc2"));
 
 		FeatureVariable pv11 = getFeatureVariable("pv11");
 		assertTrue("pv11 actually belongs to gc3",
-				pv11.getFmw() == getFMVariable("gc3"));
+				pv11.getFeatureModel() == getFMVariable("gc3"));
 
 	}
 

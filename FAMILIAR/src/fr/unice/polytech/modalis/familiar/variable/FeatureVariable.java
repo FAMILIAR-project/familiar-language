@@ -21,6 +21,8 @@ package fr.unice.polytech.modalis.familiar.variable;
 
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 import org.apache.log4j.Logger;
@@ -61,7 +63,21 @@ public class FeatureVariable extends VariableImpl implements FMLFeature {
 	}
 
 	public FeatureVariable(String ftName, FeatureModelVariable fmw) {
-		this(null, ftName, fmw);
+		this (null, ftName, fmw);
+		// set feature attributes
+		_mapFeatureAttributes() ; 
+	}
+
+	private void _mapFeatureAttributes() {
+		Map<String, List<FeatureAttribute>> ftAttrs = _fmv.getFeatureAttributes() ; 
+		if (ftAttrs.containsKey(_ftName)) {
+			List<FeatureAttribute> attr = ftAttrs.get(_ftName) ; 
+			for (FeatureAttribute featureAttribute : attr) {
+				put(featureAttribute.getName(), featureAttribute.getValue());
+			}			
+		}
+		
+		
 	}
 
 	@Override
@@ -85,7 +101,7 @@ public class FeatureVariable extends VariableImpl implements FMLFeature {
 		if (vari instanceof FeatureVariable) {
 			FeatureVariable fw = (FeatureVariable) vari;
 			setFtName(fw.getFtName());
-			setFmw(fw.getFmw());
+			setFmw(fw.getFeatureModel());
 			return;
 		}
 		FMLShell.getInstance().setError("Setting value type is not correct");
@@ -95,7 +111,7 @@ public class FeatureVariable extends VariableImpl implements FMLFeature {
 	/**
 	 * @return the fmw
 	 */
-	public FeatureModelVariable getFmw() {
+	public FeatureModelVariable getFeatureModel() {
 		return _fmv;
 	}
 
@@ -250,7 +266,7 @@ public class FeatureVariable extends VariableImpl implements FMLFeature {
 			return null;
 		}
 		FeatureNode<String> parent = parents.iterator().next(); // first one
-		return new FeatureVariable(parent.toString(), getFmw());
+		return new FeatureVariable(parent.toString(), getFeatureModel());
 	}
 
 	/**
@@ -265,7 +281,7 @@ public class FeatureVariable extends VariableImpl implements FMLFeature {
 		for (FeatureNode<String> ft : descs) {
 			if (ft.isTop() || ft.isBottom())
 				continue;
-			FeatureVariable ftv = new FeatureVariable(ft.toString(), getFmw());
+			FeatureVariable ftv = new FeatureVariable(ft.toString(), getFeatureModel());
 			vars.add(ftv);
 		}
 		SetVariable sv = new SetVariable(vars);
@@ -293,7 +309,7 @@ public class FeatureVariable extends VariableImpl implements FMLFeature {
 		for (FeatureNode<String> ft : ancs) {
 			if (ft.isTop() || ft.isBottom())
 				continue;
-			FeatureVariable ftv = new FeatureVariable(ft.toString(), getFmw());
+			FeatureVariable ftv = new FeatureVariable(ft.toString(), getFeatureModel());
 			vars.add(ftv);
 		}
 		SetVariable sv = new SetVariable(vars);
@@ -323,10 +339,10 @@ public class FeatureVariable extends VariableImpl implements FMLFeature {
 		for (FeatureNode<String> cnode : nodes) {
 
 			String explicitName = ""
-					+ VariableIdentifier.completeName(getFmw().getVid())
+					+ VariableIdentifier.completeName(getFeatureModel().getVid())
 					+ FeatureVariable.SEPARATOR + cnode.getFeature();
 			FeatureVariable ftw = new FeatureVariable(explicitName,
-					cnode.getFeature(), getFmw());
+					cnode.getFeature(), getFeatureModel());
 			vars.add(ftw);
 		}
 
@@ -353,7 +369,7 @@ public class FeatureVariable extends VariableImpl implements FMLFeature {
 	}
 
 	private FeatureGraph<String> getGraph() {
-		final FeatureModelVariable fmw = getFmw();
+		final FeatureModelVariable fmw = getFeatureModel();
 		final FeatureModel<String> fm = fmw.getFm();
 		final FeatureGraph<String> fgraph = fm.getDiagram();
 		return fgraph;
@@ -392,5 +408,6 @@ public class FeatureVariable extends VariableImpl implements FMLFeature {
 		String rootName = fmv.root().name();
 		return fn.getFeature().equals(rootName);
 	}
-
+	
+	
 }

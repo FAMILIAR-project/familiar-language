@@ -2717,6 +2717,32 @@ public class FeatureModelVariable extends VariableImpl implements FMLFeatureMode
 	public FeatureModelVariable ksynthesisOver(KnowledgeSynthesis kst1,	Set<String> fts) {
 		return ksynthesisOver(kst1, _DEFAULT_SYNTHESIS_STRATEGY, fts);
 	}
+	
+	
+	private Map<String, List<FeatureAttribute>> _ftsAttributes = new HashMap<String, List<FeatureAttribute>>() ; 
+
+	public Map<String, List<FeatureAttribute>> getFeatureAttributes() {
+		return _ftsAttributes;
+	}
+
+	public void setFeatureAttributes(Map<String, List<FeatureAttribute>> _ftsAttributes) {
+		this._ftsAttributes = _ftsAttributes;
+	}
+
+	@Override
+	public void setFeatureAttribute(FeatureVariable ft, String attributeID, Variable rVar) {
+		String ftName = ft.getFtName() ;
+		FeatureAttribute ftAttribute = new FeatureAttribute(ft, attributeID, rVar) ; 
+		if (_ftsAttributes.containsKey(ftName)) {
+			List<FeatureAttribute> attr = _ftsAttributes.get(ftName);
+			attr.add(ftAttribute);
+		}
+		else {
+			List<FeatureAttribute> attr = new ArrayList<FeatureAttribute> () ; 
+			attr.add(ftAttribute) ;
+			_ftsAttributes.put(ftName, attr);
+		}
+	}
 
 	
 

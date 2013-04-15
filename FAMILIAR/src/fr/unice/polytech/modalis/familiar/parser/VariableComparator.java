@@ -204,8 +204,8 @@ public class VariableComparator {
 			String r = rvar.getValue();
 
 			// TODO: check if they belong to the same FM?
-			FeatureModelVariable lw = ((FeatureVariable) lvar).getFmw();
-			FeatureModelVariable rw = ((FeatureVariable) rvar).getFmw();
+			FeatureModelVariable lw = ((FeatureVariable) lvar).getFeatureModel();
+			FeatureModelVariable rw = ((FeatureVariable) rvar).getFeatureModel();
 
 
 			// if assertion is violated

@@ -100,7 +100,7 @@ public class RemoveAnalyzer extends FMLAbstractCommandAnalyzer {
 			setVariable(new BooleanVariable(_assigner, false));
 			return;
 		}
-		final FeatureModelVariable fmv = fw.getFmw();
+		final FeatureModelVariable fmv = fw.getFeatureModel();
 		assert (fmv != null);
 		assert (fw != null);
 

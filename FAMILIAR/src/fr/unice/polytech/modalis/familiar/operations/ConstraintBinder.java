@@ -54,7 +54,7 @@ public class ConstraintBinder {
 		try {
 
 			fw = _env.retrieveFeature(featureName);
-			fmw = fw.getFmw();
+			fmw = fw.getFeatureModel();
 			return fmw;
 		} catch (FeatureNotFoundException e) {
 			FMLShell.getInstance().printDebugMessage(

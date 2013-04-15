@@ -85,7 +85,7 @@ public class ExtractAnalyzer extends FMLAbstractCommandAnalyzer {
 			setVariable(new BooleanVariable(_assigner, false));
 			return;
 		}
-		FeatureModelVariable fmv = fw.getFmw();
+		FeatureModelVariable fmv = fw.getFeatureModel();
 		assert (fmv != null);
 		assert (fw != null);
 

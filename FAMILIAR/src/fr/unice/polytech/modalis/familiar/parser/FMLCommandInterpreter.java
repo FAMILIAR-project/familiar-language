@@ -549,7 +549,7 @@ public class FMLCommandInterpreter {
 
 		/********** String command **********/
 		else if (cmd instanceof StrCommand) {
-			return parseStringCommand((StrCommand) cmd, varID);
+			return parseStringCommand((StrCommand) cmd, varID, attributeID);
 		}
 		
 		else if (cmd instanceof ConstraintCommand) {
@@ -872,6 +872,15 @@ public class FMLCommandInterpreter {
 			
 			try {
 				Variable oVar = getVariable(varID);
+				
+				// hack
+				if (oVar instanceof FeatureVariable && attributeID != null) {
+					_LOGGER.debug("oVar is a feature with an attribute... setting meta-information " + attributeID + " to the feature model and feature");
+					FeatureVariable ft = (FeatureVariable) oVar ; 
+					FeatureModelVariable fmv = ft.getFeatureModel() ;
+					fmv.setFeatureAttribute(ft, attributeID, rVar);
+					return ; 
+				}				
 				oVar.put(attributeID, rVar);
 				return ; 
 			} catch (VariableNotExistingException e) {
@@ -1418,7 +1427,7 @@ public class FMLCommandInterpreter {
 			return identifier;
 		}
 
-		FeatureModelVariable fmw = vfw.getFmw();
+		FeatureModelVariable fmw = vfw.getFeatureModel();
 
 		// explicit name!
 		return "" + VariableIdentifier.completeName(fmw.getVid())
@@ -2044,37 +2053,37 @@ public class FMLCommandInterpreter {
 		
 	}
 
-	public StringVariable parseStringCommand(StrCommand strExpr, String var) {
+	public StringVariable parseStringCommand(StrCommand strExpr, String varID, String attributeID) {
 		_LOGGER.debug(
 				"\t\t parsing strCmd=" + strExpr);
 		Variable v = null;
 		FMLAbstractCommandAnalyzer pars = null;
 		if (strExpr instanceof IdentifierExpr) {
-			v = parse((Command) strExpr, var);
+			v = parse((Command) strExpr, varID);
 		} else if (strExpr instanceof CopyVariable) {
-			v = parse((Command) strExpr, var);
+			v = parse((Command) strExpr, varID);
 		}
 
 		else if (strExpr instanceof FeatureOperation) {
-			v = parse((Command) strExpr, var);
+			v = parse((Command) strExpr, varID);
 		}
 
 		else if (strExpr instanceof StringExpr) {
 			_LOGGER.debug("string: ");
-			pars = new StringExprParser((Command) strExpr, var, ns, this);
+			pars = new StringExprParser((Command) strExpr, varID, ns, this);
 			pars.parse();
 			v = pars.getVariable();
 		}
 
 		/*********** STRING operations **************/
 		else if (strExpr instanceof StringOperation) {
-			pars = new StringOperationAnalyzer((Command) strExpr, var, ns, this);
+			pars = new StringOperationAnalyzer((Command) strExpr, varID, ns, this);
 			pars.parse();
 			v = pars.getVariable();
 		}
 
 		else if (strExpr instanceof Convert) {
-			pars = new ConvertAnalyzer((Command) strExpr, var, ns, this);
+			pars = new ConvertAnalyzer((Command) strExpr, varID, ns, this);
 			pars.parse();
 			v = pars.getVariable();
 		}
@@ -2260,6 +2269,12 @@ public class FMLCommandInterpreter {
 		if (_merger != null)
 			getBuilder().reset();
 
+	}
+
+
+
+	public StringVariable parseStringCommand(StrCommand strExpr, String varID) {
+		return parseStringCommand(strExpr, varID, null);
 	}
 
 }

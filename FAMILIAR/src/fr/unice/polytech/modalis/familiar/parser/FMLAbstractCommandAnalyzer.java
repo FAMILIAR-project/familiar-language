@@ -59,6 +59,8 @@ public abstract class FMLAbstractCommandAnalyzer {
 	 * environment in which the interpreter proceeds
 	 */
 	protected FMLCommandInterpreter _environment;
+	
+	
 
 	/**
 	 * @param cmd
@@ -89,6 +91,7 @@ public abstract class FMLAbstractCommandAnalyzer {
 		this(cmd, ns, an);
 		this._assigner = assigner;
 	}
+
 
 	/*
 	 * generic function eval() -> type checking -> assign() -> update views
@@ -150,6 +153,7 @@ public abstract class FMLAbstractCommandAnalyzer {
 	public Command getCmd() {
 		return _command;
 	}
+
 
 
 

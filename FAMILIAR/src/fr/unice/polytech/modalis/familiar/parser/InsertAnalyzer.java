@@ -91,7 +91,7 @@ public class InsertAnalyzer extends FMLAbstractCommandAnalyzer {
 		// retrieve baseFM (using jpFeature)
 
 		FeatureVariable fnw = _environment.parseFTCommand(jpFeature, null);
-		FeatureModelVariable baseFMW = fnw.getFmw();
+		FeatureModelVariable baseFMW = fnw.getFeatureModel();
 		// FMLShell.getInstance().printDebugMessage("fnw= " +
 		// fnw.getSpecificValue()) ;
 		if (baseFMW == null) {

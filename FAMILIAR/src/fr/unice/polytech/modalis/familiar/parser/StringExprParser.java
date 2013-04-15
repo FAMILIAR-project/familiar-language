@@ -44,6 +44,7 @@ public class StringExprParser extends FMLAbstractCommandAnalyzer {
 	/**
 	 * @param cmd2
 	 * @param var
+	 * @param attributeID 
 	 * @param ns
 	 * @param an
 	 */
@@ -65,9 +66,7 @@ public class StringExprParser extends FMLAbstractCommandAnalyzer {
 		assert (_command instanceof StringExpr);
 
 		StringExpr strExpr = (StringExpr) _command;
-
 		String strValue = strExpr.getVal();
-
 		setVariable(new StringVariable(_assigner, strValue, ns));
 
 	}

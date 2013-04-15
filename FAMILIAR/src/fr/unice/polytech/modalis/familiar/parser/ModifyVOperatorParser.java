@@ -105,7 +105,7 @@ public class ModifyVOperatorParser extends FMLAbstractCommandAnalyzer {
 					return;
 				}
 				FeatureVariable fv = (FeatureVariable) v;
-				fmInput = fv.getFmw();
+				fmInput = fv.getFeatureModel();
 				features.add(fv.getFtName());
 			}
 
@@ -127,7 +127,7 @@ public class ModifyVOperatorParser extends FMLAbstractCommandAnalyzer {
 					return;
 				}
 				FeatureVariable fv = (FeatureVariable) v;
-				fmInput = fv.getFmw();
+				fmInput = fv.getFeatureModel();
 				features.add(fv.getFtName());
 			}
 
@@ -166,11 +166,11 @@ public class ModifyVOperatorParser extends FMLAbstractCommandAnalyzer {
 
 				@Override
 				public void run() {
-					if (fv.getFmw() == null)
+					if (fv.getFeatureModel() == null)
 						FMLShell.getInstance()
 								.printDebugMessage(
 										"Unable to display after setting optional (null)");
-					fv.getFmw().gdisplay();
+					fv.getFeatureModel().gdisplay();
 
 				}
 			});
@@ -189,11 +189,11 @@ public class ModifyVOperatorParser extends FMLAbstractCommandAnalyzer {
 
 				@Override
 				public void run() {
-					if (fv.getFmw() == null)
+					if (fv.getFeatureModel() == null)
 						FMLShell.getInstance()
 								.printDebugMessage(
 										"Unable to display after setting mandatory (null)");
-					fv.getFmw().gdisplay();
+					fv.getFeatureModel().gdisplay();
 
 				}
 			});

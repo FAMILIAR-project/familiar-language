@@ -11,6 +11,7 @@ import java.util.Collection;
 import org.junit.Test;
 
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
+import fr.unice.polytech.modalis.familiar.variable.FeatureVariable;
 import fr.unice.polytech.modalis.familiar.variable.IntegerVariable;
 import fr.unice.polytech.modalis.familiar.variable.Variable;
 /**
@@ -127,6 +128,35 @@ public class FMLMetaAttributeTest extends FMLTest {
 		
 		IntegerVariable n = getIntegerVariable("n");
 		assertEquals(6, n.getV());
+		
+		
+		
+	}
+	
+	@Test
+	public void test5() throws Exception {
+		_shell.setVerbose(true);
+		_shell.parse("" +
+				"fm1 = FM (A : B [C] ; )\n" +
+				"fm1[@\"author\"] = \"Mathieu\"\n" +
+				"fm1.A[@\"color\"] = \"blue\"\n" +
+				"fm1.A[@\"description\"] = \"A\"\n" +
+				"fm1.B[@\"color\"] = \"red\"\n" +
+				
+				"") ;
+		
+		FeatureModelVariable fm1 = getFMVariable("fm1");
+		System.err.println("fm1[author]=" + fm1.lookup("author").getValue());
+		FeatureVariable ftA = fm1.getFeature("A");
+		System.err.println("A[color]=" + ftA.lookup("color").getValue());
+		Collection<Variable> ftAattrs = ftA.getAttributes() ;
+		for (Variable ftAttrVal : ftAattrs) {
+			System.err.println("A[*]=" + ftAttrVal.getValue());
+		}
+		
+		FeatureVariable ftB = fm1.getFeature("B");
+		System.err.println("B[color]=" + ftB.lookup("color").getValue());
+		
 		
 		
 		

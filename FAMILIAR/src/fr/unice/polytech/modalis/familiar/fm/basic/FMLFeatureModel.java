@@ -27,6 +27,7 @@ import fr.unice.polytech.modalis.familiar.operations.KnowledgeSynthesis;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureVariable;
 import fr.unice.polytech.modalis.familiar.variable.SetVariable;
+import fr.unice.polytech.modalis.familiar.variable.Variable;
 import gsd.graph.ImplicationGraph;
 
 /**
@@ -92,6 +93,8 @@ public interface FMLFeatureModel {
 	
 	
 	public abstract FeatureModelVariable ksynthesis (KnowledgeSynthesis kn) ;
+
+	void setFeatureAttribute(FeatureVariable ft, String attributeID, Variable rVar);
 	
 	
 	
