@@ -32,6 +32,7 @@ import fr.unice.polytech.modalis.familiar.fm.basic.FMLFeature;
 import fr.unice.polytech.modalis.familiar.fm.basic.VEdge;
 import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
 import fr.unice.polytech.modalis.familiar.interpreter.NSFactory;
+import fr.unice.polytech.modalis.familiar.interpreter.VariableNotExistingException;
 import fr.unice.polytech.modalis.familiar.parser.FeatureOperationAnalyzer;
 import fr.unice.polytech.modalis.familiar.parser.NameSpace;
 import gsd.synthesis.FeatureEdge;
@@ -73,12 +74,29 @@ public class FeatureVariable extends VariableImpl implements FMLFeature {
 		if (ftAttrs.containsKey(_ftName)) {
 			List<FeatureAttribute> attr = ftAttrs.get(_ftName) ; 
 			for (FeatureAttribute featureAttribute : attr) {
-				put(featureAttribute.getName(), featureAttribute.getValue());
+				String attrName = featureAttribute.getName() ; 
+				Variable var = featureAttribute.getValue() ; 
+				super.put(attrName, var);
 			}			
 		}
-		
-		
 	}
+	
+	public Variable put (String attributeID, Variable var) {
+		_fmv.setFeatureAttribute(this, attributeID, var);
+		_mapFeatureAttributes() ; 
+		return super.put(attributeID, var);
+	}
+	
+	/* (non-Javadoc)
+	 * @see fr.unice.polytech.modalis.familiar.variable.VariableAttributeHandler#lookup(java.lang.String)
+	 */
+	@Override
+	public Variable lookup(String attributeID) throws VariableNotExistingException {
+		_mapFeatureAttributes() ; 
+		return super.lookup(attributeID);
+	}
+	
+		
 
 	@Override
 	public Variable copy() {
@@ -408,6 +426,7 @@ public class FeatureVariable extends VariableImpl implements FMLFeature {
 		String rootName = fmv.root().name();
 		return fn.getFeature().equals(rootName);
 	}
+	
 	
 	
 }

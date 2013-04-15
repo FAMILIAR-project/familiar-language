@@ -2730,7 +2730,7 @@ public class FeatureModelVariable extends VariableImpl implements FMLFeatureMode
 	}
 
 	@Override
-	public void setFeatureAttribute(FeatureVariable ft, String attributeID, Variable rVar) {
+	public void setFeatureAttribute (FeatureVariable ft, String attributeID, Variable rVar) {
 		String ftName = ft.getFtName() ;
 		FeatureAttribute ftAttribute = new FeatureAttribute(ft, attributeID, rVar) ; 
 		if (_ftsAttributes.containsKey(ftName)) {

@@ -13,6 +13,7 @@ import org.junit.Test;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureVariable;
 import fr.unice.polytech.modalis.familiar.variable.IntegerVariable;
+import fr.unice.polytech.modalis.familiar.variable.StringVariable;
 import fr.unice.polytech.modalis.familiar.variable.Variable;
 /**
  * @author macher
@@ -157,9 +158,34 @@ public class FMLMetaAttributeTest extends FMLTest {
 		FeatureVariable ftB = fm1.getFeature("B");
 		System.err.println("B[color]=" + ftB.lookup("color").getValue());
 		
+		FeatureVariable ftAbis = fm1.getFeature("A");
+		ftAbis.put("foo", new StringVariable("", "foooooo"));
+		Collection<Variable> ftAattrsBis = ftAbis.getAttributes() ;
+		for (Variable ftAattrVal : ftAattrsBis) {
+			System.err.println("(bis) A[*]=" + ftAattrVal.getValue());
+		}
+			
 		
+	}
+	
+	@Test
+	public void testProgrammativeWay1() throws Exception {
+		FeatureModelVariable fm1 = (FeatureModelVariable) _shell.parse("fm1 = FM (A : B [C] ; )") ;
+		FeatureVariable ftC = fm1.getFeature("C");
+		fm1.setFeatureAttribute(ftC, "description", new StringVariable ("", "Description of the feature C"));
+		fm1.setFeatureAttribute(ftC, "odescription", new StringVariable ("", "Other description of the feature C"));
+		assertEquals(ftC.lookup("description").getValue(), "Description of the feature C");
+		assertEquals(ftC.lookup("odescription").getValue(), "Other description of the feature C");
 		
+		// another style for setting attribute
+		ftC.put("color", new StringVariable ("","red"));
+		assertEquals(ftC.lookup("color").getValue(), "red");
 		
+		assertEquals(3, ftC.getAttributes().size());
+
+		FeatureVariable ftCbis = fm1.getFeature("C");
+		assertEquals(3, ftCbis.getAttributes().size());
+
 	}
 
 }

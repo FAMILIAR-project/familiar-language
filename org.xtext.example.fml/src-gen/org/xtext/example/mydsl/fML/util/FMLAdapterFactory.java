@@ -827,8 +827,7 @@ public class FMLAdapterFactory extends AdapterFactoryImpl
   @Override
   public Adapter createAdapter(Notifier target)
   {
-	  //TOCHANGE
-    return modelSwitch.doSwitch(0,(EObject)target);
+    return modelSwitch.doSwitch((EObject)target);
   }
 
 
