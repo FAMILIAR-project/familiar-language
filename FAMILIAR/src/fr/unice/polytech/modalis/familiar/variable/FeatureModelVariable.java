@@ -59,7 +59,6 @@ import splar.plugins.reasoners.bdd.javabdd.ReasoningWithBDD;
 import splar.plugins.reasoners.sat.sat4j.FMReasoningWithSAT;
 import splar.plugins.reasoners.sat.sat4j.ReasoningWithSAT;
 
-
 import com.google.common.collect.Sets;
 
 import fr.unice.polytech.modalis.familiar.experimental.FGroup;
@@ -117,7 +116,6 @@ import fr.unice.polytech.modalis.familiar.parser.FMLCommandInterpreter;
 import fr.unice.polytech.modalis.familiar.parser.HierarchyMerger;
 import fr.unice.polytech.modalis.familiar.parser.HierarchyMergerFactory;
 import fr.unice.polytech.modalis.familiar.parser.HierarchyMergerStrategy;
-import fr.unice.polytech.modalis.familiar.parser.MyExpressionParser;
 import fr.unice.polytech.modalis.familiar.parser.NameSpace;
 import fr.unice.polytech.modalis.familiar.test.featureide.SATFeatureIDEFormula;
 import fr.unice.polytech.modalis.familiar.test.regression.SPLOTUtility;
