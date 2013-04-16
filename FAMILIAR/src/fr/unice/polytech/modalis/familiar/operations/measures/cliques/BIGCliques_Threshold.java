@@ -53,7 +53,7 @@ public class BIGCliques_Threshold extends BIGViewer{
 	 @Override
 		public void updateBIG(WeightedImplicationGraph wbig) {
 		ImplicationGraph<String> big = wbig.getImplicationGraph();
-		Map<SimpleEdge, Double> weights = wbig.getWeights();
+		Map<SimpleEdge, Double> weights = null ; //wbig.getWeights();
 		for (SimpleEdge edge : big.edges()) {
 			String debut = big.getEdgeSource(edge);
 			String fin = big.getEdgeTarget(edge);

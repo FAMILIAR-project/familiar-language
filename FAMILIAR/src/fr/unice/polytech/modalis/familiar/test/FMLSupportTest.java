@@ -77,8 +77,8 @@ public class FMLSupportTest extends FMLTest {
 		   System.err.println("confidence of "+ big.getSource(cle) + big.getTarget(cle) +" is "+ valeur);
 		}
 		
-		supp_big.setWeights(suppMap);
-		conf_big.setWeights(confMap);
+		//supp_big.setWeights(suppMap);
+		//conf_big.setWeights(confMap);
 	}
 	public void getSupport(FeatureModelVariable phiR, ImplicationGraph<String> big, SimpleEdge e, double trans_nb) throws Exception {
 				
