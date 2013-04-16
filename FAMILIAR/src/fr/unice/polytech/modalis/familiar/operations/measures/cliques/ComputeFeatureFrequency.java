@@ -60,8 +60,8 @@ public class ComputeFeatureFrequency {
 			   System.err.println("confidence of "+ big.getSource(cle) + big.getTarget(cle) +" is "+ valeur);
 			}
 			
-			//supp_big.setWeights(suppMap);
-			//conf_big.setWeights(confMap);
+			supp_big.setWeights(suppMap);
+			conf_big.setWeights(confMap);
 		}
 
 	 public void getSupportConfidence(FeatureModelVariable phiR, ImplicationGraph<String> big, SimpleEdge e, double trans_nb){
