@@ -47,20 +47,22 @@ public class BIGPanel extends BIGViewer {
 		}
 	@Override
 	public void updateBIG(WeightedImplicationGraph<String> wbig) {
-		ImplicationGraph<String> big = wbig.getImplicationGraph();
-		for (SimpleEdge edge : big.edges()) {
-			
-			String debut = big.getEdgeSource(edge);
-			String fin = big.getEdgeTarget(edge);
-			//double  weight = heuristic.similarity(debut, fin);
-			/*System.out.println("'" + debut.getName() + "' '" + fin.getName()
-					+ "' associated with '" + weight + "'");*/
-			String source = seekVertex(debut,big_AnalysisGraph);
-			String destination = seekVertex(fin,big_AnalysisGraph);
-		
-			big_AnalysisGraph.addEdge(source, destination);  
-			//big_AnalysisGraph.setEdgeWeight(big_AnalysisGraph.getEdge(source, destination), weight);
-	}
+//		ImplicationGraph<String> big = wbig.getImplicationGraph();
+//		Map<SimpleEdge, Double> weights = wbig.getWeights();
+//		for (SimpleEdge edge : big.edges()) {
+//			
+//			String debut = big.getEdgeSource(edge);
+//			String fin = big.getEdgeTarget(edge);
+//			//double  weight = heuristic.similarity(debut, fin);
+//			/*System.out.println("'" + debut.getName() + "' '" + fin.getName()
+//					+ "' associated with '" + weight + "'");*/
+//			String source = seekVertex(debut,big_AnalysisGraph);
+//			String destination = seekVertex(fin,big_AnalysisGraph);
+//		
+//			big_AnalysisGraph.addEdge(source, destination); 
+//			SimpleEdge e = (SimpleEdge) big_AnalysisGraph.getEdge(source, destination);
+//			big_AnalysisGraph.setEdgeWeight(e, weights.get(e));
+//	}
 	}
 	static  String seekVertex(String v_name, ListenableDirectedWeightedGraph myAnalysisGraph) {
 		

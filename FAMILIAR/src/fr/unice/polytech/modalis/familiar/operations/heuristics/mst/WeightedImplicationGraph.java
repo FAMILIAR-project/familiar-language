@@ -46,6 +46,14 @@ public class WeightedImplicationGraph<V> {
 		}
 	}
 
+	public Map<SimpleEdge, Double> getWeights() {
+		return weights;
+	}
+
+	public void setWeights(Map<SimpleEdge, Double> weights) {
+		this.weights = weights;
+	}
+
 	public boolean addEdge(V arg0, V arg1, SimpleEdge arg2) {
 		return ig.addEdge(arg0, arg1, arg2);
 	}
