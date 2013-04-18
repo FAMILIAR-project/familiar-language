@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name.3
 Bundle-SymbolicName: FAMILIAR;singleton:=true
-Bundle-Version: 1.0.5
+Bundle-Version: 1.0.9
 Bundle-Activator: fr.unice.polytech.modalis.familiar.views.featureide.Activator
 Bundle-Vendor: %Bundle-Vendor.3
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
@@ -71,7 +71,6 @@ Require-Bundle: de.ovgu.featureide.core,
  de.ovgu.featureide.fm.core,
  de.ovgu.featureide.fm.ui,
  de.ovgu.featureide.ui,
- org.antlr.generator;resolution:=optional;visibility:=reexport,
  org.eclipse.core.filebuffers,
  org.eclipse.core.runtime,
  org.eclipse.debug.ui,
@@ -83,12 +82,12 @@ Require-Bundle: de.ovgu.featureide.core,
  org.xtext.example.fmlero.ui,
  FML3rdPartiesForSynthesis,
  FML3rdPartiesMisc,
- SPLAR-plugin;visibility:=reexport,
  org.xtext.example.fml,
  org.xtext.example.fml.ui,
  org.eclipse.core.resources,
  org.eclipse.ui,
- S2T2toFML;bundle-version="1.0.0"
+ S2T2toFML;bundle-version="1.0.0",
+ SPLAR-plugin;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Export-Package: fr.pacogen.adapter,
  fr.pacogen.model,

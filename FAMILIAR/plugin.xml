@@ -5,15 +5,10 @@
          point="org.eclipse.debug.ui.launchShortcuts">
       <shortcut
             class="fr.unice.polytech.modalis.familiar.views.featureide.FamiliarRun"
+            description="Execute a FAMILIAR script"
             id="FAMILIAR.Familiar"
             label="Excute FAMILIAR Script…"
             modes="run">
-         <contextualLaunch>
-            <contextLabel
-                  label="Excute FAMILIAR script"
-                  mode="run">
-            </contextLabel>
-         </contextualLaunch>
       </shortcut>
    </extension>
    <extension
@@ -163,26 +158,6 @@
       </page>
    </extension>
    <extension
-         id="product"
-         point="org.eclipse.core.runtime.products">
-      <product
-            application="org.eclipse.ant.core.antRunner"
-            name="%product.name">
-         <property
-               name="appName"
-               value="Familiar">
-         </property>
-      </product>
-   </extension>
-   <extension
-         id="product1"
-         point="org.eclipse.core.runtime.products">
-      <product
-            application="org.eclipse.ant.core.antRunner"
-            name="%product.name.0">
-      </product>
-   </extension>
-   <extension
          point="org.eclipse.help.contexts">
       <contexts
             file="contexts.xml">
@@ -201,6 +176,29 @@
             id="familiar.wizards.SampleNewWizard"
             name="FAMILIAR script">
       </wizard>
+   </extension>
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            id="FAMILIAR.contribution1"
+            nameFilter="*.fml"
+            objectClass="org.eclipse.core.resources.IFile">
+         <menu
+               id="FAMILIAR.menu1"
+               label="FAMILIAR"
+               path="additions">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               class="familiar.popup.actions.NewAction"
+               enablesFor="1"
+               id="FAMILIAR.newAction"
+               label="Execute"
+               menubarPath="FAMILIAR.menu1/group1">
+         </action>
+      </objectContribution>
    </extension>
 
 </plugin>
