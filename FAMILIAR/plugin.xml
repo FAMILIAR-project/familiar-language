@@ -195,7 +195,7 @@
                class="familiar.popup.actions.NewAction"
                enablesFor="1"
                id="FAMILIAR.newAction"
-               label="Execute"
+               label="Execute fml..."
                menubarPath="FAMILIAR.menu1/group1">
          </action>
       </objectContribution>
