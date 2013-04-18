@@ -345,8 +345,7 @@ public abstract class KSynthesis {
 			if (ambigousGroupCleaned.size() == 0)
 				continue;
 			FeatureNode<String> feature = ambigousGroupCleaned.getFeatureNode();
-			FMLShell.getInstance()
-					.printDebugMessage("ambigous for: " + feature);
+			_LOGGER.debug("ambigous for: " + feature);
 			FGroup fGroup = selectAmbigousGroup(ambigousGroupCleaned);
 			_LOGGER.debug(
 					"group selected (winner): " + fGroup);
@@ -551,7 +550,18 @@ public abstract class KSynthesis {
 	public FeatureModel<String> complementWithImpliesAndExcludes(FeatureModel<String> iFM, 
 			ImplicationGraph<String> impl, ExclusionGraph<String> excl1) {
 			
+		
+		
 		FeatureModel<String> fm = iFM.clone();
+		if (_fdAddingCstStrategy == FDAddingConstraintStrategy.BASIC_ADD) { // no need to compute BIE
+			return getAdderConstraint(_fdAddingCstStrategy,
+					fm,
+					new HashSet<Expression<String>>(), 
+					impl, 
+					excl1
+					).apply();
+		}
+		
 		_LOGGER.debug("Computing BIE");
 		Set<Expression<String>> biimplies = computeBiImpliesEdge(fm.getDiagram(), impl);
 		_LOGGER.debug("biimplies (2ADD)=" + biimplies);

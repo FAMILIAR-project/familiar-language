@@ -236,7 +236,7 @@ public class FMLSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     'serialize' | 'save'
+	 *     'save' | 'serialize'
 	 */
 	protected void emit_FMLSave_SaveKeyword_0_0_or_SerializeKeyword_0_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -252,7 +252,7 @@ public class FMLSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Syntax:
-	 *     'falseOptionals' | 'fullMandatorys'
+	 *     'fullMandatorys' | 'falseOptionals'
 	 */
 	protected void emit_FullMandatorys_FalseOptionalsKeyword_0_1_or_FullMandatorysKeyword_0_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);

@@ -4,11 +4,14 @@ import fr.unice.polytech.modalis.familiar.fm.SimpleExtendedEdge;
 import fr.unice.polytech.modalis.familiar.fm.converter.ExclusionGraph;
 import fr.unice.polytech.modalis.familiar.operations.ImplicationGraphUtil;
 import fr.unice.polytech.modalis.familiar.operations.featureide.SATFMLFormula;
+import fr.unice.polytech.modalis.familiar.parser.FMLCommandInterpreter;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import gsd.graph.ImplicationGraph;
+import gsd.synthesis.BDDBuilder;
 import gsd.synthesis.Expression;
 import gsd.synthesis.ExpressionType;
 import gsd.synthesis.FeatureModel;
+import gsd.synthesis.IGBuilder;
 
 import java.util.HashSet;
 import java.util.Set;
