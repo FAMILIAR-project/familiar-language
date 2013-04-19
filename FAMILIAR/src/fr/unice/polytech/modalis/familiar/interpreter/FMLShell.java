@@ -756,7 +756,6 @@ public class FMLShell {
 		java.net.URI u = file.getLocationURI();
 		String filename = u.getPath();
 		try {
-			System.err.println("\t\trunning FAMILIAR script: " + filename);
 			FileInputStream fin = new FileInputStream(filename);
 			FMLShell shell = instantiateWithEclipse(fin);
 			shell.setCurrentFile(file);
@@ -765,10 +764,8 @@ public class FMLShell {
 
 			shell.launch();
 
-			System.err.println("\t\tend of FAMILIAR script: " + filename);
 
 		} catch (IOException e) {
-			System.err.println("File not found!");
 			e.printStackTrace();
 		}
 

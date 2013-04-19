@@ -1,4 +1,4 @@
-package familiar.popup.actions;
+package fr.unice.polytech.modalis.familiar.views.featureide;
 
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.runtime.IProgressMonitor;
@@ -15,7 +15,7 @@ import org.eclipse.ui.IWorkbenchPart;
 
 import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
 
-public class NewAction implements IObjectActionDelegate {
+public class FAMILIAREclipseExecutor implements IObjectActionDelegate {
 
 	private Shell shell;
 	
@@ -27,7 +27,7 @@ public class NewAction implements IObjectActionDelegate {
 	/**
 	 * Constructor for Action1.
 	 */
-	public NewAction() {
+	public FAMILIAREclipseExecutor() {
 		super();
 	}
 

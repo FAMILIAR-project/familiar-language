@@ -2,16 +2,6 @@
 <?eclipse version="3.4"?>
 <plugin>
    <extension
-         point="org.eclipse.debug.ui.launchShortcuts">
-      <shortcut
-            class="fr.unice.polytech.modalis.familiar.views.featureide.FamiliarRun"
-            description="Execute a FAMILIAR script"
-            id="FAMILIAR.Familiar"
-            label="Excute FAMILIAR Script…"
-            modes="run">
-      </shortcut>
-   </extension>
-   <extension
          point="org.eclipse.ui.views">
       <view
             category="FAMILIAR.category1"
@@ -171,7 +161,7 @@
       </category>
       <wizard
             category="FAMILIAR"
-            class="familiar.wizards.SampleNewWizard"
+            class="fr.unice.polytech.modalis.familiar.wizard.SampleNewWizard"
             icon="icons/sample.gif"
             id="familiar.wizards.SampleNewWizard"
             name="FAMILIAR script">
@@ -192,7 +182,7 @@
             </separator>
          </menu>
          <action
-               class="familiar.popup.actions.NewAction"
+               class="fr.unice.polytech.modalis.familiar.views.featureide.FAMILIAREclipseExecutor"
                enablesFor="1"
                id="FAMILIAR.newAction"
                label="Execute fml..."

@@ -1,4 +1,4 @@
-package familiar.wizards;
+package fr.unice.polytech.modalis.familiar.wizard;
 
 import org.eclipse.core.resources.IContainer;
 import org.eclipse.core.resources.IResource;

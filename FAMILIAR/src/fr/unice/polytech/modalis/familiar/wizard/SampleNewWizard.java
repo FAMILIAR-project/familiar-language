@@ -1,4 +1,4 @@
-package familiar.wizards;
+package fr.unice.polytech.modalis.familiar.wizard;
 
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.jface.wizard.Wizard;

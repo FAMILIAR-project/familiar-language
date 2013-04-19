@@ -37,6 +37,7 @@ import fr.unice.polytech.modalis.familiar.variable.ConfigurationVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import fr.unice.polytech.modalis.familiar.variable.Variable;
 
+@Deprecated
 public class FamiliarRun implements ILaunchShortcut {
 
 	private static VariableView _VARIABLEVIEW = null;
