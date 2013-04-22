@@ -260,6 +260,15 @@ public abstract class SATFormula implements FMLFormula {
 	public void setNode(Node node) {
 		_node = node;
 	}
+	
+	public boolean implies(String u, String v) {
+		Node problem = new And(getNode(), 
+				SATBuilder.mkTrueNode(), 
+				new Not(SATBuilder.mkFalseNode()));
+
+		SatSolver solver = mkSATSolver(problem);
+		return implication(u, v, solver); 
+	}
 
 	public <T> ImplicationGraph<T> computeImplicationGraph(Set<T> domain) {
 		_LOGGER.debug("SAT computation of IG");
@@ -425,6 +434,17 @@ public abstract class SATFormula implements FMLFormula {
 			return false;
 		}
 	}
+	
+	public boolean excludes (String u, String v) {
+		Node problem = new And(getNode(), 
+				SATBuilder.mkTrueNode(), 
+				new Not(SATBuilder.mkFalseNode()));
+
+		SatSolver solver = mkSATSolver(problem);
+		return exclusion(u, v, solver);
+	}
+	
+	
 	
 	
 	public String toDIMACS() {

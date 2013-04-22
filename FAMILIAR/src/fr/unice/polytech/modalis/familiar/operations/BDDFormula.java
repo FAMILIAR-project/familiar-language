@@ -4,6 +4,7 @@
 package fr.unice.polytech.modalis.familiar.operations;
 
 import fr.unice.polytech.modalis.familiar.fm.FMLFormula;
+import gsd.graph.ImplicationGraph;
 import gsd.synthesis.BDDBuilder;
 import gsd.synthesis.Formula;
 
@@ -20,5 +21,6 @@ public class BDDFormula extends Formula<String> implements FMLFormula {
 	public BDDFormula (Formula<String> fla) {
 		super(fla.getBDD(), fla.getDomain(), null) ;
 	}
+
 
 }

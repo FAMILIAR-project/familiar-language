@@ -382,6 +382,11 @@ public class ImplicationGraphUtil {
 		
 	}
 
+	public static Set<Excludes<String>> toExpressions(ExclusionGraph<String> excl) {
+		return excl.edgeSet();
+		
+	}
+
 	
 
 }

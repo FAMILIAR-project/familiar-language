@@ -3,6 +3,8 @@
  */
 package fr.unice.polytech.modalis.familiar.fm;
 
+import gsd.graph.ImplicationGraph;
+
 import java.util.Set;
 
 /**
@@ -16,5 +18,6 @@ public interface FMLFormula {
 	public static final long SAT_TIMEOUT = 120000;
 
 	public Set<String> getDomain() ; 
+		
 
 }
