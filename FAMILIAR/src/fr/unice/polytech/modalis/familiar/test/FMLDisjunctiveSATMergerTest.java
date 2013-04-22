@@ -14,6 +14,7 @@ import fr.unice.polytech.modalis.familiar.operations.FMLMerger;
 import fr.unice.polytech.modalis.familiar.operations.FMLMergerBDD;
 import fr.unice.polytech.modalis.familiar.operations.FMLMergerDisjunctiveSAT;
 import fr.unice.polytech.modalis.familiar.operations.ImplicationGraphUtil;
+import fr.unice.polytech.modalis.familiar.operations.featureide.SATFMLFormula;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 
 /**
@@ -34,6 +35,8 @@ public class FMLDisjunctiveSATMergerTest extends FMLTest {
 		List<FeatureModelVariable> fmvs = new ArrayList<FeatureModelVariable>() ;
 		FeatureModelVariable fm1 = getFMVariable("fm1") ; 
 		System.err.println("eg fm1 = " + fm1.computeExcludesEdge());
+		
+		System.err.println("eg fm1 (bis)" + new SATFMLFormula(fm1).computeExclusionGraph(fm1.features().names()));
 		fmvs.add(fm1);
 		fmvs.add(getFMVariable("fm2"));
 		fmvs.add(getFMVariable("fm3"));
