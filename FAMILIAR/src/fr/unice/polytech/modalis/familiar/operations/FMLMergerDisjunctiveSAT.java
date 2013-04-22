@@ -20,6 +20,8 @@ import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
 import fr.unice.polytech.modalis.familiar.operations.featureide.SATFMLFormula;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import gsd.graph.ImplicationGraph;
+import gsd.synthesis.Excludes;
+import gsd.synthesis.Expression;
 
 /**
  * @author macher1
@@ -61,9 +63,14 @@ public class FMLMergerDisjunctiveSAT extends FMLMerger {
 		SATDisjunctiveFormula fla = new SATDisjunctiveFormula(flas) ;
 		Set<String> flaDomain = fla.getDomain() ; 
 		ImplicationGraph<String> impl = fla.computeImplicationGraph(flaDomain)  ;
-	    System.err.println("IG=" + ImplicationGraphUtil.toExpressions(impl));
+		Set<Expression<String>> ig = ImplicationGraphUtil.toExpressions(impl) ; 
+	    System.err.println("#IG=" + ig.size());
+	    System.err.println("IG=" + ig);
 	    ExclusionGraph<String> excl = fla.computeExclusionGraph(flaDomain)  ;
-	    System.err.println("EG=" + ImplicationGraphUtil.toExpressions(excl));
+	    Set<Excludes<String>> eg = ImplicationGraphUtil.toExpressions(excl) ; 
+	    System.err.println("#EG=" + eg.size());
+	    System.err.println("EG=" + eg);
+	   
 				
 		return null ; 
 	}
