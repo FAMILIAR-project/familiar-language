@@ -298,6 +298,8 @@ public class BDDMerger {
 
 		if (mode == Mode.StrictUnion)
 			currbdd = _builder.zero(); // false | A = A
+		else if (mode == Mode.Union)
+			currbdd = _builder.zero(); // false | A = A
 		else if (mode == Mode.Intersection)
 			currbdd = _builder.one(); // true & A = A
 
@@ -310,6 +312,8 @@ public class BDDMerger {
 			if (mode == Mode.StrictUnion)
 				currbdd.orWith(fmla.getBDD()); // currbdd =
 												// currbdd.orWith(fmla.getBDD());
+			else if (mode == Mode.Union)
+				currbdd.orWith(fmla.getBDD());
 			else if (mode == Mode.Intersection)
 				currbdd.andWith(fmla.getBDD()); // currbdd =
 												// currbdd.andWith(fmla.getBDD());

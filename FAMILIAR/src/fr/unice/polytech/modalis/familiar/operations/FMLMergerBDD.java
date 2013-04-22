@@ -42,7 +42,7 @@ public class FMLMergerBDD extends FMLMerger {
 
 	private static Logger _LOGGER = Logger.getLogger(FMLMergerBDD.class);
 	
-	private HierarchyMergerStrategy _hierarchyMergerStrategy = FMLMerger._DEFAULT_HIERARCHY_MERGER ;
+	private HierarchyMergerStrategy _hierarchyMergerStrategy = _DEFAULT_HIERARCHY_MERGER ;
 	
 		
 	protected BDDBuilder<String> _builder ; 

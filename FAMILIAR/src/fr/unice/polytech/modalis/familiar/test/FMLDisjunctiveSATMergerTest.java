@@ -32,20 +32,22 @@ public class FMLDisjunctiveSATMergerTest extends FMLTest {
 				"fm3 = FM (A : B [F] [E] [C] ; !F ; !C ; )");
 		
 		List<FeatureModelVariable> fmvs = new ArrayList<FeatureModelVariable>() ;
-		fmvs.add(getFMVariable("fm1"));
+		FeatureModelVariable fm1 = getFMVariable("fm1") ; 
+		System.err.println("eg fm1 = " + fm1.computeExcludesEdge());
+		fmvs.add(fm1);
 		fmvs.add(getFMVariable("fm2"));
 		fmvs.add(getFMVariable("fm3"));
 		
 		assertEquals(3, fmvs.size());
 		
 		FMLMergerDisjunctiveSAT merger = new FMLMergerDisjunctiveSAT(fmvs) ;
-		FeatureModelVariable fmv1 = merger.union() ; 
+		FeatureModelVariable fmM1 = merger.union() ; 
 		
 		FMLMerger merger2 = new FMLMergerBDD(fmvs);
-		FeatureModelVariable fmv2 = merger2.union() ; 
+		FeatureModelVariable fmM2 = merger2.union() ; 
 		
-		System.err.println("IG 2: " + ImplicationGraphUtil.toExpressions(fmv2.computeImplicationGraph(_builder)));
-		System.err.println("EG 2: " + fmv2.computeExcludesEdge(_builder));
+		System.err.println("IG 2: " + ImplicationGraphUtil.toExpressions(fmM2.computeImplicationGraph(_builder)));
+		System.err.println("EG 2: " + fmM2.computeExcludesEdge(_builder));
 	}
 
 }
