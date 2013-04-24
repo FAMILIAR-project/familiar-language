@@ -561,16 +561,17 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="FMFormat">
     <eLiterals name="DIMACS" literal="DIMACS"/>
-    <eLiterals name="FMLBDD" value="1" literal="fmlbdd"/>
-    <eLiterals name="FIDE" value="2" literal="featureide"/>
-    <eLiterals name="FCALC" value="3" literal="fmcalc"/>
-    <eLiterals name="FFML" value="4" literal="fml"/>
-    <eLiterals name="FSPLOT" value="5" literal="SPLOT"/>
-    <eLiterals name="FTVL" value="6" literal="TVL"/>
-    <eLiterals name="FTRISKELL" value="7" literal="fd"/>
-    <eLiterals name="FFML2" value="8" literal="xmi"/>
-    <eLiterals name="S2T2" value="9" literal="S2T2"/>
-    <eLiterals name="FMLBDD_ONLY" value="10" literal="bdd"/>
+    <eLiterals name="FMLCONSTRAINT" value="1" literal="fmlconstraints"/>
+    <eLiterals name="FMLBDD" value="2" literal="fmlbdd"/>
+    <eLiterals name="FIDE" value="3" literal="featureide"/>
+    <eLiterals name="FCALC" value="4" literal="fmcalc"/>
+    <eLiterals name="FFML" value="5" literal="fml"/>
+    <eLiterals name="FSPLOT" value="6" literal="SPLOT"/>
+    <eLiterals name="FTVL" value="7" literal="TVL"/>
+    <eLiterals name="FTRISKELL" value="8" literal="fd"/>
+    <eLiterals name="FFML2" value="9" literal="xmi"/>
+    <eLiterals name="S2T2" value="10" literal="S2T2"/>
+    <eLiterals name="FMLBDD_ONLY" value="11" literal="bdd"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FMLSave" eSuperTypes="#//Command">
     <eStructuralFeatures xsi:type="ecore:EReference" name="v" eType="#//FMCommand"

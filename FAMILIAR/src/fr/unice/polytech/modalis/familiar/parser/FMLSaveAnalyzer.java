@@ -157,6 +157,8 @@ public class FMLSaveAnalyzer extends FMLAbstractCommandAnalyzer {
 			return "fmlbdd";
 		else if (format == FMFormat.FMLBDD_ONLY)
 			return "bdd";
+		else if (format == FMFormat.FMLCONSTRAINT)
+			return "constraints";
 		else
 			return "unknown";
 	}
@@ -178,6 +180,8 @@ public class FMLSaveAnalyzer extends FMLAbstractCommandAnalyzer {
 			return "SPLOT/SXFM";
 		else if (format == FMFormat.S2T2)
 			return "S2T2";
+		else if (format == FMFormat.FMLCONSTRAINT)
+			return "FML constraints";
 		else
 			return "unknown";
 	}

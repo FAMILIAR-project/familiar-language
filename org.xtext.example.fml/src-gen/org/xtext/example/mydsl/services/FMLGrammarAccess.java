@@ -6255,34 +6255,36 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final EnumLiteralDeclaration cDIMACSEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
 		private final Keyword cDIMACSDIMACSKeyword_0_0 = (Keyword)cDIMACSEnumLiteralDeclaration_0.eContents().get(0);
-		private final EnumLiteralDeclaration cFMLBDDEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
-		private final Keyword cFMLBDDFmlbddKeyword_1_0 = (Keyword)cFMLBDDEnumLiteralDeclaration_1.eContents().get(0);
-		private final EnumLiteralDeclaration cFIDEEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
-		private final Keyword cFIDEFeatureideKeyword_2_0 = (Keyword)cFIDEEnumLiteralDeclaration_2.eContents().get(0);
-		private final EnumLiteralDeclaration cFCALCEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
-		private final Keyword cFCALCFmcalcKeyword_3_0 = (Keyword)cFCALCEnumLiteralDeclaration_3.eContents().get(0);
-		private final EnumLiteralDeclaration cFFMLEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
-		private final Keyword cFFMLFmlKeyword_4_0 = (Keyword)cFFMLEnumLiteralDeclaration_4.eContents().get(0);
-		private final EnumLiteralDeclaration cFSPLOTEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
-		private final Keyword cFSPLOTSPLOTKeyword_5_0 = (Keyword)cFSPLOTEnumLiteralDeclaration_5.eContents().get(0);
-		private final EnumLiteralDeclaration cFTVLEnumLiteralDeclaration_6 = (EnumLiteralDeclaration)cAlternatives.eContents().get(6);
-		private final Keyword cFTVLTVLKeyword_6_0 = (Keyword)cFTVLEnumLiteralDeclaration_6.eContents().get(0);
-		private final EnumLiteralDeclaration cFTRISKELLEnumLiteralDeclaration_7 = (EnumLiteralDeclaration)cAlternatives.eContents().get(7);
-		private final Keyword cFTRISKELLFdKeyword_7_0 = (Keyword)cFTRISKELLEnumLiteralDeclaration_7.eContents().get(0);
-		private final EnumLiteralDeclaration cFFML2EnumLiteralDeclaration_8 = (EnumLiteralDeclaration)cAlternatives.eContents().get(8);
-		private final Keyword cFFML2XmiKeyword_8_0 = (Keyword)cFFML2EnumLiteralDeclaration_8.eContents().get(0);
-		private final EnumLiteralDeclaration cS2T2EnumLiteralDeclaration_9 = (EnumLiteralDeclaration)cAlternatives.eContents().get(9);
-		private final Keyword cS2T2S2T2Keyword_9_0 = (Keyword)cS2T2EnumLiteralDeclaration_9.eContents().get(0);
-		private final EnumLiteralDeclaration cFMLBDD_ONLYEnumLiteralDeclaration_10 = (EnumLiteralDeclaration)cAlternatives.eContents().get(10);
-		private final Keyword cFMLBDD_ONLYBddKeyword_10_0 = (Keyword)cFMLBDD_ONLYEnumLiteralDeclaration_10.eContents().get(0);
+		private final EnumLiteralDeclaration cFMLCONSTRAINTEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cFMLCONSTRAINTFmlconstraintsKeyword_1_0 = (Keyword)cFMLCONSTRAINTEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cFMLBDDEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cFMLBDDFmlbddKeyword_2_0 = (Keyword)cFMLBDDEnumLiteralDeclaration_2.eContents().get(0);
+		private final EnumLiteralDeclaration cFIDEEnumLiteralDeclaration_3 = (EnumLiteralDeclaration)cAlternatives.eContents().get(3);
+		private final Keyword cFIDEFeatureideKeyword_3_0 = (Keyword)cFIDEEnumLiteralDeclaration_3.eContents().get(0);
+		private final EnumLiteralDeclaration cFCALCEnumLiteralDeclaration_4 = (EnumLiteralDeclaration)cAlternatives.eContents().get(4);
+		private final Keyword cFCALCFmcalcKeyword_4_0 = (Keyword)cFCALCEnumLiteralDeclaration_4.eContents().get(0);
+		private final EnumLiteralDeclaration cFFMLEnumLiteralDeclaration_5 = (EnumLiteralDeclaration)cAlternatives.eContents().get(5);
+		private final Keyword cFFMLFmlKeyword_5_0 = (Keyword)cFFMLEnumLiteralDeclaration_5.eContents().get(0);
+		private final EnumLiteralDeclaration cFSPLOTEnumLiteralDeclaration_6 = (EnumLiteralDeclaration)cAlternatives.eContents().get(6);
+		private final Keyword cFSPLOTSPLOTKeyword_6_0 = (Keyword)cFSPLOTEnumLiteralDeclaration_6.eContents().get(0);
+		private final EnumLiteralDeclaration cFTVLEnumLiteralDeclaration_7 = (EnumLiteralDeclaration)cAlternatives.eContents().get(7);
+		private final Keyword cFTVLTVLKeyword_7_0 = (Keyword)cFTVLEnumLiteralDeclaration_7.eContents().get(0);
+		private final EnumLiteralDeclaration cFTRISKELLEnumLiteralDeclaration_8 = (EnumLiteralDeclaration)cAlternatives.eContents().get(8);
+		private final Keyword cFTRISKELLFdKeyword_8_0 = (Keyword)cFTRISKELLEnumLiteralDeclaration_8.eContents().get(0);
+		private final EnumLiteralDeclaration cFFML2EnumLiteralDeclaration_9 = (EnumLiteralDeclaration)cAlternatives.eContents().get(9);
+		private final Keyword cFFML2XmiKeyword_9_0 = (Keyword)cFFML2EnumLiteralDeclaration_9.eContents().get(0);
+		private final EnumLiteralDeclaration cS2T2EnumLiteralDeclaration_10 = (EnumLiteralDeclaration)cAlternatives.eContents().get(10);
+		private final Keyword cS2T2S2T2Keyword_10_0 = (Keyword)cS2T2EnumLiteralDeclaration_10.eContents().get(0);
+		private final EnumLiteralDeclaration cFMLBDD_ONLYEnumLiteralDeclaration_11 = (EnumLiteralDeclaration)cAlternatives.eContents().get(11);
+		private final Keyword cFMLBDD_ONLYBddKeyword_11_0 = (Keyword)cFMLBDD_ONLYEnumLiteralDeclaration_11.eContents().get(0);
 		
 		//enum FMFormat:
-		//	DIMACS | FMLBDD="fmlbdd" | FIDE="featureide" | FCALC="fmcalc" | FFML="fml" | FSPLOT="SPLOT" | FTVL="TVL" |
-		//	FTRISKELL="fd" | FFML2="xmi" | S2T2 | FMLBDD_ONLY="bdd";
+		//	DIMACS | FMLCONSTRAINT="fmlconstraints" | FMLBDD="fmlbdd" | FIDE="featureide" | FCALC="fmcalc" | FFML="fml" |
+		//	FSPLOT="SPLOT" | FTVL="TVL" | FTRISKELL="fd" | FFML2="xmi" | S2T2 | FMLBDD_ONLY="bdd";
 		public EnumRule getRule() { return rule; }
 
-		//DIMACS | FMLBDD="fmlbdd" | FIDE="featureide" | FCALC="fmcalc" | FFML="fml" | FSPLOT="SPLOT" | FTVL="TVL" |
-		//FTRISKELL="fd" | FFML2="xmi" | S2T2 | FMLBDD_ONLY="bdd"
+		//DIMACS | FMLCONSTRAINT="fmlconstraints" | FMLBDD="fmlbdd" | FIDE="featureide" | FCALC="fmcalc" | FFML="fml" |
+		//FSPLOT="SPLOT" | FTVL="TVL" | FTRISKELL="fd" | FFML2="xmi" | S2T2 | FMLBDD_ONLY="bdd"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//DIMACS
@@ -6291,65 +6293,71 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 		//"DIMACS"
 		public Keyword getDIMACSDIMACSKeyword_0_0() { return cDIMACSDIMACSKeyword_0_0; }
 
+		//FMLCONSTRAINT="fmlconstraints"
+		public EnumLiteralDeclaration getFMLCONSTRAINTEnumLiteralDeclaration_1() { return cFMLCONSTRAINTEnumLiteralDeclaration_1; }
+
+		//"fmlconstraints"
+		public Keyword getFMLCONSTRAINTFmlconstraintsKeyword_1_0() { return cFMLCONSTRAINTFmlconstraintsKeyword_1_0; }
+
 		//FMLBDD="fmlbdd"
-		public EnumLiteralDeclaration getFMLBDDEnumLiteralDeclaration_1() { return cFMLBDDEnumLiteralDeclaration_1; }
+		public EnumLiteralDeclaration getFMLBDDEnumLiteralDeclaration_2() { return cFMLBDDEnumLiteralDeclaration_2; }
 
 		//"fmlbdd"
-		public Keyword getFMLBDDFmlbddKeyword_1_0() { return cFMLBDDFmlbddKeyword_1_0; }
+		public Keyword getFMLBDDFmlbddKeyword_2_0() { return cFMLBDDFmlbddKeyword_2_0; }
 
 		//FIDE="featureide"
-		public EnumLiteralDeclaration getFIDEEnumLiteralDeclaration_2() { return cFIDEEnumLiteralDeclaration_2; }
+		public EnumLiteralDeclaration getFIDEEnumLiteralDeclaration_3() { return cFIDEEnumLiteralDeclaration_3; }
 
 		//"featureide"
-		public Keyword getFIDEFeatureideKeyword_2_0() { return cFIDEFeatureideKeyword_2_0; }
+		public Keyword getFIDEFeatureideKeyword_3_0() { return cFIDEFeatureideKeyword_3_0; }
 
 		//FCALC="fmcalc"
-		public EnumLiteralDeclaration getFCALCEnumLiteralDeclaration_3() { return cFCALCEnumLiteralDeclaration_3; }
+		public EnumLiteralDeclaration getFCALCEnumLiteralDeclaration_4() { return cFCALCEnumLiteralDeclaration_4; }
 
 		//"fmcalc"
-		public Keyword getFCALCFmcalcKeyword_3_0() { return cFCALCFmcalcKeyword_3_0; }
+		public Keyword getFCALCFmcalcKeyword_4_0() { return cFCALCFmcalcKeyword_4_0; }
 
 		//FFML="fml"
-		public EnumLiteralDeclaration getFFMLEnumLiteralDeclaration_4() { return cFFMLEnumLiteralDeclaration_4; }
+		public EnumLiteralDeclaration getFFMLEnumLiteralDeclaration_5() { return cFFMLEnumLiteralDeclaration_5; }
 
 		//"fml"
-		public Keyword getFFMLFmlKeyword_4_0() { return cFFMLFmlKeyword_4_0; }
+		public Keyword getFFMLFmlKeyword_5_0() { return cFFMLFmlKeyword_5_0; }
 
 		//FSPLOT="SPLOT"
-		public EnumLiteralDeclaration getFSPLOTEnumLiteralDeclaration_5() { return cFSPLOTEnumLiteralDeclaration_5; }
+		public EnumLiteralDeclaration getFSPLOTEnumLiteralDeclaration_6() { return cFSPLOTEnumLiteralDeclaration_6; }
 
 		//"SPLOT"
-		public Keyword getFSPLOTSPLOTKeyword_5_0() { return cFSPLOTSPLOTKeyword_5_0; }
+		public Keyword getFSPLOTSPLOTKeyword_6_0() { return cFSPLOTSPLOTKeyword_6_0; }
 
 		//FTVL="TVL"
-		public EnumLiteralDeclaration getFTVLEnumLiteralDeclaration_6() { return cFTVLEnumLiteralDeclaration_6; }
+		public EnumLiteralDeclaration getFTVLEnumLiteralDeclaration_7() { return cFTVLEnumLiteralDeclaration_7; }
 
 		//"TVL"
-		public Keyword getFTVLTVLKeyword_6_0() { return cFTVLTVLKeyword_6_0; }
+		public Keyword getFTVLTVLKeyword_7_0() { return cFTVLTVLKeyword_7_0; }
 
 		//FTRISKELL="fd"
-		public EnumLiteralDeclaration getFTRISKELLEnumLiteralDeclaration_7() { return cFTRISKELLEnumLiteralDeclaration_7; }
+		public EnumLiteralDeclaration getFTRISKELLEnumLiteralDeclaration_8() { return cFTRISKELLEnumLiteralDeclaration_8; }
 
 		//"fd"
-		public Keyword getFTRISKELLFdKeyword_7_0() { return cFTRISKELLFdKeyword_7_0; }
+		public Keyword getFTRISKELLFdKeyword_8_0() { return cFTRISKELLFdKeyword_8_0; }
 
 		//FFML2="xmi"
-		public EnumLiteralDeclaration getFFML2EnumLiteralDeclaration_8() { return cFFML2EnumLiteralDeclaration_8; }
+		public EnumLiteralDeclaration getFFML2EnumLiteralDeclaration_9() { return cFFML2EnumLiteralDeclaration_9; }
 
 		//"xmi"
-		public Keyword getFFML2XmiKeyword_8_0() { return cFFML2XmiKeyword_8_0; }
+		public Keyword getFFML2XmiKeyword_9_0() { return cFFML2XmiKeyword_9_0; }
 
 		//S2T2
-		public EnumLiteralDeclaration getS2T2EnumLiteralDeclaration_9() { return cS2T2EnumLiteralDeclaration_9; }
+		public EnumLiteralDeclaration getS2T2EnumLiteralDeclaration_10() { return cS2T2EnumLiteralDeclaration_10; }
 
 		//"S2T2"
-		public Keyword getS2T2S2T2Keyword_9_0() { return cS2T2S2T2Keyword_9_0; }
+		public Keyword getS2T2S2T2Keyword_10_0() { return cS2T2S2T2Keyword_10_0; }
 
 		//FMLBDD_ONLY="bdd"
-		public EnumLiteralDeclaration getFMLBDD_ONLYEnumLiteralDeclaration_10() { return cFMLBDD_ONLYEnumLiteralDeclaration_10; }
+		public EnumLiteralDeclaration getFMLBDD_ONLYEnumLiteralDeclaration_11() { return cFMLBDD_ONLYEnumLiteralDeclaration_11; }
 
 		//"bdd"
-		public Keyword getFMLBDD_ONLYBddKeyword_10_0() { return cFMLBDD_ONLYBddKeyword_10_0; }
+		public Keyword getFMLBDD_ONLYBddKeyword_11_0() { return cFMLBDD_ONLYBddKeyword_11_0; }
 	}
 
 	public class BOOL_OperatorElements extends AbstractEnumRuleElementFinder {
@@ -8011,8 +8019,8 @@ public class FMLGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//enum FMFormat:
-	//	DIMACS | FMLBDD="fmlbdd" | FIDE="featureide" | FCALC="fmcalc" | FFML="fml" | FSPLOT="SPLOT" | FTVL="TVL" |
-	//	FTRISKELL="fd" | FFML2="xmi" | S2T2 | FMLBDD_ONLY="bdd";
+	//	DIMACS | FMLCONSTRAINT="fmlconstraints" | FMLBDD="fmlbdd" | FIDE="featureide" | FCALC="fmcalc" | FFML="fml" |
+	//	FSPLOT="SPLOT" | FTVL="TVL" | FTRISKELL="fd" | FFML2="xmi" | S2T2 | FMLBDD_ONLY="bdd";
 	public FMFormatElements getFMFormatAccess() {
 		return (unknownRuleFMFormat != null) ? unknownRuleFMFormat : (unknownRuleFMFormat = new FMFormatElements());
 	}

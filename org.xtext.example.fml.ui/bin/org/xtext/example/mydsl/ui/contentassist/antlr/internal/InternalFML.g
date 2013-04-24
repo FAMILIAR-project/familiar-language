@@ -7079,73 +7079,80 @@ rule__FMFormat__Alternatives
 )
 
     |(
-{ before(grammarAccess.getFMFormatAccess().getFMLBDDEnumLiteralDeclaration_1()); }
+{ before(grammarAccess.getFMFormatAccess().getFMLCONSTRAINTEnumLiteralDeclaration_1()); }
+(	'fmlconstraints' 
+)
+{ after(grammarAccess.getFMFormatAccess().getFMLCONSTRAINTEnumLiteralDeclaration_1()); }
+)
+
+    |(
+{ before(grammarAccess.getFMFormatAccess().getFMLBDDEnumLiteralDeclaration_2()); }
 (	'fmlbdd' 
 )
-{ after(grammarAccess.getFMFormatAccess().getFMLBDDEnumLiteralDeclaration_1()); }
+{ after(grammarAccess.getFMFormatAccess().getFMLBDDEnumLiteralDeclaration_2()); }
 )
 
     |(
-{ before(grammarAccess.getFMFormatAccess().getFIDEEnumLiteralDeclaration_2()); }
+{ before(grammarAccess.getFMFormatAccess().getFIDEEnumLiteralDeclaration_3()); }
 (	'featureide' 
 )
-{ after(grammarAccess.getFMFormatAccess().getFIDEEnumLiteralDeclaration_2()); }
+{ after(grammarAccess.getFMFormatAccess().getFIDEEnumLiteralDeclaration_3()); }
 )
 
     |(
-{ before(grammarAccess.getFMFormatAccess().getFCALCEnumLiteralDeclaration_3()); }
+{ before(grammarAccess.getFMFormatAccess().getFCALCEnumLiteralDeclaration_4()); }
 (	'fmcalc' 
 )
-{ after(grammarAccess.getFMFormatAccess().getFCALCEnumLiteralDeclaration_3()); }
+{ after(grammarAccess.getFMFormatAccess().getFCALCEnumLiteralDeclaration_4()); }
 )
 
     |(
-{ before(grammarAccess.getFMFormatAccess().getFFMLEnumLiteralDeclaration_4()); }
+{ before(grammarAccess.getFMFormatAccess().getFFMLEnumLiteralDeclaration_5()); }
 (	'fml' 
 )
-{ after(grammarAccess.getFMFormatAccess().getFFMLEnumLiteralDeclaration_4()); }
+{ after(grammarAccess.getFMFormatAccess().getFFMLEnumLiteralDeclaration_5()); }
 )
 
     |(
-{ before(grammarAccess.getFMFormatAccess().getFSPLOTEnumLiteralDeclaration_5()); }
+{ before(grammarAccess.getFMFormatAccess().getFSPLOTEnumLiteralDeclaration_6()); }
 (	'SPLOT' 
 )
-{ after(grammarAccess.getFMFormatAccess().getFSPLOTEnumLiteralDeclaration_5()); }
+{ after(grammarAccess.getFMFormatAccess().getFSPLOTEnumLiteralDeclaration_6()); }
 )
 
     |(
-{ before(grammarAccess.getFMFormatAccess().getFTVLEnumLiteralDeclaration_6()); }
+{ before(grammarAccess.getFMFormatAccess().getFTVLEnumLiteralDeclaration_7()); }
 (	'TVL' 
 )
-{ after(grammarAccess.getFMFormatAccess().getFTVLEnumLiteralDeclaration_6()); }
+{ after(grammarAccess.getFMFormatAccess().getFTVLEnumLiteralDeclaration_7()); }
 )
 
     |(
-{ before(grammarAccess.getFMFormatAccess().getFTRISKELLEnumLiteralDeclaration_7()); }
+{ before(grammarAccess.getFMFormatAccess().getFTRISKELLEnumLiteralDeclaration_8()); }
 (	'fd' 
 )
-{ after(grammarAccess.getFMFormatAccess().getFTRISKELLEnumLiteralDeclaration_7()); }
+{ after(grammarAccess.getFMFormatAccess().getFTRISKELLEnumLiteralDeclaration_8()); }
 )
 
     |(
-{ before(grammarAccess.getFMFormatAccess().getFFML2EnumLiteralDeclaration_8()); }
+{ before(grammarAccess.getFMFormatAccess().getFFML2EnumLiteralDeclaration_9()); }
 (	'xmi' 
 )
-{ after(grammarAccess.getFMFormatAccess().getFFML2EnumLiteralDeclaration_8()); }
+{ after(grammarAccess.getFMFormatAccess().getFFML2EnumLiteralDeclaration_9()); }
 )
 
     |(
-{ before(grammarAccess.getFMFormatAccess().getS2T2EnumLiteralDeclaration_9()); }
+{ before(grammarAccess.getFMFormatAccess().getS2T2EnumLiteralDeclaration_10()); }
 (	'S2T2' 
 )
-{ after(grammarAccess.getFMFormatAccess().getS2T2EnumLiteralDeclaration_9()); }
+{ after(grammarAccess.getFMFormatAccess().getS2T2EnumLiteralDeclaration_10()); }
 )
 
     |(
-{ before(grammarAccess.getFMFormatAccess().getFMLBDD_ONLYEnumLiteralDeclaration_10()); }
+{ before(grammarAccess.getFMFormatAccess().getFMLBDD_ONLYEnumLiteralDeclaration_11()); }
 (	'bdd' 
 )
-{ after(grammarAccess.getFMFormatAccess().getFMLBDD_ONLYEnumLiteralDeclaration_10()); }
+{ after(grammarAccess.getFMFormatAccess().getFMLBDD_ONLYEnumLiteralDeclaration_11()); }
 )
 
 ;

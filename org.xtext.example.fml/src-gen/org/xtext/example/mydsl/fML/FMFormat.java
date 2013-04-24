@@ -30,6 +30,16 @@ public enum FMFormat implements Enumerator
   DIMACS(0, "DIMACS", "DIMACS"),
 
   /**
+   * The '<em><b>FMLCONSTRAINT</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #FMLCONSTRAINT_VALUE
+   * @generated
+   * @ordered
+   */
+  FMLCONSTRAINT(1, "FMLCONSTRAINT", "fmlconstraints"),
+
+  /**
    * The '<em><b>FMLBDD</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -37,7 +47,7 @@ public enum FMFormat implements Enumerator
    * @generated
    * @ordered
    */
-  FMLBDD(1, "FMLBDD", "fmlbdd"),
+  FMLBDD(2, "FMLBDD", "fmlbdd"),
 
   /**
    * The '<em><b>FIDE</b></em>' literal object.
@@ -47,7 +57,7 @@ public enum FMFormat implements Enumerator
    * @generated
    * @ordered
    */
-  FIDE(2, "FIDE", "featureide"),
+  FIDE(3, "FIDE", "featureide"),
 
   /**
    * The '<em><b>FCALC</b></em>' literal object.
@@ -57,7 +67,7 @@ public enum FMFormat implements Enumerator
    * @generated
    * @ordered
    */
-  FCALC(3, "FCALC", "fmcalc"),
+  FCALC(4, "FCALC", "fmcalc"),
 
   /**
    * The '<em><b>FFML</b></em>' literal object.
@@ -67,7 +77,7 @@ public enum FMFormat implements Enumerator
    * @generated
    * @ordered
    */
-  FFML(4, "FFML", "fml"),
+  FFML(5, "FFML", "fml"),
 
   /**
    * The '<em><b>FSPLOT</b></em>' literal object.
@@ -77,7 +87,7 @@ public enum FMFormat implements Enumerator
    * @generated
    * @ordered
    */
-  FSPLOT(5, "FSPLOT", "SPLOT"),
+  FSPLOT(6, "FSPLOT", "SPLOT"),
 
   /**
    * The '<em><b>FTVL</b></em>' literal object.
@@ -87,7 +97,7 @@ public enum FMFormat implements Enumerator
    * @generated
    * @ordered
    */
-  FTVL(6, "FTVL", "TVL"),
+  FTVL(7, "FTVL", "TVL"),
 
   /**
    * The '<em><b>FTRISKELL</b></em>' literal object.
@@ -97,7 +107,7 @@ public enum FMFormat implements Enumerator
    * @generated
    * @ordered
    */
-  FTRISKELL(7, "FTRISKELL", "fd"),
+  FTRISKELL(8, "FTRISKELL", "fd"),
 
   /**
    * The '<em><b>FFML2</b></em>' literal object.
@@ -107,7 +117,7 @@ public enum FMFormat implements Enumerator
    * @generated
    * @ordered
    */
-  FFML2(8, "FFML2", "xmi"),
+  FFML2(9, "FFML2", "xmi"),
 
   /**
    * The '<em><b>S2T2</b></em>' literal object.
@@ -117,7 +127,7 @@ public enum FMFormat implements Enumerator
    * @generated
    * @ordered
    */
-  S2T2(9, "S2T2", "S2T2"),
+  S2T2(10, "S2T2", "S2T2"),
 
   /**
    * The '<em><b>FMLBDD ONLY</b></em>' literal object.
@@ -127,7 +137,7 @@ public enum FMFormat implements Enumerator
    * @generated
    * @ordered
    */
-  FMLBDD_ONLY(10, "FMLBDD_ONLY", "bdd");
+  FMLBDD_ONLY(11, "FMLBDD_ONLY", "bdd");
 
   /**
    * The '<em><b>DIMACS</b></em>' literal value.
@@ -145,6 +155,21 @@ public enum FMFormat implements Enumerator
   public static final int DIMACS_VALUE = 0;
 
   /**
+   * The '<em><b>FMLCONSTRAINT</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of '<em><b>FMLCONSTRAINT</b></em>' literal object isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @see #FMLCONSTRAINT
+   * @model literal="fmlconstraints"
+   * @generated
+   * @ordered
+   */
+  public static final int FMLCONSTRAINT_VALUE = 1;
+
+  /**
    * The '<em><b>FMLBDD</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <p>
@@ -157,7 +182,7 @@ public enum FMFormat implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int FMLBDD_VALUE = 1;
+  public static final int FMLBDD_VALUE = 2;
 
   /**
    * The '<em><b>FIDE</b></em>' literal value.
@@ -172,7 +197,7 @@ public enum FMFormat implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int FIDE_VALUE = 2;
+  public static final int FIDE_VALUE = 3;
 
   /**
    * The '<em><b>FCALC</b></em>' literal value.
@@ -187,7 +212,7 @@ public enum FMFormat implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int FCALC_VALUE = 3;
+  public static final int FCALC_VALUE = 4;
 
   /**
    * The '<em><b>FFML</b></em>' literal value.
@@ -202,7 +227,7 @@ public enum FMFormat implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int FFML_VALUE = 4;
+  public static final int FFML_VALUE = 5;
 
   /**
    * The '<em><b>FSPLOT</b></em>' literal value.
@@ -217,7 +242,7 @@ public enum FMFormat implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int FSPLOT_VALUE = 5;
+  public static final int FSPLOT_VALUE = 6;
 
   /**
    * The '<em><b>FTVL</b></em>' literal value.
@@ -232,7 +257,7 @@ public enum FMFormat implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int FTVL_VALUE = 6;
+  public static final int FTVL_VALUE = 7;
 
   /**
    * The '<em><b>FTRISKELL</b></em>' literal value.
@@ -247,7 +272,7 @@ public enum FMFormat implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int FTRISKELL_VALUE = 7;
+  public static final int FTRISKELL_VALUE = 8;
 
   /**
    * The '<em><b>FFML2</b></em>' literal value.
@@ -262,7 +287,7 @@ public enum FMFormat implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int FFML2_VALUE = 8;
+  public static final int FFML2_VALUE = 9;
 
   /**
    * The '<em><b>S2T2</b></em>' literal value.
@@ -277,7 +302,7 @@ public enum FMFormat implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int S2T2_VALUE = 9;
+  public static final int S2T2_VALUE = 10;
 
   /**
    * The '<em><b>FMLBDD ONLY</b></em>' literal value.
@@ -292,7 +317,7 @@ public enum FMFormat implements Enumerator
    * @generated
    * @ordered
    */
-  public static final int FMLBDD_ONLY_VALUE = 10;
+  public static final int FMLBDD_ONLY_VALUE = 11;
 
   /**
    * An array of all the '<em><b>FM Format</b></em>' enumerators.
@@ -304,6 +329,7 @@ public enum FMFormat implements Enumerator
     new FMFormat[]
     {
       DIMACS,
+      FMLCONSTRAINT,
       FMLBDD,
       FIDE,
       FCALC,
@@ -373,6 +399,7 @@ public enum FMFormat implements Enumerator
     switch (value)
     {
       case DIMACS_VALUE: return DIMACS;
+      case FMLCONSTRAINT_VALUE: return FMLCONSTRAINT;
       case FMLBDD_VALUE: return FMLBDD;
       case FIDE_VALUE: return FIDE;
       case FCALC_VALUE: return FCALC;

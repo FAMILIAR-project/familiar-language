@@ -19,6 +19,8 @@
  */
 package fr.unice.polytech.modalis.familiar.parser;
 
+import java.util.Collection;
+
 import org.eclipse.emf.ecore.EObject;
 import org.xtext.example.mydsl.fML.Command;
 import org.xtext.example.mydsl.fML.ConfigurationCommand;
@@ -32,6 +34,7 @@ import fr.unice.polytech.modalis.familiar.fm.FeatureModelPrinter;
 import fr.unice.polytech.modalis.familiar.fm.basic.FMLFeatureModelReader;
 import fr.unice.polytech.modalis.familiar.fm.basic.FMLFeatureModelWriter;
 import fr.unice.polytech.modalis.familiar.fm.converter.FMLtoTVLConverter;
+import fr.unice.polytech.modalis.familiar.fm.converter.FeatureModelToExpression;
 import fr.unice.polytech.modalis.familiar.fm.converter.S2T2Converter;
 import fr.unice.polytech.modalis.familiar.fm.converter.SPLOTConverter;
 import fr.unice.polytech.modalis.familiar.fm.featureide.FMLtoFeatureIDE;
@@ -41,6 +44,7 @@ import fr.unice.polytech.modalis.familiar.operations.featureide.SATFMLFormula;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import fr.unice.polytech.modalis.familiar.variable.RType;
 import fr.unice.polytech.modalis.familiar.variable.StringVariable;
+import gsd.synthesis.Expression;
 import gsd.synthesis.FeatureGraphFactory;
 
 /**
@@ -179,6 +183,15 @@ public class ConvertAnalyzer extends FMLAbstractCommandAnalyzer {
 		else if (format == FMFormat.DIMACS) {
 			// FIXME @FeatureIDE 
 			convertion =  new SATFMLFormula(fmv).toDIMACS() ; 			
+		}
+		
+		else if (format == FMFormat.FMLCONSTRAINT) {
+			Collection<Expression<String>> exprs = new FeatureModelToExpression(fmv).convert() ;
+			StringBuilder sb = new StringBuilder() ; 
+			for (Expression<String> expr : exprs) {
+				sb.append (expr + " ; ");
+			}
+			convertion = sb.toString() ; 
 		}
 
 		else if (format == FMFormat.S2T2) {

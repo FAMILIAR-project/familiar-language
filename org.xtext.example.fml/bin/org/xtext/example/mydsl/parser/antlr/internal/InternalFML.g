@@ -10781,64 +10781,70 @@ ruleFMFormat returns [Enumerator current=null]
         newLeafNode(enumLiteral_0, grammarAccess.getFMFormatAccess().getDIMACSEnumLiteralDeclaration_0()); 
     }
 )
-    |(	enumLiteral_1='fmlbdd' 
+    |(	enumLiteral_1='fmlconstraints' 
 	{
-        $current = grammarAccess.getFMFormatAccess().getFMLBDDEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_1, grammarAccess.getFMFormatAccess().getFMLBDDEnumLiteralDeclaration_1()); 
+        $current = grammarAccess.getFMFormatAccess().getFMLCONSTRAINTEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_1, grammarAccess.getFMFormatAccess().getFMLCONSTRAINTEnumLiteralDeclaration_1()); 
     }
 )
-    |(	enumLiteral_2='featureide' 
+    |(	enumLiteral_2='fmlbdd' 
 	{
-        $current = grammarAccess.getFMFormatAccess().getFIDEEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_2, grammarAccess.getFMFormatAccess().getFIDEEnumLiteralDeclaration_2()); 
+        $current = grammarAccess.getFMFormatAccess().getFMLBDDEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_2, grammarAccess.getFMFormatAccess().getFMLBDDEnumLiteralDeclaration_2()); 
     }
 )
-    |(	enumLiteral_3='fmcalc' 
+    |(	enumLiteral_3='featureide' 
 	{
-        $current = grammarAccess.getFMFormatAccess().getFCALCEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_3, grammarAccess.getFMFormatAccess().getFCALCEnumLiteralDeclaration_3()); 
+        $current = grammarAccess.getFMFormatAccess().getFIDEEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_3, grammarAccess.getFMFormatAccess().getFIDEEnumLiteralDeclaration_3()); 
     }
 )
-    |(	enumLiteral_4='fml' 
+    |(	enumLiteral_4='fmcalc' 
 	{
-        $current = grammarAccess.getFMFormatAccess().getFFMLEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_4, grammarAccess.getFMFormatAccess().getFFMLEnumLiteralDeclaration_4()); 
+        $current = grammarAccess.getFMFormatAccess().getFCALCEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_4, grammarAccess.getFMFormatAccess().getFCALCEnumLiteralDeclaration_4()); 
     }
 )
-    |(	enumLiteral_5='SPLOT' 
+    |(	enumLiteral_5='fml' 
 	{
-        $current = grammarAccess.getFMFormatAccess().getFSPLOTEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_5, grammarAccess.getFMFormatAccess().getFSPLOTEnumLiteralDeclaration_5()); 
+        $current = grammarAccess.getFMFormatAccess().getFFMLEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_5, grammarAccess.getFMFormatAccess().getFFMLEnumLiteralDeclaration_5()); 
     }
 )
-    |(	enumLiteral_6='TVL' 
+    |(	enumLiteral_6='SPLOT' 
 	{
-        $current = grammarAccess.getFMFormatAccess().getFTVLEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_6, grammarAccess.getFMFormatAccess().getFTVLEnumLiteralDeclaration_6()); 
+        $current = grammarAccess.getFMFormatAccess().getFSPLOTEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_6, grammarAccess.getFMFormatAccess().getFSPLOTEnumLiteralDeclaration_6()); 
     }
 )
-    |(	enumLiteral_7='fd' 
+    |(	enumLiteral_7='TVL' 
 	{
-        $current = grammarAccess.getFMFormatAccess().getFTRISKELLEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_7, grammarAccess.getFMFormatAccess().getFTRISKELLEnumLiteralDeclaration_7()); 
+        $current = grammarAccess.getFMFormatAccess().getFTVLEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_7, grammarAccess.getFMFormatAccess().getFTVLEnumLiteralDeclaration_7()); 
     }
 )
-    |(	enumLiteral_8='xmi' 
+    |(	enumLiteral_8='fd' 
 	{
-        $current = grammarAccess.getFMFormatAccess().getFFML2EnumLiteralDeclaration_8().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_8, grammarAccess.getFMFormatAccess().getFFML2EnumLiteralDeclaration_8()); 
+        $current = grammarAccess.getFMFormatAccess().getFTRISKELLEnumLiteralDeclaration_8().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_8, grammarAccess.getFMFormatAccess().getFTRISKELLEnumLiteralDeclaration_8()); 
     }
 )
-    |(	enumLiteral_9='S2T2' 
+    |(	enumLiteral_9='xmi' 
 	{
-        $current = grammarAccess.getFMFormatAccess().getS2T2EnumLiteralDeclaration_9().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_9, grammarAccess.getFMFormatAccess().getS2T2EnumLiteralDeclaration_9()); 
+        $current = grammarAccess.getFMFormatAccess().getFFML2EnumLiteralDeclaration_9().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_9, grammarAccess.getFMFormatAccess().getFFML2EnumLiteralDeclaration_9()); 
     }
 )
-    |(	enumLiteral_10='bdd' 
+    |(	enumLiteral_10='S2T2' 
 	{
-        $current = grammarAccess.getFMFormatAccess().getFMLBDD_ONLYEnumLiteralDeclaration_10().getEnumLiteral().getInstance();
-        newLeafNode(enumLiteral_10, grammarAccess.getFMFormatAccess().getFMLBDD_ONLYEnumLiteralDeclaration_10()); 
+        $current = grammarAccess.getFMFormatAccess().getS2T2EnumLiteralDeclaration_10().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_10, grammarAccess.getFMFormatAccess().getS2T2EnumLiteralDeclaration_10()); 
+    }
+)
+    |(	enumLiteral_11='bdd' 
+	{
+        $current = grammarAccess.getFMFormatAccess().getFMLBDD_ONLYEnumLiteralDeclaration_11().getEnumLiteral().getInstance();
+        newLeafNode(enumLiteral_11, grammarAccess.getFMFormatAccess().getFMLBDD_ONLYEnumLiteralDeclaration_11()); 
     }
 ));
 

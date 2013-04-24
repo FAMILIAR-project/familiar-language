@@ -2108,6 +2108,10 @@
           <literal value="DIMACS"/>
         </elements>
         <elements xsi:type="xtext:EnumLiteralDeclaration">
+          <enumLiteral href="http://www.xtext.org/example/mydsl/FML#//FMFormat/FMLCONSTRAINT"/>
+          <literal value="fmlconstraints"/>
+        </elements>
+        <elements xsi:type="xtext:EnumLiteralDeclaration">
           <enumLiteral href="http://www.xtext.org/example/mydsl/FML#//FMFormat/FMLBDD"/>
           <literal value="fmlbdd"/>
         </elements>

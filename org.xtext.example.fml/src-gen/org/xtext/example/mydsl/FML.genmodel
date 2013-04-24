@@ -93,6 +93,7 @@
     </genEnums>
     <genEnums typeSafeEnumCompatible="false" ecoreEnum="FML.ecore#//FMFormat">
       <genEnumLiterals ecoreEnumLiteral="FML.ecore#//FMFormat/DIMACS"/>
+      <genEnumLiterals ecoreEnumLiteral="FML.ecore#//FMFormat/FMLCONSTRAINT"/>
       <genEnumLiterals ecoreEnumLiteral="FML.ecore#//FMFormat/FMLBDD"/>
       <genEnumLiterals ecoreEnumLiteral="FML.ecore#//FMFormat/FIDE"/>
       <genEnumLiterals ecoreEnumLiteral="FML.ecore#//FMFormat/FCALC"/>
