@@ -2082,6 +2082,7 @@ public class FeatureModelVariable extends VariableImpl implements FMLFeatureMode
 	
 		
 
+	@Deprecated
 	public FeatureModelVariable toGeneralizedNotation() {
 		
 				
@@ -2280,7 +2281,7 @@ public class FeatureModelVariable extends VariableImpl implements FMLFeatureMode
 	}
 
 	public Set<FGroup> computeOrGroups() {
-		FeatureModelVariable fmvG = toGeneralizedNotation() ; // FIXME: WRONG solutions
+		FeatureModelVariable fmvG = toGeneralizedNotation() ; // FIXME: WRONG solutions since the generalized synthesizer (1) subsumes Xor/Mtx to Or-groups (2) reduction of the IG 
 		return fmvG.getOrGroups();
 	}
 

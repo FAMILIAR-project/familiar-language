@@ -20,9 +20,13 @@ public class FMDimacsReader {
 	
 	protected Set<String> _fakes = new HashSet<String>();
 	
+
 	
-	
-	
+	public String getVariable(Integer lt) {
+		return _var2IDs.get(lt);
+	}
+
+		
 	public Integer getVariable(String id) {
 		return _var2IDs.inverse().get(id);
 	}
