@@ -44,7 +44,7 @@ import gsd.synthesis.Formula;
 public class FeatureModelVariableConstraints extends FeatureModelVariable {
 
 	private static final int _MAX_SHOW_CST = 100 ;
-	private Collection<Expression<String>> _csts;
+	protected Collection<Expression<String>> _csts;
 
 	public FeatureModelVariableConstraints(String assigner, Collection<Expression<String>> clauses) {
 		super (assigner, null);
@@ -137,6 +137,13 @@ public class FeatureModelVariableConstraints extends FeatureModelVariable {
 		assert (synth != null);
 		return synth.build() ; 
 	}
+	
+	@Override
+	public Set<Expression<String>> getAllConstraints() {
+		return new HashSet<Expression<String>>(_csts); 
+		
+	}
+	
 	
 	
 	

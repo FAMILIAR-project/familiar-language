@@ -4,22 +4,14 @@
 package fr.unice.polytech.modalis.familiar.fm.converter;
 
 import java.util.Collection;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
 import org.apache.log4j.Logger;
-import org.prop4j.And;
-import org.prop4j.Implies;
-import org.prop4j.Literal;
-import org.prop4j.Node;
-import org.prop4j.Not;
-import org.prop4j.Or;
 
 import com.google.common.collect.Sets;
 
-import de.ovgu.featureide.fm.core.editing.NodeCreator;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import fr.unice.polytech.modalis.familiar.variable.featureide.FeatureModelVariableConstraints;
 import gsd.graph.DepthFirstEdgeIterator;
@@ -38,9 +30,7 @@ public class FeatureModelToExpression {
 	
 	private static Logger _LOGGER = Logger.getLogger(FeatureModelToExpression.class);
 
-	private static String _rootFtName;
-
-	public static String _TOP_VARIABLE_NAME = "TRUE_VARIABLE";
+	public static String _TOP_VARIABLE_NAME = "SYNTETIC_ROOT_FEATURE";
 
 	private FeatureModelVariable _fmv;
 
@@ -202,15 +192,12 @@ public class FeatureModelToExpression {
 	}
 
 	public static Expression<String> mkTrueNode() {
-		return getRoot();
-	}
-
-	private static Expression<String> getRoot() {
-		return new Expression<String>(_TOP_VARIABLE_NAME ) ; 
+		return new Expression<String>(_TOP_VARIABLE_NAME) ;
+		//return new Expression<String>(ExpressionType.TRUE, _TOP_VARIABLE_NAME, null) ;
 	}
 
 	public Expression<String> mkFalseNode() {
-		return new Expression<String>(ExpressionType.NOT, getRoot(), null);
+		return new Expression<String>(ExpressionType.NOT, _TOP_VARIABLE_NAME, null);
 	}
 
 	private Set<Expression<String>> mkCardinality(FeatureGraph<String> g) {

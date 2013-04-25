@@ -1733,6 +1733,11 @@ public class FeatureModelVariable extends VariableImpl implements FMLFeatureMode
 		return EGBuilder.build(getFormula().getBDD(), builder, fts);
 
 	}
+	
+	public ExclusionGraph<String> computeExclusionGraph(Set<String> fts) {
+		return EGBuilder.build(getFormula().getBDD(), getBuilder(), fts);
+
+	}
 
 	public ExclusionGraph<String> getExclusionGraphFromFeatureHierarchy(
 			BDDBuilder<String> builder) {
