@@ -3,6 +3,7 @@
  */
 package fr.unice.polytech.modalis.familiar.operations;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
@@ -69,6 +70,10 @@ public class FMLMergerBDD extends FMLMerger {
 		super(lfvms) ; 
 		_flaStrategy = synchronizedFla ; 
 		_builder = builder ; 
+	}
+
+	public FMLMergerBDD(FeatureModelVariable... fm1) {
+		this (java.util.Arrays.asList(fm1), FDOverApproximationStrategy.SYNCHRONIZED_FLA);
 	}
 
 	@Override
