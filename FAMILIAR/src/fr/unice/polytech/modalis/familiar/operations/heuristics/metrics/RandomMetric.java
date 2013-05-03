@@ -15,4 +15,8 @@ public class RandomMetric implements FeatureSimilarityMetric {
 		return rand.nextDouble();
 	}
 
+	@Override
+	public String toString() {
+		return "Random metric";
+	}
 }

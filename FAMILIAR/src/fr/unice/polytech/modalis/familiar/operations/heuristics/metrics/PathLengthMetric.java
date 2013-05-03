@@ -31,4 +31,10 @@ public class PathLengthMetric extends WordNetMetric {
 		}
 		return maxScore;
 	}
+	
+	@Override
+	public String toString() {
+		return "WordNet metric (Path length)";
+	}
+
 }

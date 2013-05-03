@@ -37,5 +37,10 @@ public class SimmetricsMetric implements FeatureSimilarityMetric {
 			break;
 		}
 	}
+	
+	@Override
+	public String toString() {
+		return "Simmetrics metric (" + metric.getShortDescriptionString() + ")";
+	}
 
 }
