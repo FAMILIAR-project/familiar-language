@@ -1,5 +1,7 @@
 package fr.unice.polytech.modalis.familiar.operations.heuristics.metrics;
 
+import java.util.Collections;
+
 import gsd.graph.ImplicationGraph;
 
 public class ImplicationGraphMetrics {
@@ -71,5 +73,32 @@ public class ImplicationGraphMetrics {
 		}
 		return minOutdegree;
 	}
+	
+	
+	public <V> double meanDegree(ImplicationGraph<V> big) {
+		double sumDegree = 0;
+		for (V vertice : big.vertices()) {
+			sumDegree += big.edgesOf(vertice).size();
+		}
+		return sumDegree / big.vertices().size();
+	}
+	
+	public <V> double meanIndegree(ImplicationGraph<V> big) {
+		double sumIndegree = 0;
+		for (V vertice : big.vertices()) {
+			sumIndegree += big.inDegreeOf(vertice);
+		}
+		return sumIndegree / big.vertices().size();
+	}
+	
+	public <V> double meanOutdegree(ImplicationGraph<V> big) {
+		double sumOutdegree = 0;
+		for (V vertice : big.vertices()) {
+			sumOutdegree += big.outDegreeOf(vertice);
+		}
+		return sumOutdegree / big.vertices().size();
+	}
+	
+	
 }
 

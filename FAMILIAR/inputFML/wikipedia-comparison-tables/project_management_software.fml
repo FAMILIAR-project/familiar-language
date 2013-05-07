@@ -1,0 +1,91 @@
+FinalFM = FM(Project_Management_Software: General_features ; 
+
+General_features: (License|SaaS|Workflowsystem)+ (Issuetrackingsystem|ResourceManagement|Collaborativesoftware|Webbased)+ [ReportingandAnalyses] [ProjectPortfolioManagement] [DocumentManagement] [Scheduling] ; 
+
+License: (GPL|Proprietary|LGPL|AGPL|CPAL|Opensource)? ; 
+
+(CPAL -> SaaS);
+
+(LGPL -> Collaborativesoftware);
+
+(Proprietary -> !AGPL);
+
+(GPL -> !AGPL);
+
+(AGPL -> Webbased);
+
+(Opensource -> !AGPL);
+
+(((General_features -> ResourceManagement) | (General_features -> License)) | (General_features -> SaaS));
+
+(CPAL -> !AGPL);
+
+(((General_features -> License) | (General_features -> Scheduling)) | (General_features -> SaaS));
+
+(CPAL -> !Webbased);
+
+(Opensource -> !GPL);
+
+(((General_features -> License) | (General_features -> SaaS)) | (General_features -> ReportingandAnalyses));
+
+(Opensource -> !CPAL);
+
+(((General_features -> DocumentManagement) | (General_features -> License)) | (General_features -> SaaS));
+
+(ProjectPortfolioManagement -> !CPAL);
+
+(LGPL -> !GPL);
+
+(((General_features -> License) | (General_features -> SaaS)) | (General_features -> Issuetrackingsystem));
+
+(((General_features -> Scheduling) | (General_features -> Webbased)) | (General_features -> Collaborativesoftware));
+
+(LGPL -> !AGPL);
+
+(Collaborativesoftware -> !CPAL);
+
+(LGPL -> Scheduling);
+
+((((General_features -> Scheduling) | (General_features -> SaaS)) | (General_features -> Issuetrackingsystem)) | (General_features -> Collaborativesoftware));
+
+(DocumentManagement -> !CPAL);
+
+((((General_features -> ResourceManagement) | (General_features -> SaaS)) | (General_features -> Issuetrackingsystem)) | (General_features -> Collaborativesoftware));
+
+(GPL -> !Proprietary);
+
+(CPAL -> Scheduling);
+
+(LGPL -> !Opensource);
+
+(Workflowsystem -> !CPAL);
+
+(CPAL -> !Proprietary);
+
+(((General_features -> License) | (General_features -> SaaS)) | (General_features -> Collaborativesoftware));
+
+(LGPL -> !CPAL);
+
+(Issuetrackingsystem -> !CPAL);
+
+(GPL -> !CPAL);
+
+(Opensource -> !Proprietary);
+
+(CPAL -> ResourceManagement);
+
+(((General_features -> ResourceManagement) | (General_features -> DocumentManagement)) | (General_features -> Webbased));
+
+(LGPL -> !Proprietary);
+
+(((((General_features -> ResourceManagement) | (General_features -> DocumentManagement)) | (General_features -> Scheduling)) | (General_features -> SaaS)) | (General_features -> Issuetrackingsystem));
+
+(LGPL -> Webbased);
+
+(ReportingandAnalyses -> !CPAL);
+
+((General_features -> License) | (General_features -> Webbased));
+
+(((General_features -> License) | (General_features -> SaaS)) | (General_features -> ProjectPortfolioManagement));)
+
+

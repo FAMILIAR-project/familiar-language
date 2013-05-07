@@ -4,7 +4,9 @@ public enum MetricName {
 	ALWAYS_ZERO("Always zero"),
 	RANDOM("Random"),
 	SIMMETRICS_SMITHWATERMAN("Simmetrics (Smith Waterman)"),
-	WORDNET_WUP("Wordnet (Wu & Palmer)");
+	SIMMETRICS_LEVENSHTEIN("Simmetrics (Levenshtein)"),
+	WORDNET_WUP("Wordnet (Wu & Palmer)"),
+	WORDNET_PATHLENGTH("Wordnet (Path length)");
 	
 	private final String name;
 	

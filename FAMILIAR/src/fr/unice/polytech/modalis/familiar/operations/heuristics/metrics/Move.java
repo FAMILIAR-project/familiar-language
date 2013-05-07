@@ -30,4 +30,8 @@ public class Move {
 		}
 	}
 
+	public int getCost() {
+		return 1;
+	}
+
 }

@@ -14,6 +14,10 @@ public class WikipediaMinerMetric implements FeatureSimilarityMetric {
 	private ArticleComparer comparer;
 
 
+	/**
+	 * 
+	 * @param wikipediaDB : path to the database template file (wikipedia-template.xml)
+	 */
 	public WikipediaMinerMetric(String wikipediaDB) {
 		this.wikipediaDB = wikipediaDB;
 	}
@@ -48,7 +52,7 @@ public class WikipediaMinerMetric implements FeatureSimilarityMetric {
 		if (wikipedia != null) {
 			Article article1 = wikipedia.getMostLikelyArticle(f1, null);
 			Article article2 = wikipedia.getMostLikelyArticle(f2, null);
-
+			
 			// Compute the similarity of the whole feature name if possible, 
 			// split the feature in words otherwise
 			if (article1 == null || article2 == null) {
@@ -111,7 +115,6 @@ public class WikipediaMinerMetric implements FeatureSimilarityMetric {
 		if (wikipedia != null) {
 			Article article1 = wikipedia.getMostLikelyArticle(word1, null);
 			Article article2 = wikipedia.getMostLikelyArticle(word2, null);
-
 			if (article1 != null && article2 != null) {
 				try {
 					relatedness = comparer.getRelatedness(article1, article2);

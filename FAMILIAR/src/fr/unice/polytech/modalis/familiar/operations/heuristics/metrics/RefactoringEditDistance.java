@@ -50,7 +50,7 @@ public class RefactoringEditDistance implements FMEditDistanceMetric {
 			if (!swaps.isEmpty()) {
 				Swap swap = swaps.peek();
 				swap.perform();
-				distance++;
+				distance += swap.getCost();
 			} else {
 				hasSwaps = false;
 			}
@@ -61,7 +61,7 @@ public class RefactoringEditDistance implements FMEditDistanceMetric {
 		List<Move> moves = performMoves(fmHierarchy, referenceHierarchy);
 		for (Move move : moves) {
 			move.perform();
-			distance++;
+			distance += move.getCost();
 		}
 
 		return distance;

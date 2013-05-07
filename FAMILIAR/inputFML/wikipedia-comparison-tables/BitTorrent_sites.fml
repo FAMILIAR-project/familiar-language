@@ -1,0 +1,355 @@
+FinalFM = FM(BitTorrent_sites: Bit_Torrent_Sites_Features ; 
+
+Bit_Torrent_Sites_Features: (Public|Isatracker|Specialization)+ (Legalonly|Comments)? [Directory] [Sortable] [Private] [Trackeramalgamation] [Oneclickdownload] [RSS] ; 
+
+Sortable: (Notthetop100|Notworking|Notnewtorrents|Onlynewtorrents)? ; 
+
+Specialization: (Othersites|Anime|Film|Linux|Norwegianstuff|Unlicensedanime|TV) ; 
+
+Legalonly: [Unlicensedonly] ; 
+
+(Anime -> !Private);
+
+(Notnewtorrents -> Isatracker);
+
+(Film -> !Linux);
+
+(Legalonly -> !Private);
+
+(Film -> !Legalonly);
+
+(Notworking -> !RSS);
+
+(Othersites -> !Linux);
+
+(Othersites -> !Comments);
+
+(Public -> !Norwegianstuff);
+
+(Notworking -> Comments);
+
+(Film -> !Onlynewtorrents);
+
+(Notnewtorrents -> RSS);
+
+(Notworking -> !Private);
+
+(Anime -> Oneclickdownload);
+
+(Unlicensedanime -> !Film);
+
+(Onlynewtorrents -> !Private);
+
+(Comments -> !Legalonly);
+
+(Anime -> !Onlynewtorrents);
+
+(Private -> Directory);
+
+(Anime -> !Legalonly);
+
+(Isatracker -> !Notworking);
+
+(Legalonly -> !TV);
+
+(Notnewtorrents -> Trackeramalgamation);
+
+(Legalonly -> Public);
+
+(Film -> RSS);
+
+(Film -> Comments);
+
+(Isatracker -> !Unlicensedanime);
+
+(((Bit_Torrent_Sites_Features -> Specialization) | (Bit_Torrent_Sites_Features -> Public)) | (Bit_Torrent_Sites_Features -> Directory));
+
+(Notthetop100 -> Directory);
+
+(Othersites -> !Notworking);
+
+(Notthetop100 -> Comments);
+
+(Notthetop100 -> !Norwegianstuff);
+
+(Unlicensedonly -> !Private);
+
+(Comments -> !Onlynewtorrents);
+
+(Othersites -> !Private);
+
+(Notnewtorrents -> !TV);
+
+(Trackeramalgamation -> !Legalonly);
+
+(Notworking -> Directory);
+
+(Notthetop100 -> !Notworking);
+
+(Anime -> RSS);
+
+(Trackeramalgamation -> !Unlicensedonly);
+
+(Unlicensedonly -> !TV);
+
+(Isatracker -> !Unlicensedonly);
+
+(Linux -> !Directory);
+
+(Specialization -> !Notworking);
+
+(Linux -> !Onlynewtorrents);
+
+(Film -> Directory);
+
+(Notthetop100 -> !Unlicensedanime);
+
+(Anime -> !Film);
+
+(Anime -> Isatracker);
+
+(Notworking -> !Linux);
+
+(Norwegianstuff -> !TV);
+
+(((Bit_Torrent_Sites_Features -> Specialization) | (Bit_Torrent_Sites_Features -> Public)) | (Bit_Torrent_Sites_Features -> Sortable));
+
+(Notnewtorrents -> !Legalonly);
+
+(Film -> !Norwegianstuff);
+
+(Notworking -> !Unlicensedonly);
+
+(Trackeramalgamation -> !TV);
+
+(Anime -> !Notnewtorrents);
+
+(Isatracker -> !Othersites);
+
+(Notnewtorrents -> !Unlicensedanime);
+
+(Comments -> !Linux);
+
+(Film -> !TV);
+
+(Unlicensedanime -> !TV);
+
+(Notthetop100 -> !Notnewtorrents);
+
+(Notworking -> Trackeramalgamation);
+
+(Unlicensedanime -> !Norwegianstuff);
+
+(Notthetop100 -> RSS);
+
+(Trackeramalgamation -> !Othersites);
+
+(Notthetop100 -> !Film);
+
+(Norwegianstuff -> Private);
+
+(Anime -> !Unlicensedonly);
+
+(Notthetop100 -> !Othersites);
+
+(Notnewtorrents -> !Film);
+
+(Linux -> !Private);
+
+(Othersites -> !RSS);
+
+(Othersites -> !Directory);
+
+(Notnewtorrents -> !Unlicensedonly);
+
+(Anime -> !Notthetop100);
+
+(Unlicensedonly -> !Comments);
+
+(Unlicensedonly -> !Linux);
+
+(Trackeramalgamation -> !Linux);
+
+(Notthetop100 -> Oneclickdownload);
+
+(Notworking -> Public);
+
+(Unlicensedanime -> !Oneclickdownload);
+
+(Notthetop100 -> !Unlicensedonly);
+
+(Unlicensedonly -> !Oneclickdownload);
+
+(Othersites -> !Public);
+
+(Notnewtorrents -> !Norwegianstuff);
+
+(Film -> Oneclickdownload);
+
+(TV -> Comments);
+
+(Notnewtorrents -> !Notworking);
+
+(Notthetop100 -> !Onlynewtorrents);
+
+(Notthetop100 -> Public);
+
+(Linux -> Oneclickdownload);
+
+(Film -> !Notworking);
+
+(TV -> Private);
+
+(Unlicensedanime -> !Notworking);
+
+(Notworking -> !Norwegianstuff);
+
+(Anime -> Public);
+
+(Onlynewtorrents -> !TV);
+
+(Film -> Public);
+
+(Notthetop100 -> !Linux);
+
+(Notnewtorrents -> !Linux);
+
+(Othersites -> !Unlicensedanime);
+
+(Sortable -> !Linux);
+
+(Public -> !TV);
+
+(Norwegianstuff -> !Onlynewtorrents);
+
+(Unlicensedanime -> !Private);
+
+(Anime -> Directory);
+
+(Notnewtorrents -> Comments);
+
+(Film -> !Unlicensedonly);
+
+(Specialization -> !Notnewtorrents);
+
+(TV -> RSS);
+
+(Othersites -> !TV);
+
+(Film -> !Private);
+
+(Isatracker -> !Film);
+
+(Notthetop100 -> !TV);
+
+(Unlicensedanime -> !Comments);
+
+(Notworking -> !Onlynewtorrents);
+
+(Notworking -> Oneclickdownload);
+
+(Notnewtorrents -> !Onlynewtorrents);
+
+(Notnewtorrents -> !Oneclickdownload);
+
+(Oneclickdownload -> !Onlynewtorrents);
+
+(Anime -> !Unlicensedanime);
+
+(Notthetop100 -> !Private);
+
+((((Bit_Torrent_Sites_Features -> Legalonly) | (Bit_Torrent_Sites_Features -> Specialization)) | (Bit_Torrent_Sites_Features -> Sortable)) | (Bit_Torrent_Sites_Features -> Directory));
+
+(Notworking -> !Legalonly);
+
+(((Bit_Torrent_Sites_Features -> Specialization) | (Bit_Torrent_Sites_Features -> Public)) | (Bit_Torrent_Sites_Features -> Private));
+
+(Othersites -> !Film);
+
+(Film -> Trackeramalgamation);
+
+(Isatracker -> !Onlynewtorrents);
+
+(Anime -> !Linux);
+
+(Anime -> !Norwegianstuff);
+
+(Norwegianstuff -> !Linux);
+
+(((Bit_Torrent_Sites_Features -> Isatracker) | (Bit_Torrent_Sites_Features -> Specialization)) | (Bit_Torrent_Sites_Features -> Sortable));
+
+(Private -> Sortable);
+
+(Othersites -> !Oneclickdownload);
+
+(Othersites -> !Legalonly);
+
+(Linux -> Legalonly);
+
+(Private -> Isatracker);
+
+(Private -> Oneclickdownload);
+
+(Sortable -> !Film);
+
+(Linux -> RSS);
+
+(Notworking -> !TV);
+
+(((Bit_Torrent_Sites_Features -> Specialization) | (Bit_Torrent_Sites_Features -> Sortable)) | (Bit_Torrent_Sites_Features -> Oneclickdownload));
+
+(Linux -> Isatracker);
+
+(Unlicensedonly <-> Unlicensedanime);
+
+(Othersites -> !Unlicensedonly);
+
+(Unlicensedanime <-> Onlynewtorrents);
+
+(Anime -> !TV);
+
+(Linux -> !TV);
+
+(Anime -> !Notworking);
+
+(Unlicensedanime -> !Linux);
+
+(Trackeramalgamation -> !Unlicensedanime);
+
+(Notthetop100 -> Isatracker);
+
+(Notnewtorrents -> !Private);
+
+(Norwegianstuff -> !Legalonly);
+
+(Othersites -> !Sortable);
+
+(Norwegianstuff -> Comments);
+
+(Othersites -> !Norwegianstuff);
+
+(Specialization -> !Notthetop100);
+
+(Notthetop100 -> !Legalonly);
+
+(Unlicensedonly -> !Norwegianstuff);
+
+(Notnewtorrents -> !Directory);
+
+(Trackeramalgamation -> !Onlynewtorrents);
+
+(((Bit_Torrent_Sites_Features -> Specialization) | (Bit_Torrent_Sites_Features -> Public)) | (Bit_Torrent_Sites_Features -> Oneclickdownload));
+
+(Notthetop100 -> !Trackeramalgamation);
+
+(Norwegianstuff -> RSS);
+
+(Anime -> !Othersites);
+
+(Notnewtorrents -> Public);
+
+(Othersites -> !Onlynewtorrents);
+
+((((Bit_Torrent_Sites_Features -> Legalonly) | (Bit_Torrent_Sites_Features -> Specialization)) | (Bit_Torrent_Sites_Features -> Comments)) | (Bit_Torrent_Sites_Features -> Sortable));
+
+(Othersites -> !Notnewtorrents);)

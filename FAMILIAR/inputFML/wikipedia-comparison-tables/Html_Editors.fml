@@ -1,0 +1,47 @@
+FinalFM = FM(Html_Editors: Editor_feature Web_technology_support Operating_system_support ; 
+
+Editor_feature: [WYSIWYG] [WebDAVUpload] [FormHandler] [TemplatesUpdateSync] [Serversidescripting] [Spellchecking] [FTPUpload] [Templates] [Sharedediting] [PagePreview] ; 
+
+Web_technology_support: [CSS2] [XSLT] [XHTML] [Java] [Frames] [XForms] [MathML] [XPath] [RSS] [JavaScript] [Atom] ; 
+
+Operating_system_support: [MacOSX] [Windows] [BSD] [MacOS9] [Unix] [Linux] ; 
+
+Serversidescripting: [Viaplugins] ; 
+
+Templates: [Some] ; 
+
+(MathML -> !Viaplugins);
+
+(Unix -> CSS2);
+
+(Some -> !Atom);
+
+(Some -> !XPath);
+
+(Spellchecking -> !Viaplugins);
+
+(Some <-> Viaplugins);
+
+(Unix -> JavaScript);
+
+(Viaplugins -> !BSD);
+
+(Unix -> Frames);
+
+(Some -> !MacOS9);
+
+(Viaplugins -> !RSS);
+
+(Unix -> BSD);
+
+(Unix -> Spellchecking);
+
+(Viaplugins -> !XSLT);
+
+(Unix -> Linux);
+
+(Some -> !WYSIWYG);
+
+(Unix -> PagePreview);
+
+(Some -> !XForms);)

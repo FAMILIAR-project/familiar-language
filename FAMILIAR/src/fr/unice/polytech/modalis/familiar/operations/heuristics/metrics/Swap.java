@@ -64,4 +64,8 @@ public class Swap implements Comparable<Swap> {
 			}
 		}
 	}
+
+	public int getCost() {
+		return distance;
+	}
 }

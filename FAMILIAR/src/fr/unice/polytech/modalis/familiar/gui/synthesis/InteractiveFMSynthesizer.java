@@ -46,18 +46,46 @@ public class InteractiveFMSynthesizer extends Observable{
 	private Set<Set<String>> similarityClusters;
 	private List<Set<Set<String>>> supportClusters;
 	private double clusteringThreshold;
+	private List<FeatureSimilarityMetric> complementaryParentSimilarityMetrics;
 
-	public InteractiveFMSynthesizer(FeatureModelVariable fmv) {
+
+
+	public InteractiveFMSynthesizer(FeatureModelVariable fmv,
+			FeatureSimilarityMetric parentSimilarityMetric,
+			List<FeatureSimilarityMetric> complementaryParentSimilarityMetrics,
+			FeatureSimilarityMetric clusteringSimilarityMetric,
+			double clusteringThreshold) {
+
+		// Initialize data
+		this.fmv = fmv;
 		big = new WeightedImplicationGraph<String>(fmv.computeImplicationGraph());
 		originalBig = big.clone();
 		this.fmv = new FeatureModelVariable(fmv.getIdentifier() + "_synthesis",
 				new FeatureModel<String>(FeatureGraphFactory.mkStringFactory().mkTop()),
 				fmv.getFormula().clone());
-		
-		setParentSimilarityMetric(new AlwaysZeroMetric());
-		setClusteringParameters(new SimmetricsMetric(MetricName.SIMMETRICS_SMITHWATERMAN), 0.5);
-		//		setSupportClusteringParameters(0);
 		featureComparator = new OutDegreeComparator(big.getImplicationGraph());
+
+		// Check algorithm's parameters
+		this.parentSimilarityMetric = parentSimilarityMetric != null ? 
+				parentSimilarityMetric : new AlwaysZeroMetric();	
+		this.clusteringSimilarityMetric = clusteringSimilarityMetric != null ? 
+				clusteringSimilarityMetric : new SimmetricsMetric(MetricName.SIMMETRICS_SMITHWATERMAN);
+		if (clusteringThreshold >= 0 && clusteringThreshold <=1) {
+			this.clusteringThreshold = clusteringThreshold;		
+		} else {
+			this.clusteringThreshold = 0;
+		}
+
+		this.complementaryParentSimilarityMetrics = complementaryParentSimilarityMetrics != null ? 
+				complementaryParentSimilarityMetrics : new ArrayList<FeatureSimilarityMetric>();
+
+		// Compute clusters and weights
+		computeClusters();
+		computeBIGWeights();
+	}
+
+	public InteractiveFMSynthesizer(FeatureModelVariable fmv) {
+		this(fmv, null, null, null, 0.5);
 	}
 
 	public FeatureModelVariable getFeatureModelVariable() {
@@ -73,8 +101,8 @@ public class InteractiveFMSynthesizer extends Observable{
 	 * @param child
 	 * @param parent
 	 */
-	
-public void selectParent(String child, String parent) {
+
+	public void selectParent(String child, String parent) {
 		FeatureGraph<String> graph = fmv.getFm().getDiagram();
 		FeatureNode<String> childNode;
 		try {
@@ -108,6 +136,9 @@ public void selectParent(String child, String parent) {
 		removedEdges.remove(big.findEdge(child, parent));
 		big.removeAllEdges(removedEdges);
 
+		// Update weights in case this new information modifies our understanding of the clusters
+		computeBIGWeights();
+
 		setChanged();
 		notifyObservers();
 	}
@@ -130,6 +161,9 @@ public void selectParent(String child, String parent) {
 			if (parents.size() == 1) {
 				selectParent(child, parents.iterator().next());
 			}
+
+			// Update weights in case this new information modifies our understanding of the clusters
+			computeBIGWeights();
 
 			setChanged();
 			notifyObservers();
@@ -162,28 +196,20 @@ public void selectParent(String child, String parent) {
 	 * It also computes the associated weighted implication graph
 	 * @param parentSimilarityMetric
 	 */
-	public void setParentSimilarityMetric(
-			FeatureSimilarityMetric parentSimilarityMetric) {
+	public void setParentSimilarityMetric(FeatureSimilarityMetric parentSimilarityMetric) {
 		this.parentSimilarityMetric = parentSimilarityMetric;
-		for (SimpleEdge edge : big.edges()) {
-			String source = big.getSource(edge);
-			String target = big.getTarget(edge);
-			double weight = parentSimilarityMetric.similarity(source, target);
-			big.setEdgeWeight(edge, weight);
-		}
-		setChanged();
-		notifyObservers();
+		computeBIGWeights();
 	}
-	
+
 	public void selectFeatureFrequencyMetric() {
 		featureFrequencyMetric = new FrequencyMetric (fmv);
-		
+
 		for (SimpleEdge edge : big.edges()) {
 			String source = big.getSource(edge);
 			String target = big.getTarget(edge);
 			double weight = featureFrequencyMetric.support(source, target);
 			big.setEdgeWeight(edge, weight);
-			
+
 		}
 		setChanged();
 		notifyObservers();
@@ -197,6 +223,7 @@ public void selectParent(String child, String parent) {
 		this.clusteringSimilarityMetric = clusteringSimilarityMetric;
 		this.clusteringThreshold = threshold;
 		computeClusters();
+		computeBIGWeights();
 	}
 
 	public void setSupportClusteringParameters(double threshold) {
@@ -212,6 +239,7 @@ public void selectParent(String child, String parent) {
 		FMExperiment experiment = new FMExperiment(big.getImplicationGraph());
 		Dendrogram dendrogram = hierarchicalClustering.computeDendrogram(experiment, clusteringSimilarityMetric);
 		similarityClusters = hierarchicalClustering.extractClusters(experiment, dendrogram, clusteringThreshold);
+
 		setChanged();
 		notifyObservers();
 	}
@@ -287,6 +315,9 @@ public void selectParent(String child, String parent) {
 		Set<SimpleEdge> removedEdges = new HashSet<SimpleEdge>(big.outgoingEdges(root));
 		big.removeAllEdges(removedEdges);
 
+		// Update weights in case this new information modifies our understanding of the clusters
+		computeBIGWeights();
+
 		setChanged();
 		notifyObservers();
 	}
@@ -307,7 +338,7 @@ public void selectParent(String child, String parent) {
 		for (String feature : hierarchy.vertices()) {
 			fg.addVertex(new FeatureNode<String>(feature));
 		}
-		
+
 		for (SimpleEdge edge : hierarchy.edges()) {
 			String source = hierarchy.getSource(edge);
 			String target = hierarchy.getTarget(edge);
@@ -315,7 +346,7 @@ public void selectParent(String child, String parent) {
 			FeatureNode<String> targetNode = fg.findVertex(target);
 			fg.addEdge(sourceNode, targetNode, FeatureEdge.HIERARCHY);
 		}
-		
+
 		// Add edge root -> top
 		String root = hierarchy.roots().iterator().next();
 		fg.addEdge(fg.findVertex(root), fg.getTopVertex(), FeatureEdge.HIERARCHY);
@@ -409,4 +440,176 @@ public void selectParent(String child, String parent) {
 		return possibleParents;
 	}
 
+	public void setComplementaryParentSimilarityMetrics(List<FeatureSimilarityMetric> complementaryMetrics) {
+		this.complementaryParentSimilarityMetrics = complementaryMetrics;
+
+	}
+
+	/**
+	 * Compute the weights of the Binary Implication Graph according to 
+	 * the main parent similarity heuristics,
+	 * the complementary heuristics
+	 * and the clusters
+	 */
+	private void computeBIGWeights() {
+		// TODO : avoid computing the same thing twice
+		// TODO : offer the choice to ignore clusters or complementary heuristics
+
+		// Compute weights with the main heuristic
+
+		for (SimpleEdge edge : big.edges()) {
+			String source = big.getSource(edge);
+			String target = big.getTarget(edge);
+			double weight = parentSimilarityMetric.similarity(source, target);
+			big.setEdgeWeight(edge, weight);
+		}
+
+		// Tune weights with complementary heuristics
+		tuneWeightsWithComplementaryHeuristics();
+
+		// Tune weights with clusters
+		tuneWeightsWithComplementaryClusters(similarityClusters);
+
+		setChanged();
+		notifyObservers();
+	}
+
+
+	/**
+	 * Tune the weights of the BIG according to the complementary heuristics
+	 */
+	private void tuneWeightsWithComplementaryHeuristics() {
+
+		// TODO : put these thresholds in a better place
+		final double VERY_HIGH_THRESHOLD = 0.9; // the feature should be selected
+		final double HIGH_THRESHOLD = 0.7; // the feature might be selected
+		final double HIGH_VALUE = 1; // assigned value if very high probability
+
+		final double VERY_LOW_THRESHOLD = 0.3; // the feature might be rejected
+		final double LOW_THRESHOLD = 0.1; // the feature should be rejected
+		final double LOW_VALUE = 0; // assigned value if very low probability
+
+		for (SimpleEdge edge : big.edges()) {
+			String source = big.getSource(edge);
+			String target = big.getTarget(edge);
+
+			// Compute the complementary heuristic choices
+			boolean veryHigh = false, high = false, veryLow = false, low = false; 
+			for (FeatureSimilarityMetric metric : complementaryParentSimilarityMetrics) {
+				double weight = metric.similarity(source, target);
+				if (weight > VERY_HIGH_THRESHOLD)
+					veryHigh = true;
+				if (weight > HIGH_THRESHOLD)
+					high = true;
+				if (weight < VERY_LOW_THRESHOLD)
+					veryLow = true;
+				if (weight < LOW_THRESHOLD)
+					low = true;
+			}	
+
+			// Check if there is no conflicts between the heuristics (including the main heuristic)
+			if (veryHigh && !low && big.getEdgeWeight(edge) > LOW_THRESHOLD) {
+				big.setEdgeWeight(edge, HIGH_VALUE);
+			} else if (veryLow && !high && big.getEdgeWeight(edge) < HIGH_THRESHOLD) {
+				big.setEdgeWeight(edge, LOW_VALUE);
+			}
+		}
+	}
+
+	/**
+	 * Tune the weights of the BIG according to the clusters
+	 */
+	private void tuneWeightsWithComplementaryClusters(Set<Set<String>> clusters) {
+		for (Set<String> cluster : clusters) {
+			if (cluster.size() > 1) {
+				// Look for a parent within the cluster
+				String bestParent = findBestParentWithinCluster(cluster);
+
+				// Look for a common parent
+				if (bestParent == null) {
+					bestParent = findBestCommonParent(cluster);
+				}
+				
+				if (bestParent != null) {
+					promoteParentOfCluster(cluster, bestParent);
+				} else {
+					tuneWeightsWithComplementaryClusters(separateInSubclusters(clusters));
+				}
+				
+			}
+		}
+	}
+
+
+	/**
+	 * Find the best parent within the cluster
+	 * @param cluster
+	 * @return the best parent or null if it does not exist
+	 */
+	public String findBestParentWithinCluster(Set<String> cluster) {
+		String bestParent = null;
+		double bestParentScore = 0;
+		
+		for (String feature : cluster) {
+			Set<String> otherFeatures = new HashSet<String>(cluster);
+			otherFeatures.remove(feature);
+			if (getPossibleParents(otherFeatures).contains(feature)) {
+				double parentScore = getParentScoreForCluster(otherFeatures, feature);
+				if (bestParent == null || bestParentScore < parentScore) {
+					bestParent = feature;
+					bestParentScore = parentScore;
+				}
+			}
+		}
+		
+		return bestParent;
+	}
+	
+	/**
+	 * Find the best common parent of the cluster
+	 * @param cluster
+	 * @return the best parent or null if it does not exist
+	 */
+	public String findBestCommonParent(Set<String> cluster) {
+		String bestParent = null;
+		double bestParentScore = 0;
+		
+		Set<String> possibleParents = this.getPossibleParents(cluster);
+		if (!possibleParents.isEmpty()) {
+			for (String possibleParent : possibleParents) {
+				double parentScore = getParentScoreForCluster(cluster, possibleParent);
+				if (bestParent == null || bestParentScore < parentScore) {
+					bestParent = possibleParent;
+					bestParentScore = parentScore;
+				}
+			}
+		}
+		
+		return bestParent;
+	}
+	
+	private double getParentScoreForCluster(Set<String> cluster, String parent) {
+		double score = 0;
+		for (String feature : cluster) {
+			score += big.getEdgeWeight(big.findEdge(feature, parent));
+		}
+		return score;
+	}
+
+	private Set<Set<String>> separateInSubclusters(Set<Set<String>> clusters) {
+		// TODO : separate in subclusters
+		return new HashSet<Set<String>>();
+	}
+
+	private void promoteParentOfCluster(Set<String> cluster, String parent) {
+		final double MAX = 1;
+		if (parent != null) {
+			for (String feature : cluster) {
+				if (!feature.equals(parent)) {
+					big.setEdgeWeight(big.findEdge(feature, parent), MAX);
+				}
+			}
+		}
+		
+	}
 }
