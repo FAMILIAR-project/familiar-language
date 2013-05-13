@@ -128,5 +128,9 @@ public class WikipediaMinerMetric implements FeatureSimilarityMetric {
 		return relatedness;
 	}
 
+	public Wikipedia getWikipedia() {
+		return wikipedia;
+	}
+
 }
 

@@ -612,4 +612,8 @@ public class InteractiveFMSynthesizer extends Observable{
 		}
 		
 	}
+
+	public WeightedImplicationGraph<String> getOriginalBig() {
+		return originalBig;
+	}
 }

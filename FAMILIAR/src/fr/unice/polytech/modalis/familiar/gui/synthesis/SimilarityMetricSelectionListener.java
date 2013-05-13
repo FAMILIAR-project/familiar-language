@@ -14,10 +14,12 @@ import net.sf.extjwnl.dictionary.Dictionary;
 import fr.unice.polytech.modalis.familiar.gui.FamiliarEditor;
 import fr.unice.polytech.modalis.familiar.gui.Tab2EnvVar;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.AlwaysZeroMetric;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.LatentSemanticMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.MetricName;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.RandomMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.SimmetricsMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.WuPalmerMetric;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.mst.WeightedImplicationGraph;
 
 public class SimilarityMetricSelectionListener implements ActionListener {
 
@@ -47,6 +49,15 @@ public class SimilarityMetricSelectionListener implements ActionListener {
 				Dictionary dictionary = WordNetPropertyFileChooser.getInstance();
 				if (dictionary != null) {
 					environment.setParentSimilarityMetric(new WuPalmerMetric(dictionary));	
+				}
+				break;
+			case LSA_LSI:
+				WeightedImplicationGraph<String> originalBig = environment.getSynthesizer().getOriginalBig();
+				try {
+					environment.setParentSimilarityMetric(new LatentSemanticMetric(originalBig));
+				} catch (Exception e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
 				}
 				break;
 			default:
