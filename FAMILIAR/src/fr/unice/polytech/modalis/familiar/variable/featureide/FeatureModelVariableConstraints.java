@@ -51,6 +51,13 @@ public class FeatureModelVariableConstraints extends FeatureModelVariable {
 		_csts = clauses ; 
 	}
 	
+	public FeatureModelVariableConstraints(Expression<String> expression) {
+		super (null, null);
+		_csts = new HashSet<Expression<String>>() ; 
+		_csts.add (expression);
+		
+	}
+
 	@Override
 	public SetVariable features() {
 		Set<Variable> varsR = new HashSet<Variable>();

@@ -11,7 +11,9 @@ import java.util.Set;
 import org.apache.log4j.Logger;
 
 import com.google.common.collect.Sets;
+import com.google.common.collect.Sets.SetView;
 
+import fr.unice.polytech.modalis.familiar.operations.ExpressionUtility;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import fr.unice.polytech.modalis.familiar.variable.featureide.FeatureModelVariableConstraints;
 import gsd.graph.DepthFirstEdgeIterator;
@@ -118,7 +120,8 @@ public class FeatureModelToExpression {
 			return exprs;
 		Set<Expression<String>> hierarchy = mkHierarchy(g);
 		Set<Expression<String>> groups = mkCardinality(g);
-		return Sets.union(hierarchy, groups);
+		Set<Expression<String>> rSet = Sets.union(hierarchy, groups);
+		return rSet ; 
 	}
 
 	@SuppressWarnings("unchecked")
@@ -206,15 +209,27 @@ public class FeatureModelToExpression {
 
 			Set<FeatureNode<String>> sources = g.getSources(e);
 			FeatureNode<String> target = g.getTarget(e);
+			
 			switch (e.getType()) {
 			case FeatureEdge.MUTEX:
 				result.add(mkMutex(sources));
 				break;
-			case FeatureEdge.XOR:
+			
 			case FeatureEdge.MANDATORY:
 				result.add(new Expression<String>(ExpressionType.IMPLIES, 
 						mkConjunction(target), mkOrNodes(sources)));
-				// Mutual Exclusions
+				break ; 
+			case FeatureEdge.XOR:
+				Collection<Expression<String>> disjs = new HashSet<Expression<String>>() ;
+				Expression<String> eTarget = mkConjunction(target) ;
+				
+				for (FeatureNode<String> source : sources) {
+					disjs.add(new Expression<String>(ExpressionType.OR, 
+							new Expression<String>(ExpressionType.NOT, eTarget, null), 
+							get(source.getFeature())));					
+				}
+				result.add(ExpressionUtility.mkDisjunction(disjs));
+					// Mutual Exclusions
 				result.add(mkMutex(sources));
 				break;
 			case FeatureEdge.OR:
@@ -238,6 +253,7 @@ public class FeatureModelToExpression {
 		
 		exprs.addAll(mkStructure(_fm.getDiagram()));
 		exprs.addAll(_fm.getConstraints()); 
+		exprs.add(mkTrueNode());
 		return exprs ; 
 		
 	}
