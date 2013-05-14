@@ -262,6 +262,11 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 	}
 
 
+	public InteractiveFMSynthesizer getSynthesizer() {
+		return synthesizer;
+	}
+
+
 	public void updateSelectedClusters(List<Set<String>> selectedClusters, List<Set<String>> unselectedClusters) {
 		fmViewer.updateSelectedClusters(selectedClusters, unselectedClusters);
 	}
