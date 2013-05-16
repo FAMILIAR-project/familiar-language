@@ -14,12 +14,6 @@ public class LatentSemanticMetric implements FeatureSimilarityMetric{
 	 private Map<SimpleEdge, Double> cosinusSimilarityMap;
 
 	
-	public LatentSemanticMetric(WeightedImplicationGraph<String> originalBig) throws Exception {
-		ComputeLSA compute = new ComputeLSA(originalBig);
-		big = originalBig.getImplicationGraph();
-		compute.computeCosinusSimilarity(big);
-		cosinusSimilarityMap = compute.getCosinusSimilarityMap();
-	}
 	
 	@Override
 	public double similarity(String featureName1, String featureName2) {
@@ -30,5 +24,17 @@ public class LatentSemanticMetric implements FeatureSimilarityMetric{
 			cle = big.getEdge(featureName2, featureName1);
 		}
 		return cosinusSimilarityMap.get(cle);
+	}
+	
+	public void setBig(ImplicationGraph<String> big) {
+		this.big = big;
+		try {
+			ComputeLSA compute = new ComputeLSA(big);
+			compute.computeCosinusSimilarity(big);
+			cosinusSimilarityMap = compute.getCosinusSimilarityMap();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
 	}
 }

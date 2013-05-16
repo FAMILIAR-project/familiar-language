@@ -54,7 +54,7 @@ public class SimilarityMetricSelectionListener implements ActionListener {
 			case LSA_LSI:
 				WeightedImplicationGraph<String> originalBig = environment.getSynthesizer().getOriginalBig();
 				try {
-					environment.setParentSimilarityMetric(new LatentSemanticMetric(originalBig));
+					environment.setParentSimilarityMetric(new LatentSemanticMetric());
 				} catch (Exception e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();

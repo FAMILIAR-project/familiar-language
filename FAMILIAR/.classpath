@@ -36,7 +36,8 @@
 	<classpathentry kind="lib" path="lib/simmetrics_jar_v1_6_2_d07_02_07.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="lib/hac.jar"/>
-	<classpathentry kind="lib" path="lib/sspace-2.0.3-jar-with-dependencies.jar"/>
+	<classpathentry kind="lib" path="lib/sspace-2.0.3-jar-with-dependencies.jar" sourcepath="/S-Space/src/main/java/edu/ucla/sspace/matrix/factorization"/>
 	<classpathentry kind="lib" path="C:/git/familiar-language/FAMILIAR/lib/semanticvectors-3.8.jar"/>
+	<classpathentry kind="lib" path="C:/git/familiar-language/FAMILIAR/lib/svd.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
