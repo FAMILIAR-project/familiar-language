@@ -20,6 +20,7 @@ import fr.unice.polytech.modalis.familiar.experimental.ConstraintAdder;
 import fr.unice.polytech.modalis.familiar.experimental.ConstraintAdderSyntactic;
 import fr.unice.polytech.modalis.familiar.experimental.FDAddingConstraintStrategy;
 import fr.unice.polytech.modalis.familiar.experimental.FGroup;
+import fr.unice.polytech.modalis.familiar.experimental.KSynthesisConfiguration;
 import fr.unice.polytech.modalis.familiar.experimental.MutexGroup;
 import fr.unice.polytech.modalis.familiar.experimental.OrGroup;
 import fr.unice.polytech.modalis.familiar.experimental.XorGroup;
@@ -68,8 +69,10 @@ public abstract class KSynthesis {
 
 	protected static final CliquesComputation DEFAULT_CLIQUES_COMPUTATION = CliquesComputation.BDD ;
 	protected CliquesComputation _cliquesHierarchyComputation = DEFAULT_CLIQUES_COMPUTATION  ;
-
 	
+	// FIXME move all parameters here
+	protected KSynthesisConfiguration _kSynthesisConfiguration = new DefaultKSynthesisConfiguration() ; 
+		
 	
 	/**
 	 * FIXME

@@ -4,6 +4,7 @@ import fr.unice.polytech.modalis.familiar.experimental.AmbigousGroup;
 import fr.unice.polytech.modalis.familiar.experimental.ConstraintAdder;
 import fr.unice.polytech.modalis.familiar.experimental.ConstraintSimplifierStrategy;
 import fr.unice.polytech.modalis.familiar.experimental.FGroup;
+import fr.unice.polytech.modalis.familiar.experimental.KSynthesisConfiguration;
 import fr.unice.polytech.modalis.familiar.experimental.MutexGroup;
 import fr.unice.polytech.modalis.familiar.experimental.OrGroup;
 import fr.unice.polytech.modalis.familiar.experimental.XorGroup;
@@ -69,7 +70,7 @@ public class KSynthesisBDD extends KSynthesis  {
 	
 	protected static final ConstraintSimplifierStrategy DEFAULT_CST_SIMPLIFIER_STRATEGY = ConstraintSimplifierStrategy.NONE ; 
 	protected ConstraintSimplifierStrategy _simplificatorStrategy = DEFAULT_CST_SIMPLIFIER_STRATEGY;
-	
+
 
 	public KSynthesisBDD(FeatureModelVariable fmv, BDDBuilder<String> builder) {
 		this (fmv, new KnowledgeSynthesis(), builder) ;  
@@ -223,7 +224,8 @@ public class KSynthesisBDD extends KSynthesis  {
 		// 5. SETTING CONSTRAINTS 
 		_LOGGER.debug("Implies / Excludes");
 	
-		synthesisedFM = complementWithImpliesAndExcludes(synthesisedFM, impl, excl); 
+		if (_kSynthesisConfiguration.isAddingCrossTreeConstraints())
+			synthesisedFM = complementWithImpliesAndExcludes(synthesisedFM, impl, excl); 
 		
 		_LOGGER.debug("...Eliminate redundant if any (FIXME since opt)...");
 		// simplify (not necessary normally since we add incrementally the edges)
@@ -768,6 +770,10 @@ public class KSynthesisBDD extends KSynthesis  {
 		
 		
 		return new FeatureModelVariableWithSynchronizedFormula("", synthesisedFM, _builder.mkFeatureModel(synthesisedFM));
+	}
+
+	public void setSynthesisConfiguration(KSynthesisConfiguration kSynthesisConfiguration) {
+		_kSynthesisConfiguration = kSynthesisConfiguration ; 		
 	}
 
 }
