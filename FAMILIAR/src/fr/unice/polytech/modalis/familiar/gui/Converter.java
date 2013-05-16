@@ -98,7 +98,8 @@ public class Converter {
 	private FeatureModelVariable buildStartupDisplayFromFML() {
 		FeatureModel<String> fm = null;
 		try {
-			fm = FMBuilder.getInternalFM(FMLTest.FM_LAPTOP);
+//			fm = FMBuilder.getInternalFM(FMLTest.FM_LAPTOP);
+			fm = FMBuilder.getInternalFM("A: B [C];");
 		} catch (Exception e) {
 			System.err.println("Error when parsing internal FM: " + e.getMessage());
 			return null;
@@ -143,8 +144,8 @@ public class Converter {
 				}
 			}
 		} catch (Exception e) {
-			FamiliarConsole.INSTANCE.setMessage("Error: In fmv2PrefuseTree: " +
-				e.getMessage());
+//			FamiliarConsole.INSTANCE.setMessage("Error: In fmv2PrefuseTree: " +
+//				e.getMessage());
 			return null;
 		}
 		return t;

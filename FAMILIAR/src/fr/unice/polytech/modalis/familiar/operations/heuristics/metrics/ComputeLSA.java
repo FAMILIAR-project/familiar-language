@@ -23,13 +23,13 @@ import gsd.graph.SimpleEdge;
 
 public class ComputeLSA {
 	
-	 private WeightedImplicationGraph<String> wbig;
+	 private ImplicationGraph<String> wbig;
 	 private WikipediaMinerMetric wiki_metric; 
 	 private Collection<BufferedReader> documents ;
 	 private  Map<SimpleEdge, Double> cosinusSimilarityMap = new HashMap<SimpleEdge, Double>();
 	 private LatentSemanticAnalysis lsa;
 	 
-	 public ComputeLSA (WeightedImplicationGraph<String> big) throws Exception{
+	 public ComputeLSA (ImplicationGraph<String> big) throws Exception{
 		 this.wbig = big;
 		 wiki_metric = new WikipediaMinerMetric("C:\\db_wikipedia\\wikipedia-template.xml");
 		 wiki_metric.loadDatabase();

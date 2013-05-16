@@ -21,12 +21,14 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import fr.unice.polytech.modalis.familiar.fm.converter.SPLOTtoFML;
+import fr.unice.polytech.modalis.familiar.gui.synthesis.FMSynthesisEnvironment;
 import fr.unice.polytech.modalis.familiar.gui.synthesis.InteractiveFMSynthesizer;
 import fr.unice.polytech.modalis.familiar.gui.synthesis.KeyValue;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.CommonEdgesMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.FMEditDistanceMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.FeatureSimilarityMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.ImplicationGraphMetrics;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.LatentSemanticMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.MetricName;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.PathLengthMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.RandomMetric;
@@ -35,6 +37,7 @@ import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.Simmetri
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.WikipediaMinerMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.WuPalmerMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.ZhangEditDistance;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.mst.WeightedImplicationGraph;
 import fr.unice.polytech.modalis.familiar.test.FMLTest;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import gsd.graph.ImplicationGraph;
@@ -51,6 +54,8 @@ public class ASE2013KSynthesisTest extends FMLTest {
 	private static final String WORDNET_DB = "/udd/gbecan/Documents/workspaces/workspace/Heuristics/resources/wordnet_properties.xml";
 	private static final String WIKIPEDIA_DB = "/local/wikipedia/WikipediaMiner/db_wikipedia/wikipedia-template.xml";
 	private static final String WIKTIONARY_DB = "/local/wikipedia/WikipediaMiner/db_wiktionary/wikipedia-template.xml";
+	private static final String LSA_DB = "C:\\db_wikipedia\\wikipedia-template.xml";
+	
 
 	private static int RANDOM_ITERATIONS = 100;
 
@@ -244,6 +249,10 @@ public class ASE2013KSynthesisTest extends FMLTest {
 			metrics.add(wiktionaryMetric);
 			clusteringThresholds.put(wiktionaryMetric, 0.5);
 		}
+		
+		// LSA metric
+		metrics.add(new LatentSemanticMetric());
+
 	}
 
 	@AfterClass
@@ -421,6 +430,10 @@ public class ASE2013KSynthesisTest extends FMLTest {
 			for (int i=0; i<nbIterations; i++) {
 				double nbOfFeaturesInTopNIter = 0;
 				for (FeatureModelVariable fm : fms) {
+					if (metric instanceof LatentSemanticMetric) {
+						LatentSemanticMetric lsaMetric = (LatentSemanticMetric) metric;
+						lsaMetric.setBig(fm.computeImplicationGraph());
+					}
 					InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(
 							fm, metric, new ArrayList<FeatureSimilarityMetric>(), 
 							new SimmetricsMetric(MetricName.SIMMETRICS_SMITHWATERMAN), 0);
@@ -466,11 +479,16 @@ public class ASE2013KSynthesisTest extends FMLTest {
 			double sumProportionFeaturesInACorrectCluster = 0;
 			double sumProportionFeaturesInAnUCorrectCluster = 0;
 
+
 			double nbIterations = metric instanceof RandomMetric ? RANDOM_ITERATIONS : 1;
 			for (int i=0; i<nbIterations; i++) {
 
 
 				for (FeatureModelVariable fm : fms) {
+					if (metric instanceof LatentSemanticMetric) {
+						LatentSemanticMetric lsaMetric = (LatentSemanticMetric) metric;
+						lsaMetric.setBig(fm.computeImplicationGraph());
+					}
 					InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(
 							fm, null, new ArrayList<FeatureSimilarityMetric>(), 
 							metric, threshold);
@@ -593,6 +611,10 @@ public class ASE2013KSynthesisTest extends FMLTest {
 			double nbIterations = metric instanceof RandomMetric ? RANDOM_ITERATIONS : 1;
 			for (int i=0; i<nbIterations; i++) {
 				for (FeatureModelVariable fm : fms) {
+					if (metric instanceof LatentSemanticMetric) {
+						LatentSemanticMetric lsaMetric = (LatentSemanticMetric) metric;
+						lsaMetric.setBig(fm.computeImplicationGraph());
+					}
 					InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(fm, metric, null, null, 0);
 					FeatureModelVariable computedFM = synthesizer.computeCompleteFeatureModel();
 
@@ -661,7 +683,6 @@ public class ASE2013KSynthesisTest extends FMLTest {
 		System.out.println("-----");
 	}
 
-	@Ignore
 	@Test
 	public void testBIGDegreeSPLOT() {
 		System.out.println("BIG SPLOT");

@@ -89,15 +89,15 @@ public class FamiliarEditor extends JPanel implements Observer {
     	} else {
 	    	t = Converter.INSTANCE.fmv2PrefuseTree(fmv);
 	    	if (null == t || false == t.isValidTree()) {
-	    		FamiliarConsole.INSTANCE.setMessage("Error: Prefuse tree is not valid.");
+//	    		FamiliarConsole.INSTANCE.setMessage("Error: Prefuse tree is not valid.");
 	    		revert = true;
 	    	} 	
     	}
     	
     	if (revert) {
-    		JOptionPane.showMessageDialog(this, 
-	            "FM is not valid, and it will not be updated and/or loaded.",
-	            "Error updating FM display", JOptionPane.ERROR_MESSAGE);
+//    		JOptionPane.showMessageDialog(this, 
+//	            "FM is not valid, and it will not be updated and/or loaded.",
+//	            "Error updating FM display", JOptionPane.ERROR_MESSAGE);
     		fmv = FamiliarConsole.INSTANCE.getLoadedFMV();
     		if (null == fmv) {
     			FamiliarConsole.INSTANCE.setMessage("Error: No current FeatureModelVariable.");
@@ -107,7 +107,7 @@ public class FamiliarEditor extends JPanel implements Observer {
     		t = Converter.INSTANCE.fmv2PrefuseTree(fmv);
     		if (false == fmv.isValid() || 
     			null == t || false == t.isValidTree()) {
-    			FamiliarConsole.INSTANCE.setMessage("Error: FMV and/or Prefuse tree is not valid.");
+//    			FamiliarConsole.INSTANCE.setMessage("Error: FMV and/or Prefuse tree is not valid.");
     			return;
     		}
     	} 

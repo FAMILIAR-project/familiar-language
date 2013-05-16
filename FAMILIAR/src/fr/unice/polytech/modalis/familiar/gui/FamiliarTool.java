@@ -25,6 +25,8 @@
 package fr.unice.polytech.modalis.familiar.gui;
 
 import javax.swing.JFrame;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 import prefuse.util.ui.UILib;
 
@@ -38,6 +40,21 @@ public class FamiliarTool {
 	public static void main(String[] args) {
     	javax.swing.SwingUtilities.invokeLater(new Runnable() { public void run() {
     		UILib.setPlatformLookAndFeel();
+    		try {
+				UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (InstantiationException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (IllegalAccessException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (UnsupportedLookAndFeelException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
             buildAndLanchToolFrame();
     	}});
     }

@@ -13,17 +13,15 @@ import org.wikipedia.miner.model.Article;
 
 import edu.ucla.sspace.lsa.LatentSemanticAnalysis;
 
+
+
 public class LsaTest {
 	 private Collection<BufferedReader> documents ;
 	 private String[] features= {"drank","foobar","beverage","foobar","sodas","cold","number","cheap","tastes","case" };
 	@Test
 	public void testImplicationGraphMetrics() throws IOException {
 		
-//		 
-//	    String article1 = "He drank the foobar at the game.";
-//	    String article2 ="Foobar is the number three beverage.";
-//	    String article3 ="A case of foobar is cheap compared to other sodas.";
-//	    String article4 ="Foobar tastes better when cold." ;
+
 		 documents = new ArrayList<BufferedReader>();
 	    String[] articles= {"He drank the foobar at the game.","Foobar is the number three beverage.","A case of foobar is cheap compared to other sodas.","Foobar tastes better when cold."};
 	    
