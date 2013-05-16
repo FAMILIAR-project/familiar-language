@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -54,6 +55,9 @@ public class ASE2013KSynthesisTest extends FMLTest {
 	private static final String WIKTIONARY_DB = "/local/wikipedia/WikipediaMiner/db_wiktionary/wikipedia-template.xml";
 	private static final String LSA_DB = "C:\\db_wikipedia\\wikipedia-template.xml";
 	
+
+	private static int RANDOM_ITERATIONS = 100;
+
 	private static List<FeatureSimilarityMetric> metrics;
 	private static WikipediaMinerMetric wikiMetric;
 	private static WikipediaMinerMetric wiktionaryMetric;
@@ -231,6 +235,7 @@ public class ASE2013KSynthesisTest extends FMLTest {
 		// LSA metric
 		
 		metrics.add(new LatentSemanticMetric());
+
 	}
 
 	@AfterClass
@@ -332,9 +337,17 @@ public class ASE2013KSynthesisTest extends FMLTest {
 		List<Integer> minOutDegrees = new ArrayList<Integer>();
 		List<Integer> maxOutDegrees = new ArrayList<Integer>();
 		List<Double> meanOutDegrees = new ArrayList<Double>();
+		double sumDegrees = 0;
+		double nbFeatures = 0;
 
 		for (FeatureModelVariable fm : fms) {
 			ImplicationGraph<String> implicationGraph = fm.computeImplicationGraph();
+
+			for (String vertex : implicationGraph.vertices()) {
+				sumDegrees += implicationGraph.outDegreeOf(vertex);
+				nbFeatures++;
+			}
+
 			int minOutdegree = graphMetrics.minOutdegree(implicationGraph);
 			minOutDegrees.add(minOutdegree);
 			int maxOutdegree = graphMetrics.maxOutdegree(implicationGraph);
@@ -349,140 +362,169 @@ public class ASE2013KSynthesisTest extends FMLTest {
 		System.out.println("max : " + maxOutDegrees);
 		Collections.sort(meanOutDegrees);
 		System.out.println("mean : " + meanOutDegrees);
+		System.out.println("mean degree : " + sumDegrees/nbFeatures);
 	}
 
 	private void testTopN(List<FeatureModelVariable> fms, int n) {
 
 		int nbOfFeatures = 0;
-		
+
 		for (FeatureModelVariable fm : fms) {
 			nbOfFeatures += fm.features().size()-1; // Avoid the root feature
 		}
 		System.out.println("Nb of features : " + nbOfFeatures);
-		
+
 		for (FeatureSimilarityMetric metric : metrics) {
-			int nbOfFeaturesInTopN = 0;
-			for (FeatureModelVariable fm : fms) {
-				if (metric instanceof LatentSemanticMetric) {
-					LatentSemanticMetric lsaMetric = (LatentSemanticMetric) metric;
-					lsaMetric.setBig(fm.computeImplicationGraph());
-				}
-				InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(
-						fm, metric, new ArrayList<FeatureSimilarityMetric>(), 
-						new SimmetricsMetric(MetricName.SIMMETRICS_SMITHWATERMAN), 0);
-				
-				List<KeyValue<String,List<String>>> parentCandidateLists = synthesizer.getParentCandidates();
-				FeatureGraph<String> hierarchy = fm.getFm().getDiagram();
+			double sumNbOfFeaturesInTopN = 0;
+			int nbIterations = metric instanceof RandomMetric ? RANDOM_ITERATIONS : 1; 
 
-				for (KeyValue<String, List<String>> parentCandidates : parentCandidateLists) {
-					String feature = parentCandidates.getKey();
-					List<String> parentCandidatesList = parentCandidates.getValue();
-					FeatureNode<String> parent = hierarchy.parents(hierarchy.findVertex(feature)).iterator().next();
-					if (!parent.isTop()) {
-						int indexOfParent= parentCandidatesList.indexOf(parent.getFeature());
+			for (int i=0; i<nbIterations; i++) {
+				double nbOfFeaturesInTopNIter = 0;
+				for (FeatureModelVariable fm : fms) {
+					if (metric instanceof LatentSemanticMetric) {
+						LatentSemanticMetric lsaMetric = (LatentSemanticMetric) metric;
+						lsaMetric.setBig(fm.computeImplicationGraph());
+					}
+					InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(
+							fm, metric, new ArrayList<FeatureSimilarityMetric>(), 
+							new SimmetricsMetric(MetricName.SIMMETRICS_SMITHWATERMAN), 0);
 
-						if (indexOfParent < n) {
-							nbOfFeaturesInTopN++;
+					List<KeyValue<String,List<String>>> parentCandidateLists = synthesizer.getParentCandidates();
+					FeatureGraph<String> hierarchy = fm.getFm().getDiagram();
+
+					for (KeyValue<String, List<String>> parentCandidates : parentCandidateLists) {
+						String feature = parentCandidates.getKey();
+						List<String> parentCandidatesList = parentCandidates.getValue();
+						FeatureNode<String> parent = hierarchy.parents(hierarchy.findVertex(feature)).iterator().next();
+						if (!parent.isTop()) {
+							int indexOfParent= parentCandidatesList.indexOf(parent.getFeature());
+
+							if (indexOfParent < n) {
+								nbOfFeaturesInTopNIter++;
+							}
 						}
 					}
 				}
+
+				sumNbOfFeaturesInTopN += nbOfFeaturesInTopNIter;
 			}
+			double nbOfFeaturesInTopN = sumNbOfFeaturesInTopN / nbIterations;
 			System.out.println(metric + " : " + nbOfFeaturesInTopN + " (" + nbOfFeaturesInTopN / ((double) nbOfFeatures) + ")");
 		}
 
 	}
 
 	private void testClusters(List<FeatureModelVariable> fms, final double threshold) {
-		
+
 		for (FeatureSimilarityMetric metric : metrics) {
-			
+
+			int totalNbOfFeatures = 0;
 			int totalNbClusters = 0;
 			int totalNbCorrectClusters = 0;
 			int totalNbUndirectlyCorrectClusters = 0;
 			int totalNbFeaturesInACluster = 0;
+			int totalNbFeaturesInACorrectCluster = 0;
+			int totalNbFeaturesInAnUndirectlyCorrectCluster = 0;
 			double sumProportionFeaturesInACluster = 0;
 			double sumProportionFeaturesInACorrectCluster = 0;
 			double sumProportionFeaturesInAnUCorrectCluster = 0;
-			
-			for (FeatureModelVariable fm : fms) {
-				if (metric instanceof LatentSemanticMetric) {
-					LatentSemanticMetric lsaMetric = (LatentSemanticMetric) metric;
-					lsaMetric.setBig(fm.computeImplicationGraph());
-				}
-				InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(
-						fm, wikiMetric, new ArrayList<FeatureSimilarityMetric>(), 
-						metric, threshold);
-				
-				Set<Set<String>> clusters = synthesizer.getSimilarityClusters();
-				FeatureGraph<String> hierarchy = fm.getFm().getDiagram();
 
-				int nbFeatures = fm.features().size();
-				int nbClusters = 0;
-				int nbCorrectClusters = 0;
-				int nbUndirectlyCorrectClusters = 0;
-				int nbFeaturesInACluster = 0;
-				int nbFeaturesInACorrectCluster = 0;
-				int nbFeaturesInAnUndirectlyCorrectCluster = 0;
-				
-				List<Set<String>> siblingsList = convertInSetOfString(hierarchy.getSiblingSetsInBFS());
-				for (Set<String> cluster : clusters) {
-					if (cluster.size() > 1) {
-						// Compute the cluster without the possible best parent
-						Set<String> reducedCluster = new HashSet<String>(cluster);
-						String bestParent = synthesizer.findBestParentWithinCluster(cluster);
-						if (bestParent != null) {
-							reducedCluster.remove(bestParent);
-						}
-						
-						// Check that the cluster is correct
-						for (Set<String> siblings : siblingsList) {
-							// All the features are siblings
-							if (siblings.containsAll(cluster)) {
-								nbCorrectClusters++;
-								nbFeaturesInACorrectCluster += cluster.size();
-								break;
-							} 
 
-							// The features of the reduced cluster are siblings and the chosen parent is correct
-							boolean undirectlyCorrect = siblings.containsAll(reducedCluster)
-									&& hierarchy.containsEdge(
-									hierarchy.findVertex(reducedCluster.iterator().next()), 
-									hierarchy.findVertex(bestParent), 
-									FeatureEdge.HIERARCHY);
-							
-							if (undirectlyCorrect) {
-								nbUndirectlyCorrectClusters++;
-								nbFeaturesInAnUndirectlyCorrectCluster += cluster.size();
-								break;
-							}
-							
-						}
-						
-						nbClusters++;
-						nbFeaturesInACluster += cluster.size();
+			double nbIterations = metric instanceof RandomMetric ? RANDOM_ITERATIONS : 1;
+			for (int i=0; i<nbIterations; i++) {
+
+
+				for (FeatureModelVariable fm : fms) {
+					if (metric instanceof LatentSemanticMetric) {
+						LatentSemanticMetric lsaMetric = (LatentSemanticMetric) metric;
+						lsaMetric.setBig(fm.computeImplicationGraph());
 					}
-				}
+					InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(
+							fm, null, new ArrayList<FeatureSimilarityMetric>(), 
+							metric, threshold);
 
-				totalNbClusters += nbClusters;
-				totalNbCorrectClusters += nbCorrectClusters;
-				totalNbUndirectlyCorrectClusters += nbUndirectlyCorrectClusters;
-				totalNbFeaturesInACluster += nbFeaturesInACluster;
-				sumProportionFeaturesInACluster += nbFeaturesInACluster / ((double) nbFeatures);
-				sumProportionFeaturesInACorrectCluster += nbFeaturesInACorrectCluster / ((double) nbFeatures);
-				sumProportionFeaturesInAnUCorrectCluster += nbFeaturesInAnUndirectlyCorrectCluster / ((double) nbFeatures);
+					Set<Set<String>> clusters = synthesizer.getSimilarityClusters();
+					FeatureGraph<String> hierarchy = fm.getFm().getDiagram();
+
+					int nbFeatures = fm.features().size();
+					int nbClusters = 0;
+					int nbCorrectClusters = 0;
+					int nbUndirectlyCorrectClusters = 0;
+					int nbFeaturesInACluster = 0;
+					int nbFeaturesInACorrectCluster = 0;
+					int nbFeaturesInAnUndirectlyCorrectCluster = 0;
+
+					List<Set<String>> siblingsList = convertInSetOfString(hierarchy.getSiblingSetsInBFS());
+					for (Set<String> cluster : clusters) {
+						if (cluster.size() > 1) {
+							// Check that the cluster is correct
+							for (Set<String> siblings : siblingsList) {
+								// All the features are siblings
+								if (siblings.containsAll(cluster)) {
+									nbCorrectClusters++;
+									nbFeaturesInACorrectCluster += cluster.size();
+									break;
+								} 
+
+								boolean undirectlyCorrect = false;
+								for (String possibleParent : cluster) {
+									// Compute the cluster without a possible parent
+									Set<String> reducedCluster = new HashSet<String>(cluster);
+									reducedCluster.remove(possibleParent);
+
+									// The features of the reduced cluster are siblings and the chosen parent is correct
+									undirectlyCorrect = siblings.containsAll(reducedCluster)
+											&& hierarchy.containsEdge(
+													hierarchy.findVertex(reducedCluster.iterator().next()), 
+													hierarchy.findVertex(possibleParent), 
+													FeatureEdge.HIERARCHY);
+									if (undirectlyCorrect) {
+										break;
+									}
+								}
+
+								if (undirectlyCorrect) {
+									nbUndirectlyCorrectClusters++;
+									nbFeaturesInAnUndirectlyCorrectCluster += cluster.size();
+									break;
+								}
+
+							}
+
+							nbClusters++;
+							nbFeaturesInACluster += cluster.size();
+						}
+					}
+
+					totalNbOfFeatures += nbFeatures;
+					totalNbClusters += nbClusters;
+					totalNbCorrectClusters += nbCorrectClusters;
+					totalNbUndirectlyCorrectClusters += nbUndirectlyCorrectClusters;
+					totalNbFeaturesInACluster += nbFeaturesInACluster;
+					totalNbFeaturesInACorrectCluster += nbFeaturesInACorrectCluster;
+					totalNbFeaturesInAnUndirectlyCorrectCluster += nbFeaturesInAnUndirectlyCorrectCluster;
+					sumProportionFeaturesInACluster += nbFeaturesInACluster / ((double) nbFeatures);
+					sumProportionFeaturesInACorrectCluster += nbFeaturesInACorrectCluster / ((double) nbFeatures);
+					sumProportionFeaturesInAnUCorrectCluster += nbFeaturesInAnUndirectlyCorrectCluster / ((double) nbFeatures);
+				}
 			}
-			
 			System.out.println(metric);
-			System.out.println("clusters : " + totalNbClusters);
-			System.out.println("mean cluster size : " + totalNbFeaturesInACluster / ((double) totalNbClusters));
-			System.out.println("correct clusters : " + totalNbCorrectClusters);
-			System.out.println("undirectly correct clusters : " + totalNbUndirectlyCorrectClusters);
-			System.out.println("features in a cluster : " + sumProportionFeaturesInACluster / fms.size());
-			System.out.println("features in a correct cluster : " + sumProportionFeaturesInACorrectCluster / fms.size());
-			System.out.println("features in a undirectly correct cluster : " + sumProportionFeaturesInAnUCorrectCluster / fms.size());
+			System.out.println("clusters : " + (totalNbClusters / nbIterations));
+			System.out.println("mean cluster size : " + (totalNbFeaturesInACluster / ((double) totalNbClusters)));
+			System.out.println("correct clusters : " + (totalNbCorrectClusters / nbIterations));
+			System.out.println("undirectly correct clusters : " + (totalNbUndirectlyCorrectClusters / nbIterations));
+
+			System.out.println("features in a cluster : " + (totalNbFeaturesInACluster / nbIterations));
+			System.out.println("features in a correct cluster : " + (totalNbFeaturesInACorrectCluster / nbIterations));
+			System.out.println("features in a undirectly correct cluster : " + (totalNbFeaturesInAnUndirectlyCorrectCluster / nbIterations));
+
+			System.out.println("features in a cluster (average) : " + (sumProportionFeaturesInACluster / fms.size() / nbIterations));
+			System.out.println("features in a correct cluster (average) : " + (sumProportionFeaturesInACorrectCluster / fms.size() / nbIterations));
+			System.out.println("features in a undirectly correct cluster (average) : " + (sumProportionFeaturesInAnUCorrectCluster / fms.size() / nbIterations));
+
 			System.out.println();
 		}
-		
+
 	}
 
 	/**
@@ -505,41 +547,85 @@ public class ASE2013KSynthesisTest extends FMLTest {
 		return siblingsList;
 	}
 
-	
+
 	private void testOptimumBranching(List<FeatureModelVariable> fms) {
 		FMEditDistanceMetric zhangDistanceMetric = new ZhangEditDistance();
 		FMEditDistanceMetric refactoringDistanceMetric = new RefactoringEditDistance();
 		CommonEdgesMetric commonEdgesMetric = new CommonEdgesMetric();
-		
+
 		for (FeatureSimilarityMetric metric : metrics) {
 			double sumCommonEdgesDistance = 0;
 			double sumZhangDistance = 0;
 			double sumRefactoringDistance = 0;
-			
-			for (FeatureModelVariable fm : fms) {
-				if (metric instanceof LatentSemanticMetric) {
-					LatentSemanticMetric lsaMetric = (LatentSemanticMetric) metric;
-					lsaMetric.setBig(fm.computeImplicationGraph());
+
+			double nbIterations = metric instanceof RandomMetric ? RANDOM_ITERATIONS : 1;
+			for (int i=0; i<nbIterations; i++) {
+				for (FeatureModelVariable fm : fms) {
+					if (metric instanceof LatentSemanticMetric) {
+						LatentSemanticMetric lsaMetric = (LatentSemanticMetric) metric;
+						lsaMetric.setBig(fm.computeImplicationGraph());
+					}
+					InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(fm, metric, null, null, 0);
+					FeatureModelVariable computedFM = synthesizer.computeCompleteFeatureModel();
+
+					double commonEdgesDistance = commonEdgesMetric.commonEdges(computedFM, fm) / ((double) fm.getFm().getDiagram().edges().size());
+					sumCommonEdgesDistance += commonEdgesDistance;
+					double zhangDistance = 1 - (zhangDistanceMetric.editDistance(computedFM, fm) / ((double) fm.features().size()));
+					sumZhangDistance += zhangDistance;
+					double refactoringDistance = 1 - (refactoringDistanceMetric.editDistance(computedFM, fm) / ((double) fm.features().size()));
+					sumRefactoringDistance += refactoringDistance;
+
 				}
-				InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(fm, metric, null, null, 0);
-				FeatureModelVariable computedFM = synthesizer.computeCompleteFeatureModel();
-				
-				double commonEdgesDistance = commonEdgesMetric.commonEdges(computedFM, fm) / ((double) fm.getFm().getDiagram().edges().size());
-				sumCommonEdgesDistance += commonEdgesDistance;
-				double zhangDistance = 1 - (zhangDistanceMetric.editDistance(computedFM, fm) / ((double) fm.features().size()));
-				sumZhangDistance += zhangDistance;
-				double refactoringDistance = 1 - (refactoringDistanceMetric.editDistance(computedFM, fm) / ((double) fm.features().size()));
-				sumRefactoringDistance += refactoringDistance;
-				
 			}
-			
 			System.out.println(metric);
-			System.out.println("common edges : " + sumCommonEdgesDistance / fms.size());
-			System.out.println("zhang distance : " + sumZhangDistance / fms.size());
-			System.out.println("refactoring distance : " + sumRefactoringDistance / fms.size());
+			System.out.println("common edges : " + sumCommonEdgesDistance / fms.size() / nbIterations);
+			System.out.println("zhang distance : " + sumZhangDistance / fms.size() / nbIterations);
+			System.out.println("refactoring distance : " + sumRefactoringDistance / fms.size() / nbIterations);
 			System.out.println();
 		}
-		
+
+	}
+
+	private void testInteractiveSynthesis(List<FeatureModelVariable> fms) {
+		FMEditDistanceMetric editDistance = new RefactoringEditDistance();
+
+		for (FeatureSimilarityMetric metric : metrics) {
+			System.out.println(metric);
+			for (FeatureModelVariable fm : fms) {
+				FeatureGraph<String> hierarchy = fm.getFm().getDiagram();
+				InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(fm, metric, null, null, 0);
+				FeatureModelVariable computedFM = synthesizer.computeCompleteFeatureModel();
+
+				int steps = 0; 
+
+				// Compute a list of features ordered by number of parent candidates
+				List<KeyValue<String, List<String>>> parentCandidates = synthesizer.getParentCandidates();
+				List<String> features = new ArrayList<String>();
+				for (KeyValue<String, List<String>> parentCandidate : parentCandidates) {
+					features.add(parentCandidate.getKey());
+				}
+				Iterator<String> it = features.iterator();
+
+				while (editDistance.editDistance(computedFM, fm) > 0 && it.hasNext()) {
+
+					if (steps == 0) {
+						// Choose the root
+						String root = hierarchy.children(hierarchy.getTopVertex()).iterator().next().getFeature();
+						synthesizer.setRoot(root);
+					} else {
+						// Choose a feature's parent
+						String child = it.next();
+						String parent = hierarchy.parents(hierarchy.findVertex(child)).iterator().next().getFeature();
+						synthesizer.selectParent(child, parent);	
+					}
+
+					steps++;
+					computedFM = synthesizer.computeCompleteFeatureModel();
+				}
+
+				System.out.println(fm.getIdentifier() + " " + steps);
+			}	
+		}
 	}
 
 	@After
@@ -554,47 +640,65 @@ public class ASE2013KSynthesisTest extends FMLTest {
 		testBIGDegree(getSPLOTFeatureModels());
 	}
 
+	@Ignore
 	@Test
 	public void testBIGDegreeVariCell() {
 		System.out.println("BIG Varicell");
 		testBIGDegree(getVariCellFeatureModels());
 	}
 
+	@Ignore
 	@Test
 	public void testTop2SPLOT() {
 		System.out.println("Top 2 SPLOT");
 		testTopN(getSPLOTFeatureModels(), 2);
 	}
 
+	@Ignore
 	@Test
 	public void testTop2VariCell() {
 		System.out.println("Top 2 VariCell");
 		testTopN(getVariCellFeatureModels(), 2);
 	}
-	
+
 	@Test
 	public void testClustersSPLOT() {
 		System.out.println("Clusters SPLOT");
 		testClusters(getSPLOTFeatureModels(), 0.5);
 	}
 
+	@Ignore
 	@Test
 	public void testClustersVariCell() {
 		System.out.println("Clusters VariCell");
 		testClusters(getVariCellFeatureModels(), 0.5);
 	}
-	
+
 	@Test
 	public void testOptimumBranchingSPLOT() {
 		System.out.println("Optimum branching SPLOT");
 		testOptimumBranching(getSPLOTFeatureModels());
 	}
-	
+
+	@Ignore
 	@Test
 	public void testOptimumBranchingVariCell() {
 		System.out.println("Optimum branching VariCell");
 		testOptimumBranching(getVariCellFeatureModels());
 	}
 
+	@Ignore
+	@Test
+	public void testInteractiveSynthesisSPLOT() {
+		System.out.println("Interactive synthesis SPLOT");
+		testInteractiveSynthesis(getSPLOTFeatureModels());
+	}
+
+	@Ignore
+	@Test
+	public void testInteractiveSynthesisVariCell() {
+		System.out.println("Interactive synthesis VariCell");
+		testInteractiveSynthesis(getVariCellFeatureModels());
+	}
 }
 

@@ -34,4 +34,8 @@ public class Move {
 		return 1;
 	}
 
+	@Override
+	public String toString() {
+		return children + " : " + oldParent + " -> " + newParent;
+	}
 }

@@ -152,6 +152,8 @@ public class FMLOntologicalASETest extends FMLTest {
 		
 		FeatureModelVariable fm1 = FM ("fm1", fm1Specification);
 		
+		System.err.println("" + fm1.computeOrGroups());
+		
 		System.err.println("" + fm1.features().names()); 
 		System.err.println("" + fm1.counting());
 		Set<Set<String>> s1 = _configsToSet(fm1.configs()) ; 
@@ -162,26 +164,34 @@ public class FMLOntologicalASETest extends FMLTest {
 		
 		System.err.println("fm1S=" + fm1S);
 		
-		FeatureModelVariable fm2 = FM ("fm2", "Wiki: Storage Licence Hosting [\"Programming Language\"] [MySQL] ; " +
-				"Licence : (\"Open Source\"|\"Proprietary Licence\") ; Storage : [PostgreSQL] ;" +
+		
+		String fm2Specification = "Wiki: Storage Licence Hosting ; " +
+				"Storage : (\"Open Source\"|\"Hosted Service\"|MySQL)+ ; Hosting : (PostgreSQL|\"Programming Language\")? ;" +
 				//"\"Programming Language\": Java ; " +
-				"Hosting: (Local|\"Hosted Service\") ; " +
+				"Licence: [Local] [\"Proprietary Licence\"] ; " +
 				"\"Hosted Service\": [Domain] ; MySQL: [Java] [PHP] ; " +
 				"PostgreSQL -> Domain ;" +
 				"\"Open Source\" -> MySQL ; " +
 				"MySQL -> !PostgreSQL ;" + // added 
 	    		"MySQL -> Storage ;" + // added
 				"MySQL | PostgreSQL ;" +  // added
+				//"Java -> MySQL ; " + // redundant
 				"Java -> \"Programming Language\" ; " + // added 
 				"PHP -> \"Programming Language\" ; " + // added 
 				"(\"Programming Language\" -> PHP) or (\"Programming Language\" -> Java) ; " + // added 
 				"PHP -> !Java ; " + 
-				//"Java -> MySQL ; " + // redundant
 				"\"Proprietary Licence\" -> !MySQL ; " +  
+				"Local | \"Hosted Service\" ; " +
+				"Local -> ! \"Hosted Service\" ; " +
+				"MySQL <-> \"Open Source\" ; " +
+				"\"Proprietary Licence\" | \"Open Source\" ; " + 
 				"" +
 				"" +
-				"" +
-				"" );
+				""  ;
+		FeatureModelVariable fm2 = FM ("fm2", fm2Specification);
+		System.err.println("fm2=" + fm2Specification);
+		
+		System.err.println("fm2.*=" + fm2.features().names());
 		
 		System.err.println("#fm2=" + fm2.counting());
 		Set<Set<String>> s2 = _configsToSet(fm2.configs()) ; 
@@ -189,65 +199,65 @@ public class FMLOntologicalASETest extends FMLTest {
 		
 		System.err.println("s1 / s2 = " + Sets.difference(s1, s2));
 		System.err.println("s2 / s1 = " + Sets.difference(s2, s1));
-		
-		
-		
 		assertEquals(Comparison.REFACTORING, fm2.compareBDD(fm1, _builder));
 		
-		FeatureModelVariable fm3 = FM ("fm3", "Wiki: Storage Licence Hosting [\"Programming Language\"] [MySQL] ; " +
-				"Storage : (\"Open Source\"|\"Proprietary Licence\") ; Hosting : [PostgreSQL] ;" +
-				//"\"Programming Language\": Java ; " +
-				"Licence: (Local|\"Hosted Service\") ; " +
-				"\"Hosted Service\": [Domain] ; MySQL: [Java] [PHP] ; " +
+		ImplicationGraphUtil.debugExclusionGraph(fm2.computeExclusionGraph(_builder));
+				
+		assertEquals(Comparison.REFACTORING, fm2.compareBDD(fm1, _builder));
+		
+		FeatureModelVariable fm2Corrected = FM ("fm2bis", "Wiki: Hosting Licence Storage ; \n" + 
+				"		Hosting: (PostgreSQL|\"Programming Language\")? ; \n" + 
+				"		Licence: (\"Proprietary Licence\"|Local)? ; \n" + 
+				"		Storage: (\"Hosted Service\"|MySQL)+ [\"Open Source\"] ; \n" + 
+				"		\"Hosted Service\": [Domain] ; \n" + 
+				"		MySQL: (Java|PHP)? ; \n" + 
+				"		(PostgreSQL -> !\"Open Source\");\n" + 
+				"		(PHP -> \"Programming Language\");\n" + 
+				"		(PostgreSQL <-> \"Proprietary Licence\");\n" + 
+				"		(MySQL <-> \"Open Source\");\n" + 
+				"		(Java -> \"Programming Language\");\n" + 
+				"		(Local -> !\"Hosted Service\") ; " + 
+				"MySQL | PostgreSQL ;" 
+				+ "PostgreSQL -> Domain ;"
+				+ "(\"Programming Language\" -> PHP) or (\"Programming Language\" -> Java) ; " 
+				+ "Local | \"Hosted Service\" ; "
+				//+ "Local -> PostgreSQL ; "
+				//+ "\"Proprietary Licence\" | \"Open Source\" ; " 
+				);
+		
+		System.err.println("#fm2Corrected=" + fm2Corrected.counting());
+		Set<Set<String>> s2Corrected = _configsToSet(fm2Corrected.configs()) ; 
+		System.err.println("[[fm2Corrected]]=" + s2Corrected);
+		
+		System.err.println("s1 / s2 = " + Sets.difference(s1, s2Corrected));
+		System.err.println("s2 / s1 = " + Sets.difference(s2Corrected, s1));
+		assertEquals(Comparison.REFACTORING, fm2Corrected.compareBDD(fm1, _builder));
+		
+		
+		
+		FeatureModelVariable fm1bis = FM ("fm1bis", 
+				" Wiki: Hosting Licence Storage [\"Programming Language\"] ; \n" + 
+				"Hosting: (\"Hosted Service\"|Local) ; \n" + 
+				"Licence: (\"Proprietary Licence\"|\"Open Source\") ; \n" + 
+				"Storage: (PostgreSQL|MySQL) ; \n" + 
+				"\"Programming Language\": (Java|PHP) ; \n" + 
+				"\"Hosted Service\": [Domain] ; \n" + 
+				"(\"Proprietary Licence\" -> !\"Programming Language\");\n" + 
+				"(Local -> !\"Proprietary Licence\");\n" + 
+				"(PostgreSQL <-> \"Proprietary Licence\");" +
 				"PostgreSQL -> Domain ;" +
-				"\"Open Source\" -> MySQL ; " +
-				"MySQL -> !PostgreSQL ;" + // added 
-	    		"MySQL -> Storage ;" + // added
-				"MySQL | PostgreSQL ;" +  // added
-				"Java -> \"Programming Language\" ; " + // added 
-				"PHP -> \"Programming Language\" ; " + // added 
-				"(\"Programming Language\" -> PHP) or (\"Programming Language\" -> Java) ; " + // added 
-				"PHP -> !Java ; " + 
-				//"Java -> MySQL ; " + // redundant
-				"\"Proprietary Licence\" -> !MySQL ; " +  
+				//"\"Open Source\" -> MySQL ; " +
+				//"PHP -> MySQL ; " +
+				//"Java -> MySQL ; " +
+				//"\"Proprietary Licence\" -> !MySQL ; " +  
 				"" +
 				"" +
-				"" +
-				"" );
-		
-		System.err.println("#fm3=" + fm3.counting());
-		Set<Set<String>> s3 = _configsToSet(fm3.configs()) ; 
-		System.err.println("[[fm3]]=" + s3);
-		
-		System.err.println("s1 / s3 = " + Sets.difference(s1, s3));
-		System.err.println("s3 / s1 = " + Sets.difference(s3, s1));
-		assertEquals(Comparison.REFACTORING, fm3.compareBDD(fm1, _builder));
-		
-		ImplicationGraphUtil.debugExclusionGraph(fm3.computeExclusionGraph(_builder));
+				""
+				) ;
+		assertEquals(Comparison.REFACTORING, fm1bis.compareBDD(fm1, _builder));
 		
 		
-		FeatureModelVariable fm4 = FM ("fm4", "Wiki: Storage Licence Hosting [MySQL] ; " +
-				"Storage : (\"Open Source\"|\"Proprietary Licence\") ; Hosting : (PostgreSQL|\"Programming Language\")? ;" +
-				//"\"Programming Language\": Java ; " +
-				"Licence: (Local|\"Hosted Service\") ; " +
-				"\"Hosted Service\": [Domain] ; MySQL: [Java] [PHP] ; " +
-				"PostgreSQL -> Domain ;" +
-				"\"Open Source\" -> MySQL ; " +
-				"MySQL -> !PostgreSQL ;" + // added 
-	    		"MySQL -> Storage ;" + // added
-				"MySQL | PostgreSQL ;" +  // added
-				//"Java -> MySQL ; " + // redundant
-				"Java -> \"Programming Language\" ; " + // added 
-				"PHP -> \"Programming Language\" ; " + // added 
-				"(\"Programming Language\" -> PHP) or (\"Programming Language\" -> Java) ; " + // added 
-				"PHP -> !Java ; " + 
-				"\"Proprietary Licence\" -> !MySQL ; " +  
-				"" +
-				"" +
-				"" +
-				"" );
-		
-		assertEquals(Comparison.REFACTORING, fm4.compareBDD(fm1, _builder));
+				
 	}
 	
 	private Set<Set<String>> _configsToSet(Set<Variable> configs) {

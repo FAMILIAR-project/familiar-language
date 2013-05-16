@@ -31,5 +31,9 @@ public class KeyValue<K extends Comparable<K>, V> implements Comparable<KeyValue
 		return key.compareTo(o.getKey());
 	}
 
+	@Override
+	public String toString() {
+		return "[" + key + " -> " + value + "]";
+	}
 	
 }
