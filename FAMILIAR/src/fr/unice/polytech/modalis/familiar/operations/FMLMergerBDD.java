@@ -3,7 +3,6 @@
  */
 package fr.unice.polytech.modalis.familiar.operations;
 
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
@@ -15,6 +14,7 @@ import org.apache.log4j.Logger;
 
 import com.google.common.collect.Sets;
 
+import fr.unice.polytech.modalis.familiar.experimental.KSynthesisConfiguration;
 import fr.unice.polytech.modalis.familiar.fm.FeatureModelCloner;
 import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
 import fr.unice.polytech.modalis.familiar.parser.FMLCommandInterpreter;
@@ -79,6 +79,11 @@ public class FMLMergerBDD extends FMLMerger {
 	@Override
 	public FeatureModelVariable union() {
 		return mergeFMs(Mode.StrictUnion);
+	}
+	
+	public FeatureModelVariable union(KSynthesisConfiguration kSynthesisConfiguration) {
+		_kSynthesisConfiguration = kSynthesisConfiguration ; 
+		return union() ;
 	}
 	
 	@Override
@@ -409,7 +414,8 @@ public class FMLMergerBDD extends FMLMerger {
 		// the building process takes into account the hierarchy we want
 		// (fmProj)
 
-		KSynthesisBDD synthesizer = new KSynthesisBDD(flaMerged, new KnowledgeSynthesis(fmProj.getDiagram()), builder) ; 
+		KSynthesisBDD synthesizer = new KSynthesisBDD(flaMerged, new KnowledgeSynthesis(fmProj.getDiagram()), builder) ;
+		synthesizer.setSynthesisConfiguration(_kSynthesisConfiguration);
 
 		_LOGGER.debug("domain of flaMerged:" + flaMerged.getDomain());
 		FeatureModel<String> fgRender = synthesizer.build().getFm(); // resulting
