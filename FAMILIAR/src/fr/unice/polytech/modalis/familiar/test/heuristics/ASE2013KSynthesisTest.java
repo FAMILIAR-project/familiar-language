@@ -55,7 +55,7 @@ public class ASE2013KSynthesisTest extends FMLTest {
 	private static final String WIKIPEDIA_DB = "/local/wikipedia/WikipediaMiner/db_wikipedia/wikipedia-template.xml";
 	private static final String WIKTIONARY_DB = "/local/wikipedia/WikipediaMiner/db_wiktionary/wikipedia-template.xml";
 	private static final String LSA_DB = "C:\\db_wikipedia\\wikipedia-template.xml";
-	
+
 
 	private static int RANDOM_ITERATIONS = 100;
 
@@ -64,7 +64,7 @@ public class ASE2013KSynthesisTest extends FMLTest {
 	private static WikipediaMinerMetric wiktionaryMetric;
 
 	private static HashMap<FeatureSimilarityMetric, Double> clusteringThresholds;
-	
+
 	private static List<FeatureModelVariable> splotFMs;
 	private static List<FeatureModelVariable> variCellFMs;
 	private static final List<String> excludeFiles = Arrays.asList(new String[] {
@@ -202,35 +202,36 @@ public class ASE2013KSynthesisTest extends FMLTest {
 			"model_20120801_1784537083.xml",
 			"model_20110915_1159959623.xml"
 	});
+	private static FeatureSimilarityMetric pathLength;
 
 
 	@BeforeClass
 	public static void setUpMetrics() throws Exception {
 		metrics = new ArrayList<FeatureSimilarityMetric>();
 		clusteringThresholds = new HashMap<FeatureSimilarityMetric, Double>();
-		
+
 		// Random metric
 		FeatureSimilarityMetric random = new RandomMetric();
 		metrics.add(random);
 		clusteringThresholds.put(random, 0.15);
-		
+
 		// Simmetrics metrics
 		FeatureSimilarityMetric smithWaterman = new SimmetricsMetric(MetricName.SIMMETRICS_SMITHWATERMAN);
 		metrics.add(smithWaterman);
 		clusteringThresholds.put(smithWaterman, 0.6);
-		
+
 		FeatureSimilarityMetric levenshtein = new SimmetricsMetric(MetricName.SIMMETRICS_LEVENSHTEIN);
 		metrics.add(levenshtein);
 		clusteringThresholds.put(levenshtein, 0.7);
-		
+
 		// WordNet metrics
 		if (new File(WORDNET_DB).exists()) {
 			Dictionary wordNetDictionary = Dictionary.getInstance(new FileInputStream(WORDNET_DB));
 			FeatureSimilarityMetric wup = new WuPalmerMetric(wordNetDictionary);
 			metrics.add(wup);
 			clusteringThresholds.put(wup, 0.2);
-			
-			FeatureSimilarityMetric pathLength = new PathLengthMetric(wordNetDictionary); 
+
+			pathLength = new PathLengthMetric(wordNetDictionary); 
 			metrics.add(pathLength);
 			clusteringThresholds.put(pathLength, 0.5);
 		}
@@ -249,9 +250,9 @@ public class ASE2013KSynthesisTest extends FMLTest {
 			metrics.add(wiktionaryMetric);
 			clusteringThresholds.put(wiktionaryMetric, 0.5);
 		}
-		
+
 		// LSA metric
-		metrics.add(new LatentSemanticMetric());
+//		metrics.add(new LatentSemanticMetric());
 
 	}
 
@@ -297,88 +298,86 @@ public class ASE2013KSynthesisTest extends FMLTest {
 	}
 
 
-//	public List<FeatureModelVariable> getVariCellFeatureModels() {
-//		//		if (variCellFMs == null) {
-//		variCellFMs = new ArrayList<FeatureModelVariable>();
-//		try {
-//
-//			File dir = new File(VARICELL_FMS_FOLDER);
-//			if (dir.exists()) {
-//				File[] files = dir.listFiles(new FilenameFilter() {
-//					@Override
-//					public boolean accept(File dir, String name) {
-//						return name.endsWith(".fml");
-//					}
-//				});
-//
-//				int index = 0;
-//				for (File file : files) {
-//
-//					// Load hierarchy
-//					String hierarchyPath = file.getPath().substring(0, file.getPath().length() - 4) + ".fml";
-//					_shell.parse("run \"" + hierarchyPath + "\"");
-//					FeatureModelVariable hierarchy = (FeatureModelVariable) _environment.getVariable(VARICELL_HIERARCHY_ID);
-//
-//					// Load formula if it exists
-//					String formulaPath = file.getPath().substring(0, file.getPath().length() - 4) + ".bdd";
-//					if (new File(formulaPath).exists()) {
-//						// Load formula
-//						String command = "variCellFM_" + index + " = FM(\"" + formulaPath + "\")";
-//						FeatureModelVariable variCellFM = (FeatureModelVariable) _shell.parse(command);
-//
-//						// Add the FM to the list
-//						variCellFM.setFm(hierarchy.getFm());
-//						variCellFM.setIdentifier(file.getName());
-//						variCellFMs.add(variCellFM);
-//					} else {
-//						variCellFMs.add(hierarchy);
-//					}
-//
-//					index++;
-//				}
-//			}
-//
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
-//
-//		System.out.println(variCellFMs.size() + " FMs loaded from VariCell");
-//		//		}
-//
-//		return variCellFMs;
-//	}
-	
+	//	public List<FeatureModelVariable> getVariCellFeatureModels() {
+	//		//		if (variCellFMs == null) {
+	//		variCellFMs = new ArrayList<FeatureModelVariable>();
+	//		try {
+	//
+	//			File dir = new File(VARICELL_FMS_FOLDER);
+	//			if (dir.exists()) {
+	//				File[] files = dir.listFiles(new FilenameFilter() {
+	//					@Override
+	//					public boolean accept(File dir, String name) {
+	//						return name.endsWith(".fml");
+	//					}
+	//				});
+	//
+	//				int index = 0;
+	//				for (File file : files) {
+	//
+	//					// Load hierarchy
+	//					String hierarchyPath = file.getPath().substring(0, file.getPath().length() - 4) + ".fml";
+	//					_shell.parse("run \"" + hierarchyPath + "\"");
+	//					FeatureModelVariable hierarchy = (FeatureModelVariable) _environment.getVariable(VARICELL_HIERARCHY_ID);
+	//
+	//					// Load formula if it exists
+	//					String formulaPath = file.getPath().substring(0, file.getPath().length() - 4) + ".bdd";
+	//					if (new File(formulaPath).exists()) {
+	//						// Load formula
+	//						String command = "variCellFM_" + index + " = FM(\"" + formulaPath + "\")";
+	//						FeatureModelVariable variCellFM = (FeatureModelVariable) _shell.parse(command);
+	//
+	//						// Add the FM to the list
+	//						variCellFM.setFm(hierarchy.getFm());
+	//						variCellFM.setIdentifier(file.getName());
+	//						variCellFMs.add(variCellFM);
+	//					} else {
+	//						variCellFMs.add(hierarchy);
+	//					}
+	//
+	//					index++;
+	//				}
+	//			}
+	//
+	//		} catch (Exception e) {
+	//			e.printStackTrace();
+	//		}
+	//
+	//		System.out.println(variCellFMs.size() + " FMs loaded from VariCell");
+	//		//		}
+	//
+	//		return variCellFMs;
+	//	}
+
 	public List<FeatureModelVariable> getVariCellFeatureModels() {
-		//		if (variCellFMs == null) {
-		variCellFMs = new ArrayList<FeatureModelVariable>();
-		try {
+		if (variCellFMs == null) {
+			variCellFMs = new ArrayList<FeatureModelVariable>();
+			try {
 
-			File dir = new File(VARICELL_FMS_FOLDER);
-			if (dir.exists()) {
-				File[] files = dir.listFiles(new FilenameFilter() {
-					@Override
-					public boolean accept(File dir, String name) {
-						return name.endsWith(".fmlbdd");
+				File dir = new File(VARICELL_FMS_FOLDER);
+				if (dir.exists()) {
+					File[] files = dir.listFiles(new FilenameFilter() {
+						@Override
+						public boolean accept(File dir, String name) {
+							return name.endsWith(".fmlbdd");
+						}
+					});
+
+					int index = 0;
+					for (File file : files) {
+						String command = "variCellFM_" + index + " = FM(\"" + file.getPath() + "\")";
+						FeatureModelVariable splotFM = (FeatureModelVariable) _shell.parse(command);
+						variCellFMs.add(splotFM);
+						index++;
 					}
-				});
-
-				int index = 0;
-				for (File file : files) {
-					System.out.println("================> " + file.getPath());
-					String command = "variCellFM_" + index + " = FM(\"" + file.getPath() + "\")";
-					FeatureModelVariable splotFM = (FeatureModelVariable) _shell.parse(command);
-					System.out.println(splotFM.features().size());
-					variCellFMs.add(splotFM);
-					index++;
 				}
+
+			} catch (Exception e) {
+				e.printStackTrace();
 			}
 
-		} catch (Exception e) {
-			e.printStackTrace();
+			System.out.println(variCellFMs.size() + " FMs loaded from VariCell");
 		}
-
-		System.out.println(variCellFMs.size() + " FMs loaded from VariCell");
-		//		}
 
 		return variCellFMs;
 	}
@@ -438,7 +437,7 @@ public class ASE2013KSynthesisTest extends FMLTest {
 					}
 					InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(
 							fm, metric, new ArrayList<FeatureSimilarityMetric>(), 
-							new SimmetricsMetric(MetricName.SIMMETRICS_SMITHWATERMAN), 0);
+							null, 0);
 
 					List<KeyValue<String,List<String>>> parentCandidateLists = synthesizer.getParentCandidates();
 					FeatureGraph<String> hierarchy = fm.getFm().getDiagram();
@@ -469,7 +468,7 @@ public class ASE2013KSynthesisTest extends FMLTest {
 
 		for (FeatureSimilarityMetric metric : metrics) {
 			double threshold = clusteringThresholds.get(metric);
-			
+
 			int totalNbOfFeatures = 0;
 			double totalNbClusters = 0;
 			int totalNbCorrectClusters = 0;
@@ -617,7 +616,7 @@ public class ASE2013KSynthesisTest extends FMLTest {
 						LatentSemanticMetric lsaMetric = (LatentSemanticMetric) metric;
 						lsaMetric.setBig(fm.computeImplicationGraph());
 					}
-					InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(fm, metric, null, null, 0);
+					InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(fm, metric, null, wiktionaryMetric, 0.5);
 					FeatureModelVariable computedFM = synthesizer.computeCompleteFeatureModel();
 
 					double commonEdgesDistance = commonEdgesMetric.commonEdges(computedFM, fm) / ((double) fm.getFm().getDiagram().edges().size());
@@ -685,13 +684,13 @@ public class ASE2013KSynthesisTest extends FMLTest {
 		System.out.println("-----");
 	}
 
-	@Ignore
 	@Test
 	public void testBIGDegreeSPLOT() {
 		System.out.println("BIG SPLOT");
 		testBIGDegree(getSPLOTFeatureModels());
 	}
 
+	@Ignore
 	@Test
 	public void testBIGDegreeVariCell() {
 		System.out.println("BIG Varicell");
@@ -705,6 +704,7 @@ public class ASE2013KSynthesisTest extends FMLTest {
 		testTopN(getSPLOTFeatureModels(), 2);
 	}
 
+	@Ignore
 	@Test
 	public void testTop2VariCell() {
 		System.out.println("Top 2 VariCell");
@@ -718,37 +718,49 @@ public class ASE2013KSynthesisTest extends FMLTest {
 		testClusters(getSPLOTFeatureModels());
 	}
 
+	
+	@Ignore
 	@Test
 	public void testClustersVariCell() {
 		System.out.println("Clusters VariCell");
 		testClusters(getVariCellFeatureModels());
 	}
 
-	@Ignore
 	@Test
 	public void testOptimumBranchingSPLOT() {
 		System.out.println("Optimum branching SPLOT");
 		testOptimumBranching(getSPLOTFeatureModels());
 	}
 
+	@Ignore
 	@Test
 	public void testOptimumBranchingVariCell() {
 		System.out.println("Optimum branching VariCell");
 		testOptimumBranching(getVariCellFeatureModels());
 	}
+	
+	@Ignore
+	@Test
+	public void testVariCell() {
+		List<FeatureModelVariable> variCellFeatureModels = getVariCellFeatureModels();
+		testBIGDegree(variCellFeatureModels);
+		testTopN(variCellFeatureModels, 2);
+		testClusters(variCellFeatureModels);
+		testOptimumBranching(variCellFeatureModels);
+	}
 
-//	@Ignore
-//	@Test
-//	public void testInteractiveSynthesisSPLOT() {
-//		System.out.println("Interactive synthesis SPLOT");
-//		testInteractiveSynthesis(getSPLOTFeatureModels());
-//	}
-//
-//	@Ignore
-//	@Test
-//	public void testInteractiveSynthesisVariCell() {
-//		System.out.println("Interactive synthesis VariCell");
-//		testInteractiveSynthesis(getVariCellFeatureModels());
-//	}
+	//	@Ignore
+	//	@Test
+	//	public void testInteractiveSynthesisSPLOT() {
+	//		System.out.println("Interactive synthesis SPLOT");
+	//		testInteractiveSynthesis(getSPLOTFeatureModels());
+	//	}
+	//
+	//	@Ignore
+	//	@Test
+	//	public void testInteractiveSynthesisVariCell() {
+	//		System.out.println("Interactive synthesis VariCell");
+	//		testInteractiveSynthesis(getVariCellFeatureModels());
+	//	}
 }
 
