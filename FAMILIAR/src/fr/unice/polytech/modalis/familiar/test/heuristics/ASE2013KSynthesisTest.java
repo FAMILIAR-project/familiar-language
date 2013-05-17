@@ -364,8 +364,10 @@ public class ASE2013KSynthesisTest extends FMLTest {
 
 				int index = 0;
 				for (File file : files) {
+					System.out.println("================> " + file.getPath());
 					String command = "variCellFM_" + index + " = FM(\"" + file.getPath() + "\")";
 					FeatureModelVariable splotFM = (FeatureModelVariable) _shell.parse(command);
+					System.out.println(splotFM.features().size());
 					variCellFMs.add(splotFM);
 					index++;
 				}
@@ -683,6 +685,7 @@ public class ASE2013KSynthesisTest extends FMLTest {
 		System.out.println("-----");
 	}
 
+	@Ignore
 	@Test
 	public void testBIGDegreeSPLOT() {
 		System.out.println("BIG SPLOT");
@@ -702,7 +705,6 @@ public class ASE2013KSynthesisTest extends FMLTest {
 		testTopN(getSPLOTFeatureModels(), 2);
 	}
 
-	@Ignore
 	@Test
 	public void testTop2VariCell() {
 		System.out.println("Top 2 VariCell");
@@ -716,7 +718,6 @@ public class ASE2013KSynthesisTest extends FMLTest {
 		testClusters(getSPLOTFeatureModels());
 	}
 
-	@Ignore
 	@Test
 	public void testClustersVariCell() {
 		System.out.println("Clusters VariCell");
@@ -730,7 +731,6 @@ public class ASE2013KSynthesisTest extends FMLTest {
 		testOptimumBranching(getSPLOTFeatureModels());
 	}
 
-	@Ignore
 	@Test
 	public void testOptimumBranchingVariCell() {
 		System.out.println("Optimum branching VariCell");
