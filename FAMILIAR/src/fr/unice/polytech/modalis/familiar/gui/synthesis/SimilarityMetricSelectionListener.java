@@ -46,25 +46,37 @@ public class SimilarityMetricSelectionListener implements ActionListener {
 			case SIMMETRICS_SMITHWATERMAN:
 				environment.setParentSimilarityMetric(new SimmetricsMetric(metric));
 				break;
+			case SIMMETRICS_LEVENSHTEIN:
+				environment.setParentSimilarityMetric(new SimmetricsMetric(metric));
+				break;
 			case WORDNET_WUP:
 				Dictionary dictionary = WordNetPropertyFileChooser.getInstance();
 				if (dictionary != null) {
 					environment.setParentSimilarityMetric(new WuPalmerMetric(dictionary));	
 				}
 				break;
-			case LSA_LSI:
-				WeightedImplicationGraph<String> originalBig = environment.getSynthesizer().getOriginalBig();
-				try {
-					environment.setParentSimilarityMetric(new LatentSemanticMetric());
-				} catch (Exception e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-				break;
+//			case LSA_LSI: // TODO : restore this when LSA is ready
+//				WeightedImplicationGraph<String> originalBig = environment.getSynthesizer().getOriginalBig();
+//				try {
+//					environment.setParentSimilarityMetric(new LatentSemanticMetric());
+//				} catch (Exception e1) {
+//					// TODO Auto-generated catch block
+//					e1.printStackTrace();
+//				}
+//				break;
 			case WIKIPEDIA_MINER:
-				// TODO : ask for the configuration file of the wikipedia miner database
-//				String wikipediaDB = ; 
-//				environment.setParentSimilarityMetric(new WikipediaMinerMetric(wikipediaDB));
+				JFileChooser fileChooser = new JFileChooser();
+				int choice = fileChooser.showOpenDialog(FamiliarEditor.INSTANCE);
+				if (choice == JFileChooser.APPROVE_OPTION) {
+					File propertiesFile = fileChooser.getSelectedFile();
+					WikipediaMinerMetric wikipediaMinerMetric = new WikipediaMinerMetric(propertiesFile.getAbsolutePath());
+					try {
+						wikipediaMinerMetric.loadDatabase();
+						environment.setParentSimilarityMetric(wikipediaMinerMetric);
+					} catch (Exception e1) {
+						
+					}
+				}	
 				break;
 			default:
 				break;
