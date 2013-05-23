@@ -18,6 +18,7 @@ import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.LatentSe
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.MetricName;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.RandomMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.SimmetricsMetric;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.WikipediaMinerMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.WuPalmerMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.mst.WeightedImplicationGraph;
 
@@ -59,6 +60,11 @@ public class SimilarityMetricSelectionListener implements ActionListener {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
+				break;
+			case WIKIPEDIA_MINER:
+				// TODO : ask for the configuration file of the wikipedia miner database
+//				String wikipediaDB = ; 
+//				environment.setParentSimilarityMetric(new WikipediaMinerMetric(wikipediaDB));
 				break;
 			default:
 				break;

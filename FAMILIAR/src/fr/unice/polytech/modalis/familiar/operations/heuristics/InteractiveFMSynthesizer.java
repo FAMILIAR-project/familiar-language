@@ -1,4 +1,4 @@
-package fr.unice.polytech.modalis.familiar.gui.synthesis;
+package fr.unice.polytech.modalis.familiar.operations.heuristics;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -8,6 +8,10 @@ import java.util.Observable;
 import java.util.Set;
 
 import ch.usi.inf.sape.hac.dendrogram.Dendrogram;
+import fr.unice.polytech.modalis.familiar.gui.synthesis.FeatureComparator;
+import fr.unice.polytech.modalis.familiar.gui.synthesis.KeyValue;
+import fr.unice.polytech.modalis.familiar.gui.synthesis.OutDegreeComparator;
+import fr.unice.polytech.modalis.familiar.gui.synthesis.ParentComparator;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.clustering.FMExperiment;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.clustering.HierarchicalFeatureClusterer;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.AlwaysZeroMetric;
@@ -168,6 +172,43 @@ public class InteractiveFMSynthesizer extends Observable{
 			setChanged();
 			notifyObservers();
 		}
+	}
+	
+	/**
+	 * Reset the parent candidates of a feature
+	 * @param child
+	 * @param parent
+	 */
+	public void resetParentCandidates(String feature) {
+		FeatureGraph<String> graph = fmv.getFm().getDiagram();
+		FeatureNode<String> featureNode;
+		try {
+			featureNode = graph.findVertex(feature);	
+		} catch (IllegalArgumentException e) {
+			// Should not happen
+			featureNode = new FeatureNode<String>(feature);
+			graph.addVertex(featureNode);
+		}
+		
+		// Remove a child/parent relation in the feature diagram if it exists
+		String parent = getParentOf(feature);
+		if (parent != null) {
+			FeatureNode<String> parentNode;
+			parentNode = graph.findVertex(parent);
+			graph.removeEdge(graph.findEdge(featureNode, parentNode, FeatureEdge.HIERARCHY));
+
+		}
+		
+		// Reset the parent candidates in the implication graph
+		for (String originalParent : originalBig.parents(feature)) {
+			big.addEdge(feature, originalParent);
+		}
+		
+		// Update weights in case this new information modifies our understanding of the clusters
+		computeBIGWeights();
+
+		setChanged();
+		notifyObservers();
 	}
 
 	/**
@@ -616,4 +657,5 @@ public class InteractiveFMSynthesizer extends Observable{
 	public WeightedImplicationGraph<String> getOriginalBig() {
 		return originalBig;
 	}
+	
 }

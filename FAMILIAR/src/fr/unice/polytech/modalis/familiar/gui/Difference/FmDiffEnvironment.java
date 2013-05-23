@@ -1,40 +1,12 @@
 package fr.unice.polytech.modalis.familiar.gui.Difference;
 
-import java.awt.Component;
-import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Observable;
-import java.util.Observer;
-import java.util.Set;
-
-import javax.swing.ButtonGroup;
-import javax.swing.JMenu;
-import javax.swing.JMenuItem;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JRadioButtonMenuItem;
-import javax.swing.JSplitPane;
-
-
-
-import fr.unice.polytech.modalis.familiar.gui.FamiliarConsole;
-import fr.unice.polytech.modalis.familiar.gui.Tab2EnvVar;
-import fr.unice.polytech.modalis.familiar.gui.synthesis.BIGViewer;
-import fr.unice.polytech.modalis.familiar.gui.synthesis.CliqueViewer;
-import fr.unice.polytech.modalis.familiar.gui.synthesis.ClusterViewer;
-import fr.unice.polytech.modalis.familiar.gui.synthesis.FMViewer;
-import fr.unice.polytech.modalis.familiar.gui.synthesis.InteractiveFMSynthesizer;
-import fr.unice.polytech.modalis.familiar.gui.synthesis.JGraphXBIGViewer;
-import fr.unice.polytech.modalis.familiar.gui.Difference.JGraphXFMViewer;
-import fr.unice.polytech.modalis.familiar.gui.synthesis.ParentSelector;
-import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.FeatureSimilarityMetric;
-import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.MetricName;
-import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import gsd.synthesis.FeatureEdge;
-import gsd.synthesis.FeatureNode;
+
+import java.awt.GridLayout;
+import java.util.List;
+
+import javax.swing.JPanel;
+import javax.swing.JSplitPane;
 
 public class FmDiffEnvironment extends JPanel {
 
@@ -43,7 +15,7 @@ public class FmDiffEnvironment extends JPanel {
 	private FmDiffViewer fmViewer2;
 	
 	
-	public FmDiffEnvironment(InteractiveFMSynthesizer synthesizer) {
+	public FmDiffEnvironment() {
 		this.diff = diff;
 	
 		// Create views

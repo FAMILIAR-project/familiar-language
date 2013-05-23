@@ -98,8 +98,7 @@ public class Converter {
 	private FeatureModelVariable buildStartupDisplayFromFML() {
 		FeatureModel<String> fm = null;
 		try {
-//			fm = FMBuilder.getInternalFM(FMLTest.FM_LAPTOP);
-			fm = FMBuilder.getInternalFM("A: B [C];");
+			fm = FMBuilder.getInternalFM(FMLTest.FM_LAPTOP);
 		} catch (Exception e) {
 			System.err.println("Error when parsing internal FM: " + e.getMessage());
 			return null;

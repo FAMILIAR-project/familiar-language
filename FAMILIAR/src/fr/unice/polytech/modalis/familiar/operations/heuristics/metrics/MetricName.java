@@ -7,6 +7,7 @@ public enum MetricName {
 	SIMMETRICS_LEVENSHTEIN("Simmetrics (Levenshtein)"),
 	WORDNET_WUP("Wordnet (Wu & Palmer)"),
 	WORDNET_PATHLENGTH("Wordnet (Path length)"),
+	WIKIPEDIA_MINER("Wikipedia Miner"),
 	LSA_LSI("Latent Semantic Analysis and Indexing");
 	
 	private final String name;

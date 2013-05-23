@@ -4,21 +4,31 @@ import java.awt.Component;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Observable;
 import java.util.Observer;
 import java.util.Set;
 
+import javax.swing.AbstractAction;
 import javax.swing.ButtonGroup;
+import javax.swing.JComponent;
 import javax.swing.JMenu;
 import javax.swing.JMenuItem;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JRadioButtonMenuItem;
 import javax.swing.JSplitPane;
+import javax.swing.KeyStroke;
 
 import fr.unice.polytech.modalis.familiar.gui.FamiliarConsole;
 import fr.unice.polytech.modalis.familiar.gui.Tab2EnvVar;
+import fr.unice.polytech.modalis.familiar.gui.synthesis.actions.IgnoreParentAction;
+import fr.unice.polytech.modalis.familiar.gui.synthesis.actions.SelectClusterParentAction;
+import fr.unice.polytech.modalis.familiar.gui.synthesis.actions.SelectParentAction;
+import fr.unice.polytech.modalis.familiar.gui.synthesis.actions.SynthesisAction;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.InteractiveFMSynthesizer;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.FeatureSimilarityMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.MetricName;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
@@ -31,10 +41,13 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 	private ParentSelector parentSelector;
 	private ClusterViewer clusterViewer;
 	private CliqueViewer cliqueViewer;
+	private LinkedList<SynthesisAction> history;
 
 	public FMSynthesisEnvironment(InteractiveFMSynthesizer synthesizer) {
 		this.synthesizer = synthesizer;
 		synthesizer.addObserver(this);
+		
+		history = new LinkedList<SynthesisAction>();
 
 		// Create views
 		fmViewer = new JGraphXFMViewer();
@@ -63,6 +76,13 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 		cliqueClusterSplitPane.setDividerLocation(0.5);
 		leftSplitPane.setDividerLocation(0.5);
 		globalSplitPane.setDividerLocation(0.2);
+		
+		// Handle keyboard shortcuts
+		UndoAction undoAction = new UndoAction(this);
+		this.getInputMap(JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT).put(KeyStroke.getKeyStroke(KeyEvent.VK_Z, KeyEvent.CTRL_DOWN_MASK), "undo");
+		this.getActionMap().put("undo", undoAction);
+		
+		
 	}
 
 
@@ -84,9 +104,14 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 	}
 
 	public void selectParent(String child, String parent) {
+		selectParentWithoutHistory(child, parent);
+		history.push(new SelectParentAction(synthesizer, child, parent));
+	}
+	
+	public void selectParentWithoutHistory(String child, String parent) {
 		String selectedParent = synthesizer.getParentOf(child);
 		if (selectedParent == null) {
-			synthesizer.selectParent(child, parent);	
+			synthesizer.selectParent(child, parent);
 		} else if (!selectedParent.equals(parent)){
 			int choice = JOptionPane.showConfirmDialog(null, 
 					"Do you want to replace the current parent \"" + selectedParent + "\" of \"" + child + "\" by \"" + parent + "\"?");
@@ -98,6 +123,7 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 
 	public void ignoreParent(String child, String parent) {
 		synthesizer.ignoreParent(child, parent);
+		history.push(new IgnoreParentAction(synthesizer, child, parent));
 	}
 
 	public void updateSelectedFeatures(List<String> selectedFeatures, List<String> unselectedFeatures) {
@@ -196,6 +222,22 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 			}
 		});
 
+		// Undo button
+		JMenuItem undo = new JMenuItem("Undo");
+		undo.addActionListener(new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				Component tab = Tab2EnvVar.INSTANCE.getTab().getSelectedComponent();
+
+				if (tab instanceof FMSynthesisEnvironment) {
+					FMSynthesisEnvironment environment = (FMSynthesisEnvironment) tab;
+					environment.undo();
+				}
+			}
+		});
+		
+		
 		// Complete FM according to a heuristic
 		JMenuItem completeFM = new JMenuItem("Complete FM");
 		completeFM.addActionListener(new ActionListener() {
@@ -218,6 +260,7 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 		synthesisMenu.add(clusteringMetricMenu);
 		synthesisMenu.add(clusteringThreshold);
 		synthesisMenu.add(completeFM);
+		synthesisMenu.add(undo);
 
 		// Enable the menu only when the active tab is a synthesis environment
 		Tab2EnvVar.INSTANCE.getTab().addChangeListener(new SynthesisTabListener(synthesisMenu));
@@ -236,6 +279,7 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 			for (String selectedChild : selectedChildren) {
 				synthesizer.selectParent(selectedChild, selectedParent);
 			}	
+			history.push(new SelectClusterParentAction(synthesizer, selectedChildren, selectedParent));
 		}
 
 	}
@@ -251,8 +295,9 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 					"Select the children of \"" + feature + "\"", 
 					possibleChildren, possibleChildren);
 			for (String selectedChild : selectedChildren) {
-				this.selectParent(selectedChild, feature);
+				this.selectParentWithoutHistory(selectedChild, feature);
 			}
+			history.push(new SelectClusterParentAction(synthesizer, selectedChildren, feature));
 		}
 	}
 
@@ -269,6 +314,31 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 
 	public void updateSelectedClusters(List<Set<String>> selectedClusters, List<Set<String>> unselectedClusters) {
 		fmViewer.updateSelectedClusters(selectedClusters, unselectedClusters);
+	}
+
+	public void undo() {
+		if(!history.isEmpty()) {
+			SynthesisAction lastCommand = history.pop();
+			lastCommand.undo();
+		}
+	}
+	
+	
+	private class UndoAction extends AbstractAction {
+
+		private FMSynthesisEnvironment fmSynthesisEnvironment;
+
+		public UndoAction(FMSynthesisEnvironment fmSynthesisEnvironment) {
+			this.fmSynthesisEnvironment = fmSynthesisEnvironment;
+			
+		}
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			fmSynthesisEnvironment.undo();
+		}
+
+
 	}
 
 
