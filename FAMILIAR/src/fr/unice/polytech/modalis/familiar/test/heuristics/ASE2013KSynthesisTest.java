@@ -20,10 +20,8 @@ import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
 
-import fr.unice.polytech.modalis.familiar.fm.converter.SPLOTtoFML;
-import fr.unice.polytech.modalis.familiar.gui.synthesis.FMSynthesisEnvironment;
-import fr.unice.polytech.modalis.familiar.gui.synthesis.InteractiveFMSynthesizer;
 import fr.unice.polytech.modalis.familiar.gui.synthesis.KeyValue;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.InteractiveFMSynthesizer;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.CommonEdgesMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.FMEditDistanceMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.FeatureSimilarityMetric;
@@ -37,7 +35,6 @@ import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.Simmetri
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.WikipediaMinerMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.WuPalmerMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.ZhangEditDistance;
-import fr.unice.polytech.modalis.familiar.operations.heuristics.mst.WeightedImplicationGraph;
 import fr.unice.polytech.modalis.familiar.test.FMLTest;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import gsd.graph.ImplicationGraph;
