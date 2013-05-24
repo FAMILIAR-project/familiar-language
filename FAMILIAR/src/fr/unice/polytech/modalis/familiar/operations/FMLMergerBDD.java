@@ -417,7 +417,7 @@ public class FMLMergerBDD extends FMLMerger {
 		KSynthesisBDD synthesizer = new KSynthesisBDD(flaMerged, new KnowledgeSynthesis(fmProj.getDiagram()), builder) ;
 		//synthesizer.setSynthesisConfiguration(_kSynthesisConfiguration);
 
-		_LOGGER.debug("domain of flaMerged:" + flaMerged.getDomain());
+		_LOGGER.debug("domain of flaMerged:" + flaMerged.getDomain().size());
 		FeatureModel<String> fgRender = synthesizer.build().getFm(); // resulting
 		// FM
 

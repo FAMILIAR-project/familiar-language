@@ -342,7 +342,7 @@ public class BDDMerger {
 	 * @param fm
 	 * @return a formula that belongs to the same "universe" / BDDFactory
 	 */
-	private Formula<String> mkSPLOTFormula(FeatureModelVariable fmv) {
+	private Formula<String> mkSPLOTFormula(FeatureModelVariable fmv) {		
 		return fmv.getSPLOTFormulaAligned(_builder);
 	}
 

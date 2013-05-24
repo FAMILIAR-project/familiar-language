@@ -15,6 +15,7 @@ import fr.unice.polytech.modalis.familiar.variable.Comparison;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import fr.unice.polytech.modalis.familiar.variable.SetVariable;
 import fr.unice.polytech.modalis.familiar.variable.Variable;
+import gsd.graph.ImplicationGraph;
 
 public class FMLOntologicalASETest extends FMLTest {
 	
@@ -151,6 +152,15 @@ public class FMLOntologicalASETest extends FMLTest {
 		System.err.println(fm1Specification + "\n\n\n");
 		
 		FeatureModelVariable fm1 = FM ("fm1", fm1Specification);
+		
+		ImplicationGraph<String> big1 = fm1.computeImplicationGraph(_builder);
+		Set<String> a1 = big1.ancestors("PHP");
+		Set<String> a2 = big1.ancestors("Java");
+		System.err.println("a1=" + a1 + " a2=" + a2);
+		Set<String> a12 = Sets.intersection(a1, a2);
+		System.err.println("a12=" + a12);
+		
+		
 		
 		System.err.println("" + fm1.computeOrGroups());
 		

@@ -136,7 +136,8 @@ public abstract class KSynthesis {
 	
 	
 	public boolean hasOrGroupSupport() {
-		return _orGroupSupport;
+		return _kSynthesisConfiguration.hasOrGroupSupport() ; 
+		//return _orGroupSupport;
 	}
 
 	public void setOrGroupSupport(boolean _withoutOrGroup) {

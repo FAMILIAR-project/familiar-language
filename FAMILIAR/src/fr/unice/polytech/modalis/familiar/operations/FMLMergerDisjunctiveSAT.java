@@ -63,13 +63,13 @@ public class FMLMergerDisjunctiveSAT extends FMLMerger {
 		SATDisjunctiveFormula fla = new SATDisjunctiveFormula(flas) ;
 		Set<String> flaDomain = fla.getDomain() ; 
 		ImplicationGraph<String> impl = fla.computeImplicationGraph(flaDomain)  ;
-		Set<Expression<String>> ig = ImplicationGraphUtil.toExpressions(impl) ; 
-	    System.err.println("#IG=" + ig.size());
-	    System.err.println("IG=" + ig);
+		//Set<Expression<String>> ig = ImplicationGraphUtil.toExpressions(impl) ; 
+	   // System.err.println("#IG=" + ig.size());
+	  //  System.err.println("IG=" + ig);
 	    ExclusionGraph<String> excl = fla.computeExclusionGraph(flaDomain)  ;
-	    Set<Excludes<String>> eg = ImplicationGraphUtil.toExpressions(excl) ; 
-	    System.err.println("#EG=" + eg.size());
-	    System.err.println("EG=" + eg);
+	    //Set<Excludes<String>> eg = ImplicationGraphUtil.toExpressions(excl) ; 
+	   // System.err.println("#EG=" + eg.size());
+	  // System.err.println("EG=" + eg);
 	   
 				
 		return null ; 
