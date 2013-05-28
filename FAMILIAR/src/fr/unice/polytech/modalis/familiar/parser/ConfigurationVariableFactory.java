@@ -35,10 +35,16 @@ public class ConfigurationVariableFactory {
 			return ConfigurationVariableFactory.INSTANCE.mkSPLOT(fmv, assigner);
 		else if (_vpCf.equals(VPConfigurationVariable.FEATUREIDE))
 			return ConfigurationVariableFactory.INSTANCE.mkFeatureIDE(fmv, assigner);
+		else if (_vpCf.equals(VPConfigurationVariable.BDD))
+			return ConfigurationVariableFactory.INSTANCE.mkBDD(fmv, assigner);
 		else {
 			FMLShell.getInstance().printError("Unsupported vpCf=" + _vpCf);
 			return null ; 
 		}
+	}
+
+	public ConfigurationVariable mkBDD(FeatureModelVariable fmv, String assigner) {
+		return new ConfigurationVariableBDDImpl(fmv, assigner);
 	}
 
 }

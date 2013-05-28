@@ -170,9 +170,12 @@ public class FMLOntologicalASETest extends FMLTest {
 		System.err.println("[[fm1]]=" + s1);
 		
 		FeatureModelVariable fm1S = fm1.slice(SliceMode.INCLUDING, "Wiki", "MySQL", "PostgreSQL", "Open Source", "Proprietary Licence");
-	
 		
+		
+	
+		System.err.println("\n\n\n");
 		System.err.println("fm1S=" + fm1S);
+		System.err.println("[[fm1S]]=" +_configsToSet(fm1S.configs()));
 		
 		
 		String fm2Specification = "Wiki: Storage Licence Hosting ; " +
