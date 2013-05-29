@@ -135,6 +135,8 @@ public class FMLConfigurationBDDTest extends FMLTest {
 		assertTrue(c1.getSelected().contains("Date"));
 		assertTrue(c1.getSelected().contains("Location")); // dont understand why Location should be selected !? (not in fm2)
 		assertFalse(c1.getSelected().contains("Duration"));
+		
+		
 	}
 
 }
