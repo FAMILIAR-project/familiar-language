@@ -95,6 +95,20 @@ public class FMLConfigurationBDDTest extends FMLTest {
 		
 	}
 	
+	// For now Sort is both selected AND deselected when I launch the test...
+	@Test
+	public void testDeselectOrderShouldDeselectPicasa() throws Exception {
+		FeatureModelVariable fmPA = FM("fmPA","Source: TypeInfo Product Criteria; TypeInfo: PictureAlbum; Product: (FlickR|Picasa); Criteria: [Sort]; Sort: (Date|Name)+; Picasa <-> Date;");
+		ConfigurationVariable cPA = ConfigurationVariableFactory.INSTANCE.mkBDD(fmPA, "cPA");
+		cPA.applySelection("Sort", OpSelection.DESELECT);
+		System.err.println("cPA=" + cPA.getSpecificValue());
+		assertTrue(cPA.getDeselected().contains("Sort"));
+		assertFalse(cPA.getSelected().contains("Sort"));
+		assertTrue(cPA.getDeselected().contains("Date"));
+		assertTrue(cPA.getDeselected().contains("Name"));
+		assertTrue(cPA.getDeselected().contains("Picasa"));
+	}
+	
 	
 	/**
 	 * This unit test is interesting since reasoning over SAT is (currently) limited by the CNF support 
