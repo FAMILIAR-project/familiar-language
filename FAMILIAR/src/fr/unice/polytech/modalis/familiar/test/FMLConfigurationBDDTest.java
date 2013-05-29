@@ -159,17 +159,17 @@ public class FMLConfigurationBDDTest extends FMLTest {
 		
 		String fmByHand = "FM("+fmMerge.getSyntacticalRepresentation().replace('\n', ' ')+")";
 		System.err.println("fmMergeByHand="+fmByHand);
+		
 		_shell.parse("fmMergeByHand = "+fmByHand);
-		FeatureModelVariable fmMergeByHand = (FeatureModelVariable) _environment.getVariable("fmMerge");
-		_shell.parse("tCounting = counting fmMergeByHand");
-		DoubleVariable tCounting = (DoubleVariable)_environment.getVariable("tCounting");
-		System.err.println("Counting : "+tCounting.getValue());
-		assertEquals(fmMerge, fmMergeByHand);
+		FeatureModelVariable fmMergeByHand = (FeatureModelVariable) _environment.getVariable("fmMergeByHand");
+		
+		
 		double dMerge = fmMerge.counting();
 		double dMergeByHand = fmMergeByHand.counting();
 		assertTrue(dMerge == dMergeByHand);
 		assertTrue(dMerge == 5);
-		assertTrue(tCounting.getDouble() == dMerge);
+		
+		assertEquals(fmMerge, fmMergeByHand); 
 	}
 	
 	/**
