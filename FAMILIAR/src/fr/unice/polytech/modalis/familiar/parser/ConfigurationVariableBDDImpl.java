@@ -43,7 +43,6 @@ public class ConfigurationVariableBDDImpl extends ConfigurationVariable {
 
 	private Set<String> _selected = new HashSet<String>() ; 
 	private Set<String> _deselected = new HashSet<String>() ; 
-	private Set<String> _unselected = new HashSet<String>() ;
 
 	private Set<String> _inferredTrues = new HashSet<String>() ;  
 
@@ -76,9 +75,7 @@ public class ConfigurationVariableBDDImpl extends ConfigurationVariable {
 			return true ;
 		if (op.equals(OpSelection.DESELECT) && _deselected.contains(ftName))
 			return true ;
-		if (op.equals(OpSelection.UNSELECT) && _unselected.contains(ftName))
-			return true ;
-		
+				
 		if (!_builder.contains(ftName)) {
 			_LOGGER.warn("Unable to " + op + " the feature " + ftName + " since not in the builder") ; 
 			return false ; 
@@ -89,17 +86,18 @@ public class ConfigurationVariableBDDImpl extends ConfigurationVariable {
 		
 		if (op.equals(OpSelection.SELECT)) {
 			_selected.add(ftName);
-				
+			_deselected.remove(ftName);
 			
 		}
 		
 		else if (op.equals(OpSelection.DESELECT)) {
 			_deselected.add(ftName);
-			
+			_selected.remove(ftName);
 		}
 		
 	    else if (op.equals(OpSelection.UNSELECT)) {
-	    	_unselected.add(ftName);
+	    	_deselected.remove(ftName);
+	    	_selected.remove(ftName);
 		}
 	    else {
 	    	FMLShell.getInstance().printError("Unknown " + op + " when configuring");
@@ -122,7 +120,7 @@ public class ConfigurationVariableBDDImpl extends ConfigurationVariable {
 		for (String deselected : _deselected) {
 			Set<String> domain = new HashSet<String>();
 			domain.add(deselected);
-			BDD bddFt = _builder.get(deselected) ;
+			BDD bddFt = _builder.get(deselected).not() ;
 			cFla.andWith(new Formula<String>(bddFt, domain, _builder));
 		}
 		
