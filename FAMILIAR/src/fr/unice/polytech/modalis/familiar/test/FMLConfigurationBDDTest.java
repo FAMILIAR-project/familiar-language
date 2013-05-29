@@ -142,7 +142,7 @@ public class FMLConfigurationBDDTest extends FMLTest {
 		FeatureModelVariable fmPA = FM("fmPA","A: (B|C|D);");
 		ConfigurationVariable cPA = ConfigurationVariableFactory.INSTANCE.mkBDD(fmPA, "cPA");
 		System.err.println("cPA=" + cPA.getSpecificValue());
-		assertFalse(cPA.isValid());
+		assertTrue(cPA.isValid());
 	}
 
 	@Test
@@ -151,7 +151,7 @@ public class FMLConfigurationBDDTest extends FMLTest {
 		ConfigurationVariable cPA = ConfigurationVariableFactory.INSTANCE.mkBDD(fmPA, "cPA");
 		System.err.println("cPA=" + cPA.getSpecificValue());
 		assertFalse(cPA.isComplete());
-		assertFalse(cPA.isValid());
+		assertTrue(cPA.isValid());
 	}
 	
 	
