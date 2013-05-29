@@ -11,8 +11,10 @@ import org.junit.Test;
 import org.xtext.example.mydsl.fML.OpSelection;
 
 import fr.unice.polytech.modalis.familiar.parser.ConfigurationVariableFactory;
+import fr.unice.polytech.modalis.familiar.parser.DoubleVariable;
 import fr.unice.polytech.modalis.familiar.variable.ConfigurationVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
+import fr.unice.polytech.modalis.familiar.variable.Variable;
 
 /**
  * @author macher1
@@ -143,6 +145,32 @@ public class FMLConfigurationBDDTest extends FMLTest {
 		assertTrue(cPA.isValid());
 	}
 	
+	
+	@Test
+	public void testMergeAndSyntacticRepresentationAreConsistent() throws Exception {
+		FeatureModelVariable fmPA1 = FM("fmPA1","Zone: Product Elements Orientation Design; Product: MainZone_irsam; Elements: Logo Title Content; Content: Graphic Text; Graphic: Full ; Orientation: Landscape; Design: IRSAM;");
+		FeatureModelVariable fmPA2 = FM("fmPA2","Zone: Product Elements Orientation Design;Product: MainZone_glc;Elements: Logo Title Content;Content: Graphic Text;Graphic: Full Thumbnails;Orientation: Landscape;Design: GLC;");
+		FeatureModelVariable fmPA3 = FM("fmPA3","Zone: Product Elements Orientation Design;Product: RightZone_glc;Elements: Logo Title Content;Content: Graphic Text;Graphic:Thumbnails;Orientation: Portrait;Design: GLC;");
+		FeatureModelVariable fmPA4 = FM("fmPA4","Zone: Product Elements Orientation Design;Product: BottomZone_glc;Elements: Logo Content;Content: Graphic Text;Graphic: Thumbnails;Orientation: Landscape;Design: GLC;");
+		FeatureModelVariable fmPA5 = FM("fmPA5","Zone: Product Elements Orientation Design;Product: HeaderZone_glc;Elements: Content;Content: Graphic;Graphic: Thumbnails;Orientation: Landscape;Design: GLC;");
+		
+		_shell.parse("fmMerge = merge union {fmPA1 fmPA2 fmPA3 fmPA4 fmPA5}");
+		FeatureModelVariable fmMerge = (FeatureModelVariable) _environment.getVariable("fmMerge");
+		
+		String fmByHand = "FM("+fmMerge.getSyntacticalRepresentation().replace('\n', ' ')+")";
+		System.err.println("fmMergeByHand="+fmByHand);
+		_shell.parse("fmMergeByHand = "+fmByHand);
+		FeatureModelVariable fmMergeByHand = (FeatureModelVariable) _environment.getVariable("fmMerge");
+		_shell.parse("tCounting = counting fmMergeByHand");
+		DoubleVariable tCounting = (DoubleVariable)_environment.getVariable("tCounting");
+		System.err.println("Counting : "+tCounting.getValue());
+		assertEquals(fmMerge, fmMergeByHand);
+		double dMerge = fmMerge.counting();
+		double dMergeByHand = fmMergeByHand.counting();
+		assertTrue(dMerge == dMergeByHand);
+		assertTrue(dMerge == 5);
+		assertTrue(tCounting.getDouble() == dMerge);
+	}
 	
 	/**
 	 * This unit test is interesting since reasoning over SAT is (currently) limited by the CNF support 
