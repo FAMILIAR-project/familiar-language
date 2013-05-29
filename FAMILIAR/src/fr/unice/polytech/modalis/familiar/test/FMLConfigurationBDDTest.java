@@ -112,8 +112,7 @@ public class FMLConfigurationBDDTest extends FMLTest {
 		
 		_shell.parse("fmMerge = merge union fm*");
 		FeatureModelVariable fmMerge = (FeatureModelVariable) _environment.getVariable("fmMerge");
-		
-		assertEquals(3, fmMerge.counting(), 0);
+
 		
 		System.err.println("fmMerge=" + fmMerge);
 		
