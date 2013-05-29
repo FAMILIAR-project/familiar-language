@@ -95,7 +95,6 @@ public class FMLConfigurationBDDTest extends FMLTest {
 		
 	}
 	
-	// For now Sort is both selected AND deselected when I launch the test...
 	@Test
 	public void testDeselectOrderShouldDeselectPicasa() throws Exception {
 		FeatureModelVariable fmPA = FM("fmPA","Source: TypeInfo Product Criteria; TypeInfo: PictureAlbum; Product: (FlickR|Picasa); Criteria: [Sort]; Sort: (Date|Name)+; Picasa <-> Date;");
@@ -107,6 +106,52 @@ public class FMLConfigurationBDDTest extends FMLTest {
 		assertTrue(cPA.getDeselected().contains("Date"));
 		assertTrue(cPA.getDeselected().contains("Name"));
 		assertTrue(cPA.getDeselected().contains("Picasa"));
+	}
+	
+	
+	@Test
+	public void testNewConfigurationIsNotComplete() throws Exception {
+		FeatureModelVariable fmPA = FM("fmPA","A: (B|C|D)+;");
+		ConfigurationVariable cPA = ConfigurationVariableFactory.INSTANCE.mkBDD(fmPA, "cPA");
+		System.err.println("cPA=" + cPA.getSpecificValue());
+		assertFalse(cPA.isComplete());
+	}
+	
+	@Test
+	public void testNewConfigurationIsComplete() throws Exception {
+		FeatureModelVariable fmPA = FM("fmPA","A: (B|C|D)+;");
+		ConfigurationVariable cPA = ConfigurationVariableFactory.INSTANCE.mkBDD(fmPA, "cPA");
+		cPA.applySelection("B", OpSelection.SELECT);
+		cPA.applySelection("C", OpSelection.DESELECT);
+		cPA.applySelection("D", OpSelection.DESELECT);
+		System.err.println("cPA=" + cPA.getSpecificValue());
+		assertTrue(cPA.isComplete());
+	}
+	
+	@Test
+	public void testNewConfigurationIsValid() throws Exception {
+		FeatureModelVariable fmPA = FM("fmPA","A: (B|C|D)+;");
+		ConfigurationVariable cPA = ConfigurationVariableFactory.INSTANCE.mkBDD(fmPA, "cPA");
+		cPA.applySelection("B", OpSelection.SELECT);
+		System.err.println("cPA=" + cPA.getSpecificValue());
+		assertTrue(cPA.isValid());
+	}
+	
+	@Test
+	public void testNewConfigurationIsNotValid() throws Exception {
+		FeatureModelVariable fmPA = FM("fmPA","A: (B|C|D);");
+		ConfigurationVariable cPA = ConfigurationVariableFactory.INSTANCE.mkBDD(fmPA, "cPA");
+		System.err.println("cPA=" + cPA.getSpecificValue());
+		assertFalse(cPA.isValid());
+	}
+
+	@Test
+	public void testNewConfigurationIsNotCompleteNorValid() throws Exception {
+		FeatureModelVariable fmPA = FM("fmPA","Source: TypeInfo Product Criteria; TypeInfo: PictureAlbum; Product: (FlickR|Picasa); Criteria: [Sort]; Sort: (Date|Name)+; Picasa <-> Date;");
+		ConfigurationVariable cPA = ConfigurationVariableFactory.INSTANCE.mkBDD(fmPA, "cPA");
+		System.err.println("cPA=" + cPA.getSpecificValue());
+		assertFalse(cPA.isComplete());
+		assertFalse(cPA.isValid());
 	}
 	
 	
