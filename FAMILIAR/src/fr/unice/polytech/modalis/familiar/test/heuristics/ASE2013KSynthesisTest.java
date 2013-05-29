@@ -20,6 +20,8 @@ import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import fr.unice.polytech.modalis.familiar.fm.converter.SPLOTtoFML;
+import fr.unice.polytech.modalis.familiar.gui.synthesis.FMSynthesisEnvironment;
 import fr.unice.polytech.modalis.familiar.gui.synthesis.KeyValue;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.InteractiveFMSynthesizer;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.CommonEdgesMetric;
@@ -35,6 +37,7 @@ import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.Simmetri
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.WikipediaMinerMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.WuPalmerMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.ZhangEditDistance;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.mst.WeightedImplicationGraph;
 import fr.unice.polytech.modalis.familiar.test.FMLTest;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import gsd.graph.ImplicationGraph;
@@ -200,6 +203,8 @@ public class ASE2013KSynthesisTest extends FMLTest {
 			"model_20110915_1159959623.xml"
 	});
 	private static FeatureSimilarityMetric pathLength;
+	private static FeatureSimilarityMetric levenshtein;
+	private static FeatureSimilarityMetric smithWaterman;
 
 
 	@BeforeClass
@@ -212,12 +217,11 @@ public class ASE2013KSynthesisTest extends FMLTest {
 		metrics.add(random);
 		clusteringThresholds.put(random, 0.15);
 
-		// Simmetrics metrics
-		FeatureSimilarityMetric smithWaterman = new SimmetricsMetric(MetricName.SIMMETRICS_SMITHWATERMAN);
+		smithWaterman = new SimmetricsMetric(MetricName.SIMMETRICS_SMITHWATERMAN);
 		metrics.add(smithWaterman);
 		clusteringThresholds.put(smithWaterman, 0.6);
 
-		FeatureSimilarityMetric levenshtein = new SimmetricsMetric(MetricName.SIMMETRICS_LEVENSHTEIN);
+		levenshtein = new SimmetricsMetric(MetricName.SIMMETRICS_LEVENSHTEIN);
 		metrics.add(levenshtein);
 		clusteringThresholds.put(levenshtein, 0.7);
 
@@ -295,57 +299,6 @@ public class ASE2013KSynthesisTest extends FMLTest {
 	}
 
 
-	//	public List<FeatureModelVariable> getVariCellFeatureModels() {
-	//		//		if (variCellFMs == null) {
-	//		variCellFMs = new ArrayList<FeatureModelVariable>();
-	//		try {
-	//
-	//			File dir = new File(VARICELL_FMS_FOLDER);
-	//			if (dir.exists()) {
-	//				File[] files = dir.listFiles(new FilenameFilter() {
-	//					@Override
-	//					public boolean accept(File dir, String name) {
-	//						return name.endsWith(".fml");
-	//					}
-	//				});
-	//
-	//				int index = 0;
-	//				for (File file : files) {
-	//
-	//					// Load hierarchy
-	//					String hierarchyPath = file.getPath().substring(0, file.getPath().length() - 4) + ".fml";
-	//					_shell.parse("run \"" + hierarchyPath + "\"");
-	//					FeatureModelVariable hierarchy = (FeatureModelVariable) _environment.getVariable(VARICELL_HIERARCHY_ID);
-	//
-	//					// Load formula if it exists
-	//					String formulaPath = file.getPath().substring(0, file.getPath().length() - 4) + ".bdd";
-	//					if (new File(formulaPath).exists()) {
-	//						// Load formula
-	//						String command = "variCellFM_" + index + " = FM(\"" + formulaPath + "\")";
-	//						FeatureModelVariable variCellFM = (FeatureModelVariable) _shell.parse(command);
-	//
-	//						// Add the FM to the list
-	//						variCellFM.setFm(hierarchy.getFm());
-	//						variCellFM.setIdentifier(file.getName());
-	//						variCellFMs.add(variCellFM);
-	//					} else {
-	//						variCellFMs.add(hierarchy);
-	//					}
-	//
-	//					index++;
-	//				}
-	//			}
-	//
-	//		} catch (Exception e) {
-	//			e.printStackTrace();
-	//		}
-	//
-	//		System.out.println(variCellFMs.size() + " FMs loaded from VariCell");
-	//		//		}
-	//
-	//		return variCellFMs;
-	//	}
-
 	public List<FeatureModelVariable> getVariCellFeatureModels() {
 		if (variCellFMs == null) {
 			variCellFMs = new ArrayList<FeatureModelVariable>();
@@ -378,7 +331,7 @@ public class ASE2013KSynthesisTest extends FMLTest {
 
 		return variCellFMs;
 	}
-
+	
 	private void testBIGDegree(List<FeatureModelVariable> fms) {
 		ImplicationGraphMetrics graphMetrics = new ImplicationGraphMetrics();
 		List<Integer> minOutDegrees = new ArrayList<Integer>();
@@ -613,7 +566,7 @@ public class ASE2013KSynthesisTest extends FMLTest {
 						LatentSemanticMetric lsaMetric = (LatentSemanticMetric) metric;
 						lsaMetric.setBig(fm.computeImplicationGraph());
 					}
-					InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(fm, metric, null, wiktionaryMetric, 0.5);
+					InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(fm, metric, null, levenshtein, 0.7);
 					FeatureModelVariable computedFM = synthesizer.computeCompleteFeatureModel();
 
 					double commonEdgesDistance = commonEdgesMetric.commonEdges(computedFM, fm) / ((double) fm.getFm().getDiagram().edges().size());
@@ -681,6 +634,7 @@ public class ASE2013KSynthesisTest extends FMLTest {
 		System.out.println("-----");
 	}
 
+	@Ignore
 	@Test
 	public void testBIGDegreeSPLOT() {
 		System.out.println("BIG SPLOT");
@@ -723,6 +677,7 @@ public class ASE2013KSynthesisTest extends FMLTest {
 		testClusters(getVariCellFeatureModels());
 	}
 
+	@Ignore
 	@Test
 	public void testOptimumBranchingSPLOT() {
 		System.out.println("Optimum branching SPLOT");
@@ -746,18 +701,50 @@ public class ASE2013KSynthesisTest extends FMLTest {
 		testOptimumBranching(variCellFeatureModels);
 	}
 
-	//	@Ignore
-	//	@Test
-	//	public void testInteractiveSynthesisSPLOT() {
-	//		System.out.println("Interactive synthesis SPLOT");
-	//		testInteractiveSynthesis(getSPLOTFeatureModels());
-	//	}
-	//
-	//	@Ignore
-	//	@Test
-	//	public void testInteractiveSynthesisVariCell() {
-	//		System.out.println("Interactive synthesis VariCell");
-	//		testInteractiveSynthesis(getVariCellFeatureModels());
-	//	}
+	@Test
+	public void testRunningExample() throws Exception {
+		FeatureModelVariable fm = FM ("fm1bis", 
+				" Wiki: Hosting Licence Storage [\"Programming Language\"] ; \n" + 
+				"Hosting: (\"Hosted Service\"|Local) ; \n" + 
+				"Licence: (\"Proprietary Licence\"|\"Open Source\") ; \n" + 
+				"Storage: (PostgreSQL|MySQL) ; \n" + 
+				"\"Programming Language\": (Java|PHP) ; \n" + 
+				"\"Hosted Service\": [Domain] ; \n" + 
+				"(\"Proprietary Licence\" -> !\"Programming Language\");\n" + 
+				"(Local -> !\"Proprietary Licence\");\n" + 
+				"(PostgreSQL <-> \"Proprietary Licence\");" +
+				"PostgreSQL -> Domain ;" +
+				//"\"Open Source\" -> MySQL ; " +
+				//"PHP -> MySQL ; " +
+				//"Java -> MySQL ; " +
+				//"\"Proprietary Licence\" -> !MySQL ; " +  
+				"" +
+				"" +
+				""
+				) ;
+		List<FeatureModelVariable> example = new ArrayList<FeatureModelVariable>();
+		example.add(fm);
+		
+		System.out.println("BIG degree");
+		testBIGDegree(example);
+		System.out.println("-----");
+		
+		System.out.println("TOP 1");
+		testTopN(example, 1);
+		System.out.println("-----");
+		
+		System.out.println("TOP 2");
+		testTopN(example, 2);
+		System.out.println("-----");
+		
+		System.out.println("Clusters");
+		testClusters(example);
+		System.out.println("-----");
+		
+		System.out.println("Optimum branching");
+		testOptimumBranching(example);
+		
+		
+	}
 }
 

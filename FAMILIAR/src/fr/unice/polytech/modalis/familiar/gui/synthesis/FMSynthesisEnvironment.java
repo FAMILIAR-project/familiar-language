@@ -134,15 +134,17 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 	public void setRoot(String root) {
 		String selectedRoot = synthesizer.getRoot();
 		if (selectedRoot == null) {
-			synthesizer.setRoot(root);	
+			synthesizer.setRoot(root);
+			history.push(new SetRootAction(synthesizer, root));
 		} else {
 			int choice = JOptionPane.showConfirmDialog(null, 
 					"Do you want to replace the current root \"" + selectedRoot + "\" by \"" + root + "\"?");
 			if (choice == JOptionPane.YES_OPTION) {
 				synthesizer.setRoot(root);
+				history.push(new SetRootAction(synthesizer, root));
 			}
 		}
-
+		
 	}
 
 	public void setParentSimilarityMetric(FeatureSimilarityMetric metric) {
