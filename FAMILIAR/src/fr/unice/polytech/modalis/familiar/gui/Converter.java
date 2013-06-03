@@ -98,7 +98,26 @@ public class Converter {
 	private FeatureModelVariable buildStartupDisplayFromFML() {
 		FeatureModel<String> fm = null;
 		try {
-			fm = FMBuilder.getInternalFM(FMLTest.FM_LAPTOP);
+//			fm = FMBuilder.getInternalFM(FMLTest.FM_LAPTOP);
+			fm = FMBuilder.getInternalFM(
+					" Wiki: Hosting License Storage [\"Programming Language\"] ; \n" + 
+					"Hosting: (\"Hosted Service\"|Local) ; \n" + 
+					"License: (\"Proprietary License\"|\"Open Source\") ; \n" + 
+					"Storage: (PostgreSQL|MySQL) ; \n" + 
+					"\"Programming Language\": (Java|PHP) ; \n" + 
+					"\"Hosted Service\": [Domain] ; \n" + 
+					"(\"Proprietary License\" -> !\"Programming Language\");\n" + 
+					"(Local -> !\"Proprietary Licence\");\n" + 
+					"(PostgreSQL <-> \"Proprietary License\");" +
+					"PostgreSQL -> Domain ;" +
+					//"\"Open Source\" -> MySQL ; " +
+					//"PHP -> MySQL ; " +
+					//"Java -> MySQL ; " +
+					//"\"Proprietary Licence\" -> !MySQL ; " +  
+					"" +
+					"" +
+					""
+					) ;
 		} catch (Exception e) {
 			System.err.println("Error when parsing internal FM: " + e.getMessage());
 			return null;
