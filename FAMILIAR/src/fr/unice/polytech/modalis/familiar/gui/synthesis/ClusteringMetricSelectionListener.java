@@ -46,9 +46,15 @@ public class ClusteringMetricSelectionListener implements ActionListener {
 				environment.setClusteringMetric(new SimmetricsMetric(metric));
 				break;
 			case WORDNET_WUP:
-				Dictionary dictionary = WordNetPropertyFileChooser.getInstance();
-				if (dictionary != null) {
-					environment.setClusteringMetric(new WuPalmerMetric(dictionary));	
+				Dictionary dictionaryWUP = WordNetPropertyFileChooser.getInstance();
+				if (dictionaryWUP != null) {
+					environment.setClusteringMetric(new WuPalmerMetric(dictionaryWUP));	
+				}
+				break;
+			case WORDNET_PATHLENGTH:
+				Dictionary dictionaryPL = WordNetPropertyFileChooser.getInstance();
+				if (dictionaryPL != null) {
+					environment.setClusteringMetric(new WuPalmerMetric(dictionaryPL));	
 				}
 				break;
 			case WIKIPEDIA_MINER:

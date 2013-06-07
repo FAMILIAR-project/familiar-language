@@ -50,9 +50,15 @@ public class SimilarityMetricSelectionListener implements ActionListener {
 				environment.setParentSimilarityMetric(new SimmetricsMetric(metric));
 				break;
 			case WORDNET_WUP:
-				Dictionary dictionary = WordNetPropertyFileChooser.getInstance();
-				if (dictionary != null) {
-					environment.setParentSimilarityMetric(new WuPalmerMetric(dictionary));	
+				Dictionary dictionaryWUP = WordNetPropertyFileChooser.getInstance();
+				if (dictionaryWUP != null) {
+					environment.setParentSimilarityMetric(new WuPalmerMetric(dictionaryWUP));	
+				}
+				break;
+			case WORDNET_PATHLENGTH:
+				Dictionary dictionaryPL = WordNetPropertyFileChooser.getInstance();
+				if (dictionaryPL != null) {
+					environment.setParentSimilarityMetric(new WuPalmerMetric(dictionaryPL));	
 				}
 				break;
 //			case LSA_LSI: // TODO : restore this when LSA is ready
