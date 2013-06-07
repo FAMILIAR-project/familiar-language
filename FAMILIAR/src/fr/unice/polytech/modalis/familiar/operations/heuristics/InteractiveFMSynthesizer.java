@@ -139,6 +139,10 @@ public class InteractiveFMSynthesizer extends Observable{
 		Set<SimpleEdge> removedEdges = new HashSet<SimpleEdge>(big.outgoingEdges(child));
 		removedEdges.remove(big.findEdge(child, parent));
 		big.removeAllEdges(removedEdges);
+		
+		// Remove the inverse relation in the implication graph, if it exists, to avoid invalid choices
+		big.removeEdge(parent, child);
+		
 
 		// Update weights in case this new information modifies our understanding of the clusters
 		computeBIGWeights();
