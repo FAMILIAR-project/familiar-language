@@ -114,7 +114,6 @@ public class Tab2EnvVar {
 			}
 		}
 		
-		ConfigsSelected.INSTANCE.updateConfigsSelected(cv);
 		Configurator frame = new Configurator(cv);
 		needToSyncTabWhenSwitchingTo = false;
 		Tab2EnvVar.INSTANCE.createNewTab(cv.getIdentifier(), frame.getComponent(0));

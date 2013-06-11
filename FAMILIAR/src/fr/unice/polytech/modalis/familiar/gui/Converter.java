@@ -36,8 +36,9 @@ import org.apache.commons.collections15.Closure;
 
 import prefuse.data.Node;
 import prefuse.data.Tree;
+import prefuse.data.tuple.TupleSet;
 import fr.unice.polytech.modalis.familiar.parser.FMBuilder;
-import fr.unice.polytech.modalis.familiar.test.FMLTest;
+import fr.unice.polytech.modalis.familiar.variable.ConfigurationVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import gsd.synthesis.Expression;
 import gsd.synthesis.FeatureEdge;
@@ -161,6 +162,33 @@ public class Converter {
 					parent = node;
 				}
 			}
+		} catch (Exception e) {
+//			FamiliarConsole.INSTANCE.setMessage("Error: In fmv2PrefuseTree: " +
+//				e.getMessage());
+			return null;
+		}
+		return t;
+	}
+	
+	public Tree fmv2PrefuseTree(ConfigurationVariable cv) {
+		Tree t = null;
+		try {
+			FeatureModelVariable fmv = cv.getFmv();
+			FeatureModel<String> fm = fmv.getFm();
+			FeatureGraph<String> fg = fm.getDiagram();
+			
+			t = generateEmptyTree();
+			String rootName = fmv.root().name();
+			
+			Map<String, Node> nameToNode = new HashMap<String, Node>();
+			Node root = t.addRoot();
+			root.setString(NAME, rootName);
+			nameToNode.put(rootName, root);
+	
+			convertFeatureGraph2PrefuseTree(fg, t, nameToNode);
+			
+			
+			
 		} catch (Exception e) {
 //			FamiliarConsole.INSTANCE.setMessage("Error: In fmv2PrefuseTree: " +
 //				e.getMessage());

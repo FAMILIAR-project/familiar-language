@@ -24,9 +24,6 @@
  */
 package fr.unice.polytech.modalis.familiar.gui;
 
-import java.util.HashMap;
-import java.util.Set;
-
 import org.xtext.example.mydsl.fML.OpSelection;
 
 import fr.unice.polytech.modalis.familiar.variable.ConfigurationVariable;
@@ -35,23 +32,18 @@ public class ConfigsSelected {
 	// A simple, fast, and thread-safe singleton implementation.
 	public final static ConfigsSelected INSTANCE = new ConfigsSelected();
 	
-	private static HashMap<String, Set<String>> configsSelected = new HashMap<String, Set<String>>();
 
 	private ConfigsSelected() {
 	}
 	
 	public boolean isSelected(String cvName, String featureName) {
-		return configsSelected.get(cvName).contains(featureName);
+		ConfigurationVariable cv = (ConfigurationVariable) FamiliarConsole.INSTANCE.getVariableByName(cvName);
+		return cv.getSelected().contains(cvName);
 	}
 	
 	public void applySelection(String cvName, String featureName, OpSelection op) {
 		ConfigurationVariable cv = (ConfigurationVariable) FamiliarConsole.INSTANCE.getVariableByName(cvName);
-		if (cv.applySelection(featureName, op)) {
-			updateConfigsSelected(cv);
-		}
+		cv.applySelection(featureName, op) ; 			
 	}
 	
-	public void updateConfigsSelected(ConfigurationVariable cv) {
-		configsSelected.put(cv.getIdentifier(), cv.getSelected());
-	}
 } // end of class ConfigsSelected

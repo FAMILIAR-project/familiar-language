@@ -30,6 +30,7 @@ import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.Set;
 
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
@@ -65,8 +66,7 @@ public class Configurator extends JFrame {
   
   public Configurator(ConfigurationVariable cv) {
 	  	tree = new JPrefuseTree(
-			  Converter.INSTANCE.fmv2PrefuseTree((FeatureModelVariable)
-					  FamiliarConsole.INSTANCE.getVariableByName(cv.getFmv().getIdentifier())), 
+			  Converter.INSTANCE.fmv2PrefuseTree(cv), 
 					  Converter.NAME);
   
 	    tree.setName(cv.getIdentifier());
@@ -78,7 +78,11 @@ public class Configurator extends JFrame {
 	    getContentPane().add(sp,    BorderLayout.CENTER);
 	    getContentPane().add(panel, BorderLayout.EAST);
 	    expandAll();
+	    
+	       
   }
+
+
 
 class NodeSelectionListener extends MouseAdapter {
     JPrefuseTree  tree;
@@ -94,14 +98,15 @@ class NodeSelectionListener extends MouseAdapter {
     	TreePath  path = tree.getPathForRow(row);
     	if (path != null) {
     		TableNode node = (TableNode)path.getLastPathComponent();
-    	  
-    		if (ConfigsSelected.INSTANCE.isSelected(tree.getName(), node.getString(Converter.NAME))) {
+    		String tName = tree.getName() ; 
+    		String nodeName = node.getString(Converter.NAME) ; 
+    		if (ConfigsSelected.INSTANCE.isSelected(tName, nodeName))
     			ConfigsSelected.INSTANCE.applySelection(
-    				  tree.getName(), node.getString(Converter.NAME), OpSelection.DESELECT);
-    		} else {
+    					tName, nodeName, OpSelection.DESELECT);
+    		else
     			ConfigsSelected.INSTANCE.applySelection(
-    				  tree.getName(), node.getString(Converter.NAME), OpSelection.SELECT);
-    		}
+    					tName, nodeName, OpSelection.SELECT);    		
+    		    		
     		// Reopen the configuration variable tab
     		Variable cv = FamiliarConsole.INSTANCE.getVariableByName(tree.getName());
     		Tab2EnvVar.INSTANCE.createNewConfigurationTab((ConfigurationVariable)cv, true);
@@ -131,11 +136,14 @@ class CheckRenderer extends JPanel implements TreeCellRenderer {
 			int row,
 			boolean hasFocus) {
 		String name = ((Node)value).getString(Converter.NAME);
-		check.setSelected(ConfigsSelected.INSTANCE.isSelected(tree.getName(), name));
-	  
+		//check.setSelected(!check.isSelected());
+		check.setSelected(isSelected);
+		//check.setSelected(ConfigsSelected.INSTANCE.isSelected(tree.getName(), name));
+			  
 	    label.setFont(tree.getFont());
 	    label.setText(name);
 	    label.setFocus(hasFocus);
+
 	    if (leaf) {
 	    	label.setIcon(UIManager.getIcon("Tree.leafIcon"));
 	    } else if (expanded) {

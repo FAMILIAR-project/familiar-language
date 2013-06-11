@@ -200,5 +200,59 @@ public class FMLConfigurationBDDTest extends FMLTest {
 		
 		
 	}
+	
+	
+	@Test
+	public void testConflicts1() throws Exception {
+		FeatureModelVariable fm1 = FM("fm1","A: (B|C|D);");
+		ConfigurationVariable c1 = ConfigurationVariableFactory.INSTANCE.mkBDD(fm1, "fm1");
+				
+		c1.applySelection("B", OpSelection.SELECT);		
+		c1.applySelection("C", OpSelection.SELECT);
+		
+		System.err.println("c1=" + c1.getSpecificValue());
+		assertFalse(c1.getSelected().contains("B"));
+	}
+	
+	@Test
+	public void testConflicts2() throws Exception {
+		FeatureModelVariable fm1 = FM("fm1","A: (B|C);");
+		ConfigurationVariable c1 = ConfigurationVariableFactory.INSTANCE.mkBDD(fm1, "fm1");
+				
+		c1.applySelection("C", OpSelection.DESELECT);		
+		c1.applySelection("B", OpSelection.DESELECT);
+		
+		System.err.println("c1=" + c1.getSpecificValue());
+		assertFalse(c1.getDeselected().contains("C"));
+	}
+	
+	@Test
+	public void testConflicts3() throws Exception {
+		FeatureModelVariable fm1 = FM("fm1","A: (B|C|D|E|F);");
+		ConfigurationVariable c1 = ConfigurationVariableFactory.INSTANCE.mkBDD(fm1, "fm1");
+				
+		c1.applySelection("C", OpSelection.SELECT);		
+		c1.applySelection("B", OpSelection.SELECT);
+		c1.applySelection("D", OpSelection.SELECT);
+		
+		System.err.println("c1=" + c1.getSpecificValue());
+		assertTrue(c1.getSelected().contains("D"));
+		assertEquals(c1.getSelected().size(), 2);
+	}
+	
+	@Test
+	public void testConflicts4() throws Exception {
+		FeatureModelVariable fm1 = FM("fm1","A: (B|C|D|E|F);");
+		ConfigurationVariable c1 = ConfigurationVariableFactory.INSTANCE.mkBDD(fm1, "fm1");
+				
+		c1.applySelection("C", OpSelection.DESELECT);		
+		c1.applySelection("B", OpSelection.DESELECT);
+		c1.applySelection("D", OpSelection.DESELECT);
+		c1.applySelection("B", OpSelection.SELECT);
+		
+		System.err.println("c1=" + c1.getSpecificValue());
+		assertTrue(c1.getSelected().contains("B"));
+		assertEquals(c1.getSelected().size(), 2);
+	}
 
 }

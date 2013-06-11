@@ -81,9 +81,7 @@ public class ConfigurationVariableBDDImpl extends ConfigurationVariable {
 			return false ; 
 		}
 		
-		
-	
-		
+				
 		if (op.equals(OpSelection.SELECT)) {
 			_selected.add(ftName);
 			_deselected.remove(ftName);
@@ -107,10 +105,69 @@ public class ConfigurationVariableBDDImpl extends ConfigurationVariable {
 		
 		Formula<String> cFla = _fla.id() ; 
 		
+		
+		
 		/*
-		 * Applying user decisions
+		 *  
+		 * Conflicting decisions may arise
+		 * say fm1 = FM (A : (B|C) ; )
+		 * you can select B first
+		 * then decide to change your mind and select C
+		 * automatic mode for resolving conflicts
+		 * the basic strategy here is to find conflicting decisions that have been previously made by the user, 
+		 * being as a deselection or a selection    
+		 * 
 		 */
 		
+		Formula<String> conflictFla = _fla.id() ;
+		Formula<String> flaFt = mkFormula (ftName);	
+		if (op == OpSelection.DESELECT) {
+			flaFt = new Formula<String>(flaFt.getBDD().not(), flaFt.getDomain(), _builder);
+		}
+		
+		conflictFla.andWith(flaFt); 
+		
+		// inspect previous selected decisions
+		Set<String> manualSelectedDecisionsToRemove = new HashSet<String>() ; 
+		for (String selected : _selected) {
+			
+			
+			
+			Set<String> domain = new HashSet<String>();
+			BDD bddFt = _builder.get(selected) ;
+			conflictFla.andWith(new Formula<String>(bddFt, domain, _builder));
+			// valid
+			if (conflictFla.isZero()) {
+				manualSelectedDecisionsToRemove.add(selected);
+			}
+			//conflictFla.free() ;
+		}		
+		_selected.removeAll(manualSelectedDecisionsToRemove);
+		
+		
+		// inspect previous deselected decisions
+		Set<String> manualDeselectedDecisionsToRemove = new HashSet<String>() ; 
+		for (String deselected : _deselected) {
+						
+			
+			Set<String> domain = new HashSet<String>();
+			BDD bddFt = _builder.get(deselected).not() ;
+			conflictFla.andWith(new Formula<String>(bddFt, domain, _builder));
+			// valid
+			if (conflictFla.isZero()) {
+				manualDeselectedDecisionsToRemove.add(deselected);
+			}
+			//conflictFla.free() ;
+		}		
+		_deselected.removeAll(manualDeselectedDecisionsToRemove);
+		conflictFla.free() ;
+		
+		
+		
+		
+		/*
+		 * Applying user decisions
+		 */		
 		for (String selected : _selected) {
 			Set<String> domain = new HashSet<String>();
 			domain.add(selected);
@@ -129,6 +186,16 @@ public class ConfigurationVariableBDDImpl extends ConfigurationVariable {
 				
 	}
 
+	private Formula<String> mkFormula(String ftName) {
+		Set<String> domain = new HashSet<String>();
+		BDD bddFt = _builder.get(ftName) ;
+		return new Formula<String>(bddFt, domain, _builder);
+	}
+
+	/**
+	 * Not efficient at all
+	 * @param cFla
+	 */
 	private void _updateWithValidDomains(Formula<String> cFla) {
 		
 		FormulaAnalyzer<String> flaAnalyzer = new FormulaAnalyzer<String>(cFla, _builder) ; 
