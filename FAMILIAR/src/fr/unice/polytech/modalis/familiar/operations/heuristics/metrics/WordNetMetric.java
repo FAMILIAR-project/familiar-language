@@ -5,7 +5,6 @@ import net.sf.extjwnl.data.IndexWord;
 import net.sf.extjwnl.data.POS;
 import net.sf.extjwnl.data.Synset;
 import net.sf.extjwnl.dictionary.Dictionary;
-import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.FeatureSimilarityMetric;
 
 public abstract class WordNetMetric implements FeatureSimilarityMetric {
 

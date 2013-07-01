@@ -4,7 +4,6 @@
 package fr.unice.polytech.modalis.familiar.operations;
 
 import fr.unice.polytech.modalis.familiar.fm.FMLFormula;
-import gsd.graph.ImplicationGraph;
 import gsd.synthesis.BDDBuilder;
 import gsd.synthesis.Formula;
 

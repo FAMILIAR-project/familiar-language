@@ -4,23 +4,18 @@ import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 
 import javax.swing.JFileChooser;
 
-import net.sf.extjwnl.JWNLException;
 import net.sf.extjwnl.dictionary.Dictionary;
 import fr.unice.polytech.modalis.familiar.gui.FamiliarEditor;
 import fr.unice.polytech.modalis.familiar.gui.Tab2EnvVar;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.AlwaysZeroMetric;
-import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.LatentSemanticMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.MetricName;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.RandomMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.SimmetricsMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.WikipediaMinerMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.WuPalmerMetric;
-import fr.unice.polytech.modalis.familiar.operations.heuristics.mst.WeightedImplicationGraph;
 
 public class SimilarityMetricSelectionListener implements ActionListener {
 

@@ -1,5 +1,11 @@
 package fr.unice.polytech.modalis.familiar.operations.heuristics.metrics;
 
+import edu.ucla.sspace.common.Similarity;
+import edu.ucla.sspace.lsa.LatentSemanticAnalysis;
+import edu.ucla.sspace.vector.DoubleVector;
+import gsd.graph.ImplicationGraph;
+import gsd.graph.SimpleEdge;
+
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -13,13 +19,6 @@ import java.util.Map;
 
 import org.wikipedia.miner.model.Article;
 import org.wikipedia.miner.model.Wikipedia;
-
-import edu.ucla.sspace.common.Similarity;
-import edu.ucla.sspace.lsa.LatentSemanticAnalysis;
-import edu.ucla.sspace.vector.DoubleVector;
-import fr.unice.polytech.modalis.familiar.operations.heuristics.mst.WeightedImplicationGraph;
-import gsd.graph.ImplicationGraph;
-import gsd.graph.SimpleEdge;
 
 public class ComputeLSA {
 	

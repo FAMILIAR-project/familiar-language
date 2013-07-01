@@ -6,8 +6,6 @@ import java.io.FileNotFoundException;
 import de.ovgu.featureide.fm.core.FeatureModel;
 import de.ovgu.featureide.fm.core.io.UnsupportedModelException;
 import de.ovgu.featureide.fm.core.io.guidsl.GuidslReader;
-import de.ovgu.featureide.fm.core.io.sxfm.SXFMWriter;
-import fr.unice.polytech.modalis.familiar.fm.converter.SPLOTtoFML;
 import fr.unice.polytech.modalis.familiar.fm.featureide.FeatureIDEtoFML;
 import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
 

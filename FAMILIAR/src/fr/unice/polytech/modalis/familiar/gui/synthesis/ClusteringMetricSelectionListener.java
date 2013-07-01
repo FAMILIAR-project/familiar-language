@@ -8,7 +8,6 @@ import java.io.File;
 import javax.swing.JFileChooser;
 
 import net.sf.extjwnl.dictionary.Dictionary;
-
 import fr.unice.polytech.modalis.familiar.gui.FamiliarEditor;
 import fr.unice.polytech.modalis.familiar.gui.Tab2EnvVar;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.AlwaysZeroMetric;

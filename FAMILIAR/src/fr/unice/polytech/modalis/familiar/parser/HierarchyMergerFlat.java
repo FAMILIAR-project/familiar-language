@@ -3,7 +3,6 @@
  */
 package fr.unice.polytech.modalis.familiar.parser;
 
-import fr.unice.polytech.modalis.familiar.operations.KSynthesis;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import gsd.synthesis.FeatureEdge;
 import gsd.synthesis.FeatureGraph;

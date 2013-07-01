@@ -39,8 +39,8 @@ import javax.swing.JPanel;
 import javax.swing.JRadioButton;
 import javax.swing.border.TitledBorder;
 
-import fr.unice.polytech.modalis.familiar.variable.Comparison;
 import fr.unice.polytech.modalis.familiar.parser.FMLCommandInterpreter;
+import fr.unice.polytech.modalis.familiar.variable.Comparison;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import fr.unice.polytech.modalis.familiar.variable.Variable;
 

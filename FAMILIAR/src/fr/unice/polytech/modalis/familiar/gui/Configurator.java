@@ -30,7 +30,6 @@ import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.util.Set;
 
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
@@ -44,13 +43,11 @@ import javax.swing.tree.TreePath;
 
 import org.xtext.example.mydsl.fML.OpSelection;
 
-import fr.unice.polytech.modalis.familiar.variable.ConfigurationVariable;
-import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
-import fr.unice.polytech.modalis.familiar.variable.Variable;
-
 import prefuse.data.Node;
 import prefuse.data.tuple.TableNode;
 import prefuse.util.ui.JPrefuseTree;
+import fr.unice.polytech.modalis.familiar.variable.ConfigurationVariable;
+import fr.unice.polytech.modalis.familiar.variable.Variable;
 
 public class Configurator extends JFrame {
 	private static final long serialVersionUID = 1L;

@@ -105,7 +105,6 @@ import org.xtext.example.mydsl.fML.VariableNull;
 import org.xtext.example.mydsl.fML.impl.ComplexCommandImpl;
 import org.xtext.example.mydsl.ui.internal.FMLActivator;
 
-
 import com.google.inject.Injector;
 
 import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;

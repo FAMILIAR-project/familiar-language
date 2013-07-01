@@ -22,7 +22,6 @@ import net.sf.javabdd.BDD;
 
 import org.junit.Ignore;
 import org.junit.Test;
-import org.xtext.example.mydsl.fML.FMFormat;
 
 import de.ovgu.featureide.fm.core.io.UnsupportedModelException;
 import de.ovgu.featureide.fm.core.io.guidsl.GuidslReader;
@@ -34,7 +33,6 @@ import fr.unice.polytech.modalis.familiar.operations.FMLMergerBDDSPLOT;
 import fr.unice.polytech.modalis.familiar.operations.Mode;
 import fr.unice.polytech.modalis.familiar.operations.featureide.FeatureIDEReader;
 import fr.unice.polytech.modalis.familiar.parser.FMBuilder;
-import fr.unice.polytech.modalis.familiar.parser.FMConverter;
 import fr.unice.polytech.modalis.familiar.test.FMLSlicerUtilityTest;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import fr.unice.polytech.modalis.utils.MyLogger;

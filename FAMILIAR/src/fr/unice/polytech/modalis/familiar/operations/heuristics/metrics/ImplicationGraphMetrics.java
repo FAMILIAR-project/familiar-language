@@ -1,7 +1,5 @@
 package fr.unice.polytech.modalis.familiar.operations.heuristics.metrics;
 
-import java.util.Collections;
-
 import gsd.graph.ImplicationGraph;
 
 public class ImplicationGraphMetrics {

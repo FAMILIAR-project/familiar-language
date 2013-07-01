@@ -14,14 +14,11 @@ import org.prop4j.Not;
 
 import com.google.common.collect.Sets;
 
-import fr.unice.polytech.modalis.familiar.fm.FMLFormula;
 import fr.unice.polytech.modalis.familiar.fm.converter.ExclusionGraph;
 import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
 import fr.unice.polytech.modalis.familiar.operations.featureide.SATFMLFormula;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import gsd.graph.ImplicationGraph;
-import gsd.synthesis.Excludes;
-import gsd.synthesis.Expression;
 
 /**
  * @author macher1

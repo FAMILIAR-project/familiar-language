@@ -19,7 +19,6 @@
  */
 package fr.unice.polytech.modalis.familiar.parser;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.HashSet;
 import java.util.Set;
 

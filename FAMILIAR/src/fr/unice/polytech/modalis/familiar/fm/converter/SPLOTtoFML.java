@@ -12,7 +12,6 @@ import java.util.Stack;
 
 import org.apache.log4j.Logger;
 
-
 import splar.core.constraints.BooleanVariable;
 import splar.core.constraints.PropositionalFormula;
 import splar.core.fm.FeatureGroup;

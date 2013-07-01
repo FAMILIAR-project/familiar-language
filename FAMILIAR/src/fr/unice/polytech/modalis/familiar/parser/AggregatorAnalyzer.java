@@ -34,12 +34,8 @@ import org.xtext.example.mydsl.fML.IdentifierExpr;
 import org.xtext.example.mydsl.fML.SetCommand;
 import org.xtext.example.mydsl.fML.impl.AggregateImpl;
 
-import com.google.common.collect.Sets;
-
 import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
 import fr.unice.polytech.modalis.familiar.operations.AggregatorFM;
-import fr.unice.polytech.modalis.familiar.operations.ExpressionUtility;
-import fr.unice.polytech.modalis.familiar.operations.Mode;
 import fr.unice.polytech.modalis.familiar.variable.ConstraintVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import fr.unice.polytech.modalis.familiar.variable.RType;
@@ -47,8 +43,6 @@ import fr.unice.polytech.modalis.familiar.variable.RefVariable;
 import fr.unice.polytech.modalis.familiar.variable.SetVariable;
 import fr.unice.polytech.modalis.familiar.variable.Variable;
 import gsd.synthesis.Expression;
-import gsd.synthesis.ExpressionType;
-import gsd.synthesis.Formula;
 
 /**
  * @author mathieuacher build a new feature model which manages a set

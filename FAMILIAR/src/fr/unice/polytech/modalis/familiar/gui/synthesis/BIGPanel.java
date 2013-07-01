@@ -18,11 +18,7 @@ import org.jgrapht.ext.JGraphModelAdapter;
 import org.jgrapht.graph.DefaultWeightedEdge;
 import org.jgrapht.graph.ListenableDirectedWeightedGraph;
 
-
-
 import fr.unice.polytech.modalis.familiar.operations.heuristics.mst.WeightedImplicationGraph;
-import gsd.graph.ImplicationGraph;
-import gsd.graph.SimpleEdge;
 
 
 public class BIGPanel extends BIGViewer {

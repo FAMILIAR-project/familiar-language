@@ -24,19 +24,9 @@
  */
 package fr.unice.polytech.modalis.familiar.gui;
 
-import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
-import fr.unice.polytech.modalis.familiar.operations.CNFtoExpression;
-import fr.unice.polytech.modalis.familiar.operations.ImplicationGraphUtil;
-import fr.unice.polytech.modalis.familiar.parser.AtomicConstraintExprAnalyzer;
-import fr.unice.polytech.modalis.familiar.parser.FMLAbstractCommandAnalyzer;
-import fr.unice.polytech.modalis.familiar.parser.FMLCommandInterpreter;
 import fr.unice.polytech.modalis.familiar.parser.MyExpressionParser;
-import fr.unice.polytech.modalis.familiar.variable.ConstraintVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
-import fr.unice.polytech.modalis.familiar.variable.SetVariable;
-import fr.unice.polytech.modalis.familiar.variable.Variable;
 import gsd.synthesis.Expression;
-import gsd.synthesis.ExpressionType;
 import gsd.synthesis.FeatureEdge;
 import gsd.synthesis.FeatureGraph;
 import gsd.synthesis.FeatureModel;
@@ -46,13 +36,6 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Observable;
 import java.util.Set;
-
-import org.xtext.example.mydsl.fML.AtomicConstraintExpr;
-import org.xtext.example.mydsl.fML.CNF;
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.FMCommand;
-import org.xtext.example.mydsl.fML.GetConstraints;
-import org.xtext.example.mydsl.fML.KindOfGet;
 
 import prefuse.data.Node;
 

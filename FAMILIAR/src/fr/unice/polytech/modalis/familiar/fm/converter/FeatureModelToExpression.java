@@ -11,7 +11,6 @@ import java.util.Set;
 import org.apache.log4j.Logger;
 
 import com.google.common.collect.Sets;
-import com.google.common.collect.Sets.SetView;
 
 import fr.unice.polytech.modalis.familiar.operations.ExpressionUtility;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;

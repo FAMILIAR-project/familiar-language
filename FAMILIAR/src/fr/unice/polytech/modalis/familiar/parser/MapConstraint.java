@@ -28,7 +28,6 @@ import org.xtext.example.mydsl.fML.Map;
 import org.xtext.example.mydsl.fML.SetCommand;
 
 import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
-import fr.unice.polytech.modalis.familiar.operations.ConstraintInternBinder;
 import fr.unice.polytech.modalis.familiar.variable.BooleanVariable;
 import fr.unice.polytech.modalis.familiar.variable.ConstraintVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;

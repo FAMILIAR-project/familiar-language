@@ -11,12 +11,10 @@ import static org.junit.Assert.assertTrue;
 import java.util.Set;
 
 import org.junit.Test;
-import org.prop4j.Literal;
 import org.xtext.example.mydsl.fML.FMFormat;
 import org.xtext.example.mydsl.fML.FeatureEdgeKind;
 import org.xtext.example.mydsl.fML.SliceMode;
 
-import de.ovgu.featureide.fm.core.Constraint;
 import fr.unice.polytech.modalis.familiar.fm.featureide.FMLtoFeatureIDE;
 import fr.unice.polytech.modalis.familiar.variable.Comparison;
 import fr.unice.polytech.modalis.familiar.variable.ConstraintVariable;

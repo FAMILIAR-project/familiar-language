@@ -36,7 +36,6 @@ import org.apache.commons.collections15.Closure;
 
 import prefuse.data.Node;
 import prefuse.data.Tree;
-import prefuse.data.tuple.TupleSet;
 import fr.unice.polytech.modalis.familiar.parser.FMBuilder;
 import fr.unice.polytech.modalis.familiar.variable.ConfigurationVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
