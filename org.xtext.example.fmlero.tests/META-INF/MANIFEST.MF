@@ -10,14 +10,14 @@ Require-Bundle: org.xtext.example.fmlero,
  org.eclipse.core.runtime,
  org.eclipse.xtext.junit4,
  org.eclipse.ui.workbench;resolution:=optional
-Import-Package: com.google.inject;version="1.4.0",
+Import-Package: com.google.inject,
  org.apache.log4j,
  org.hamcrest.core,
- org.junit;version="4.5.0",
- org.junit.runner;version="4.5.0",
- org.junit.runner.manipulation;version="4.5.0",
- org.junit.runner.notification;version="4.5.0",
- org.junit.runners;version="4.5.0",
- org.junit.runners.model;version="4.5.0"
+ org.junit,
+ org.junit.runner,
+ org.junit.runner.manipulation,
+ org.junit.runner.notification,
+ org.junit.runners,
+ org.junit.runners.model
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
 Export-Package: fr.inria.familiar.fmlero
