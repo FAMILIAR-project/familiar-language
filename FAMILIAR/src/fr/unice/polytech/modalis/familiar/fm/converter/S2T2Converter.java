@@ -15,10 +15,10 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.XMIResource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
-import org.xtext.example.mydsl.FmleroStandaloneSetup;
-import org.xtext.example.mydsl.fmprimitives.Feature;
-import org.xtext.example.mydsl.fmprimitives.FeatureModel;
 
+import fr.inria.familiar.fmlero.FmleroStandaloneSetup;
+import fr.inria.familiar.fmlero.fmprimitives.Feature;
+import fr.inria.familiar.fmlero.fmprimitives.FeatureModel;
 import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
 import fr.unice.polytech.modalis.familiar.interpreter.VariableNotExistingException;
 import fr.unice.polytech.modalis.familiar.parser.VariableAmbigousConflictException;

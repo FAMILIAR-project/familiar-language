@@ -26,6 +26,7 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.FontData;
 import org.eclipse.ui.IWorkbenchPage;
+import org.eclipse.ui.IWorkbenchWindow;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.console.ConsolePlugin;
@@ -163,21 +164,25 @@ public class ConsoleEclipse implements Output {
 	 * Activates the MOFScript console
 	 */
 	private void activateConsole() {
-		IWorkbenchPage page = PlatformUI.getWorkbench()
-				.getActiveWorkbenchWindow().getActivePage();
-		String id = IConsoleConstants.ID_CONSOLE_VIEW;
+		IWorkbenchWindow window = PlatformUI.getWorkbench()
+				.getActiveWorkbenchWindow();
+		if (window != null) {
 
-		try {
-			if (page != null) {
-				IConsoleView view = (IConsoleView) page.showView(id);
-				view.display(_console);
-				// view.pin(_console);
-				// view.setPinned(true); /* 3.1 operation */
+			IWorkbenchPage page = window.getActivePage();
+			String id = IConsoleConstants.ID_CONSOLE_VIEW;
+
+			try {
+				if (page != null) {
+					IConsoleView view = (IConsoleView) page.showView(id);
+					view.display(_console);
+					// view.pin(_console);
+					// view.setPinned(true); /* 3.1 operation */
+				}
+
+			} catch (PartInitException pex) {
+
+				System.out.println("FAMILIARPlugin - " + pex);
 			}
-
-		} catch (PartInitException pex) {
-
-			System.out.println("FAMILIARPlugin - " + pex);
 		}
 	}
 

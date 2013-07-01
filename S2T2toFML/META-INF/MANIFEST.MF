@@ -9,9 +9,7 @@ Bundle-ClassPath: S2T2toFML.jar,
  lib/ie.lero.spl.emf.config.editor_1.0.0.jar,
  lib/ie.lero.spl.fmprimitives_1.0.0.jar,
  lib/ie.lero.spl.fmprimitives.edit_1.0.0.jar,
- lib/ie.lero.spl.fmprimitives.editor_1.0.0.jar,
- plugs/org.eclipse.emf.ecore.xmi_2.5.0.v20100521-1846.jar,
- plugs/org.eclipse.core.resources_3.6.1.R36x_v20110131-1630.jar
+ lib/ie.lero.spl.fmprimitives.editor_1.0.0.jar
 Export-Package: ie.lero.spl.emf.config,
  ie.lero.spl.emf.config.impl,
  ie.lero.spl.emf.config.presentation,
@@ -25,4 +23,6 @@ Export-Package: ie.lero.spl.emf.config,
 Import-Package: org.eclipse.emf.common.util,
  org.eclipse.emf.ecore.resource,
  org.eclipse.emf.ecore.xmi.impl
-Require-Bundle: org.eclipse.emf.ecore
+Require-Bundle: org.eclipse.emf.ecore,
+ org.eclipse.emf.ecore.xmi,
+ org.eclipse.core.resources

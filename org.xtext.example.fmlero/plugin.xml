@@ -6,8 +6,8 @@
   <extension point="org.eclipse.emf.ecore.generated_package">
     <package 
        uri = "http://lero.ie/spl/fmprimitives.ecore" 
-       class = "org.xtext.example.mydsl.fmprimitives.FmprimitivesPackage"
-       genModel = "org/xtext/example/mydsl/Fmlero.genmodel" /> 
+       class = "fr.inria.familiar.fmlero.fmprimitives.FmprimitivesPackage"
+       genModel = "fr/inria/familiar/fmlero/Fmlero.genmodel" /> 
 	
   </extension>
 

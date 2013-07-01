@@ -1,4 +1,5 @@
-package org.xtext.example.mydsl.validation;
+package fr.inria.familiar.fmlero.validation;
+
  
 
 public class FmleroJavaValidator extends AbstractFmleroJavaValidator {

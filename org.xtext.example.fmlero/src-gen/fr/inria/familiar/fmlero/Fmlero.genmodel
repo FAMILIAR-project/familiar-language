@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.xtext.example.fmlero/src-gen" editDirectory="/org.xtext.example.fmlero.edit/src"
+    editorDirectory="/org.xtext.example.fmlero.editor/src" modelPluginID="org.xtext.example.fmlero"
+    forceOverwrite="true" modelName="Fmlero" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="5.0" copyrightFields="false" editPluginID="org.xtext.example.fmlero.edit"
+    editorPluginID="org.xtext.example.fmlero.editor" runtimeVersion="2.9">
+  <genPackages prefix="Fmprimitives" basePackage="fr.inria.familiar.fmlero" disposableProviderFactory="true"
+      ecorePackage="Fmlero.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="Fmlero.ecore#//ConfigurationSource">
+      <genEnumLiterals ecoreEnumLiteral="Fmlero.ecore#//ConfigurationSource/MODEL"/>
+      <genEnumLiterals ecoreEnumLiteral="Fmlero.ecore#//ConfigurationSource/MODELCONSEQUENCE"/>
+      <genEnumLiterals ecoreEnumLiteral="Fmlero.ecore#//ConfigurationSource/USER"/>
+      <genEnumLiterals ecoreEnumLiteral="Fmlero.ecore#//ConfigurationSource/USERCONSEQUENCE"/>
+    </genEnums>
+    <genClasses ecoreClass="Fmlero.ecore#//FeatureModel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fmlero.ecore#//FeatureModel/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fmlero.ecore#//FeatureModel/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fmlero.ecore#//FeatureModel/features"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference Fmlero.ecore#//FeatureModel/primitives"/>
+    </genClasses>
+    <genClasses ecoreClass="Fmlero.ecore#//FeatureModelPrimitive">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fmlero.ecore#//FeatureModelPrimitive/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fmlero.ecore#//FeatureModelPrimitive/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fmlero.ecore#//FeatureModelPrimitive/configurationSource"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//FeatureModelPrimitive/explanations"/>
+    </genClasses>
+    <genClasses ecoreClass="Fmlero.ecore#//FeatureHasSubfeature">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//FeatureHasSubfeature/parent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//FeatureHasSubfeature/subfeature"/>
+    </genClasses>
+    <genClasses ecoreClass="Fmlero.ecore#//UndirectedRelationship"/>
+    <genClasses ecoreClass="Fmlero.ecore#//DirectedRelationship"/>
+    <genClasses ecoreClass="Fmlero.ecore#//FeatureGroup"/>
+    <genClasses ecoreClass="Fmlero.ecore#//Feature">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fmlero.ecore#//Feature/id"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fmlero.ecore#//Feature/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//Feature/groupHasParent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//Feature/groupHasChild"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//Feature/featureHasParent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//Feature/featureHasSubfeature"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//Feature/selectedFeature"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//Feature/eliminatedFeature"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//Feature/undirectedRelationships"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//Feature/incomingDirectedRelationships"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//Feature/outgoingDirectedRelationships"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//Feature/featureIsRoot"/>
+    </genClasses>
+    <genClasses ecoreClass="Fmlero.ecore#//GroupHasParent">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//GroupHasParent/parent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//GroupHasParent/group"/>
+    </genClasses>
+    <genClasses ecoreClass="Fmlero.ecore#//GroupHasChild">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//GroupHasChild/child"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//GroupHasChild/group"/>
+    </genClasses>
+    <genClasses ecoreClass="Fmlero.ecore#//SelectedFeature">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//SelectedFeature/feature"/>
+    </genClasses>
+    <genClasses ecoreClass="Fmlero.ecore#//EliminatedFeature">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//EliminatedFeature/feature"/>
+    </genClasses>
+    <genClasses ecoreClass="Fmlero.ecore#//FeatureIsRoot">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//FeatureIsRoot/feature"/>
+    </genClasses>
+    <genClasses ecoreClass="Fmlero.ecore#//Explanation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//Explanation/primitives"/>
+    </genClasses>
+    <genClasses ecoreClass="Fmlero.ecore#//GroupHasMax">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fmlero.ecore#//GroupHasMax/max"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//GroupHasMax/group"/>
+    </genClasses>
+    <genClasses ecoreClass="Fmlero.ecore#//GroupHasMin">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fmlero.ecore#//GroupHasMin/min"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//GroupHasMin/group"/>
+    </genClasses>
+    <genClasses ecoreClass="Fmlero.ecore#//AlternativeGroup">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//AlternativeGroup/groupHasParent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//AlternativeGroup/groupHasChild"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//AlternativeGroup/groupHasMax"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//AlternativeGroup/groupHasMin"/>
+    </genClasses>
+    <genClasses ecoreClass="Fmlero.ecore#//OrGroup">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//OrGroup/groupHasParent"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//OrGroup/groupHasChild"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//OrGroup/groupHasMax"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//OrGroup/groupHasMin"/>
+    </genClasses>
+    <genClasses ecoreClass="Fmlero.ecore#//FeatureHasOptionalSubfeature"/>
+    <genClasses ecoreClass="Fmlero.ecore#//FeatureHasMandatorySubfeature"/>
+    <genClasses ecoreClass="Fmlero.ecore#//MutualExclusive">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//MutualExclusive/relatedFeatures"/>
+    </genClasses>
+    <genClasses ecoreClass="Fmlero.ecore#//CustomUndirectedRelationship">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fmlero.ecore#//CustomUndirectedRelationship/stereotype"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//CustomUndirectedRelationship/relatedFeatures"/>
+    </genClasses>
+    <genClasses ecoreClass="Fmlero.ecore#//Requires">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//Requires/sources"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//Requires/targets"/>
+    </genClasses>
+    <genClasses ecoreClass="Fmlero.ecore#//TemporalOrderingSequential">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//TemporalOrderingSequential/sources"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//TemporalOrderingSequential/targets"/>
+    </genClasses>
+    <genClasses ecoreClass="Fmlero.ecore#//CustomDirectedRelationship">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute Fmlero.ecore#//CustomDirectedRelationship/stereotype"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//CustomDirectedRelationship/sources"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference Fmlero.ecore#//CustomDirectedRelationship/targets"/>
+    </genClasses>
+    <genClasses ecoreClass="Fmlero.ecore#//AutoComplete"/>
+  </genPackages>
+</genmodel:GenModel>

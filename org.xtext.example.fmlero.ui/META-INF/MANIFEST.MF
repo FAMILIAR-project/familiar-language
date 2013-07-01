@@ -5,7 +5,7 @@ Bundle-Vendor: My Company
 Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: org.xtext.example.fmlero.ui; singleton:=true
 Bundle-ActivationPolicy: lazy
-Require-Bundle: org.xtext.example.fmlero;visibility:=reexport,
+Require-Bundle: org.xtext.example.fmlero,
  org.eclipse.xtext.ui,
  org.eclipse.ui.editors,
  org.eclipse.ui.ide,
@@ -18,7 +18,8 @@ Require-Bundle: org.xtext.example.fmlero;visibility:=reexport,
  org.eclipse.compare
 Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: org.xtext.example.mydsl.ui.contentassist,
- org.xtext.example.mydsl.ui.contentassist.antlr,
- org.xtext.example.mydsl.ui.internal
-Bundle-Activator: org.xtext.example.mydsl.ui.internal.FmleroActivator
+Export-Package: fr.inria.familiar.fmlero.ui.contentassist,
+ fr.inria.familiar.fmlero.ui.quickfix,
+ fr.inria.familiar.fmlero.ui.contentassist.antlr,
+ fr.inria.familiar.fmlero.ui.internal
+Bundle-Activator: fr.inria.familiar.fmlero.ui.internal.FmleroActivator

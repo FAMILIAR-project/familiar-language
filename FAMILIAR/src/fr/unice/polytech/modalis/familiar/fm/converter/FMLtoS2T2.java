@@ -6,22 +6,22 @@ import java.util.Set;
 
 import org.apache.commons.collections15.Factory;
 import org.apache.commons.collections15.map.LazyMap;
-import org.xtext.example.mydsl.fmprimitives.AlternativeGroup;
-import org.xtext.example.mydsl.fmprimitives.ConfigurationSource;
-import org.xtext.example.mydsl.fmprimitives.Feature;
-import org.xtext.example.mydsl.fmprimitives.FeatureGroup;
-import org.xtext.example.mydsl.fmprimitives.FeatureHasSubfeature;
-import org.xtext.example.mydsl.fmprimitives.FeatureModelPrimitive;
-import org.xtext.example.mydsl.fmprimitives.FmprimitivesFactory;
-import org.xtext.example.mydsl.fmprimitives.GroupHasChild;
-import org.xtext.example.mydsl.fmprimitives.GroupHasMin;
-import org.xtext.example.mydsl.fmprimitives.GroupHasParent;
-import org.xtext.example.mydsl.fmprimitives.MutualExclusive;
-import org.xtext.example.mydsl.fmprimitives.OrGroup;
-import org.xtext.example.mydsl.fmprimitives.Requires;
-import org.xtext.example.mydsl.fmprimitives.impl.FeatureModelImpl;
-import org.xtext.example.mydsl.fmprimitives.impl.FmprimitivesFactoryImpl;
 
+import fr.inria.familiar.fmlero.fmprimitives.AlternativeGroup;
+import fr.inria.familiar.fmlero.fmprimitives.ConfigurationSource;
+import fr.inria.familiar.fmlero.fmprimitives.Feature;
+import fr.inria.familiar.fmlero.fmprimitives.FeatureGroup;
+import fr.inria.familiar.fmlero.fmprimitives.FeatureHasSubfeature;
+import fr.inria.familiar.fmlero.fmprimitives.FeatureModelPrimitive;
+import fr.inria.familiar.fmlero.fmprimitives.FmprimitivesFactory;
+import fr.inria.familiar.fmlero.fmprimitives.GroupHasChild;
+import fr.inria.familiar.fmlero.fmprimitives.GroupHasMin;
+import fr.inria.familiar.fmlero.fmprimitives.GroupHasParent;
+import fr.inria.familiar.fmlero.fmprimitives.MutualExclusive;
+import fr.inria.familiar.fmlero.fmprimitives.OrGroup;
+import fr.inria.familiar.fmlero.fmprimitives.Requires;
+import fr.inria.familiar.fmlero.fmprimitives.impl.FeatureModelImpl;
+import fr.inria.familiar.fmlero.fmprimitives.impl.FmprimitivesFactoryImpl;
 import fr.unice.polytech.modalis.familiar.fm.FeatureModelCloner;
 import fr.unice.polytech.modalis.familiar.fm.FeatureNodeUtils;
 import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
@@ -89,7 +89,7 @@ public class FMLtoS2T2 {
 	
 	
 	
-	public org.xtext.example.mydsl.fmprimitives.FeatureModel process() {
+	public fr.inria.familiar.fmlero.fmprimitives.FeatureModel process() {
 		
 		// transform multi-groups in the feature model (Thuem refactorings)
 		FeatureModelUtil.normalizeMultiGroups(_fm);
@@ -110,7 +110,7 @@ public class FMLtoS2T2 {
 		for (Variable v : sv.getVars()) {
 			assert (v instanceof FeatureVariable);
 			FeatureVariable fv = (FeatureVariable) v ;
-			org.xtext.example.mydsl.fmprimitives.Feature ft = _fmprimitivesFactory.createFeature();
+			fr.inria.familiar.fmlero.fmprimitives.Feature ft = _fmprimitivesFactory.createFeature();
 			String ftName = ftName(fv);
 			ft.setId(ftName);
 			ft.setName(ftName);
@@ -125,9 +125,9 @@ public class FMLtoS2T2 {
 		
 		froot.setId(rootName);
 		froot.setName(rootName);
-		org.xtext.example.mydsl.fmprimitives.Feature ftRoot = getFtByName(rootName);
+		fr.inria.familiar.fmlero.fmprimitives.Feature ftRoot = getFtByName(rootName);
 		froot.setFeature(ftRoot);
-		((org.xtext.example.mydsl.fmprimitives.impl.FeatureImpl) ftRoot).setFeatureIsRoot(froot);
+		((fr.inria.familiar.fmlero.fmprimitives.impl.FeatureImpl) ftRoot).setFeatureIsRoot(froot);
 		
 		_rFM.getPrimitives().add(froot);
 		*/
@@ -287,7 +287,7 @@ public class FMLtoS2T2 {
 			
 		}
 		
-		return (org.xtext.example.mydsl.fmprimitives.FeatureModel) _rFM;
+		return (fr.inria.familiar.fmlero.fmprimitives.FeatureModel) _rFM;
 	}
 	
 	
@@ -396,7 +396,7 @@ public class FMLtoS2T2 {
 
 
 	private Feature getFtByName(String rootName) {
-		for (org.xtext.example.mydsl.fmprimitives.Feature ft : _rFM.getFeatures()) {
+		for (fr.inria.familiar.fmlero.fmprimitives.Feature ft : _rFM.getFeatures()) {
 			if (ft.getName().equals(rootName)) 
 				return ft ;
 		}

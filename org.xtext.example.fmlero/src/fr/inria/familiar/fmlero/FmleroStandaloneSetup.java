@@ -1,5 +1,5 @@
 
-package org.xtext.example.mydsl;
+package fr.inria.familiar.fmlero;
 
 /**
  * Initialization support for running Xtext languages 

@@ -5,9 +5,9 @@ Bundle-Vendor: My Company
 Bundle-Version: 1.0.0.qualifier
 Bundle-SymbolicName: org.xtext.example.fmlero; singleton:=true
 Bundle-ActivationPolicy: lazy
-Require-Bundle: org.eclipse.xtext;visibility:=reexport,
- org.eclipse.xtext.xbase;resolution:=optional;visibility:=reexport,
- org.eclipse.xtext.generator;resolution:=optional;visibility:=reexport,
+Require-Bundle: org.eclipse.xtext,
+ org.eclipse.xtext.xbase;resolution:=optional,
+ org.eclipse.xtext.generator;resolution:=optional,
  org.apache.commons.logging;resolution:=optional,
  org.eclipse.emf.codegen.ecore;resolution:=optional,
  org.eclipse.emf.mwe.utils;resolution:=optional,
@@ -15,20 +15,21 @@ Require-Bundle: org.eclipse.xtext;visibility:=reexport,
  org.eclipse.xtext.util,
  org.eclipse.emf.ecore,
  org.eclipse.emf.common,
- org.antlr.runtime;visibility:=reexport,
+ org.antlr.runtime,
  org.eclipse.xtext.common.types
 Import-Package: org.apache.log4j,
  org.eclipse.xtext.xbase.lib
 Bundle-RequiredExecutionEnvironment: J2SE-1.5
-Export-Package: org.xtext.example.mydsl,
- org.xtext.example.mydsl.services,
- org.xtext.example.mydsl.fmprimitives,
- org.xtext.example.mydsl.fmprimitives.impl,
- org.xtext.example.mydsl.fmprimitives.util,
- org.xtext.example.mydsl.serializer,
- org.xtext.example.mydsl.parser.antlr,
- org.xtext.example.mydsl.parser.antlr.internal,
- org.xtext.example.mydsl.validation,
- org.xtext.example.mydsl.scoping,
- org.xtext.example.mydsl.generator,
- org.xtext.example.mydsl.formatting
+Export-Package: fr.inria.familiar.fmlero,
+ fr.inria.familiar.fmlero.formatting,
+ fr.inria.familiar.fmlero.generator,
+ fr.inria.familiar.fmlero.scoping,
+ fr.inria.familiar.fmlero.validation,
+ fr.inria.familiar.fmlero.services,
+ fr.inria.familiar.fmlero.fmprimitives,
+ fr.inria.familiar.fmlero.fmprimitives.impl,
+ fr.inria.familiar.fmlero.fmprimitives.util,
+ fr.inria.familiar.fmlero.serializer,
+ fr.inria.familiar.fmlero.parser.antlr,
+ fr.inria.familiar.fmlero.parser.antlr.internal
+
