@@ -8,10 +8,7 @@ import static org.junit.Assert.assertEquals;
 import java.util.Collection;
 
 import org.junit.Test;
-import org.prop4j.Literal;
 
-import fr.unice.polytech.modalis.familiar.operations.featureide.MySatSolver;
-import fr.unice.polytech.modalis.familiar.operations.featureide.SATFMLFormula;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import fr.unice.polytech.modalis.familiar.variable.SetVariable;
 import gsd.graph.ImplicationGraph;

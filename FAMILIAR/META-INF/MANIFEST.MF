@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name.3
 Bundle-SymbolicName: FAMILIAR;singleton:=true
-Bundle-Version: 1.0.11
+Bundle-Version: 1.0.10
 Bundle-Activator: fr.unice.polytech.modalis.familiar.views.featureide.Activator
 Bundle-Vendor: %Bundle-Vendor.3
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
@@ -47,7 +47,19 @@ Import-Package: org.apache.log4j,
  splar.core.fm,
  splar.core.heuristics,
  splar.plugins.reasoners.bdd.javabdd,
- org.eclipse.emf.ecore
+ org.eclipse.emf.ecore,
+ org.xtext.example.mydsl,
+ org.xtext.example.mydsl.services,
+ org.xtext.example.mydsl.fML,
+ org.xtext.example.mydsl.fML.impl,
+ org.xtext.example.mydsl.fML.util,
+ org.xtext.example.mydsl.serializer,
+ org.xtext.example.mydsl.parser.antlr,
+ org.xtext.example.mydsl.parser.antlr.internal,
+ org.xtext.example.mydsl.validation,
+ org.xtext.example.mydsl.scoping,
+ org.xtext.example.mydsl.generator,
+ org.xtext.example.mydsl.formatting
 Require-Bundle: org.eclipse.emf,
  org.eclipse.emf.common,
  org.eclipse.emf.ecore,

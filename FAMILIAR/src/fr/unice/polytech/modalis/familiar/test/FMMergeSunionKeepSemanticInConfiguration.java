@@ -1,14 +1,13 @@
 package fr.unice.polytech.modalis.familiar.test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
-import org.junit.Before;
 import org.junit.Test;
 import org.xtext.example.mydsl.fML.OpSelection;
 
-import fr.unice.polytech.modalis.familiar.interpreter.VariableNotExistingException;
 import fr.unice.polytech.modalis.familiar.parser.ConfigurationVariableFactory;
-import fr.unice.polytech.modalis.familiar.parser.VariableAmbigousConflictException;
 import fr.unice.polytech.modalis.familiar.variable.ConfigurationVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 

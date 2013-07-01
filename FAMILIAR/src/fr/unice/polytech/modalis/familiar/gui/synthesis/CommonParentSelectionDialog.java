@@ -11,8 +11,6 @@ import java.util.List;
 import java.util.Set;
 
 import javax.swing.BoxLayout;
-import javax.swing.ComboBoxModel;
-import javax.swing.DefaultComboBoxModel;
 import javax.swing.JButton;
 import javax.swing.JCheckBox;
 import javax.swing.JComboBox;

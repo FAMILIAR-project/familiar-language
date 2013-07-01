@@ -1,10 +1,5 @@
 package fr.unice.polytech.modalis.familiar.operations.measures.cliques;
 
-import fr.unice.polytech.modalis.familiar.gui.synthesis.BIGViewer;
-import fr.unice.polytech.modalis.familiar.operations.heuristics.mst.WeightedImplicationGraph;
-import gsd.graph.ImplicationGraph;
-import gsd.graph.SimpleEdge;
-
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.GridLayout;
@@ -16,7 +11,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-
 import javax.swing.JScrollPane;
 
 import org.jgraph.JGraph;
@@ -26,6 +20,11 @@ import org.jgrapht.alg.BronKerboschCliqueFinder;
 import org.jgrapht.ext.JGraphModelAdapter;
 import org.jgrapht.graph.DefaultWeightedEdge;
 import org.jgrapht.graph.ListenableDirectedWeightedGraph;
+
+import fr.unice.polytech.modalis.familiar.gui.synthesis.BIGViewer;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.mst.WeightedImplicationGraph;
+import gsd.graph.ImplicationGraph;
+import gsd.graph.SimpleEdge;
 
 
 public class BIGCliques_Threshold extends BIGViewer{

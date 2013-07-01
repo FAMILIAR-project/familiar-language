@@ -1,3 +1,0 @@
-Manifest-Version: 1.0
-Main-Class: be.ac.fundp.info.TVLParser.Launcher
-Class-Path: libs/java-cup-11a-runtime.jar libs/org.sat4j.core.jar libs/JFlex.jar

@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: FML3rd
 Bundle-SymbolicName: FML3rdPartiesMisc
-Bundle-Version: 1.0.0
+Bundle-Version: 1.0.10
 Bundle-ClassPath: .
 Export-Package: com.martiansoftware.jsap,
  com.martiansoftware.jsap.ant,

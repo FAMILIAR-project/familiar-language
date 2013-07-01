@@ -1,8 +1,8 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: org.xtext.example.fml.ui
-Bundle-Vendor: My Company
-Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: INRIA, IRISA
+Bundle-Version: 1.0.10
 Bundle-SymbolicName: org.xtext.example.fml.ui; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.xtext.example.fml,

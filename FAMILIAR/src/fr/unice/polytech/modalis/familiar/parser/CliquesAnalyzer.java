@@ -5,7 +5,6 @@ package fr.unice.polytech.modalis.familiar.parser;
 
 import org.xtext.example.mydsl.fML.Cliques;
 import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.Cores;
 import org.xtext.example.mydsl.fML.FMCommand;
 
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;

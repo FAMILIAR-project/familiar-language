@@ -3,8 +3,6 @@
  */
 package fr.unice.polytech.modalis.familiar.fm;
 
-import gsd.graph.ImplicationGraph;
-
 import java.util.Set;
 
 /**

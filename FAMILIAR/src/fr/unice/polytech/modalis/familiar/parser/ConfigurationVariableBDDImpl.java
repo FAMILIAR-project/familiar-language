@@ -18,14 +18,12 @@ import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
 import fr.unice.polytech.modalis.familiar.interpreter.NSFactory;
 import fr.unice.polytech.modalis.familiar.operations.FormulaAnalyzer;
 import fr.unice.polytech.modalis.familiar.variable.ConfigurationVariable;
-import fr.unice.polytech.modalis.familiar.variable.ConfigurationVariableSPLOTImpl;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import fr.unice.polytech.modalis.familiar.variable.RType;
 import fr.unice.polytech.modalis.familiar.variable.Variable;
 import fr.unice.polytech.modalis.familiar.variable.VariableIdentifier;
 import gsd.synthesis.BDDBuilder;
 import gsd.synthesis.Formula;
-import gsd.synthesis.ValidDomains;
 
 /**
  * @author macher1

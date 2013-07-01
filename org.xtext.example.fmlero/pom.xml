@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <relativePath>../../kCVL/familiar.root/pom.xml</relativePath>
+    <groupId>fr.inria.familiar</groupId>
+    <artifactId>parent</artifactId>
+    <version>1.0.10</version>
+  </parent>
+  <artifactId>org.xtext.example.fmlero</artifactId>
+  <packaging>eclipse-plugin</packaging>
+</project> 

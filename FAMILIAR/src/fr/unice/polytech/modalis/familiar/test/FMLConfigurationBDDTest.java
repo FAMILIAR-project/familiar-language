@@ -11,10 +11,8 @@ import org.junit.Test;
 import org.xtext.example.mydsl.fML.OpSelection;
 
 import fr.unice.polytech.modalis.familiar.parser.ConfigurationVariableFactory;
-import fr.unice.polytech.modalis.familiar.parser.DoubleVariable;
 import fr.unice.polytech.modalis.familiar.variable.ConfigurationVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
-import fr.unice.polytech.modalis.familiar.variable.Variable;
 
 /**
  * @author macher1

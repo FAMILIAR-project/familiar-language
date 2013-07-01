@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import org.junit.Test;
-import org.wikipedia.miner.model.Article;
 
 import edu.ucla.sspace.lsa.LatentSemanticAnalysis;
 

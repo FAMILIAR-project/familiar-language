@@ -1,13 +1,9 @@
 package fr.unice.polytech.modalis.familiar.operations.heuristics.metrics;
 
-import java.util.Map;
-
-import fr.unice.polytech.modalis.familiar.operations.heuristics.mst.WeightedImplicationGraph;
-import fr.unice.polytech.modalis.familiar.operations.measures.cliques.ComputeFeatureFrequency;
-import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import gsd.graph.ImplicationGraph;
 import gsd.graph.SimpleEdge;
-import uk.ac.shef.wit.simmetrics.similaritymetrics.AbstractStringMetric;
+
+import java.util.Map;
 
 public class LatentSemanticMetric implements FeatureSimilarityMetric{
 	 private ImplicationGraph<String> big;

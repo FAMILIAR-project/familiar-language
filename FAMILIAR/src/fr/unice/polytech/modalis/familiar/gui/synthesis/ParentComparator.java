@@ -2,7 +2,6 @@ package fr.unice.polytech.modalis.familiar.gui.synthesis;
 
 import java.util.Comparator;
 
-import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.FeatureSimilarityMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.mst.WeightedImplicationGraph;
 
 public class ParentComparator implements Comparator<String>{

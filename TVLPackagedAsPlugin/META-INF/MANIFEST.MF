@@ -2,8 +2,10 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: TVLPackagedAsPlugin
 Bundle-SymbolicName: TVLPackagedAsPlugin
-Bundle-Version: 1.0.0
-Bundle-ClassPath: .
+Bundle-Version: 1.0.10
+Bundle-ClassPath: lib/yices.jar,
+ lib/deps.jar,
+ lib/TVLParser.jar
 Export-Package: JFlex,
  JFlex.anttask,
  JFlex.gui,
@@ -24,3 +26,5 @@ Export-Package: JFlex,
  test,
  yices
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Require-Bundle: org.junit,
+ org.sat4j.core;bundle-version="2.3.5"

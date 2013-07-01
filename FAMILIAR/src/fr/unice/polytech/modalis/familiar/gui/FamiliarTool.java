@@ -29,7 +29,6 @@ import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
 import prefuse.util.ui.UILib;
-
 import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
 
 public class FamiliarTool {

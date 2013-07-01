@@ -9,7 +9,6 @@ import org.junit.Test;
 
 import fr.unice.polytech.modalis.familiar.operations.PacogenLauncher;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
-import fr.unice.polytech.modalis.familiar.variable.SetVariable;
 import fr.unice.polytech.modalis.familiar.variable.Variable;
 
 

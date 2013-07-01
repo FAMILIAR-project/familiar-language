@@ -23,12 +23,10 @@ import org.xtext.example.mydsl.fML.AddConstraint;
 import org.xtext.example.mydsl.fML.Command;
 import org.xtext.example.mydsl.fML.FMCommand;
 
-import fr.unice.polytech.modalis.familiar.operations.ConstraintInternBinder;
 import fr.unice.polytech.modalis.familiar.variable.BooleanVariable;
 import fr.unice.polytech.modalis.familiar.variable.ConstraintVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import fr.unice.polytech.modalis.familiar.variable.RType;
-import gsd.synthesis.Expression;
 
 /**
  * @author mathieuacher add an internal constraint to a feature model raise an

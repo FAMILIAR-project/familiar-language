@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <relativePath>../../kCVL/familiar.root/pom.xml</relativePath>
+    <groupId>fr.inria.familiar</groupId>
+    <artifactId>parent</artifactId>
+    <version>1.0.10</version>
+  </parent>
+  <artifactId>TVLPackagedAsPlugin</artifactId>
+  <packaging>eclipse-plugin</packaging>
+  <version>1.0.10</version>
+  
+<dependencies>
+<dependency>
+	<groupId>junit</groupId>
+	<artifactId>junit</artifactId>
+	<version>4.4</version>
+</dependency>            
+</dependencies>
+
+</project> 
