@@ -3,14 +3,15 @@ Bundle-ManifestVersion: 2
 Bundle-Name: S2T2toFML
 Bundle-SymbolicName: S2T2toFML
 Bundle-Version: 1.0.10
-Bundle-ClassPath: S2T2toFML.jar,
+Bundle-ClassPath: .,
  lib/ie.lero.spl.emf.config_1.0.0.jar,
  lib/ie.lero.spl.emf.config.edit_1.0.0.jar,
  lib/ie.lero.spl.emf.config.editor_1.0.0.jar,
  lib/ie.lero.spl.fmprimitives_1.0.0.jar,
  lib/ie.lero.spl.fmprimitives.edit_1.0.0.jar,
  lib/ie.lero.spl.fmprimitives.editor_1.0.0.jar
-Export-Package: ie.lero.spl.emf.config,
+Export-Package: be.cleve.anthony,
+ ie.lero.spl.emf.config,
  ie.lero.spl.emf.config.impl,
  ie.lero.spl.emf.config.presentation,
  ie.lero.spl.emf.config.provider,
