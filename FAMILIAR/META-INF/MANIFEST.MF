@@ -48,6 +48,7 @@ Import-Package: com.google.common.collect,
  org.eclipse.ui.console,
  org.eclipse.ui.part,
  org.eclipse.ui.plugin,
+ org.eclipse.xtext.resource,
  org.jgrapht,
  org.jgrapht.alg,
  org.jgrapht.graph,
@@ -87,7 +88,8 @@ Require-Bundle: de.ovgu.featureide.core,
  org.eclipse.core.resources,
  org.eclipse.ui,
  S2T2toFML;bundle-version="1.0.0",
- SPLAR-plugin;bundle-version="1.0.0"
+ SPLAR-plugin;bundle-version="1.0.0",
+ com.google.inject
 Bundle-ActivationPolicy: lazy
 Export-Package: fr.pacogen.adapter,
  fr.pacogen.model,
