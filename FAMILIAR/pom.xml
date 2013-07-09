@@ -9,7 +9,6 @@
   </parent>
   <artifactId>FAMILIAR</artifactId>
   <packaging>eclipse-plugin</packaging>
-  <version>1.0.10</version>
   <name>FAMILIAR</name>
   <description> FAMILIAR (for FeAture Model scrIpt Language for manIpulation and Automatic Reasoning) is an executable language that supports manipulating and reasoning about feature models.</description>
   <pluginRepositories>
@@ -157,4 +156,5 @@
    </dependencyManagement>
   
   
+   <version>1.0.10</version>
 </project>

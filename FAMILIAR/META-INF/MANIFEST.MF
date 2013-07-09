@@ -2,7 +2,7 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name.3
 Bundle-SymbolicName: FAMILIAR;singleton:=true
-Bundle-Version: 1.1
+Bundle-Version: 1.0.10
 Bundle-Activator: fr.unice.polytech.modalis.familiar.views.featureide.Activator
 Bundle-Vendor: %Bundle-Vendor.3
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
@@ -90,7 +90,8 @@ Require-Bundle: de.ovgu.featureide.core,
  org.eclipse.ui,
  S2T2toFML;bundle-version="1.0.0",
  SPLAR-plugin;bundle-version="1.0.0",
- com.google.inject
+ com.google.inject,
+ org.sat4j.core;bundle-version="2.3.0"
 Bundle-ActivationPolicy: lazy
 Export-Package: fr.pacogen.adapter,
  fr.pacogen.model,

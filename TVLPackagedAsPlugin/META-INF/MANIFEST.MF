@@ -27,4 +27,4 @@ Export-Package: JFlex,
  yices
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Require-Bundle: org.junit,
- org.sat4j.core;bundle-version="2.3.5"
+ org.sat4j.core
