@@ -14,6 +14,7 @@ import org.xtext.example.mydsl.fML.OpSelection;
 
 import com.google.common.collect.Sets;
 
+import fr.unice.polytech.modalis.familiar.gui.Tab2EnvVar;
 import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
 import fr.unice.polytech.modalis.familiar.interpreter.NSFactory;
 import fr.unice.polytech.modalis.familiar.operations.FormulaAnalyzer;
@@ -277,8 +278,12 @@ public class ConfigurationVariableBDDImpl extends ConfigurationVariable {
 	 */
 	@Override
 	public void gdisplay() {
-		// TODO Auto-generated method stub
-
+		
+		// TODO hack we should refactor out
+		if (!FMLShell.getInstance().isEclipseBased()) {
+			Tab2EnvVar.INSTANCE.createNewConfigurationTab(this, true);			
+		}
+		
 	}
 
 	/* (non-Javadoc)

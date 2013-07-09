@@ -11,7 +11,7 @@ public class ConfigurationVariableFactory {
 	public static ConfigurationVariableFactory INSTANCE = new ConfigurationVariableFactory() ;
 	
 	// TODO
-	private static VPConfigurationVariable _DEFAULT_VP_CF = VPConfigurationVariable.BDD ; 
+	private static VPConfigurationVariable _DEFAULT_VP_CF = VPConfigurationVariable.FEATUREIDE ; // BDD ; 
 	private VPConfigurationVariable _vpCf = _DEFAULT_VP_CF ; 
 	
 	

@@ -100,13 +100,16 @@ class NodeSelectionListener extends MouseAdapter {
     		if (ConfigsSelected.INSTANCE.isSelected(tName, nodeName))
     			ConfigsSelected.INSTANCE.applySelection(
     					tName, nodeName, OpSelection.DESELECT);
+    		else if (ConfigsSelected.INSTANCE.isDeselected(tName, nodeName))
+    			ConfigsSelected.INSTANCE.applySelection(
+    					tName, nodeName, OpSelection.UNSELECT);
     		else
     			ConfigsSelected.INSTANCE.applySelection(
     					tName, nodeName, OpSelection.SELECT);    		
-    		    		
+    		//tree.updateUI() ; 	
     		// Reopen the configuration variable tab
-    		Variable cv = FamiliarConsole.INSTANCE.getVariableByName(tree.getName());
-    		Tab2EnvVar.INSTANCE.createNewConfigurationTab((ConfigurationVariable)cv, true);
+    		//Variable cv = FamiliarConsole.INSTANCE.getVariableByName(tName);
+    		//Tab2EnvVar.INSTANCE.createNewConfigurationTab((ConfigurationVariable)cv, false);
     	}
     }
 }
@@ -133,12 +136,16 @@ class CheckRenderer extends JPanel implements TreeCellRenderer {
 			int row,
 			boolean hasFocus) {
 		String name = ((Node)value).getString(Converter.NAME);
-		//check.setSelected(!check.isSelected());
-		check.setSelected(isSelected);
-		//check.setSelected(ConfigsSelected.INSTANCE.isSelected(tree.getName(), name));
+		
+		boolean selected = ConfigsSelected.INSTANCE.isSelected(tree.getName(), name) ; 
+		check.setSelected(selected);
 			  
 	    label.setFont(tree.getFont());
-	    label.setText(name);
+	    
+	    String labelContent = name + "";
+	    if (selected)
+	    	labelContent += " (selected)" ; 
+	    label.setText(labelContent);
 	    label.setFocus(hasFocus);
 
 	    if (leaf) {

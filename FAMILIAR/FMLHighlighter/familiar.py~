@@ -26,7 +26,7 @@ class FamiliarLexer(PythonLexer):
     
     
      
-    EXTRA_KEYWORDS = ['ksynthesis', 'slice', 'over', 'including', 'cores', 'serialize', 'constraint', 'constraints', 'removeConstraint', 'addConstraint', 'deads', 'setUnion', 'setIntersection', 'to', 'falseOptionals', 'excluding', 'constraints', 'withMapping', 'map', 'cleanup', 'Set', 'asFM', 'addConstraint', 'aggregate', 'isConflicting', 'autoSelect', 'setIsEmpty', 'isComplete', 'isNull', 'isExisting', 'diff', 'counting', 'removeFeature', 'renameFeature', 'isValid', 'requires', 
+    EXTRA_KEYWORDS = ['aggregateMerge', 'ksynthesis', 'slice', 'over', 'including', 'cores', 'serialize', 'constraint', 'constraints', 'removeConstraint', 'addConstraint', 'deads', 'setUnion', 'setIntersection', 'to', 'falseOptionals', 'excluding', 'constraints', 'withMapping', 'map', 'cleanup', 'Set', 'asFM', 'addConstraint', 'aggregate', 'isConflicting', 'autoSelect', 'setIsEmpty', 'isComplete', 'isNull', 'isExisting', 'diff', 'counting', 'removeFeature', 'renameFeature', 'isValid', 'requires', 
                       'implies', 'excludes', 'FeatureModel', 'Feature', 'String', 
                       'operator', 'configuration', 'select', 'deselect', 'size', 'unselect',
                       'min', 'max', 'random', 'not', '==', 'else', 'configs', 'set', 'setAdd', 

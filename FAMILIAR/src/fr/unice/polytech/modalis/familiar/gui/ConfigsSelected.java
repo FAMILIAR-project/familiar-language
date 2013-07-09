@@ -45,5 +45,10 @@ public class ConfigsSelected {
 		ConfigurationVariable cv = (ConfigurationVariable) FamiliarConsole.INSTANCE.getVariableByName(cvName);
 		cv.applySelection(featureName, op) ; 			
 	}
+
+	public boolean isDeselected(String cvName, String featureName) {
+		ConfigurationVariable cv = (ConfigurationVariable) FamiliarConsole.INSTANCE.getVariableByName(cvName);
+		return cv.getDeselected().contains(cvName);
+	}
 	
 } // end of class ConfigsSelected

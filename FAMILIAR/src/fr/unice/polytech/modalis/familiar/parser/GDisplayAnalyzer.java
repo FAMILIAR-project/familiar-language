@@ -25,6 +25,7 @@ import org.xtext.example.mydsl.fML.Command;
 import org.xtext.example.mydsl.fML.ConfigurationCommand;
 import org.xtext.example.mydsl.fML.FMCommand;
 import org.xtext.example.mydsl.fML.GDisplay;
+import org.xtext.example.mydsl.fML.IdentifierExpr;
 
 import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
 import fr.unice.polytech.modalis.familiar.variable.ConfigurationVariable;
@@ -74,58 +75,54 @@ public class GDisplayAnalyzer extends FMLAbstractCommandAnalyzer {
 		// TODO
 		EObject eovar = gdisplCmd.getVar();
 
-		if (eovar instanceof FMCommand) {
-			FMCommand fmVar = (FMCommand) eovar;
-			FMLShell.getInstance().printDebugMessage(
-					"evaluating FM or configuration to display: " + fmVar);
-
-			Variable variable = _environment.parseFMCommand(fmVar, null, null);
+		
+		Variable variable = null ; 
+		if (eovar instanceof IdentifierExpr) {
+			variable = _environment.parse((IdentifierExpr) eovar, null);
 			if (variable instanceof RefVariable) {
 				FMLShell.getInstance().printDebugMessage(
 						variable.getIdentifier() + " is a reference");
 				variable = ((RefVariable) variable).getValueReference();
 			}
-			if (variable instanceof FeatureModelVariable) {
-				FeatureModelVariable fmw = null;
-				fmw = (FeatureModelVariable) variable;
-				assert (fmw != null);
-				fmw.gdisplay();
-				return;
-			} else if (variable instanceof ConfigurationVariable) {
-				FMLShell.getInstance().printDebugMessage(
-						"conf variable= " + variable);
-				final ConfigurationVariable conf = (ConfigurationVariable) variable;
-				FMLShell.getInstance().printDebugMessage("conf= " + conf);
-				Display.getDefault().syncExec(new Runnable() {
+		}
+		else if (eovar instanceof FMCommand) {
+			FMCommand fmVar = (FMCommand) eovar;
+			FMLShell.getInstance().printDebugMessage(
+					"evaluating FM or configuration to display: " + fmVar);
 
-					@Override
-					public void run() {
-						// TODO Auto-generated method stub
-						conf.gdisplay();
-					}
-				});
-
-				return;
-			} else {
-				FMLShell.getInstance()
-						.setError("Unknown variable: " + variable);
-				return;
-			}
-
+			variable = _environment.parseFMCommand(fmVar, null, null);
+			
 		}
 
-		if (eovar instanceof ConfigurationCommand) {
+		else if (eovar instanceof ConfigurationCommand) {
 			// TODO: can be a configuration
 			FMLShell.getInstance().printDebugMessage("gdisplay configuration");
-			ConfigurationVariable conf = _environment.parseConfigurationCommand((ConfigurationCommand) eovar, null);
-			conf.gdisplay();
-			return;
-
+			variable = _environment.parseConfigurationCommand((ConfigurationCommand) eovar, null);
 		} else {
 			FMLShell.getInstance().setError(
 					"Neither a feature model nor a configuration " + eovar);
 			return;
 		}
+		
+
+		if (variable instanceof FeatureModelVariable) {
+			FeatureModelVariable fmw = null;
+			fmw = (FeatureModelVariable) variable;
+			assert (fmw != null);
+			fmw.gdisplay();
+			return;
+		} else if (variable instanceof ConfigurationVariable) {
+			FMLShell.getInstance().printDebugMessage(
+					"conf variable= " + variable);
+			final ConfigurationVariable conf = (ConfigurationVariable) variable;
+			conf.gdisplay();
+			return;
+		} else {
+			FMLShell.getInstance()
+					.setError("Unknown variable: " + variable);
+			return;
+		}
+
 
 	}
 
