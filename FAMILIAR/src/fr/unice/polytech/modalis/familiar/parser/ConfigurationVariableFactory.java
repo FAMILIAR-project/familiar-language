@@ -47,4 +47,5 @@ public class ConfigurationVariableFactory {
 		return new ConfigurationVariableBDDImpl(fmv, assigner);
 	}
 
+
 }

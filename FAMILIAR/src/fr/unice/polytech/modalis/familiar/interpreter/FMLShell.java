@@ -69,7 +69,6 @@ public class FMLShell {
 	
 	private static Logger _LOGGER = Logger.getLogger(FMLShell.class);
 
-
 	public static final String PROMPT = "fml>";
 	public static final String FILE_SEPARATOR = File.separator;
 
