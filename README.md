@@ -48,8 +48,10 @@ Important final step:
 
 To check your installation, execute the JUnit tests in '''/src/fr/unice/polytech/modalis/familiar/test''' and '''/src/fr/unice/polytech/modalis/familiar/test/featureide'''
 with the the VM argument '''-Xmx1024M'''.
-You should have around 7 errors, 11 failures, 61 ignored (in total) out of 800+ tests
 
+Note that there are some errors. You should have around (23rd of july): 
+ * (test) 3 errors, 19 failures, 20 ignores (out of 436 tests)
+ * (test/featureide) 10 errors, 6 failures, 59 ignored (out of 419 tests)
 
 ### Exporting an Executable Jar
 
