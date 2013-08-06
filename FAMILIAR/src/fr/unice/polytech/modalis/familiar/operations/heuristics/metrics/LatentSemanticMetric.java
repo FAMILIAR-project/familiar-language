@@ -19,7 +19,13 @@ public class LatentSemanticMetric implements FeatureSimilarityMetric{
 		if (!cosinusSimilarityMap.containsKey(cle)){
 			cle = big.getEdge(featureName2, featureName1);
 		}
-		return cosinusSimilarityMap.get(cle);
+		
+		if (cosinusSimilarityMap.containsKey(cle)) {
+			return cosinusSimilarityMap.get(cle);	
+		} else {
+			return 0;
+		}
+		
 	}
 	
 	public void setBig(ImplicationGraph<String> big) {

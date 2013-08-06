@@ -14,7 +14,6 @@
 	<classpathentry exported="true" kind="lib" path="lib/wikipedia-miner/trove-2.1.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/wikipedia-miner/weka-wrapper-1.0.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/wikipedia-miner/weka.jar"/>
-	<classpathentry exported="true" kind="lib" path="lib/wikipedia-miner/wikipedia-miner.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/wikipedia-miner/xercesImpl.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/semanticvectors-3.8.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/sspace-2.0.3-jar-with-dependencies.jar"/>
@@ -31,5 +30,6 @@
 	<classpathentry exported="true" kind="lib" path="lib/jgraphx.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/org.sat4j.core.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/simmetrics_jar_v1_6_2_d07_02_07.jar"/>
+	<classpathentry kind="lib" path="lib/wikipedia-miner/wikipedia-miner-1.6.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

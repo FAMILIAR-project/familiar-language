@@ -1,5 +1,6 @@
 package fr.unice.polytech.modalis.familiar.test.heuristics;
 
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FilenameFilter;
@@ -250,7 +251,11 @@ public class ASE2013KSynthesisTest extends FMLTest {
 		}
 
 		// LSA metric
-//		metrics.add(new LatentSemanticMetric());
+		if (new File(WIKIPEDIA_DB).exists()) {
+			LatentSemanticMetric lsa = new LatentSemanticMetric();
+			metrics.add(lsa);
+			clusteringThresholds.put(lsa, 0.5);
+		}
 
 	}
 
@@ -743,5 +748,41 @@ public class ASE2013KSynthesisTest extends FMLTest {
 		
 		
 	}
+	
+	
+//	@Ignore
+//	@Test
+//	public void testLSA() throws IOException {
+//		System.out.println("toto");
+//		if (!SingularValueDecompositionLibC.isSVDLIBCavailable())
+//            return;
+//
+//		System.out.println("tata");
+//        String[] docArr = new String[] {
+//            "shipment of gold damaged in a fire",
+//            "delivery of silver arrived in a silver truck",
+//            "shipment of gold arrived in a truck"
+//        };
+//        
+//        
+//        List<String> docs = Arrays.asList(docArr);
+//        int numDocs = docs.size();
+//        LatentSemanticAnalysis lsa =
+//            new LatentSemanticAnalysis(true, 2, new NoTransform(),
+//                                       new SingularValueDecompositionLibC(),
+//                                       false, new StringBasisMapping());
+//        for (String doc : docs)
+//            lsa.processDocument(new BufferedReader(new StringReader(doc)));
+//        lsa.processSpace(System.getProperties());
+//        
+//        String query = "gold silver truck";
+//        
+//        DoubleVector projected = lsa.project(new StringDocument(query));
+//        assertEquals(2, projected.length());
+//        assertEquals(0.2140, Math.abs(projected.get(0)), 0.001);
+//        assertEquals(0.1821, Math.abs(projected.get(1)), 0.001);
+//        System.out.println("Projected: " + projected);
+//	}
+	
 }
 
