@@ -7,7 +7,8 @@ import java.util.Map;
 
 public class LatentSemanticMetric implements FeatureSimilarityMetric{
 	 private ImplicationGraph<String> big;
-	 private Map<SimpleEdge, Double> cosinusSimilarityMap;
+	 private Map<SimpleEdge, Double> similarityMap;
+	 
 
 	
 	
@@ -16,12 +17,12 @@ public class LatentSemanticMetric implements FeatureSimilarityMetric{
 		
 		SimpleEdge cle = big.getEdge(featureName1, featureName2);
 		
-		if (!cosinusSimilarityMap.containsKey(cle)){
+		if (!similarityMap.containsKey(cle)){
 			cle = big.getEdge(featureName2, featureName1);
 		}
 		
-		if (cosinusSimilarityMap.containsKey(cle)) {
-			return cosinusSimilarityMap.get(cle);	
+		if (similarityMap.containsKey(cle)) {
+			return similarityMap.get(cle);	
 		} else {
 			return 0;
 		}
@@ -32,8 +33,21 @@ public class LatentSemanticMetric implements FeatureSimilarityMetric{
 		this.big = big;
 		try {
 			ComputeLSA compute = new ComputeLSA(big);
-			compute.computeCosinusSimilarity(big);
-			cosinusSimilarityMap = compute.getCosinusSimilarityMap();
+			
+			//compute.cosinusSimilarity(big);
+			compute.correlationSimilarity(big);
+//			compute.spearmanRankCorrelation(big);
+//			compute.euclideanDistance(big);
+//			compute.goodmanKruskalGamma(big);
+//			compute.jaccardIndex(big);
+//			compute.kendallsTau(big);
+//			compute.klDivergence(big);
+//			compute.linSimilarity(big);
+//			compute.tanimotoSimilarity(big);
+//		
+			
+			similarityMap = compute.getSimilarityMap();
+	
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
