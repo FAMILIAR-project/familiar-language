@@ -1,5 +1,7 @@
 package fr.unice.polytech.modalis.familiar.operations.heuristics.metrics;
 
+import gsd.graph.ImplicationGraph;
+
 import java.io.File;
 
 import org.wikipedia.miner.comparison.ArticleComparer;
@@ -9,7 +11,6 @@ import org.wikipedia.miner.util.WikipediaConfiguration;
 
 public class WikipediaMinerMetric implements FeatureSimilarityMetric {
 
-	private final String wikipediaDB;
 	private Wikipedia wikipedia;
 	private ArticleComparer comparer;
 
@@ -18,31 +19,22 @@ public class WikipediaMinerMetric implements FeatureSimilarityMetric {
 	 * 
 	 * @param wikipediaDB : path to the database template file (wikipedia-template.xml)
 	 */
-	public WikipediaMinerMetric(String wikipediaDB) {
-		this.wikipediaDB = wikipediaDB;
-	}
-
-	public void loadDatabase() throws Exception {
-		WikipediaConfiguration conf = new WikipediaConfiguration(
-				new File(wikipediaDB));
-		wikipedia = new Wikipedia(conf, false);	
-		comparer = new ArticleComparer(wikipedia);
-	}
-
-	
-	public void closeDatabase() {
-		if (wikipedia != null) {
-			wikipedia.close();	
+	public WikipediaMinerMetric(WikipediaMinerDB wikipediaDB) {
+		this.wikipedia = wikipediaDB.getWikipedia();
+		try {
+			comparer = new ArticleComparer(wikipedia);
+		} catch (Exception e) {
+			e.printStackTrace();
 		}
 	}
-	
+
 	@Override
 	public String toString() {
 		return "Wikipedia Miner metric (" + wikipedia.getConfig().getDatabaseDirectory().getName() + ")";
 	}
 
 	@Override
-	public double similarity(String featureName1, String featureName2) {
+	public double similarity(ImplicationGraph<String> implicationGraph, String featureName1, String featureName2) {
 		double relatedness = 0;
 
 		// Preprocessing

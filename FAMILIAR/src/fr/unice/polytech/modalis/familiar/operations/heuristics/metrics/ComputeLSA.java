@@ -12,6 +12,7 @@ import gsd.graph.SimpleEdge;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -23,6 +24,7 @@ import java.util.Map;
 
 import org.wikipedia.miner.model.Article;
 import org.wikipedia.miner.model.Wikipedia;
+import org.wikipedia.miner.util.WikipediaConfiguration;
 
 public class ComputeLSA {
 
@@ -32,17 +34,16 @@ public class ComputeLSA {
 	private LatentSemanticAnalysis lsa;
 	
 	private Map<SimpleEdge, Double> similarityMap = new HashMap<SimpleEdge, Double>();
+	private Wikipedia wikipedia;
 	
-	public ComputeLSA(ImplicationGraph<String> big) throws Exception {
+	public ComputeLSA(ImplicationGraph<String> big, WikipediaMinerDB wikipediaDB) throws Exception {
 		this.wbig = big;
-		wiki_metric = new WikipediaMinerMetric(
-				"/local/wikipedia/WikipediaMiner/db_wikipedia/wikipedia-template.xml");
-		wiki_metric.loadDatabase();
+		wikipedia = wikipediaDB.getWikipedia();
 		documents = new ArrayList<BufferedReader>();
 	}
 	public void seekWikiArticles(ImplicationGraph<String> big){
 		Collection<SimpleEdge> ed = big.edges();
-		Wikipedia wikipedia = wiki_metric.getWikipedia();
+
 		double simillarity = 0;
 		int simIndex = -1;
 		for (String featureName : big.vertices()) {

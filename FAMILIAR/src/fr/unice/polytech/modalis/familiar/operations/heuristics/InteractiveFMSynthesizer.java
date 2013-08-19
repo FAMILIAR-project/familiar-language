@@ -3,6 +3,7 @@ package fr.unice.polytech.modalis.familiar.operations.heuristics;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Observable;
 import java.util.Set;
@@ -27,6 +28,7 @@ import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import gsd.graph.DirectedCliqueFinder;
 import gsd.graph.ImplicationGraph;
 import gsd.graph.SimpleEdge;
+import gsd.graph.TransitiveReduction;
 import gsd.synthesis.FeatureEdge;
 import gsd.synthesis.FeatureGraph;
 import gsd.synthesis.FeatureGraphFactory;
@@ -373,7 +375,50 @@ public class InteractiveFMSynthesizer extends Observable{
 	 * @return a complete feature model
 	 */
 	public FeatureModelVariable computeCompleteFeatureModel() {
+		
+		
+		// FIXME : experimental : choose a root and put the other root candidates as its children 
+//		WeightedImplicationGraph<String> tempBig = big.clone();
+//		Set<String> possibleRoots = tempBig.reduceCliques().roots().iterator().next();
+//		String selectedRoot = possibleRoots.iterator().next();
+//		tempBig.removeAllEdges(new HashSet<SimpleEdge>(tempBig.outgoingEdges(selectedRoot)));
+//		possibleRoots.remove(selectedRoot);
+//		for (String featureLevel1 : possibleRoots) {
+//			tempBig.removeAllEdges(new HashSet<SimpleEdge>(tempBig.outgoingEdges(featureLevel1)));
+//			tempBig.addEdge(featureLevel1, selectedRoot);
+//		}
+		// END experimental
 
+		
+		// FIXME : experimental : reduce clique and apply transitive reduction
+//		ImplicationGraph<Set<String>> reducedBIG = big.reduceCliques();
+//		TransitiveReduction.INSTANCE.reduce(reducedBIG);
+//		
+//		for (Set<String> clique : reducedBIG.vertices()) {
+//			Iterator<String> it = clique.iterator();
+//			String representativeFeature = it.next();
+//
+//			HashSet<String> nonRepresentativeFeatures = new HashSet<String>();
+//			while (it.hasNext()) {
+//				String feature = it.next();
+//				selectParent(feature, representativeFeature);
+//				nonRepresentativeFeatures.add(feature);
+//			}
+//			
+//			clique.removeAll(nonRepresentativeFeatures);
+//		}
+//
+//		for (SimpleEdge edge : reducedBIG.edges()) {
+//			String child = reducedBIG.getEdgeSource(edge).iterator().next();
+//			String parent = reducedBIG.getEdgeTarget(edge).iterator().next();
+//			if (big.outgoingEdges(child).size() > 1) {
+//				selectParent(child, parent);	
+//			}
+//		}
+		
+		// END experimental
+
+		
 		// Compute optimum branching for the implication graph
 		OptimumBranchingFinder<String> branchingFinder = new OptimumBranchingFinder<String>();
 		ImplicationGraph<String> hierarchy = branchingFinder.findOptimumBranching(big);
@@ -505,7 +550,7 @@ public class InteractiveFMSynthesizer extends Observable{
 		for (SimpleEdge edge : big.edges()) {
 			String source = big.getSource(edge);
 			String target = big.getTarget(edge);
-			double weight = parentSimilarityMetric.similarity(source, target);
+			double weight = parentSimilarityMetric.similarity(big.getImplicationGraph(), source, target);
 			big.setEdgeWeight(edge, weight);
 		}
 
@@ -541,7 +586,7 @@ public class InteractiveFMSynthesizer extends Observable{
 			// Compute the complementary heuristic choices
 			boolean veryHigh = false, high = false, veryLow = false, low = false; 
 			for (FeatureSimilarityMetric metric : complementaryParentSimilarityMetrics) {
-				double weight = metric.similarity(source, target);
+				double weight = metric.similarity(big.getImplicationGraph(), source, target);
 				if (weight > VERY_HIGH_THRESHOLD)
 					veryHigh = true;
 				if (weight > HIGH_THRESHOLD)

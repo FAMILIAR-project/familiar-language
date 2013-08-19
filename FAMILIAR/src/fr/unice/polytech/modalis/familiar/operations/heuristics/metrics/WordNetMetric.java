@@ -1,5 +1,6 @@
 package fr.unice.polytech.modalis.familiar.operations.heuristics.metrics;
 
+import gsd.graph.ImplicationGraph;
 import net.sf.extjwnl.JWNLException;
 import net.sf.extjwnl.data.IndexWord;
 import net.sf.extjwnl.data.POS;
@@ -16,7 +17,7 @@ public abstract class WordNetMetric implements FeatureSimilarityMetric {
 	}
 
 	@Override
-	public double similarity(String featureName1, String featureName2) {
+	public double similarity(ImplicationGraph<String> implicationGraph, String featureName1, String featureName2) {
 		String[] wordsF1 = featureName1.replaceAll("(\\p{Lower})(\\p{Upper})", "$1 $2").toLowerCase().split("\\s|\\p{Punct}");
 		String[] wordsF2 = featureName2.replaceAll("(\\p{Lower})(\\p{Upper})", "$1 $2").toLowerCase().split("\\s|\\p{Punct}");
 

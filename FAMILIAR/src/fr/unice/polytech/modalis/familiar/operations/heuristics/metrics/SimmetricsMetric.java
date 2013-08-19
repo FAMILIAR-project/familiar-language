@@ -1,5 +1,6 @@
 package fr.unice.polytech.modalis.familiar.operations.heuristics.metrics;
 
+import gsd.graph.ImplicationGraph;
 import uk.ac.shef.wit.simmetrics.similaritymetrics.AbstractStringMetric;
 import uk.ac.shef.wit.simmetrics.similaritymetrics.Levenshtein;
 import uk.ac.shef.wit.simmetrics.similaritymetrics.SmithWaterman;
@@ -18,7 +19,7 @@ public class SimmetricsMetric implements FeatureSimilarityMetric {
 	}
 
 	@Override
-	public double similarity(String featureName1, String featureName2) {
+	public double similarity(ImplicationGraph<String> implicationGraph, String featureName1, String featureName2) {
 		return metric.getSimilarity(featureName1, featureName2);
 	}
 

@@ -8,12 +8,39 @@ import java.util.Map;
 public class LatentSemanticMetric implements FeatureSimilarityMetric{
 	 private ImplicationGraph<String> big;
 	 private Map<SimpleEdge, Double> similarityMap;
-	 
+	private WikipediaMinerDB wikipediaDB;
 
-	
-	
+	 public LatentSemanticMetric(WikipediaMinerDB wikipediaDB) {
+		 this.wikipediaDB = wikipediaDB;
+	}
+	 
+	 
 	@Override
-	public double similarity(String featureName1, String featureName2) {
+	public double similarity(ImplicationGraph<String> implicationGraph, String featureName1, String featureName2) {
+		
+		if (big == null || !big.equals(implicationGraph)) {
+			this.big = implicationGraph;
+			try {
+				ComputeLSA compute = new ComputeLSA(big, wikipediaDB);
+				
+//				compute.cosinusSimilarity(big);
+//				compute.correlationSimilarity(big);
+				compute.spearmanRankCorrelation(big);
+//				compute.euclideanDistance(big);
+//				compute.goodmanKruskalGamma(big);
+//				compute.jaccardIndex(big);
+//				compute.kendallsTau(big);
+//				compute.klDivergence(big);
+//				compute.linSimilarity(big);
+//				compute.tanimotoSimilarity(big);
+
+				similarityMap = compute.getSimilarityMap();
+				
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
 		
 		SimpleEdge cle = big.getEdge(featureName1, featureName2);
 		
@@ -29,28 +56,9 @@ public class LatentSemanticMetric implements FeatureSimilarityMetric{
 		
 	}
 	
-	public void setBig(ImplicationGraph<String> big) {
-		this.big = big;
-		try {
-			ComputeLSA compute = new ComputeLSA(big);
-			
-			//compute.cosinusSimilarity(big);
-			compute.correlationSimilarity(big);
-//			compute.spearmanRankCorrelation(big);
-//			compute.euclideanDistance(big);
-//			compute.goodmanKruskalGamma(big);
-//			compute.jaccardIndex(big);
-//			compute.kendallsTau(big);
-//			compute.klDivergence(big);
-//			compute.linSimilarity(big);
-//			compute.tanimotoSimilarity(big);
-//		
-			
-			similarityMap = compute.getSimilarityMap();
-	
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		
+	@Override
+	public String toString() {
+		return "Latent Semantic Analysis";
 	}
+
 }

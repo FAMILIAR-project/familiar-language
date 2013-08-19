@@ -1,5 +1,7 @@
 package fr.unice.polytech.modalis.familiar.operations.heuristics.metrics;
 
+import gsd.graph.ImplicationGraph;
+
 import java.util.Random;
 
 public class RandomMetric implements FeatureSimilarityMetric {
@@ -11,7 +13,7 @@ public class RandomMetric implements FeatureSimilarityMetric {
 	}
 	
 	@Override
-	public double similarity(String featureName1, String featureName2) {
+	public double similarity(ImplicationGraph<String> implicationGraph, String featureName1, String featureName2) {
 		return rand.nextDouble();
 	}
 

@@ -3,6 +3,7 @@ package fr.unice.polytech.modalis.familiar.operations.heuristics.clustering;
 import ch.usi.inf.sape.hac.experiment.DissimilarityMeasure;
 import ch.usi.inf.sape.hac.experiment.Experiment;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.FeatureSimilarityMetric;
+import gsd.graph.ImplicationGraph;
 
 public class HeuristicDissimilarityMeasure implements DissimilarityMeasure{
 	
@@ -18,7 +19,7 @@ public class HeuristicDissimilarityMeasure implements DissimilarityMeasure{
 		FMExperiment fmExperiment = (FMExperiment) experiment;
 		String feature1 = fmExperiment.getFeature(observation1);
 		String feature2 = fmExperiment.getFeature(observation2);
-		return 1-metric.similarity(feature1, feature2);
+		return 1-metric.similarity(fmExperiment.getImplicationGraph(), feature1, feature2);
 	}
 
 }

@@ -14,6 +14,7 @@ import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.AlwaysZe
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.MetricName;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.RandomMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.SimmetricsMetric;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.WikipediaMinerDB;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.WikipediaMinerMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.WuPalmerMetric;
 
@@ -70,9 +71,10 @@ public class SimilarityMetricSelectionListener implements ActionListener {
 				int choice = fileChooser.showOpenDialog(FamiliarEditor.INSTANCE);
 				if (choice == JFileChooser.APPROVE_OPTION) {
 					File propertiesFile = fileChooser.getSelectedFile();
-					WikipediaMinerMetric wikipediaMinerMetric = new WikipediaMinerMetric(propertiesFile.getAbsolutePath());
+					WikipediaMinerDB wikipediaMinerDB = new WikipediaMinerDB(propertiesFile.getAbsolutePath());
 					try {
-						wikipediaMinerMetric.loadDatabase();
+						wikipediaMinerDB.loadDatabase();
+						WikipediaMinerMetric wikipediaMinerMetric = new WikipediaMinerMetric(wikipediaMinerDB);
 						environment.setParentSimilarityMetric(wikipediaMinerMetric);
 					} catch (Exception e1) {
 						
