@@ -82,8 +82,11 @@ public class InteractiveFMSynthesizer extends Observable{
 			this.clusteringThreshold = 0;
 		}
 
-		this.complementaryParentSimilarityMetrics = complementaryParentSimilarityMetrics != null ? 
-				complementaryParentSimilarityMetrics : new ArrayList<FeatureSimilarityMetric>();
+		this.complementaryParentSimilarityMetrics = complementaryParentSimilarityMetrics;
+		if (complementaryParentSimilarityMetrics  == null ) {
+			this.complementaryParentSimilarityMetrics = new ArrayList<FeatureSimilarityMetric>();
+		}
+			
 
 		// Compute clusters and weights
 		computeClusters();
@@ -571,12 +574,12 @@ public class InteractiveFMSynthesizer extends Observable{
 	private void tuneWeightsWithComplementaryHeuristics() {
 
 		// TODO : put these thresholds in a better place
-		final double VERY_HIGH_THRESHOLD = 0.9; // the feature should be selected
-		final double HIGH_THRESHOLD = 0.7; // the feature might be selected
+		final double VERY_HIGH_THRESHOLD = 0.6; // the feature should be selected
+		final double HIGH_THRESHOLD = 0.6; // the feature might be selected
 		final double HIGH_VALUE = 1; // assigned value if very high probability
 
-		final double VERY_LOW_THRESHOLD = 0.3; // the feature might be rejected
-		final double LOW_THRESHOLD = 0.1; // the feature should be rejected
+		final double VERY_LOW_THRESHOLD = 0.1; // the feature might be rejected
+		final double LOW_THRESHOLD = 0.3; // the feature should be rejected
 		final double LOW_VALUE = 0; // assigned value if very low probability
 
 		for (SimpleEdge edge : big.edges()) {
@@ -587,18 +590,20 @@ public class InteractiveFMSynthesizer extends Observable{
 			boolean veryHigh = false, high = false, veryLow = false, low = false; 
 			for (FeatureSimilarityMetric metric : complementaryParentSimilarityMetrics) {
 				double weight = metric.similarity(big.getImplicationGraph(), source, target);
-				if (weight > VERY_HIGH_THRESHOLD)
-					veryHigh = true;
-				if (weight > HIGH_THRESHOLD)
-					high = true;
-				if (weight < VERY_LOW_THRESHOLD)
-					veryLow = true;
-				if (weight < LOW_THRESHOLD)
-					low = true;
+				if (weight != 0) { // Avoid non representative value
+					if (weight > VERY_HIGH_THRESHOLD)
+						veryHigh = true;
+					if (weight > HIGH_THRESHOLD)
+						high = true;
+					if (weight < VERY_LOW_THRESHOLD)
+						veryLow = true;
+					if (weight < LOW_THRESHOLD)
+						low = true;					
+				}
 			}	
 
 			// Check if there is no conflicts between the heuristics (including the main heuristic)
-			if (veryHigh && !low && big.getEdgeWeight(edge) > LOW_THRESHOLD) {
+			if (veryHigh && !low && (big.getEdgeWeight(edge) > LOW_THRESHOLD || big.getEdgeWeight(edge) == 0)) {
 				big.setEdgeWeight(edge, HIGH_VALUE);
 			} else if (veryLow && !high && big.getEdgeWeight(edge) < HIGH_THRESHOLD) {
 				big.setEdgeWeight(edge, LOW_VALUE);

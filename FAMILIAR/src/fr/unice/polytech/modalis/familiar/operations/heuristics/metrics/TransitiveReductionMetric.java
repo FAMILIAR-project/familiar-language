@@ -19,7 +19,7 @@ public class TransitiveReductionMetric implements FeatureSimilarityMetric {
 		
 		Set<String> featureVertex = findVertex(feature);
 		Set<String> parentVertex = findVertex(parent);
-		return reducedGraph.containsEdge(featureVertex, parentVertex) ? 1 : 0;
+		return reducedGraph.containsEdge(featureVertex, parentVertex) ? 0.9 : 0;
 	
 	}
 	

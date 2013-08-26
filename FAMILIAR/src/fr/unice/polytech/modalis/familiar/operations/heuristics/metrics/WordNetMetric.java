@@ -1,6 +1,11 @@
 package fr.unice.polytech.modalis.familiar.operations.heuristics.metrics;
 
 import gsd.graph.ImplicationGraph;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 import net.sf.extjwnl.JWNLException;
 import net.sf.extjwnl.data.IndexWord;
 import net.sf.extjwnl.data.POS;
@@ -18,8 +23,21 @@ public abstract class WordNetMetric implements FeatureSimilarityMetric {
 
 	@Override
 	public double similarity(ImplicationGraph<String> implicationGraph, String featureName1, String featureName2) {
-		String[] wordsF1 = featureName1.replaceAll("(\\p{Lower})(\\p{Upper})", "$1 $2").toLowerCase().split("\\s|\\p{Punct}");
-		String[] wordsF2 = featureName2.replaceAll("(\\p{Lower})(\\p{Upper})", "$1 $2").toLowerCase().split("\\s|\\p{Punct}");
+		List<String> wordsF1 = new ArrayList<String>();
+		if (lookup(featureName1) != null) {
+			wordsF1.add(featureName1);
+		} else {
+			String preprocessedF1 = featureName1.replaceAll("(\\p{Lower})(\\p{Upper})", "$1 $2").toLowerCase();
+			wordsF1.addAll(Arrays.asList(preprocessedF1.split("\\s|\\p{Punct}")));
+		}
+
+		List<String> wordsF2 = new ArrayList<String>();
+		if (lookup(featureName2) != null) {
+			wordsF2.add(featureName2);
+		} else {
+			String preprocessedF2 = featureName2.replaceAll("(\\p{Lower})(\\p{Upper})", "$1 $2").toLowerCase();
+			wordsF2.addAll(Arrays.asList(preprocessedF2.split("\\s|\\p{Punct}")));
+		}
 
 		double nbOfZeros = 0;
 		double sumF1 = 0;
@@ -52,7 +70,7 @@ public abstract class WordNetMetric implements FeatureSimilarityMetric {
 			sumF2 += max;
 		}
 
-		double nbOfWords = (wordsF1.length + wordsF2.length - nbOfZeros);
+		double nbOfWords = (wordsF1.size() + wordsF2.size() - nbOfZeros);
 		double score = (sumF1 + sumF2) / nbOfWords;
 		
 		return nbOfWords != 0 ? score : 0;

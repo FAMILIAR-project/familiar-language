@@ -24,8 +24,11 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import fr.unice.polytech.modalis.familiar.gui.synthesis.KeyValue;
+import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.InteractiveFMSynthesizer;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.AlwaysZeroMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.CommonEdgesMetric;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.DirectedPathLengthMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.FMEditDistanceMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.FeatureSimilarityMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.ImplicationGraphMetrics;
@@ -40,10 +43,13 @@ import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.Wikipedi
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.WikipediaMinerMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.WuPalmerMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.ZhangEditDistance;
+import fr.unice.polytech.modalis.familiar.parser.FMLCommandInterpreter;
 import fr.unice.polytech.modalis.familiar.test.FMLTest;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import gsd.graph.ImplicationGraph;
 import gsd.graph.TransitiveReduction;
+import gsd.synthesis.Expression;
+import gsd.synthesis.ExpressionType;
 import gsd.synthesis.FGBuilder;
 import gsd.synthesis.FeatureEdge;
 import gsd.synthesis.FeatureGraph;
@@ -53,8 +59,9 @@ public class ASE2013KSynthesisTest extends FMLTest {
 
 	private static final String SPLOT_FOLDER = "inputFML/splot-models-2012-08-07";
 	private static final String VARICELL_FMS_FOLDER = "inputFML/wikipedia-comparison-tables";
-	private static final String VARICELL_HIERARCHY_ID = "FinalFM";
 	private static final String FASE_FOLDER = "inputFML/FASE13-generated-models";
+	private static final String MODIFIED_SPLOT_FOLDER = "inputFML/splot-modified";
+	
 
 	private static final String WORDNET_DB = "/udd/gbecan/Documents/workspaces/workspace/Heuristics/resources/wordnet_properties.xml";
 	private static final String WIKIPEDIA_DB = "/local/wikipedia/WikipediaMiner/db_wikipedia/wikipedia-template.xml";
@@ -81,7 +88,9 @@ public class ASE2013KSynthesisTest extends FMLTest {
 	private static List<FeatureModelVariable> splotFMs;
 	private static List<FeatureModelVariable> variCellFMs;
 	private static List<FeatureModelVariable> faseFMs;
-	private static final List<String> excludeFiles = Arrays.asList(new String[] {
+	private static List<FeatureModelVariable> modifiedSplotFMs;
+	
+	private static final List<String> splotExcludeFiles = Arrays.asList(new String[] {
 			// two features with the same name
 			"model_20110926_400852996.xml",
 			"model_20101112_864228137.xml",
@@ -218,7 +227,7 @@ public class ASE2013KSynthesisTest extends FMLTest {
 			
 			// FASE'13
 			
-			// too long
+			// too long (more than 900 000 products)
 			"model_20111201_1252018702.xml",
 			"model_20120522_87989914.xml",
 			"model_20091009_1552375070.xml",
@@ -230,39 +239,19 @@ public class ASE2013KSynthesisTest extends FMLTest {
 			"model_20100904_226530663.xml",
 			"model_20120329_788560154.xml",
 			"REAL-FM-18.xml",
+			"model_20101024_1938793748.xml",
 			
-			// not working in FASE algorithm
+			// parsing error
 			"model_20110527_1847306763.xml",
 			"model_20110207_1623721536.xml",
 			
-			// not working in FAMILIAR
-			"model_20120110_1256867454.xml",
-			"model_20101111_1790887308.xml",
-			"model_20110328_1177934440.xml",
-			"model_20111027_668940289.xml",
-			"model_20110525_564104612.xml",
-			"model_20110601_1103941862.xml",
-			"REAL-FM-2.xml",
-			"model_20110601_1103941862.xml",
-			"model_20110823_1386366267.xml",
-			"model_20110525_1619420630.xml",
-			"model_20120110_1719396361.xml",
-			"model_20120113_1950870026.xml",
-			"model_20101024_1938793748.xml",
-			"model_20110214_751339643.xml",
-			"model_20100822_281357717.xml",
-			"car_fm.xml",
-			"model_20100213_206550190.xml",
-			"model_20100719_944437142.xml",
-			"model_20120627_1512389149.xml",
-			"model_20091015_449909368.xml",
-			"model_20100624_2076952989.xml",
+			// missing features in the result
 			"DELL-LAPTOP-NOTEBOOK-FM.xml",
-			"cfdp_library_fm.xml",
-			"model_20120110_139114401.xml",
-			"model_20100805_1484639410.xml",
-			"model_20120328_1373483522.xml"
+			
+			""
 	});
+	private static FeatureSimilarityMetric wup;
+	private static DirectedPathLengthMetric directedPathLength;
 	
 
 	
@@ -303,6 +292,7 @@ public class ASE2013KSynthesisTest extends FMLTest {
 		metrics.add(random);
 		clusteringThresholds.put(random, 0.15);
 
+		// Simmetrics metrics
 		smithWaterman = new SimmetricsMetric(MetricName.SIMMETRICS_SMITHWATERMAN);
 		metrics.add(smithWaterman);
 		clusteringThresholds.put(smithWaterman, 0.6);
@@ -314,70 +304,99 @@ public class ASE2013KSynthesisTest extends FMLTest {
 		// WordNet metrics
 		if (new File(WORDNET_DB).exists()) {
 			Dictionary wordNetDictionary = Dictionary.getInstance(new FileInputStream(WORDNET_DB));
-			FeatureSimilarityMetric wup = new WuPalmerMetric(wordNetDictionary);
+			wup = new WuPalmerMetric(wordNetDictionary);
 			metrics.add(wup);
 			clusteringThresholds.put(wup, 0.2);
 
 			pathLength = new PathLengthMetric(wordNetDictionary); 
 			metrics.add(pathLength);
 			clusteringThresholds.put(pathLength, 0.5);
+			
+			directedPathLength = new DirectedPathLengthMetric(wordNetDictionary);
+			metrics.add(directedPathLength);
+			clusteringThresholds.put(directedPathLength, 0.5);
 		}
 
-		// WikipediaMiner metrics
-		if (wikipediaDB.isLoaded()) {
-			wikiMetric = new WikipediaMinerMetric(wikipediaDB);
-			metrics.add(wikiMetric);
-			clusteringThresholds.put(wikiMetric, 0.5);	
-		}
-		
-		if (wiktionaryDB.isLoaded()) {
-			wiktionaryMetric = new WikipediaMinerMetric(wiktionaryDB);
-			metrics.add(wiktionaryMetric);
-			clusteringThresholds.put(wiktionaryMetric, 0.5);	
-		}
+//		// WikipediaMiner metrics
+//		if (wikipediaDB.isLoaded()) {
+//			wikiMetric = new WikipediaMinerMetric(wikipediaDB);
+//			metrics.add(wikiMetric);
+//			clusteringThresholds.put(wikiMetric, 0.5);	
+//		}
+//		
+//		if (wiktionaryDB.isLoaded()) {
+//			wiktionaryMetric = new WikipediaMinerMetric(wiktionaryDB);
+//			metrics.add(wiktionaryMetric);
+//			clusteringThresholds.put(wiktionaryMetric, 0.5);	
+//		}
 
-		// LSA metric
-		if (wikipediaDB.isLoaded()) {
-			LatentSemanticMetric lsa = new LatentSemanticMetric(wikipediaDB);
-			metrics.add(lsa);
-			clusteringThresholds.put(lsa, 0.5);
-		}
+//		// LSA metric
+//		if (wikipediaDB.isLoaded()) {
+//			LatentSemanticMetric lsa = new LatentSemanticMetric(wikipediaDB);
+//			metrics.add(lsa);
+//			clusteringThresholds.put(lsa, 0.5);
+//		}
 		
-		// Transitive reduction metric
-		reductionMetric = new TransitiveReductionMetric();
-		metrics.add(reductionMetric);
-		clusteringThresholds.put(reductionMetric, 0.5);
+//		// Transitive reduction metric
+//		reductionMetric = new TransitiveReductionMetric();
+//		metrics.add(reductionMetric);
+//		clusteringThresholds.put(reductionMetric, 0.5);
 
 	}
 
 	// ----- GET FEATURE MODELS -----
+
+	/**
+	 * Load all feature models from a specified folder
+	 * @param folder
+	 * @param extension : file extension
+	 * @param excludeFiles
+	 * @param prefix : prefix of FMs' identifier
+	 * @return
+	 */
+	public List<FeatureModelVariable> loadFeatureModelFolder(
+			String folder, final String extension, final List<String> excludeFiles, String prefix) {
+		
+		if (_shell == null) {
+			_shell = FMLShell.instantiateStandalone(null);
+		}
+		
+
+		ArrayList<FeatureModelVariable> fms = new ArrayList<FeatureModelVariable>();
+		
+		File fmsFolder = new File(folder);
+
+		if (fmsFolder.exists() && fmsFolder.isDirectory()) {
+			
+			// Filter files
+			File[] files = fmsFolder.listFiles(new FilenameFilter() {
+				@Override
+				public boolean accept(File dir, String name) {
+					return name.endsWith(extension) && (excludeFiles == null || !excludeFiles.contains(name));
+				}
+			});
+
+			// Load feature models
+			for (File file : files) {
+				String fmIdentifier = prefix +"_" + file.getName().replaceAll("-", "_");
+				fmIdentifier = fmIdentifier.substring(0, fmIdentifier.lastIndexOf("."));
+				String command = fmIdentifier + " = FM(\"" + file.getPath() + "\")";
+				FeatureModelVariable fm = (FeatureModelVariable) _shell.parse(command);
+				if (fm == null) {
+					System.out.println("Error with " + file.getPath());
+				} else {
+					fms.add(fm);	
+				}
+				
+			}
+		}
+		
+		return fms;
+	}
 	
 	public List<FeatureModelVariable> getSPLOTFeatureModels()  {
-
 		if (splotFMs == null) {
-			splotFMs = new ArrayList<FeatureModelVariable>();
-
-			// Load SPLOT feature models
-			File splotFolder = new File(SPLOT_FOLDER);
-
-			if (splotFolder.exists() && splotFolder.isDirectory()) {
-				int index = 0;
-				File[] files = splotFolder.listFiles(new FilenameFilter() {
-					@Override
-					public boolean accept(File dir, String name) {
-						return name.endsWith(".xml") && !excludeFiles.contains(name);
-					}
-				});
-
-				for (File file : files) {
-					String fmIdentifier = "splotFM_" + file.getName().replaceAll("-", "_");
-					String command = fmIdentifier + " = FM(\"" + file.getPath() + "\")";
-					FeatureModelVariable splotFM = (FeatureModelVariable) _shell.parse(command);
-					splotFMs.add(splotFM);
-					index++;
-				}
-			}
-
+			splotFMs = loadFeatureModelFolder(SPLOT_FOLDER, ".xml", splotExcludeFiles, "splotFM");
 			System.out.println(splotFMs.size() + " FMs loaded from SPLOT");
 		}
 
@@ -385,40 +404,33 @@ public class ASE2013KSynthesisTest extends FMLTest {
 	}
 
 
+	public List<FeatureModelVariable> getModifiedSPLOTFeatureModels() {
+		if (modifiedSplotFMs == null) {
+			modifiedSplotFMs = loadFeatureModelFolder(MODIFIED_SPLOT_FOLDER, ".xml", null, "modified");
+			System.out.println(modifiedSplotFMs.size() + " FMs loaded from modified SPLOT");
+		}
+
+		return modifiedSplotFMs;
+	}
+	
 	public List<FeatureModelVariable> getVariCellFeatureModels() {
 		if (variCellFMs == null) {
-			variCellFMs = new ArrayList<FeatureModelVariable>();
-			try {
-
-				File dir = new File(VARICELL_FMS_FOLDER);
-				if (dir.exists()) {
-					File[] files = dir.listFiles(new FilenameFilter() {
-						@Override
-						public boolean accept(File dir, String name) {
-							return name.endsWith(".fmlbdd");
-						}
-					});
-
-					int index = 0;
-					for (File file : files) {
-						String command = "variCellFM_" + index + " = FM(\"" + file.getPath() + "\")";
-						FeatureModelVariable splotFM = (FeatureModelVariable) _shell.parse(command);
-						variCellFMs.add(splotFM);
-						index++;
-					}
-				}
-
-			} catch (Exception e) {
-				e.printStackTrace();
-			}
-
+			variCellFMs = loadFeatureModelFolder(VARICELL_FMS_FOLDER, ".fmlbdd", null, "varicellFM");
 			System.out.println(variCellFMs.size() + " FMs loaded from VariCell");
 		}
 
 		return variCellFMs;
 	}
 	
+	
 	public List<FeatureModelVariable> getRunningExample() {
+		
+		if (_shell == null) {
+			_shell = FMLShell.instantiateStandalone(null);
+			_environment = _shell.getCurrentEnv();
+			_builder = FMLCommandInterpreter.getBuilder();
+		}
+		
 		ArrayList<FeatureModelVariable> fms = new ArrayList<FeatureModelVariable>();
 		
 		try {
@@ -452,39 +464,39 @@ public class ASE2013KSynthesisTest extends FMLTest {
 	
 	private List<FeatureModelVariable> getFASEFeatureModels() {
 		if (faseFMs == null) {
-			faseFMs = new ArrayList<FeatureModelVariable>();
-
-			// Load FASE feature models
-			File faseFolder = new File(FASE_FOLDER);
-
-			if (faseFolder.exists() && faseFolder.isDirectory()) {
-				int index = 0;
-				File[] files = faseFolder.listFiles(new FilenameFilter() {
-					@Override
-					public boolean accept(File dir, String name) {
-						return name.endsWith(".xml") && !excludeFiles.contains(name);
-					}
-				});
-
-				for (File file : files) {
-					String fmIdentifier = "faseFM_" + file.getName().replaceAll("-", "_");
-					String command = fmIdentifier + " = FM(\"" + file.getPath() + "\")";
-					FeatureModelVariable faseFM = (FeatureModelVariable) _shell.parse(command);
-					if (faseFM == null) {
-						System.out.println("Error with " + file.getPath());
-					} else {
-						faseFMs.add(faseFM);
-						index++;	
-					}
-				}
-			}
-
+			faseFMs = loadFeatureModelFolder(FASE_FOLDER, ".xml", splotExcludeFiles, "faseFM");
 			System.out.println(faseFMs.size() + " FMs loaded from FASE");
 		}
 		
 		return faseFMs;
 	}
 	
+public List<FeatureModelVariable> getPerfectExample() {
+		
+		if (_shell == null) {
+			_shell = FMLShell.instantiateStandalone(null);
+			_environment = _shell.getCurrentEnv();
+			_builder = FMLCommandInterpreter.getBuilder();
+		}
+		
+		ArrayList<FeatureModelVariable> fms = new ArrayList<FeatureModelVariable>();
+		
+		try {
+			
+			FeatureModelVariable runningExample = FM ("software",
+					"Software: \"Operating System\" Application Compiler Debugger; \n" +
+					"\"Operating System\": Unix Windows; \n" +
+					"Application: \"Web browser\" Applet \"Word processor\"; \n" +
+					"Compiler: \"C compiler\" \"Fortran compiler\"; \n" +
+					""
+					);
+			fms.add(runningExample);
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return fms;
+	}
 	
 	// ----- TESTS -----
 	
@@ -709,19 +721,31 @@ public class ASE2013KSynthesisTest extends FMLTest {
 			double sumCommonEdgesDistance = 0;
 			double sumZhangDistance = 0;
 			double sumRefactoringDistance = 0;
-
+			double sumCommonEdgesGlobalDistance = 0;
+			double totalNbEdges = 0;
+			
+			int[] distribution = new int[11];
+			
 			double nbIterations = metric instanceof RandomMetric ? RANDOM_ITERATIONS : 1;
 			for (int i=0; i<nbIterations; i++) {
 				for (FeatureModelVariable fm : fms) {
 
 					List<FeatureSimilarityMetric> complementaryHeuristics = new ArrayList<FeatureSimilarityMetric>();
-//					complementaryHeuristics.add(reductionMetric);
-					InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(fm, metric, complementaryHeuristics, levenshtein, 0.7);
+//					complementaryHeuristics.add(pathLength);
+					InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(fm, metric, complementaryHeuristics, null, 0);
 					FeatureModelVariable computedFM = synthesizer.computeCompleteFeatureModel();
 
 					// Compute edit distances
-					double commonEdgesDistance = commonEdgesMetric.commonEdges(computedFM, fm) / ((double) fm.getFm().getDiagram().edges().size());
+					double nbCommonEdges = commonEdgesMetric.commonEdges(computedFM, fm);
+//					double nbEdges = computedFM.getFm().getDiagram().edges().size();
+					double nbEdges = fm.features().size();
+					
+					sumCommonEdgesGlobalDistance += nbCommonEdges;
+					totalNbEdges += nbEdges;
+					double commonEdgesDistance =  nbCommonEdges / nbEdges;
 					sumCommonEdgesDistance += commonEdgesDistance;
+					distribution[(int) (commonEdgesDistance*10)]++;
+					
 					double zhangDistance = (zhangDistanceMetric.editDistance(computedFM, fm) / ((double) fm.features().size()));
 					sumZhangDistance += zhangDistance;
 					double refactoringDistance = (refactoringDistanceMetric.editDistance(computedFM, fm) / ((double) fm.features().size()));
@@ -742,9 +766,16 @@ public class ASE2013KSynthesisTest extends FMLTest {
 				}
 			}
 			System.out.println(metric);
-			System.out.println("common edges : " + sumCommonEdgesDistance / fms.size() / nbIterations);
+			System.out.println("common edges for all fms : " + sumCommonEdgesGlobalDistance / totalNbEdges / nbIterations);
+			System.out.println("common edges by fm : " + sumCommonEdgesDistance / fms.size() / nbIterations);
 			System.out.println("zhang distance : " + sumZhangDistance / fms.size() / nbIterations);
 			System.out.println("refactoring distance : " + sumRefactoringDistance / fms.size() / nbIterations);
+			System.out.println("distribution : ");
+			int sum = 0; 
+			for (int i =0; i<11; i++) {
+				sum += distribution[i];
+				System.out.println(i + " : " + distribution[i] + "\t" + sum);
+			}
 			System.out.println();
 		}
 
@@ -777,16 +808,14 @@ public class ASE2013KSynthesisTest extends FMLTest {
 				InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(fm, metric, null, null, 0);
 				FeatureModelVariable computedFM = synthesizer.computeCompleteFeatureModel();
 
-				double commonEdgesDistance = commonEdgesMetric.commonEdges(computedFM, fm) / ((double) fm.getFm().getDiagram().edges().size());
 				double zhangDistance = (zhangDistanceMetric.editDistance(computedFM, fm) / ((double) fm.features().size()));
-				double refactoringDistance = (refactoringDistanceMetric.editDistance(computedFM, fm) / ((double) fm.features().size()));
 				
 				double currentMetricDistance = zhangDistance;
 				
 				if (bestMetric == null || currentMetricDistance < bestMetricDistance) {
 					bestMetric = metric;
 					bestMetricDistance = currentMetricDistance;
-					bestCommonEdges = getCommonEdges(fm, computedFM, metric);
+					bestCommonEdges = getCommonEdges(fm, computedFM);
 				}
 
 			}
@@ -812,7 +841,7 @@ public class ASE2013KSynthesisTest extends FMLTest {
 
 	}
 	
-	private List<String> getCommonEdges(FeatureModelVariable fm1, FeatureModelVariable fm2, FeatureSimilarityMetric metric) {
+	private List<String> getCommonEdges(FeatureModelVariable fm1, FeatureModelVariable fm2) {
 		List<String> commonEdges = new ArrayList<String>();
 		
 		FeatureGraph<String> hierarchy1 = fm1.getFm().getDiagram();
@@ -825,7 +854,7 @@ public class ASE2013KSynthesisTest extends FMLTest {
 				FeatureNode<String> source2 = hierarchy2.findVertex(source1);
 				FeatureNode<String> target2 = hierarchy2.findVertex(target1);
 				if (hierarchy2.containsEdge(source2, target2, FeatureEdge.HIERARCHY)) {
-					commonEdges.add(source1 + " -> " + target1);// + " : " + metric.similarity(source1, target1));
+					commonEdges.add(source1 + " -> " + target1);// + " : " + metric.similarity(fm1.computeImplicationGraph(), source1, target1));
 				}
 			}
 		}
@@ -876,41 +905,6 @@ public class ASE2013KSynthesisTest extends FMLTest {
 		}
 	}
 
-	private void testGSDAlgorithm(List<FeatureModelVariable> fms) {
-		FGBuilder<String> builder = new FGBuilder<String>(_builder);
-		
-		FMEditDistanceMetric zhangDistanceMetric = new ZhangEditDistance();
-		FMEditDistanceMetric refactoringDistanceMetric = new RefactoringEditDistance();
-		CommonEdgesMetric commonEdgesMetric = new CommonEdgesMetric();
-
-		double sumCommonEdgesDistance = 0;
-		double sumZhangDistance = 0;
-		double sumRefactoringDistance = 0;
-
-		for (FeatureModelVariable fm : fms) {
-			
-			FeatureModelVariable computedFM = new FeatureModelVariable("GSD_" + fm.getCompleteIdentifier(), builder.build(fm.getFormula()));
-			System.out.println(computedFM.getFm().getDiagram());
-			
-				
-			double commonEdgesDistance = commonEdgesMetric.commonEdges(computedFM, fm) / ((double) fm.getFm().getDiagram().edges().size());
-			sumCommonEdgesDistance += commonEdgesDistance;
-			double zhangDistance = (zhangDistanceMetric.editDistance(computedFM, fm) / ((double) fm.features().size()));
-			sumZhangDistance += zhangDistance;
-			double refactoringDistance = (refactoringDistanceMetric.editDistance(computedFM, fm) / ((double) fm.features().size()));
-			sumRefactoringDistance += refactoringDistance;
-
-		}
-
-		System.out.println("GSD algorithm");
-		System.out.println("common edges : " + sumCommonEdgesDistance / fms.size());
-		System.out.println("zhang distance : " + sumZhangDistance / fms.size());
-		System.out.println("refactoring distance : " + sumRefactoringDistance / fms.size());
-		System.out.println();
-
-	}
-	
-
 
 	@After
 	public void prettyPrint() {
@@ -960,13 +954,19 @@ public class ASE2013KSynthesisTest extends FMLTest {
 		testClusters(getVariCellFeatureModels());
 	}
 
-	@Ignore
 	@Test
 	public void testOptimumBranchingSPLOT() {
 		System.out.println("Optimum branching SPLOT");
 		testOptimumBranching(getSPLOTFeatureModels());
 	}
 
+	@Ignore
+	@Test
+	public void testOptimumBranchingModifiedSPLOT() {
+		System.out.println("Optimum branching modified SPLOT");
+		testOptimumBranching(getModifiedSPLOTFeatureModels());
+	}
+	
 	@Ignore
 	@Test
 	public void testOptimumBranchingVariCell() {
@@ -984,6 +984,7 @@ public class ASE2013KSynthesisTest extends FMLTest {
 		testOptimumBranching(variCellFeatureModels);
 	}
 
+	@Ignore
 	@Test
 	public void testRunningExample() throws Exception {
 		
@@ -1016,21 +1017,6 @@ public class ASE2013KSynthesisTest extends FMLTest {
 		testFMClusters(getSPLOTFeatureModels());
 	}
 	
-	
-	@Ignore
-	@Test
-	public void testGSDAlgorithmRunningExample() {
-		System.out.println("GSD algorithm (from S. She)");
-		testGSDAlgorithm(getRunningExample());
-	}
-	
-	@Ignore
-	@Test
-	public void testGSDAlgorithmSPLOT() {
-		System.out.println("GSD algorithm (from S. She)");
-		testGSDAlgorithm(getSPLOTFeatureModels());
-	}
-	
 	@Ignore
 	@Test
 	public void testFASEAlgorithm() {
@@ -1042,28 +1028,44 @@ public class ASE2013KSynthesisTest extends FMLTest {
 		double sumCommonEdgesDistance = 0;
 		double sumZhangDistance = 0;
 		double sumRefactoringDistance = 0;
+		double sumCommonEdgesGlobalDistance = 0;
+		double totalNbEdges = 0;
 
 		List<FeatureModelVariable> fms = getFASEFeatureModels();
 		List<FeatureModelVariable> referenceFMs = getSPLOTFeatureModels();
-
+		int[] distribution = new int[11];
 
 		for (FeatureModelVariable fm : fms) {
 
 			FeatureModelVariable referenceFM = findReferenceFM(fm, referenceFMs);
 
-			double commonEdgesDistance = commonEdgesMetric.commonEdges(referenceFM, fm) / ((double) fm.getFm().getDiagram().edges().size());
+			double nbCommonEdges = commonEdgesMetric.commonEdges(referenceFM, fm);
+//			double nbEdges = computedFM.getFm().getDiagram().edges().size();
+			double nbEdges = fm.features().size();
+			
+			sumCommonEdgesGlobalDistance += nbCommonEdges;
+			totalNbEdges += nbEdges;
+			double commonEdgesDistance =  nbCommonEdges / nbEdges;
 			sumCommonEdgesDistance += commonEdgesDistance;
+			distribution[(int) (commonEdgesDistance*10)]++;
+			
 			double zhangDistance = (zhangDistanceMetric.editDistance(referenceFM, fm) / ((double) fm.features().size()));
 			sumZhangDistance += zhangDistance;
 			double refactoringDistance = (refactoringDistanceMetric.editDistance(referenceFM, fm) / ((double) fm.features().size()));
 			sumRefactoringDistance += refactoringDistance;
-
 		}
 
 		System.out.println("FASE algorithm");
-		System.out.println("common edges : " + sumCommonEdgesDistance / fms.size());
+		System.out.println("common edges for all fms : " + sumCommonEdgesGlobalDistance / totalNbEdges);
+		System.out.println("common edges by fm : " + sumCommonEdgesDistance / fms.size());
 		System.out.println("zhang distance : " + sumZhangDistance / fms.size());
 		System.out.println("refactoring distance : " + sumRefactoringDistance / fms.size());
+		System.out.println("distribution : ");
+		int sum = 0; 
+		for (int i =0; i<11; i++) {
+			sum += distribution[i];
+			System.out.println(i + " : " + distribution[i] + "\t" + sum);
+		}
 		System.out.println();
 
 	}
@@ -1084,7 +1086,6 @@ public class ASE2013KSynthesisTest extends FMLTest {
 	@Ignore
 	@Test
 	public void testCompareFASEandFAMILIAR() {
-		CommonEdgesMetric commonEdgesMetric = new CommonEdgesMetric();
 		List<FeatureModelVariable> referenceFMs = getSPLOTFeatureModels();
 		List<FeatureModelVariable> faseFMs = getFASEFeatureModels();
 		
@@ -1098,33 +1099,36 @@ public class ASE2013KSynthesisTest extends FMLTest {
 			
 			for (FeatureModelVariable fm : referenceFMs) {
 				FeatureModelVariable faseFM = findReferenceFM(fm, faseFMs);
-				List<String> faseCommonEdges = getCommonEdges(fm, faseFM, metric);
-								
-				InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(fm, metric, null, null, 0);
-				FeatureModelVariable familiarFM = synthesizer.computeCompleteFeatureModel();
-				List<String> familiarCommonEdges = getCommonEdges(fm, familiarFM, metric);
+				if (faseFM != null) {
+					List<String> faseCommonEdges = getCommonEdges(fm, faseFM);
+					
+					InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(fm, metric, null, null, 0);
+					FeatureModelVariable familiarFM = synthesizer.computeCompleteFeatureModel();
+					List<String> familiarCommonEdges = getCommonEdges(fm, familiarFM);
 
-				Set<String> faseAndFamiliarCommonEdges = new HashSet<String>(faseCommonEdges);
-				faseAndFamiliarCommonEdges.retainAll(familiarCommonEdges);
+					Set<String> faseAndFamiliarCommonEdges = new HashSet<String>(faseCommonEdges);
+					faseAndFamiliarCommonEdges.retainAll(familiarCommonEdges);
 
-				faseCommonEdges.removeAll(faseAndFamiliarCommonEdges);
-				familiarCommonEdges.removeAll(faseAndFamiliarCommonEdges);
+					faseCommonEdges.removeAll(faseAndFamiliarCommonEdges);
+					familiarCommonEdges.removeAll(faseAndFamiliarCommonEdges);
+					
+					nbEdges += fm.features().size();
+					nbFaseAndFamiliar += faseAndFamiliarCommonEdges.size();
+					nbFaseOnly += faseCommonEdges.size();
+					nbFamiliarOnly += familiarCommonEdges.size();
+					
+//					System.out.println("FASE and FAMILIAR");
+//					System.out.println(faseAndFamiliarCommonEdges.size());
+//					
+//					System.out.println("FASE only");
+//					System.out.println(faseCommonEdges.size());
+//					
+//					System.out.println("FAMILIAR only");
+//					System.out.println(familiarCommonEdges.size());
+//					
+//					System.out.println();
+				}
 				
-				nbEdges += fm.getFm().getDiagram().edges().size();
-				nbFaseAndFamiliar += faseAndFamiliarCommonEdges.size();
-				nbFaseOnly += faseCommonEdges.size();
-				nbFamiliarOnly += familiarCommonEdges.size();
-				
-//				System.out.println("FASE and FAMILIAR");
-//				System.out.println(faseAndFamiliarCommonEdges.size());
-//				
-//				System.out.println("FASE only");
-//				System.out.println(faseCommonEdges.size());
-//				
-//				System.out.println("FAMILIAR only");
-//				System.out.println(familiarCommonEdges.size());
-//				
-//				System.out.println();
 			}
 			
 			System.out.println("Nb of edges : " + nbEdges);
@@ -1139,11 +1143,206 @@ public class ASE2013KSynthesisTest extends FMLTest {
 	
 	@Ignore
 	@Test
+	public void testCompareReductionAndPathLength() {
+
+		int nbReductionAndPathLength = 0;
+		int nbReductionOnly = 0;
+		int nbPathLengthOnly = 0;
+		int nbEdges = 0;
+
+		for (FeatureModelVariable fm : getSPLOTFeatureModels()) {
+			InteractiveFMSynthesizer synthesizerReduction = new InteractiveFMSynthesizer(fm, reductionMetric, null, null, 0);
+			FeatureModelVariable reductionFM = synthesizerReduction.computeCompleteFeatureModel();
+			List<String> reductionCommonEdges = getCommonEdges(fm, reductionFM);				
+
+
+			InteractiveFMSynthesizer synthesizerPathLength = new InteractiveFMSynthesizer(fm, pathLength, null, null, 0);
+			FeatureModelVariable pathLengthFM = synthesizerPathLength.computeCompleteFeatureModel();
+			List<String> pathLengthCommonEdges = getCommonEdges(fm, pathLengthFM);
+
+			Set<String> reductionAndPathLengthCommonEdges = new HashSet<String>(reductionCommonEdges);
+			reductionAndPathLengthCommonEdges.retainAll(pathLengthCommonEdges);
+
+			reductionCommonEdges.removeAll(reductionAndPathLengthCommonEdges);
+			pathLengthCommonEdges.removeAll(reductionAndPathLengthCommonEdges);
+
+			System.out.println(pathLengthCommonEdges);
+			
+			nbEdges += fm.features().size();
+			nbReductionAndPathLength += reductionAndPathLengthCommonEdges.size();
+			nbReductionOnly += reductionCommonEdges.size();
+			nbPathLengthOnly += pathLengthCommonEdges.size();
+
+		}
+
+		System.out.println("Nb of edges : " + nbEdges);
+		System.out.println("Reduction and PathLength: " + nbReductionAndPathLength);
+		System.out.println("Reduction only : " + nbReductionOnly);
+		System.out.println("PathLength only : " + nbPathLengthOnly);
+		System.out.println();	
+		
+	}
+	
+	private double computeOntologicalScore(FeatureModelVariable fm, FeatureSimilarityMetric metric) {
+
+		Set<String> features = fm.getFm().features();
+		ImplicationGraph<String> big = fm.computeImplicationGraph();
+
+		// FIRST TRY
+//		double nbRecognizedFeatures = 0;
+//		for (String feature : features) {
+//			if (metric.similarity(big, feature, feature) != 0) {
+//				nbRecognizedFeatures += 1;
+//			}
+//		}
+//
+//		double score = nbRecognizedFeatures / features.size();
+		
+		// SECOND TRY
+//		double sumSimilarity = 0;
+//		for (String feature : features) {
+//			sumSimilarity += metric.similarity(big, feature, feature);
+//		}
+//		double score = sumSimilarity / features.size();
+		
+		// THIRD TRY
+		double sumSimilarity = 0;
+		FeatureGraph<String> diagram = fm.getFm().getDiagram();
+		for (FeatureEdge edge: diagram.edges()) {
+			if (edge.getType() == FeatureEdge.HIERARCHY) {
+				String feature = diagram.getSource(edge).getFeature();
+				String parent = diagram.getTarget(edge).getFeature();
+				double similarity = metric.similarity(big, feature, parent);
+				if (similarity > 0.7) {
+					sumSimilarity += 1;
+				}
+			}
+		}
+		double score = sumSimilarity / features.size();
+		
+		return score;
+
+	}
+	
+	/**
+	 * Rank FM according to the common edges and display ontological score
+	 */
+	@Ignore
+	@Test
+	public void testRankSPLOTFeatureModels() {
+		List<FeatureModelVariable> fms = getSPLOTFeatureModels();
+
+		for (FeatureSimilarityMetric metric : metrics) {
+			List<OptimumBranchingResult> results = new ArrayList<OptimumBranchingResult>();
+			
+			for (FeatureModelVariable fm : fms) {
+				OptimumBranchingResult result = new OptimumBranchingResult();
+				result.setReferenceFM(fm);
+				result.setMetric(metric);
+				result.setOntologicalScore(computeOntologicalScore(fm, metric));
+				
+				InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(fm, metric, null, null, 0);
+				FeatureModelVariable computedFM = synthesizer.computeCompleteFeatureModel();
+				result.setSynthesizedFM(computedFM);
+				result.setCommonEdges(getCommonEdges(fm, computedFM));
+				
+				results.add(result);
+			}	
+			
+			Collections.sort(results);
+			for (OptimumBranchingResult result : results) {
+				System.out.println(result);
+				System.out.println();
+			}
+
+			System.out.println("\n\n\n");
+		}
+		
+	}
+
+	/**
+	 * Competition between FASE and FAMILIAR on each FM
+	 */
+	@Ignore
+	@Test
+	public void testFASEvsFAMILIAR() {
+		List<FeatureModelVariable> referenceFMs = getSPLOTFeatureModels();
+		List<FeatureModelVariable> faseFMs = getFASEFeatureModels();
+		
+		for (FeatureSimilarityMetric metric : metrics) {
+			System.out.println(metric);
+			int faseWins = 0;
+			int familiarWins = 0;
+			int draw = 0;
+			int sumGap = 0;
+			
+			for (FeatureModelVariable fm : referenceFMs) {
+//				System.out.print(fm.getIdentifier() + " : ");
+				
+				FeatureModelVariable faseFM = findReferenceFM(fm, faseFMs);
+				
+				if (faseFM != null) {
+					List<String> faseCommonEdges = getCommonEdges(fm, faseFM);
+					
+					InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(fm, metric, null, null, 0);
+					FeatureModelVariable familiarFM = synthesizer.computeCompleteFeatureModel();
+					List<String> familiarCommonEdges = getCommonEdges(fm, familiarFM);
+					
+					int gap = faseCommonEdges.size() - familiarCommonEdges.size();
+					
+
+					if (gap > 0) {
+						faseWins++;
+						sumGap += gap;
+					} else if (gap < 0) {
+						familiarWins++;
+					} else {
+						draw++;
+					}
+				}
+				
+			}
+			
+			System.out.println("fase : " + faseWins);
+			System.out.println("familiar : " + familiarWins);
+			System.out.println("draw : " + draw);
+			System.out.println("gap : " + sumGap / ((double) faseWins));
+			System.out.println();
+		}
+	}
+	
+	@Test
+	public void testPerfectExample() {
+		System.out.println("Optimum branching of a perfect example");
+		testOptimumBranching(getPerfectExample());
+		
+//		FeatureModelVariable example = getPerfectExample().iterator().next();
+//		InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(example, pathLength, null, null, 0);
+//		for (KeyValue<String, List<String>> parentCandidates : synthesizer.getParentCandidates()) {
+//			System.out.println(parentCandidates.getKey());
+//			for (String parentCandidate : parentCandidates.getValue()) {
+//				System.out.println(parentCandidate + " : " + pathLength.similarity(null, parentCandidates.getKey(), parentCandidate));
+//			}
+//			System.out.println();
+//			
+//		}
+	}
+	
+	@Ignore
+	@Test
 	public void testToto() {
 		System.out.println("Toto test !");
-		ImplicationGraph<Set<String>> reducedGraph = getRunningExample().iterator().next().computeImplicationGraph().reduceCliques();
+		FeatureModelVariable runningExample = getRunningExample().iterator().next();
+		ImplicationGraph<Set<String>> reducedGraph = runningExample.computeImplicationGraph().reduceCliques();
 		TransitiveReduction.INSTANCE.reduce(reducedGraph);
-		System.out.println(reducedGraph);
+//		System.out.println(reducedGraph);
+		
+		Expression<String> constraint = new Expression<String>(
+				ExpressionType.IMPLIES,
+				new Expression<String>("Storage"),
+				new Expression<String>("Hosting"));
+		runningExample.addConstraint(constraint);
+		System.out.println(runningExample.getAllConstraints());
 	}
 	
 //	@Ignore
