@@ -1,0 +1,5 @@
+"See also": ["Textual editor?"] [Windows] "Software license" ["Full-featured free trial period"] ["Mac OS X"] ["WYSIWYG editors?"] [Linux] ["Syntax highlighting for (XML,XSD,XSL,XSLT,...)"] ["Tag Folding"] Type [Active] ["Tree View editor?"] ["Intellisense/Autocompletion (using schema.xsd for text)"] ["Graphical editor?"] ; 
+"Software license": ("GPL-lic"|proprietary|"Microsoft Public License"|"[[Browser-based|Free Browser-based]]Free Browser-based"|"[[Open Source Software|Open Source]]Open Source"|"proprietary (old version open source)"|"LGPL-lic") ; 
+"Full-featured free trial period": ("n/a"|"30")? ; 
+Type: ("Emacs mode"|"Eclipse Plugin"|Plugin|Standalone|"Standalone Eclipse Plugin"|"Web-app"|"Standalone + Visual Studio Plugin") ; 
+"Tree View editor?": [Limited] ;

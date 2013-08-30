@@ -1,0 +1,4 @@
+Comparison_of_brainwave_entrainment_software: Features "Stimuli/Methods" ; 
+Features: [Networkable] ["Export as sound file"] ["Volume modulation for embedded audio"] ["Background Noise"] ["Headphone-free sessions"] ["User-created sessions"] ["Pre-made sessions"] "Embed audio (sounds, music, hypnosis)" ; 
+"Stimuli/Methods": Software ["Monaural beats"] [Photic] ["Isochronic tones"] ["Binaural beats"] ; 
+Software: ("Isochronic Tone Generator"|"BrainWave Generator"|Discord|"Neuro-Programmer 3"|"BrainIgniter Player"|"Brainwave Studio"|"Mind WorkStation"|Gnaural|SBaGen) ;

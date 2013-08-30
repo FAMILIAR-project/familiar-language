@@ -1,0 +1,14 @@
+Comparison_of_YouTube_downloaders: ["Inbuilt conversion to formats and devices"] [Features] ["Supported Operating Systems"] ; 
+"Inbuilt conversion to formats and devices": (FLV|"OGG Vorbis")? ("3GP"|"OGG Theora")? ["MP3"] [WMV] [AVI] ["MPEG4"] ["Special device profiles (e.g. iPhone)"] [Matroska] [SWF] ; 
+Features: ("Show Lists, Artist Playlists, Charts Download"|"Integrated Browser")? ["Ad-Free Video Download"] ["Private YouTube Videos Download"] "Multi-thread Downloads" ["Batch Download"] "HD YouTube Videos Download" ["Max Download Speed"] ["Browser extensions"] ["One Step Download"] "More web sites support" ["Embedded YouTube Videos Download"] "Automatic Download" ["Stop, Pause & Resume"] ["Multi-Lingual"] ["User's Playlists, User's Uploads, User's Favourites Download"] ["Exraction of Original Audio from YouTube"] ; 
+"Supported Operating Systems": (Android|Online)? ["YouTube Downloader"] Windows ["Mac OS X"] [Linux] ; 
+"YouTube Downloader": (ClipGrab|"Orbit Downloader"|"Freemake Video Downloader"|"4KDownload"|"Video DownloadHelper"|"Free Studio"|JDownloader|RealDownloader|"MP3 Rocket") ; 
+("Integrated Browser" -> !"User's Playlists, User's Uploads, User's Favourites Download");
+("Integrated Browser" -> !"Max Download Speed");
+("OGG Theora" -> !SWF);
+("OGG Theora" -> !Matroska);
+(AVI -> !"OGG Theora");
+("3GP" -> !"OGG Vorbis");
+(FLV -> !"OGG Theora");
+("OGG Theora" -> !"Special device profiles (e.g. iPhone)");
+((Features -> "Max Download Speed") | (Features -> "Integrated Browser"));

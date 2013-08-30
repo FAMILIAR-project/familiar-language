@@ -1,0 +1,9 @@
+Comparison_of_distributed_file_systems: ("Locally managed"|"Remote access") ; 
+"Locally managed": Client License ["Access API"] "Written in" ; 
+"Remote access": "Run by" Name ; 
+Client: ("Quantcast File System-QFS"|"Tahoe-LAFS"|OpenAFS|FhGFS|Lustre|Ceph|GlusterFS|HDFS) ; 
+License: ("FRAUNHOFER FS (FhGFS) EULA, GPLv2 client"|"GPLv2"|"Apache License 2.0"|"GNU GPL 2+ and other"|LGPL|"GPLv3"|"IBM Public License") ; 
+"Access API": ("C++ client, FUSE (C++ server: MetaServer and ChunkServer are both in C++)"|"Java client, c client, HTTP"|"libglusterfs, FUSE"|POSIX|"HTTP (REST)"|"POSIX, liblustre, FUSE"|"HTTP (REST/SOAP)")? ; 
+"Written in": ("C / C++"|Java|Python|C) ; 
+"Run by": ("Amazon.com"|"Rackspace, Hewlett-Packard, others"|Microsoft|Cleversafe|Google) ; 
+Name: ("SWIFT (part of OpenStack)"|"Amazon S3"|"Microsoft Azure"|"Google Cloud Storage")? ;
