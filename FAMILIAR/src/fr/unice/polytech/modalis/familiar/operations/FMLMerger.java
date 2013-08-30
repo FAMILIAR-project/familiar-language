@@ -18,7 +18,7 @@ public abstract class FMLMerger {
 	protected Collection<FeatureModelVariable> _lfms ;
 	
 	// FIXME: all paramaters of the synthesis should be here now
-	protected KSynthesisConfiguration _kSynthesisConfiguration;
+	protected KSynthesisConfiguration _kSynthesisConfiguration = null;
 	
 	public static final HierarchyMergerStrategy _DEFAULT_HIERARCHY_MERGER = HierarchyMergerStrategy.MST_IMPLICATION_GRAPH; 
 	

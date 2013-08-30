@@ -3,10 +3,10 @@
  */
 package fr.unice.polytech.modalis.utils;
 
-import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
 import java.io.IOException;
+
+import org.apache.commons.io.FileUtils;
 
 /**
  * @author mathieuacher
@@ -15,6 +15,7 @@ import java.io.IOException;
 public class FileSerializer {
 
 	/**
+	 * FIXME deprecated just a shortcu to apache facilities
 	 * @param filename
 	 *            locate the file where we want to write
 	 * @param dot
@@ -23,12 +24,8 @@ public class FileSerializer {
 	 */
 	public static void write(String filename, String content)
 			throws IOException {
-		BufferedWriter bw = new BufferedWriter(new FileWriter(
-				new File(filename)));
-		bw.write(content + "\n");
-		bw.flush();
-		bw.close();
-
+		FileUtils.writeStringToFile(new File(filename), content);
+		
 	}
 
 	/**

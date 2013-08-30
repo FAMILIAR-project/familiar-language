@@ -2,6 +2,7 @@ package fr.unice.polytech.modalis.familiar.test;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,12 +13,50 @@ import com.google.common.collect.Sets;
 
 import fr.unice.polytech.modalis.familiar.operations.ImplicationGraphUtil;
 import fr.unice.polytech.modalis.familiar.variable.Comparison;
+import fr.unice.polytech.modalis.familiar.variable.ConstraintVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
+import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariableBDDFormula;
 import fr.unice.polytech.modalis.familiar.variable.SetVariable;
 import fr.unice.polytech.modalis.familiar.variable.Variable;
 import gsd.graph.ImplicationGraph;
+import gsd.synthesis.Expression;
 
 public class FMLOntologicalASETest extends FMLTest {
+	
+	@Test
+	public void testFASE() throws Exception {
+		
+		FeatureModelVariable faseExample = FM ("fase_example", 
+                "\"Cell Phone\": Games Display \"Accu Cell\" [\"Wireless\"] ; \n" +
+                "Wireless: (Infrared | Bluetooth)+; \n" +
+                "\"Accu Cell\": (Strong | Medium | Weak); \n" +
+                "Games: (\"Multi Player\" | \"Single Player\")+; \n" +
+                 "\"Single Player\": \"Artificial Opponent\"; \n" +
+                "Bluetooth -> Strong ; \n" + 
+                "(\"Multi Player\" -> Wireless); \n" +
+                "(\"Multi Player\" -> !Weak); \n" +
+                ""
+                );
+		
+		System.err.println("#" + faseExample.counting());
+		System.err.println("" + faseExample.computeOrGroups()); 
+		
+		System.err.println("" + faseExample.computeXorGroups()); 
+		
+		
+		FeatureModelVariable faseReduced = new FeatureModelVariableBDDFormula("", faseExample.getFormula(), _builder).slice(SliceMode.EXCLUDING, new HashSet<String>(Arrays.asList(new String[] {
+				"Weak"
+		})));
+		
+		
+		//System.err.println("" + faseReduced.compare(faseExample));
+		//faseExample.addConstraint(new ConstraintVariable(new Expression<String>("Weak").not(), ""));
+		
+		//System.err.println("#" + faseReduced.counting());
+		
+		
+	}
+	
 	
 	@Test
 	public void testIllustrativeExamples() throws Exception {

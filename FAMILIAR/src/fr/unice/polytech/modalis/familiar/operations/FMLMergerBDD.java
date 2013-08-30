@@ -413,10 +413,12 @@ public class FMLMergerBDD extends FMLMerger {
 
 		// the building process takes into account the hierarchy we want
 		// (fmProj)
-
+		
 		KSynthesisBDD synthesizer = new KSynthesisBDD(flaMerged, new KnowledgeSynthesis(fmProj.getDiagram()), builder) ;
-		//synthesizer.setSynthesisConfiguration(_kSynthesisConfiguration);
-
+		//
+		if (_kSynthesisConfiguration != null)
+			synthesizer.setSynthesisConfiguration(_kSynthesisConfiguration);
+		
 		_LOGGER.debug("domain of flaMerged:" + flaMerged.getDomain().size());
 		FeatureModel<String> fgRender = synthesizer.build().getFm(); // resulting
 		// FM

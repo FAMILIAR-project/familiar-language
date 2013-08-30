@@ -11,6 +11,8 @@ import org.junit.Test;
 import org.xtext.example.mydsl.fML.OpSelection;
 
 import fr.unice.polytech.modalis.familiar.parser.ConfigurationVariableFactory;
+import fr.unice.polytech.modalis.familiar.parser.ConvertAnalyzer;
+import fr.unice.polytech.modalis.familiar.parser.FMBuilder;
 import fr.unice.polytech.modalis.familiar.variable.ConfigurationVariable;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import fr.unice.polytech.modalis.familiar.variable.SetVariable;
@@ -27,7 +29,7 @@ public class HelloWorldTest extends FMLTest {
 	public void test1() throws Exception {
 		
 		FeatureModelVariable fm1 = FM("fm1", "A : B [C] ; ");
-		
+				
 		SetVariable cores1 = (SetVariable) _shell.parse("cores fm1");
 		System.err.println("cores1=" + cores1.names());
 		assertEquals(2, cores1.size());
