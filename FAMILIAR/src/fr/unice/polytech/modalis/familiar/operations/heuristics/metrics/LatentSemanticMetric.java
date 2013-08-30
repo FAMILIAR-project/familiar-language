@@ -1,9 +1,11 @@
 package fr.unice.polytech.modalis.familiar.operations.heuristics.metrics;
 
+import fr.unice.polytech.modalis.familiar.experimental.FGroup;
 import gsd.graph.ImplicationGraph;
 import gsd.graph.SimpleEdge;
 
 import java.util.Map;
+import java.util.Set;
 
 public class LatentSemanticMetric implements FeatureSimilarityMetric{
 	 private ImplicationGraph<String> big;
@@ -16,7 +18,7 @@ public class LatentSemanticMetric implements FeatureSimilarityMetric{
 	 
 	 
 	@Override
-	public double similarity(ImplicationGraph<String> implicationGraph, String featureName1, String featureName2) {
+	public double similarity(ImplicationGraph<String> implicationGraph, Set<FGroup> xorGroups, Set<FGroup> orGroups, String featureName1, String featureName2) {
 		
 		if (big == null || !big.equals(implicationGraph)) {
 			this.big = implicationGraph;

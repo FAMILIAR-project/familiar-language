@@ -21,7 +21,7 @@ public class ConstraintGenerator {
 
 	private static final String OUTPUT_FOLDER = "inputFML/splot-modified/";
 	
-	private static final double CONSTRAINT_PER_FEATURE = 30;
+	private static final double CONSTRAINT_PER_FEATURE = 1;
 	private static final double PERCENTAGE_IMPLIES = 0.8;
 
 	private Random random;

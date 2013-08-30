@@ -1,8 +1,10 @@
 package fr.unice.polytech.modalis.familiar.operations.heuristics.metrics;
 
+import fr.unice.polytech.modalis.familiar.experimental.FGroup;
 import gsd.graph.ImplicationGraph;
 
 import java.io.File;
+import java.util.Set;
 
 import org.wikipedia.miner.comparison.ArticleComparer;
 import org.wikipedia.miner.model.Article;
@@ -34,7 +36,7 @@ public class WikipediaMinerMetric implements FeatureSimilarityMetric {
 	}
 
 	@Override
-	public double similarity(ImplicationGraph<String> implicationGraph, String featureName1, String featureName2) {
+	public double similarity(ImplicationGraph<String> implicationGraph, Set<FGroup> xorGroups, Set<FGroup> orGroups, String featureName1, String featureName2) {
 		double relatedness = 0;
 
 		// Preprocessing

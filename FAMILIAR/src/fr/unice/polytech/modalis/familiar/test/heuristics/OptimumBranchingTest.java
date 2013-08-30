@@ -121,7 +121,7 @@ public class OptimumBranchingTest extends FMLTest {
 			for (SimpleEdge edge : big.edges()) {
 				String source = big.getSource(edge);
 				String target = big.getTarget(edge);
-				big.setEdgeWeight(edge, metric.similarity(big.getImplicationGraph(), source, target));
+				big.setEdgeWeight(edge, metric.similarity(big.getImplicationGraph(), null, null, source, target));
 			}
 			
 			// Compute optimum branching

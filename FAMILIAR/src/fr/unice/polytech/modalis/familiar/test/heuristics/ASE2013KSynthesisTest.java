@@ -1,13 +1,7 @@
 package fr.unice.polytech.modalis.familiar.test.heuristics;
 
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FilenameFilter;
-import java.io.IOException;
-import java.io.PrintStream;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -15,489 +9,28 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-import net.sf.extjwnl.dictionary.Dictionary;
-
 import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import fr.unice.polytech.modalis.familiar.experimental.FGroup;
 import fr.unice.polytech.modalis.familiar.gui.synthesis.KeyValue;
-import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.InteractiveFMSynthesizer;
-import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.AlwaysZeroMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.CommonEdgesMetric;
-import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.DirectedPathLengthMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.FMEditDistanceMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.FeatureSimilarityMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.ImplicationGraphMetrics;
-import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.LatentSemanticMetric;
-import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.MetricName;
-import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.PathLengthMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.RandomMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.RefactoringEditDistance;
-import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.SimmetricsMetric;
-import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.TransitiveReductionMetric;
-import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.WikipediaMinerDB;
-import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.WikipediaMinerMetric;
-import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.WuPalmerMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.ZhangEditDistance;
-import fr.unice.polytech.modalis.familiar.parser.FMLCommandInterpreter;
-import fr.unice.polytech.modalis.familiar.test.FMLTest;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
 import gsd.graph.ImplicationGraph;
-import gsd.graph.TransitiveReduction;
-import gsd.synthesis.Expression;
-import gsd.synthesis.ExpressionType;
-import gsd.synthesis.FGBuilder;
 import gsd.synthesis.FeatureEdge;
 import gsd.synthesis.FeatureGraph;
 import gsd.synthesis.FeatureNode;
 
-public class ASE2013KSynthesisTest extends FMLTest {
+public class ASE2013KSynthesisTest extends KSynthesisTest {
 
-	private static final String SPLOT_FOLDER = "inputFML/splot-models-2012-08-07";
-	private static final String VARICELL_FMS_FOLDER = "inputFML/wikipedia-comparison-tables";
-	private static final String FASE_FOLDER = "inputFML/FASE13-generated-models";
-	private static final String MODIFIED_SPLOT_FOLDER = "inputFML/splot-modified";
-	
-
-	private static final String WORDNET_DB = "/udd/gbecan/Documents/workspaces/workspace/Heuristics/resources/wordnet_properties.xml";
-	private static final String WIKIPEDIA_DB = "/local/wikipedia/WikipediaMiner/db_wikipedia/wikipedia-template.xml";
-	private static final String WIKTIONARY_DB = "/local/wikipedia/WikipediaMiner/db_wiktionary/wikipedia-template.xml";
-	private static final String LSA_DB = "C:\\db_wikipedia\\wikipedia-template.xml";
-
-	private static final String OUTPUT_FOLDER = "output/generated-with-heuristics/";
-
-	private static int RANDOM_ITERATIONS = 1;
-
-	private static WikipediaMinerDB wikipediaDB;
-	private static WikipediaMinerDB wiktionaryDB;
-	
-	private static List<FeatureSimilarityMetric> metrics;
-	private static WikipediaMinerMetric wikiMetric;
-	private static WikipediaMinerMetric wiktionaryMetric;
-	private static FeatureSimilarityMetric pathLength;
-	private static FeatureSimilarityMetric levenshtein;
-	private static FeatureSimilarityMetric smithWaterman;
-	private static TransitiveReductionMetric reductionMetric;
-	
-	private static HashMap<FeatureSimilarityMetric, Double> clusteringThresholds;
-
-	private static List<FeatureModelVariable> splotFMs;
-	private static List<FeatureModelVariable> variCellFMs;
-	private static List<FeatureModelVariable> faseFMs;
-	private static List<FeatureModelVariable> modifiedSplotFMs;
-	
-	private static final List<String> splotExcludeFiles = Arrays.asList(new String[] {
-			// two features with the same name
-			"model_20110926_400852996.xml",
-			"model_20101112_864228137.xml",
-			"model_20110406_353034837.xml",
-			"model_20110216_608697455.xml",
-			"smart_home_fm.xml",
-
-			"model_20120418_828883554.xml",
-			"model_20120408_404695779.xml",
-			"model_20091205_755658379.xml",
-			"model_20110712_1373520081.xml",
-			"model_20111220_1450733948.xml",
-			"model_20120422_2100930135.xml",
-			"model_20110222_2078967171.xml",
-			"model_20110826_1574631601.xml",
-			"model_20101208_1056693380.xml",
-			"model_20101117_2128796258.xml",
-			"model_20100308_1355834007.xml",
-			"model_20111029_1654942500.xml",
-			"model_20120710_919309758.xml",
-			"model_20120130_333619036.xml",
-			"model_20110725_452580960.xml",
-			"model_20110330_919429247.xml",
-			"model_20120328_1412454948.xml",
-			"REAL-FM-10.xml",
-			"model_20100829_787258873.xml",
-			"model_20100326_770562654.xml",
-			"model_20091225_1547989376.xml",
-			"model_20110310_1849309646.xml",
-			"model_20120201_1444061231.xml",
-			"model_20100106_985255768.xml",
-			"model_20110704_328391695.xml",
-			"REAL-FM-17.xml",
-			"model_20100831_1378118837.xml",
-			"model_20120529_2101702978.xml",
-			"model_20120425_1998125226.xml",
-			"model_20101115_2000504462.xml",
-			"model_20100730_1366577700.xml",
-			"model_20101020_1809093990.xml",
-			"model_20120717_770767926.xml",
-			"model_20100415_947132043.xml",
-			"model_20110407_1283128166.xml",
-			"model_20120328_288933955.xml",
-			"REAL-FM-1.xml",
-			"model_20100325_298677687.xml",
-			"model_20100927_1382418986.xml",
-			"model_20120510_220834497.xml",
-			"model_20101116_1022976130.xml",
-			"model_20110715_945252556.xml",
-			"model_20110406_656545830.xml",
-			"model_20120328_1814590478.xml",
-			"REAL-FM-11.xml",
-			"model_20120328_794090001.xml",
-			"model_20120328_1227899142.xml",
-			"model_20110919_127780100.xml",
-			"model_20100415_240595643.xml",
-			"REAL-FM-16.xml",
-			"model_20120205_24117969.xml",
-			"model_20120111_1667229430.xml",
-			"model_20100830_561967343.xml",
-			"model_20120424_1703152596.xml",
-			"model_20110323_789959080.xml",
-
-			// cannot compute the implication graph
-			"model_20110301_216655728.xml",
-			"model_20120725_1460954667.xml",
-			"model_20110516_1331478109.xml",
-			"REAL-FM-4.xml", // too big
-
-			// not in english
-			"model_20120328_573707444.xml",
-			"model_20110826_1555954181.xml",
-			"model_20110826_252647654.xml",
-			"model_20110926_608554224.xml",
-			"model_20120419_1397354511.xml",
-			"model_20100416_811483774.xml",
-			"model_20120422_1648870831.xml",
-			"model_20120201_899753062.xml",
-			"model_20111031_386778867.xml",
-			"model_20120328_1357539597.xml",
-			"model_20111220_1184087779.xml",
-			"model_20100607_746327867.xml",
-			"model_20120229_1103715736.xml",
-			"model_20110401_868452735.xml",
-			"model_20120328_663906927.xml",
-			"model_20110329_10104623.xml",
-			"model_20120328_523540818.xml",
-			"model_20120201_865979127.xml",
-			"model_20120515_1862354569.xml",
-			"model_20110925_62365838.xml",
-			"model_20120122_258977494.xml",
-			"model_20110826_819334011.xml",
-			"model_20100904_330653656.xml",
-			"model_20120609_84195762.xml",
-			"model_20110826_1180494500.xml",
-			"model_20120705_77954373.xml",
-			"model_20110826_1744501275.xml",
-			"model_20120328_1667195252.xml",
-			"model_20110809_1799855518.xml",
-			"model_20120513_373795895.xml",
-			"model_20101117_1571856147.xml",
-			"model_20120328_361613983.xml",
-			"model_20110718_866950306.xml",
-			"model_20120423_1625073325.xml",
-			"model_20091219_494647199.xml",
-			"model_20110507_674768061.xml",
-			"model_20120512_712347860.xml",
-			"model_20120328_1974817485.xml",
-			"model_20100321_1548012375.xml",
-			"model_20120113_1803352101.xml",
-			"model_20101109_1698100628.xml",
-			"model_20111111_1026730216.xml",
-			"model_20120423_1196408273.xml",
-			"model_20120328_593032745.xml",
-			"model_20110823_553386338.xml",
-			"model_20110130_639381749.xml",
-
-			// useless feature names (like F1, F2 or A, B, C)
-			"model_20120701_1498696792.xml",
-			"model_20120718_813832704.xml",
-			"model_20111027_1380540076.xml",
-			"model_20111129_1932950448.xml",
-			"model_20120314_1438691117.xml",
-			"model_20111027_966072474.xml",
-			"model_20101123_920943759.xml",
-			"model_20120701_899073101.xml",
-			"model_20110704_555218409.xml",
-			"model_20110216_1027109687.xml",
-			"model_20101124_661702924.xml",
-			"model_20110519_503436691.xml",
-			"model_20120412_1314362396.xml",
-			"model_20120801_1784537083.xml",
-			"model_20110915_1159959623.xml",
-			
-			// FASE'13
-			
-			// too long (more than 900 000 products)
-			"model_20111201_1252018702.xml",
-			"model_20120522_87989914.xml",
-			"model_20091009_1552375070.xml",
-			"arcade_game_pl_fm.xml",
-			"model_20111201_372659565.xml",
-			"model_20111130_1614470655.xml",
-			"model_20110116_381192414.xml",
-			"REAL-FM-3.xml",
-			"model_20100904_226530663.xml",
-			"model_20120329_788560154.xml",
-			"REAL-FM-18.xml",
-			"model_20101024_1938793748.xml",
-			
-			// parsing error
-			"model_20110527_1847306763.xml",
-			"model_20110207_1623721536.xml",
-			
-			// missing features in the result
-			"DELL-LAPTOP-NOTEBOOK-FM.xml",
-			
-			""
-	});
-	private static FeatureSimilarityMetric wup;
-	private static DirectedPathLengthMetric directedPathLength;
-	
-
-	
-	// ----- SET UP TEST -----
-	
-	
-	
-	@AfterClass
-	public static void tearDownMetrics() {
-		if (wikipediaDB != null) {
-			wikipediaDB.closeDatabase();	
-		}
-		if (wiktionaryDB != null) {
-			wiktionaryDB.closeDatabase();
-		}
-	}
-	
-	@BeforeClass
-	public static void setUpMetrics() throws Exception {
-		// Set up databases
-		if (new File(WIKIPEDIA_DB).exists()) {
-			wikipediaDB = new WikipediaMinerDB(WIKIPEDIA_DB);
-			wikipediaDB.loadDatabase(); // Must be closed
-		}
-		
-		if (new File(WIKTIONARY_DB).exists()) {
-			wiktionaryDB = new WikipediaMinerDB(WIKTIONARY_DB);
-			wiktionaryDB.loadDatabase(); // Must be closed
-		}
-		
-		
-		// Set up metrics
-		metrics = new ArrayList<FeatureSimilarityMetric>();
-		clusteringThresholds = new HashMap<FeatureSimilarityMetric, Double>();
-
-		// Random metric
-		FeatureSimilarityMetric random = new RandomMetric();
-		metrics.add(random);
-		clusteringThresholds.put(random, 0.15);
-
-		// Simmetrics metrics
-		smithWaterman = new SimmetricsMetric(MetricName.SIMMETRICS_SMITHWATERMAN);
-		metrics.add(smithWaterman);
-		clusteringThresholds.put(smithWaterman, 0.6);
-
-		levenshtein = new SimmetricsMetric(MetricName.SIMMETRICS_LEVENSHTEIN);
-		metrics.add(levenshtein);
-		clusteringThresholds.put(levenshtein, 0.7);
-
-		// WordNet metrics
-		if (new File(WORDNET_DB).exists()) {
-			Dictionary wordNetDictionary = Dictionary.getInstance(new FileInputStream(WORDNET_DB));
-			wup = new WuPalmerMetric(wordNetDictionary);
-			metrics.add(wup);
-			clusteringThresholds.put(wup, 0.2);
-
-			pathLength = new PathLengthMetric(wordNetDictionary); 
-			metrics.add(pathLength);
-			clusteringThresholds.put(pathLength, 0.5);
-			
-			directedPathLength = new DirectedPathLengthMetric(wordNetDictionary);
-			metrics.add(directedPathLength);
-			clusteringThresholds.put(directedPathLength, 0.5);
-		}
-
-//		// WikipediaMiner metrics
-//		if (wikipediaDB.isLoaded()) {
-//			wikiMetric = new WikipediaMinerMetric(wikipediaDB);
-//			metrics.add(wikiMetric);
-//			clusteringThresholds.put(wikiMetric, 0.5);	
-//		}
-//		
-//		if (wiktionaryDB.isLoaded()) {
-//			wiktionaryMetric = new WikipediaMinerMetric(wiktionaryDB);
-//			metrics.add(wiktionaryMetric);
-//			clusteringThresholds.put(wiktionaryMetric, 0.5);	
-//		}
-
-//		// LSA metric
-//		if (wikipediaDB.isLoaded()) {
-//			LatentSemanticMetric lsa = new LatentSemanticMetric(wikipediaDB);
-//			metrics.add(lsa);
-//			clusteringThresholds.put(lsa, 0.5);
-//		}
-		
-//		// Transitive reduction metric
-//		reductionMetric = new TransitiveReductionMetric();
-//		metrics.add(reductionMetric);
-//		clusteringThresholds.put(reductionMetric, 0.5);
-
-	}
-
-	// ----- GET FEATURE MODELS -----
-
-	/**
-	 * Load all feature models from a specified folder
-	 * @param folder
-	 * @param extension : file extension
-	 * @param excludeFiles
-	 * @param prefix : prefix of FMs' identifier
-	 * @return
-	 */
-	public List<FeatureModelVariable> loadFeatureModelFolder(
-			String folder, final String extension, final List<String> excludeFiles, String prefix) {
-		
-		if (_shell == null) {
-			_shell = FMLShell.instantiateStandalone(null);
-		}
-		
-
-		ArrayList<FeatureModelVariable> fms = new ArrayList<FeatureModelVariable>();
-		
-		File fmsFolder = new File(folder);
-
-		if (fmsFolder.exists() && fmsFolder.isDirectory()) {
-			
-			// Filter files
-			File[] files = fmsFolder.listFiles(new FilenameFilter() {
-				@Override
-				public boolean accept(File dir, String name) {
-					return name.endsWith(extension) && (excludeFiles == null || !excludeFiles.contains(name));
-				}
-			});
-
-			// Load feature models
-			for (File file : files) {
-				String fmIdentifier = prefix +"_" + file.getName().replaceAll("-", "_");
-				fmIdentifier = fmIdentifier.substring(0, fmIdentifier.lastIndexOf("."));
-				String command = fmIdentifier + " = FM(\"" + file.getPath() + "\")";
-				FeatureModelVariable fm = (FeatureModelVariable) _shell.parse(command);
-				if (fm == null) {
-					System.out.println("Error with " + file.getPath());
-				} else {
-					fms.add(fm);	
-				}
-				
-			}
-		}
-		
-		return fms;
-	}
-	
-	public List<FeatureModelVariable> getSPLOTFeatureModels()  {
-		if (splotFMs == null) {
-			splotFMs = loadFeatureModelFolder(SPLOT_FOLDER, ".xml", splotExcludeFiles, "splotFM");
-			System.out.println(splotFMs.size() + " FMs loaded from SPLOT");
-		}
-
-		return splotFMs;
-	}
-
-
-	public List<FeatureModelVariable> getModifiedSPLOTFeatureModels() {
-		if (modifiedSplotFMs == null) {
-			modifiedSplotFMs = loadFeatureModelFolder(MODIFIED_SPLOT_FOLDER, ".xml", null, "modified");
-			System.out.println(modifiedSplotFMs.size() + " FMs loaded from modified SPLOT");
-		}
-
-		return modifiedSplotFMs;
-	}
-	
-	public List<FeatureModelVariable> getVariCellFeatureModels() {
-		if (variCellFMs == null) {
-			variCellFMs = loadFeatureModelFolder(VARICELL_FMS_FOLDER, ".fmlbdd", null, "varicellFM");
-			System.out.println(variCellFMs.size() + " FMs loaded from VariCell");
-		}
-
-		return variCellFMs;
-	}
-	
-	
-	public List<FeatureModelVariable> getRunningExample() {
-		
-		if (_shell == null) {
-			_shell = FMLShell.instantiateStandalone(null);
-			_environment = _shell.getCurrentEnv();
-			_builder = FMLCommandInterpreter.getBuilder();
-		}
-		
-		ArrayList<FeatureModelVariable> fms = new ArrayList<FeatureModelVariable>();
-		
-		try {
-			
-			FeatureModelVariable runningExample = FM ("fm1bis", 
-					" Wiki: Hosting Licence Storage [\"Programming Language\"] ; \n" + 
-					"Hosting: (\"Hosted Service\"|Local) ; \n" + 
-					"Licence: (\"Proprietary Licence\"|\"Open Source\") ; \n" + 
-					"Storage: (PostgreSQL|MySQL) ; \n" + 
-					"\"Programming Language\": (Java|PHP) ; \n" + 
-					"\"Hosted Service\": [Domain] ; \n" + 
-					"(\"Proprietary Licence\" -> !\"Programming Language\");\n" + 
-					"(Local -> !\"Proprietary Licence\");\n" + 
-					"(PostgreSQL <-> \"Proprietary Licence\");" +
-					"PostgreSQL -> Domain ;" +
-					//"\"Open Source\" -> MySQL ; " +
-					//"PHP -> MySQL ; " +
-					//"Java -> MySQL ; " +
-					//"\"Proprietary Licence\" -> !MySQL ; " +  
-					"" +
-					"" +
-					""
-					);
-			fms.add(runningExample);
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return fms;
-	}
-	
-	private List<FeatureModelVariable> getFASEFeatureModels() {
-		if (faseFMs == null) {
-			faseFMs = loadFeatureModelFolder(FASE_FOLDER, ".xml", splotExcludeFiles, "faseFM");
-			System.out.println(faseFMs.size() + " FMs loaded from FASE");
-		}
-		
-		return faseFMs;
-	}
-	
-public List<FeatureModelVariable> getPerfectExample() {
-		
-		if (_shell == null) {
-			_shell = FMLShell.instantiateStandalone(null);
-			_environment = _shell.getCurrentEnv();
-			_builder = FMLCommandInterpreter.getBuilder();
-		}
-		
-		ArrayList<FeatureModelVariable> fms = new ArrayList<FeatureModelVariable>();
-		
-		try {
-			
-			FeatureModelVariable runningExample = FM ("software",
-					"Software: \"Operating System\" Application Compiler Debugger; \n" +
-					"\"Operating System\": Unix Windows; \n" +
-					"Application: \"Web browser\" Applet \"Word processor\"; \n" +
-					"Compiler: \"C compiler\" \"Fortran compiler\"; \n" +
-					""
-					);
-			fms.add(runningExample);
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return fms;
-	}
-	
 	// ----- TESTS -----
 	
 	private void testBIGDegree(List<FeatureModelVariable> fms) {
@@ -729,6 +262,7 @@ public List<FeatureModelVariable> getPerfectExample() {
 			double nbIterations = metric instanceof RandomMetric ? RANDOM_ITERATIONS : 1;
 			for (int i=0; i<nbIterations; i++) {
 				for (FeatureModelVariable fm : fms) {
+//					System.out.println(fm.getCompleteIdentifier());
 
 					List<FeatureSimilarityMetric> complementaryHeuristics = new ArrayList<FeatureSimilarityMetric>();
 //					complementaryHeuristics.add(pathLength);
@@ -752,34 +286,26 @@ public List<FeatureModelVariable> getPerfectExample() {
 					sumRefactoringDistance += refactoringDistance;
 					
 					// Write the generated FM in the ouput folder
-					File computedFMFile = new File(OUTPUT_FOLDER + fm.getIdentifier() + "_" + metric.toString().replaceAll(" ", "_") + ".xml");
-					try {
-						PrintStream standardOutput = System.out;
-						PrintStream fileOutput = new PrintStream(computedFMFile);
-						System.setOut(fileOutput); // Hack for this stupid dumpXML function
-						computedFM.toSPLOT().dumpXML();
-						System.setOut(standardOutput);
-						fileOutput.close();
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
+					writeFMToFile(metric, fm, computedFM);
 				}
 			}
 			System.out.println(metric);
-			System.out.println("common edges for all fms : " + sumCommonEdgesGlobalDistance / totalNbEdges / nbIterations);
+			System.out.println("common edges for all fms : " + sumCommonEdgesGlobalDistance / totalNbEdges);
 			System.out.println("common edges by fm : " + sumCommonEdgesDistance / fms.size() / nbIterations);
 			System.out.println("zhang distance : " + sumZhangDistance / fms.size() / nbIterations);
 			System.out.println("refactoring distance : " + sumRefactoringDistance / fms.size() / nbIterations);
 			System.out.println("distribution : ");
 			int sum = 0; 
 			for (int i =0; i<11; i++) {
-				sum += distribution[i];
-				System.out.println(i + " : " + distribution[i] + "\t" + sum);
+				sum += distribution[i] / nbIterations;
+				System.out.println(i + " : " + (int) (distribution[i] / nbIterations) + "\t" + sum);
 			}
 			System.out.println();
 		}
 
 	}
+
+	
 	
 	private void testFMClusters(List<FeatureModelVariable> fms) {
 		// Distance metrics
@@ -840,27 +366,7 @@ public List<FeatureModelVariable> getPerfectExample() {
 		}
 
 	}
-	
-	private List<String> getCommonEdges(FeatureModelVariable fm1, FeatureModelVariable fm2) {
-		List<String> commonEdges = new ArrayList<String>();
-		
-		FeatureGraph<String> hierarchy1 = fm1.getFm().getDiagram();
-		FeatureGraph<String> hierarchy2 = fm2.getFm().getDiagram();
 
-		for (FeatureEdge edge : hierarchy1.edges()) {
-			if (edge.getType() == FeatureEdge.HIERARCHY) {
-				String source1 = hierarchy1.getSource(edge).getFeature();
-				String target1 = hierarchy1.getTarget(edge).getFeature();
-				FeatureNode<String> source2 = hierarchy2.findVertex(source1);
-				FeatureNode<String> target2 = hierarchy2.findVertex(target1);
-				if (hierarchy2.containsEdge(source2, target2, FeatureEdge.HIERARCHY)) {
-					commonEdges.add(source1 + " -> " + target1);// + " : " + metric.similarity(fm1.computeImplicationGraph(), source1, target1));
-				}
-			}
-		}
-		
-		return commonEdges;
-	}
 	
 
 	private void testInteractiveSynthesis(List<FeatureModelVariable> fms) {
@@ -954,6 +460,7 @@ public List<FeatureModelVariable> getPerfectExample() {
 		testClusters(getVariCellFeatureModels());
 	}
 
+	@Ignore
 	@Test
 	public void testOptimumBranchingSPLOT() {
 		System.out.println("Optimum branching SPLOT");
@@ -1070,18 +577,7 @@ public List<FeatureModelVariable> getPerfectExample() {
 
 	}
 
-	private FeatureModelVariable findReferenceFM(FeatureModelVariable fm, List<FeatureModelVariable> referenceFMs) {
-		String name = fm.getCompleteIdentifier();
-		name = name.substring(name.indexOf("_")+1);
-		
-		for (FeatureModelVariable referenceFM : referenceFMs) {
-			if (referenceFM.getCompleteIdentifier().endsWith(name)) {
-				return referenceFM;
-			}
-		}
-		
-		return null;
-	}
+
 
 	@Ignore
 	@Test
@@ -1098,12 +594,29 @@ public List<FeatureModelVariable> getPerfectExample() {
 			int nbEdges = 0;
 			
 			for (FeatureModelVariable fm : referenceFMs) {
+//				System.out.println(fm.getCompleteIdentifier());
+				
 				FeatureModelVariable faseFM = findReferenceFM(fm, faseFMs);
 				if (faseFM != null) {
 					List<String> faseCommonEdges = getCommonEdges(fm, faseFM);
+					String faseRoot = faseFM.root().getFtName();
 					
-					InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(fm, metric, null, null, 0);
-					FeatureModelVariable familiarFM = synthesizer.computeCompleteFeatureModel();
+					
+					InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(fm, metric, null, null, -1);
+ 					FeatureModelVariable familiarFM = synthesizer.computeCompleteFeatureModel();
+ 					writeFMToFile(metric, fm, familiarFM);
+ 					String familiarRoot = familiarFM.root().getFtName();
+					
+					
+					
+					
+					if (!familiarRoot.equals(faseRoot)) {
+						System.out.println("\"" + fm.getCompleteIdentifier().substring(fm.getCompleteIdentifier().indexOf("_") +1) + ".xml\",");
+//						System.out.println("fase : " + faseRoot);
+//						System.out.println("familiar : " + familiarRoot);
+//						System.out.println();
+					}
+					
 					List<String> familiarCommonEdges = getCommonEdges(fm, familiarFM);
 
 					Set<String> faseAndFamiliarCommonEdges = new HashSet<String>(faseCommonEdges);
@@ -1117,15 +630,11 @@ public List<FeatureModelVariable> getPerfectExample() {
 					nbFaseOnly += faseCommonEdges.size();
 					nbFamiliarOnly += familiarCommonEdges.size();
 					
-//					System.out.println("FASE and FAMILIAR");
-//					System.out.println(faseAndFamiliarCommonEdges.size());
-//					
-//					System.out.println("FASE only");
-//					System.out.println(faseCommonEdges.size());
-//					
-//					System.out.println("FAMILIAR only");
-//					System.out.println(familiarCommonEdges.size());
-//					
+					if (!faseCommonEdges.isEmpty() || !familiarCommonEdges.isEmpty()) {
+						System.out.println("\"" + fm.getCompleteIdentifier().substring(fm.getCompleteIdentifier().indexOf("_") +1) + ".xml\",");
+						System.out.println(faseCommonEdges.size());
+						System.out.println(familiarCommonEdges.size());
+					}
 //					System.out.println();
 				}
 				
@@ -1187,6 +696,8 @@ public List<FeatureModelVariable> getPerfectExample() {
 
 		Set<String> features = fm.getFm().features();
 		ImplicationGraph<String> big = fm.computeImplicationGraph();
+		Set<FGroup> xorGroups = fm.computeXorGroups();
+		Set<FGroup> orGroups = fm.computeOrGroups();
 
 		// FIRST TRY
 //		double nbRecognizedFeatures = 0;
@@ -1212,7 +723,7 @@ public List<FeatureModelVariable> getPerfectExample() {
 			if (edge.getType() == FeatureEdge.HIERARCHY) {
 				String feature = diagram.getSource(edge).getFeature();
 				String parent = diagram.getTarget(edge).getFeature();
-				double similarity = metric.similarity(big, feature, parent);
+				double similarity = metric.similarity(big, xorGroups, orGroups, feature, parent);
 				if (similarity > 0.7) {
 					sumSimilarity += 1;
 				}
@@ -1311,38 +822,60 @@ public List<FeatureModelVariable> getPerfectExample() {
 		}
 	}
 	
+	@Ignore
+	@Test
+	public void testCheckFASEFeatureModels() {
+		System.out.println("Checking FASE FMs");
+		for (FeatureModelVariable fm : getFASEFeatureModels()) {
+			FeatureModelVariable referenceFM = findReferenceFM(fm, getSPLOTFeatureModels());
+			FeatureGraph<String> fmDiagram = fm.getFm().getDiagram();
+			FeatureGraph<String> referenceDiagram = referenceFM.getFm().getDiagram();
+			if (fmDiagram.vertices().size() != referenceDiagram.vertices().size()) {
+				System.out.println(fm.getCompleteIdentifier());
+			}
+		}
+	}
+	
+	@Ignore
 	@Test
 	public void testPerfectExample() {
 		System.out.println("Optimum branching of a perfect example");
 		testOptimumBranching(getPerfectExample());
 		
-//		FeatureModelVariable example = getPerfectExample().iterator().next();
-//		InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(example, pathLength, null, null, 0);
-//		for (KeyValue<String, List<String>> parentCandidates : synthesizer.getParentCandidates()) {
-//			System.out.println(parentCandidates.getKey());
-//			for (String parentCandidate : parentCandidates.getValue()) {
-//				System.out.println(parentCandidate + " : " + pathLength.similarity(null, parentCandidates.getKey(), parentCandidate));
-//			}
-//			System.out.println();
-//			
-//		}
+		FeatureModelVariable example = getPerfectExample().iterator().next();
+		InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(example, directedPathLength, null, null, 0);
+		for (KeyValue<String, List<String>> parentCandidates : synthesizer.getParentCandidates()) {
+			System.out.println(parentCandidates.getKey());
+			for (String parentCandidate : parentCandidates.getValue()) {
+				System.out.println(parentCandidate + " : " + directedPathLength.similarity(null, null, null, parentCandidates.getKey(), parentCandidate));
+			}
+			System.out.println();
+			
+		}
 	}
 	
 	@Ignore
 	@Test
 	public void testToto() {
 		System.out.println("Toto test !");
-		FeatureModelVariable runningExample = getRunningExample().iterator().next();
-		ImplicationGraph<Set<String>> reducedGraph = runningExample.computeImplicationGraph().reduceCliques();
-		TransitiveReduction.INSTANCE.reduce(reducedGraph);
-//		System.out.println(reducedGraph);
+		FeatureModelVariable faseFM = getFASEExample().iterator().next();
+		writeFMToFile(null, faseFM, faseFM);
+		testOptimumBranching(getFASEExample());
+	}
+	
+	@Ignore
+	@Test
+	public void testTata() throws Exception {
+		FeatureModelVariable faseExample = FM ("fase_counter_example", 
+				"A: [B] [C] E ; \n" +
+				"(C -> B); \n" +
+				""
+				);
 		
-		Expression<String> constraint = new Expression<String>(
-				ExpressionType.IMPLIES,
-				new Expression<String>("Storage"),
-				new Expression<String>("Hosting"));
-		runningExample.addConstraint(constraint);
-		System.out.println(runningExample.getAllConstraints());
+		writeFMToFile(null, faseExample, faseExample);
+		List<FeatureModelVariable> fms = new ArrayList<FeatureModelVariable>();
+		fms.add(faseExample);
+		testOptimumBranching(fms);
 	}
 	
 //	@Ignore

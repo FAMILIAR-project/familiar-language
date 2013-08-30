@@ -9,6 +9,7 @@ import java.util.Observable;
 import java.util.Set;
 
 import ch.usi.inf.sape.hac.dendrogram.Dendrogram;
+import fr.unice.polytech.modalis.familiar.experimental.FGroup;
 import fr.unice.polytech.modalis.familiar.gui.synthesis.FeatureComparator;
 import fr.unice.polytech.modalis.familiar.gui.synthesis.KeyValue;
 import fr.unice.polytech.modalis.familiar.gui.synthesis.OutDegreeComparator;
@@ -43,6 +44,7 @@ public class InteractiveFMSynthesizer extends Observable{
 	private FeatureModelVariable fmv;
 	private WeightedImplicationGraph<String> big;
 	private WeightedImplicationGraph<String> originalBig;
+	private Set<FGroup> xorGroups;
 
 	private FeatureSimilarityMetric parentSimilarityMetric;
 	private FeatureFrequencyMetric featureFrequencyMetric;
@@ -53,6 +55,7 @@ public class InteractiveFMSynthesizer extends Observable{
 	private List<Set<Set<String>>> supportClusters;
 	private double clusteringThreshold;
 	private List<FeatureSimilarityMetric> complementaryParentSimilarityMetrics;
+	private Set<FGroup> orGroups;
 
 
 
@@ -63,12 +66,16 @@ public class InteractiveFMSynthesizer extends Observable{
 			double clusteringThreshold) {
 
 		// Initialize data
-		this.fmv = fmv;
 		big = new WeightedImplicationGraph<String>(fmv.computeImplicationGraph());
 		originalBig = big.clone();
+		xorGroups = fmv.computeXorGroups();
+		orGroups = fmv.computeOrGroups();
+		
 		this.fmv = new FeatureModelVariable(fmv.getIdentifier() + "_synthesis",
 				new FeatureModel<String>(FeatureGraphFactory.mkStringFactory().mkTop()),
 				fmv.getFormula().clone());
+		
+		
 		featureComparator = new OutDegreeComparator(big.getImplicationGraph());
 
 		// Check algorithm's parameters
@@ -79,7 +86,7 @@ public class InteractiveFMSynthesizer extends Observable{
 		if (clusteringThreshold >= 0 && clusteringThreshold <=1) {
 			this.clusteringThreshold = clusteringThreshold;		
 		} else {
-			this.clusteringThreshold = 0;
+			this.clusteringThreshold = -1;
 		}
 
 		this.complementaryParentSimilarityMetrics = complementaryParentSimilarityMetrics;
@@ -286,7 +293,7 @@ public class InteractiveFMSynthesizer extends Observable{
 	 */
 	private void computeClusters() {
 		HierarchicalFeatureClusterer hierarchicalClustering = new HierarchicalFeatureClusterer();
-		FMExperiment experiment = new FMExperiment(big.getImplicationGraph());
+		FMExperiment experiment = new FMExperiment(big.getImplicationGraph(), xorGroups, orGroups);
 		Dendrogram dendrogram = hierarchicalClustering.computeDendrogram(experiment, clusteringSimilarityMetric);
 		similarityClusters = hierarchicalClustering.extractClusters(experiment, dendrogram, clusteringThreshold);
 
@@ -553,7 +560,7 @@ public class InteractiveFMSynthesizer extends Observable{
 		for (SimpleEdge edge : big.edges()) {
 			String source = big.getSource(edge);
 			String target = big.getTarget(edge);
-			double weight = parentSimilarityMetric.similarity(big.getImplicationGraph(), source, target);
+			double weight = parentSimilarityMetric.similarity(big.getImplicationGraph(), xorGroups, orGroups, source, target);
 			big.setEdgeWeight(edge, weight);
 		}
 
@@ -589,7 +596,7 @@ public class InteractiveFMSynthesizer extends Observable{
 			// Compute the complementary heuristic choices
 			boolean veryHigh = false, high = false, veryLow = false, low = false; 
 			for (FeatureSimilarityMetric metric : complementaryParentSimilarityMetrics) {
-				double weight = metric.similarity(big.getImplicationGraph(), source, target);
+				double weight = metric.similarity(big.getImplicationGraph(), xorGroups, orGroups, source, target);
 				if (weight != 0) { // Avoid non representative value
 					if (weight > VERY_HIGH_THRESHOLD)
 						veryHigh = true;

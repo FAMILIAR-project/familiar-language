@@ -19,7 +19,7 @@ public class HeuristicDissimilarityMeasure implements DissimilarityMeasure{
 		FMExperiment fmExperiment = (FMExperiment) experiment;
 		String feature1 = fmExperiment.getFeature(observation1);
 		String feature2 = fmExperiment.getFeature(observation2);
-		return 1-metric.similarity(fmExperiment.getImplicationGraph(), feature1, feature2);
+		return 1-metric.similarity(fmExperiment.getImplicationGraph(), fmExperiment.getXorGroups(), fmExperiment.getOrGroups(), feature1, feature2);
 	}
 
 }
