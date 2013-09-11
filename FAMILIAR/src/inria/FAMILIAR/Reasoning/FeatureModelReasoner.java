@@ -11,64 +11,21 @@ import inria.FAMILIAR.Model.Feature;
 import inria.FAMILIAR.Model.Relation;
 import inria.FAMILIAR.Model.Domain.Cardinality;
 
-public class FeatureModelReasoner {
+public abstract class FeatureModelReasoner {
 
-	public void addRoot(Feature root) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void reset() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void addConstraint(Constraint c) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void addMandatory(Relation rel, Feature destinationAt, Feature f) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void addOptional(Relation rel, Feature destinationAt, Feature f) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void addCardinality(Relation rel, Feature destinationAt, Feature f,
-			Iterator<Cardinality> cardinalities) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void addFeature(Feature f, Collection<Cardinality> cards) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void addSet(Relation rel, Feature f, Collection<Feature> children,
-			Collection<Cardinality> cards) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void applyStagedConfiguration(Configuration conf) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void unapplyStagedConfigurations() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void setConstantIntConverter(
-			ConstantIntConverter constantIntConverter) {
-		// TODO Auto-generated method stub
-		
-	}
+	public abstract void addRoot(Feature root);
+	public abstract void reset();
+	public abstract void addConstraint(Constraint c);
+	public abstract void addMandatory(Relation rel, Feature destinationAt, Feature f);
+	public abstract void addOptional(Relation rel, Feature destinationAt, Feature f);
+	public abstract void addCardinality(Relation rel, Feature destinationAt, Feature f,
+			Iterator<Cardinality> cardinalities);
+	public abstract void addFeature(Feature f, Collection<Cardinality> cards);
+	public abstract void addSet(Relation rel, Feature f, Collection<Feature> children,
+			Collection<Cardinality> cards);
+	public abstract void applyStagedConfiguration(Configuration conf);
+	public abstract void unapplyStagedConfigurations();
+	public abstract void setConstantIntConverter(
+			ConstantIntConverter constantIntConverter);
 
 }

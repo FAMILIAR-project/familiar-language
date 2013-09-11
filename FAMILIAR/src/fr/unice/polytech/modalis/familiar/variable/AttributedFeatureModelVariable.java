@@ -5,7 +5,7 @@ import inria.FAMILIAR.Model.Feature;
 
 import java.util.Collection;
 import java.util.HashSet;
-import java.util.LinkedList;
+
 import java.util.Map;
 import java.util.Set;
 
@@ -141,8 +141,7 @@ public class AttributedFeatureModelVariable extends VariableImpl implements
 
 	@Override
 	public double CTCR() {
-		// TODO Auto-generated method stub
-		return 0;
+		return fm.getFeaturesNumber()/fm.getNumberOfConstraints();
 	}
 
 	@Override

@@ -21,6 +21,8 @@
 package inria.FAMILIAR.Model;
 
 import inria.FAMILIAR.Model.Domain.Cardinality;
+import inria.FAMILIAR.Reasoning.FeatureModelReasoner;
+import inria.FAMILIAR.Reasoning.FeatureModelTransform;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -28,7 +30,6 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 
-import es.us.isa.ChocoReasoner.attributed.ChocoReasoner;
 import es.us.isa.util.Node;
 import fr.pacogen.model.treeStructure.FeatureModel;
 
@@ -36,7 +37,7 @@ public class AttributedFeatureModel extends FeatureModel{
 	
 	protected Feature root;
 	protected List<Constraint> constraints;
-	protected ConstantIntConverter converter;
+	protected ConstantIntConverter converter = new ConstantIntConverter();
 
 	public AttributedFeatureModel(){
 		super();
@@ -306,8 +307,8 @@ public class AttributedFeatureModel extends FeatureModel{
 		return converter;
 	}
 
-	public void transformto(ChocoReasoner choco) {
-		// TODO Auto-generated method stub
-		
+	public void transformto(FeatureModelReasoner reasoner) {
+		FeatureModelTransform transfor = new FeatureModelTransform();
+		transfor.transform(this, reasoner);		
 	}
 }
