@@ -167,23 +167,7 @@ public class FMBuilder extends FMLAbstractCommandAnalyzer {
 			else if (filename.endsWith(".fmlbdd")) {
 				_LOGGER.debug("FML BDD import");
 				
-				FMLBDDReader reader = new FMLBDDReader(filename); // fixed interoperability
-				
-				BDDBuilder<String> builder = FMLCommandInterpreter.getBuilder() ; // reader.getBDDBuilder() ; //
-				
-				FMLCommandInterpreter.setMerger(new BDDMerger(builder));
-								
-				
-				Map<String, Integer> map = reader.getMapBuilder();
-				BDD bdd = reader.getBDD();
-				
-				
-				Formula<String> fla = new Formula<String>(bdd, map.keySet(), builder);
-							
-				gsd.synthesis.FeatureModel<String> ifm = FMBuilder.getInternalFM("FM (" + reader.getFMRepresentation() + ")");
-				assertNotNull (ifm);
-				Formula<String> diffFla = FMLMergerBDD.diff(fla, builder.mkFeatureModel(ifm), builder);
-				FeatureModelLazyVariable fmv = new FeatureModelLazyVariable("", ifm, diffFla);
+				FeatureModelVariable fmv = parseFMLBDD(filename, FMLCommandInterpreter.getBuilder());				
 				setVariable(fmv);
 				return ; 
 			}
@@ -342,6 +326,24 @@ public class FMBuilder extends FMLAbstractCommandAnalyzer {
 	}
 
 
+
+	public static FeatureModelVariable parseFMLBDD(String filename, BDDBuilder<String> builder) {
+		FMLBDDReader reader = new FMLBDDReader(filename); // fixed interoperability
+		
+		FMLCommandInterpreter.setMerger(new BDDMerger(builder));
+								
+		Map<String, Integer> map = reader.getMapBuilder();
+		BDD bdd = reader.getBDD();
+		
+		
+		Formula<String> fla = new Formula<String>(bdd, map.keySet(), builder);
+					
+		gsd.synthesis.FeatureModel<String> ifm = FMBuilder.getInternalFM("FM (" + reader.getFMRepresentation() + ")");
+		assertNotNull (ifm);
+		Formula<String> diffFla = FMLMergerBDD.diff(fla, builder.mkFeatureModel(ifm), builder);
+		FeatureModelLazyVariable fmv = new FeatureModelLazyVariable("", ifm, diffFla);
+		return fmv ; 
+	}
 
 	/** unquote feature names 
 	 * @param fmv

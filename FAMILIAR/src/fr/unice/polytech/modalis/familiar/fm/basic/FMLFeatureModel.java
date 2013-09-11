@@ -45,13 +45,12 @@ public interface FMLFeatureModel {
 
 	public abstract SetVariable features();
 
-	public abstract boolean setMandatory(IFeature ft);
 
-	public abstract boolean setOptional(IFeature ft);
+	public abstract boolean setOptional(FeatureVariable ft);
 
-	public abstract boolean setAlternative(IFeature ft);
+	public abstract boolean setAlternative(FeatureVariable ft);
 
-	public abstract boolean setOr(IFeature ft);
+	public abstract boolean setOr(FeatureVariable ft);
 
 	/**
 	 * is time consuming 
@@ -95,6 +94,8 @@ public interface FMLFeatureModel {
 	public abstract FeatureModelVariable ksynthesis (KnowledgeSynthesis kn) ;
 
 	void setFeatureAttribute(FeatureVariable ft, String attributeID, Variable rVar);
+
+	boolean setMandatory(FeatureVariable ft);
 	
 	
 	

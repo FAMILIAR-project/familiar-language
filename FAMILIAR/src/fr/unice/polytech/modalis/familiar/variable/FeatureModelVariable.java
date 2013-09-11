@@ -528,25 +528,38 @@ public class FeatureModelVariable extends VariableImpl implements FMLFeatureMode
 	}
 
 	@Override
-	public boolean setMandatory(IFeature ft) {
+	public boolean setMandatory(FeatureVariable ft) {
+		
+		FeatureModel<String> iFm = getFm() ;
+		FeatureGraph<String> iFD = iFm.getDiagram();
+		FeatureNode<String> ftName = iFD.findVertex(ft.name());
+		Set<FeatureNode<String>> parents = iFD.parents(ftName) ;
+		if (parents.size() > 1) {
+			_LOGGER.warn("Many parents for " + ft);
+			return false ; 
+		}
+		else {
+		    FeatureNode<String> parent = parents.iterator().next(); // the first and only
+		    // FIXME normally more to do like sblings settings variability information
+			return iFD.addEdge(ftName, parent, FeatureEdge.MANDATORY);			
+		}
+				
+	}
+
+	@Override
+	public boolean setOptional(FeatureVariable ft) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean setOptional(IFeature ft) {
+	public boolean setAlternative(FeatureVariable ft) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean setAlternative(IFeature ft) {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean setOr(IFeature ft) {
+	public boolean setOr(FeatureVariable ft) {
 		// TODO Auto-generated method stub
 		return false;
 	}

@@ -11,6 +11,7 @@ import org.xtext.example.mydsl.fML.SliceMode;
 
 import com.google.common.collect.Sets;
 
+import fr.unice.polytech.modalis.familiar.experimental.FGroup;
 import fr.unice.polytech.modalis.familiar.operations.ImplicationGraphUtil;
 import fr.unice.polytech.modalis.familiar.variable.Comparison;
 import fr.unice.polytech.modalis.familiar.variable.ConstraintVariable;
@@ -22,6 +23,24 @@ import gsd.graph.ImplicationGraph;
 import gsd.synthesis.Expression;
 
 public class FMLOntologicalASETest extends FMLTest {
+	
+	
+	
+	@Test
+	public void testFG() throws Exception {
+		FeatureModelVariable fm1 = FM ("fm1", "A : [B] [E] ; B : (C|D) ; ");
+		
+		Set<FGroup> xors = fm1.computeXorGroups();
+		Set<FGroup> mtxs = fm1.computeMutexGroups();
+		System.err.println("xors=" + xors);
+		System.err.println("mtxs=" + mtxs);
+		System.err.println("" + fm1.toGeneralizedNotation()); //.getMutexGroups());
+		
+		FeatureModelVariable fm1bis = FM ("fm1", "A : [B] [E] [F] ; B : (C|D)+ I ; E -> !I ; ");
+		System.err.println("" + fm1bis.toGeneralizedNotation()); //.getMutexGroups());
+		System.err.println("" + fm1bis.toGeneralizedNotation().getMutexGroups());
+		System.err.println("" + fm1bis.computeMutexGroups());
+	}
 	
 	@Test
 	public void testFASE() throws Exception {
@@ -280,6 +299,7 @@ public class FMLOntologicalASETest extends FMLTest {
 		System.err.println("#fm2Corrected=" + fm2Corrected.counting());
 		Set<Set<String>> s2Corrected = _configsToSet(fm2Corrected.configs()) ; 
 		System.err.println("[[fm2Corrected]]=" + s2Corrected);
+		System.err.println("cliques fm2" + fm2Corrected.cliques().names());
 		
 		System.err.println("s1 / s2 = " + Sets.difference(s1, s2Corrected));
 		System.err.println("s2 / s1 = " + Sets.difference(s2Corrected, s1));

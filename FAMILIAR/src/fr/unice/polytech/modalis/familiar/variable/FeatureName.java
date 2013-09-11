@@ -24,6 +24,7 @@ public class FeatureName {
 		|| ftName.contains(".")
 		|| ftName.contains("/")
 		|| ftName.contains("$")
+		|| ftName.contains("#")
 		|| ftName.contains("0")
 		|| ftName.contains("1")
 		|| ftName.contains("2")
@@ -72,6 +73,7 @@ public class FeatureName {
 				.replaceAll("select", "sElect")
 				.replaceAll("size", "siZe")
 				.replaceAll("Integer", "InteGer")
+				.replaceAll("print", "prinT")
 				.replaceAll("String", "StrinG")
 				; 
 				

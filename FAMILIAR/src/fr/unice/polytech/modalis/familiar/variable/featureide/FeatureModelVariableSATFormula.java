@@ -84,7 +84,7 @@ public class FeatureModelVariableSATFormula extends FeatureModelVariable {
 	 * @see fr.unice.polytech.modalis.familiar.fm.basic.FMLFeatureModel#setMandatory(fr.unice.polytech.modalis.familiar.fm.basic.IFeature)
 	 */
 	@Override
-	public boolean setMandatory(IFeature ft) {
+	public boolean setMandatory(FeatureVariable ft) {
 		if (_synthesizedFM) return super.setMandatory(ft);
 		return false;
 	}
@@ -93,7 +93,7 @@ public class FeatureModelVariableSATFormula extends FeatureModelVariable {
 	 * @see fr.unice.polytech.modalis.familiar.fm.basic.FMLFeatureModel#setOptional(fr.unice.polytech.modalis.familiar.fm.basic.IFeature)
 	 */
 	@Override
-	public boolean setOptional(IFeature ft) {
+	public boolean setOptional(FeatureVariable ft) {
 		if (_synthesizedFM) return super.setOptional(ft);
 		return false;
 	}
@@ -102,7 +102,7 @@ public class FeatureModelVariableSATFormula extends FeatureModelVariable {
 	 * @see fr.unice.polytech.modalis.familiar.fm.basic.FMLFeatureModel#setAlternative(fr.unice.polytech.modalis.familiar.fm.basic.IFeature)
 	 */
 	@Override
-	public boolean setAlternative(IFeature ft) {
+	public boolean setAlternative(FeatureVariable ft) {
 		if (_synthesizedFM) return super.setAlternative(ft);
 		return false;
 	}
@@ -111,7 +111,7 @@ public class FeatureModelVariableSATFormula extends FeatureModelVariable {
 	 * @see fr.unice.polytech.modalis.familiar.fm.basic.FMLFeatureModel#setOr(fr.unice.polytech.modalis.familiar.fm.basic.IFeature)
 	 */
 	@Override
-	public boolean setOr(IFeature ft) {
+	public boolean setOr(FeatureVariable ft) {
 		if (_synthesizedFM) return super.setOr(ft);
 		return false;
 	}

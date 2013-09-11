@@ -30,25 +30,25 @@ public class AttributedFeatureModelVariable extends VariableImpl implements FMLF
 	}
 
 	@Override
-	public boolean setMandatory(IFeature ft) {
+	public boolean setMandatory(FeatureVariable ft) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean setOptional(IFeature ft) {
+	public boolean setOptional(FeatureVariable ft) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean setAlternative(IFeature ft) {
+	public boolean setAlternative(FeatureVariable ft) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean setOr(IFeature ft) {
+	public boolean setOr(FeatureVariable ft) {
 		// TODO Auto-generated method stub
 		return false;
 	}
