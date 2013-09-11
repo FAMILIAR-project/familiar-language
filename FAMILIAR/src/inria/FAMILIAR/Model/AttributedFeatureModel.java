@@ -28,6 +28,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 
+import es.us.isa.ChocoReasoner.attributed.ChocoReasoner;
 import es.us.isa.util.Node;
 import fr.pacogen.model.treeStructure.FeatureModel;
 
@@ -303,5 +304,10 @@ public class AttributedFeatureModel extends FeatureModel{
 	
 	public ConstantIntConverter getConstantIntConverter(){
 		return converter;
+	}
+
+	public void transformto(ChocoReasoner choco) {
+		// TODO Auto-generated method stub
+		
 	}
 }
