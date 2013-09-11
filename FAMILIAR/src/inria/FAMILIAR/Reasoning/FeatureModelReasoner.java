@@ -23,9 +23,10 @@ public abstract class FeatureModelReasoner {
 	public abstract void addFeature(Feature f, Collection<Cardinality> cards);
 	public abstract void addSet(Relation rel, Feature f, Collection<Feature> children,
 			Collection<Cardinality> cards);
-	public abstract void applyStagedConfiguration(Configuration conf);
-	public abstract void unapplyStagedConfigurations();
+	//public abstract void applyStagedConfiguration(Configuration conf);
+	//public abstract void unapplyStagedConfigurations();
 	public abstract void setConstantIntConverter(
 			ConstantIntConverter constantIntConverter);
-
+	public abstract void addRequires(Relation rel, Feature origin, Feature destination);
+	public abstract void addExcludes(Relation rel, Feature origin, Feature dest);
 }
