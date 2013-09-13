@@ -1,0 +1,584 @@
+fmProduct0 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: General ; 
+General: Cost "Software license" "Programming language" "User interface" "Computing platform" ; 
+Cost: "[[Free software]] Free software" ; 
+"Software license": "GNU GPL" ; 
+"Programming language": Java ; 
+"User interface": "TUI, GUI" ; 
+"Computing platform": Android ;
+)
+
+fmProduct1 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: General ; 
+General: Cost "Software license" "Programming language" "User interface" "Computing platform" ; 
+Cost: "[[Freeware]] Freeware" ; 
+"Software license": "Proprietary software" ; 
+"Programming language": Java ; 
+"User interface": "TUI, GUI" ; 
+"Computing platform": Android ;
+)
+
+fmProduct2 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: Features General "Protocol support" ; 
+Features: "Multi-server" "UTF-8" "irc:// URI scheme" "Push notifications" "Automatic updates" ["Scripting language"] ["Proxy server"] ; 
+General: Cost "Software license" "Programming language" "User interface" "Computing platform" ; 
+"Protocol support": CHAT [Server] [DCC] [TSEND] [Whiteboard] [RDCC] [SEND] [GET] [XMIT] ["File servers (FSERVs)"] ["Reverse / Firewall DCC"] [REVERSE] ["Passive DCC"] [RESUME] [OCSP] TLS [XDCC] CTCP [RSEND] "IPv6" ["SEND T"] SSL [CRL] ; 
+Cost: "[[US$]]1.99 US$" ; 
+"Software license": "BSD License" ; 
+"Programming language": "Objective-C" ; 
+"User interface": GUI ; 
+"Computing platform": iOS ; 
+!"SEND T";
+!OCSP;
+!DCC;
+!XMIT;
+!RDCC;
+!RESUME;
+!"Proxy server";
+!CRL;
+!TSEND;
+!"File servers (FSERVs)";
+!"Reverse / Firewall DCC";
+!RSEND;
+!"Passive DCC";
+!SEND;
+!Server;
+!REVERSE;
+!XDCC;
+!Whiteboard;
+!"Scripting language";
+)
+
+fmProduct3 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: General ; 
+General: Cost "Software license" "Programming language" "User interface" ["Computing platform"] ; 
+Cost: "[[Free software]] Free software" ; 
+"Software license": "GNU GPL" ; 
+"Programming language": Java ; 
+"User interface": GUI ; 
+!"Computing platform";
+)
+
+fmProduct4 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: Features General "Protocol support" ; 
+Features: "UTF-8" "Multi-server" ["irc:// URI scheme"] ["Push notifications"] "Automatic updates" ["Scripting language"] ["Proxy server"] ; 
+General: Cost "Programming language" "Software license" "User interface" "Computing platform" ; 
+"Protocol support": [CHAT] [TSEND] [Server] [DCC] [Whiteboard] [RDCC] [SEND] [GET] [XMIT] ["File servers (FSERVs)"] [REVERSE] ["Reverse / Firewall DCC"] ["Passive DCC"] [RESUME] [OCSP] TLS CTCP [XDCC] ["SEND T"] [RSEND] "IPv6" SSL [CRL] ; 
+Cost: "[[US$]]2.99 US$" ; 
+"Programming language": "Objective-C" ; 
+"Software license": "Proprietary software" ; 
+"User interface": GUI ; 
+"Computing platform": iOS ; 
+!"SEND T";
+!OCSP;
+!DCC;
+!XMIT;
+!RDCC;
+!RESUME;
+!"Proxy server";
+!CRL;
+!"Push notifications";
+!TSEND;
+!"File servers (FSERVs)";
+!"Reverse / Firewall DCC";
+!RSEND;
+!"Passive DCC";
+!SEND;
+!Server;
+!CHAT;
+!REVERSE;
+!XDCC;
+!Whiteboard;
+!"irc:// URI scheme";
+!"Scripting language";
+!GET;
+)
+
+fmProduct5 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: Features General "Protocol support" ; 
+Features: "UTF-8" ["Multi-server"] ["irc:// URI scheme"] ["Push notifications"] ["Automatic updates"] ["Scripting language"] ["Proxy server"] ; 
+General: Cost ["Programming language"] "Software license" "User interface" "Computing platform" ; 
+"Protocol support": [CHAT] [Server] [TSEND] [DCC] [Whiteboard] [RDCC] [SEND] [XMIT] [GET] ["File servers (FSERVs)"] ["Reverse / Firewall DCC"] [REVERSE] ["Passive DCC"] [RESUME] [OCSP] [TLS] [XDCC] [CTCP] ["SEND T"] ["IPv6"] [RSEND] [SSL] [CRL] ; 
+Cost: "Freeware iPhone: US$3" ; 
+"Software license": "Proprietary software" ; 
+"User interface": GUI ; 
+"Computing platform": "iOS, Windows Mobile" ;
+)
+
+fmProduct6 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: Features General "Protocol support" ; 
+Features: ["UTF-8"] ["Multi-server"] ["irc:// URI scheme"] ["Push notifications"] ["Automatic updates"] ["Scripting language"] ["Proxy server"] ; 
+General: Cost "Software license" "Programming language" "User interface" "Computing platform" ; 
+"Protocol support": [CHAT] [Server] [TSEND] [DCC] [Whiteboard] [RDCC] [SEND] [GET] [XMIT] ["File servers (FSERVs)"] [REVERSE] ["Reverse / Firewall DCC"] ["Passive DCC"] [RESUME] [OCSP] [TLS] [XDCC] [CTCP] [RSEND] ["SEND T"] ["IPv6"] [SSL] [CRL] ; 
+Cost: "[[Free software]] Free software" ; 
+"Software license": "GNU GPL" ; 
+"Programming language": Java ; 
+"User interface": GUI ; 
+"Computing platform": Android ;
+)
+
+fmProduct7 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: General ; 
+General: Cost "Software license" "Programming language" "User interface" ["Computing platform"] ; 
+Cost: "[[Free software]] Free software" ; 
+"Software license": "GNU GPL" ; 
+"Programming language": Java ; 
+"User interface": GUI ; 
+!"Computing platform";
+)
+
+fmProduct8 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: Features General "Protocol support" ; 
+Features: "UTF-8" "Multi-server" ["irc:// URI scheme"] ["Push notifications"] "Automatic updates" "Scripting language" ["Proxy server"] ; 
+General: Cost "Software license" "Programming language" "User interface" "Computing platform" ; 
+"Protocol support": [CHAT] [Server] [TSEND] [DCC] [Whiteboard] [RDCC] [SEND] [XMIT] [GET] ["File servers (FSERVs)"] [REVERSE] ["Reverse / Firewall DCC"] ["Passive DCC"] [RESUME] [OCSP] TLS [XDCC] [CTCP] [RSEND] ["SEND T"] ["IPv6"] SSL [CRL] ; 
+Cost: "[[US$]]1.49 US$" ; 
+"Software license": "Proprietary software" ; 
+"Programming language": "C#" ; 
+"User interface": GUI ; 
+"Computing platform": "Windows Phone" ; 
+!"SEND T";
+!OCSP;
+!"IPv6";
+!DCC;
+!XMIT;
+!RDCC;
+!RESUME;
+!"Proxy server";
+!CRL;
+!TSEND;
+!"File servers (FSERVs)";
+!"Reverse / Firewall DCC";
+!RSEND;
+!"Passive DCC";
+!SEND;
+!Server;
+!CHAT;
+!REVERSE;
+!CTCP;
+!XDCC;
+!Whiteboard;
+!"irc:// URI scheme";
+!GET;
+)
+
+fmProduct9 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: Features General "Protocol support" ; 
+Features: ["Multi-server"] "UTF-8" ["irc:// URI scheme"] ["Push notifications"] ["Automatic updates"] "Scripting language" ["Proxy server"] ; 
+General: Cost "Software license" "Programming language" "User interface" "Computing platform" ; 
+"Protocol support": [CHAT] [Server] [DCC] [TSEND] [Whiteboard] [RDCC] [SEND] [XMIT] [GET] ["File servers (FSERVs)"] ["Reverse / Firewall DCC"] [REVERSE] ["Passive DCC"] [RESUME] [OCSP] [TLS] [XDCC] CTCP ["SEND T"] [RSEND] ["IPv6"] [SSL] [CRL] ; 
+Cost: "[[Free software]] Free software" ; 
+"Software license": "GNU GPL" ; 
+"Programming language": Java ; 
+"User interface": GUI ; 
+"Computing platform": "Java ME" ; 
+!OCSP;
+!DCC;
+!"Proxy server";
+!RDCC;
+!CRL;
+!"File servers (FSERVs)";
+!"Reverse / Firewall DCC";
+!RSEND;
+!TLS;
+!"Multi-server";
+!Server;
+!CHAT;
+!XDCC;
+!"irc:// URI scheme";
+!"SEND T";
+!"IPv6";
+!XMIT;
+!RESUME;
+!TSEND;
+!SEND;
+!"Passive DCC";
+!SSL;
+!"Automatic updates";
+!REVERSE;
+!Whiteboard;
+)
+
+fmProduct10 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: General ; 
+General: Cost "Software license" "Programming language" "User interface" "Computing platform" ; 
+Cost: "[[Free software]] Free software" ; 
+"Software license": "GNU GPL" ; 
+"Programming language": Java ; 
+"User interface": GUI ; 
+"Computing platform": "Java ME" ;
+)
+
+fmProduct11 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: General ; 
+General: Cost "Software license" ["Programming language"] "User interface" "Computing platform" ; 
+Cost: "[[Free software]] Free software" ; 
+"Software license": "GNU GPL" ; 
+"User interface": GUI ; 
+"Computing platform": "Windows Mobile 5 (and above)" ;
+)
+
+fmProduct12 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: General ; 
+General: Cost "Software license" "Programming language" "User interface" "Computing platform" ; 
+Cost: "[[Free software]] Free software" ; 
+"Software license": "GNU GPL" ; 
+"Programming language": Java ; 
+"User interface": GUI ; 
+"Computing platform": "Java ME" ;
+)
+
+fmProduct13 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: Features General "Protocol support" ; 
+Features: "Multi-server" "UTF-8" "irc:// URI scheme" "Push notifications" "Automatic updates" ["Scripting language"] "Proxy server" ; 
+General: Cost "Software license" "Programming language" "User interface" "Computing platform" ; 
+"Protocol support": [DCC] [OCSP] TLS CTCP "IPv6" SSL [CRL] ; 
+Cost: "[[US$]]2.99 US$" ; 
+"Software license": "Proprietary software" ; 
+"Programming language": "Objective-C" ; 
+"User interface": GUI ; 
+"Computing platform": iOS ; 
+!DCC;
+!"Scripting language";
+)
+
+fmProduct14 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: Features General "Protocol support" ; 
+Features: ["Multi-server"] "UTF-8" ["irc:// URI scheme"] ["Push notifications"] ["Automatic updates"] "Scripting language" ["Proxy server"] ; 
+General: Cost "Programming language" "Software license" "User interface" "Computing platform" ; 
+"Protocol support": [CHAT] [Server] [DCC] [TSEND] [Whiteboard] [RDCC] [SEND] [XMIT] [GET] ["File servers (FSERVs)"] ["Reverse / Firewall DCC"] [REVERSE] ["Passive DCC"] [RESUME] [OCSP] [TLS] [XDCC] [CTCP] [RSEND] ["SEND T"] ["IPv6"] [SSL] [CRL] ; 
+Cost: "[[Free software]] Free software" ; 
+"Programming language": C ; 
+"Software license": "GNU GPL" ; 
+"User interface": GUI ; 
+"Computing platform": "PlayStation Portable" ; 
+!OCSP;
+!DCC;
+!RDCC;
+!"Proxy server";
+!CRL;
+!"File servers (FSERVs)";
+!"Reverse / Firewall DCC";
+!RSEND;
+!TLS;
+!"Multi-server";
+!Server;
+!CHAT;
+!CTCP;
+!XDCC;
+!"irc:// URI scheme";
+!"SEND T";
+!"IPv6";
+!XMIT;
+!RESUME;
+!TSEND;
+!SEND;
+!"Passive DCC";
+!SSL;
+!"Automatic updates";
+!REVERSE;
+!Whiteboard;
+)
+
+fmProduct15 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: General ; 
+General: Cost "Software license" ["Programming language"] "User interface" ["Computing platform"] ; 
+Cost: "[[Shareware]] [[US$]]10 Shareware" ; 
+"Software license": "Proprietary software" ; 
+"User interface": GUI ; 
+!"Computing platform";
+)
+
+fmProduct16 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: Features General "Protocol support" ; 
+Features: ["Multi-server"] "UTF-8" ["irc:// URI scheme"] ["Push notifications"] ["Automatic updates"] ["Scripting language"] ["Proxy server"] ; 
+General: Cost "Programming language" "Software license" "User interface" "Computing platform" ; 
+"Protocol support": [CHAT] [TSEND] [DCC] [Server] [Whiteboard] [RDCC] [SEND] [XMIT] [GET] ["File servers (FSERVs)"] [REVERSE] ["Reverse / Firewall DCC"] ["Passive DCC"] [RESUME] [OCSP] [TLS] [XDCC] [CTCP] ["SEND T"] [RSEND] ["IPv6"] [SSL] [CRL] ; 
+Cost: "[[Free software]] Free software" ; 
+"Programming language": Java ; 
+"Software license": "GNU GPL" ; 
+"User interface": TUI ; 
+"Computing platform": "Java ME" ; 
+!"Automatic updates";
+)
+
+fmProduct17 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: Features General "Protocol support" ; 
+Features: ["Multi-server"] ["UTF-8"] ["irc:// URI scheme"] ["Push notifications"] ["Automatic updates"] ["Scripting language"] "Proxy server" ; 
+General: Cost "Software license" "Programming language" "User interface" "Computing platform" ; 
+"Protocol support": CHAT [Server] DCC [TSEND] [Whiteboard] [RDCC] SEND GET [XMIT] ["File servers (FSERVs)"] ["Reverse / Firewall DCC"] [REVERSE] ["Passive DCC"] [RESUME] [OCSP] TLS [XDCC] CTCP ["SEND T"] [RSEND] ["IPv6"] SSL [CRL] ; 
+Cost: "[[Free software]] Free software" ; 
+"Software license": "GNU GPL" ; 
+"Programming language": "C & JavaScript" ; 
+"User interface": GUI ; 
+"Computing platform": WebOS ; 
+!"SEND T";
+!"IPv6";
+!XMIT;
+!RDCC;
+!RESUME;
+!TSEND;
+!"File servers (FSERVs)";
+!"Reverse / Firewall DCC";
+!RSEND;
+!"Passive DCC";
+!Server;
+!REVERSE;
+!XDCC;
+!Whiteboard;
+)
+
+fmProduct18 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: Features General "Protocol support" ; 
+Features: ["UTF-8"] ["Multi-server"] ["irc:// URI scheme"] ["Push notifications"] ["Automatic updates"] ["Scripting language"] ["Proxy server"] ; 
+General: Cost "Software license" ["Programming language"] "User interface" "Computing platform" ; 
+"Protocol support": [CHAT] [TSEND] [Server] [DCC] [Whiteboard] [RDCC] [SEND] [GET] [XMIT] ["File servers (FSERVs)"] ["Reverse / Firewall DCC"] [REVERSE] ["Passive DCC"] [RESUME] [OCSP] [TLS] [XDCC] CTCP ["SEND T"] ["IPv6"] [RSEND] SSL [CRL] ; 
+Cost: "[[Demoware]] [[US$]]20 Demoware" ; 
+"Software license": "Proprietary software" ; 
+"User interface": GUI ; 
+"Computing platform": Symbian ; 
+!DCC;
+)
+
+fmProduct19 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: General ; 
+General: Cost "Programming language" "Software license" "User interface" "Computing platform" ; 
+Cost: "[[Free software]] Free software" ; 
+"Programming language": Java ; 
+"Software license": "GNU LGPL" ; 
+"User interface": GUI ; 
+"Computing platform": "Java ME" ;
+)
+
+fmProduct20 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: General ; 
+General: Cost "Software license" "Programming language" "User interface" "Computing platform" ; 
+Cost: "[[Free software]] Free software" ; 
+"Software license": "GNU GPL" ; 
+"Programming language": Java ; 
+"User interface": GUI ; 
+"Computing platform": Android ;
+)
+
+fmProduct21 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: General ; 
+General: Cost "Programming language" "Software license" "User interface" "Computing platform" ; 
+Cost: "[[Free software]] Free software" ; 
+"Programming language": "C++" ; 
+"Software license": "3-clause BSD" ; 
+"User interface": GUI ; 
+"Computing platform": "Windows Mobile" ;
+)
+
+fmProduct22 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: Features "Protocol support" ; 
+Features: ["UTF-8"] ["Multi-server"] ["irc:// URI scheme"] ["Push notifications"] ["Automatic updates"] ["Scripting language"] ["Proxy server"] ; 
+"Protocol support": [CHAT] [DCC] [TSEND] [Server] [Whiteboard] [RDCC] [SEND] [GET] [XMIT] ["File servers (FSERVs)"] ["Reverse / Firewall DCC"] [REVERSE] ["Passive DCC"] [RESUME] [OCSP] [TLS] [CTCP] [XDCC] ["SEND T"] [RSEND] ["IPv6"] [SSL] [CRL] ; 
+!"SEND T";
+!OCSP;
+!"IPv6";
+!DCC;
+!XMIT;
+!RDCC;
+!RESUME;
+!CRL;
+!"File servers (FSERVs)";
+!TSEND;
+!"Reverse / Firewall DCC";
+!TLS;
+!RSEND;
+!"Passive DCC";
+!SEND;
+!SSL;
+!Server;
+!CHAT;
+!REVERSE;
+!CTCP;
+!XDCC;
+!Whiteboard;
+!GET;
+)
+
+fmProduct23 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: Features "Protocol support" ; 
+Features: "UTF-8" "Multi-server" ["irc:// URI scheme"] ["Push notifications"] "Automatic updates" ["Scripting language"] ["Proxy server"] ; 
+"Protocol support": [CHAT] [Server] [DCC] [TSEND] [Whiteboard] [RDCC] [SEND] [XMIT] [GET] ["File servers (FSERVs)"] ["Reverse / Firewall DCC"] [REVERSE] ["Passive DCC"] [RESUME] [OCSP] [TLS] [XDCC] CTCP [RSEND] ["SEND T"] ["IPv6"] SSL [CRL] ; 
+!SEND;
+!DCC;
+!GET;
+)
+
+fmProduct24 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: Features "Protocol support" ; 
+Features: "UTF-8" ["Multi-server"] ["irc:// URI scheme"] ["Push notifications"] ["Automatic updates"] "Scripting language" ["Proxy server"] ; 
+"Protocol support": [CHAT] [Server] [TSEND] [DCC] [Whiteboard] [RDCC] [SEND] [XMIT] [GET] ["File servers (FSERVs)"] ["Reverse / Firewall DCC"] [REVERSE] ["Passive DCC"] [RESUME] [OCSP] [TLS] CTCP ["IPv6"] [RSEND] ["SEND T"] [SSL] [CRL] ; 
+!OCSP;
+!DCC;
+!"Proxy server";
+!RDCC;
+!CRL;
+!"File servers (FSERVs)";
+!"Reverse / Firewall DCC";
+!RSEND;
+!TLS;
+!"Multi-server";
+!Server;
+!CHAT;
+!"irc:// URI scheme";
+!GET;
+!"SEND T";
+!"IPv6";
+!XMIT;
+!RESUME;
+!TSEND;
+!SEND;
+!"Passive DCC";
+!SSL;
+!"Automatic updates";
+!REVERSE;
+!Whiteboard;
+)
+
+fmProduct25 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: Features "Protocol support" ; 
+Features: "UTF-8" ["Multi-server"] ["irc:// URI scheme"] ["Push notifications"] ["Automatic updates"] "Scripting language" ["Proxy server"] ; 
+"Protocol support": [CHAT] [TSEND] [DCC] [Server] [Whiteboard] [RDCC] [SEND] [GET] [XMIT] ["File servers (FSERVs)"] [REVERSE] ["Reverse / Firewall DCC"] ["Passive DCC"] [RESUME] [OCSP] [TLS] [XDCC] CTCP [RSEND] ["SEND T"] ["IPv6"] [SSL] [CRL] ; 
+!OCSP;
+!DCC;
+!"Proxy server";
+!RDCC;
+!CRL;
+!"File servers (FSERVs)";
+!"Reverse / Firewall DCC";
+!RSEND;
+!TLS;
+!"Multi-server";
+!Server;
+!CHAT;
+!XDCC;
+!"irc:// URI scheme";
+!"SEND T";
+!"IPv6";
+!XMIT;
+!RESUME;
+!TSEND;
+!SEND;
+!"Passive DCC";
+!SSL;
+!"Automatic updates";
+!REVERSE;
+!Whiteboard;
+)
+
+fmProduct26 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: Features "Protocol support" ; 
+Features: ["Multi-server"] ["UTF-8"] ["irc:// URI scheme"] ["Push notifications"] ["Automatic updates"] ["Scripting language"] ["Proxy server"] ; 
+"Protocol support": [CHAT] [Server] [DCC] [TSEND] [Whiteboard] [RDCC] [SEND] [GET] [XMIT] ["File servers (FSERVs)"] [REVERSE] ["Reverse / Firewall DCC"] ["Passive DCC"] [RESUME] [OCSP] [TLS] [XDCC] CTCP [RSEND] ["IPv6"] ["SEND T"] [SSL] [CRL] ; 
+!OCSP;
+!DCC;
+!RDCC;
+!"Proxy server";
+!CRL;
+!"File servers (FSERVs)";
+!"Reverse / Firewall DCC";
+!RSEND;
+!TLS;
+!"Multi-server";
+!Server;
+!CHAT;
+!XDCC;
+!"irc:// URI scheme";
+!"Scripting language";
+!"SEND T";
+!"IPv6";
+!XMIT;
+!RESUME;
+!TSEND;
+!SEND;
+!"Passive DCC";
+!SSL;
+!"Automatic updates";
+!"UTF-8";
+!REVERSE;
+!Whiteboard;
+)
+
+fmProduct27 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: Features "Protocol support" ; 
+Features: ["Multi-server"] "UTF-8" ["irc:// URI scheme"] ["Push notifications"] ["Automatic updates"] ["Scripting language"] ["Proxy server"] ; 
+"Protocol support": [CHAT] [Server] [TSEND] [DCC] [Whiteboard] [RDCC] [SEND] [XMIT] [GET] ["File servers (FSERVs)"] [REVERSE] ["Reverse / Firewall DCC"] ["Passive DCC"] [RESUME] [OCSP] [TLS] [XDCC] CTCP ["SEND T"] ["IPv6"] [RSEND] [SSL] [CRL] ; 
+!OCSP;
+!DCC;
+!"Proxy server";
+!RDCC;
+!CRL;
+!"File servers (FSERVs)";
+!"Reverse / Firewall DCC";
+!RSEND;
+!TLS;
+!"Multi-server";
+!Server;
+!CHAT;
+!XDCC;
+!"irc:// URI scheme";
+!"Scripting language";
+!"SEND T";
+!"IPv6";
+!XMIT;
+!RESUME;
+!TSEND;
+!SEND;
+!"Passive DCC";
+!SSL;
+!"Automatic updates";
+!REVERSE;
+!Whiteboard;
+)
+
+fmProduct28 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: Features "Protocol support" ; 
+Features: ["UTF-8"] ["Multi-server"] ["irc:// URI scheme"] ["Push notifications"] ["Automatic updates"] ["Scripting language"] ["Proxy server"] ; 
+"Protocol support": CHAT [Server] [TSEND] DCC [Whiteboard] [RDCC] [SEND] [XMIT] [GET] ["File servers (FSERVs)"] ["Reverse / Firewall DCC"] [REVERSE] ["Passive DCC"] [RESUME] [OCSP] [TLS] CTCP [XDCC] ["SEND T"] ["IPv6"] [RSEND] [SSL] [CRL] ; 
+!OCSP;
+!RDCC;
+!"Proxy server";
+!CRL;
+!"File servers (FSERVs)";
+!"Reverse / Firewall DCC";
+!TLS;
+!RSEND;
+!Server;
+!"Multi-server";
+!XDCC;
+!"irc:// URI scheme";
+!"Scripting language";
+!"SEND T";
+!"IPv6";
+!XMIT;
+!RESUME;
+!TSEND;
+!"Passive DCC";
+!SEND;
+!SSL;
+!"Automatic updates";
+!"UTF-8";
+!REVERSE;
+!Whiteboard;
+)
+
+fmProduct29 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: Features "Protocol support" ; 
+Features: ["Multi-server"] ["UTF-8"] ["irc:// URI scheme"] ["Push notifications"] ["Automatic updates"] ["Scripting language"] ["Proxy server"] ; 
+"Protocol support": [CHAT] [Server] [TSEND] DCC [Whiteboard] [RDCC] [SEND] [XMIT] [GET] ["File servers (FSERVs)"] [REVERSE] ["Reverse / Firewall DCC"] ["Passive DCC"] [RESUME] [OCSP] [TLS] CTCP [XDCC] [RSEND] ["SEND T"] ["IPv6"] [SSL] [CRL] ; 
+!OCSP;
+!SSL;
+!"Automatic updates";
+!"UTF-8";
+!TLS;
+)
+
+fmProduct30 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: Features "Protocol support" ; 
+Features: "Multi-server" "UTF-8" ["irc:// URI scheme"] ["Push notifications"] "Automatic updates" ["Scripting language"] ["Proxy server"] ; 
+"Protocol support": [CHAT] [Server] [TSEND] [DCC] [Whiteboard] [RDCC] [SEND] [GET] [XMIT] ["File servers (FSERVs)"] [REVERSE] ["Reverse / Firewall DCC"] ["Passive DCC"] [RESUME] [OCSP] [TLS] [XDCC] [CTCP] ["SEND T"] ["IPv6"] [RSEND] [SSL] [CRL] ; 
+!"Proxy server";
+!"irc:// URI scheme";
+!"Scripting language";
+)
+
+fmProduct31 = FM (Comparison_of_mobile_Internet_Relay_Chat_clients: Features "Protocol support" ; 
+Features: "Multi-server" "UTF-8" ["irc:// URI scheme"] ["Push notifications"] "Automatic updates" ["Scripting language"] ["Proxy server"] ; 
+"Protocol support": [CHAT] [TSEND] [Server] [DCC] [Whiteboard] [RDCC] [SEND] [XMIT] [GET] ["File servers (FSERVs)"] [REVERSE] ["Reverse / Firewall DCC"] ["Passive DCC"] [RESUME] [OCSP] TLS [XDCC] CTCP ["SEND T"] ["IPv6"] [RSEND] SSL [CRL] ; 
+!"SEND T";
+!OCSP;
+!"IPv6";
+!DCC;
+!XMIT;
+!RDCC;
+!RESUME;
+!"Proxy server";
+!CRL;
+!TSEND;
+!"File servers (FSERVs)";
+!"Reverse / Firewall DCC";
+!RSEND;
+!"Passive DCC";
+!SEND;
+!Server;
+!CHAT;
+!REVERSE;
+!XDCC;
+!Whiteboard;
+!"irc:// URI scheme";
+!"Scripting language";
+)
+

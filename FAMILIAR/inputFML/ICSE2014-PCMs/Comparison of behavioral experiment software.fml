@@ -1,6 +1,0 @@
-"External links": ["License type"] [Library] ["Operating System"] GUI "Scripting language" [Name] ; 
-"License type": ("[[MATLAB]] MATLAB"|"[[C (programming language)|C/C++]]C/C++"|"[[Java]] Java"|"[[Python (programming language)|Python]]Python"|"[[Java (programming language)|Java]]Java"|"[[C (programming language)|C]]C")? ; 
-Library: ("Proprietary Software"|"Free Software") ; 
-GUI: ("Psychtoolbox for MATLAB true8"|"Vision egg 23"|"CogPy true"|"Expyriment 7"|"PsyScope true5"|"OpenSesame 9"|"Presentation true2"|"Webexp2 24"|"DirectRT 2"|"Paradigm true0"|"PsychJava true7"|"Psykinematix true4"|"E-Prime 4"|"Experimental Run-Time System 5"|"Superlab 21"|"Tscope 22"|"PsyToolkit true6"|"Expo 6"|"DMDX 3"|"PyEPL true9"|"Inquisit 8"|"SPIC Software 20"|"PEBL true1"|"PsychoPy true3") ; 
-"Scripting language": ("Microsoft Windows Linux"|"Linux Mac"|Linux|"Microsoft Windows"|"Linux Mac Microsoft Windows"|Mac|"Web-based"|"Mac Microsoft Windows") ; 
-Name: [unk] ;

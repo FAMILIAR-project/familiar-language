@@ -66,4 +66,16 @@ public class WuPalmerMetric extends WordNetMetric {
 	}
 
 
+	@Override
+	public boolean isXorGroupRequired() {
+		return false;
+	}
+
+
+	@Override
+	public boolean isOrGroupRequired() {
+		return false;
+	}
+
+
 }

@@ -1,0 +1,6 @@
+Comparison_of_genealogy_software: Languages "General features" "General information" "Genealogical features" ; 
+Languages: [German] [Polish] [Dutch] [Norwegian] [Afrikaans] [Swedish] [French] [Danish] [Italian] [Spanish] [English] ; 
+"General features": ["Fan charts"] ["Ancestor pedigree reports"] ["Pedigree view"] ["Research Guidance"] ["Descendant charts"] ["DNA charts"] ["Family view"] ["Chronology view"] ["Research Manager"] ["Descendant narrative reports"] ["Individual view"] [Mapping] ["Ancestor charts"] ["Ancestor narrative reports"] ; 
+"General information": [Windows] "Software license" ["Free software"] [Linux] ["OS X"] ["Free to use"] ; 
+"Genealogical features": ["Source surety"] ["Witness to events"] ["Same sex marriage"] ["Conflicting evidence"] ["Single parent family"] ["Name variants"] ["non-standard calendar in date fields"] ["Unicode Support"] ["Adoption & foster parent"] ; 
+"Software license": (Proprietary|"GNU GPL"|Freeware|"MIT License"|Shareware) ;

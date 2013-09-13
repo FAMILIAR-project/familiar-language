@@ -1,0 +1,552 @@
+fmProduct0 = FM (Comparison_of_iOS_ebook_reader_software: "Navigation features" ; 
+"Navigation features": Bookmarks ["Auto-scroll"] Resume Pagination "Backward/forward" ["Cloud synchronisation"] "Progress indicator" "Rotation Lock" "Go To" "Table of Contents" "Full text search" ; 
+Bookmarks: Unlimited ; 
+"Progress indicator": "In library and in-book" ; 
+!"Auto-scroll";
+!"Cloud synchronisation";
+)
+
+fmProduct1 = FM (Comparison_of_iOS_ebook_reader_software: "Navigation features" ; 
+"Navigation features": Bookmarks ["Auto-scroll"] Resume Pagination "Backward/forward" ["Cloud synchronisation"] ["Progress indicator"] ["Rotation Lock"] "Go To" "Table of Contents" "Full text search" ; 
+Bookmarks: Unlimited ; 
+!"Auto-scroll";
+!"Cloud synchronisation";
+!"Rotation Lock";
+)
+
+fmProduct2 = FM (Comparison_of_iOS_ebook_reader_software: "Navigation features" ; 
+"Navigation features": Bookmarks ["Auto-scroll"] Resume Pagination "Backward/forward" ["Cloud synchronisation"] ["Progress indicator"] "Rotation Lock" "Go To" "Table of Contents" "Full text search" ; 
+Bookmarks: Unlimited ; 
+!"Auto-scroll";
+!"Cloud synchronisation";
+)
+
+fmProduct3 = FM (Comparison_of_iOS_ebook_reader_software: "Navigation features" ; 
+"Navigation features": Bookmarks ["Auto-scroll"] Resume Pagination "Backward/forward" ["Cloud synchronisation"] ["Progress indicator"] "Rotation Lock" "Go To" "Table of Contents" "Full text search" ; 
+Bookmarks: Unlimited ; 
+!"Auto-scroll";
+!"Cloud synchronisation";
+)
+
+fmProduct4 = FM (Comparison_of_iOS_ebook_reader_software: "Navigation features" ; 
+"Navigation features": Bookmarks ["Auto-scroll"] Resume Pagination "Backward/forward" ["Cloud synchronisation"] "Progress indicator" ["Rotation Lock"] "Go To" "Table of Contents" ["Full text search"] ; 
+Bookmarks: Unlimited ; 
+"Progress indicator": "In library and in-book" ; 
+!"Auto-scroll";
+!"Cloud synchronisation";
+!"Full text search";
+)
+
+fmProduct5 = FM (Comparison_of_iOS_ebook_reader_software: "Navigation features" ; 
+"Navigation features": Bookmarks "Auto-scroll" Resume Pagination "Backward/forward" ["Cloud synchronisation"] ["Progress indicator"] "Rotation Lock" "Go To" "Table of Contents" "Full text search" ; 
+Bookmarks: Unlimited ; 
+!"Cloud synchronisation";
+)
+
+fmProduct6 = FM (Comparison_of_iOS_ebook_reader_software: "Navigation features" ; 
+"Navigation features": Bookmarks "Auto-scroll" Resume Pagination "Backward/forward" "Cloud synchronisation" ["Progress indicator"] ["Rotation Lock"] "Go To" "Table of Contents" "Full text search" ; 
+Bookmarks: Unlimited ; 
+"Auto-scroll": Manual ; 
+!"Rotation Lock";
+)
+
+fmProduct7 = FM (Comparison_of_iOS_ebook_reader_software: "Navigation features" ; 
+"Navigation features": Bookmarks ["Auto-scroll"] Resume Pagination "Backward/forward" "Cloud synchronisation" "Progress indicator" "Rotation Lock" "Go To" "Table of Contents" "Full text search" ; 
+Bookmarks: Unlimited ; 
+"Progress indicator": "In library and in-book" ; 
+!"Auto-scroll";
+)
+
+fmProduct8 = FM (Comparison_of_iOS_ebook_reader_software: "Navigation features" ; 
+"Navigation features": [Bookmarks] ["Auto-scroll"] Resume Pagination "Backward/forward" "Cloud synchronisation" ["Progress indicator"] "Rotation Lock" "Go To" "Table of Contents" ["Full text search"] ; 
+!"Auto-scroll";
+!"Full text search";
+)
+
+fmProduct9 = FM (Comparison_of_iOS_ebook_reader_software: "Navigation features" ; 
+"Navigation features": Bookmarks ["Auto-scroll"] Resume Pagination "Backward/forward" "Cloud synchronisation" "Progress indicator" "Rotation Lock" "Go To" "Table of Contents" "Full text search" ; 
+Bookmarks: Unlimited ; 
+"Backward/forward": Configurable ; 
+"Cloud synchronisation": "as of v2.0" ; 
+"Progress indicator": "In library and in-book" ; 
+!"Auto-scroll";
+)
+
+fmProduct10 = FM (Comparison_of_iOS_ebook_reader_software: "Navigation features" ; 
+"Navigation features": [Bookmarks] ["Auto-scroll"] Resume Pagination "Backward/forward" ["Cloud synchronisation"] ["Progress indicator"] "Rotation Lock" "Go To" "Table of Contents" ["Full text search"] ; 
+!"Auto-scroll";
+!"Cloud synchronisation";
+!"Full text search";
+)
+
+fmProduct11 = FM (Comparison_of_iOS_ebook_reader_software: "Navigation features" ; 
+"Navigation features": Bookmarks ["Auto-scroll"] Resume Pagination "Backward/forward" ["Cloud synchronisation"] "Progress indicator" "Rotation Lock" "Go To" "Table of Contents" "Full text search" ; 
+Bookmarks: Unlimited ; 
+"Progress indicator": "In library and in-book" ; 
+!"Auto-scroll";
+!"Cloud synchronisation";
+)
+
+fmProduct12 = FM (Comparison_of_iOS_ebook_reader_software: "Navigation features" ; 
+"Navigation features": Bookmarks ["Auto-scroll"] Resume Pagination "Backward/forward" ["Cloud synchronisation"] "Progress indicator" "Rotation Lock" "Go To" "Table of Contents" "Full text search" ; 
+Bookmarks: Unlimited ; 
+Pagination: Configurable ; 
+"Backward/forward": Configurable ; 
+"Progress indicator": "In library and in-book" ; 
+!"Auto-scroll";
+!"Cloud synchronisation";
+)
+
+fmProduct13 = FM (Comparison_of_iOS_ebook_reader_software: "Navigation features" ; 
+"Navigation features": Bookmarks "Auto-scroll" Resume Pagination "Backward/forward" ["Cloud synchronisation"] ["Progress indicator"] "Rotation Lock" "Go To" "Table of Contents" "Full text search" ; 
+Bookmarks: Unlimited ; 
+Pagination: "Mixed scrolling & pagination" ; 
+!"Cloud synchronisation";
+)
+
+fmProduct14 = FM (Comparison_of_iOS_ebook_reader_software: "Edit/tool features" "Supported File Formats" "Book source management features" "Display features" ; 
+"Edit/tool features": ["Online dictionary"] [Annotate] ["Offline dictionary"] [Highlight] ["Lookup Wikipedia"] [Translate] ["DRM support"] ["Edit meta-data"] "Export to iTunes" ["TTS support"] [Share] ; 
+"Supported File Formats": ".epub" [".cbr/.cbz"] [".djvu"] ".pdf" [".chm"] [".fb2"] [".pdb"] [".rtf"] ".txt" [".html"] [".mobi"] ; 
+"Book source management features": "Sort books" ["Browser downloading"] "Book search" "Other import via" "Book store(s)" ["Tag books"] ["Manual downloading"] "Epub downloading" ["OPDS catalog"] ; 
+"Display features": "Customize text alignment" "Customize font" "Customize spacing: line/paragraph" "Day/Night mode" Themes "Page Turn Effects" "Enable/Disable sleep mode" "Multi-column mode" "Styles (bold/italic/etc.)" "Indent paragraph" ["Customize margins"] "Enable/Disable CSS" "Enable/Disable hyphenation" "Brightness Control" ; 
+"Other import via": "eMail (MIME type) Built-in web server" ; 
+"Page Turn Effects": Configurable ; 
+"Brightness Control": "Vertical swipe" ; 
+!Translate;
+!"Online dictionary";
+!".rtf";
+!"Offline dictionary";
+!"Customize margins";
+!"Tag books";
+!".pdb";
+!".fb2";
+!"Browser downloading";
+!Annotate;
+!"TTS support";
+!"DRM support";
+!".djvu";
+!Highlight;
+!".mobi";
+!"Edit meta-data";
+!".cbr/.cbz";
+!"Manual downloading";
+!".html";
+!".chm";
+!"Lookup Wikipedia";
+!"OPDS catalog";
+)
+
+fmProduct15 = FM (Comparison_of_iOS_ebook_reader_software: "Edit/tool features" "Supported File Formats" "Book source management features" "Display features" ; 
+"Edit/tool features": Annotate "Online dictionary" "Offline dictionary" Highlight "Lookup Wikipedia" ["DRM support"] [Translate] ["Edit meta-data"] "Export to iTunes" "TTS support" [Share] ; 
+"Supported File Formats": ".epub" [".djvu"] ".pdf" [".cbr/.cbz"] [".chm"] [".rtf"] [".pdb"] [".fb2"] [".txt"] [".html"] [".mobi"] ; 
+"Book source management features": ["Sort books"] ["Browser downloading"] ["Book search"] "Other import via" ["Book store(s)"] ["Manual downloading"] ["Tag books"] ["OPDS catalog"] "Epub downloading" ; 
+"Display features": "Multi-column mode" ["Customize text alignment"] ["Indent paragraph"] "Styles (bold/italic/etc.)" ["Customize margins"] "Customize font" ["Customize spacing: line/paragraph"] ["Enable/Disable CSS"] "Brightness Control" ["Enable/Disable hyphenation"] "Day/Night mode" "Page Turn Effects" ["Enable/Disable sleep mode"] [Themes] ; 
+"Other import via": "eMail (MIME type)" ; 
+!Translate;
+!".rtf";
+!"Customize spacing: line/paragraph";
+!"Book search";
+!"Sort books";
+!".djvu";
+!".mobi";
+!"Manual downloading";
+!"Enable/Disable sleep mode";
+!".chm";
+!Share;
+!"Indent paragraph";
+!"Customize margins";
+!Themes;
+!"Tag books";
+!".pdb";
+!".fb2";
+!"Browser downloading";
+!"Book store(s)";
+!"DRM support";
+!"Enable/Disable CSS";
+!".txt";
+!".cbr/.cbz";
+!"Edit meta-data";
+!".html";
+!"Enable/Disable hyphenation";
+!"OPDS catalog";
+)
+
+fmProduct16 = FM (Comparison_of_iOS_ebook_reader_software: "Edit/tool features" "Supported File Formats" "Book source management features" "Display features" ; 
+"Edit/tool features": Annotate "Online dictionary" Highlight ["Offline dictionary"] ["Lookup Wikipedia"] "DRM support" [Translate] "Edit meta-data" "Export to iTunes" ["TTS support"] Share ; 
+"Supported File Formats": ".epub" ".pdf" [".djvu"] [".cbr/.cbz"] [".chm"] [".rtf"] [".pdb"] [".fb2"] [".txt"] [".html"] [".mobi"] ; 
+"Book source management features": "Sort books" ["Browser downloading"] "Other import via" "Book search" ["Book store(s)"] ["Tag books"] "Manual downloading" ["OPDS catalog"] ["Epub downloading"] ; 
+"Display features": ["Customize text alignment"] "Customize font" ["Customize spacing: line/paragraph"] "Day/Night mode" "Page Turn Effects" Themes ["Enable/Disable sleep mode"] ["Multi-column mode"] ["Indent paragraph"] "Styles (bold/italic/etc.)" ["Customize margins"] "Enable/Disable CSS" "Brightness Control" ["Enable/Disable hyphenation"] ; 
+"Edit meta-data": "Author, Title, Publisher" ; 
+Share: "Facebook, Twitter, eMail" ; 
+"Other import via": "eMail (MIME type) iTunes File Sharing Built-in Web Server" ; 
+"Brightness Control": "Vertical swipe" ; 
+!"Indent paragraph";
+!"Epub downloading";
+!Translate;
+!".rtf";
+!"Offline dictionary";
+!"Tag books";
+!"Multi-column mode";
+!".pdb";
+!".fb2";
+!"Browser downloading";
+!"TTS support";
+!".djvu";
+!".mobi";
+!".cbr/.cbz";
+!".txt";
+!".html";
+!"Enable/Disable sleep mode";
+!".chm";
+!"Enable/Disable hyphenation";
+!"Lookup Wikipedia";
+!"OPDS catalog";
+)
+
+fmProduct17 = FM (Comparison_of_iOS_ebook_reader_software: "Edit/tool features" "Supported File Formats" "Book source management features" "Display features" ; 
+"Edit/tool features": Annotate ["Online dictionary"] Highlight ["Offline dictionary"] ["Lookup Wikipedia"] Translate "DRM support" "Edit meta-data" "Export to iTunes" ["TTS support"] [Share] ; 
+"Supported File Formats": ".epub" [".djvu"] [".cbr/.cbz"] ".pdf" [".chm"] [".rtf"] [".pdb"] [".fb2"] [".txt"] [".html"] [".mobi"] ; 
+"Book source management features": ["Sort books"] "Browser downloading" ["Book search"] "Other import via" "Book store(s)" "Manual downloading" "Tag books" ["OPDS catalog"] "Epub downloading" ; 
+"Display features": ["Customize text alignment"] "Customize font" ["Customize spacing: line/paragraph"] "Day/Night mode" ["Enable/Disable sleep mode"] "Page Turn Effects" Themes "Multi-column mode" ["Indent paragraph"] "Styles (bold/italic/etc.)" ["Customize margins"] "Enable/Disable CSS" ["Enable/Disable hyphenation"] "Brightness Control" ; 
+"DRM support": "Adobe DRM" ; 
+"Edit meta-data": "Author, Title, Publisher" ; 
+"Other import via": "eMail (MIME type)" ; 
+!"Indent paragraph";
+!"Online dictionary";
+!".rtf";
+!"Offline dictionary";
+!".pdb";
+!".fb2";
+!"Customize spacing: line/paragraph";
+!"Book search";
+!"Sort books";
+!"TTS support";
+!".djvu";
+!".mobi";
+!".cbr/.cbz";
+!".txt";
+!".html";
+!"Enable/Disable sleep mode";
+!".chm";
+!Share;
+!"Enable/Disable hyphenation";
+!"Lookup Wikipedia";
+!"OPDS catalog";
+)
+
+fmProduct18 = FM (Comparison_of_iOS_ebook_reader_software: "Edit/tool features" "Supported File Formats" "Book source management features" "Display features" ; 
+"Edit/tool features": [Annotate] ["Online dictionary"] [Highlight] "Offline dictionary" ["Lookup Wikipedia"] Translate ["DRM support"] ["Edit meta-data"] "Export to iTunes" ["TTS support"] Share ; 
+"Supported File Formats": ".epub" [".djvu"] ".cbr/.cbz" ".pdf" ".chm" ".fb2" ".pdb" ".rtf" ".txt" ".html" ".mobi" ; 
+"Book source management features": "Sort books" ["Browser downloading"] "Other import via" "Book search" ["Book store(s)"] ["Tag books"] "Manual downloading" ["OPDS catalog"] "Epub downloading" ; 
+"Display features": ["Customize text alignment"] "Customize font" ["Customize spacing: line/paragraph"] ["Day/Night mode"] ["Page Turn Effects"] ["Enable/Disable sleep mode"] Themes "Multi-column mode" ["Indent paragraph"] "Styles (bold/italic/etc.)" ["Customize margins"] ["Enable/Disable CSS"] "Brightness Control" ["Enable/Disable hyphenation"] ; 
+Share: eMail ; 
+"Other import via": "eMail (MIME type)" ; 
+!"Indent paragraph";
+!"Online dictionary";
+!"Customize margins";
+!"Tag books";
+!"Customize text alignment";
+!"Browser downloading";
+!"Customize spacing: line/paragraph";
+!Annotate;
+!"TTS support";
+!"DRM support";
+!".djvu";
+!"Enable/Disable CSS";
+!Highlight;
+!"Edit meta-data";
+!"Day/Night mode";
+!"Page Turn Effects";
+!"Enable/Disable sleep mode";
+!"Enable/Disable hyphenation";
+!"Lookup Wikipedia";
+!"OPDS catalog";
+)
+
+fmProduct19 = FM (Comparison_of_iOS_ebook_reader_software: "Edit/tool features" "Supported File Formats" "Book source management features" "Display features" ; 
+"Edit/tool features": ["Online dictionary"] [Annotate] [Highlight] "Offline dictionary" ["Lookup Wikipedia"] ["DRM support"] [Translate] ["Edit meta-data"] "Export to iTunes" ["TTS support"] Share ; 
+"Supported File Formats": ".epub" [".djvu"] ".pdf" [".cbr/.cbz"] [".chm"] [".pdb"] ".fb2" ".rtf" ".txt" ".html" [".mobi"] ; 
+"Book source management features": "Sort books" "Browser downloading" "Book search" "Other import via" ["Book store(s)"] "Manual downloading" ["Tag books"] "Epub downloading" "OPDS catalog" ; 
+"Display features": "Customize text alignment" "Customize font" "Customize spacing: line/paragraph" "Day/Night mode" Themes "Enable/Disable sleep mode" "Page Turn Effects" "Multi-column mode" "Styles (bold/italic/etc.)" ["Indent paragraph"] "Customize margins" ["Enable/Disable CSS"] "Enable/Disable hyphenation" "Brightness Control" ; 
+Share: eMail ; 
+"Other import via": "Calibre (Bonjour) Built-in web server" ; 
+"Day/Night mode": "Using styles" ; 
+"Styles (bold/italic/etc.)": Buggy ; 
+!"Indent paragraph";
+!Translate;
+!"Online dictionary";
+!"Tag books";
+!".pdb";
+!"Book store(s)";
+!Annotate;
+!"TTS support";
+!"DRM support";
+!".djvu";
+!"Enable/Disable CSS";
+!Highlight;
+!".mobi";
+!"Edit meta-data";
+!".cbr/.cbz";
+!".chm";
+!"Lookup Wikipedia";
+)
+
+fmProduct20 = FM (Comparison_of_iOS_ebook_reader_software: "Edit/tool features" "Supported File Formats" "Book source management features" "Display features" ; 
+"Edit/tool features": Annotate "Online dictionary" Highlight "Offline dictionary" "Lookup Wikipedia" [Translate] "DRM support" ["Edit meta-data"] "Export to iTunes" ["TTS support"] Share ; 
+"Supported File Formats": ".epub" ".pdf" [".cbr/.cbz"] [".djvu"] [".chm"] [".fb2"] [".rtf"] [".pdb"] [".txt"] [".html"] [".mobi"] ; 
+"Book source management features": "Sort books" ["Browser downloading"] "Book search" "Other import via" "Book store(s)" ["Tag books"] ["Manual downloading"] ["OPDS catalog"] ["Epub downloading"] ; 
+"Display features": "Customize text alignment" "Customize font" ["Customize spacing: line/paragraph"] "Day/Night mode" ["Enable/Disable sleep mode"] "Page Turn Effects" Themes "Multi-column mode" ["Indent paragraph"] "Styles (bold/italic/etc.)" ["Customize margins"] ["Enable/Disable CSS"] "Enable/Disable hyphenation" "Brightness Control" ; 
+"DRM support": "[[FairPlay|Apple FairPlay]]Apple FairPlay" ; 
+Share: "Facebook, Twitter, eMail, SMS" ; 
+"Other import via": "eMail (MIME type)" ; 
+"Book store(s)": "Apple [[IBookstore#iBookstore|iBookstore]]iBookstore" ; 
+!"Indent paragraph";
+!"Epub downloading";
+!Translate;
+!".rtf";
+!"Customize margins";
+!"Tag books";
+!".pdb";
+!".fb2";
+!"Browser downloading";
+!"Customize spacing: line/paragraph";
+!"TTS support";
+!".djvu";
+!"Enable/Disable CSS";
+!".mobi";
+!"Edit meta-data";
+!".cbr/.cbz";
+!".txt";
+!"Manual downloading";
+!".html";
+!"Enable/Disable sleep mode";
+!".chm";
+!"OPDS catalog";
+)
+
+fmProduct21 = FM (Comparison_of_iOS_ebook_reader_software: "Edit/tool features" "Supported File Formats" "Book source management features" "Display features" ; 
+"Edit/tool features": "Online dictionary" Annotate "Offline dictionary" Highlight "Lookup Wikipedia" [Translate] "DRM support" ["Edit meta-data"] "Export to iTunes" ["TTS support"] Share ; 
+"Supported File Formats": [".epub"] [".djvu"] [".cbr/.cbz"] ".pdf" [".chm"] [".rtf"] [".pdb"] [".fb2"] [".txt"] [".html"] ".mobi" ; 
+"Book source management features": ["Sort books"] ["Browser downloading"] ["Book search"] "Other import via" ["Book store(s)"] ["Tag books"] ["Manual downloading"] ["OPDS catalog"] ["Epub downloading"] ; 
+"Display features": "Customize text alignment" "Customize font" ["Customize spacing: line/paragraph"] "Day/Night mode" "Page Turn Effects" Themes ["Enable/Disable sleep mode"] "Multi-column mode" "Styles (bold/italic/etc.)" ["Indent paragraph"] ["Customize margins"] ["Enable/Disable CSS"] ["Enable/Disable hyphenation"] "Brightness Control" ; 
+Share: "Facebook, Twitter" ; 
+"Other import via": "iTunes File Sharing" ; 
+!Translate;
+!".rtf";
+!"Book search";
+!"Sort books";
+!".djvu";
+!"Manual downloading";
+!".epub";
+!"Enable/Disable sleep mode";
+!".chm";
+!"Indent paragraph";
+!"Epub downloading";
+!"Tag books";
+!".pdb";
+!".fb2";
+!"Browser downloading";
+!"Book store(s)";
+!"TTS support";
+!"Enable/Disable CSS";
+!"Edit meta-data";
+!".cbr/.cbz";
+!".txt";
+!".html";
+!"Enable/Disable hyphenation";
+!"OPDS catalog";
+)
+
+fmProduct22 = FM (Comparison_of_iOS_ebook_reader_software: "Edit/tool features" "Supported File Formats" "Book source management features" "Display features" ; 
+"Edit/tool features": "Online dictionary" Annotate Highlight ["Offline dictionary"] "Lookup Wikipedia" "DRM support" [Translate] ["Edit meta-data"] "Export to iTunes" ["TTS support"] Share ; 
+"Supported File Formats": ".epub" [".djvu"] ".pdf" [".cbr/.cbz"] [".chm"] [".fb2"] [".rtf"] [".pdb"] [".txt"] [".html"] [".mobi"] ; 
+"Book source management features": ["Sort books"] ["Browser downloading"] ["Book search"] "Other import via" ["Book store(s)"] ["Manual downloading"] ["Tag books"] ["OPDS catalog"] ["Epub downloading"] ; 
+"Display features": "Customize text alignment" "Customize font" ["Customize spacing: line/paragraph"] "Day/Night mode" ["Enable/Disable sleep mode"] [Themes] "Page Turn Effects" ["Multi-column mode"] "Styles (bold/italic/etc.)" ["Indent paragraph"] ["Customize margins"] "Enable/Disable CSS" "Brightness Control" ["Enable/Disable hyphenation"] ; 
+Share: "Facebook, Twitter" ; 
+"Other import via": "eMail (MIME type)" ; 
+"Brightness Control": "Vertical swipe" ; 
+!Translate;
+!".rtf";
+!"Offline dictionary";
+!"Multi-column mode";
+!"Customize spacing: line/paragraph";
+!"Book search";
+!"Sort books";
+!".djvu";
+!".mobi";
+!"Manual downloading";
+!"Enable/Disable sleep mode";
+!".chm";
+!"Indent paragraph";
+!"Epub downloading";
+!"Customize margins";
+!Themes;
+!"Tag books";
+!".pdb";
+!".fb2";
+!"Browser downloading";
+!"Book store(s)";
+!"TTS support";
+!".txt";
+!".cbr/.cbz";
+!"Edit meta-data";
+!".html";
+!"Enable/Disable hyphenation";
+!"OPDS catalog";
+)
+
+fmProduct23 = FM (Comparison_of_iOS_ebook_reader_software: "Edit/tool features" "Supported File Formats" "Book source management features" "Display features" ; 
+"Edit/tool features": Annotate "Online dictionary" Highlight "Offline dictionary" "Lookup Wikipedia" ["DRM support"] Translate "Edit meta-data" "Export to iTunes" ["TTS support"] Share ; 
+"Supported File Formats": ".epub" [".pdf"] [".djvu"] [".cbr/.cbz"] [".chm"] [".rtf"] [".pdb"] [".fb2"] [".txt"] [".html"] [".mobi"] ; 
+"Book source management features": "Sort books" "Browser downloading" "Other import via" "Book search" ["Book store(s)"] "Manual downloading" "Tag books" "OPDS catalog" "Epub downloading" ; 
+"Display features": "Customize text alignment" "Customize font" "Customize spacing: line/paragraph" "Day/Night mode" Themes "Enable/Disable sleep mode" "Page Turn Effects" "Multi-column mode" "Indent paragraph" "Styles (bold/italic/etc.)" "Customize margins" "Enable/Disable CSS" "Brightness Control" "Enable/Disable hyphenation" ; 
+Share: "Facebook, Twitter, eMail" ; 
+"Other import via": "Calibre (Plugin) eMail (MIME type) Dropbox iTunes File Sharing" ; 
+"Page Turn Effects": Configurable ; 
+"Multi-column mode": Configurable ; 
+"Enable/Disable CSS": Configurable ; 
+"Brightness Control": "Vertical swipe" ; 
+!".rtf";
+!".pdb";
+!".fb2";
+!"TTS support";
+!"DRM support";
+!".djvu";
+!".mobi";
+!".cbr/.cbz";
+!".txt";
+!".html";
+!".chm";
+!".pdf";
+)
+
+fmProduct24 = FM (Comparison_of_iOS_ebook_reader_software: "Edit/tool features" "Supported File Formats" "Book source management features" "Display features" ; 
+"Edit/tool features": ["Online dictionary"] [Annotate] [Highlight] ["Offline dictionary"] ["Lookup Wikipedia"] ["DRM support"] [Translate] ["Edit meta-data"] "Export to iTunes" ["TTS support"] [Share] ; 
+"Supported File Formats": ".epub" [".pdf"] [".djvu"] [".cbr/.cbz"] [".chm"] [".pdb"] [".rtf"] [".fb2"] [".txt"] [".html"] [".mobi"] ; 
+"Book source management features": ["Sort books"] ["Browser downloading"] "Book search" "Other import via" ["Book store(s)"] ["Manual downloading"] ["Tag books"] "Epub downloading" "OPDS catalog" ; 
+"Display features": "Customize text alignment" "Customize font" ["Customize spacing: line/paragraph"] "Day/Night mode" "Page Turn Effects" "Enable/Disable sleep mode" Themes "Multi-column mode" ["Indent paragraph"] "Styles (bold/italic/etc.)" "Customize margins" ["Enable/Disable CSS"] "Brightness Control" ["Enable/Disable hyphenation"] ; 
+"Other import via": "Calibre (Bonjour) eMail (MIME type)" ; 
+"Day/Night mode": "Using themes" ; 
+"Page Turn Effects": Configurable ; 
+"Multi-column mode": Configurable ; 
+"Styles (bold/italic/etc.)": Buggy ; 
+"Brightness Control": "Vertical swipe" ; 
+!Translate;
+!".rtf";
+!"Online dictionary";
+!"Offline dictionary";
+!"Sort books";
+!".djvu";
+!".mobi";
+!"Manual downloading";
+!".chm";
+!Share;
+!"Indent paragraph";
+!"Tag books";
+!".pdb";
+!".fb2";
+!"Browser downloading";
+!"Book store(s)";
+!Annotate;
+!"TTS support";
+!"DRM support";
+!"Enable/Disable CSS";
+!Highlight;
+!".txt";
+!".cbr/.cbz";
+!"Edit meta-data";
+!".html";
+!"Enable/Disable hyphenation";
+!"Lookup Wikipedia";
+!".pdf";
+)
+
+fmProduct25 = FM (Comparison_of_iOS_ebook_reader_software: "Edit/tool features" "Supported File Formats" "Book source management features" "Display features" ; 
+"Edit/tool features": ["Online dictionary"] [Annotate] [Highlight] "Offline dictionary" ["Lookup Wikipedia"] [Translate] ["DRM support"] "Edit meta-data" "Export to iTunes" ["TTS support"] [Share] ; 
+"Supported File Formats": ".epub" [".djvu"] ".pdf" [".cbr/.cbz"] [".chm"] [".fb2"] ".pdb" ".rtf" ".txt" [".html"] [".mobi"] ; 
+"Book source management features": "Sort books" "Browser downloading" "Book search" "Other import via" "Book store(s)" "Manual downloading" "Tag books" "Epub downloading" "OPDS catalog" ; 
+"Display features": "Customize text alignment" "Customize font" "Customize spacing: line/paragraph" "Day/Night mode" "Page Turn Effects" "Enable/Disable sleep mode" Themes ["Multi-column mode"] "Styles (bold/italic/etc.)" "Indent paragraph" ["Customize margins"] ["Enable/Disable CSS"] "Brightness Control" "Enable/Disable hyphenation" ; 
+"Edit meta-data": "Author, Title, Label" ; 
+"Other import via": "Calibre (Bonjour) eMail (MIME type) iTunes File Sharing" ; 
+"Page Turn Effects": Configurable ; 
+"Styles (bold/italic/etc.)": Buggy ; 
+"Indent paragraph": Configurable ; 
+"Brightness Control": "Vertical swipe" ; 
+!Translate;
+!"Online dictionary";
+!"Customize margins";
+!"Multi-column mode";
+!".fb2";
+!Annotate;
+!"TTS support";
+!"DRM support";
+!".djvu";
+!"Enable/Disable CSS";
+!Highlight;
+!".mobi";
+!".cbr/.cbz";
+!".html";
+!".chm";
+!"Lookup Wikipedia";
+)
+
+fmProduct26 = FM (Comparison_of_iOS_ebook_reader_software: "Edit/tool features" "Supported File Formats" "Book source management features" "Display features" ; 
+"Edit/tool features": ["Online dictionary"] Annotate [Highlight] "Offline dictionary" ["Lookup Wikipedia"] ["DRM support"] [Translate] "Edit meta-data" "Export to iTunes" ["TTS support"] Share ; 
+"Supported File Formats": ".epub" ".cbr/.cbz" ".pdf" ".djvu" [".chm"] ".pdb" [".rtf"] [".fb2"] [".txt"] [".html"] [".mobi"] ; 
+"Book source management features": "Sort books" ["Browser downloading"] "Book search" "Other import via" ["Book store(s)"] "Manual downloading" "Tag books" "OPDS catalog" "Epub downloading" ; 
+"Display features": "Customize text alignment" "Customize font" "Customize spacing: line/paragraph" "Day/Night mode" "Page Turn Effects" Themes "Enable/Disable sleep mode" ["Multi-column mode"] "Indent paragraph" "Styles (bold/italic/etc.)" "Customize margins" "Enable/Disable CSS" "Brightness Control" "Enable/Disable hyphenation" ; 
+Share: "Facebook, Twitter, eMail" ; 
+"Other import via": "Calibre (Bonjour) eMail (MIME type) iTunes File Sharing" ; 
+"Page Turn Effects": Configurable ; 
+"Brightness Control": "Vertical swipe" ; 
+!Translate;
+!"Online dictionary";
+!".rtf";
+!"Multi-column mode";
+!".fb2";
+!"Browser downloading";
+!"Book store(s)";
+!"TTS support";
+!"DRM support";
+!Highlight;
+!".mobi";
+!".txt";
+!".html";
+!".chm";
+!"Lookup Wikipedia";
+)
+
+fmProduct27 = FM (Comparison_of_iOS_ebook_reader_software: "Edit/tool features" "Supported File Formats" "Book source management features" "Display features" ; 
+"Edit/tool features": [Annotate] ["Online dictionary"] Highlight ["Offline dictionary"] ["Lookup Wikipedia"] Translate ["DRM support"] "Edit meta-data" "Export to iTunes" ["TTS support"] Share ; 
+"Supported File Formats": ".epub" [".cbr/.cbz"] [".djvu"] [".pdf"] [".chm"] [".pdb"] [".rtf"] ".fb2" ".txt" ".html" [".mobi"] ; 
+"Book source management features": ["Sort books"] ["Browser downloading"] "Other import via" ["Book search"] ["Book store(s)"] ["Manual downloading"] "Tag books" "Epub downloading" ["OPDS catalog"] ; 
+"Display features": ["Customize text alignment"] "Customize font" "Customize spacing: line/paragraph" "Day/Night mode" ["Enable/Disable sleep mode"] Themes "Page Turn Effects" ["Multi-column mode"] ["Indent paragraph"] "Styles (bold/italic/etc.)" "Customize margins" ["Enable/Disable CSS"] "Enable/Disable hyphenation" "Brightness Control" ; 
+Share: eMail ; 
+"Other import via": "eMail (MIME type)" ; 
+"Styles (bold/italic/etc.)": Buggy ; 
+!"Online dictionary";
+!".rtf";
+!"Offline dictionary";
+!"Multi-column mode";
+!"Customize text alignment";
+!"Book search";
+!"Sort books";
+!".djvu";
+!".mobi";
+!"Manual downloading";
+!"Enable/Disable sleep mode";
+!".chm";
+!"Indent paragraph";
+!".pdb";
+!"Browser downloading";
+!"Book store(s)";
+!Annotate;
+!"TTS support";
+!"DRM support";
+!"Enable/Disable CSS";
+!".cbr/.cbz";
+!"Lookup Wikipedia";
+!".pdf";
+!"OPDS catalog";
+)
+

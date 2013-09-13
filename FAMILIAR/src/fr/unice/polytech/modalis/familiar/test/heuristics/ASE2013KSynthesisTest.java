@@ -224,27 +224,6 @@ public class ASE2013KSynthesisTest extends KSynthesisTest {
 
 	}
 
-	/**
-	 * Convert a list of siblings represented by feature nodes in 
-	 * a list of siblings represented by strings
-	 * @param siblingSetsInBFS
-	 * @return
-	 */
-	private List<Set<String>> convertInSetOfString(List<Set<FeatureNode<String>>> siblingSetsInBFS) {
-		List<Set<String>> siblingsList = new ArrayList<Set<String>>();
-
-		for (Set<FeatureNode<String>> featureNodesiblings : siblingSetsInBFS) {
-			Set<String> siblings = new HashSet<String>();
-			for (FeatureNode<String> feature : featureNodesiblings) {
-				siblings.add(feature.getFeature());
-			}
-			siblingsList.add(siblings);
-		}
-
-		return siblingsList;
-	}
-
-
 	private void testOptimumBranching(List<FeatureModelVariable> fms) {
 		FMEditDistanceMetric zhangDistanceMetric = new ZhangEditDistance();
 		FMEditDistanceMetric refactoringDistanceMetric = new RefactoringEditDistance();
@@ -286,7 +265,7 @@ public class ASE2013KSynthesisTest extends KSynthesisTest {
 					sumRefactoringDistance += refactoringDistance;
 					
 					// Write the generated FM in the ouput folder
-					writeFMToFile(metric, fm, computedFM);
+					writeFMToFile(OUTPUT_FOLDER, metric, fm.getCompleteIdentifier(), computedFM);
 				}
 			}
 			System.out.println(metric);
@@ -428,7 +407,7 @@ public class ASE2013KSynthesisTest extends KSynthesisTest {
 	@Test
 	public void testBIGDegreeVariCell() {
 		System.out.println("BIG Varicell");
-		testBIGDegree(getVariCellFeatureModels());
+		testBIGDegree(getPCMFeatureModels());
 	}
 
 	@Ignore
@@ -442,7 +421,7 @@ public class ASE2013KSynthesisTest extends KSynthesisTest {
 	@Test
 	public void testTop2VariCell() {
 		System.out.println("Top 2 VariCell");
-		testTopN(getVariCellFeatureModels(), 2);
+		testTopN(getPCMFeatureModels(), 2);
 	}
 
 	@Ignore
@@ -457,7 +436,7 @@ public class ASE2013KSynthesisTest extends KSynthesisTest {
 	@Test
 	public void testClustersVariCell() {
 		System.out.println("Clusters VariCell");
-		testClusters(getVariCellFeatureModels());
+		testClusters(getPCMFeatureModels());
 	}
 
 	@Ignore
@@ -478,13 +457,13 @@ public class ASE2013KSynthesisTest extends KSynthesisTest {
 	@Test
 	public void testOptimumBranchingVariCell() {
 		System.out.println("Optimum branching VariCell");
-		testOptimumBranching(getVariCellFeatureModels());
+		testOptimumBranching(getPCMFeatureModels());
 	}
 	
 	@Ignore
 	@Test
 	public void testVariCell() {
-		List<FeatureModelVariable> variCellFeatureModels = getVariCellFeatureModels();
+		List<FeatureModelVariable> variCellFeatureModels = getPCMFeatureModels();
 		testBIGDegree(variCellFeatureModels);
 		testTopN(variCellFeatureModels, 2);
 		testClusters(variCellFeatureModels);
@@ -604,7 +583,7 @@ public class ASE2013KSynthesisTest extends KSynthesisTest {
 					
 					InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(fm, metric, null, null, -1);
  					FeatureModelVariable familiarFM = synthesizer.computeCompleteFeatureModel();
- 					writeFMToFile(metric, fm, familiarFM);
+ 					writeFMToFile(OUTPUT_FOLDER, metric, fm.getCompleteIdentifier(), familiarFM);
  					String familiarRoot = familiarFM.root().getFtName();
 					
 					
@@ -859,7 +838,7 @@ public class ASE2013KSynthesisTest extends KSynthesisTest {
 	public void testToto() {
 		System.out.println("Toto test !");
 		FeatureModelVariable faseFM = getFASEExample().iterator().next();
-		writeFMToFile(null, faseFM, faseFM);
+		writeFMToFile(OUTPUT_FOLDER, null, faseFM.getCompleteIdentifier(), faseFM);
 		testOptimumBranching(getFASEExample());
 	}
 	
@@ -872,7 +851,7 @@ public class ASE2013KSynthesisTest extends KSynthesisTest {
 				""
 				);
 		
-		writeFMToFile(null, faseExample, faseExample);
+		writeFMToFile(OUTPUT_FOLDER, null, faseExample.getCompleteIdentifier(), faseExample);
 		List<FeatureModelVariable> fms = new ArrayList<FeatureModelVariable>();
 		fms.add(faseExample);
 		testOptimumBranching(fms);

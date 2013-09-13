@@ -1,0 +1,31 @@
+<feature_model name="LOB">
+<feature_tree>
+:r LOB (f_LOB)
+	:m Insurance Policy (f_Insurance_Policy)
+	:m Financials (f_Financials)
+	:m Reporting (f_Reporting)
+	:m decision (f_decision)
+	:m U/W (f_U_W)
+	:m Data Capture (f_Data_Capture)
+	:m client data (f_client_data)
+	:o Third Party Services (f_Third_Party_Services)
+		:o VIN Validation (f_VIN_Validation)
+		:o Credit Check (f_Credit_Check)
+			:g [1, 1]
+				: simple (f_simple)
+				: advanced (f_advanced)
+		:o Add. Validation (f_Add__Validation)
+	:o car details (f_car_details)
+	:o house details (f_house_details)
+	:g [1, *]
+		: commercial (f_commercial)
+		: watercraft (f_watercraft)
+		: Auto (f_Auto)
+			:g [1, *]
+				: Comprehensive (f_Comprehensive)
+				: TP (f_TP)
+		: Home (f_Home)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

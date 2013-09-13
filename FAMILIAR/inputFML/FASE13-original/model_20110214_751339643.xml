@@ -1,0 +1,114 @@
+<feature_model name="Test Pool">
+<feature_tree>
+:r Test Pool (f_Test_Pool)
+	:m Models (f_Models)
+	:m Copy (f_Copy)
+	:m Fax (f_Fax)
+	:m Ink Technology (f_Ink_Technology)
+	:m Feed (f_Feed)
+	:m Tray 2 (f_Tray_2)
+	:m Max (f_Max)
+	:m Paper Capacity (f_Paper_Capacity)
+	:m Paper Size (f_Paper_Size)
+	:m Media Handling (f_Media_Handling)
+	:m Standard Functions (f_Standard_Functions)
+	:m Print (f_Print)
+	:m Print Speed (f_Print_Speed)
+	:m MFP (f_MFP)
+	:m Memory (f_Memory)
+	:m Tray 1 (f_Tray_1)
+	:m Paper Input Capability (f_Paper_Input_Capability)
+	:m USB (f_USB)
+	:m Network Connectivity (f_Network_Connectivity)
+	:m Scan (f_Scan)
+	:m Ethernet (f_Ethernet)
+	:o Tray 3 (f_Tray_3)
+		:o Tray 4 (f_Tray_4)
+	:o Wireless Adapter (f_Wireless_Adapter)
+	:g [1, *]
+		: TC 7 (f_TC_7)
+		: TC 10 (f_TC_10)
+		: TC 6 (f_TC_6)
+		: TC 5 (f_TC_5)
+		: TC 4 (f_TC_4)
+		: TC 8 (f_TC_8)
+		: TC 3 (f_TC_3)
+		: TC 9 (f_TC_9)
+		: TC 1 (f_TC_1)
+		: TC 2 (f_TC_2)
+	:g [1, 1]
+		: Solid Ink (f_Solid_Ink)
+			:m upto 30 ppm (f_upto_30_ppm)
+			:m 1675 sheets (f_1675_sheets)
+			:g [1, 1]
+				: P 2 (f_P_2)
+				: P 1 (f_P_1)
+				: P 3 (f_P_3)
+				: P 4 (f_P_4)
+					:m Scanning Software (f_Scanning_Software)
+			:g [1, 1]
+				: 512 MB (f_512_MB)
+				: 1 GB (f_1_GB)
+		: P 5 (f_P_5)
+			:m 251 sheets (f_251_sheets)
+			:m Standard (f_Standard)
+			:m upto 12 ppm (f_upto_12_ppm)
+			:m 384 MB (f_384_MB)
+			:o E-mail (f_E_mail)
+	:g [1, 1]
+		: Manual (f_Manual)
+		: Automatic Duplex (f_Automatic_Duplex)
+		: Document Glass (f_Document_Glass)
+	:g [1, 1]
+		: Multipurpose (f_Multipurpose)
+		: Paper (f_Paper)
+</feature_tree>
+<constraints>
+constraint_1:~f_Paper or f_P_5
+constraint_2:~f_Paper or f_TC_9
+constraint_3:~f_Solid_Ink or f_Multipurpose
+constraint_4:~f_TC_1 or f_P_5
+constraint_5:~f_Document_Glass or f_Multipurpose
+constraint_6:~f_Document_Glass or f_P_1
+constraint_7:~f_P_4 or f_Automatic_Duplex
+constraint_8:~f_P_4 or f_Test_Pool
+constraint_9:~f_P_4 or f_1_GB
+constraint_10:~f_P_4 or f_Tray_4
+constraint_11:~f_P_2 or f_Automatic_Duplex
+constraint_12:~f_P_3 or f_Tray_3
+constraint_13:~f_P_3 or f_Automatic_Duplex
+constraint_14:~f_P_3 or f_Test_Pool
+constraint_15:~f_Manual or f_P_5
+constraint_16:~f_Manual or f_TC_8
+constraint_17:~f_TC_9 or f_P_5
+constraint_18:~f_TC_8 or f_P_5
+constraint_19:~f_TC_6 or f_P_5
+constraint_20:~f_TC_5 or ~f_Document_Glass
+constraint_21:~f_TC_5 or ~f_512_MB
+constraint_22:~f_TC_5 or ~f_P_2
+constraint_23:~f_TC_5 or ~f_P_3
+constraint_24:~f_TC_5 or ~f_P_1
+constraint_25:~f_TC_4 or ~f_Document_Glass
+constraint_26:~f_TC_4 or ~f_512_MB
+constraint_27:~f_TC_4 or ~f_P_2
+constraint_28:~f_TC_4 or ~f_P_3
+constraint_29:~f_TC_4 or ~f_P_1
+constraint_30:~f_TC_3 or ~f_P_4
+constraint_31:~f_E_mail or ~f_Document_Glass
+constraint_32:~f_TC_1 or ~f_Document_Glass
+constraint_33:~f_Document_Glass or ~f_TC_10
+constraint_34:~f_Document_Glass or ~f_TC_7
+constraint_35:~f_P_5 or ~f_Document_Glass
+constraint_36:~f_TC_10 or ~f_512_MB
+constraint_37:~f_TC_10 or ~f_P_2
+constraint_38:~f_TC_10 or ~f_P_3
+constraint_39:~f_TC_10 or ~f_P_1
+constraint_40:~f_TC_9 or ~f_Document_Glass
+constraint_41:~f_TC_8 or ~f_Document_Glass
+constraint_42:~f_TC_7 or ~f_512_MB
+constraint_43:~f_TC_7 or ~f_P_2
+constraint_44:~f_TC_7 or ~f_P_3
+constraint_45:~f_TC_7 or ~f_P_1
+constraint_46:~f_TC_6 or ~f_Document_Glass
+</constraints>
+</feature_model>

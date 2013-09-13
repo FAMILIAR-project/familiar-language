@@ -1,0 +1,20 @@
+<feature_model name="Evaluator">
+<feature_tree>
+:r Evaluator (f_Evaluator)
+	:m SAL (f_SAL)
+	:m Language (f_Language)
+	:m Simple Arithmetic (f_Simple_Arithmetic)
+	:o Conditional (f_Conditional)
+	:o Optimizer (f_Optimizer)
+		:g [1, *]
+			: Short-circuit (f_Short_circuit)
+			: Constant folding (f_Constant_folding)
+	:g [1, 1]
+		: Evaluation semantics (f_Evaluation_semantics)
+		: Machine semantics (f_Machine_semantics)
+</feature_tree>
+<constraints>
+constraint_1:~f_Short_circuit or f_Evaluator
+constraint_2:~f_Short_circuit or f_Conditional
+</constraints>
+</feature_model>

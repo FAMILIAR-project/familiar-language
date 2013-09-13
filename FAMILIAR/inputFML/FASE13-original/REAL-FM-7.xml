@@ -1,0 +1,22 @@
+<feature_model name="jplug">
+<feature_tree>
+:r jplug (f_jplug)
+	:m interface (f_interface)
+	:o uml (f_uml)
+		:m diagram_builder (f_diagram_builder)
+		:o petri_net (f_petri_net)
+		:o model_code_synch (f_model_code_synch)
+	:o compiler (f_compiler)
+		:g [1, *]
+			: mvc (f_mvc)
+			: javac (f_javac)
+	:g [1, 1]
+		: sdi (f_sdi)
+		: mdi (f_mdi)
+			:o gui_builder (f_gui_builder)
+				:m java (f_java)
+				:o qt (f_qt)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

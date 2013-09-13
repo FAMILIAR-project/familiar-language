@@ -1,0 +1,28 @@
+<feature_model name="Calls">
+<feature_tree>
+:r Calls (f_Calls)
+	:m Ringing Tones (f_Ringing_Tones)
+	:m Mobile Phone (f_Mobile_Phone)
+	:m Utility Functions (f_Utility_Functions)
+	:m Alarm (f_Alarm)
+	:m OS (f_OS)
+	:m Settings (f_Settings)
+	:m Messaging (f_Messaging)
+	:o Media (f_Media)
+		:m Camera (f_Camera)
+		:o MP3 (f_MP3)
+	:o Java Support (f_Java_Support)
+		:o Games (f_Games)
+	:o Connectivity (f_Connectivity)
+		:m USB (f_USB)
+		:o Bluetooth (f_Bluetooth)
+	:g [1, *]
+		: SMS (f_SMS)
+		: MMS (f_MMS)
+	:g [1, 1]
+		: WinCE (f_WinCE)
+		: Symbian (f_Symbian)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

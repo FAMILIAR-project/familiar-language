@@ -1,0 +1,42 @@
+<feature_model name="Size">
+<feature_tree>
+:r Size (f_Size)
+	:m Theme (f_Theme)
+	:m TV-Series Shirts (f_TV_Series_Shirts)
+	:m Type (f_Type)
+	:m Color (f_Color)
+	:o White (f_White)
+	:o Pink (f_Pink)
+	:o Personalization (f_Personalization)
+		:g [1, *]
+			: Name (f_Name)
+			: Signature (f_Signature)
+				:o Logo (f_Logo)
+	:o Green (f_Green)
+	:o Red (f_Red)
+	:o Yellow (f_Yellow)
+	:o Blue (f_Blue)
+	:g [1, 1]
+		: Medium (f_Medium)
+		: Small (f_Small)
+		: Extra Large (f_Extra_Large)
+		: Large (f_Large)
+	:g [1, 1]
+		: Sex and the City (f_Sex_and_the_City)
+		: Chuck (f_Chuck)
+		: Simpsons (f_Simpsons)
+		: LOST (f_LOST)
+		: CSI (f_CSI)
+			:m Black (f_Black)
+	:g [1, 1]
+		: Girl Cut (f_Girl_Cut)
+		: Longsleeve (f_Longsleeve)
+		: Normal Cut (f_Normal_Cut)
+		: Baby Cut (f_Baby_Cut)
+</feature_tree>
+<constraints>
+constraint_1:~f_Sex_and_the_City or f_Girl_Cut
+constraint_2:~f_Sex_and_the_City or f_Pink
+constraint_3:~f_LOST or ~f_Pink
+</constraints>
+</feature_model>

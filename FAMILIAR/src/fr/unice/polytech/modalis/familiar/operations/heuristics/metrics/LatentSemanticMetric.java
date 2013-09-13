@@ -63,4 +63,16 @@ public class LatentSemanticMetric implements FeatureSimilarityMetric{
 		return "Latent Semantic Analysis";
 	}
 
+
+	@Override
+	public boolean isXorGroupRequired() {
+		return false;
+	}
+
+
+	@Override
+	public boolean isOrGroupRequired() {
+		return false;
+	}
+
 }

@@ -1,0 +1,315 @@
+fmProduct0 = FM (Comparison_of_SSH_servers: Features Platform General ; 
+Features: "SSH2" ["SSH1"] "Supports IPv6" "Supports OpenSSH authorized keys" SCP SFTP "Port forwarding" "Privilege separation" ; 
+Platform: HPUX ["Mac OS classic"] Windows ["z/OS"] [OpenVMS] ["Mac OS X"] Linux [Android] AIX Solaris [webOS] [Java] [BSD] [AmigaOS] [Cygwin] ; 
+General: License Status ; 
+License: Commercial ; 
+Status: active ; 
+!BSD;
+!"SSH1";
+!Java;
+!Cygwin;
+!"Mac OS classic";
+!Android;
+!"Mac OS X";
+!webOS;
+!AmigaOS;
+!OpenVMS;
+!"z/OS";
+)
+
+fmProduct1 = FM (Comparison_of_SSH_servers: General ; 
+General: [License] Status ; 
+Status: active ; 
+!License;
+)
+
+fmProduct2 = FM (Comparison_of_SSH_servers: Features Platform General ; 
+Features: "SSH2" "Supports IPv6" "SSH1" "Supports OpenSSH authorized keys" SCP SFTP "Port forwarding" "Privilege separation" ; 
+Platform: ["Mac OS classic"] [HPUX] [Windows] ["z/OS"] [OpenVMS] ["Mac OS X"] [Linux] [Android] [AIX] [Solaris] [Java] [webOS] [BSD] [AmigaOS] Cygwin ; 
+General: License Status ; 
+License: "Commercial, Free edition" ; 
+Status: active ; 
+!BSD;
+!"Mac OS classic";
+!HPUX;
+!webOS;
+!AmigaOS;
+!OpenVMS;
+!Java;
+!Linux;
+!Android;
+!"Mac OS X";
+!Windows;
+!AIX;
+!Solaris;
+!"z/OS";
+)
+
+fmProduct3 = FM (Comparison_of_SSH_servers: Features Platform General ; 
+Features: "SSH2" "Supports IPv6" ["SSH1"] "Supports OpenSSH authorized keys" SCP [SFTP] "Port forwarding" ["Privilege separation"] ; 
+Platform: ["Mac OS classic"] [HPUX] [Windows] [OpenVMS] ["z/OS"] "Mac OS X" Linux Android [AIX] Solaris [webOS] [Java] BSD [AmigaOS] Cygwin ; 
+General: License Status ; 
+License: MIT ; 
+Status: active ; 
+!"SSH1";
+!SFTP;
+!"Mac OS classic";
+!HPUX;
+!"Privilege separation";
+!webOS;
+!AmigaOS;
+!OpenVMS;
+!Java;
+!Windows;
+!AIX;
+!"z/OS";
+)
+
+fmProduct4 = FM (Comparison_of_SSH_servers: General ; 
+General: License ; 
+License: "Freeware (source available for purchase)" ;
+)
+
+fmProduct5 = FM (Comparison_of_SSH_servers: Features Platform General ; 
+Features: "SSH2" "Supports IPv6" "SSH1" "Supports OpenSSH authorized keys" SCP SFTP "Port forwarding" "Privilege separation" ; 
+Platform: HPUX "Mac OS classic" Windows ["z/OS"] [OpenVMS] "Mac OS X" Linux [Android] AIX Solaris [webOS] BSD Java [AmigaOS] [Cygwin] ; 
+General: License Status ; 
+License: Commercial ; 
+Status: active ; 
+!Cygwin;
+!webOS;
+!AmigaOS;
+!OpenVMS;
+!"z/OS";
+)
+
+fmProduct6 = FM (Comparison_of_SSH_servers: Features Platform General ; 
+Features: "SSH2" "SSH1" "Supports IPv6" "Supports OpenSSH authorized keys" SCP SFTP "Port forwarding" "Privilege separation" ; 
+Platform: [HPUX] ["Mac OS classic"] Windows ["z/OS"] [OpenVMS] ["Mac OS X"] [Linux] [Android] [AIX] [Solaris] [Java] [BSD] [webOS] [AmigaOS] [Cygwin] ; 
+General: License Status ; 
+License: "Open Source BSD" ; 
+Status: active ; 
+!BSD;
+!Cygwin;
+!"Mac OS classic";
+!HPUX;
+!webOS;
+!AmigaOS;
+!OpenVMS;
+!Java;
+!Linux;
+!Android;
+!"Mac OS X";
+!AIX;
+!Solaris;
+!"z/OS";
+)
+
+fmProduct7 = FM (Comparison_of_SSH_servers: Platform General ; 
+Platform: ["Mac OS classic"] [HPUX] [Windows] ["z/OS"] [OpenVMS] "Mac OS X" Linux [Android] [AIX] Solaris [webOS] [Java] [BSD] [AmigaOS] [Cygwin] ; 
+General: License Status ; 
+License: GPL ; 
+Status: active ; 
+!BSD;
+!Java;
+!Cygwin;
+!"Mac OS classic";
+!HPUX;
+!Windows;
+!AIX;
+!webOS;
+!AmigaOS;
+!OpenVMS;
+!"z/OS";
+)
+
+fmProduct8 = FM (Comparison_of_SSH_servers: Features Platform General ; 
+Features: "SSH2" "Supports IPv6" "SSH1" "Supports OpenSSH authorized keys" SCP SFTP "Port forwarding" "Privilege separation" ; 
+Platform: [HPUX] ["Mac OS classic"] [Windows] [OpenVMS] ["z/OS"] ["Mac OS X"] [Linux] [Android] [AIX] [Solaris] [webOS] [BSD] [Java] [AmigaOS] Cygwin ; 
+General: [License] Status ; 
+Status: active ; 
+!BSD;
+!"Mac OS classic";
+!HPUX;
+!License;
+!webOS;
+!AmigaOS;
+!OpenVMS;
+!Java;
+!Linux;
+!"Mac OS X";
+!Android;
+!Windows;
+!AIX;
+!Solaris;
+!"z/OS";
+)
+
+fmProduct9 = FM (Comparison_of_SSH_servers: Features Platform General ; 
+Features: "SSH2" "Supports IPv6" "SSH1" "Supports OpenSSH authorized keys" SCP SFTP "Port forwarding" "Privilege separation" ; 
+Platform: ["Mac OS classic"] HPUX [Windows] "z/OS" OpenVMS "Mac OS X" [Linux] [Android] [AIX] Solaris BSD [webOS] [Java] AmigaOS Cygwin ; 
+General: License Status ; 
+License: BSD ; 
+Status: active ; 
+!Java;
+!Linux;
+!"Mac OS classic";
+!Windows;
+!AIX;
+!webOS;
+)
+
+fmProduct10 = FM (Comparison_of_SSH_servers: Features Platform General ; 
+Features: "SSH2" "SSH1" "Supports IPv6" "Supports OpenSSH authorized keys" SCP SFTP "Port forwarding" "Privilege separation" ; 
+Platform: ["Mac OS classic"] [HPUX] Windows ["z/OS"] [OpenVMS] ["Mac OS X"] [Linux] [Android] [AIX] [Solaris] [webOS] [Java] [BSD] [AmigaOS] [Cygwin] ; 
+General: License Status ; 
+License: Commercial ; 
+Status: active ; 
+!BSD;
+!Cygwin;
+!"Mac OS classic";
+!HPUX;
+!webOS;
+!AmigaOS;
+!OpenVMS;
+!Java;
+!Linux;
+!"Mac OS X";
+!AIX;
+!Solaris;
+!"z/OS";
+)
+
+fmProduct11 = FM (Comparison_of_SSH_servers: Features Platform General ; 
+Features: "SSH2" ["SSH1"] "Supports IPv6" "Supports OpenSSH authorized keys" SCP SFTP "Port forwarding" ["Privilege separation"] ; 
+Platform: [Android] ["Mac OS classic"] HPUX AIX Solaris [BSD] Windows [Java] [webOS] "z/OS" [OpenVMS] [AmigaOS] ["Mac OS X"] Linux [Cygwin] ; 
+General: License Status ; 
+License: Commercial ; 
+Status: active ; 
+!BSD;
+!"SSH1";
+!Java;
+!Cygwin;
+!"Mac OS classic";
+!"Mac OS X";
+!"Privilege separation";
+!webOS;
+!AmigaOS;
+!OpenVMS;
+)
+
+fmProduct12 = FM (Comparison_of_SSH_servers: Platform General ; 
+Platform: ["Mac OS classic"] [HPUX] Windows ["z/OS"] [OpenVMS] ["Mac OS X"] [Linux] [Android] [AIX] [Solaris] [BSD] [webOS] [Java] [AmigaOS] [Cygwin] ; 
+General: License Status ; 
+License: "Commercial, Free Personal Edition" ; 
+Status: active ; 
+!BSD;
+!Cygwin;
+!"Mac OS classic";
+!HPUX;
+!webOS;
+!AmigaOS;
+!OpenVMS;
+!Java;
+!Linux;
+!Android;
+!"Mac OS X";
+!AIX;
+!Solaris;
+!"z/OS";
+)
+
+fmProduct13 = FM (Comparison_of_SSH_servers: Features Platform General ; 
+Features: "SSH2" ["SSH1"] ["Supports IPv6"] "Supports OpenSSH authorized keys" [SCP] SFTP "Port forwarding" "Privilege separation" ; 
+Platform: [HPUX] ["Mac OS classic"] Windows ["z/OS"] [OpenVMS] ["Mac OS X"] [Linux] [Android] [AIX] [Solaris] [BSD] [Java] [webOS] [AmigaOS] [Cygwin] ; 
+General: License Status ; 
+License: "Free for personal use" ; 
+Status: active ; 
+!BSD;
+!"SSH1";
+!"Mac OS classic";
+!Cygwin;
+!HPUX;
+!webOS;
+!AmigaOS;
+!OpenVMS;
+!Java;
+!"Supports IPv6";
+!Linux;
+!"Mac OS X";
+!Android;
+!AIX;
+!Solaris;
+!"z/OS";
+!SCP;
+)
+
+fmProduct14 = FM (Comparison_of_SSH_servers: Features Platform General ; 
+Features: "SSH2" ["SSH1"] "Supports IPv6" ["Supports OpenSSH authorized keys"] [SCP] [SFTP] "Port forwarding" "Privilege separation" ; 
+Platform: [HPUX] ["Mac OS classic"] Windows ["z/OS"] [OpenVMS] ["Mac OS X"] [Linux] [Android] [AIX] [Solaris] [Java] [webOS] [BSD] [AmigaOS] [Cygwin] ; 
+General: License Status ; 
+License: Commercial ; 
+Status: active ; 
+!BSD;
+!"SSH1";
+!SFTP;
+!"Mac OS classic";
+!Cygwin;
+!"Supports OpenSSH authorized keys";
+!HPUX;
+!webOS;
+!AmigaOS;
+!OpenVMS;
+!Java;
+!Linux;
+!"Mac OS X";
+!Android;
+!AIX;
+!Solaris;
+!"z/OS";
+!SCP;
+)
+
+fmProduct15 = FM (Comparison_of_SSH_servers: Features Platform ; 
+Features: "SSH2" ["SSH1"] "Supports IPv6" "Supports OpenSSH authorized keys" SCP SFTP "Port forwarding" "Privilege separation" ; 
+Platform: [HPUX] ["Mac OS classic"] Windows ["z/OS"] [OpenVMS] ["Mac OS X"] [Linux] [Android] [AIX] [Solaris] [webOS] [Java] [BSD] [AmigaOS] [Cygwin] ; 
+!BSD;
+!"SSH1";
+!"Mac OS classic";
+!Cygwin;
+!HPUX;
+!webOS;
+!AmigaOS;
+!OpenVMS;
+!Java;
+!Linux;
+!"Mac OS X";
+!Android;
+!AIX;
+!Solaris;
+!"z/OS";
+)
+
+fmProduct16 = FM (Comparison_of_SSH_servers: Platform ; 
+Platform: ["Mac OS classic"] [HPUX] Windows ["z/OS"] [OpenVMS] ["Mac OS X"] [Linux] [Android] [AIX] [Solaris] [Java] [BSD] [webOS] [AmigaOS] [Cygwin] ; 
+!BSD;
+!Cygwin;
+!"Mac OS classic";
+!HPUX;
+!webOS;
+!AmigaOS;
+!OpenVMS;
+!Java;
+!Linux;
+!Android;
+!"Mac OS X";
+!AIX;
+!Solaris;
+!"z/OS";
+)
+
+fmProduct17 = FM (Comparison_of_SSH_servers: Features ; 
+Features: "SSH2" ["Supports IPv6"] ["SSH1"] ["Supports OpenSSH authorized keys"] SCP SFTP "Port forwarding" ["Privilege separation"] ; 
+!"SSH1";
+)
+

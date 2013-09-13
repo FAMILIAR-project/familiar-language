@@ -16,4 +16,9 @@ public interface FeatureSimilarityMetric {
 	double similarity(ImplicationGraph<String> implicationGraph, 
 			Set<FGroup> xorGroups, Set<FGroup> orGroups, 
 			String source, String target);
+	
+	boolean isXorGroupRequired();
+	
+	boolean isOrGroupRequired();
+	
 }

@@ -1,0 +1,31 @@
+<feature_model name="JCalc">
+<feature_tree>
+:r JCalc (f_JCalc)
+	:m FILE (f_FILE)
+	:m HELP (f_HELP)
+	:m MENU (f_MENU)
+	:m LANG (f_LANG)
+	:m DEVICE (f_DEVICE)
+	:o LOOKANDFEEL (f_LOOKANDFEEL)
+		:g [1, 1]
+			: Motif (f_Motif)
+			: System (f_System)
+			: GTK (f_GTK)
+			: Windows (f_Windows)
+			: Metal (f_Metal)
+	:o COMMA (f_COMMA)
+	:o SAVE (f_SAVE)
+	:o EDIT (f_EDIT)
+	:o ANALYZER (f_ANALYZER)
+	:o PERFORMANCE (f_PERFORMANCE)
+	:g [1, 1]
+		: PT_BR (f_PT_BR)
+		: EN (f_EN)
+	:g [1, 1]
+		: PC (f_PC)
+		: Z6 (f_Z6)
+		: Milestone (f_Milestone)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

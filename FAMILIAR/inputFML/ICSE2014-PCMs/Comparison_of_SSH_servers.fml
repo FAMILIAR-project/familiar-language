@@ -1,0 +1,18 @@
+Comparison_of_SSH_servers: Features Platform General ; 
+Features: "SSH2" ["Supports IPv6"] ["SSH1"] ["Supports OpenSSH authorized keys"] [SCP] [SFTP] "Port forwarding" ["Privilege separation"] ; 
+Platform: (Java|"z/OS")? (AIX|AmigaOS)? (Windows|OpenVMS)? ("Mac OS classic"|Cygwin)? [HPUX] ["Mac OS X"] [Linux] [Android] [Solaris] [BSD] ; 
+General: [License] [Status] ; 
+License: (GPL|Commercial|MIT|"Freeware (source available for purchase)"|"Commercial, Free edition"|"Open Source BSD"|"Commercial, Free Personal Edition"|"Free for personal use")? ; 
+Status: active ; 
+(Windows -> !Cygwin);
+("Mac OS classic" -> !OpenVMS);
+(AIX -> !OpenVMS);
+(Java -> !AmigaOS);
+(Windows -> !AmigaOS);
+(AIX -> !Cygwin);
+(AmigaOS -> !Linux);
+(Java -> !OpenVMS);
+("Mac OS classic" -> !"z/OS");
+(OpenVMS -> !Linux);
+(Java -> !Cygwin);
+("Mac OS classic" -> !AmigaOS);

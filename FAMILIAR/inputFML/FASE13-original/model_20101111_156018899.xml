@@ -1,0 +1,21 @@
+<feature_model name="eshop">
+<feature_tree>
+:r eshop (f_eshop)
+	:m catalogue (f_catalogue)
+	:m payment (f_payment)
+	:m security (f_security)
+	:o search (f_search)
+		:g [1, *]
+			: bing (f_bing)
+			: yahoo (f_yahoo)
+			: google (f_google)
+	:g [1, *]
+		: transfer (f_transfer)
+		: cc (f_cc)
+	:g [1, 1]
+		: high (f_high)
+		: standard (f_standard)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

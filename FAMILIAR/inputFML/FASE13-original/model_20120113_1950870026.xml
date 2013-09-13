@@ -1,0 +1,21 @@
+<feature_model name="catalogue">
+<feature_tree>
+:r catalogue (f_catalogue)
+	:m eShop (f_eShop)
+	:m security (f_security)
+	:m payment (f_payment)
+	:o search (f_search)
+	:g [1, *]
+		: bank trasnsfer (f_bank_trasnsfer)
+		: credit card (f_credit_card)
+	:g [1, 1]
+		: standard (f_standard)
+			:o public report (f_public_report)
+		: high (f_high)
+</feature_tree>
+<constraints>
+constraint_1:~f_credit_card or f_high
+constraint_2:~f_standard or f_bank_trasnsfer
+constraint_3:~f_public_report or f_search
+</constraints>
+</feature_model>

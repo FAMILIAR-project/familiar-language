@@ -1,0 +1,203 @@
+fmProduct0 = FM (Comparison_of_iPod_managers: "iPod syncing and maintenance features" "Media organization and transfer features" "iPhone & iPod Touch compatibility" General ; 
+"iPod syncing and maintenance features": ["shuffle3G Firmware"] "iPod touch / iPhone support" ["Supports Gapless Metadata"] "Download Podcasts" "Rebuild iPod Database" ["Photo support"] [Portable] ["5th Gen. nano Firmware"] "6th Gen. Firmware" ; 
+"Media organization and transfer features": ["Extract Playcounts"] ["Extract Playlists"] "Extract DRM-Free Videos" "Copy Album Artwork" "Copy Videos" ["Copy Content to iPod"] "Extract DRM-Free Music" "Copy Music" "Copy Smart Playlists" ; 
+"iPhone & iPod Touch compatibility": "iPod touch / iPhone FW 4.0.2" "iPod touch / iPhone FW 3.0" "iPod touch / iPhone FW 3.1" ["iPod touch / iPhone FW 2.x"] "iPod touch / iPhone Firmware up to true.1.4" "iPod touch / iPhone FW 5.0.x" ; 
+General: Windows "Downloadable without paying?" "Software license" "Mac OS X" Linux ; 
+"Software license": GPL ; 
+!"shuffle3G Firmware";
+!"Copy Content to iPod";
+!"iPod touch / iPhone FW 2.x";
+)
+
+fmProduct1 = FM (Comparison_of_iPod_managers: "iPod syncing and maintenance features" "Media organization and transfer features" "iPhone & iPod Touch compatibility" General ; 
+"iPod syncing and maintenance features": "shuffle3G Firmware" "iPod touch / iPhone support" ["Supports Gapless Metadata"] "Download Podcasts" "Rebuild iPod Database" [Portable] ["Photo support"] ["6th Gen. Firmware"] "5th Gen. nano Firmware" ; 
+"Media organization and transfer features": "Extract Playcounts" ["Extract DRM-Free Videos"] ["Extract Playlists"] "Copy Album Artwork" ["Copy Videos"] ["Copy Content to iPod"] "Extract DRM-Free Music" "Copy Smart Playlists" "Copy Music" ; 
+"iPhone & iPod Touch compatibility": "iPod touch / iPhone FW 4.0.2" "iPod touch / iPhone FW 3.0" "iPod touch / iPhone FW 3.1" "iPod touch / iPhone FW 2.x" "iPod touch / iPhone Firmware up to true.1.4" "iPod touch / iPhone FW 5.0.x" ; 
+General: Windows "Downloadable without paying?" "Software license" "Mac OS X" Linux ; 
+"Software license": MIT ; 
+!"Extract DRM-Free Videos";
+!"Copy Content to iPod";
+!"6th Gen. Firmware";
+)
+
+fmProduct2 = FM (Comparison_of_iPod_managers: "iPod syncing and maintenance features" "Media organization and transfer features" "iPhone & iPod Touch compatibility" General ; 
+"iPod syncing and maintenance features": ["shuffle3G Firmware"] "iPod touch / iPhone support" ["Supports Gapless Metadata"] "Download Podcasts" ["Rebuild iPod Database"] [Portable] ["Photo support"] ["6th Gen. Firmware"] ["5th Gen. nano Firmware"] ; 
+"Media organization and transfer features": "Extract Playcounts" "Extract Playlists" ["Extract DRM-Free Videos"] "Copy Album Artwork" "Copy Videos" "Copy Content to iPod" ["Extract DRM-Free Music"] "Copy Music" "Copy Smart Playlists" ; 
+"iPhone & iPod Touch compatibility": ["iPod touch / iPhone FW 4.0.2"] "iPod touch / iPhone FW 3.0" "iPod touch / iPhone FW 3.1" "iPod touch / iPhone FW 2.x" ["iPod touch / iPhone FW 5.0.x"] "iPod touch / iPhone Firmware up to true.1.4" ; 
+General: Windows "Downloadable without paying?" "Software license" "Mac OS X" Linux ; 
+"Software license": "GPL v3" ; 
+!"Extract DRM-Free Videos";
+!"6th Gen. Firmware";
+!"iPod touch / iPhone FW 5.0.x";
+!"iPod touch / iPhone FW 4.0.2";
+!"Extract DRM-Free Music";
+!"5th Gen. nano Firmware";
+!"Rebuild iPod Database";
+)
+
+fmProduct3 = FM (Comparison_of_iPod_managers: "iPod syncing and maintenance features" "Media organization and transfer features" "iPhone & iPod Touch compatibility" General ; 
+"iPod syncing and maintenance features": "shuffle3G Firmware" "iPod touch / iPhone support" "Supports Gapless Metadata" "Download Podcasts" ["Rebuild iPod Database"] Portable "Photo support" "5th Gen. nano Firmware" "6th Gen. Firmware" ; 
+"Media organization and transfer features": "Extract Playcounts" "Extract Playlists" "Extract DRM-Free Videos" "Copy Album Artwork" "Copy Videos" ["Copy Content to iPod"] "Extract DRM-Free Music" ["Copy Smart Playlists"] "Copy Music" ; 
+"iPhone & iPod Touch compatibility": "iPod touch / iPhone FW 4.0.2" "iPod touch / iPhone FW 3.0" "iPod touch / iPhone FW 3.1" "iPod touch / iPhone FW 2.x" "iPod touch / iPhone Firmware up to true.1.4" "iPod touch / iPhone FW 5.0.x" ; 
+General: Windows "Downloadable without paying?" "Software license" "Mac OS X" [Linux] ; 
+"Software license": Proprietary ; 
+!Linux;
+!"Copy Content to iPod";
+!"Rebuild iPod Database";
+!"Copy Smart Playlists";
+)
+
+fmProduct4 = FM (Comparison_of_iPod_managers: "iPod syncing and maintenance features" "Media organization and transfer features" "iPhone & iPod Touch compatibility" General ; 
+"iPod syncing and maintenance features": "shuffle3G Firmware" "iPod touch / iPhone support" "Supports Gapless Metadata" ["Download Podcasts"] ["Rebuild iPod Database"] ["Photo support"] [Portable] "6th Gen. Firmware" "5th Gen. nano Firmware" ; 
+"Media organization and transfer features": "Extract Playcounts" "Extract DRM-Free Videos" "Extract Playlists" "Copy Album Artwork" "Copy Videos" "Copy Content to iPod" "Extract DRM-Free Music" "Copy Music" "Copy Smart Playlists" ; 
+"iPhone & iPod Touch compatibility": ["iPod touch / iPhone FW 4.0.2"] "iPod touch / iPhone FW 3.0" "iPod touch / iPhone FW 3.1" "iPod touch / iPhone FW 2.x" ["iPod touch / iPhone FW 5.0.x"] "iPod touch / iPhone Firmware up to true.1.4" ; 
+General: [Windows] "Downloadable without paying?" "Software license" ["Mac OS X"] Linux ; 
+"Software license": GPL ; 
+!"Download Podcasts";
+!"Mac OS X";
+!Windows;
+)
+
+fmProduct5 = FM (Comparison_of_iPod_managers: "iPod syncing and maintenance features" "Media organization and transfer features" "iPhone & iPod Touch compatibility" General ; 
+"iPod syncing and maintenance features": "shuffle3G Firmware" "iPod touch / iPhone support" "Supports Gapless Metadata" "Download Podcasts" ["Rebuild iPod Database"] Portable "Photo support" "5th Gen. nano Firmware" "6th Gen. Firmware" ; 
+"Media organization and transfer features": "Extract Playcounts" "Extract Playlists" "Extract DRM-Free Videos" "Copy Album Artwork" "Copy Videos" ["Copy Content to iPod"] "Extract DRM-Free Music" "Copy Music" ["Copy Smart Playlists"] ; 
+"iPhone & iPod Touch compatibility": "iPod touch / iPhone FW 4.0.2" "iPod touch / iPhone FW 3.0" "iPod touch / iPhone FW 3.1" "iPod touch / iPhone FW 2.x" "iPod touch / iPhone Firmware up to true.1.4" "iPod touch / iPhone FW 5.0.x" ; 
+General: Windows ["Downloadable without paying?"] "Software license" "Mac OS X" [Linux] ; 
+"Software license": Proprietary ; 
+!Linux;
+!"Downloadable without paying?";
+!"Copy Content to iPod";
+!"Copy Smart Playlists";
+)
+
+fmProduct6 = FM (Comparison_of_iPod_managers: "iPod syncing and maintenance features" "Media organization and transfer features" "iPhone & iPod Touch compatibility" General ; 
+"iPod syncing and maintenance features": "shuffle3G Firmware" "iPod touch / iPhone support" "Supports Gapless Metadata" "Download Podcasts" "Rebuild iPod Database" [Portable] "Photo support" "5th Gen. nano Firmware" "6th Gen. Firmware" ; 
+"Media organization and transfer features": "Extract Playcounts" ["Extract DRM-Free Videos"] "Extract Playlists" "Copy Album Artwork" "Copy Videos" "Copy Content to iPod" ["Extract DRM-Free Music"] "Copy Music" "Copy Smart Playlists" ; 
+"iPhone & iPod Touch compatibility": "iPod touch / iPhone FW 4.0.2" "iPod touch / iPhone FW 3.0" "iPod touch / iPhone FW 3.1" "iPod touch / iPhone FW 2.x" "iPod touch / iPhone Firmware up to true.1.4" "iPod touch / iPhone FW 5.0.x" ; 
+General: Windows "Downloadable without paying?" "Software license" "Mac OS X" [Linux] ; 
+"Software license": Proprietary ; 
+!"Extract DRM-Free Videos";
+!Portable;
+!Linux;
+!"Extract DRM-Free Music";
+)
+
+fmProduct7 = FM (Comparison_of_iPod_managers: "iPod syncing and maintenance features" "Media organization and transfer features" "iPhone & iPod Touch compatibility" General ; 
+"iPod syncing and maintenance features": ["shuffle3G Firmware"] ["iPod touch / iPhone support"] ["Supports Gapless Metadata"] "Download Podcasts" ["Rebuild iPod Database"] [Portable] ["Photo support"] ["6th Gen. Firmware"] ["5th Gen. nano Firmware"] ; 
+"Media organization and transfer features": ["Extract Playcounts"] "Extract DRM-Free Videos" ["Extract Playlists"] "Copy Album Artwork" ["Copy Videos"] ["Copy Content to iPod"] ["Extract DRM-Free Music"] "Copy Smart Playlists" "Copy Music" ; 
+"iPhone & iPod Touch compatibility": ["iPod touch / iPhone FW 4.0.2"] ["iPod touch / iPhone FW 3.0"] ["iPod touch / iPhone FW 3.1"] ["iPod touch / iPhone FW 2.x"] ["iPod touch / iPhone Firmware up to true.1.4"] ["iPod touch / iPhone FW 5.0.x"] ; 
+General: Windows "Downloadable without paying?" "Software license" ["Mac OS X"] [Linux] ; 
+"Software license": Proprietary ; 
+!Linux;
+!"Mac OS X";
+!"iPod touch / iPhone FW 5.0.x";
+!"iPod touch / iPhone FW 4.0.2";
+!"Extract DRM-Free Music";
+!"iPod touch / iPhone Firmware up to true.1.4";
+!"iPod touch / iPhone FW 2.x";
+!"iPod touch / iPhone FW 3.0";
+!"iPod touch / iPhone FW 3.1";
+)
+
+fmProduct8 = FM (Comparison_of_iPod_managers: "iPod syncing and maintenance features" "Media organization and transfer features" "iPhone & iPod Touch compatibility" General ; 
+"iPod syncing and maintenance features": "shuffle3G Firmware" "iPod touch / iPhone support" "Supports Gapless Metadata" "Download Podcasts" "Rebuild iPod Database" Portable ["Photo support"] "5th Gen. nano Firmware" "6th Gen. Firmware" ; 
+"Media organization and transfer features": "Extract Playcounts" ["Extract DRM-Free Videos"] "Extract Playlists" "Copy Album Artwork" ["Copy Videos"] "Copy Content to iPod" "Extract DRM-Free Music" "Copy Music" ["Copy Smart Playlists"] ; 
+"iPhone & iPod Touch compatibility": "iPod touch / iPhone FW 4.0.2" "iPod touch / iPhone FW 3.0" "iPod touch / iPhone FW 3.1" "iPod touch / iPhone FW 2.x" "iPod touch / iPhone Firmware up to true.1.4" "iPod touch / iPhone FW 5.0.x" ; 
+General: Windows "Downloadable without paying?" "Software license" ["Mac OS X"] [Linux] ; 
+"Software license": Proprietary ; 
+!"Extract DRM-Free Videos";
+!Linux;
+!"Mac OS X";
+!"Copy Videos";
+!"Copy Smart Playlists";
+!"Photo support";
+)
+
+fmProduct9 = FM (Comparison_of_iPod_managers: "iPod syncing and maintenance features" "Media organization and transfer features" "iPhone & iPod Touch compatibility" General ; 
+"iPod syncing and maintenance features": ["shuffle3G Firmware"] "iPod touch / iPhone support" ["Supports Gapless Metadata"] "Download Podcasts" ["Rebuild iPod Database"] [Portable] ["Photo support"] ["6th Gen. Firmware"] "5th Gen. nano Firmware" ; 
+"Media organization and transfer features": "Extract Playcounts" "Extract Playlists" "Extract DRM-Free Videos" "Copy Album Artwork" ["Copy Videos"] "Copy Content to iPod" "Extract DRM-Free Music" ["Copy Smart Playlists"] "Copy Music" ; 
+"iPhone & iPod Touch compatibility": "iPod touch / iPhone FW 4.0.2" "iPod touch / iPhone FW 3.0" "iPod touch / iPhone FW 3.1" "iPod touch / iPhone FW 2.x" "iPod touch / iPhone Firmware up to true.1.4" ["iPod touch / iPhone FW 5.0.x"] ; 
+General: [Windows] "Downloadable without paying?" "Software license" ["Mac OS X"] Linux ; 
+"Software license": GPL ; 
+!"shuffle3G Firmware";
+!"Mac OS X";
+!"iPod touch / iPhone FW 5.0.x";
+!Windows;
+!"Copy Videos";
+!"Copy Smart Playlists";
+!"Supports Gapless Metadata";
+!"Photo support";
+)
+
+fmProduct10 = FM (Comparison_of_iPod_managers: "iPod syncing and maintenance features" "Media organization and transfer features" "iPhone & iPod Touch compatibility" General ; 
+"iPod syncing and maintenance features": ["shuffle3G Firmware"] "iPod touch / iPhone support" ["Supports Gapless Metadata"] ["Download Podcasts"] ["Rebuild iPod Database"] ["Photo support"] [Portable] ["6th Gen. Firmware"] ["5th Gen. nano Firmware"] ; 
+"Media organization and transfer features": "Extract Playcounts" ["Extract Playlists"] "Extract DRM-Free Videos" ["Copy Album Artwork"] "Copy Videos" ["Copy Content to iPod"] "Extract DRM-Free Music" ["Copy Smart Playlists"] "Copy Music" ; 
+"iPhone & iPod Touch compatibility": ["iPod touch / iPhone FW 4.0.2"] ["iPod touch / iPhone FW 3.0"] ["iPod touch / iPhone FW 3.1"] "iPod touch / iPhone FW 2.x" ["iPod touch / iPhone FW 5.0.x"] "iPod touch / iPhone Firmware up to true.1.4" ; 
+General: [Windows] "Downloadable without paying?" "Software license" "Mac OS X" [Linux] ; 
+"Software license": Proprietary ; 
+!"Download Podcasts";
+!Linux;
+!Windows;
+!"Copy Album Artwork";
+!"iPod touch / iPhone FW 4.0.2";
+!"Copy Smart Playlists";
+!"iPod touch / iPhone FW 3.0";
+!"iPod touch / iPhone FW 3.1";
+)
+
+fmProduct11 = FM (Comparison_of_iPod_managers: General ; 
+General: Windows "Downloadable without paying?" "Software license" "Mac OS X" Linux ; 
+"Software license": BSD ;
+)
+
+fmProduct12 = FM (Comparison_of_iPod_managers: "iPod syncing and maintenance features" "Media organization and transfer features" "iPhone & iPod Touch compatibility" General ; 
+"iPod syncing and maintenance features": ["shuffle3G Firmware"] ["iPod touch / iPhone support"] ["Supports Gapless Metadata"] "Download Podcasts" ["Rebuild iPod Database"] [Portable] ["Photo support"] ["5th Gen. nano Firmware"] ["6th Gen. Firmware"] ; 
+"Media organization and transfer features": ["Extract Playcounts"] "Extract DRM-Free Videos" ["Extract Playlists"] "Copy Album Artwork" "Copy Videos" ["Copy Content to iPod"] "Extract DRM-Free Music" "Copy Music" ["Copy Smart Playlists"] ; 
+"iPhone & iPod Touch compatibility": ["iPod touch / iPhone FW 4.0.2"] ["iPod touch / iPhone FW 3.0"] ["iPod touch / iPhone FW 3.1"] ["iPod touch / iPhone FW 2.x"] ["iPod touch / iPhone FW 5.0.x"] ["iPod touch / iPhone Firmware up to true.1.4"] ; 
+General: Windows "Downloadable without paying?" "Software license" ["Mac OS X"] [Linux] ; 
+"Software license": Proprietary ; 
+!Linux;
+!"Mac OS X";
+!"iPod touch / iPhone FW 5.0.x";
+!"iPod touch / iPhone FW 4.0.2";
+!"Copy Smart Playlists";
+!"iPod touch / iPhone Firmware up to true.1.4";
+!"iPod touch / iPhone FW 2.x";
+!"iPod touch / iPhone FW 3.0";
+!"iPod touch / iPhone FW 3.1";
+)
+
+fmProduct13 = FM (Comparison_of_iPod_managers: "iPod syncing and maintenance features" "Media organization and transfer features" "iPhone & iPod Touch compatibility" General ; 
+"iPod syncing and maintenance features": ["shuffle3G Firmware"] ["iPod touch / iPhone support"] ["Supports Gapless Metadata"] ["Download Podcasts"] "Rebuild iPod Database" "Photo support" [Portable] ["5th Gen. nano Firmware"] ["6th Gen. Firmware"] ; 
+"Media organization and transfer features": "Extract Playcounts" "Extract Playlists" "Extract DRM-Free Videos" "Copy Album Artwork" "Copy Videos" "Copy Content to iPod" "Extract DRM-Free Music" ["Copy Smart Playlists"] "Copy Music" ; 
+"iPhone & iPod Touch compatibility": "iPod touch / iPhone FW 4.0.2" "iPod touch / iPhone FW 3.0" "iPod touch / iPhone FW 3.1" "iPod touch / iPhone FW 2.x" "iPod touch / iPhone Firmware up to true.1.4" "iPod touch / iPhone FW 5.0.x" ; 
+General: Windows ["Downloadable without paying?"] "Software license" ["Mac OS X"] [Linux] ; 
+"Software license": Proprietary ; 
+!"Download Podcasts";
+!Portable;
+!Linux;
+!"Downloadable without paying?";
+!"Mac OS X";
+!"Copy Smart Playlists";
+)
+
+fmProduct14 = FM (Comparison_of_iPod_managers: "iPod syncing and maintenance features" "Media organization and transfer features" "iPhone & iPod Touch compatibility" ; 
+"iPod syncing and maintenance features": ["shuffle3G Firmware"] ["iPod touch / iPhone support"] ["Supports Gapless Metadata"] ["Download Podcasts"] "Rebuild iPod Database" [Portable] ["Photo support"] ["5th Gen. nano Firmware"] ["6th Gen. Firmware"] ; 
+"Media organization and transfer features": ["Extract Playcounts"] ["Extract Playlists"] ["Extract DRM-Free Videos"] ["Copy Album Artwork"] ["Copy Videos"] ["Copy Content to iPod"] "Extract DRM-Free Music" "Copy Music" "Copy Smart Playlists" ; 
+"iPhone & iPod Touch compatibility": ["iPod touch / iPhone FW 4.0.2"] ["iPod touch / iPhone FW 3.0"] ["iPod touch / iPhone FW 3.1"] ["iPod touch / iPhone FW 2.x"] ["iPod touch / iPhone FW 5.0.x"] ["iPod touch / iPhone Firmware up to true.1.4"] ; 
+!"Extract DRM-Free Videos";
+!"iPod touch / iPhone support";
+!"shuffle3G Firmware";
+!"iPod touch / iPhone Firmware up to true.1.4";
+!"iPod touch / iPhone FW 2.x";
+!"iPod touch / iPhone FW 3.1";
+!"Photo support";
+!"Download Podcasts";
+!"iPod touch / iPhone FW 5.0.x";
+!"Copy Album Artwork";
+!"iPod touch / iPhone FW 4.0.2";
+!"5th Gen. nano Firmware";
+!"Supports Gapless Metadata";
+!"iPod touch / iPhone FW 3.0";
+)
+

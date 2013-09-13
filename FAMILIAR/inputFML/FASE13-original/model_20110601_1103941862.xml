@@ -1,0 +1,24 @@
+<feature_model name="Text Editing">
+<feature_tree>
+:r Text Editing (f_Text_Editing)
+	:m File Operations (f_File_Operations)
+	:m Load (f_Load)
+	:m Save (f_Save)
+	:m Text Editor (f_Text_Editor)
+	:o Code Editing (f_Code_Editing)
+		:o Syntax Highlighting (f_Syntax_Highlighting)
+			:g [1, 1]
+				: Haskell (f_Haskell)
+				: Java (f_Java)
+				: Python (f_Python)
+	:o Print (f_Print)
+		:o RTF Editing (f_RTF_Editing)
+</feature_tree>
+<constraints>
+constraint_1:~f_Python or ~f_RTF_Editing
+constraint_2:~f_Java or ~f_RTF_Editing
+constraint_3:~f_Syntax_Highlighting or ~f_RTF_Editing
+constraint_4:~f_Code_Editing or ~f_RTF_Editing
+constraint_5:~f_RTF_Editing or ~f_Haskell
+</constraints>
+</feature_model>

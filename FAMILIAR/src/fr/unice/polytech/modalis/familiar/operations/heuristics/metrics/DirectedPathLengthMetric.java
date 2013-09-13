@@ -50,4 +50,14 @@ public class DirectedPathLengthMetric extends WordNetMetric {
 		return "WordNet metric (Directed path length)";
 	}
 
+	@Override
+	public boolean isXorGroupRequired() {
+		return false;
+	}
+
+	@Override
+	public boolean isOrGroupRequired() {
+		return false;
+	}
+
 }

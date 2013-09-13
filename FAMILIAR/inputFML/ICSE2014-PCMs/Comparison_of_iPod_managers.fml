@@ -1,0 +1,6 @@
+Comparison_of_iPod_managers: "iPod syncing and maintenance features" "Media organization and transfer features" "iPhone & iPod Touch compatibility" General ; 
+"iPod syncing and maintenance features": ["shuffle3G Firmware"] ["iPod touch / iPhone support"] ["Supports Gapless Metadata"] ["Download Podcasts"] ["Rebuild iPod Database"] ["Photo support"] [Portable] ["6th Gen. Firmware"] ["5th Gen. nano Firmware"] ; 
+"Media organization and transfer features": ["Extract Playcounts"] ["Extract Playlists"] ["Extract DRM-Free Videos"] ["Copy Album Artwork"] ["Copy Videos"] ["Copy Content to iPod"] ["Extract DRM-Free Music"] ["Copy Smart Playlists"] "Copy Music" ; 
+"iPhone & iPod Touch compatibility": ["iPod touch / iPhone FW 4.0.2"] ["iPod touch / iPhone FW 3.0"] ["iPod touch / iPhone FW 3.1"] ["iPod touch / iPhone FW 2.x"] ["iPod touch / iPhone Firmware up to true.1.4"] ["iPod touch / iPhone FW 5.0.x"] ; 
+General: [Windows] ["Downloadable without paying?"] "Software license" ["Mac OS X"] [Linux] ; 
+"Software license": ("GPL v3"|GPL|MIT|Proprietary|BSD) ;

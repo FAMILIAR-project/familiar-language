@@ -1,0 +1,36 @@
+<feature_model name="Messaging">
+<feature_tree>
+:r Messaging (f_Messaging)
+	:m Ringing Tones (f_Ringing_Tones)
+	:m Mobile Phone (f_Mobile_Phone)
+	:m Setting (f_Setting)
+	:m Utilit Functions (f_Utilit_Functions)
+	:m OS (f_OS)
+	:m Calls (f_Calls)
+	:m Alarm clock (f_Alarm_clock)
+	:o Media (f_Media)
+		:o MP3 (f_MP3)
+		:o Camera (f_Camera)
+		:o MP4 (f_MP4)
+	:o Connectivity (f_Connectivity)
+		:g [1, *]
+			: Bluetooth (f_Bluetooth)
+			: WifI (f_WifI)
+			: USB (f_USB)
+	:o Java Support (f_Java_Support)
+		:o Games (f_Games)
+	:g [1, *]
+		: MMS (f_MMS)
+		: SMS (f_SMS)
+		: EMS (f_EMS)
+	:g [1, *]
+		: Data (f_Data)
+		: Voice (f_Voice)
+	:g [1, 1]
+		: Symbian (f_Symbian)
+		: WinCE (f_WinCE)
+</feature_tree>
+<constraints>
+constraint_1:~f_MP4 or ~f_MP3
+</constraints>
+</feature_model>

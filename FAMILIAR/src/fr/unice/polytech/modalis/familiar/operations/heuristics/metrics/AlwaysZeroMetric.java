@@ -12,4 +12,14 @@ public class AlwaysZeroMetric implements FeatureSimilarityMetric {
 		return 0;
 	}
 
+	@Override
+	public boolean isXorGroupRequired() {
+		return false;
+	}
+
+	@Override
+	public boolean isOrGroupRequired() {
+		return false;
+	}
+
 }

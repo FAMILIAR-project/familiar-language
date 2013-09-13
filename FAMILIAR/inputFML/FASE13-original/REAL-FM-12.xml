@@ -1,0 +1,23 @@
+<feature_model name="search_engine_PL">
+<feature_tree>
+:r search_engine_PL (f_search_engine_PL)
+	:m doc_type (f_doc_type)
+	:m html (f_html)
+	:o page_translation (f_page_translation)
+		:o search_by_language (f_search_by_language)
+			:g [1, *]
+				: portuguese (f_portuguese)
+				: spanish (f_spanish)
+				: english (f_english)
+	:o image (f_image)
+		:g [1, 1]
+			: gif (f_gif)
+			: jpg (f_jpg)
+			: svg (f_svg)
+	:o page_preview (f_page_preview)
+	:o video (f_video)
+</feature_tree>
+<constraints>
+constraint_1:~f_svg or ~f_page_preview
+</constraints>
+</feature_model>

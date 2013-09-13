@@ -54,4 +54,14 @@ public class SimmetricsMetric implements FeatureSimilarityMetric {
 		return "Simmetrics metric (" + metric.getShortDescriptionString() + ")";
 	}
 
+	@Override
+	public boolean isXorGroupRequired() {
+		return false;
+	}
+
+	@Override
+	public boolean isOrGroupRequired() {
+		return false;
+	}
+
 }

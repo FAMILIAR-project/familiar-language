@@ -1,0 +1,259 @@
+fmProduct0 = FM (Comparison_of_video_converters: "Help and support" Input Features Overview Output ; 
+"Help and support": ["By live chat"] "By email" ["By telephone"] ; 
+Input: "MPEG-PS" Ogg VCD "Blu-ray video" WMV "MP4" TOD FLV TS SVCD "3GP" AVI QuickTime "DVD video" Matroska ; 
+Features: "DVD burning" "Splitting into chapters" ["Converts without transcoding"] Preview ["Converts audio files"] "Extract audio" "Editing tools" "Include effects" "Batch convert" ["Converts photos"] ["Menu templates"] "Subtitles support" ["Converts online videos"] "Join files" "Blu-ray burning" ["Upload to YouTube"] ; 
+Overview: Windows "Mac OS X" [Linux] "Licensing scheme" ; 
+Output: "MPEG-PS" Ogg Webm "Nokia mobile phones" PSP iPad FLV "Nintendo DS" Zune [TS] "Samsung mobile phones" "3GP" AVI QuickTime Xbox Matroska ["Video CD"] BlackBerry ["Super Video CD"] ["Blu-ray video"] WMV "MP4" HTC [TOD] Android "PS3" iPhone "Apple-TV" "DVD video" iPod ; 
+"Licensing scheme": "[[Trialware]] Trialware" ; 
+!Linux;
+!"Converts without transcoding";
+!"Upload to YouTube";
+!"Menu templates";
+!"By telephone";
+!"Blu-ray video";
+!"Converts audio files";
+!"By live chat";
+!"Converts photos";
+!"Converts online videos";
+)
+
+fmProduct1 = FM (Comparison_of_video_converters: "Help and support" Input Features Overview Output ; 
+"Help and support": ["By live chat"] "By email" ["By telephone"] ; 
+Input: "MPEG-PS" Ogg VCD "Blu-ray video" WMV "MP4" TOD FLV TS SVCD "3GP" AVI QuickTime "DVD video" Matroska ; 
+Features: ["DVD burning"] ["Splitting into chapters"] ["Converts without transcoding"] Preview "Converts audio files" "Extract audio" "Editing tools" "Include effects" ["Menu templates"] ["Batch convert"] ["Converts photos"] ["Subtitles support"] "Converts online videos" ["Join files"] ["Blu-ray burning"] ["Upload to YouTube"] ; 
+Overview: Windows "Mac OS X" [Linux] "Licensing scheme" ; 
+Output: "MPEG-PS" [Webm] [Ogg] "Nokia mobile phones" PSP iPad [FLV] "Nintendo DS" Zune [TS] "Samsung mobile phones" "3GP" AVI QuickTime Xbox [Matroska] ["Video CD"] BlackBerry ["Super Video CD"] ["Blu-ray video"] "MP4" WMV HTC [TOD] Android "PS3" iPhone ["Apple-TV"] "DVD video" iPod ; 
+"Licensing scheme": "[[Shareware]] Shareware" ; 
+!Linux;
+!"DVD burning";
+!FLV;
+!Ogg;
+!"Upload to YouTube";
+!"Join files";
+!"By telephone";
+!"Blu-ray video";
+!"By live chat";
+!"Converts photos";
+!Matroska;
+)
+
+fmProduct2 = FM (Comparison_of_video_converters: "Help and support" Input Features Overview Output ; 
+"Help and support": "By live chat" "By email" ["By telephone"] ; 
+Input: "MPEG-PS" Ogg VCD "Blu-ray video" WMV "MP4" TOD FLV TS SVCD "3GP" AVI QuickTime "DVD video" Matroska ; 
+Features: ["Splitting into chapters"] "DVD burning" "Converts without transcoding" Preview "Converts audio files" "Extract audio" "Include effects" "Editing tools" "Converts photos" "Menu templates" "Batch convert" ["Subtitles support"] ["Converts online videos"] ["Join files"] "Blu-ray burning" "Upload to YouTube" ; 
+Overview: Windows ["Mac OS X"] [Linux] "Licensing scheme" ; 
+Output: "MPEG-PS" Webm Ogg "Nokia mobile phones" iPad PSP FLV ["Nintendo DS"] Zune [TS] "Samsung mobile phones" "3GP" AVI QuickTime Xbox Matroska "Video CD" BlackBerry "Super Video CD" "Blu-ray video" WMV "MP4" HTC [TOD] Android iPhone "PS3" "Apple-TV" "DVD video" iPod ; 
+"Licensing scheme": "Ad supported [[freeware]] freeware" ; 
+!Linux;
+!"Nintendo DS";
+!"Splitting into chapters";
+!"Mac OS X";
+!"Join files";
+!"By telephone";
+!TS;
+!TOD;
+!"Subtitles support";
+!"Converts online videos";
+)
+
+fmProduct3 = FM (Comparison_of_video_converters: Overview ; 
+Overview: Windows "Mac OS X" [Linux] "Licensing scheme" ; 
+"Licensing scheme": "[[Free and open-source]] Free and open-source" ; 
+!Linux;
+)
+
+fmProduct4 = FM (Comparison_of_video_converters: Overview ; 
+Overview: Windows "Mac OS X" Linux "Licensing scheme" ; 
+"Licensing scheme": "[[Free and open-source]] Free and open-source" ;
+)
+
+fmProduct5 = FM (Comparison_of_video_converters: "Help and support" Input Features Overview Output ; 
+"Help and support": ["By live chat"] "By email" ["By telephone"] ; 
+Input: "MPEG-PS" FLV Ogg TS VCD "Blu-ray video" SVCD WMV "3GP" "MP4" AVI QuickTime "DVD video" Matroska TOD ; 
+Features: ["DVD burning"] ["Splitting into chapters"] ["Converts without transcoding"] [Preview] "Converts audio files" "Extract audio" ["Include effects"] ["Editing tools"] ["Menu templates"] "Converts photos" "Batch convert" "Subtitles support" ["Converts online videos"] "Join files" ["Blu-ray burning"] ["Upload to YouTube"] ; 
+Overview: Windows ["Mac OS X"] [Linux] "Licensing scheme" ; 
+Output: "MPEG-PS" [Ogg] [Webm] ["Video CD"] ["Super Video CD"] ["Blu-ray video"] WMV "MP4" [TOD] FLV [TS] "3GP" AVI QuickTime "DVD video" Matroska ; 
+"Licensing scheme": "Ad supported [[freeware]] freeware" ; 
+!"Include effects";
+!"By telephone";
+!"Blu-ray video";
+!Webm;
+!"Editing tools";
+!TOD;
+!"Converts online videos";
+!"Splitting into chapters";
+!"DVD burning";
+!"Blu-ray burning";
+!Linux;
+!"Super Video CD";
+!Ogg;
+!"Mac OS X";
+!"Upload to YouTube";
+!"Menu templates";
+!Preview;
+!TS;
+!"By live chat";
+!"Video CD";
+)
+
+fmProduct6 = FM (Comparison_of_video_converters: "Help and support" Features Overview Output ; 
+"Help and support": ["By live chat"] "By email" ["By telephone"] ; 
+Features: "DVD burning" "Splitting into chapters" ["Converts without transcoding"] Preview "Converts audio files" "Extract audio" "Editing tools" "Include effects" "Converts photos" "Batch convert" ["Menu templates"] "Subtitles support" "Converts online videos" "Join files" "Blu-ray burning" "Upload to YouTube" ; 
+Overview: Windows ["Mac OS X"] [Linux] "Licensing scheme" ; 
+Output: "Nokia mobile phones" BlackBerry iPad PSP [HTC] Android ["Nintendo DS"] iPhone "PS3" [Zune] "Samsung mobile phones" "Apple-TV" [Xbox] iPod ; 
+"Licensing scheme": "Ad supported [[freeware]] freeware" ; 
+!Linux;
+!"Nintendo DS";
+!"Converts without transcoding";
+!"Mac OS X";
+!"Menu templates";
+!HTC;
+!"By telephone";
+!Xbox;
+!"By live chat";
+!Zune;
+)
+
+fmProduct7 = FM (Comparison_of_video_converters: Input Overview Output ; 
+Input: FLV "MPEG-PS" [Ogg] TS VCD "Blu-ray video" SVCD WMV "MP4" "3GP" AVI QuickTime "DVD video" Matroska TOD ; 
+Overview: Windows "Mac OS X" Linux "Licensing scheme" ; 
+Output: ["MPEG-PS"] [Ogg] [Webm] ["Nokia mobile phones"] iPad [PSP] [FLV] ["Nintendo DS"] [Zune] [TS] ["Samsung mobile phones"] ["3GP"] [AVI] [QuickTime] [Xbox] Matroska ["Video CD"] [BlackBerry] ["Super Video CD"] ["Blu-ray video"] [WMV] "MP4" [HTC] [TOD] Android ["PS3"] iPhone "Apple-TV" ["DVD video"] iPod ; 
+"Licensing scheme": "[[Free and open-source]] Free and open-source" ; 
+!BlackBerry;
+!"DVD video";
+!"Nokia mobile phones";
+!"3GP";
+!HTC;
+!"Blu-ray video";
+!Webm;
+!QuickTime;
+!WMV;
+!"PS3";
+!Zune;
+!"Samsung mobile phones";
+!"Nintendo DS";
+!FLV;
+!AVI;
+!Ogg;
+!PSP;
+!"MPEG-PS";
+!Xbox;
+)
+
+fmProduct8 = FM (Comparison_of_video_converters: "Help and support" Features Overview Output ; 
+"Help and support": ["By live chat"] ["By email"] ["By telephone"] ; 
+Features: "Splitting into chapters" ["DVD burning"] "Converts without transcoding" Preview "Converts audio files" "Extract audio" ["Editing tools"] "Include effects" ["Converts photos"] "Batch convert" ["Menu templates"] ["Subtitles support"] "Converts online videos" "Join files" ["Blu-ray burning"] ["Upload to YouTube"] ; 
+Overview: Windows ["Mac OS X"] [Linux] "Licensing scheme" ; 
+Output: "MPEG-PS" Webm Ogg "Nokia mobile phones" PSP iPad FLV "Nintendo DS" Zune TS "Samsung mobile phones" "3GP" AVI QuickTime Xbox Matroska "Video CD" BlackBerry "Super Video CD" "Blu-ray video" "MP4" WMV HTC [TOD] Android iPhone "PS3" ["Apple-TV"] "DVD video" iPod ; 
+"Licensing scheme": "Ad supported [[freeware]] freeware" ; 
+!"By email";
+!"By telephone";
+!"Editing tools";
+!"Apple-TV";
+!"Subtitles support";
+!Linux;
+!"Blu-ray burning";
+!"DVD burning";
+!"Mac OS X";
+!"Upload to YouTube";
+!"Menu templates";
+!"By live chat";
+!"Converts photos";
+)
+
+fmProduct9 = FM (Comparison_of_video_converters: Overview ; 
+Overview: Windows "Mac OS X" Linux "Licensing scheme" ; 
+"Licensing scheme": "[[Free and open-source]] Free and open-source" ;
+)
+
+fmProduct10 = FM (Comparison_of_video_converters: Overview ; 
+Overview: Windows "Mac OS X" [Linux] "Licensing scheme" ; 
+"Licensing scheme": "[[Freeware]] Freeware" ; 
+!Linux;
+)
+
+fmProduct11 = FM (Comparison_of_video_converters: Overview ; 
+Overview: [Windows] ["Mac OS X"] Linux "Licensing scheme" ; 
+"Licensing scheme": "[[Free and open-source]] Free and open-source" ; 
+!"Mac OS X";
+)
+
+fmProduct12 = FM (Comparison_of_video_converters: Overview ; 
+Overview: [Windows] ["Mac OS X"] Linux "Licensing scheme" ; 
+"Licensing scheme": "[[Free and open-source]] Free and open-source" ; 
+!"Mac OS X";
+!Windows;
+)
+
+fmProduct13 = FM (Comparison_of_video_converters: Overview ; 
+Overview: Windows ["Mac OS X"] [Linux] "Licensing scheme" ; 
+"Licensing scheme": "[[Free and open-source]] Free and open-source" ; 
+!Linux;
+!"Mac OS X";
+)
+
+fmProduct14 = FM (Comparison_of_video_converters: "Help and support" Input Features Overview Output ; 
+"Help and support": ["By live chat"] "By email" ["By telephone"] ; 
+Input: "MPEG-PS" Ogg VCD "Blu-ray video" WMV "MP4" TOD FLV TS SVCD "3GP" AVI QuickTime "DVD video" Matroska ; 
+Features: "Splitting into chapters" ["DVD burning"] "Converts without transcoding" Preview "Converts audio files" "Extract audio" "Include effects" "Editing tools" ["Converts photos"] "Batch convert" ["Menu templates"] "Subtitles support" ["Converts online videos"] ["Join files"] ["Blu-ray burning"] ["Upload to YouTube"] ; 
+Overview: Windows ["Mac OS X"] [Linux] "Licensing scheme" ; 
+Output: "MPEG-PS" Ogg Webm "Nokia mobile phones" PSP iPad FLV "Nintendo DS" Zune TS "Samsung mobile phones" "3GP" AVI QuickTime Xbox Matroska "Video CD" BlackBerry "Super Video CD" "Blu-ray video" WMV "MP4" HTC [TOD] Android iPhone "PS3" "Apple-TV" "DVD video" iPod ; 
+"Licensing scheme": "[[Freeware]] Freeware" ; 
+!"By telephone";
+!TOD;
+!"Converts online videos";
+!Linux;
+!"Blu-ray burning";
+!"DVD burning";
+!"Mac OS X";
+!"Upload to YouTube";
+!"Menu templates";
+!"Join files";
+!"By live chat";
+!"Converts photos";
+)
+
+fmProduct15 = FM (Comparison_of_video_converters: Overview ; 
+Overview: Windows ["Mac OS X"] [Linux] "Licensing scheme" ; 
+"Licensing scheme": "Ad supported [[Freeware]] Freeware" ; 
+!Linux;
+!"Mac OS X";
+)
+
+fmProduct16 = FM (Comparison_of_video_converters: Input Output ; 
+Input: FLV "MPEG-PS" Ogg TS VCD "Blu-ray video" SVCD "MP4" WMV "3GP" AVI QuickTime "DVD video" Matroska TOD ; 
+Output: "MPEG-PS" [Ogg] ["Video CD"] [Webm] ["Super Video CD"] "Blu-ray video" "MP4" WMV [TOD] FLV [TS] "3GP" AVI [QuickTime] "DVD video" Matroska ; 
+!QuickTime;
+!Webm;
+)
+
+fmProduct17 = FM (Comparison_of_video_converters: Input ; 
+Input: "MPEG-PS" Ogg VCD "Blu-ray video" WMV "MP4" TOD FLV TS SVCD "3GP" AVI QuickTime "DVD video" Matroska ;
+)
+
+fmProduct18 = FM (Comparison_of_video_converters: Output ; 
+Output: [Android] "PS3" ["Nintendo DS"] iPhone Zune "Nokia mobile phones" BlackBerry ["Samsung mobile phones"] iPad PSP "Apple-TV" Xbox HTC iPod ; 
+!"Nintendo DS";
+!Android;
+!"Samsung mobile phones";
+)
+
+fmProduct19 = FM (Comparison_of_video_converters: Features ; 
+Features: "Splitting into chapters" ["DVD burning"] ["Converts without transcoding"] Preview "Converts audio files" ["Extract audio"] "Editing tools" ["Include effects"] "Batch convert" ["Converts photos"] ["Menu templates"] "Subtitles support" "Converts online videos" ["Join files"] ["Blu-ray burning"] ["Upload to YouTube"] ; 
+!"Blu-ray burning";
+!"DVD burning";
+!"Converts without transcoding";
+!"Upload to YouTube";
+!"Include effects";
+!"Menu templates";
+!"Join files";
+!"Extract audio";
+!"Converts photos";
+)
+
+fmProduct20 = FM (Comparison_of_video_converters: "Help and support" ; 
+"Help and support": ["By live chat"] "By email" ["By telephone"] ; 
+!"By telephone";
+!"By live chat";
+)
+

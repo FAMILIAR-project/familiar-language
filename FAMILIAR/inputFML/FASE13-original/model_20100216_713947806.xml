@@ -1,0 +1,18 @@
+<feature_model name="YM_Test">
+<feature_tree>
+:r YM_Test (f_YM_Test)
+	:m POWER SUPPLY (f_POWER_SUPPLY)
+	:m TUNER and CHANNEL DECODING (f_TUNER_and_CHANNEL_DECODING)
+	:m DEMULTIPLEXER and DESCRAMBLING (f_DEMULTIPLEXER_and_DESCRAMBLING)
+	:m AUDIO and VIDEO DECODING (f_AUDIO_and_VIDEO_DECODING)
+	:m CONDITIONAL ACCESS (f_CONDITIONAL_ACCESS)
+	:m SECURITY (f_SECURITY)
+	:m PROCESSOR and DATA STORAGE (f_PROCESSOR_and_DATA_STORAGE)
+	:m DATA INTERFACES (f_DATA_INTERFACES)
+	:o Wifi (f_Wifi)
+	:o Power Line Control (f_Power_Line_Control)
+	:o USB (f_USB)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

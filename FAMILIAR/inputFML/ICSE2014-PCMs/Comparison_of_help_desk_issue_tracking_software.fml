@@ -1,0 +1,7 @@
+Comparison_of_help_desk_issue_tracking_software: License "Back end" "Implementation language(s)" ; 
+License: (GPL|"Proprietary, SaaS, Cloud"|"Proprietary, some parts GPL"|"Proprietary, online, hosted."|"Proprietary, free, commercial options"|Proprietary|BSD|AGPL|"Proprietary, SaaS and On-Premise"|"Proprietary; free for use") ; 
+"Back end": ("MySQL, PostgreSQL, Oracle, Microsoft SQL Server"|"Sybase, Microsoft SQL Server, Oracle"|"Microsoft SQL Server, Oracle"|"Microsoft SQL Server, MySQL, Oracle, Sybase"|"Microsoft SQL Server, Access"|FireBird|sqlite|"MySQL, PostgreSQL, Oracle"|"Microsoft SQL Server"|"OpenBase, MySQL, Microsoft SQL Server, PostgreSQL, Oracle"|"MySQL, Derby, Oracle, Microsoft SQL Server"|MySQL)? ; 
+"Implementation language(s)": ("C++"|"ASP.NET, C#"|unk|PHP|Perl|".NET"|"Ruby on Rails"|"Java, C#"|"Visual C++ and PHP"|Java|"ASP.NET, C#, C++"|ASP|"C#") ; 
+"Implementation language(s)";
+License;
+"Back end";

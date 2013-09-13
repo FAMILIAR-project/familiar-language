@@ -1,0 +1,21 @@
+<feature_model name="Class Diagram">
+<feature_tree>
+:r Class Diagram (f_Class_Diagram)
+	:m Diagrams (f_Diagrams)
+	:m UML-IDE (f_UML_IDE)
+	:o Sequence Diagram (f_Sequence_Diagram)
+	:o State Diagram (f_State_Diagram)
+	:o Component Diagram (f_Component_Diagram)
+	:o Activivity Diagram (f_Activivity_Diagram)
+	:o Use Case Diagram (f_Use_Case_Diagram)
+	:o Colaboration Diargam (f_Colaboration_Diargam)
+	:o Deployment Diagram (f_Deployment_Diagram)
+	:o Cognitive Support (f_Cognitive_Support)
+	:o Logging (f_Logging)
+	:g [1, *]
+		: Export (f_Export)
+		: Import (f_Import)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

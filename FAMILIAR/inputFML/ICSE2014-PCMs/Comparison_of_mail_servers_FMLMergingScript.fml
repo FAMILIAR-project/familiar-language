@@ -1,0 +1,885 @@
+fmProduct0 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License [NNTP] SMTP Windows Database "Mail server" ["POP over TLS"] [ActiveSync] ["POP3"] ["IPv6"] ["IMAP IDLE"] SSL ["Mac OS"] IMAP "Linux/Unix" [Filesystem] Webmail ["SMTP over TLS"] ; 
+Authentication: ["POP before SMTP"] Database "SMTP AUTH" "Mail server" LDAP [APOP] [Filesystem] ; 
+"Antispam Features": ["Bayesian filters"] ["Embedded Antispam"] ["Embedded Antivirus"] [Tarpit] "Mail Server" [SPF] [Greylisting] [DNSBL] "Regular expressions" [SURBL] [Spamtraps] ; 
+License: "[[GNU Public License|GPLv2]]GPLv2" ; 
+"Mail server": "agorum core" ; 
+"Mail server": "agorum core" ; 
+"Mail Server": "agorum core" ; 
+!"IMAP IDLE";
+!Filesystem;
+!"POP over TLS";
+!"Mac OS";
+!"IPv6";
+!ActiveSync;
+!DNSBL;
+!APOP;
+!NNTP;
+!SURBL;
+!"Embedded Antivirus";
+!"SMTP over TLS";
+!SPF;
+!Spamtraps;
+!"POP3";
+!Tarpit;
+!"Bayesian filters";
+!"POP before SMTP";
+!Greylisting;
+!"Embedded Antispam";
+)
+
+fmProduct1 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License NNTP SMTP Windows Database "Mail server" [ActiveSync] "POP over TLS" "POP3" ["IPv6"] "IMAP IDLE" SSL "Mac OS" IMAP "Linux/Unix" [Webmail] Filesystem "SMTP over TLS" ; 
+Authentication: ["POP before SMTP"] Database "SMTP AUTH" "Mail server" LDAP [APOP] [Filesystem] ; 
+"Antispam Features": "Bayesian filters" ["Embedded Antispam"] ["Embedded Antivirus"] [SPF] [Tarpit] "Mail Server" [Greylisting] ["Regular expressions"] [DNSBL] [SURBL] [Spamtraps] ; 
+License: "[[Apache Software License|ASLv2]]ASLv2" ; 
+"Mail server": "Apache James" ; 
+"Mail server": "Apache James" ; 
+"Mail Server": "Apache James" ; 
+!ActiveSync;
+!"IPv6";
+!Webmail;
+)
+
+fmProduct2 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License [NNTP] SMTP [Windows] Database "Mail server" "POP over TLS" ActiveSync "POP3" ["IPv6"] "IMAP IDLE" SSL IMAP "Mac OS" "Linux/Unix" Webmail Filesystem "SMTP over TLS" ; 
+Authentication: "POP before SMTP" Database "SMTP AUTH" "Mail server" LDAP APOP Filesystem ; 
+"Antispam Features": "Bayesian filters" "Embedded Antispam" "Embedded Antivirus" "Mail Server" Tarpit SPF Greylisting DNSBL "Regular expressions" SURBL Spamtraps ; 
+License: "Proprietary (true00 user/30 day demo)" ; 
+"Mail server": Atmail ; 
+"Mail server": Atmail ; 
+"Mail Server": Atmail ; 
+!"IPv6";
+!Windows;
+!NNTP;
+)
+
+fmProduct3 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License SMTP [NNTP] [Database] Windows "Mail server" ActiveSync "POP over TLS" "POP3" ["IPv6"] "IMAP IDLE" SSL ["Mac OS"] IMAP "Linux/Unix" [Filesystem] Webmail "SMTP over TLS" ; 
+Authentication: ["POP before SMTP"] [Database] "SMTP AUTH" "Mail server" LDAP APOP [Filesystem] ; 
+"Antispam Features": "Embedded Antispam" "Bayesian filters" "Embedded Antivirus" "Mail Server" SPF [Tarpit] Greylisting "Regular expressions" DNSBL SURBL [Spamtraps] ; 
+License: "Proprietary (free version: email true00 users / calendar 5 users)" ; 
+"Mail server": Axigen ; 
+Webmail: "Ajax & Basic" ; 
+"Mail server": Axigen ; 
+"Mail Server": Axigen ; 
+!Filesystem;
+!Spamtraps;
+!"IPv6";
+!"Mac OS";
+!Tarpit;
+!Database;
+!"POP before SMTP";
+!NNTP;
+)
+
+fmProduct4 = FM (Comparison_of_mail_servers: "Feature comparison" ; 
+"Feature comparison": License [NNTP] SMTP [Windows] Database "Mail server" "POP over TLS" ActiveSync "POP3" ["IPv6"] "IMAP IDLE" SSL ["Mac OS"] IMAP "Linux/Unix" Filesystem Webmail "SMTP over TLS" ; 
+License: "[[Affero General Public License|AGPLv3]]AGPLv3" ; 
+"Mail server": "Blue Mind" ; 
+!"Mac OS";
+!Windows;
+!NNTP;
+)
+
+fmProduct5 = FM (Comparison_of_mail_servers: "Feature comparison" "Antispam Features" ; 
+"Feature comparison": License [NNTP] SMTP Database [Windows] "Mail server" "POP over TLS" [ActiveSync] "POP3" "IPv6" ["IMAP IDLE"] SSL IMAP "Mac OS" "Linux/Unix" [Filesystem] Webmail "SMTP over TLS" ; 
+"Antispam Features": ["Embedded Antispam"] ["Bayesian filters"] ["Embedded Antivirus"] [SPF] [Tarpit] "Mail Server" [Greylisting] ["Regular expressions"] DNSBL SURBL [Spamtraps] ; 
+License: "[[GNU General Public License|GPLv3]]GPLv3" ; 
+"Mail server": Citadel ; 
+"Mail Server": Citadel ; 
+!Filesystem;
+!"IMAP IDLE";
+!Spamtraps;
+!ActiveSync;
+!Windows;
+!"Regular expressions";
+!Tarpit;
+!Greylisting;
+!NNTP;
+)
+
+fmProduct6 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License SMTP [NNTP] Database Windows "Mail server" ActiveSync "POP over TLS" "POP3" "IPv6" "IMAP IDLE" SSL "Mac OS" IMAP "Linux/Unix" Webmail Filesystem "SMTP over TLS" ; 
+Authentication: "POP before SMTP" Database "SMTP AUTH" "Mail server" LDAP APOP Filesystem ; 
+"Antispam Features": ["Embedded Antispam"] ["Bayesian filters"] ["Embedded Antivirus"] SPF "Mail Server" Tarpit [Greylisting] "Regular expressions" DNSBL SURBL Spamtraps ; 
+License: "Proprietary (Free for up to 5 users)" ; 
+"Mail server": "CommuniGate Pro" ; 
+"Mail server": "CommuniGate Pro" ; 
+"Mail Server": "CommuniGate Pro" ; 
+!Greylisting;
+!NNTP;
+)
+
+fmProduct7 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License [NNTP] SMTP [Database] [Windows] "Mail server" [ActiveSync] "POP over TLS" "POP3" "IPv6" "IMAP IDLE" SSL IMAP "Mac OS" "Linux/Unix" Filesystem Webmail "SMTP over TLS" ; 
+Authentication: "POP before SMTP" Database "SMTP AUTH" "Mail server" LDAP APOP Filesystem ; 
+"Antispam Features": "Bayesian filters" "Embedded Antispam" "Embedded Antivirus" Tarpit "Mail Server" SPF Greylisting DNSBL "Regular expressions" [SURBL] Spamtraps ; 
+License: "[[GPLv3]] GPLv3" ; 
+"Mail server": "Courier Mail Server" ; 
+Filesystem: "[[maildir]] maildir" ; 
+"Mail server": "Courier Mail Server" ; 
+Filesystem: "[[maildir]] maildir" ; 
+"Mail Server": "Courier Mail Server" ; 
+!ActiveSync;
+!Windows;
+!Database;
+!NNTP;
+)
+
+fmProduct8 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication ; 
+"Feature comparison": License [SMTP] NNTP [Windows] Database "Mail server" [ActiveSync] "POP over TLS" "POP3" "IPv6" "IMAP IDLE" SSL "Mac OS" IMAP "Linux/Unix" [Webmail] Filesystem ["SMTP over TLS"] ; 
+Authentication: "POP before SMTP" Database ["SMTP AUTH"] "Mail server" LDAP APOP Filesystem ; 
+License: "[[BSD licenses#4-clause|4-clause BSD]]4-clause BSD" ; 
+"Mail server": "Cyrus IMAP" ; 
+"Mail server": "Cyrus IMAP" ; 
+!"SMTP over TLS";
+!SMTP;
+!ActiveSync;
+!Windows;
+!Webmail;
+!"SMTP AUTH";
+)
+
+fmProduct9 = FM (Comparison_of_mail_servers: "Feature comparison" ; 
+"Feature comparison": License [NNTP] SMTP Database [Windows] "Mail server" [ActiveSync] "POP over TLS" "POP3" "IPv6" "IMAP IDLE" SSL IMAP "Mac OS" "Linux/Unix" [Webmail] [Filesystem] "SMTP over TLS" ; 
+License: "[[GNU General Public License|GPLv2]]GPLv2" ; 
+SMTP: "[[Postfix (software)|Postfix]], [[Exim]], [[Sendmail]], [[qmail]]Postfix" ; 
+Database: "[[Postgresql|PostgreSQL]], [[Mysql|MySQL]], [[Sqlite|SQLite]]PostgreSQL" ; 
+"Mail server": DBMail ; 
+"SMTP over TLS": "[[Postfix (software)|Postfix]], [[Exim]], [[Sendmail]], [[qmail]]Postfix" ; 
+!Filesystem;
+!ActiveSync;
+!Webmail;
+!NNTP;
+)
+
+fmProduct10 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License [NNTP] SMTP Windows Database "Mail server" "POP over TLS" [ActiveSync] "POP3" ["IPv6"] "IMAP IDLE" SSL IMAP ["Mac OS"] "Linux/Unix" Webmail Filesystem "SMTP over TLS" ; 
+Authentication: ["POP before SMTP"] [Database] "SMTP AUTH" "Mail server" [LDAP] APOP [Filesystem] ; 
+"Antispam Features": ["Embedded Antispam"] ["Bayesian filters"] ["Embedded Antivirus"] [SPF] [Tarpit] "Mail Server" Greylisting ["Regular expressions"] DNSBL [SURBL] [Spamtraps] ; 
+License: Proprietary ; 
+"Mail server": "Digital Integration iMail5" ; 
+"Mail server": "Digital Integration iMail5" ; 
+"Mail Server": "Digital Integration iMail5" ; 
+!Filesystem;
+!ActiveSync;
+!"Mac OS";
+!NNTP;
+!SURBL;
+!SPF;
+!Spamtraps;
+!LDAP;
+!Tarpit;
+!"Bayesian filters";
+!"POP before SMTP";
+!Database;
+)
+
+fmProduct11 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License [SMTP] [NNTP] [Windows] Database "Mail server" "POP over TLS" [ActiveSync] "POP3" "IPv6" "IMAP IDLE" SSL "Mac OS" IMAP "Linux/Unix" Filesystem [Webmail] "SMTP over TLS" ; 
+Authentication: "POP before SMTP" Database ["SMTP AUTH"] "Mail server" LDAP APOP Filesystem ; 
+"Antispam Features": ["Bayesian filters"] ["Embedded Antispam"] ["Embedded Antivirus"] "Mail Server" [Tarpit] [SPF] [Greylisting] ["Regular expressions"] [DNSBL] [SURBL] [Spamtraps] ; 
+License: "Mixed: [[MIT License|MIT]] and [[GNU Lesser General Public License|LGPL 2.1]]MIT" ; 
+"Mail server": Dovecot ; 
+Filesystem: "[[maildir]], [[mbox]], dbox maildir" ; 
+"Mail server": Dovecot ; 
+Filesystem: "[[maildir]], [[mbox]], dbox maildir" ; 
+"Mail Server": Dovecot ; 
+!SMTP;
+!ActiveSync;
+!Windows;
+!Webmail;
+!NNTP;
+!"SMTP AUTH";
+)
+
+fmProduct12 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License SMTP [NNTP] [Windows] [Database] "Mail server" ["POP over TLS"] [ActiveSync] "POP3" ["IPv6"] ["IMAP IDLE"] [SSL] "Mac OS" IMAP ["Linux/Unix"] [Filesystem] [Webmail] ["SMTP over TLS"] ; 
+Authentication: ["POP before SMTP"] [Database] "SMTP AUTH" "Mail server" [LDAP] APOP Filesystem ; 
+"Antispam Features": ["Embedded Antispam"] ["Bayesian filters"] ["Embedded Antivirus"] [SPF] "Mail Server" [Tarpit] Greylisting DNSBL ["Regular expressions"] [SURBL] Spamtraps ; 
+License: Proprietary ; 
+"Mail server": "Eudora Internet Mail Server" ; 
+"Mail server": "Eudora Internet Mail Server" ; 
+"Mail Server": "Eudora Internet Mail Server" ; 
+!"IMAP IDLE";
+!Filesystem;
+!"POP over TLS";
+!"IPv6";
+!ActiveSync;
+!NNTP;
+!"SMTP over TLS";
+!SSL;
+!Windows;
+!Webmail;
+!LDAP;
+!"Linux/Unix";
+!Database;
+!"POP before SMTP";
+)
+
+fmProduct13 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License SMTP [NNTP] Windows Database "Mail server" [ActiveSync] ["POP over TLS"] ["POP3"] "IPv6" ["IMAP IDLE"] SSL [IMAP] "Mac OS" "Linux/Unix" [Webmail] Filesystem "SMTP over TLS" ; 
+Authentication: "POP before SMTP" Database "SMTP AUTH" "Mail server" LDAP APOP Filesystem ; 
+"Antispam Features": ["Bayesian filters"] ["Embedded Antispam"] ["Embedded Antivirus"] Tarpit SPF "Mail Server" Greylisting "Regular expressions" DNSBL SURBL Spamtraps ; 
+License: "[[GPL|GPLv2+]]GPLv2+" ; 
+"Mail server": Exim ; 
+"Mail server": Exim ; 
+"Mail Server": Exim ; 
+!"IMAP IDLE";
+!"POP over TLS";
+!"POP3";
+!IMAP;
+!ActiveSync;
+!Webmail;
+!NNTP;
+)
+
+fmProduct14 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License SMTP NNTP Database Windows "Mail server" ActiveSync "POP over TLS" "POP3" ["IPv6"] ["IMAP IDLE"] SSL IMAP "Mac OS" "Linux/Unix" Filesystem Webmail "SMTP over TLS" ; 
+Authentication: ["POP before SMTP"] Database "SMTP AUTH" "Mail server" LDAP [APOP] Filesystem ; 
+"Antispam Features": ["Embedded Antispam"] "Bayesian filters" "Embedded Antivirus" SPF Tarpit "Mail Server" [Greylisting] DNSBL "Regular expressions" SURBL [Spamtraps] ; 
+License: Proprietary ; 
+"Mail server": FirstClass ; 
+"Mail server": FirstClass ; 
+"Mail Server": FirstClass ; 
+!"IMAP IDLE";
+!Spamtraps;
+!"IPv6";
+)
+
+fmProduct15 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License SMTP [NNTP] Windows Database ["Mail server"] [ActiveSync] "POP over TLS" "POP3" ["IPv6"] ["IMAP IDLE"] SSL IMAP ["Mac OS"] "Linux/Unix" Webmail Filesystem "SMTP over TLS" ; 
+Authentication: "POP before SMTP" Database "SMTP AUTH" ["Mail server"] LDAP APOP [Filesystem] ; 
+"Antispam Features": "Bayesian filters" "Embedded Antispam" "Embedded Antivirus" ["Mail Server"] SPF Tarpit Greylisting DNSBL "Regular expressions" SURBL Spamtraps ; 
+License: Proprietary ; 
+!"IMAP IDLE";
+!Filesystem;
+!ActiveSync;
+!"IPv6";
+!"Mac OS";
+!"Mail server";
+!"Mail Server";
+!NNTP;
+)
+
+fmProduct16 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License [NNTP] SMTP Windows Database "Mail server" ActiveSync "POP over TLS" "POP3" ["IPv6"] ["IMAP IDLE"] SSL ["Mac OS"] IMAP "Linux/Unix" Webmail [Filesystem] "SMTP over TLS" ; 
+Authentication: "POP before SMTP" Database "SMTP AUTH" "Mail server" LDAP APOP Filesystem ; 
+"Antispam Features": ["Embedded Antispam"] ["Bayesian filters"] ["Embedded Antivirus"] [Tarpit] "Mail Server" [SPF] [Greylisting] ["Regular expressions"] DNSBL [SURBL] [Spamtraps] ; 
+License: Proprietary ; 
+"Mail server": GroupWise ; 
+"Mail server": GroupWise ; 
+"Mail Server": GroupWise ; 
+!Filesystem;
+!"IMAP IDLE";
+!"IPv6";
+!"Mac OS";
+!NNTP;
+)
+
+fmProduct17 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License [NNTP] SMTP [Database] Windows "Mail server" [ActiveSync] "POP over TLS" "POP3" ["IPv6"] ["IMAP IDLE"] SSL ["Mac OS"] IMAP "Linux/Unix" Filesystem Webmail "SMTP over TLS" ; 
+Authentication: "POP before SMTP" [Database] "SMTP AUTH" "Mail server" LDAP APOP Filesystem ; 
+"Antispam Features": "Embedded Antispam" "Bayesian filters" "Embedded Antivirus" "Mail Server" Tarpit SPF Greylisting "Regular expressions" DNSBL SURBL Spamtraps ; 
+License: Proprietary ; 
+"Mail server": "Hexamail Server" ; 
+"Mail server": "Hexamail Server" ; 
+"Mail Server": "Hexamail Server" ; 
+!"IMAP IDLE";
+!ActiveSync;
+!"IPv6";
+!"Mac OS";
+!Database;
+!NNTP;
+)
+
+fmProduct18 = FM (Comparison_of_mail_servers: "Feature comparison" "Antispam Features" ; 
+"Feature comparison": License SMTP [NNTP] Database Windows "Mail server" [ActiveSync] "POP over TLS" "POP3" "IPv6" "IMAP IDLE" SSL IMAP ["Mac OS"] ["Linux/Unix"] [Filesystem] Webmail "SMTP over TLS" ; 
+"Antispam Features": ["Bayesian filters"] "Embedded Antispam" "Embedded Antivirus" SPF [Tarpit] "Mail Server" Greylisting "Regular expressions" DNSBL SURBL [Spamtraps] ; 
+License: "[[GNU GPL]] (V5.0 Proprietary) GNU GPL" ; 
+"Mail server": hMailServer ; 
+"POP over TLS": "V 5.0" ; 
+SSL: "V 5.0" ; 
+"SMTP over TLS": "V 5.0" ; 
+"Mail Server": hMailServer ; 
+!Filesystem;
+!Spamtraps;
+!ActiveSync;
+!"Mac OS";
+!Tarpit;
+!"Linux/Unix";
+!"Bayesian filters";
+!NNTP;
+)
+
+fmProduct19 = FM (Comparison_of_mail_servers: "Feature comparison" "Antispam Features" ; 
+"Feature comparison": License SMTP NNTP Database Windows ["Mail server"] "POP over TLS" ActiveSync "POP3" ["IPv6"] ["IMAP IDLE"] SSL IMAP ["Mac OS"] "Linux/Unix" Webmail [Filesystem] "SMTP over TLS" ; 
+"Antispam Features": ["Embedded Antispam"] ["Bayesian filters"] ["Embedded Antivirus"] ["Mail Server"] [Tarpit] [SPF] [Greylisting] ["Regular expressions"] DNSBL [SURBL] [Spamtraps] ; 
+License: Proprietary ; 
+!Filesystem;
+!"IMAP IDLE";
+!SPF;
+!"IPv6";
+!"Mac OS";
+!"Mail server";
+!"Mail Server";
+)
+
+fmProduct20 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License SMTP [NNTP] Database Windows "Mail server" "POP over TLS" ActiveSync "POP3" "IPv6" "IMAP IDLE" SSL ["Mac OS"] IMAP "Linux/Unix" Filesystem Webmail "SMTP over TLS" ; 
+Authentication: "POP before SMTP" Database "SMTP AUTH" "Mail server" LDAP APOP Filesystem ; 
+"Antispam Features": "Bayesian filters" "Embedded Antispam" "Embedded Antivirus" SPF Tarpit "Mail Server" Greylisting "Regular expressions" DNSBL SURBL Spamtraps ; 
+License: Proprietary ; 
+"Mail server": "IceWarp Mail Server" ; 
+"Mail server": "IceWarp Mail Server" ; 
+"Mail Server": "IceWarp Mail Server" ; 
+!"Mac OS";
+!NNTP;
+)
+
+fmProduct21 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License [NNTP] SMTP Database [Windows] "Mail server" [ActiveSync] "POP over TLS" "POP3" "IPv6" "IMAP IDLE" SSL IMAP "Mac OS" "Linux/Unix" Filesystem [Webmail] "SMTP over TLS" ; 
+Authentication: "POP before SMTP" Database "SMTP AUTH" "Mail server" LDAP [APOP] Filesystem ; 
+"Antispam Features": "Embedded Antispam" "Bayesian filters" "Embedded Antivirus" SPF "Mail Server" Tarpit Greylisting DNSBL "Regular expressions" SURBL [Spamtraps] ; 
+License: "[[GNU General Public License|GPLv3]]GPLv3" ; 
+"Mail server": IndiMail ; 
+"Mail server": IndiMail ; 
+"Mail Server": IndiMail ; 
+!Spamtraps;
+!ActiveSync;
+!Windows;
+!Webmail;
+!APOP;
+!NNTP;
+)
+
+fmProduct22 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License [NNTP] SMTP [Database] Windows "Mail server" ActiveSync "POP over TLS" "POP3" ["IPv6"] ["IMAP IDLE"] SSL IMAP ["Mac OS"] ["Linux/Unix"] Filesystem Webmail "SMTP over TLS" ; 
+Authentication: ["POP before SMTP"] Database "SMTP AUTH" "Mail server" LDAP APOP Filesystem ; 
+"Antispam Features": "Bayesian filters" "Embedded Antispam" "Embedded Antivirus" [Tarpit] SPF "Mail Server" [Greylisting] "Regular expressions" DNSBL SURBL [Spamtraps] ; 
+License: Proprietary ; 
+"Mail server": "Ipswitch IMail Server" ; 
+"Mail server": "Ipswitch IMail Server" ; 
+"Mail Server": "Ipswitch IMail Server" ; 
+!"IMAP IDLE";
+!Spamtraps;
+!"IPv6";
+!"Mac OS";
+!Tarpit;
+!"Linux/Unix";
+!Database;
+!"POP before SMTP";
+!Greylisting;
+!NNTP;
+)
+
+fmProduct23 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License SMTP [NNTP] Database Windows "Mail server" ActiveSync "POP over TLS" "POP3" "IPv6" "IMAP IDLE" SSL IMAP "Mac OS" "Linux/Unix" Filesystem Webmail "SMTP over TLS" ; 
+Authentication: ["POP before SMTP"] [Database] "SMTP AUTH" "Mail server" [LDAP] APOP [Filesystem] ; 
+"Antispam Features": "Embedded Antispam" "Bayesian filters" "Embedded Antivirus" Tarpit SPF "Mail Server" Greylisting DNSBL "Regular expressions" SURBL Spamtraps ; 
+License: Proprietary ; 
+"Mail server": JMail ; 
+"Mail server": JMail ; 
+"Mail Server": JMail ; 
+!Filesystem;
+!LDAP;
+!"POP before SMTP";
+!Database;
+!NNTP;
+)
+
+fmProduct24 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License SMTP NNTP Windows Database "Mail server" "POP over TLS" ActiveSync "POP3" ["IPv6"] ["IMAP IDLE"] SSL IMAP "Mac OS" "Linux/Unix" Webmail Filesystem "SMTP over TLS" ; 
+Authentication: "POP before SMTP" [Database] "SMTP AUTH" "Mail server" LDAP APOP Filesystem ; 
+"Antispam Features": "Bayesian filters" "Embedded Antispam" ["Embedded Antivirus"] Tarpit SPF "Mail Server" [Greylisting] ["Regular expressions"] DNSBL SURBL [Spamtraps] ; 
+License: Proprietary ; 
+"Mail server": "Kerio Connect" ; 
+"Mail server": "Kerio Connect" ; 
+"Mail Server": "Kerio Connect" ; 
+!"IMAP IDLE";
+!"IPv6";
+!Database;
+!Greylisting;
+)
+
+fmProduct25 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License SMTP NNTP Database [Windows] "Mail server" ActiveSync "POP over TLS" "POP3" "IPv6" "IMAP IDLE" SSL IMAP ["Mac OS"] "Linux/Unix" Filesystem Webmail "SMTP over TLS" ; 
+Authentication: "POP before SMTP" Database "SMTP AUTH" "Mail server" LDAP APOP Filesystem ; 
+"Antispam Features": ["Embedded Antispam"] ["Bayesian filters"] ["Embedded Antivirus"] SPF [Tarpit] "Mail Server" Greylisting DNSBL "Regular expressions" [SURBL] [Spamtraps] ; 
+License: "[[GNU General Public License|GPLv3]]GPLv3" ; 
+"Mail server": Kolab ; 
+"Mail server": Kolab ; 
+"Mail Server": Kolab ; 
+!"Mac OS";
+!Windows;
+)
+
+fmProduct26 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License SMTP [NNTP] [Windows] Database "Mail server" [ActiveSync] "POP over TLS" "POP3" ["IPv6"] ["IMAP IDLE"] SSL ["Mac OS"] IMAP "Linux/Unix" Webmail Filesystem "SMTP over TLS" ; 
+Authentication: ["POP before SMTP"] Database "SMTP AUTH" "Mail server" [LDAP] [APOP] Filesystem ; 
+"Antispam Features": "Embedded Antispam" ["Bayesian filters"] "Embedded Antivirus" [SPF] [Tarpit] "Mail Server" [Greylisting] "Regular expressions" DNSBL [SURBL] Spamtraps ; 
+License: Proprietary ; 
+"Mail server": MagicMail ; 
+"Mail server": MagicMail ; 
+"Mail Server": MagicMail ; 
+!"IMAP IDLE";
+!"Mac OS";
+!"IPv6";
+!ActiveSync;
+!APOP;
+!NNTP;
+!SURBL;
+!SPF;
+!Windows;
+!Tarpit;
+!LDAP;
+!"Bayesian filters";
+!"POP before SMTP";
+!Greylisting;
+)
+
+fmProduct27 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License [NNTP] SMTP Windows Database "Mail server" [ActiveSync] "POP over TLS" "POP3" ["IPv6"] "IMAP IDLE" SSL "Mac OS" IMAP "Linux/Unix" [Webmail] Filesystem "SMTP over TLS" ; 
+Authentication: ["POP before SMTP"] [Database] "SMTP AUTH" "Mail server" [LDAP] APOP Filesystem ; 
+"Antispam Features": ["Bayesian filters"] ["Embedded Antispam"] ["Embedded Antivirus"] [SPF] "Mail Server" Tarpit Greylisting ["Regular expressions"] [DNSBL] [SURBL] [Spamtraps] ; 
+License: "Proprietary (28-day free demo)" ; 
+"Mail server": Mailismus ; 
+"Mail server": Mailismus ; 
+"Mail Server": Mailismus ; 
+!"IPv6";
+!ActiveSync;
+!"Regular expressions";
+!DNSBL;
+!NNTP;
+!SURBL;
+!"Embedded Antivirus";
+!SPF;
+!Spamtraps;
+!LDAP;
+!Webmail;
+!"Bayesian filters";
+!Database;
+!"POP before SMTP";
+!"Embedded Antispam";
+)
+
+fmProduct28 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License SMTP [NNTP] Windows Database "Mail server" "POP over TLS" ActiveSync "POP3" ["IPv6"] ["IMAP IDLE"] SSL IMAP ["Mac OS"] ["Linux/Unix"] Filesystem Webmail "SMTP over TLS" ; 
+Authentication: ["POP before SMTP"] Database "SMTP AUTH" "Mail server" LDAP APOP Filesystem ; 
+"Antispam Features": "Embedded Antispam" "Bayesian filters" "Embedded Antivirus" [Tarpit] "Mail Server" SPF Greylisting DNSBL "Regular expressions" SURBL Spamtraps ; 
+License: Proprietary ; 
+"Mail server": Mailsite ; 
+"Mail server": Mailsite ; 
+"Mail Server": Mailsite ; 
+!"IMAP IDLE";
+!"IPv6";
+!"Mac OS";
+!Tarpit;
+!"Linux/Unix";
+!"POP before SMTP";
+!NNTP;
+)
+
+fmProduct29 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License NNTP SMTP Windows Database "Mail server" [ActiveSync] "POP over TLS" "POP3" ["IPv6"] "IMAP IDLE" SSL IMAP ["Mac OS"] ["Linux/Unix"] Webmail Filesystem "SMTP over TLS" ; 
+Authentication: "POP before SMTP" Database "SMTP AUTH" "Mail server" LDAP APOP Filesystem ; 
+"Antispam Features": ["Embedded Antispam"] ["Bayesian filters"] ["Embedded Antivirus"] [Tarpit] [SPF] "Mail Server" [Greylisting] [DNSBL] ["Regular expressions"] [SURBL] [Spamtraps] ; 
+License: Proprietary ; 
+"Mail server": Mailtraq ; 
+"Mail server": Mailtraq ; 
+"Mail Server": Mailtraq ; 
+!ActiveSync;
+!"IPv6";
+!"Mac OS";
+!"Linux/Unix";
+)
+
+fmProduct30 = FM (Comparison_of_mail_servers: "Feature comparison" ; 
+"Feature comparison": License [NNTP] SMTP [Windows] [Database] "Mail server" ["POP over TLS"] [ActiveSync] ["POP3"] "IPv6" ["IMAP IDLE"] SSL [IMAP] "Mac OS" "Linux/Unix" [Webmail] Filesystem "SMTP over TLS" ; 
+License: GPL ; 
+"Mail server": masqmail ; 
+!"IMAP IDLE";
+!"POP over TLS";
+!"POP3";
+!IMAP;
+!ActiveSync;
+!Windows;
+!Webmail;
+!Database;
+!NNTP;
+)
+
+fmProduct31 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License [NNTP] SMTP Database Windows "Mail server" ActiveSync "POP over TLS" "POP3" ["IPv6"] "IMAP IDLE" SSL ["Mac OS"] IMAP ["Linux/Unix"] Filesystem Webmail "SMTP over TLS" ; 
+Authentication: "POP before SMTP" Database "SMTP AUTH" "Mail server" LDAP APOP [Filesystem] ; 
+"Antispam Features": "Embedded Antispam" "Bayesian filters" ["Embedded Antivirus"] SPF Tarpit "Mail Server" Greylisting DNSBL "Regular expressions" SURBL Spamtraps ; 
+License: Proprietary ; 
+"Mail server": "MDaemon Mail Server" ; 
+"Mail server": "MDaemon Mail Server" ; 
+"Mail Server": "MDaemon Mail Server" ; 
+!Filesystem;
+!"IPv6";
+!"Mac OS";
+!"Linux/Unix";
+!NNTP;
+)
+
+fmProduct32 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License SMTP [NNTP] [Database] Windows "Mail server" "POP over TLS" [ActiveSync] "POP3" ["IPv6"] ["IMAP IDLE"] SSL ["Mac OS"] IMAP ["Linux/Unix"] Webmail Filesystem "SMTP over TLS" ; 
+Authentication: "POP before SMTP" [Database] "SMTP AUTH" "Mail server" [LDAP] APOP Filesystem ; 
+"Antispam Features": ["Embedded Antispam"] "Bayesian filters" "Embedded Antivirus" [SPF] [Tarpit] "Mail Server" Greylisting ["Regular expressions"] DNSBL [SURBL] [Spamtraps] ; 
+License: "Proprietary donationware" ; 
+"Mail server": "Mercury Mail Transport System" ; 
+"Mail server": "Mercury Mail Transport System" ; 
+"Mail Server": "Mercury Mail Transport System" ; 
+!"IMAP IDLE";
+!ActiveSync;
+!"IPv6";
+!"Mac OS";
+!"Linux/Unix";
+!Database;
+!NNTP;
+)
+
+fmProduct33 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License SMTP NNTP Database Windows "Mail server" "POP over TLS" ActiveSync "POP3" "IPv6" "IMAP IDLE" SSL ["Mac OS"] IMAP ["Linux/Unix"] Webmail Filesystem "SMTP over TLS" ; 
+Authentication: ["POP before SMTP"] [Database] "SMTP AUTH" "Mail server" LDAP APOP [Filesystem] ; 
+"Antispam Features": ["Embedded Antispam"] ["Bayesian filters"] ["Embedded Antivirus"] Tarpit "Mail Server" SPF Greylisting ["Regular expressions"] DNSBL [SURBL] [Spamtraps] ; 
+License: Proprietary ; 
+"Mail server": "Microsoft Exchange Server" ; 
+"Mail server": "Microsoft Exchange Server" ; 
+"Mail Server": "Microsoft Exchange Server" ; 
+!Filesystem;
+!"Mac OS";
+!"Linux/Unix";
+!Database;
+)
+
+fmProduct34 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License SMTP [NNTP] [Windows] Database "Mail server" "POP over TLS" [ActiveSync] "POP3" ["IPv6"] ["IMAP IDLE"] SSL ["Mac OS"] IMAP "Linux/Unix" Webmail Filesystem "SMTP over TLS" ; 
+Authentication: "POP before SMTP" Database "SMTP AUTH" "Mail server" LDAP APOP Filesystem ; 
+"Antispam Features": "Embedded Antispam" "Bayesian filters" "Embedded Antivirus" Tarpit "Mail Server" SPF Greylisting DNSBL "Regular expressions" [SURBL] Spamtraps ; 
+License: Proprietary ; 
+"Mail server": Mirapoint ; 
+"Mail server": Mirapoint ; 
+"Mail Server": Mirapoint ; 
+!"IMAP IDLE";
+!ActiveSync;
+!"IPv6";
+!"Mac OS";
+!Windows;
+!NNTP;
+!SURBL;
+)
+
+fmProduct35 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License [NNTP] SMTP [Windows] Database "Mail server" [ActiveSync] ["POP over TLS"] ["POP3"] "IPv6" ["IMAP IDLE"] SSL [IMAP] ["Mac OS"] "Linux/Unix" [Webmail] Filesystem "SMTP over TLS" ; 
+Authentication: ["POP before SMTP"] Database "SMTP AUTH" "Mail server" LDAP [APOP] Filesystem ; 
+"Antispam Features": "Embedded Antispam" "Bayesian filters" "Embedded Antivirus" Tarpit "Mail Server" SPF Greylisting "Regular expressions" DNSBL SURBL Spamtraps ; 
+License: Proprietary ; 
+"Mail server": Momentum ; 
+"Mail server": Momentum ; 
+"Mail Server": Momentum ; 
+!"IMAP IDLE";
+!"POP over TLS";
+!"POP3";
+!IMAP;
+!ActiveSync;
+!"Mac OS";
+!Windows;
+!Webmail;
+!"POP before SMTP";
+!APOP;
+!NNTP;
+)
+
+fmProduct36 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License SMTP [NNTP] Database Windows "Mail server" "POP over TLS" [ActiveSync] "POP3" ["IPv6"] ["IMAP IDLE"] SSL ["Mac OS"] IMAP "Linux/Unix" [Filesystem] Webmail "SMTP over TLS" ; 
+Authentication: "POP before SMTP" Database "SMTP AUTH" "Mail server" LDAP APOP Filesystem ; 
+"Antispam Features": ["Bayesian filters"] ["Embedded Antispam"] ["Embedded Antivirus"] "Mail Server" [SPF] [Tarpit] [Greylisting] [DNSBL] ["Regular expressions"] [SURBL] [Spamtraps] ; 
+License: Proprietary ; 
+"Mail server": NetMail ; 
+"Mail server": NetMail ; 
+"Mail Server": NetMail ; 
+!Filesystem;
+!"IMAP IDLE";
+!ActiveSync;
+!"IPv6";
+!"Mac OS";
+!NNTP;
+)
+
+fmProduct37 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication ; 
+"Feature comparison": License [NNTP] SMTP Database [Windows] "Mail server" [ActiveSync] ["POP over TLS"] ["POP3"] "IPv6" ["IMAP IDLE"] SSL [IMAP] "Mac OS" "Linux/Unix" Filesystem [Webmail] "SMTP over TLS" ; 
+Authentication: ["POP before SMTP"] Database "SMTP AUTH" "Mail server" LDAP [APOP] Filesystem ; 
+License: "[[ISC license|ISC]]ISC" ; 
+Database: "possible through custom backends" ; 
+"Mail server": OpenSMTPD ; 
+Database: "possible through custom backends" ; 
+"Mail server": OpenSMTPD ; 
+!"IMAP IDLE";
+!"POP over TLS";
+!"POP3";
+!IMAP;
+!ActiveSync;
+!Windows;
+!Webmail;
+!"POP before SMTP";
+!APOP;
+!NNTP;
+)
+
+fmProduct38 = FM (Comparison_of_mail_servers: "Feature comparison" ; 
+"Feature comparison": License SMTP [NNTP] Database [Windows] "Mail server" "POP over TLS" ActiveSync "POP3" ["IPv6"] ["IMAP IDLE"] SSL ["Mac OS"] IMAP "Linux/Unix" [Filesystem] Webmail "SMTP over TLS" ; 
+License: "Proprietary/[[SaaS]], with open-source parts SaaS" ; 
+"Mail server": "Open-Xchange" ; 
+!Filesystem;
+!"IMAP IDLE";
+!"IPv6";
+!"Mac OS";
+!Windows;
+!NNTP;
+)
+
+fmProduct39 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License SMTP [NNTP] [Windows] Database "Mail server" [ActiveSync] "POP over TLS" "POP3" ["IPv6"] ["IMAP IDLE"] SSL IMAP ["Mac OS"] "Linux/Unix" Webmail Filesystem "SMTP over TLS" ; 
+Authentication: "POP before SMTP" Database "SMTP AUTH" "Mail server" LDAP APOP Filesystem ; 
+"Antispam Features": ["Bayesian filters"] ["Embedded Antispam"] ["Embedded Antivirus"] SPF Tarpit "Mail Server" Greylisting "Regular expressions" DNSBL SURBL Spamtraps ; 
+License: Proprietary ; 
+"Mail server": "Oracle Communications Messaging Server" ; 
+"Mail server": "Oracle Communications Messaging Server" ; 
+"Mail Server": "Oracle Communications Messaging Server" ; 
+!"IMAP IDLE";
+!ActiveSync;
+!"IPv6";
+!"Mac OS";
+!Windows;
+!NNTP;
+)
+
+fmProduct40 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License [NNTP] SMTP [Windows] Database "Mail server" ["POP over TLS"] [ActiveSync] "POP3" "IPv6" "IMAP IDLE" SSL "Mac OS" IMAP "Linux/Unix" [Webmail] Filesystem "SMTP over TLS" ; 
+Authentication: ["POP before SMTP"] Database "SMTP AUTH" "Mail server" LDAP [APOP] Filesystem ; 
+"Antispam Features": ["Bayesian filters"] ["Embedded Antispam"] ["Embedded Antivirus"] [Tarpit] "Mail Server" SPF Greylisting "Regular expressions" DNSBL [SURBL] [Spamtraps] ; 
+License: "[[IBM Public License]] IBM Public License" ; 
+"Mail server": Postfix ; 
+"POP3": "[[Dovecot (software)|Dovecot]], [[UW IMAP]]Dovecot" ; 
+"IMAP IDLE": "[[Dovecot (software)|Dovecot]], [[UW IMAP]]Dovecot" ; 
+IMAP: "[[Dovecot (software)|Dovecot]], [[UW IMAP]]Dovecot" ; 
+"Mail server": Postfix ; 
+"Mail Server": Postfix ; 
+!"POP over TLS";
+!ActiveSync;
+!Windows;
+!Webmail;
+!"POP before SMTP";
+!APOP;
+!NNTP;
+)
+
+fmProduct41 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License SMTP [NNTP] [Windows] Database "Mail server" [ActiveSync] "POP over TLS" "POP3" ["IPv6"] "IMAP IDLE" [SSL] "Mac OS" IMAP "Linux/Unix" Filesystem [Webmail] ["SMTP over TLS"] ; 
+Authentication: "POP before SMTP" Database "SMTP AUTH" "Mail server" LDAP APOP Filesystem ; 
+"Antispam Features": ["Embedded Antispam"] ["Bayesian filters"] ["Embedded Antivirus"] [SPF] [Tarpit] "Mail Server" Greylisting [DNSBL] ["Regular expressions"] [SURBL] [Spamtraps] ; 
+License: "[[Public domain]] Public domain" ; 
+Database: "(cdb)" ; 
+"Mail server": qmail ; 
+"POP over TLS": "[[Dovecot (software)|Dovecot]], [[UW IMAP]]Dovecot" ; 
+"IMAP IDLE": "[[Dovecot (software)|Dovecot]], [[UW IMAP]]Dovecot" ; 
+IMAP: "[[Dovecot (software)|Dovecot]], [[UW IMAP]]Dovecot" ; 
+"POP before SMTP": "with vpopmail" ; 
+Database: "(cdb)" ; 
+"SMTP AUTH": "with patch" ; 
+"Mail server": qmail ; 
+"Mail Server": qmail ; 
+!"SMTP over TLS";
+!SSL;
+!ActiveSync;
+!Windows;
+!Webmail;
+!"Bayesian filters";
+!"Embedded Antispam";
+!NNTP;
+!"Embedded Antivirus";
+)
+
+fmProduct42 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication ; 
+"Feature comparison": License [SMTP] [NNTP] [Windows] [Database] "Mail server" "POP over TLS" [ActiveSync] "POP3" ["IPv6"] ["IMAP IDLE"] SSL "Mac OS" [IMAP] "Linux/Unix" Filesystem [Webmail] ["SMTP over TLS"] ; 
+Authentication: "POP before SMTP" Database ["SMTP AUTH"] "Mail server" LDAP APOP Filesystem ; 
+License: "[http://www.eudora.com/products/unsupported/qpopper/license.html BSD-style], GPL-incompatible" ; 
+"Mail server": Qpopper ; 
+"Mail server": Qpopper ; 
+!"SMTP over TLS";
+!"IMAP IDLE";
+!SMTP;
+!IMAP;
+!ActiveSync;
+!"IPv6";
+!Webmail;
+!Database;
+!NNTP;
+!"SMTP AUTH";
+)
+
+fmProduct43 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License [NNTP] SMTP [Database] [Windows] "Mail server" [ActiveSync] ["POP over TLS"] "POP3" "IPv6" "IMAP IDLE" SSL "Mac OS" IMAP "Linux/Unix" [Webmail] Filesystem "SMTP over TLS" ; 
+Authentication: "POP before SMTP" Database "SMTP AUTH" "Mail server" LDAP [APOP] Filesystem ; 
+"Antispam Features": ["Bayesian filters"] "Embedded Antispam" "Embedded Antivirus" [SPF] "Mail Server" [Tarpit] Greylisting ["Regular expressions"] DNSBL SURBL [Spamtraps] ; 
+License: "[http://ftp.sunet.se/pub/unix/mail/sendmail/LICENSE Sendmail License]" ; 
+"Mail server": Sendmail ; 
+"POP3": "[[Dovecot (software)|Dovecot]], [[UW IMAP]]Dovecot" ; 
+"IMAP IDLE": "[[Dovecot (software)|Dovecot]], [[UW IMAP]]Dovecot" ; 
+IMAP: "[[Dovecot (software)|Dovecot]], [[UW IMAP]]Dovecot" ; 
+"Mail server": Sendmail ; 
+"Mail Server": Sendmail ; 
+!"POP over TLS";
+!ActiveSync;
+!Windows;
+!Webmail;
+!APOP;
+!NNTP;
+)
+
+fmProduct44 = FM (Comparison_of_mail_servers: "Feature comparison" "Antispam Features" ; 
+"Feature comparison": License SMTP [NNTP] Windows Database "Mail server" [ActiveSync] ["POP over TLS"] ["POP3"] ["IPv6"] ["IMAP IDLE"] SSL "Mac OS" [IMAP] "Linux/Unix" [Webmail] Filesystem "SMTP over TLS" ; 
+"Antispam Features": ["Bayesian filters"] ["Embedded Antispam"] ["Embedded Antivirus"] [Tarpit] "Mail Server" [SPF] [Greylisting] [DNSBL] ["Regular expressions"] [SURBL] [Spamtraps] ; 
+License: Proprietary ; 
+"Mail server": SparkEngine ; 
+"Mail Server": SparkEngine ; 
+!"IMAP IDLE";
+!"POP over TLS";
+!"POP3";
+!IMAP;
+!ActiveSync;
+!"IPv6";
+!Webmail;
+!NNTP;
+)
+
+fmProduct45 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License [NNTP] SMTP Windows Database "Mail server" [ActiveSync] "POP over TLS" "POP3" "IPv6" "IMAP IDLE" SSL "Mac OS" IMAP "Linux/Unix" Webmail Filesystem "SMTP over TLS" ; 
+Authentication: "POP before SMTP" Database "SMTP AUTH" "Mail server" LDAP APOP Filesystem ; 
+"Antispam Features": "Bayesian filters" "Embedded Antispam" "Embedded Antivirus" SPF Tarpit "Mail Server" Greylisting DNSBL "Regular expressions" SURBL Spamtraps ; 
+License: "Proprietary (free for up to 5 users)" ; 
+"Mail server": SurgeMail ; 
+"Mail server": SurgeMail ; 
+"Mail Server": SurgeMail ; 
+!ActiveSync;
+!NNTP;
+)
+
+fmProduct46 = FM (Comparison_of_mail_servers: "Feature comparison" "Antispam Features" ; 
+"Feature comparison": [License] SMTP [NNTP] [Windows] Database ["Mail server"] [ActiveSync] "POP over TLS" "POP3" ["IPv6"] ["IMAP IDLE"] SSL ["Mac OS"] IMAP "Linux/Unix" Webmail Filesystem "SMTP over TLS" ; 
+"Antispam Features": "Bayesian filters" "Embedded Antispam" "Embedded Antivirus" ["Mail Server"] SPF [Tarpit] Greylisting DNSBL "Regular expressions" SURBL Spamtraps ; 
+!"IMAP IDLE";
+!ActiveSync;
+!"IPv6";
+!"Mac OS";
+!Windows;
+!"Mail server";
+!"Mail Server";
+!NNTP;
+)
+
+fmProduct47 = FM (Comparison_of_mail_servers: "Feature comparison" "Antispam Features" ; 
+"Feature comparison": License [NNTP] [SMTP] Windows Database "Mail server" [ActiveSync] "POP over TLS" "POP3" ["IPv6"] "IMAP IDLE" SSL "Mac OS" IMAP "Linux/Unix" Webmail Filesystem ["SMTP over TLS"] ; 
+"Antispam Features": ["Bayesian filters"] ["Embedded Antispam"] ["Embedded Antivirus"] [Tarpit] [SPF] "Mail Server" [Greylisting] [DNSBL] ["Regular expressions"] [SURBL] [Spamtraps] ; 
+License: "[[Apache license|Apache License 2.0]]Apache License 2.0" ; 
+"Mail server": "UW IMAP" ; 
+Webmail: WebPine ; 
+"Mail Server": "UW IMAP" ; 
+!"SMTP over TLS";
+!SMTP;
+!ActiveSync;
+!"IPv6";
+!NNTP;
+)
+
+fmProduct48 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License [NNTP] SMTP [Database] Windows "Mail server" [ActiveSync] "POP over TLS" "POP3" ["IPv6"] "IMAP IDLE" SSL ["Mac OS"] IMAP ["Linux/Unix"] Filesystem Webmail "SMTP over TLS" ; 
+Authentication: "POP before SMTP" Database "SMTP AUTH" "Mail server" [LDAP] APOP Filesystem ; 
+"Antispam Features": ["Bayesian filters"] ["Embedded Antispam"] ["Embedded Antivirus"] [Tarpit] [SPF] "Mail Server" [Greylisting] ["Regular expressions"] [DNSBL] [SURBL] [Spamtraps] ; 
+License: Proprietary ; 
+"Mail server": WinGate ; 
+"Mail server": WinGate ; 
+"Mail Server": WinGate ; 
+!ActiveSync;
+!"IPv6";
+!"Mac OS";
+!LDAP;
+!"Linux/Unix";
+!Database;
+!NNTP;
+)
+
+fmProduct49 = FM (Comparison_of_mail_servers: "Feature comparison" ; 
+"Feature comparison": License [NNTP] SMTP Windows [Database] "Mail server" [ActiveSync] "POP over TLS" "POP3" ["IPv6"] ["IMAP IDLE"] SSL "Mac OS" IMAP "Linux/Unix" Filesystem [Webmail] "SMTP over TLS" ; 
+License: "[[Freeware]] with support option Freeware" ; 
+"Mail server": Xeams ; 
+!"IMAP IDLE";
+!ActiveSync;
+!"IPv6";
+!Webmail;
+!Database;
+!NNTP;
+)
+
+fmProduct50 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": [License] [NNTP] [SMTP] [Windows] Database "Mail server" "POP over TLS" ActiveSync "POP3" ["IPv6"] "IMAP IDLE" SSL ["Mac OS"] IMAP "Linux/Unix" Filesystem Webmail ["SMTP over TLS"] ; 
+Authentication: "POP before SMTP" Database "SMTP AUTH" "Mail server" LDAP [APOP] Filesystem ; 
+"Antispam Features": ["Embedded Antispam"] ["Bayesian filters"] ["Embedded Antivirus"] "Mail Server" [SPF] [Tarpit] [Greylisting] [DNSBL] ["Regular expressions"] [SURBL] [Spamtraps] ; 
+"Mail server": Zarafa ; 
+"Mail server": Zarafa ; 
+"Mail Server": Zarafa ; 
+!SMTP;
+!"Mac OS";
+!"IPv6";
+!"Regular expressions";
+!DNSBL;
+!NNTP;
+!SURBL;
+!"Embedded Antivirus";
+!"SMTP over TLS";
+!SPF;
+!Spamtraps;
+!Windows;
+!Tarpit;
+!"Bayesian filters";
+!Greylisting;
+!"Embedded Antispam";
+)
+
+fmProduct51 = FM (Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": License [NNTP] SMTP [Windows] Database "Mail server" "POP over TLS" ActiveSync "POP3" ["IPv6"] "IMAP IDLE" SSL "Mac OS" IMAP "Linux/Unix" Filesystem Webmail "SMTP over TLS" ; 
+Authentication: ["POP before SMTP"] Database "SMTP AUTH" "Mail server" LDAP APOP Filesystem ; 
+"Antispam Features": ["Bayesian filters"] "Embedded Antispam" "Embedded Antivirus" [SPF] [Tarpit] "Mail Server" [Greylisting] ["Regular expressions"] DNSBL [SURBL] [Spamtraps] ; 
+License: "[http://www.zimbra.com/license/zimbra-public-license-1-3.html ZPL] and proprietary editions" ; 
+"Mail server": Zimbra ; 
+"Mail server": Zimbra ; 
+"Mail Server": Zimbra ; 
+!"IPv6";
+!Windows;
+!"POP before SMTP";
+!NNTP;
+)
+
+fmProduct52 = FM (Comparison_of_mail_servers: "Feature comparison" ; 
+"Feature comparison": License SMTP NNTP Windows Database "Mail server" "POP over TLS" ActiveSync "POP3" "IPv6" "IMAP IDLE" SSL "Mac OS" IMAP "Linux/Unix" Filesystem Webmail "SMTP over TLS" ; 
+"Mac OS": "Mac OS X" ;
+)
+
+fmProduct53 = FM (Comparison_of_mail_servers: "Feature comparison" ; 
+"Feature comparison": SMTP Windows ["Mail server"] "Mac OS" "Linux/Unix" ; 
+SMTP: zzzzzUsers ; 
+Windows: zzzzzFeatures ; 
+"Mac OS": zzzzzStorage ; 
+"Linux/Unix": "zzzzzServer OS support" ;
+)
+
+fmProduct54 = FM (Comparison_of_mail_servers: Authentication ; 
+Authentication: "POP before SMTP" Database ["SMTP AUTH"] "Mail server" LDAP APOP Filesystem ; 
+"Mail server": "Cyrus SASL Library" ; 
+!"SMTP AUTH";
+)
+

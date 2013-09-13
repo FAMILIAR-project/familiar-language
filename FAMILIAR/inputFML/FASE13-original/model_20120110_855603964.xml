@@ -1,0 +1,20 @@
+<feature_model name="Screen">
+<feature_tree>
+:r Screen (f_Screen)
+	:m Calls (f_Calls)
+	:m Mobile Phone (f_Mobile_Phone)
+	:o GPS (f_GPS)
+	:o Media (f_Media)
+		:g [1, *]
+			: MP3 (f_MP3)
+			: Camera (f_Camera)
+	:g [1, 1]
+		: Colour (f_Colour)
+		: Basic (f_Basic)
+		: HighResolution (f_HighResolution)
+</feature_tree>
+<constraints>
+constraint_1:~f_Camera or f_HighResolution
+constraint_2:~f_Basic or ~f_GPS
+</constraints>
+</feature_model>

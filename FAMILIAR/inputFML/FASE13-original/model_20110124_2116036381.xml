@@ -1,0 +1,27 @@
+<feature_model name="Heating Ctrl">
+<feature_tree>
+:r Heating Ctrl (f_Heating_Ctrl)
+	:m Motor Ctrl (f_Motor_Ctrl)
+	:m Basic Car (f_Basic_Car)
+	:m Light Ctrl (f_Light_Ctrl)
+	:m Car SW (f_Car_SW)
+	:o Speed and Distance Ctrl (f_Speed_and_Distance_Ctrl)
+	:g [1, *]
+		: Windowlifter (f_Windowlifter)
+			:m Comfort SW (f_Comfort_SW)
+			:o Rainsensor (f_Rainsensor)
+		: Communication SW (f_Communication_SW)
+			:m Weather Info (f_Weather_Info)
+			:m Mobile Communication (f_Mobile_Communication)
+			:g [1, *]
+				: GSM (f_GSM)
+				: UMTS (f_UMTS)
+		: Infotainment SW (f_Infotainment_SW)
+			:m Radio (f_Radio)
+			:g [1, 1]
+				: Small Display (f_Small_Display)
+				: Huge Display (f_Huge_Display)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

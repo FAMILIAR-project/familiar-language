@@ -1,0 +1,40 @@
+<feature_model name="electric">
+<feature_tree>
+:r electric (f_electric)
+	:m exterior mirror (f_exterior_mirror)
+	:m finger protection (f_finger_protection)
+	:m power window (f_power_window)
+	:m door system (f_door_system)
+	:m human machine interface (f_human_machine_interface)
+	:m body comfort system (f_body_comfort_system)
+	:o status LED (f_status_LED)
+		:g [1, *]
+			: LED central locking system (f_LED_central_locking_system)
+			: LED exterior mirror (f_LED_exterior_mirror)
+			: LED finger protection (f_LED_finger_protection)
+			: LED power window (f_LED_power_window)
+			: LED heat exterior mirror (f_LED_heat_exterior_mirror)
+			: LED alarm system (f_LED_alarm_system)
+	:o heatable (f_heatable)
+	:o security (f_security)
+		:o alarm system (f_alarm_system)
+			:o control alarm system (f_control_alarm_system)
+			:o interior monitoring (f_interior_monitoring)
+		:o central locking system (f_central_locking_system)
+			:o automatic locking (f_automatic_locking)
+			:o remote control key (f_remote_control_key)
+				:o adjust exterior mirror (f_adjust_exterior_mirror)
+				:o safety function (f_safety_function)
+	:g [1, 1]
+		: automatic power window (f_automatic_power_window)
+			:o control automatic power window (f_control_automatic_power_window)
+		: manual power window (f_manual_power_window)
+</feature_tree>
+<constraints>
+constraint_1:~f_control_automatic_power_window or f_remote_control_key
+constraint_2:~f_control_alarm_system or f_remote_control_key
+constraint_3:~f_LED_central_locking_system or f_central_locking_system
+constraint_4:~f_LED_heat_exterior_mirror or f_heatable
+constraint_5:~f_LED_alarm_system or f_alarm_system
+</constraints>
+</feature_model>

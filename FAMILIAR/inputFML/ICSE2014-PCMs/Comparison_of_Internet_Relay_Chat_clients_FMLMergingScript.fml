@@ -1,0 +1,1667 @@
+fmProduct0 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Programming language" "Software license" "User interface" "Distribution model" "Computing platform" ; 
+"Programming language": C ; 
+"Software license": proprietary ; 
+"User interface": GUI ; 
+"Distribution model": Freeware ; 
+"Computing platform": "m68k, PowerPC" ;
+)
+
+fmProduct1 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Software license" "Programming language" "User interface" "Distribution model" "Computing platform" ; 
+"Software license": "[[GNU Lesser General Public License|LGPL]]LGPL" ; 
+"Programming language": "C (Delphi originally)" ; 
+"User interface": GUI ; 
+"Distribution model": "Free software" ; 
+"Computing platform": "x86" ;
+)
+
+fmProduct2 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Software license" "Programming language" "User interface" "Distribution model" "Computing platform" ; 
+"Software license": "[[BSD licenses|BSD]]BSD" ; 
+"Programming language": C ; 
+"User interface": "TUI, GUI" ; 
+"Distribution model": "Free software" ; 
+"Computing platform": "x86, x86-64, s390, SPARC, MIPS, PowerPC" ;
+)
+
+fmProduct3 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Software license" "Programming language" ["User interface"] "Distribution model" ; 
+"Software license": "[[Mozilla Public License|MPL]], [[GNU General Public License|GPL]], LGPL<br />[[tri-license]]MPL" ; 
+"Programming language": "JavaScript, XUL" ; 
+"Distribution model": "Free software" ; 
+!"User interface";
+)
+
+fmProduct4 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Software license" "Programming language" "User interface" "Distribution model" ["Computing platform"] ; 
+"Software license": "Desktop: GPL,<br />Mobile: BSD" ; 
+"Programming language": "Objective-C" ; 
+"User interface": GUI ; 
+"Distribution model": "Desktop: free software, Mobile: commercial" ; 
+!"Computing platform";
+)
+
+fmProduct5 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Programming language" "Software license" "User interface" "Distribution model" ; 
+"Programming language": Java ; 
+"Software license": GPL ; 
+"User interface": GUI ; 
+"Distribution model": "Free software" ;
+)
+
+fmProduct6 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Software license" "Programming language" "User interface" "Distribution model" ; 
+"Software license": GPL ; 
+"Programming language": "Emacs Lisp" ; 
+"User interface": TUI ; 
+"Distribution model": "Free software" ;
+)
+
+fmProduct7 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Software license" "Programming language" "User interface" "Distribution model" "Computing platform" ; 
+"Software license": GPL ; 
+"Programming language": "C (forked from XChat)" ; 
+"User interface": "TUI, GUI" ; 
+"Distribution model": "Free software" ; 
+"Computing platform": "alpha, arm, hppa, ia64, ppc, ppc64, sparc, x86, x86-64" ;
+)
+
+fmProduct8 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Programming language" "Software license" "User interface" "Distribution model" "Computing platform" ; 
+"Programming language": "C++, WTL" ; 
+"Software license": "proprietary (source available)" ; 
+"User interface": GUI ; 
+"Distribution model": Freeware ; 
+"Computing platform": "x86" ;
+)
+
+fmProduct9 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Programming language" "Software license" "User interface" "Distribution model" "Computing platform" ; 
+"Programming language": "C# (Visual Basic until 2004)" ; 
+"Software license": GPL ; 
+"User interface": GUI ; 
+"Distribution model": Freeware ; 
+"Computing platform": "x86" ;
+)
+
+fmProduct10 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Programming language" "Software license" "User interface" "Distribution model" "Computing platform" ; 
+"Programming language": C ; 
+"Software license": "[[MIT License|MIT/X Consortium]]MIT/X Consortium" ; 
+"User interface": "filesystem based FIFO" ; 
+"Distribution model": "Free software" ; 
+"Computing platform": "ARM, MIPS, PowerPC, s390, SPARC, x86, x86-64" ;
+)
+
+fmProduct11 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Software license" "Programming language" "User interface" "Distribution model" "Computing platform" ; 
+"Software license": BSD ; 
+"Programming language": C ; 
+"User interface": TUI ; 
+"Distribution model": "Free software" ; 
+"Computing platform": "ARM, m68k, MIPS, PowerPC, s390, SPARC, x86, x86-64" ;
+)
+
+fmProduct12 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Programming language" "Software license" "User interface" "Distribution model" ["Computing platform"] ; 
+"Programming language": "C++" ; 
+"Software license": GPL ; 
+"User interface": TUI ; 
+"Distribution model": "Free software" ; 
+!"Computing platform";
+)
+
+fmProduct13 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: ["Software license"] "Programming language" "User interface" "Distribution model" "Computing platform" ; 
+"Programming language": "Erlang, JavaScript" ; 
+"User interface": GUI ; 
+"Distribution model": "Subscription service (free in alpha phase)" ; 
+"Computing platform": "All with modern browser" ;
+)
+
+fmProduct14 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Programming language" "Software license" "User interface" "Distribution model" ["Computing platform"] ; 
+"Programming language": C ; 
+"Software license": proprietary ; 
+"User interface": GUI ; 
+"Distribution model": "Commercial 30-day trial" ; 
+!"Computing platform";
+)
+
+fmProduct15 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Software license" "Programming language" "User interface" "Distribution model" "Computing platform" ; 
+"Software license": GPL ; 
+"Programming language": C ; 
+"User interface": TUI ; 
+"Distribution model": "Free software" ; 
+"Computing platform": "ARM, MIPS, PowerPC, s390, SPARC, x86, x86-64" ;
+)
+
+fmProduct16 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Programming language" "Software license" "User interface" "Distribution model" ; 
+"Programming language": Java ; 
+"Software license": "[[Artistic License|Artistic 2.0]]Artistic 2.0" ; 
+"User interface": "GUI, TUI" ; 
+"Distribution model": "Free software" ;
+)
+
+fmProduct17 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: ["Programming language"] "Software license" "User interface" "Distribution model" ["Computing platform"] ; 
+"Software license": "[[Affero General Public License|AGPL]]AGPL" ; 
+"User interface": Web ; 
+"Distribution model": "Free software" ; 
+!"Programming language";
+)
+
+fmProduct18 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Programming language" "Software license" "User interface" "Distribution model" "Computing platform" ; 
+"Programming language": "C++" ; 
+"Software license": GPL ; 
+"User interface": GUI ; 
+"Distribution model": "Free software" ; 
+"Computing platform": "PowerPC, x86, x86-64" ;
+)
+
+fmProduct19 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Software license" "Programming language" "User interface" "Distribution model" "Computing platform" ; 
+"Software license": GPL ; 
+"Programming language": "C++" ; 
+"User interface": GUI ; 
+"Distribution model": "Free software" ; 
+"Computing platform": "PowerPC, x86, x86-64" ;
+)
+
+fmProduct20 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Programming language" "Software license" "User interface" "Distribution model" "Computing platform" ; 
+"Programming language": Java ; 
+"Software license": GPL ; 
+"User interface": GUI ; 
+"Distribution model": "Free software" ; 
+"Computing platform": "Cross-platform" ;
+)
+
+fmProduct21 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Software license" "Programming language" "User interface" "Distribution model" "Computing platform" ; 
+"Software license": GPL ; 
+"Programming language": QuickBasic ; 
+"User interface": TUI ; 
+"Distribution model": "Free software" ; 
+"Computing platform": "x86" ;
+)
+
+fmProduct22 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Programming language" "Software license" "User interface" "Distribution model" ["Computing platform"] ; 
+"Programming language": "RubyCocoa (2007?2010) Objective-C(2010?)" ; 
+"Software license": GPL ; 
+"User interface": GUI ; 
+"Distribution model": "Free software" ; 
+!"Computing platform";
+)
+
+fmProduct23 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Software license" ["Programming language"] "User interface" "Distribution model" ["Computing platform"] ; 
+"Software license": proprietary ; 
+"User interface": GUI ; 
+"Distribution model": "Commercial, true5 day trial" ; 
+!"Computing platform";
+)
+
+fmProduct24 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Software license" "Programming language" "User interface" "Distribution model" ["Computing platform"] ; 
+"Software license": proprietary ; 
+"Programming language": "JavaScript frontend, Java backend" ; 
+"User interface": Web ; 
+"Distribution model": "Textual Adbar" ;
+)
+
+fmProduct25 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Software license" "Programming language" "User interface" "Distribution model" "Computing platform" ; 
+"Software license": proprietary ; 
+"Programming language": "C/C++ (Borland C++ originally)" ; 
+"User interface": GUI ; 
+"Distribution model": "Shareware 30-day trial" ; 
+"Computing platform": "x86" ;
+)
+
+fmProduct26 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: ["Software license"] "User interface" "Distribution model" "Computing platform" ; 
+"User interface": GUI ; 
+"Distribution model": Freeware ; 
+"Computing platform": "x86" ;
+)
+
+fmProduct27 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features General "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] [QNX] [ReactOS] ["OS 9"] ["FreeBSD, NetBSD, OpenBSD"] ["OS X (Intel/PPC)"] [Linux] ["BeOS, Haiku"] ["OS/2, eCS"] ["AmigaOS (68k)"] ["OSF/1"] [SunOS] ["Tru64 UNIX"] ["3.1x"] ["NT 4.0"] "XP, 2000" ["System 7 (PPC/68k)"] ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] [UnixWare] [OpenVMS] [IRIX] ["Me, 98"] ["NT 3.x"] "Windows 7, Vista" [ULTRIX] [NeXTSTEP] [AIX] [DOS] ["HP-UX"] [Solaris] ["386BSD"] ["95"] ["A/UX"] ; 
+Features: "Multi-server" "UTF-8" "irc:// URI scheme" "Automatic updates" "Scripting language" "Proxy server" ; 
+General: "Software license" "Programming language" "User interface" "Distribution model" "Computing platform" ; 
+"Protocol support": CHAT [Server] [TSEND] DCC [Whiteboard] [RDCC] SEND [XMIT] ["File servers (FSERVs)"] [REVERSE] ["Reverse / Firewall DCC"] ["Passive DCC"] RESUME [OCSP] [TLS] [XDCC] CTCP [RSEND] ["SEND T"] ["IPv6"] [SASL] [SSL] [CRL] ; 
+"Scripting language": "VBScript, custom" ; 
+"Proxy server": SOCKS ; 
+"Software license": "[[Apache license|Apache]] 2.0Apache" ; 
+"Programming language": "Visual Basic" ; 
+"User interface": GUI ; 
+"Distribution model": Freeware ; 
+"Computing platform": "x86" ; 
+!"OSF/1";
+!IRIX;
+!ULTRIX;
+!RDCC;
+!"NT 3.x";
+!"System 7 (PPC/68k)";
+!SunOS;
+!OpenVMS;
+!"Reverse / Firewall DCC";
+!RSEND;
+!"A/UX";
+!Linux;
+!"AmigaOS 4, MorphOS (PPC)";
+!"OS 8";
+!AIX;
+!"BeOS, Haiku";
+!Solaris;
+!"FreeBSD, NetBSD, OpenBSD";
+!"AmigaOS (68k)";
+!"386BSD";
+!"OS/2, eCS";
+!"SEND T";
+!"IPv6";
+!XMIT;
+!"BSD/OS (BSD/386, BSDI)";
+!TSEND;
+!"OS X (Intel/PPC)";
+!"SCO OpenServer";
+!"OS 9";
+!"Passive DCC";
+!NeXTSTEP;
+!"3.1x";
+!"95";
+!SSL;
+!QNX;
+!"Me, 98";
+!REVERSE;
+!"Tru64 UNIX";
+!DOS;
+!"HP-UX";
+!Whiteboard;
+!UnixWare;
+)
+
+fmProduct28 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Software license" "Programming language" ["User interface"] "Distribution model" ; 
+"Software license": proprietary ; 
+"Programming language": "C++" ; 
+"Distribution model": Freeware ; 
+!"User interface";
+)
+
+fmProduct29 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Programming language" "Software license" "User interface" "Distribution model" ["Computing platform"] ; 
+"Programming language": "C++" ; 
+"Software license": GPL ; 
+"User interface": GUI ; 
+"Distribution model": "Free Software" ; 
+!"Computing platform";
+)
+
+fmProduct30 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Software license" "Programming language" "User interface" "Distribution model" "Computing platform" ; 
+"Software license": proprietary ; 
+"Programming language": Delphi ; 
+"User interface": GUI ; 
+"Distribution model": Shareware ; 
+"Computing platform": "x86" ;
+)
+
+fmProduct31 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Programming language" "Software license" "User interface" "Distribution model" ; 
+"Programming language": Java ; 
+"Software license": GPL ; 
+"User interface": GUI ; 
+"Distribution model": "Free software" ;
+)
+
+fmProduct32 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Software license" "Programming language" ["User interface"] "Distribution model" ["Computing platform"] ; 
+"Software license": GPL ; 
+"Programming language": "C++" ; 
+"Distribution model": "Free software" ; 
+!"Computing platform";
+!"User interface";
+)
+
+fmProduct33 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Programming language" "Software license" "User interface" "Distribution model" ["Computing platform"] ; 
+"Programming language": "JavaScript frontend, Python backend" ; 
+"Software license": GPL ; 
+"User interface": Web ; 
+"Distribution model": "Free software" ;
+)
+
+fmProduct34 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Programming language" "Software license" "User interface" "Distribution model" "Computing platform" ; 
+"Programming language": "Visual Basic .NET" ; 
+"Software license": proprietary ; 
+"User interface": GUI ; 
+"Distribution model": "Free software" ; 
+"Computing platform": "Windows x86 / x64 compatible (requires .NET 2.0 or higher)" ;
+)
+
+fmProduct35 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Programming language" "Software license" "User interface" "Distribution model" "Computing platform" ; 
+"Programming language": "Emacs Lisp" ; 
+"Software license": GPL ; 
+"User interface": TUI ; 
+"Distribution model": "Free software" ; 
+"Computing platform": "Cross-platform" ;
+)
+
+fmProduct36 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Software license" "Programming language" ["User interface"] "Distribution model" "Computing platform" ; 
+"Software license": GPL ; 
+"Programming language": "C#" ; 
+"Distribution model": "Free software" ; 
+"Computing platform": "ARM, PowerPC, s390, SPARC, x86, x86-64" ; 
+!"User interface";
+)
+
+fmProduct37 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: ["Programming language"] "Software license" "User interface" "Distribution model" ["Computing platform"] ; 
+"Software license": proprietary ; 
+"User interface": GUI ; 
+"Distribution model": Commercial ; 
+!"Computing platform";
+)
+
+fmProduct38 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: ["Programming language"] "Software license" "User interface" "Distribution model" "Computing platform" ; 
+"Software license": GPL ; 
+"User interface": GUI ; 
+"Distribution model": "Free software" ; 
+"Computing platform": "x86" ;
+)
+
+fmProduct39 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Programming language" "Software license" ["User interface"] "Distribution model" "Computing platform" ; 
+"Programming language": C ; 
+"Software license": GPL ; 
+"Distribution model": "Free software" ; 
+"Computing platform": "x86, VAX" ; 
+!"User interface";
+)
+
+fmProduct40 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Programming language" "Software license" "User interface" "Distribution model" "Computing platform" ; 
+"Programming language": C ; 
+"Software license": "GPL; or proprietary for Windows" ; 
+"User interface": "TUI, GUI" ; 
+"Distribution model": "Unix/Linux: free software; Windows: commercial, 30-day trial" ; 
+"Computing platform": "x86, x86-64" ;
+)
+
+fmProduct41 = FM (Comparison_of_Internet_Relay_Chat_clients: General ; 
+General: "Programming language" "Software license" "User interface" "Distribution model" "Computing platform" ; 
+"Programming language": "C, C++" ; 
+"Software license": "proprietary (violates GPL)" ; 
+"User interface": GUI ; 
+"Distribution model": Freeware ; 
+"Computing platform": "x86, x86-64" ;
+)
+
+fmProduct42 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": "AmigaOS 4, MorphOS (PPC)" ["OS 8"] [QNX] [ReactOS] ["OS 9"] ["FreeBSD, NetBSD, OpenBSD"] ["OS X (Intel/PPC)"] [Linux] ["BeOS, Haiku"] ["OS/2, eCS"] "AmigaOS (68k)" ["OSF/1"] [SunOS] ["Tru64 UNIX"] ["3.1x"] ["NT 4.0"] ["XP, 2000"] ["System 7 (PPC/68k)"] ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] [UnixWare] [OpenVMS] [IRIX] ["Me, 98"] ["NT 3.x"] [ULTRIX] ["Windows 7, Vista"] [NeXTSTEP] [DOS] [AIX] ["HP-UX"] [Solaris] ["386BSD"] ["95"] ["A/UX"] ; 
+Features: ["UTF-8"] ["Multi-server"] ["irc:// URI scheme"] ["Automatic updates"] "Scripting language" ["Proxy server"] ; 
+"Protocol support": CHAT [Server] TSEND DCC [Whiteboard] [RDCC] SEND [XMIT] ["File servers (FSERVs)"] [REVERSE] "Reverse / Firewall DCC" "Passive DCC" RESUME [OCSP] [TLS] [XDCC] CTCP ["SEND T"] [RSEND] ["IPv6"] [SASL] [SSL] [CRL] ; 
+"Scripting language": ARexx ; 
+!IRIX;
+!"File servers (FSERVs)";
+!OpenVMS;
+!RSEND;
+!"Multi-server";
+!AIX;
+!"BeOS, Haiku";
+!"FreeBSD, NetBSD, OpenBSD";
+!"386BSD";
+!"SEND T";
+!XMIT;
+!"BSD/OS (BSD/386, BSDI)";
+!"OS 9";
+!"3.1x";
+!"95";
+!QNX;
+!"Me, 98";
+!REVERSE;
+!"Tru64 UNIX";
+!"Windows 7, Vista";
+!"NT 4.0";
+!DOS;
+!UnixWare;
+!OCSP;
+!ReactOS;
+!"OSF/1";
+!ULTRIX;
+!RDCC;
+!CRL;
+!"NT 3.x";
+!"System 7 (PPC/68k)";
+!SunOS;
+!TLS;
+!"A/UX";
+!Server;
+!Linux;
+!"XP, 2000";
+!"OS 8";
+!Solaris;
+!"irc:// URI scheme";
+!"OS/2, eCS";
+!"IPv6";
+!"OS X (Intel/PPC)";
+!"SCO OpenServer";
+!NeXTSTEP;
+!SSL;
+!"Automatic updates";
+!"UTF-8";
+!"HP-UX";
+!Whiteboard;
+)
+
+fmProduct43 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] [QNX] [ReactOS] ["OS 9"] ["FreeBSD, NetBSD, OpenBSD"] ["OS X (Intel/PPC)"] Linux ["OS/2, eCS"] ["BeOS, Haiku"] ["AmigaOS (68k)"] ["OSF/1"] [SunOS] ["3.1x"] ["NT 4.0"] ["Tru64 UNIX"] "XP, 2000" ["System 7 (PPC/68k)"] ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] [UnixWare] [OpenVMS] ["Me, 98"] [IRIX] ["NT 3.x"] "Windows 7, Vista" [ULTRIX] [NeXTSTEP] [AIX] [DOS] ["HP-UX"] [Solaris] ["386BSD"] ["95"] ["A/UX"] ; 
+Features: ["UTF-8"] "Multi-server" ["irc:// URI scheme"] ["Automatic updates"] ["Scripting language"] ["Proxy server"] ; 
+"Protocol support": [CHAT] [TSEND] [DCC] [Server] [Whiteboard] [RDCC] [SEND] [XMIT] ["File servers (FSERVs)"] [REVERSE] ["Reverse / Firewall DCC"] ["Passive DCC"] [RESUME] [OCSP] [TLS] [XDCC] [CTCP] ["SEND T"] [RSEND] ["IPv6"] [SASL] [SSL] [CRL] ; 
+!"OS/2, eCS";
+!"IPv6";
+!"System 7 (PPC/68k)";
+!"NT 3.x";
+!OpenVMS;
+!"OS 9";
+!"Passive DCC";
+!SSL;
+!"3.1x";
+!Server;
+!"AmigaOS 4, MorphOS (PPC)";
+!"OS 8";
+!"UTF-8";
+!DOS;
+!"BeOS, Haiku";
+!"AmigaOS (68k)";
+)
+
+fmProduct44 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": "AmigaOS 4, MorphOS (PPC)" ["OS 8"] QNX [ReactOS] ["OS 9"] "FreeBSD, NetBSD, OpenBSD" "OS X (Intel/PPC)" Linux "OS/2, eCS" ["BeOS, Haiku"] "AmigaOS (68k)" "OSF/1" SunOS ["3.1x"] "NT 4.0" ["Tru64 UNIX"] "XP, 2000" ["System 7 (PPC/68k)"] ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] UnixWare [OpenVMS] IRIX "Me, 98" ["NT 3.x"] ULTRIX ["Windows 7, Vista"] NeXTSTEP AIX [DOS] "HP-UX" Solaris ["386BSD"] "95" ["A/UX"] ; 
+Features: ["UTF-8"] "Multi-server" ["irc:// URI scheme"] ["Automatic updates"] "Scripting language" ["Proxy server"] ; 
+"Protocol support": CHAT [Server] DCC TSEND [Whiteboard] [RDCC] SEND [XMIT] ["File servers (FSERVs)"] [REVERSE] ["Reverse / Firewall DCC"] ["Passive DCC"] RESUME [OCSP] TLS XDCC CTCP [RSEND] "IPv6" "SEND T" [SASL] SSL [CRL] ; 
+"Scripting language": "Enhanced IrcII script" ; 
+!"NT 3.x";
+!"System 7 (PPC/68k)";
+!"BSD/OS (BSD/386, BSDI)";
+!"OS 9";
+!"Passive DCC";
+!"3.1x";
+!Server;
+!"OS 8";
+!"UTF-8";
+!"Windows 7, Vista";
+!DOS;
+!Whiteboard;
+)
+
+fmProduct45 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": "AmigaOS 4, MorphOS (PPC)" "OS 8" QNX ReactOS "OS 9" "FreeBSD, NetBSD, OpenBSD" "OS X (Intel/PPC)" Linux "BeOS, Haiku" "OS/2, eCS" ["AmigaOS (68k)"] ["OSF/1"] SunOS "Tru64 UNIX" "NT 4.0" ["3.1x"] "XP, 2000" "System 7 (PPC/68k)" "SCO OpenServer" ["BSD/OS (BSD/386, BSDI)"] UnixWare OpenVMS IRIX "Me, 98" "NT 3.x" [ULTRIX] "Windows 7, Vista" [NeXTSTEP] AIX [DOS] "HP-UX" Solaris "95" ["386BSD"] ["A/UX"] ; 
+Features: "UTF-8" "Multi-server" "irc:// URI scheme" "Automatic updates" "Scripting language" "Proxy server" ; 
+"Protocol support": CHAT [Server] [TSEND] DCC [Whiteboard] [RDCC] SEND [XMIT] ["File servers (FSERVs)"] [REVERSE] ["Reverse / Firewall DCC"] ["Passive DCC"] [RESUME] [OCSP] TLS CTCP [XDCC] ["SEND T"] "IPv6" [RSEND] SASL SSL [CRL] ; 
+"Scripting language": JavaScript ; 
+SASL: script ; 
+!"386BSD";
+!"OSF/1";
+!XMIT;
+!ULTRIX;
+!RESUME;
+!RDCC;
+!"BSD/OS (BSD/386, BSDI)";
+!"File servers (FSERVs)";
+!"Reverse / Firewall DCC";
+!RSEND;
+!"Passive DCC";
+!"A/UX";
+!NeXTSTEP;
+!Server;
+!"3.1x";
+!REVERSE;
+!DOS;
+!Whiteboard;
+)
+
+fmProduct46 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] [QNX] [ReactOS] ["OS 9"] ["FreeBSD, NetBSD, OpenBSD"] "OS X (Intel/PPC)" [Linux] ["BeOS, Haiku"] ["OS/2, eCS"] ["AmigaOS (68k)"] ["OSF/1"] [SunOS] ["3.1x"] ["NT 4.0"] ["Tru64 UNIX"] ["XP, 2000"] ["System 7 (PPC/68k)"] ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] [UnixWare] [OpenVMS] ["Me, 98"] [IRIX] ["NT 3.x"] [ULTRIX] ["Windows 7, Vista"] [NeXTSTEP] [AIX] [DOS] ["HP-UX"] [Solaris] ["386BSD"] ["95"] ["A/UX"] ; 
+Features: "UTF-8" "Multi-server" "irc:// URI scheme" ["Automatic updates"] "Scripting language" ["Proxy server"] ; 
+"Protocol support": CHAT [Server] [TSEND] DCC [Whiteboard] [RDCC] SEND [XMIT] ["File servers (FSERVs)"] [REVERSE] ["Reverse / Firewall DCC"] "Passive DCC" RESUME [OCSP] [TLS] CTCP XDCC ["SEND T"] "IPv6" [RSEND] SASL SSL [CRL] ; 
+"Scripting language": "AppleScript, Cocoa, F-Script, JavaScript, Python" ; 
+!"OSF/1";
+!ReactOS;
+!IRIX;
+!ULTRIX;
+!"System 7 (PPC/68k)";
+!"NT 3.x";
+!SunOS;
+!OpenVMS;
+!"A/UX";
+!Linux;
+!Server;
+!"AmigaOS 4, MorphOS (PPC)";
+!"XP, 2000";
+!"OS 8";
+!AIX;
+!"BeOS, Haiku";
+!Solaris;
+!"FreeBSD, NetBSD, OpenBSD";
+!"AmigaOS (68k)";
+!"386BSD";
+!"OS/2, eCS";
+!"BSD/OS (BSD/386, BSDI)";
+!"SCO OpenServer";
+!"OS 9";
+!NeXTSTEP;
+!"95";
+!"3.1x";
+!QNX;
+!"Automatic updates";
+!"Me, 98";
+!"Windows 7, Vista";
+!"Tru64 UNIX";
+!"NT 4.0";
+!DOS;
+!"HP-UX";
+!UnixWare;
+)
+
+fmProduct47 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] QNX [ReactOS] ["OS 9"] "FreeBSD, NetBSD, OpenBSD" ["OS X (Intel/PPC)"] Linux ["BeOS, Haiku"] ["OS/2, eCS"] ["AmigaOS (68k)"] "OSF/1" SunOS ["NT 4.0"] ["3.1x"] "Tru64 UNIX" "XP, 2000" ["System 7 (PPC/68k)"] "SCO OpenServer" "BSD/OS (BSD/386, BSDI)" UnixWare OpenVMS IRIX ["Me, 98"] ["NT 3.x"] ULTRIX "Windows 7, Vista" NeXTSTEP AIX [DOS] "HP-UX" Solaris ["95"] "386BSD" "A/UX" ; 
+Features: "UTF-8" "Multi-server" ["irc:// URI scheme"] ["Automatic updates"] "Scripting language" ["Proxy server"] ; 
+"Protocol support": [CHAT] [Server] [DCC] [TSEND] [Whiteboard] [RDCC] [SEND] [XMIT] ["File servers (FSERVs)"] [REVERSE] ["Reverse / Firewall DCC"] ["Passive DCC"] [RESUME] [OCSP] TLS [XDCC] [CTCP] ["SEND T"] "IPv6" [RSEND] [SASL] SSL [CRL] ; 
+"Scripting language": "Emacs Lisp" ; 
+!DCC;
+!RDCC;
+!"System 7 (PPC/68k)";
+!"NT 3.x";
+!"File servers (FSERVs)";
+!"Reverse / Firewall DCC";
+!RSEND;
+!Server;
+!"OS 8";
+!CHAT;
+!"BeOS, Haiku";
+!XDCC;
+!"OS/2, eCS";
+!"SEND T";
+!XMIT;
+!RESUME;
+!TSEND;
+!"OS 9";
+!"Passive DCC";
+!SEND;
+!"3.1x";
+!"Automatic updates";
+!REVERSE;
+!Whiteboard;
+)
+
+fmProduct48 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] [QNX] [ReactOS] ["OS 9"] "FreeBSD, NetBSD, OpenBSD" ["OS X (Intel/PPC)"] Linux ["OS/2, eCS"] ["BeOS, Haiku"] ["AmigaOS (68k)"] ["OSF/1"] SunOS "Tru64 UNIX" ["NT 4.0"] ["3.1x"] ["XP, 2000"] ["System 7 (PPC/68k)"] ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] [UnixWare] [OpenVMS] IRIX ["Me, 98"] ["NT 3.x"] [ULTRIX] "Windows 7, Vista" [NeXTSTEP] AIX [DOS] "HP-UX" Solaris ["386BSD"] ["95"] ["A/UX"] ; 
+Features: "Multi-server" "UTF-8" "irc:// URI scheme" "Automatic updates" ["Scripting language"] "Proxy server" ; 
+"Protocol support": CHAT DCC [TSEND] [Server] [Whiteboard] [RDCC] SEND [XMIT] ["File servers (FSERVs)"] [REVERSE] ["Reverse / Firewall DCC"] "Passive DCC" RESUME [OCSP] TLS [XDCC] CTCP ["SEND T"] "IPv6" [RSEND] SASL SSL [CRL] ; 
+!OCSP;
+!CRL;
+!"System 7 (PPC/68k)";
+!"NT 3.x";
+!"OS X (Intel/PPC)";
+!"OS 9";
+!"95";
+!"3.1x";
+!"AmigaOS 4, MorphOS (PPC)";
+!"XP, 2000";
+!"Me, 98";
+!"OS 8";
+!"NT 4.0";
+!DOS;
+!Whiteboard;
+!"AmigaOS (68k)";
+!"Scripting language";
+)
+
+fmProduct49 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] [QNX] [ReactOS] ["OS 9"] ["FreeBSD, NetBSD, OpenBSD"] ["OS X (Intel/PPC)"] [Linux] ["OS/2, eCS"] ["BeOS, Haiku"] ["AmigaOS (68k)"] ["OSF/1"] [SunOS] ["Tru64 UNIX"] ["NT 4.0"] ["3.1x"] "XP, 2000" ["System 7 (PPC/68k)"] ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] [UnixWare] [OpenVMS] "Me, 98" [IRIX] ["NT 3.x"] [ULTRIX] "Windows 7, Vista" [NeXTSTEP] [DOS] [AIX] ["HP-UX"] [Solaris] ["95"] ["386BSD"] ["A/UX"] ; 
+Features: "Multi-server" "UTF-8" ["irc:// URI scheme"] "Automatic updates" ["Scripting language"] ["Proxy server"] ; 
+"Protocol support": CHAT [TSEND] DCC [Server] [Whiteboard] [RDCC] SEND [XMIT] ["File servers (FSERVs)"] ["Reverse / Firewall DCC"] [REVERSE] ["Passive DCC"] RESUME [OCSP] [TLS] [XDCC] CTCP [RSEND] ["IPv6"] ["SEND T"] [SASL] [SSL] [CRL] ; 
+!"OSF/1";
+!ReactOS;
+!OCSP;
+!IRIX;
+!ULTRIX;
+!CRL;
+!"System 7 (PPC/68k)";
+!"NT 3.x";
+!"File servers (FSERVs)";
+!SunOS;
+!OpenVMS;
+!TLS;
+!"A/UX";
+!Linux;
+!"AmigaOS 4, MorphOS (PPC)";
+!"OS 8";
+!AIX;
+!"BeOS, Haiku";
+!Solaris;
+!XDCC;
+!"FreeBSD, NetBSD, OpenBSD";
+!"AmigaOS (68k)";
+!"Scripting language";
+!"386BSD";
+!"OS/2, eCS";
+!XMIT;
+!"BSD/OS (BSD/386, BSDI)";
+!"OS X (Intel/PPC)";
+!"SCO OpenServer";
+!"OS 9";
+!NeXTSTEP;
+!"95";
+!"3.1x";
+!SSL;
+!QNX;
+!"Tru64 UNIX";
+!"NT 4.0";
+!DOS;
+!"HP-UX";
+!Whiteboard;
+!UnixWare;
+)
+
+fmProduct50 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] [QNX] [ReactOS] ["OS 9"] ["FreeBSD, NetBSD, OpenBSD"] ["OS X (Intel/PPC)"] [Linux] ["OS/2, eCS"] ["BeOS, Haiku"] ["AmigaOS (68k)"] ["OSF/1"] [SunOS] ["Tru64 UNIX"] ["NT 4.0"] ["3.1x"] "XP, 2000" ["System 7 (PPC/68k)"] ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] [UnixWare] [OpenVMS] "Me, 98" [IRIX] ["NT 3.x"] "Windows 7, Vista" [ULTRIX] [NeXTSTEP] [AIX] [DOS] ["HP-UX"] [Solaris] ["386BSD"] "95" ["A/UX"] ; 
+Features: "Multi-server" "UTF-8" ["irc:// URI scheme"] "Automatic updates" "Scripting language" ["Proxy server"] ; 
+"Protocol support": CHAT [TSEND] [Server] DCC [Whiteboard] [RDCC] SEND [XMIT] ["File servers (FSERVs)"] [REVERSE] ["Reverse / Firewall DCC"] ["Passive DCC"] [RESUME] [OCSP] [TLS] CTCP [XDCC] [RSEND] ["SEND T"] "IPv6" SASL SSL [CRL] ; 
+"Scripting language": VBScript ; 
+!"OSF/1";
+!ReactOS;
+!IRIX;
+!ULTRIX;
+!"NT 3.x";
+!"System 7 (PPC/68k)";
+!"File servers (FSERVs)";
+!SunOS;
+!OpenVMS;
+!"A/UX";
+!Linux;
+!"AmigaOS 4, MorphOS (PPC)";
+!"OS 8";
+!AIX;
+!"BeOS, Haiku";
+!Solaris;
+!XDCC;
+!"FreeBSD, NetBSD, OpenBSD";
+!"AmigaOS (68k)";
+!"386BSD";
+!"OS/2, eCS";
+!XMIT;
+!"BSD/OS (BSD/386, BSDI)";
+!"OS X (Intel/PPC)";
+!"SCO OpenServer";
+!"OS 9";
+!NeXTSTEP;
+!"3.1x";
+!QNX;
+!"Tru64 UNIX";
+!"NT 4.0";
+!DOS;
+!"HP-UX";
+!Whiteboard;
+!UnixWare;
+)
+
+fmProduct51 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] QNX [ReactOS] ["OS 9"] "FreeBSD, NetBSD, OpenBSD" "OS X (Intel/PPC)" Linux ["BeOS, Haiku"] ["OS/2, eCS"] ["AmigaOS (68k)"] ["OSF/1"] [SunOS] ["NT 4.0"] ["3.1x"] "Tru64 UNIX" ["XP, 2000"] ["System 7 (PPC/68k)"] "SCO OpenServer" "BSD/OS (BSD/386, BSDI)" UnixWare [OpenVMS] IRIX ["Me, 98"] ["NT 3.x"] ["Windows 7, Vista"] [ULTRIX] [NeXTSTEP] DOS [AIX] "HP-UX" Solaris "386BSD" ["95"] ["A/UX"] ; 
+Features: "UTF-8" "Multi-server" ["irc:// URI scheme"] ["Automatic updates"] "Scripting language" ["Proxy server"] ; 
+"Protocol support": [CHAT] [DCC] [Server] [TSEND] [Whiteboard] [RDCC] [SEND] [XMIT] ["File servers (FSERVs)"] ["Reverse / Firewall DCC"] [REVERSE] ["Passive DCC"] [RESUME] [OCSP] [TLS] [XDCC] [CTCP] ["SEND T"] [RSEND] ["IPv6"] [SASL] [SSL] [CRL] ; 
+"Scripting language": "Shell script" ; 
+!"OS/2, eCS";
+!"IPv6";
+!DCC;
+!"System 7 (PPC/68k)";
+!"NT 3.x";
+!TLS;
+!"OS 9";
+!"Passive DCC";
+!SSL;
+!"3.1x";
+!Server;
+!"AmigaOS 4, MorphOS (PPC)";
+!"OS 8";
+!"AmigaOS (68k)";
+)
+
+fmProduct52 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] QNX [ReactOS] ["OS 9"] "FreeBSD, NetBSD, OpenBSD" "OS X (Intel/PPC)" Linux ["OS/2, eCS"] ["BeOS, Haiku"] ["AmigaOS (68k)"] "OSF/1" SunOS "Tru64 UNIX" "NT 4.0" ["3.1x"] "XP, 2000" ["System 7 (PPC/68k)"] "SCO OpenServer" "BSD/OS (BSD/386, BSDI)" [UnixWare] [OpenVMS] IRIX "Me, 98" ["NT 3.x"] ULTRIX "Windows 7, Vista" NeXTSTEP [DOS] AIX "HP-UX" Solaris "95" "386BSD" "A/UX" ; 
+Features: "Multi-server" ["UTF-8"] ["irc:// URI scheme"] ["Automatic updates"] "Scripting language" ["Proxy server"] ; 
+"Protocol support": [CHAT] [TSEND] [Server] DCC [Whiteboard] [RDCC] [SEND] [XMIT] ["File servers (FSERVs)"] ["Reverse / Firewall DCC"] [REVERSE] ["Passive DCC"] [RESUME] [OCSP] [TLS] [XDCC] CTCP [RSEND] ["SEND T"] "IPv6" [SASL] [SSL] [CRL] ; 
+"Scripting language": "IrcII script" ; 
+!"OS/2, eCS";
+!"System 7 (PPC/68k)";
+!"NT 3.x";
+!"Passive DCC";
+!"OS 9";
+!Server;
+!SSL;
+!"3.1x";
+!"OS 8";
+!"UTF-8";
+!DOS;
+!"BeOS, Haiku";
+!"AmigaOS (68k)";
+)
+
+fmProduct53 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] [QNX] [ReactOS] ["OS 9"] ["FreeBSD, NetBSD, OpenBSD"] ["OS X (Intel/PPC)"] [Linux] ["BeOS, Haiku"] ["OS/2, eCS"] ["AmigaOS (68k)"] ["OSF/1"] [SunOS] ["Tru64 UNIX"] ["3.1x"] "NT 4.0" ["XP, 2000"] ["System 7 (PPC/68k)"] ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] [UnixWare] [OpenVMS] ["Me, 98"] [IRIX] ["NT 3.x"] [ULTRIX] ["Windows 7, Vista"] [NeXTSTEP] [AIX] DOS ["HP-UX"] [Solaris] ["386BSD"] ["95"] ["A/UX"] ; 
+Features: ["UTF-8"] ["Multi-server"] ["irc:// URI scheme"] ["Automatic updates"] ["Scripting language"] ["Proxy server"] ; 
+"Protocol support": [CHAT] [Server] [TSEND] [DCC] [Whiteboard] [RDCC] [SEND] [XMIT] ["File servers (FSERVs)"] ["Reverse / Firewall DCC"] [REVERSE] ["Passive DCC"] [RESUME] [OCSP] [TLS] [XDCC] CTCP [RSEND] ["SEND T"] ["IPv6"] [SASL] [SSL] [CRL] ; 
+!DCC;
+!IRIX;
+!"Proxy server";
+!"File servers (FSERVs)";
+!"Reverse / Firewall DCC";
+!OpenVMS;
+!RSEND;
+!"Multi-server";
+!"AmigaOS 4, MorphOS (PPC)";
+!AIX;
+!"BeOS, Haiku";
+!"FreeBSD, NetBSD, OpenBSD";
+!"AmigaOS (68k)";
+!"386BSD";
+!"SEND T";
+!XMIT;
+!TSEND;
+!SASL;
+!"BSD/OS (BSD/386, BSDI)";
+!"OS 9";
+!"Passive DCC";
+!SEND;
+!"95";
+!"3.1x";
+!QNX;
+!"Me, 98";
+!REVERSE;
+!"Tru64 UNIX";
+!"Windows 7, Vista";
+!UnixWare;
+!OCSP;
+!ReactOS;
+!"OSF/1";
+!ULTRIX;
+!RDCC;
+!CRL;
+!"System 7 (PPC/68k)";
+!"NT 3.x";
+!SunOS;
+!TLS;
+!"A/UX";
+!Linux;
+!Server;
+!"XP, 2000";
+!"OS 8";
+!CHAT;
+!Solaris;
+!XDCC;
+!"irc:// URI scheme";
+!"OS/2, eCS";
+!"IPv6";
+!RESUME;
+!"OS X (Intel/PPC)";
+!"SCO OpenServer";
+!NeXTSTEP;
+!SSL;
+!"Automatic updates";
+!"UTF-8";
+!"HP-UX";
+!Whiteboard;
+)
+
+fmProduct54 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] "OS 8" [QNX] [ReactOS] "OS 9" ["FreeBSD, NetBSD, OpenBSD"] "OS X (Intel/PPC)" [Linux] ["OS/2, eCS"] ["BeOS, Haiku"] ["AmigaOS (68k)"] ["OSF/1"] [SunOS] ["Tru64 UNIX"] ["NT 4.0"] ["3.1x"] ["XP, 2000"] "System 7 (PPC/68k)" ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] [UnixWare] [OpenVMS] [IRIX] ["Me, 98"] ["NT 3.x"] ["Windows 7, Vista"] [ULTRIX] [NeXTSTEP] [AIX] [DOS] ["HP-UX"] [Solaris] ["95"] ["386BSD"] ["A/UX"] ; 
+Features: ["UTF-8"] "Multi-server" ["irc:// URI scheme"] ["Automatic updates"] "Scripting language" ["Proxy server"] ; 
+"Protocol support": [CHAT] [Server] [TSEND] DCC [Whiteboard] [RDCC] [SEND] [XMIT] ["File servers (FSERVs)"] [REVERSE] ["Reverse / Firewall DCC"] ["Passive DCC"] [RESUME] [OCSP] [TLS] CTCP [XDCC] ["IPv6"] ["SEND T"] [RSEND] [SASL] SSL [CRL] ; 
+"Scripting language": AppleScript ; 
+!"OSF/1";
+!ReactOS;
+!IRIX;
+!ULTRIX;
+!"NT 3.x";
+!SunOS;
+!OpenVMS;
+!"A/UX";
+!Linux;
+!"AmigaOS 4, MorphOS (PPC)";
+!"XP, 2000";
+!AIX;
+!"BeOS, Haiku";
+!Solaris;
+!"FreeBSD, NetBSD, OpenBSD";
+!"AmigaOS (68k)";
+!"386BSD";
+!"OS/2, eCS";
+!"BSD/OS (BSD/386, BSDI)";
+!"SCO OpenServer";
+!NeXTSTEP;
+!"95";
+!"3.1x";
+!QNX;
+!"Me, 98";
+!"UTF-8";
+!"Windows 7, Vista";
+!"Tru64 UNIX";
+!"NT 4.0";
+!DOS;
+!"HP-UX";
+!UnixWare;
+)
+
+fmProduct55 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": "AmigaOS 4, MorphOS (PPC)" ["OS 8"] QNX [ReactOS] ["OS 9"] "FreeBSD, NetBSD, OpenBSD" "OS X (Intel/PPC)" Linux "BeOS, Haiku" "OS/2, eCS" ["AmigaOS (68k)"] "OSF/1" SunOS "NT 4.0" ["3.1x"] "Tru64 UNIX" "XP, 2000" ["System 7 (PPC/68k)"] "SCO OpenServer" "BSD/OS (BSD/386, BSDI)" UnixWare [OpenVMS] IRIX "Me, 98" ["NT 3.x"] "Windows 7, Vista" ULTRIX NeXTSTEP AIX [DOS] "HP-UX" Solaris "386BSD" "95" "A/UX" ; 
+Features: "UTF-8" "Multi-server" ["irc:// URI scheme"] ["Automatic updates"] "Scripting language" "Proxy server" ; 
+"Protocol support": CHAT [TSEND] DCC Server [Whiteboard] [RDCC] SEND [XMIT] ["File servers (FSERVs)"] [REVERSE] ["Reverse / Firewall DCC"] "Passive DCC" RESUME [OCSP] TLS [XDCC] CTCP ["SEND T"] "IPv6" [RSEND] SASL SSL [CRL] ; 
+"Scripting language": Perl ; 
+SASL: script ; 
+!"OS 9";
+!"3.1x";
+!"OS 8";
+!DOS;
+!"NT 3.x";
+!"System 7 (PPC/68k)";
+!OpenVMS;
+!"irc:// URI scheme";
+)
+
+fmProduct56 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" "Protocol support" ; 
+"Operating system support": "AmigaOS 4, MorphOS (PPC)" "OS 8" [ReactOS] "OS 9" "Me, 98" "OS X (Intel/PPC)" ["NT 3.x"] "OS/2, eCS" "BeOS, Haiku" "Windows 7, Vista" ["AmigaOS (68k)"] [DOS] "3.1x" "NT 4.0" "95" "XP, 2000" ["System 7 (PPC/68k)"] ; 
+"Protocol support": DCC [OCSP] [TLS] CTCP "IPv6" [SASL] SSL [CRL] ; 
+!DOS;
+)
+
+fmProduct57 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": "AmigaOS 4, MorphOS (PPC)" "OS 8" QNX ReactOS "OS 9" "FreeBSD, NetBSD, OpenBSD" "OS X (Intel/PPC)" Linux "OS/2, eCS" "BeOS, Haiku" "AmigaOS (68k)" "OSF/1" SunOS "NT 4.0" "3.1x" "Tru64 UNIX" "XP, 2000" "System 7 (PPC/68k)" "SCO OpenServer" "BSD/OS (BSD/386, BSDI)" UnixWare OpenVMS "Me, 98" IRIX "NT 3.x" "Windows 7, Vista" ULTRIX NeXTSTEP AIX [DOS] "HP-UX" Solaris "386BSD" "95" "A/UX" ; 
+Features: "Multi-server" "UTF-8" ["irc:// URI scheme"] ["Automatic updates"] ["Scripting language"] "Proxy server" ; 
+"Protocol support": [CHAT] [Server] [DCC] [TSEND] [Whiteboard] [RDCC] [SEND] [XMIT] ["File servers (FSERVs)"] ["Reverse / Firewall DCC"] [REVERSE] ["Passive DCC"] [RESUME] [OCSP] [TLS] [XDCC] CTCP ["SEND T"] [RSEND] "IPv6" [SASL] SSL [CRL] ; 
+!"SEND T";
+!OCSP;
+!DCC;
+!XMIT;
+!RDCC;
+!RESUME;
+!CRL;
+!TSEND;
+!"File servers (FSERVs)";
+!SASL;
+!"Reverse / Firewall DCC";
+!TLS;
+!RSEND;
+!"Passive DCC";
+!SEND;
+!Server;
+!CHAT;
+!REVERSE;
+!DOS;
+!XDCC;
+!Whiteboard;
+!"irc:// URI scheme";
+!"Scripting language";
+)
+
+fmProduct58 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] [QNX] [ReactOS] ["OS 9"] "FreeBSD, NetBSD, OpenBSD" ["OS X (Intel/PPC)"] Linux ["OS/2, eCS"] ["BeOS, Haiku"] ["AmigaOS (68k)"] ["OSF/1"] [SunOS] "Tru64 UNIX" ["NT 4.0"] ["3.1x"] ["XP, 2000"] ["System 7 (PPC/68k)"] ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] [UnixWare] [OpenVMS] [IRIX] ["Me, 98"] ["NT 3.x"] [ULTRIX] ["Windows 7, Vista"] [NeXTSTEP] [AIX] [DOS] ["HP-UX"] Solaris ["95"] ["386BSD"] ["A/UX"] ; 
+Features: "Multi-server" "UTF-8" "irc:// URI scheme" ["Automatic updates"] ["Scripting language"] "Proxy server" ; 
+"Protocol support": CHAT [Server] [TSEND] DCC Whiteboard [RDCC] SEND [XMIT] ["File servers (FSERVs)"] "Reverse / Firewall DCC" [REVERSE] "Passive DCC" RESUME [OCSP] TLS [XDCC] CTCP [RSEND] "IPv6" ["SEND T"] SASL SSL [CRL] ; 
+!"OS/2, eCS";
+!"NT 3.x";
+!"System 7 (PPC/68k)";
+!"OS 9";
+!"3.1x";
+!Server;
+!"AmigaOS 4, MorphOS (PPC)";
+!"OS 8";
+!"BeOS, Haiku";
+!DOS;
+!"AmigaOS (68k)";
+!"Scripting language";
+)
+
+fmProduct59 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] [QNX] ReactOS "OS 9" "FreeBSD, NetBSD, OpenBSD" "OS X (Intel/PPC)" Linux "OS/2, eCS" ["BeOS, Haiku"] ["AmigaOS (68k)"] ["OSF/1"] [SunOS] ["Tru64 UNIX"] "NT 4.0" ["3.1x"] "XP, 2000" ["System 7 (PPC/68k)"] ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] [UnixWare] [OpenVMS] [IRIX] "Me, 98" ["NT 3.x"] "Windows 7, Vista" [ULTRIX] [NeXTSTEP] [DOS] [AIX] ["HP-UX"] Solaris ["95"] ["386BSD"] ["A/UX"] ; 
+Features: "UTF-8" "Multi-server" "irc:// URI scheme" ["Automatic updates"] "Scripting language" "Proxy server" ; 
+"Protocol support": CHAT [Server] TSEND DCC [Whiteboard] [RDCC] SEND [XMIT] ["File servers (FSERVs)"] "Reverse / Firewall DCC" REVERSE "Passive DCC" RESUME [OCSP] TLS [XDCC] CTCP RSEND "IPv6" ["SEND T"] SASL SSL [CRL] ; 
+"Scripting language": "KVS (custom), Perl, Python, C++" ; 
+!OCSP;
+!"SEND T";
+!XMIT;
+!RDCC;
+!CRL;
+!"System 7 (PPC/68k)";
+!"NT 3.x";
+!"File servers (FSERVs)";
+!Server;
+!"3.1x";
+!"95";
+!"AmigaOS 4, MorphOS (PPC)";
+!"Automatic updates";
+!"OS 8";
+!DOS;
+!"BeOS, Haiku";
+!XDCC;
+!Whiteboard;
+!"AmigaOS (68k)";
+)
+
+fmProduct60 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] [QNX] [ReactOS] ["OS 9"] ["FreeBSD, NetBSD, OpenBSD"] "OS X (Intel/PPC)" Linux ["BeOS, Haiku"] ["OS/2, eCS"] ["AmigaOS (68k)"] ["OSF/1"] [SunOS] ["3.1x"] ["NT 4.0"] ["Tru64 UNIX"] "XP, 2000" ["System 7 (PPC/68k)"] ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] [UnixWare] [OpenVMS] ["Me, 98"] [IRIX] ["NT 3.x"] [ULTRIX] "Windows 7, Vista" [NeXTSTEP] [AIX] DOS ["HP-UX"] [Solaris] ["95"] ["386BSD"] ["A/UX"] ; 
+Features: "UTF-8" "Multi-server" ["irc:// URI scheme"] "Automatic updates" "Scripting language" ["Proxy server"] ; 
+"Scripting language": Java ; 
+!"OSF/1";
+!ReactOS;
+!IRIX;
+!ULTRIX;
+!"NT 3.x";
+!"System 7 (PPC/68k)";
+!SunOS;
+!OpenVMS;
+!"A/UX";
+!"AmigaOS 4, MorphOS (PPC)";
+!"OS 8";
+!AIX;
+!"BeOS, Haiku";
+!Solaris;
+!"FreeBSD, NetBSD, OpenBSD";
+!"AmigaOS (68k)";
+!"386BSD";
+!"OS/2, eCS";
+!"BSD/OS (BSD/386, BSDI)";
+!"SCO OpenServer";
+!"OS 9";
+!NeXTSTEP;
+!"3.1x";
+!"95";
+!QNX;
+!"Me, 98";
+!"Tru64 UNIX";
+!"NT 4.0";
+!"HP-UX";
+!UnixWare;
+)
+
+fmProduct61 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] [QNX] [ReactOS] ["OS 9"] ["FreeBSD, NetBSD, OpenBSD"] ["OS X (Intel/PPC)"] [Linux] ["BeOS, Haiku"] ["OS/2, eCS"] ["AmigaOS (68k)"] ["OSF/1"] [SunOS] ["3.1x"] ["NT 4.0"] ["Tru64 UNIX"] ["XP, 2000"] ["System 7 (PPC/68k)"] ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] [UnixWare] [OpenVMS] ["Me, 98"] [IRIX] ["NT 3.x"] [ULTRIX] ["Windows 7, Vista"] [NeXTSTEP] DOS [AIX] ["HP-UX"] [Solaris] ["386BSD"] ["95"] ["A/UX"] ; 
+Features: ["Multi-server"] ["UTF-8"] ["irc:// URI scheme"] ["Automatic updates"] ["Scripting language"] ["Proxy server"] ; 
+!"OSF/1";
+!ReactOS;
+!IRIX;
+!ULTRIX;
+!"NT 3.x";
+!"System 7 (PPC/68k)";
+!SunOS;
+!OpenVMS;
+!"A/UX";
+!Linux;
+!"Multi-server";
+!"AmigaOS 4, MorphOS (PPC)";
+!"XP, 2000";
+!"OS 8";
+!AIX;
+!"BeOS, Haiku";
+!Solaris;
+!"FreeBSD, NetBSD, OpenBSD";
+!"AmigaOS (68k)";
+!"Scripting language";
+!"386BSD";
+!"OS/2, eCS";
+!"BSD/OS (BSD/386, BSDI)";
+!"OS X (Intel/PPC)";
+!"SCO OpenServer";
+!"OS 9";
+!NeXTSTEP;
+!"3.1x";
+!"95";
+!QNX;
+!"Automatic updates";
+!"Me, 98";
+!"UTF-8";
+!"Windows 7, Vista";
+!"Tru64 UNIX";
+!"NT 4.0";
+!"HP-UX";
+!UnixWare;
+)
+
+fmProduct62 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] [QNX] [ReactOS] ["OS 9"] ["FreeBSD, NetBSD, OpenBSD"] ["OS X (Intel/PPC)"] [Linux] ["OS/2, eCS"] ["BeOS, Haiku"] ["AmigaOS (68k)"] ["OSF/1"] [SunOS] ["3.1x"] ["NT 4.0"] ["Tru64 UNIX"] ["XP, 2000"] ["System 7 (PPC/68k)"] ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] [UnixWare] [OpenVMS] [IRIX] ["Me, 98"] ["NT 3.x"] [ULTRIX] ["Windows 7, Vista"] [NeXTSTEP] [AIX] [DOS] ["HP-UX"] [Solaris] ["386BSD"] ["95"] ["A/UX"] ; 
+Features: "Multi-server" "UTF-8" ["irc:// URI scheme"] ["Automatic updates"] ["Scripting language"] ["Proxy server"] ; 
+"Protocol support": [CHAT] Server [TSEND] DCC [Whiteboard] [RDCC] [SEND] [XMIT] ["File servers (FSERVs)"] [REVERSE] ["Reverse / Firewall DCC"] "Passive DCC" [RESUME] [OCSP] [TLS] [CTCP] [XDCC] ["SEND T"] [RSEND] "IPv6" SASL [SSL] [CRL] ; 
+!"OSF/1";
+!ReactOS;
+!IRIX;
+!ULTRIX;
+!"System 7 (PPC/68k)";
+!"NT 3.x";
+!SunOS;
+!OpenVMS;
+!"A/UX";
+!Linux;
+!"AmigaOS 4, MorphOS (PPC)";
+!"XP, 2000";
+!"OS 8";
+!AIX;
+!"BeOS, Haiku";
+!Solaris;
+!"FreeBSD, NetBSD, OpenBSD";
+!"AmigaOS (68k)";
+!"386BSD";
+!"OS/2, eCS";
+!"BSD/OS (BSD/386, BSDI)";
+!"OS X (Intel/PPC)";
+!"OS 9";
+!"SCO OpenServer";
+!NeXTSTEP;
+!"95";
+!"3.1x";
+!SSL;
+!QNX;
+!"Me, 98";
+!"Windows 7, Vista";
+!"Tru64 UNIX";
+!"NT 4.0";
+!DOS;
+!"HP-UX";
+!UnixWare;
+)
+
+fmProduct63 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] [QNX] [ReactOS] ["OS 9"] ["FreeBSD, NetBSD, OpenBSD"] "OS X (Intel/PPC)" [Linux] ["BeOS, Haiku"] ["OS/2, eCS"] ["AmigaOS (68k)"] ["OSF/1"] [SunOS] ["NT 4.0"] ["3.1x"] ["Tru64 UNIX"] ["XP, 2000"] ["System 7 (PPC/68k)"] ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] [UnixWare] [OpenVMS] [IRIX] ["Me, 98"] ["NT 3.x"] [ULTRIX] ["Windows 7, Vista"] [NeXTSTEP] [AIX] [DOS] ["HP-UX"] [Solaris] ["95"] ["386BSD"] ["A/UX"] ; 
+Features: "UTF-8" "Multi-server" "irc:// URI scheme" "Automatic updates" "Scripting language" "Proxy server" ; 
+"Protocol support": [CHAT] [TSEND] [Server] DCC [Whiteboard] [RDCC] [SEND] [XMIT] ["File servers (FSERVs)"] ["Reverse / Firewall DCC"] [REVERSE] "Passive DCC" [RESUME] [OCSP] [TLS] [XDCC] CTCP ["IPv6"] ["SEND T"] [RSEND] [SASL] SSL [CRL] ; 
+"Scripting language": "AppleScript, Cocoa" ; 
+!"OSF/1";
+!ReactOS;
+!IRIX;
+!ULTRIX;
+!"System 7 (PPC/68k)";
+!"NT 3.x";
+!SunOS;
+!OpenVMS;
+!"A/UX";
+!Linux;
+!Server;
+!"AmigaOS 4, MorphOS (PPC)";
+!"XP, 2000";
+!"OS 8";
+!AIX;
+!"BeOS, Haiku";
+!Solaris;
+!"FreeBSD, NetBSD, OpenBSD";
+!"AmigaOS (68k)";
+!"386BSD";
+!"OS/2, eCS";
+!"IPv6";
+!"BSD/OS (BSD/386, BSDI)";
+!"SCO OpenServer";
+!"OS 9";
+!NeXTSTEP;
+!"95";
+!"3.1x";
+!QNX;
+!"Me, 98";
+!"Windows 7, Vista";
+!"Tru64 UNIX";
+!"NT 4.0";
+!DOS;
+!"HP-UX";
+!UnixWare;
+)
+
+fmProduct64 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": "AmigaOS 4, MorphOS (PPC)" "OS 8" [QNX] ReactOS "OS 9" "FreeBSD, NetBSD, OpenBSD" "OS X (Intel/PPC)" Linux "OS/2, eCS" "BeOS, Haiku" "AmigaOS (68k)" ["OSF/1"] SunOS "NT 4.0" "3.1x" "Tru64 UNIX" "XP, 2000" "System 7 (PPC/68k)" "SCO OpenServer" ["BSD/OS (BSD/386, BSDI)"] UnixWare OpenVMS IRIX "Me, 98" "NT 3.x" ULTRIX "Windows 7, Vista" [NeXTSTEP] AIX [DOS] "HP-UX" Solaris ["386BSD"] "95" ["A/UX"] ; 
+Features: "UTF-8" "Multi-server" "irc:// URI scheme" ["Automatic updates"] ["Scripting language"] ["Proxy server"] ; 
+"Protocol support": [CHAT] [Server] [DCC] [TSEND] [Whiteboard] [RDCC] [SEND] [XMIT] ["File servers (FSERVs)"] ["Reverse / Firewall DCC"] [REVERSE] ["Passive DCC"] [RESUME] [OCSP] [TLS] [XDCC] [CTCP] [RSEND] ["SEND T"] ["IPv6"] SASL SSL [CRL] ; 
+!"Passive DCC";
+!Server;
+!DCC;
+!"IPv6";
+!DOS;
+)
+
+fmProduct65 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] [QNX] [ReactOS] ["OS 9"] ["FreeBSD, NetBSD, OpenBSD"] ["OS X (Intel/PPC)"] [Linux] ["OS/2, eCS"] ["BeOS, Haiku"] ["AmigaOS (68k)"] ["OSF/1"] [SunOS] ["Tru64 UNIX"] "NT 4.0" ["3.1x"] "XP, 2000" ["System 7 (PPC/68k)"] ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] [UnixWare] [OpenVMS] [IRIX] "Me, 98" ["NT 3.x"] "Windows 7, Vista" [ULTRIX] [NeXTSTEP] [DOS] [AIX] ["HP-UX"] [Solaris] ["386BSD"] "95" ["A/UX"] ; 
+Features: "UTF-8" "Multi-server" "irc:// URI scheme" "Automatic updates" "Scripting language" "Proxy server" ; 
+"Protocol support": CHAT [TSEND] DCC Server [Whiteboard] [RDCC] SEND [XMIT] "File servers (FSERVs)" "Reverse / Firewall DCC" [REVERSE] "Passive DCC" [RESUME] [OCSP] [TLS] [XDCC] CTCP [RSEND] ["SEND T"] "IPv6" SASL [SSL] [CRL] ; 
+"Scripting language": "mIRC script" ; 
+SASL: script ; 
+!"OSF/1";
+!IRIX;
+!ULTRIX;
+!RDCC;
+!"System 7 (PPC/68k)";
+!SunOS;
+!OpenVMS;
+!"A/UX";
+!Linux;
+!"AmigaOS 4, MorphOS (PPC)";
+!"OS 8";
+!AIX;
+!"BeOS, Haiku";
+!Solaris;
+!XDCC;
+!"FreeBSD, NetBSD, OpenBSD";
+!"AmigaOS (68k)";
+!"OS/2, eCS";
+!"386BSD";
+!RESUME;
+!"BSD/OS (BSD/386, BSDI)";
+!"OS X (Intel/PPC)";
+!"SCO OpenServer";
+!"OS 9";
+!NeXTSTEP;
+!SSL;
+!QNX;
+!"Tru64 UNIX";
+!DOS;
+!"HP-UX";
+!UnixWare;
+)
+
+fmProduct66 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] [QNX] [ReactOS] ["OS 9"] ["FreeBSD, NetBSD, OpenBSD"] ["OS X (Intel/PPC)"] [Linux] ["OS/2, eCS"] ["BeOS, Haiku"] ["AmigaOS (68k)"] ["OSF/1"] [SunOS] ["3.1x"] ["NT 4.0"] ["Tru64 UNIX"] "XP, 2000" ["System 7 (PPC/68k)"] ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] [UnixWare] [OpenVMS] [IRIX] ["Me, 98"] ["NT 3.x"] "Windows 7, Vista" [ULTRIX] [NeXTSTEP] [AIX] [DOS] ["HP-UX"] [Solaris] ["386BSD"] ["95"] ["A/UX"] ; 
+Features: ["Multi-server"] ["UTF-8"] ["irc:// URI scheme"] ["Automatic updates"] ["Scripting language"] ["Proxy server"] ; 
+"Protocol support": [CHAT] [TSEND] [Server] DCC [Whiteboard] [RDCC] SEND [XMIT] ["File servers (FSERVs)"] ["Reverse / Firewall DCC"] [REVERSE] ["Passive DCC"] [RESUME] [OCSP] [TLS] [XDCC] CTCP ["SEND T"] ["IPv6"] [RSEND] [SASL] [SSL] [CRL] ; 
+!"OSF/1";
+!ReactOS;
+!IRIX;
+!ULTRIX;
+!"System 7 (PPC/68k)";
+!"NT 3.x";
+!SunOS;
+!OpenVMS;
+!"A/UX";
+!Linux;
+!Server;
+!"Multi-server";
+!"AmigaOS 4, MorphOS (PPC)";
+!"OS 8";
+!AIX;
+!"BeOS, Haiku";
+!Solaris;
+!"FreeBSD, NetBSD, OpenBSD";
+!"AmigaOS (68k)";
+!"386BSD";
+!"OS/2, eCS";
+!"IPv6";
+!"BSD/OS (BSD/386, BSDI)";
+!"OS X (Intel/PPC)";
+!"SCO OpenServer";
+!"OS 9";
+!"Passive DCC";
+!NeXTSTEP;
+!"95";
+!"3.1x";
+!SSL;
+!QNX;
+!"Me, 98";
+!"UTF-8";
+!"Tru64 UNIX";
+!"NT 4.0";
+!DOS;
+!"HP-UX";
+!UnixWare;
+)
+
+fmProduct67 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] [QNX] [ReactOS] ["OS 9"] "FreeBSD, NetBSD, OpenBSD" ["OS X (Intel/PPC)"] Linux ["OS/2, eCS"] ["BeOS, Haiku"] ["AmigaOS (68k)"] ["OSF/1"] [SunOS] ["Tru64 UNIX"] ["3.1x"] ["NT 4.0"] "XP, 2000" ["System 7 (PPC/68k)"] ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] [UnixWare] [OpenVMS] [IRIX] ["Me, 98"] ["NT 3.x"] [ULTRIX] "Windows 7, Vista" [NeXTSTEP] [DOS] [AIX] ["HP-UX"] Solaris ["386BSD"] ["95"] ["A/UX"] ; 
+Features: "Multi-server" "UTF-8" "irc:// URI scheme" "Automatic updates" ["Scripting language"] ["Proxy server"] ; 
+"Protocol support": [CHAT] [Server] [TSEND] DCC [Whiteboard] [RDCC] [SEND] [XMIT] ["File servers (FSERVs)"] ["Reverse / Firewall DCC"] [REVERSE] "Passive DCC" [RESUME] [OCSP] TLS [XDCC] CTCP [RSEND] "IPv6" ["SEND T"] [SASL] SSL [CRL] ; 
+!"OSF/1";
+!ReactOS;
+!IRIX;
+!ULTRIX;
+!"System 7 (PPC/68k)";
+!"NT 3.x";
+!SunOS;
+!OpenVMS;
+!"A/UX";
+!Server;
+!"AmigaOS 4, MorphOS (PPC)";
+!"OS 8";
+!CHAT;
+!AIX;
+!"BeOS, Haiku";
+!"AmigaOS (68k)";
+!"386BSD";
+!"OS/2, eCS";
+!"BSD/OS (BSD/386, BSDI)";
+!"OS X (Intel/PPC)";
+!"SCO OpenServer";
+!"OS 9";
+!NeXTSTEP;
+!"95";
+!"3.1x";
+!QNX;
+!"Me, 98";
+!"Tru64 UNIX";
+!"NT 4.0";
+!DOS;
+!"HP-UX";
+!UnixWare;
+)
+
+fmProduct68 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] [ReactOS] ["OS 9"] ["Me, 98"] ["OS X (Intel/PPC)"] ["NT 3.x"] ["BeOS, Haiku"] "Windows 7, Vista" ["OS/2, eCS"] ["AmigaOS (68k)"] [DOS] ["NT 4.0"] ["3.1x"] ["95"] "XP, 2000" ["System 7 (PPC/68k)"] ; 
+!"OS/2, eCS";
+!ReactOS;
+!"NT 3.x";
+!"System 7 (PPC/68k)";
+!"OS 9";
+!"3.1x";
+!"95";
+!"AmigaOS 4, MorphOS (PPC)";
+!"Me, 98";
+!"OS 8";
+!"NT 4.0";
+!"BeOS, Haiku";
+!DOS;
+!"AmigaOS (68k)";
+)
+
+fmProduct69 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] [QNX] [ReactOS] ["OS 9"] ["FreeBSD, NetBSD, OpenBSD"] ["OS X (Intel/PPC)"] [Linux] ["BeOS, Haiku"] ["OS/2, eCS"] ["AmigaOS (68k)"] ["OSF/1"] [SunOS] ["Tru64 UNIX"] "3.1x" "NT 4.0" "XP, 2000" ["System 7 (PPC/68k)"] ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] [UnixWare] [OpenVMS] "Me, 98" [IRIX] ["NT 3.x"] "Windows 7, Vista" [ULTRIX] [NeXTSTEP] [DOS] [AIX] ["HP-UX"] [Solaris] ["386BSD"] "95" ["A/UX"] ; 
+Features: ["UTF-8"] "Multi-server" ["irc:// URI scheme"] ["Automatic updates"] "Scripting language" ["Proxy server"] ; 
+"Protocol support": CHAT [TSEND] [Server] DCC [Whiteboard] [RDCC] SEND [XMIT] ["File servers (FSERVs)"] ["Reverse / Firewall DCC"] [REVERSE] ["Passive DCC"] [RESUME] [OCSP] [TLS] [XDCC] CTCP ["SEND T"] ["IPv6"] [RSEND] [SASL] [SSL] [CRL] ; 
+!"OSF/1";
+!IRIX;
+!ULTRIX;
+!RDCC;
+!"System 7 (PPC/68k)";
+!"File servers (FSERVs)";
+!SunOS;
+!OpenVMS;
+!"Reverse / Firewall DCC";
+!RSEND;
+!"A/UX";
+!Linux;
+!Server;
+!"AmigaOS 4, MorphOS (PPC)";
+!"OS 8";
+!AIX;
+!"BeOS, Haiku";
+!Solaris;
+!XDCC;
+!"FreeBSD, NetBSD, OpenBSD";
+!"AmigaOS (68k)";
+!"OS/2, eCS";
+!"386BSD";
+!"IPv6";
+!XMIT;
+!RESUME;
+!"BSD/OS (BSD/386, BSDI)";
+!"OS X (Intel/PPC)";
+!"SCO OpenServer";
+!"OS 9";
+!"Passive DCC";
+!NeXTSTEP;
+!SSL;
+!QNX;
+!"Automatic updates";
+!"UTF-8";
+!REVERSE;
+!"Tru64 UNIX";
+!DOS;
+!"HP-UX";
+!Whiteboard;
+!UnixWare;
+)
+
+fmProduct70 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] QNX ReactOS ["OS 9"] "FreeBSD, NetBSD, OpenBSD" "OS X (Intel/PPC)" Linux "BeOS, Haiku" ["OS/2, eCS"] ["AmigaOS (68k)"] "OSF/1" SunOS "NT 4.0" ["3.1x"] "Tru64 UNIX" "XP, 2000" "System 7 (PPC/68k)" "SCO OpenServer" "BSD/OS (BSD/386, BSDI)" UnixWare OpenVMS "Me, 98" IRIX "NT 3.x" "Windows 7, Vista" ULTRIX NeXTSTEP AIX [DOS] "HP-UX" Solaris "386BSD" "95" "A/UX" ; 
+Features: "UTF-8" "Multi-server" ["irc:// URI scheme"] ["Automatic updates"] ["Scripting language"] ["Proxy server"] ; 
+"Protocol support": CHAT [TSEND] [Server] DCC [Whiteboard] [RDCC] SEND [XMIT] ["File servers (FSERVs)"] [REVERSE] ["Reverse / Firewall DCC"] ["Passive DCC"] RESUME [OCSP] [TLS] [CTCP] [XDCC] ["SEND T"] [RSEND] ["IPv6"] [SASL] [SSL] [CRL] ; 
+!"OS 9";
+!"OS/2, eCS";
+!"3.1x";
+!SSL;
+!"AmigaOS 4, MorphOS (PPC)";
+!"Automatic updates";
+!"IPv6";
+!"OS 8";
+!DOS;
+!Whiteboard;
+!"AmigaOS (68k)";
+)
+
+fmProduct71 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] [QNX] [ReactOS] ["OS 9"] ["FreeBSD, NetBSD, OpenBSD"] "OS X (Intel/PPC)" Linux ["BeOS, Haiku"] ["OS/2, eCS"] ["AmigaOS (68k)"] ["OSF/1"] [SunOS] ["Tru64 UNIX"] ["NT 4.0"] ["3.1x"] "XP, 2000" ["System 7 (PPC/68k)"] ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] [UnixWare] [OpenVMS] ["Me, 98"] [IRIX] ["NT 3.x"] [ULTRIX] "Windows 7, Vista" [NeXTSTEP] [AIX] [DOS] ["HP-UX"] [Solaris] ["386BSD"] ["95"] ["A/UX"] ; 
+Features: "Multi-server" "UTF-8" ["irc:// URI scheme"] ["Automatic updates"] ["Scripting language"] "Proxy server" ; 
+"Protocol support": [CHAT] [DCC] [TSEND] [Server] [Whiteboard] [RDCC] [SEND] [XMIT] ["File servers (FSERVs)"] [REVERSE] ["Reverse / Firewall DCC"] ["Passive DCC"] [RESUME] [OCSP] TLS [XDCC] CTCP [RSEND] ["SEND T"] "IPv6" SASL SSL [CRL] ; 
+!OCSP;
+!ReactOS;
+!DCC;
+!RDCC;
+!CRL;
+!"File servers (FSERVs)";
+!"System 7 (PPC/68k)";
+!"NT 3.x";
+!"Reverse / Firewall DCC";
+!RSEND;
+!Server;
+!"AmigaOS 4, MorphOS (PPC)";
+!"OS 8";
+!CHAT;
+!"BeOS, Haiku";
+!XDCC;
+!"AmigaOS (68k)";
+!"Scripting language";
+!"OS/2, eCS";
+!"SEND T";
+!XMIT;
+!RESUME;
+!TSEND;
+!"OS 9";
+!"Passive DCC";
+!SEND;
+!"95";
+!"3.1x";
+!"Automatic updates";
+!"Me, 98";
+!REVERSE;
+!"NT 4.0";
+!DOS;
+!Whiteboard;
+)
+
+fmProduct72 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": "AmigaOS 4, MorphOS (PPC)" "OS 8" [QNX] ReactOS "OS 9" "FreeBSD, NetBSD, OpenBSD" "OS X (Intel/PPC)" Linux "BeOS, Haiku" "OS/2, eCS" "AmigaOS (68k)" ["OSF/1"] SunOS "NT 4.0" "3.1x" "Tru64 UNIX" "XP, 2000" "System 7 (PPC/68k)" "SCO OpenServer" ["BSD/OS (BSD/386, BSDI)"] UnixWare OpenVMS IRIX "Me, 98" "NT 3.x" ULTRIX "Windows 7, Vista" [NeXTSTEP] AIX [DOS] "HP-UX" Solaris ["386BSD"] "95" ["A/UX"] ; 
+Features: ["Multi-server"] "UTF-8" "irc:// URI scheme" "Automatic updates" ["Scripting language"] ["Proxy server"] ; 
+"Protocol support": [CHAT] [TSEND] [DCC] [Server] [Whiteboard] [RDCC] [SEND] [XMIT] ["File servers (FSERVs)"] ["Reverse / Firewall DCC"] [REVERSE] ["Passive DCC"] [RESUME] [OCSP] [TLS] [XDCC] CTCP ["IPv6"] ["SEND T"] [RSEND] [SASL] SSL [CRL] ; 
+!OCSP;
+!DCC;
+!RDCC;
+!"Proxy server";
+!CRL;
+!"File servers (FSERVs)";
+!"Reverse / Firewall DCC";
+!TLS;
+!RSEND;
+!Server;
+!"Multi-server";
+!CHAT;
+!XDCC;
+!"Scripting language";
+!"SEND T";
+!"IPv6";
+!XMIT;
+!RESUME;
+!SASL;
+!TSEND;
+!"Passive DCC";
+!SEND;
+!REVERSE;
+!DOS;
+!Whiteboard;
+)
+
+fmProduct73 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] [ReactOS] ["OS 9"] ["Me, 98"] ["OS X (Intel/PPC)"] ["NT 3.x"] ["BeOS, Haiku"] ["OS/2, eCS"] "Windows 7, Vista" ["AmigaOS (68k)"] [DOS] ["3.1x"] "NT 4.0" ["95"] "XP, 2000" ["System 7 (PPC/68k)"] ; 
+!"OS 9";
+!"OS/2, eCS";
+!"AmigaOS 4, MorphOS (PPC)";
+!"OS 8";
+!"BeOS, Haiku";
+!DOS;
+!"System 7 (PPC/68k)";
+!"AmigaOS (68k)";
+!"OS X (Intel/PPC)";
+)
+
+fmProduct74 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] [QNX] [ReactOS] ["OS 9"] ["FreeBSD, NetBSD, OpenBSD"] ["OS X (Intel/PPC)"] [Linux] ["OS/2, eCS"] ["BeOS, Haiku"] ["AmigaOS (68k)"] ["OSF/1"] [SunOS] ["Tru64 UNIX"] ["NT 4.0"] ["3.1x"] "XP, 2000" ["System 7 (PPC/68k)"] ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] [UnixWare] [OpenVMS] ["Me, 98"] [IRIX] ["NT 3.x"] "Windows 7, Vista" [ULTRIX] [NeXTSTEP] [DOS] [AIX] ["HP-UX"] [Solaris] ["386BSD"] ["95"] ["A/UX"] ; 
+Features: "UTF-8" "Multi-server" ["irc:// URI scheme"] ["Automatic updates"] "Scripting language" ["Proxy server"] ; 
+"Protocol support": [CHAT] [TSEND] [Server] [DCC] [Whiteboard] [RDCC] [SEND] [XMIT] ["File servers (FSERVs)"] [REVERSE] ["Reverse / Firewall DCC"] ["Passive DCC"] [RESUME] [OCSP] TLS [XDCC] [CTCP] [RSEND] ["IPv6"] ["SEND T"] [SASL] SSL [CRL] ; 
+"Scripting language": "Emacs Lisp" ; 
+!ReactOS;
+!DCC;
+!RDCC;
+!"File servers (FSERVs)";
+!"System 7 (PPC/68k)";
+!"Reverse / Firewall DCC";
+!RSEND;
+!Server;
+!"AmigaOS 4, MorphOS (PPC)";
+!"OS 8";
+!CHAT;
+!"BeOS, Haiku";
+!XDCC;
+!"AmigaOS (68k)";
+!"OS/2, eCS";
+!"SEND T";
+!"IPv6";
+!XMIT;
+!RESUME;
+!TSEND;
+!SEND;
+!"Passive DCC";
+!"OS 9";
+!"95";
+!"3.1x";
+!"Automatic updates";
+!"Me, 98";
+!REVERSE;
+!DOS;
+!Whiteboard;
+)
+
+fmProduct75 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] [QNX] [ReactOS] ["OS 9"] "FreeBSD, NetBSD, OpenBSD" "OS X (Intel/PPC)" Linux ["BeOS, Haiku"] ["OS/2, eCS"] ["AmigaOS (68k)"] ["OSF/1"] [SunOS] ["Tru64 UNIX"] ["3.1x"] ["NT 4.0"] "XP, 2000" ["System 7 (PPC/68k)"] ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] [UnixWare] [OpenVMS] [IRIX] ["Me, 98"] ["NT 3.x"] "Windows 7, Vista" [ULTRIX] [NeXTSTEP] [DOS] [AIX] ["HP-UX"] Solaris ["386BSD"] ["95"] ["A/UX"] ; 
+Features: "Multi-server" "UTF-8" ["irc:// URI scheme"] ["Automatic updates"] ["Scripting language"] "Proxy server" ; 
+"Protocol support": [CHAT] [TSEND] [DCC] [Server] [Whiteboard] [RDCC] [SEND] [XMIT] ["File servers (FSERVs)"] ["Reverse / Firewall DCC"] [REVERSE] ["Passive DCC"] [RESUME] [OCSP] [TLS] [XDCC] CTCP [RSEND] "IPv6" ["SEND T"] [SASL] SSL [CRL] ; 
+!"OS/2, eCS";
+!ReactOS;
+!DCC;
+!"NT 3.x";
+!"System 7 (PPC/68k)";
+!SASL;
+!"OS 9";
+!"Passive DCC";
+!"3.1x";
+!"95";
+!Server;
+!"AmigaOS 4, MorphOS (PPC)";
+!"Me, 98";
+!"OS 8";
+!"NT 4.0";
+!"BeOS, Haiku";
+!DOS;
+!"AmigaOS (68k)";
+)
+
+fmProduct76 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] "OS 8" [QNX] [ReactOS] "OS 9" ["FreeBSD, NetBSD, OpenBSD"] "OS X (Intel/PPC)" [Linux] ["OS/2, eCS"] ["BeOS, Haiku"] ["AmigaOS (68k)"] ["OSF/1"] [SunOS] ["NT 4.0"] ["3.1x"] ["Tru64 UNIX"] ["XP, 2000"] ["System 7 (PPC/68k)"] ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] [UnixWare] [OpenVMS] ["Me, 98"] [IRIX] ["NT 3.x"] [ULTRIX] ["Windows 7, Vista"] [NeXTSTEP] [AIX] [DOS] ["HP-UX"] [Solaris] ["386BSD"] ["95"] ["A/UX"] ; 
+Features: "UTF-8" "Multi-server" ["irc:// URI scheme"] ["Automatic updates"] "Scripting language" ["Proxy server"] ; 
+"Protocol support": CHAT DCC [TSEND] [Server] [Whiteboard] [RDCC] SEND [XMIT] ["File servers (FSERVs)"] ["Reverse / Firewall DCC"] [REVERSE] ["Passive DCC"] RESUME [OCSP] [TLS] [XDCC] CTCP [RSEND] "SEND T" "IPv6" [SASL] SSL [CRL] ; 
+"Scripting language": "AppleScript, IrcII script" ; 
+!"OSF/1";
+!ReactOS;
+!IRIX;
+!ULTRIX;
+!"NT 3.x";
+!SunOS;
+!OpenVMS;
+!"A/UX";
+!Linux;
+!Server;
+!"AmigaOS 4, MorphOS (PPC)";
+!"XP, 2000";
+!AIX;
+!"BeOS, Haiku";
+!Solaris;
+!"FreeBSD, NetBSD, OpenBSD";
+!"AmigaOS (68k)";
+!"386BSD";
+!"OS/2, eCS";
+!"BSD/OS (BSD/386, BSDI)";
+!"SCO OpenServer";
+!"Passive DCC";
+!NeXTSTEP;
+!"95";
+!"3.1x";
+!QNX;
+!"Me, 98";
+!"Windows 7, Vista";
+!"Tru64 UNIX";
+!"NT 4.0";
+!DOS;
+!"HP-UX";
+!UnixWare;
+)
+
+fmProduct77 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] [QNX] [ReactOS] ["OS 9"] ["FreeBSD, NetBSD, OpenBSD"] ["OS X (Intel/PPC)"] [Linux] ["OS/2, eCS"] ["BeOS, Haiku"] ["AmigaOS (68k)"] ["OSF/1"] [SunOS] ["3.1x"] "NT 4.0" ["Tru64 UNIX"] "XP, 2000" ["System 7 (PPC/68k)"] ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] [UnixWare] [OpenVMS] [IRIX] "Me, 98" ["NT 3.x"] [ULTRIX] "Windows 7, Vista" [NeXTSTEP] [DOS] [AIX] ["HP-UX"] [Solaris] "95" ["386BSD"] ["A/UX"] ; 
+Features: ["UTF-8"] "Multi-server" ["irc:// URI scheme"] ["Automatic updates"] "Scripting language" ["Proxy server"] ; 
+"Protocol support": [CHAT] [TSEND] DCC [Server] Whiteboard [RDCC] [SEND] [XMIT] ["File servers (FSERVs)"] "Reverse / Firewall DCC" [REVERSE] "Passive DCC" [RESUME] [OCSP] [TLS] [XDCC] CTCP ["SEND T"] ["IPv6"] [RSEND] [SASL] [SSL] [CRL] ; 
+"Scripting language": Versus ; 
+!"OSF/1";
+!IRIX;
+!ULTRIX;
+!"NT 3.x";
+!"System 7 (PPC/68k)";
+!SunOS;
+!OpenVMS;
+!"A/UX";
+!Linux;
+!Server;
+!"AmigaOS 4, MorphOS (PPC)";
+!"OS 8";
+!AIX;
+!"BeOS, Haiku";
+!Solaris;
+!"FreeBSD, NetBSD, OpenBSD";
+!"AmigaOS (68k)";
+!"OS/2, eCS";
+!"386BSD";
+!"IPv6";
+!RESUME;
+!"BSD/OS (BSD/386, BSDI)";
+!"OS X (Intel/PPC)";
+!"SCO OpenServer";
+!"OS 9";
+!NeXTSTEP;
+!"3.1x";
+!SSL;
+!QNX;
+!"UTF-8";
+!"Tru64 UNIX";
+!DOS;
+!"HP-UX";
+!UnixWare;
+)
+
+fmProduct78 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] QNX [ReactOS] ["OS 9"] ["FreeBSD, NetBSD, OpenBSD"] "OS X (Intel/PPC)" Linux ["BeOS, Haiku"] ["OS/2, eCS"] ["AmigaOS (68k)"] ["OSF/1"] [SunOS] ["NT 4.0"] ["3.1x"] ["Tru64 UNIX"] ["XP, 2000"] ["System 7 (PPC/68k)"] ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] [UnixWare] [OpenVMS] [IRIX] ["Me, 98"] ["NT 3.x"] ["Windows 7, Vista"] [ULTRIX] [NeXTSTEP] [DOS] [AIX] "HP-UX" Solaris ["386BSD"] ["95"] ["A/UX"] ; 
+Features: "UTF-8" "Multi-server" "irc:// URI scheme" ["Automatic updates"] "Scripting language" "Proxy server" ; 
+"Protocol support": CHAT [TSEND] [Server] DCC [Whiteboard] [RDCC] SEND [XMIT] ["File servers (FSERVs)"] ["Reverse / Firewall DCC"] [REVERSE] "Passive DCC" [RESUME] [OCSP] [TLS] XDCC CTCP [RSEND] ["SEND T"] "IPv6" SASL SSL [CRL] ; 
+"Scripting language": "C, Perl, Python, Ruby, Lua, Tcl, Scheme (Guile)" ; 
+!"OS/2, eCS";
+!IRIX;
+!"NT 3.x";
+!"System 7 (PPC/68k)";
+!"OS 9";
+!"3.1x";
+!Server;
+!"AmigaOS 4, MorphOS (PPC)";
+!"OS 8";
+!DOS;
+!"FreeBSD, NetBSD, OpenBSD";
+!"AmigaOS (68k)";
+)
+
+fmProduct79 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] [QNX] [ReactOS] ["OS 9"] "FreeBSD, NetBSD, OpenBSD" "OS X (Intel/PPC)" Linux ["BeOS, Haiku"] ["OS/2, eCS"] ["AmigaOS (68k)"] ["OSF/1"] SunOS "Tru64 UNIX" "NT 4.0" ["3.1x"] "XP, 2000" ["System 7 (PPC/68k)"] ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] [UnixWare] [OpenVMS] "Me, 98" IRIX ["NT 3.x"] "Windows 7, Vista" [ULTRIX] [NeXTSTEP] AIX [DOS] ["HP-UX"] Solaris ["386BSD"] "95" ["A/UX"] ; 
+Features: "Multi-server" "UTF-8" "irc:// URI scheme" ["Automatic updates"] "Scripting language" "Proxy server" ; 
+"Protocol support": CHAT [TSEND] DCC Server [Whiteboard] [RDCC] SEND [XMIT] ["File servers (FSERVs)"] [REVERSE] "Reverse / Firewall DCC" "Passive DCC" RESUME [OCSP] [TLS] [XDCC] CTCP ["SEND T"] [RSEND] ["IPv6"] SASL SSL [CRL] ; 
+"Scripting language": "Perl, Python, Tcl, Ruby, C++, ECMAScript, Scheme (Guile)" ; 
+SASL: script ; 
+!"SEND T";
+!"IPv6";
+!TSEND;
+!"System 7 (PPC/68k)";
+!"OS 9";
+!"3.1x";
+!"AmigaOS 4, MorphOS (PPC)";
+!"Automatic updates";
+!"OS 8";
+!DOS;
+!XDCC;
+!"HP-UX";
+!"AmigaOS (68k)";
+)
+
+fmProduct80 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features "Protocol support" ; 
+"Operating system support": ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] [ReactOS] ["OS 9"] ["Me, 98"] ["OS X (Intel/PPC)"] ["NT 3.x"] ["BeOS, Haiku"] ["OS/2, eCS"] "Windows 7, Vista" ["AmigaOS (68k)"] [DOS] ["NT 4.0"] ["3.1x"] ["95"] "XP, 2000" ["System 7 (PPC/68k)"] ; 
+Features: "UTF-8" "Multi-server" "irc:// URI scheme" "Automatic updates" "Scripting language" "Proxy server" ; 
+"Protocol support": DCC [OCSP] TLS CTCP "IPv6" SASL SSL [CRL] ; 
+"Scripting language": "Perl, Python, Tcl, Lua, C, C++" ; 
+!"OS 9";
+!"OS/2, eCS";
+!"3.1x";
+!ReactOS;
+!"AmigaOS 4, MorphOS (PPC)";
+!"OS 8";
+!"BeOS, Haiku";
+!DOS;
+!"System 7 (PPC/68k)";
+!"AmigaOS (68k)";
+!"OS X (Intel/PPC)";
+)
+
+fmProduct81 = FM (Comparison_of_Internet_Relay_Chat_clients: "Operating system support" ; 
+"Operating system support": "SCO OpenServer" "BSD/OS (BSD/386, BSDI)" QNX UnixWare OpenVMS IRIX "FreeBSD, NetBSD, OpenBSD" Linux ULTRIX NeXTSTEP "OSF/1" SunOS AIX "HP-UX" Solaris "Tru64 UNIX" "386BSD" "A/UX" ;
+)
+
+fmProduct82 = FM (Comparison_of_Internet_Relay_Chat_clients: Features "Protocol support" ; 
+Features: ["UTF-8"] "Multi-server" "irc:// URI scheme" "Automatic updates" "Scripting language" ["Proxy server"] ; 
+"Protocol support": CHAT [Server] [TSEND] DCC [Whiteboard] [RDCC] SEND [XMIT] ["File servers (FSERVs)"] [REVERSE] "Reverse / Firewall DCC" "Passive DCC" RESUME [OCSP] [TLS] [XDCC] CTCP ["SEND T"] [RSEND] "IPv6" [SASL] SSL [CRL] ; 
+"Scripting language": "Custom Actions system, Java plugins" ; 
+!Server;
+!XMIT;
+!REVERSE;
+!RDCC;
+!"File servers (FSERVs)";
+!XDCC;
+!Whiteboard;
+!RSEND;
+)
+
+fmProduct83 = FM (Comparison_of_Internet_Relay_Chat_clients: "Protocol support" ; 
+"Protocol support": [CHAT] [Server] [TSEND] [DCC] [Whiteboard] [RDCC] SEND [XMIT] ["File servers (FSERVs)"] [REVERSE] ["Reverse / Firewall DCC"] ["Passive DCC"] [RESUME] [OCSP] [TLS] [XDCC] [CTCP] [RSEND] ["IPv6"] ["SEND T"] [SASL] [SSL] [CRL] ; 
+!"SEND T";
+!OCSP;
+!"IPv6";
+!XMIT;
+!RDCC;
+!RESUME;
+!CRL;
+!TSEND;
+!"File servers (FSERVs)";
+!"Reverse / Firewall DCC";
+!TLS;
+!RSEND;
+!"Passive DCC";
+!SSL;
+!Server;
+!CHAT;
+!REVERSE;
+!CTCP;
+!XDCC;
+!Whiteboard;
+)
+

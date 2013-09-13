@@ -1,0 +1,21 @@
+<feature_model name="Capacity">
+<feature_tree>
+:r Capacity (f_Capacity)
+	:m Tata Cars (f_Tata_Cars)
+	:m Basic Features (f_Basic_Features)
+	:m Safety and Security (f_Safety_and_Security)
+	:m Air Bag (f_Air_Bag)
+	:m Fuel (f_Fuel)
+	:o GPS (f_GPS)
+	:o Additional Features (f_Additional_Features)
+		:g [1, *]
+			: LAS (f_LAS)
+			: EBS (f_EBS)
+	:g [1, 1]
+		: Diesel (f_Diesel)
+		: CNG (f_CNG)
+		: Petrol (f_Petrol)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

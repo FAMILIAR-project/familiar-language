@@ -1,27 +1,51 @@
 package fr.unice.polytech.modalis.familiar.test.heuristics;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+
+import net.sf.extjwnl.dictionary.Dictionary;
 
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+import org.junit.Test;
 
+import fr.unice.polytech.modalis.familiar.gui.synthesis.KeyValue;
 import fr.unice.polytech.modalis.familiar.interpreter.FMLShell;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.InteractiveFMSynthesizer;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.AlwaysZeroMetric;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.CommonEdgesMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.DirectedPathLengthMetric;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.FMEditDistanceMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.FeatureSimilarityMetric;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.HybridMetric;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.MetricName;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.PathLengthMetric;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.RandomMetric;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.RefactoringEditDistance;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.SimmetricsMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.TransitiveReductionMetric;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.WikipediaMinerDB;
 import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.WikipediaMinerMetric;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.WuPalmerMetric;
+import fr.unice.polytech.modalis.familiar.operations.heuristics.metrics.ZhangEditDistance;
+import fr.unice.polytech.modalis.familiar.parser.FMBuilder;
 import fr.unice.polytech.modalis.familiar.parser.FMLCommandInterpreter;
 import fr.unice.polytech.modalis.familiar.test.FMLTest;
 import fr.unice.polytech.modalis.familiar.variable.FeatureModelVariable;
+import gsd.graph.ImplicationGraph;
+import gsd.graph.SimpleEdge;
+import gsd.graph.TransitiveReduction;
 import gsd.synthesis.FeatureEdge;
 import gsd.synthesis.FeatureGraph;
 import gsd.synthesis.FeatureNode;
@@ -30,8 +54,9 @@ public abstract class KSynthesisTest extends FMLTest {
 
 	
 	private static final String SPLOT_FOLDER = "inputFML/splot-models-2012-08-07";
-	private static final String VARICELL_FMS_FOLDER = "inputFML/wikipedia-comparison-tables";
-	private static final String FASE_FOLDER = "inputFML/FASE13-generated-models";
+	private static final String PCM_FOLDER = "inputFML/ICSE2014-PCMs";
+//	private static final String FASE_FOLDER = "inputFML/FASE13-generated-models";
+	private static final String FASE_FOLDER = "inputFML/FASE13-original";
 	private static final String MODIFIED_SPLOT_FOLDER = "inputFML/splot-modified";
 	
 
@@ -40,9 +65,9 @@ public abstract class KSynthesisTest extends FMLTest {
 	private static final String WIKTIONARY_DB = "/local/wikipedia/WikipediaMiner/db_wiktionary/wikipedia-template.xml";
 	private static final String LSA_DB = "C:\\db_wikipedia\\wikipedia-template.xml";
 
-	private static final String OUTPUT_FOLDER = "output/generated-with-heuristics/";
+	public static final String OUTPUT_FOLDER = "output/generated-with-heuristics/";
 
-	protected static int RANDOM_ITERATIONS = 1;
+	protected static int RANDOM_ITERATIONS = 100;
 
 	private static WikipediaMinerDB wikipediaDB;
 	private static WikipediaMinerDB wiktionaryDB;
@@ -60,7 +85,8 @@ public abstract class KSynthesisTest extends FMLTest {
 	protected static HashMap<FeatureSimilarityMetric, Double> clusteringThresholds;
 
 	private static List<FeatureModelVariable> splotFMs;
-	private static List<FeatureModelVariable> variCellFMs;
+	private static List<FeatureModelVariable> splotFMsForFASE;
+	private static List<FeatureModelVariable> pcmFMs;
 	private static List<FeatureModelVariable> faseFMs;
 	private static List<FeatureModelVariable> modifiedSplotFMs;
 	
@@ -199,6 +225,10 @@ public abstract class KSynthesisTest extends FMLTest {
 			"model_20120801_1784537083.xml",
 			"model_20110915_1159959623.xml",
 			
+			""
+	});
+	
+	private static final List<String> faseExcludeFiles = Arrays.asList(new String[] {
 			// FASE'13
 			
 			// too long (more than 900 000 products)
@@ -221,29 +251,9 @@ public abstract class KSynthesisTest extends FMLTest {
 			
 			// missing features in the result
 			"DELL-LAPTOP-NOTEBOOK-FM.xml",
-			
-			
-			""
 	});
 	
-	private static final List<String> varicellExcludeFiles = Arrays.asList(new String[] {
-			"Comparison_of_AMD_CPU_microarchitectures.fmlbdd",
-			"Comparison_of_antivirus_software.fmlbdd",
-			"Comparison_of_application_virtual_machines.fmlbdd",
-			"Comparison_of_audio_synthesis_environments.fmlbdd",
-			"Comparison_of_defragmentation_software.fmlbdd",
-			"Comparison_of_DEX_software.fmlbdd",
-			"Comparison_of_distributed_file_systems.fmlbdd",
-			"Comparison_of_free_software_eCommerce_web_application_frameworks.fmlbdd",
-//			"Comparison_of_HTML_editors.fmlbdd",
-			"Comparison_of_Java_virtual_machines.fmlbdd",
-			"Comparison_of_photo_gallery_software.fmlbdd",
-			"Comparison_of_PSA_systems.fmlbdd",
-			"Comparison_of_Skype_recorders.fmlbdd",
-			"Comparison_of_SSH_clients.fmlbdd",
-			"Comparison_of_Toyota_hybrids.fmlbdd",
-			"Comparison_of_US_and_Chinese_Military_Armed_Forces.fmlbdd",
-			"Comparison_of_XML_editors.fmlbdd",
+	private static final List<String> pcmExcludeFiles = Arrays.asList(new String[] {
 			""
 			
 	});
@@ -276,49 +286,49 @@ public abstract class KSynthesisTest extends FMLTest {
 		metrics = new ArrayList<FeatureSimilarityMetric>();
 		clusteringThresholds = new HashMap<FeatureSimilarityMetric, Double>();
 
-//		// Random metric
-//		FeatureSimilarityMetric random = new RandomMetric();
-//		metrics.add(random);
-//		clusteringThresholds.put(random, 0.15);
-//
-//		// Simmetrics metrics
-//		smithWaterman = new SimmetricsMetric(MetricName.SIMMETRICS_SMITHWATERMAN);
-//		metrics.add(smithWaterman);
-//		clusteringThresholds.put(smithWaterman, 0.6);
-//
-//		levenshtein = new SimmetricsMetric(MetricName.SIMMETRICS_LEVENSHTEIN);
-//		metrics.add(levenshtein);
-//		clusteringThresholds.put(levenshtein, 0.7);
-//
-//		// WordNet metrics
-//		if (new File(WORDNET_DB).exists()) {
-//			Dictionary wordNetDictionary = Dictionary.getInstance(new FileInputStream(WORDNET_DB));
-//			wup = new WuPalmerMetric(wordNetDictionary);
-//			metrics.add(wup);
-//			clusteringThresholds.put(wup, 0.2);
-//
-//			pathLength = new PathLengthMetric(wordNetDictionary); 
-//			metrics.add(pathLength);
-//			clusteringThresholds.put(pathLength, 0.5);
-//			
+		// Random metric
+		FeatureSimilarityMetric random = new RandomMetric();
+		metrics.add(random);
+		clusteringThresholds.put(random, 0.15);
+
+		// Simmetrics metrics
+		smithWaterman = new SimmetricsMetric(MetricName.SIMMETRICS_SMITHWATERMAN);
+		metrics.add(smithWaterman);
+		clusteringThresholds.put(smithWaterman, 0.6);
+
+		levenshtein = new SimmetricsMetric(MetricName.SIMMETRICS_LEVENSHTEIN);
+		metrics.add(levenshtein);
+		clusteringThresholds.put(levenshtein, 0.7);
+
+		// WordNet metrics
+		if (new File(WORDNET_DB).exists()) {
+			Dictionary wordNetDictionary = Dictionary.getInstance(new FileInputStream(WORDNET_DB));
+			wup = new WuPalmerMetric(wordNetDictionary);
+			metrics.add(wup);
+			clusteringThresholds.put(wup, 0.2);
+
+			pathLength = new PathLengthMetric(wordNetDictionary); 
+			metrics.add(pathLength);
+			clusteringThresholds.put(pathLength, 0.5);
+			
 //			directedPathLength = new DirectedPathLengthMetric(wordNetDictionary);
 //			metrics.add(directedPathLength);
 //			clusteringThresholds.put(directedPathLength, 0.5);
-//		}
-//
-//		// WikipediaMiner metrics
-//		if (wikipediaDB.isLoaded()) {
-//			wikiMetric = new WikipediaMinerMetric(wikipediaDB);
-//			metrics.add(wikiMetric);
-//			clusteringThresholds.put(wikiMetric, 0.5);	
-//		}
-//		
-//		if (wiktionaryDB.isLoaded()) {
-//			wiktionaryMetric = new WikipediaMinerMetric(wiktionaryDB);
-//			metrics.add(wiktionaryMetric);
-//			clusteringThresholds.put(wiktionaryMetric, 0.5);	
-//		}
-//
+		}
+
+		// WikipediaMiner metrics
+		if (wikipediaDB.isLoaded()) {
+			wikiMetric = new WikipediaMinerMetric(wikipediaDB);
+			metrics.add(wikiMetric);
+			clusteringThresholds.put(wikiMetric, 0.5);	
+		}
+		
+		if (wiktionaryDB.isLoaded()) {
+			wiktionaryMetric = new WikipediaMinerMetric(wiktionaryDB);
+			metrics.add(wiktionaryMetric);
+			clusteringThresholds.put(wiktionaryMetric, 0.5);	
+		}
+
 //		// LSA metric
 //		if (wikipediaDB.isLoaded()) {
 //			LatentSemanticMetric lsa = new LatentSemanticMetric(wikipediaDB);
@@ -326,11 +336,14 @@ public abstract class KSynthesisTest extends FMLTest {
 //			clusteringThresholds.put(lsa, 0.5);
 //		}
 		
-		// Transitive reduction metric
-		reductionMetric = new TransitiveReductionMetric();
-		metrics.add(reductionMetric);
-		clusteringThresholds.put(reductionMetric, 0.5);
+//		// Transitive reduction metric
+//		reductionMetric = new TransitiveReductionMetric();
+//		metrics.add(reductionMetric);
+//		clusteringThresholds.put(reductionMetric, 0.5);
 		
+//		HybridMetric hybrid = new HybridMetric(wikiMetric);
+//		metrics.add(hybrid);
+//		clusteringThresholds.put(hybrid, 0.5);
 	}
 
 	@After
@@ -372,10 +385,22 @@ public abstract class KSynthesisTest extends FMLTest {
 
 			// Load feature models
 			for (File file : files) {
-				String fmIdentifier = prefix +"_" + file.getName();
-				fmIdentifier = fmIdentifier.substring(0, fmIdentifier.lastIndexOf("."));
-				String command = fmIdentifier.replaceAll("-", "_") + " = FM(\"" + file.getPath() + "\")";
-				FeatureModelVariable fm = (FeatureModelVariable) _shell.parse(command);
+
+				String fmIdentifier = file.getName();;
+				if (prefix != null && !prefix.isEmpty()) {
+					fmIdentifier = prefix + "_" + fmIdentifier;	
+				}
+				
+				FeatureModelVariable fm = null;
+				
+				if (extension.equals(".fmlbdd")) { // For PCMs
+					fm = FMBuilder.parseFMLBDD(file.getAbsolutePath(), _builder);
+				} else { // For other files
+					fmIdentifier = fmIdentifier.substring(0, fmIdentifier.lastIndexOf("."));
+					String command = fmIdentifier.replaceAll("-", "_") + " = FM(\"" + file.getPath() + "\")";
+					fm = (FeatureModelVariable) _shell.parse(command);
+				}
+				
 
 				if (fm == null) {
 					System.out.println("Error with " + file.getPath());
@@ -384,6 +409,7 @@ public abstract class KSynthesisTest extends FMLTest {
 					fms.add(fm);	
 				}
 				
+				_shell.reset();
 			}
 		}
 		
@@ -398,8 +424,7 @@ public abstract class KSynthesisTest extends FMLTest {
 
 		return splotFMs;
 	}
-
-
+	
 	public List<FeatureModelVariable> getModifiedSPLOTFeatureModels() {
 		if (modifiedSplotFMs == null) {
 			modifiedSplotFMs = loadFeatureModelFolder(MODIFIED_SPLOT_FOLDER, ".xml", null, "modified");
@@ -409,13 +434,13 @@ public abstract class KSynthesisTest extends FMLTest {
 		return modifiedSplotFMs;
 	}
 	
-	public List<FeatureModelVariable> getVariCellFeatureModels() {
+	public List<FeatureModelVariable> getPCMFeatureModels() {
 //		if (variCellFMs == null) {
-			variCellFMs = loadFeatureModelFolder(VARICELL_FMS_FOLDER, ".fmlbdd", varicellExcludeFiles, "varicellFM");
-			System.out.println(variCellFMs.size() + " FMs loaded from VariCell");
+			pcmFMs = loadFeatureModelFolder(PCM_FOLDER, ".fmlbdd", pcmExcludeFiles, "PCM");
+			System.out.println(pcmFMs.size() + " FMs loaded from PCMs");
 //		}
 
-		return variCellFMs;
+		return pcmFMs;
 	}
 	
 	
@@ -460,11 +485,24 @@ public abstract class KSynthesisTest extends FMLTest {
 	
 	public List<FeatureModelVariable> getFASEFeatureModels() {
 		if (faseFMs == null) {
-			faseFMs = loadFeatureModelFolder(FASE_FOLDER, ".xml", splotExcludeFiles, "faseFM");
+			List<String> excludeFiles = new ArrayList<String>(splotExcludeFiles);
+			excludeFiles.addAll(faseExcludeFiles);
+			faseFMs = loadFeatureModelFolder(FASE_FOLDER, ".xml", excludeFiles, "faseFM");
 			System.out.println(faseFMs.size() + " FMs loaded from FASE");
 		}
 		
 		return faseFMs;
+	}
+	
+	public List<FeatureModelVariable> getSPLOTFeatureModelsForFASE()  {
+		if (splotFMsForFASE == null) {
+			List<String> excludeFiles = new ArrayList<String>(splotExcludeFiles);
+			excludeFiles.addAll(faseExcludeFiles);
+			splotFMsForFASE = loadFeatureModelFolder(SPLOT_FOLDER, ".xml", excludeFiles , "splotFM");
+			System.out.println(splotFMsForFASE.size() + " FMs loaded from SPLOT for FASE");
+		}
+
+		return splotFMsForFASE;
 	}
 	
 	public List<FeatureModelVariable> getPerfectExample() {
@@ -537,12 +575,12 @@ public abstract class KSynthesisTest extends FMLTest {
 	 * @param fm
 	 * @param computedFM
 	 */
-	public void writeFMToFile(FeatureSimilarityMetric metric, FeatureModelVariable fm, FeatureModelVariable computedFM) {
+	public void writeFMToFile(String outputFolder, FeatureSimilarityMetric metric, String name, FeatureModelVariable computedFM) {
 		File computedFMFile ;
 		if (metric == null) {
-			computedFMFile = new File(OUTPUT_FOLDER + fm.getIdentifier() + ".xml");
+			computedFMFile = new File(outputFolder + name + ".xml");
 		} else {
-			computedFMFile = new File(OUTPUT_FOLDER + fm.getIdentifier() + "_" + metric.toString().replaceAll(" ", "_") + ".xml");	
+			computedFMFile = new File(outputFolder + name + "_" + metric.toString().replaceAll(" ", "_") + ".xml");	
 		}
 		
 		try {
@@ -556,6 +594,7 @@ public abstract class KSynthesisTest extends FMLTest {
 			e.printStackTrace();
 		}
 	}
+	
 	
 	/**
 	 * Find the corresponding FM in the list of reference FMs
@@ -602,5 +641,215 @@ public abstract class KSynthesisTest extends FMLTest {
 		}
 		
 		return commonEdges;
+	}
+	
+	
+	/**
+	 * Compute the transitively reduced implication graph of an fm
+	 * @param fm
+	 * @param implicationGraph 
+	 * @return reduced BIG of fm
+	 */
+	public ImplicationGraph<String> computeReducedBIG(FeatureModelVariable fm, ImplicationGraph<String> implicationGraph) {
+		ImplicationGraph<Set<String>> reducedGraph = implicationGraph.reduceCliques();
+		TransitiveReduction.INSTANCE.reduce(reducedGraph);
+		
+		ImplicationGraph<String> reducedBIG = new ImplicationGraph<String>();
+		
+		// Create vertices
+		for (String feature : fm.getFm().getDiagram().features()) {
+			reducedBIG.addVertex(feature);
+		}
+		
+		// Create edges
+		for (SimpleEdge edge : reducedGraph.edges()) {
+			Set<String> source = reducedGraph.getSource(edge);
+			Set<String> target = reducedGraph.getTarget(edge);
+			
+			for (String child : source) {
+				for (String parent : target) {
+					reducedBIG.addEdge(child, parent);
+				}
+			}
+		}
+		
+		
+		return reducedBIG;
+	}
+	
+	/**
+	 * Convert a list of siblings represented by feature nodes in 
+	 * a list of siblings represented by strings
+	 * @param siblingSetsInBFS
+	 * @return
+	 */
+	public List<Set<String>> convertInSetOfString(List<Set<FeatureNode<String>>> siblingSetsInBFS) {
+		List<Set<String>> siblingsList = new ArrayList<Set<String>>();
+
+		for (Set<FeatureNode<String>> featureNodesiblings : siblingSetsInBFS) {
+			Set<String> siblings = new HashSet<String>();
+			for (FeatureNode<String> feature : featureNodesiblings) {
+				siblings.add(feature.getFeature());
+			}
+			siblingsList.add(siblings);
+		}
+
+		return siblingsList;
+	}
+
+	
+	/**
+	 * Count parents from the ground truth that are in the top N positions in the parent candidates 
+	 * @param n
+	 * @param fm : ground truth
+	 * @param synthesizer : synthesizer containing parent candidates
+	 * @param metric 
+	 * @return
+	 */
+	public double countTopNParents(int n, FeatureModelVariable fm, InteractiveFMSynthesizer synthesizer, FeatureSimilarityMetric metric) {
+		List<KeyValue<String,List<String>>> parentCandidateLists = synthesizer.getParentCandidates();
+		FeatureGraph<String> hierarchy = fm.getFm().getDiagram();
+		
+		double nbTopNParents = 0;
+		
+		for (KeyValue<String, List<String>> parentCandidates : parentCandidateLists) {
+			String feature = parentCandidates.getKey();
+			List<String> parentCandidatesList = parentCandidates.getValue();
+			FeatureNode<String> parent = hierarchy.parents(hierarchy.findVertex(feature)).iterator().next();
+			if (!parent.isTop()) {
+				int indexOfParent= parentCandidatesList.indexOf(parent.getFeature());
+
+				if (metric instanceof RandomMetric && indexOfParent >= 0) {
+					nbTopNParents += Math.min(n / (double) parentCandidatesList.size(), 1);
+				} else if (indexOfParent >=0 && indexOfParent < n) {
+					nbTopNParents++;
+				}
+			}
+		}
+		return nbTopNParents;
+	}
+	
+	/**
+	 * Count parents from the ground truth that are in the top N positions in the parent candidates 
+	 * @param n
+	 * @param fm : ground truth
+	 * @param synthesizer : synthesizer containing parent candidates
+	 * @return
+	 */
+	public double countTopVariableNParents(FeatureModelVariable fm, InteractiveFMSynthesizer synthesizer) {
+		List<KeyValue<String,List<String>>> parentCandidateLists = synthesizer.getParentCandidates();
+		FeatureGraph<String> hierarchy = fm.getFm().getDiagram();
+		
+		int nbTopNParents = 0;
+		
+		for (KeyValue<String, List<String>> parentCandidates : parentCandidateLists) {
+			String feature = parentCandidates.getKey();
+			List<String> parentCandidatesList = parentCandidates.getValue();
+			FeatureNode<String> parent = hierarchy.parents(hierarchy.findVertex(feature)).iterator().next();
+			if (!parent.isTop()) {
+				int indexOfParent= parentCandidatesList.indexOf(parent.getFeature());
+
+				if (indexOfParent >=0 && (indexOfParent == 0 || indexOfParent < (parentCandidatesList.size() / 2))) {
+					nbTopNParents++;
+				}
+			}
+		}
+		return nbTopNParents;
+	}
+	
+	/**
+	 * Perform an optimum branching test on all the FMs
+	 * @param fms
+	 * @param reduceBIG : Does the BIG need to be reduced before the optimum branching?
+	 */
+	public void testOptimumBranching(List<FeatureModelVariable> fms, boolean reduceBIG) {
+		CommonEdgesMetric commonEdgesMetric = new CommonEdgesMetric();
+
+		for (FeatureSimilarityMetric metric : metrics) {
+			System.out.println(metric);
+			List<Double> listNbCommonEdges = new ArrayList<Double>();
+			
+			double nbIterations = metric instanceof RandomMetric ? RANDOM_ITERATIONS : 1;
+			for (int i=0; i<nbIterations; i++) {
+				for (FeatureModelVariable fm : fms) {
+//					System.out.println(fm.getCompleteIdentifier());
+
+					
+					InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(fm, new AlwaysZeroMetric(), null, null, -1);
+
+					// Reduce implication graph if necessary
+					if (reduceBIG) {
+						ImplicationGraph<String> implicationGraph = synthesizer.getImplicationGraph().clone();
+						ImplicationGraph<String> reducedBIG = computeReducedBIG(fm, implicationGraph);
+
+						for (SimpleEdge edge : implicationGraph.edges()) {
+							String child = implicationGraph.getEdgeSource(edge);
+							String parent = implicationGraph.getEdgeTarget(edge);
+							if (!reducedBIG.containsEdge(child, parent)) {
+								synthesizer.ignoreParent(child, parent);
+							}
+						}
+					} 
+					
+					// Generate a complete FM
+					synthesizer.setParentSimilarityMetric(metric);
+					FeatureModelVariable computedFM = synthesizer.computeCompleteFeatureModel();
+
+					// Compute common edges
+					double nbCommonEdges = commonEdgesMetric.commonEdges(computedFM, fm);
+					double nbEdges = fm.features().size();
+					double meanCommonEdges =  nbCommonEdges / nbEdges;
+					listNbCommonEdges.add(meanCommonEdges);
+					
+					// Write the generated FM in the ouput folder
+//					writeFMToFile(OUTPUT_FOLDER, metric, fm.getCompleteIdentifier(), computedFM);
+				}
+			}
+			
+			double sum = 0; 
+			for (Double nbCommonEdges : listNbCommonEdges) {
+				sum += nbCommonEdges;
+			}
+			double average = sum / listNbCommonEdges.size();
+			Collections.sort(listNbCommonEdges);
+			double median = listNbCommonEdges.get(listNbCommonEdges.size()/2);
+			
+			System.out.println("Common edges");
+			System.out.println("Average : " + average);
+			System.out.println("Median : " + median);
+
+			System.out.println();
+		}
+
+	}
+	
+	
+	public double averageInt(List<Integer> list) {
+		int sum = 0; 
+		for (Integer element : list) {
+			sum += element;
+		}
+		double average = sum / ((double) list.size());
+		return average;
+	}
+	
+	public double medianInt(List<Integer> list) {
+		Collections.sort(list);
+		return list.get(list.size() / 2);
+	}
+	
+	
+	public double averageDouble(List<Double> list) {
+		double sum = 0; 
+		for (Double element : list) {
+			sum += element;
+		}
+		double average = sum / list.size();
+		return average;
+	}
+	
+	public double medianDouble(List<Double> list) {
+		Collections.sort(list);
+		return list.get(list.size() / 2);
 	}
 }

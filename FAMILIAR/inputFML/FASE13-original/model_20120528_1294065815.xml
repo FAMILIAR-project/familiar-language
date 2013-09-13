@@ -1,0 +1,21 @@
+<feature_model name="Logo links to the homepage">
+<feature_tree>
+:r Logo links to the homepage (f_Logo_links_to_the_homepage)
+	:m Design (f_Design)
+	:m Some Homepage (f_Some_Homepage)
+	:m Platform Core (f_Platform_Core)
+	:m Wiki Platform (f_Wiki_Platform)
+	:o Support for HTTPS (f_Support_for_HTTPS)
+	:o Langauge selector in GUI (f_Langauge_selector_in_GUI)
+		:m Localization (f_Localization)
+		:g [1, *]
+			: Translated admin interface (f_Translated_admin_interface)
+			: Translated user interface (f_Translated_user_interface)
+		:g [1, 1]
+			: Localization per whole page (f_Localization_per_whole_page)
+			: Localization embedded into text (f_Localization_embedded_into_text)
+	:o Logo visible on every page (f_Logo_visible_on_every_page)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

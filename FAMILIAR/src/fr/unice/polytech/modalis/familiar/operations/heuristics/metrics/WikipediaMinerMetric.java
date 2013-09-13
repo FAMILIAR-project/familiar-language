@@ -126,5 +126,15 @@ public class WikipediaMinerMetric implements FeatureSimilarityMetric {
 		return wikipedia;
 	}
 
+	@Override
+	public boolean isXorGroupRequired() {
+		return false;
+	}
+
+	@Override
+	public boolean isOrGroupRequired() {
+		return false;
+	}
+
 }
 

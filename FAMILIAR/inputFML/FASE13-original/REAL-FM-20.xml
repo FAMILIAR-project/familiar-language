@@ -1,0 +1,57 @@
+<feature_model name="thread_instance">
+<feature_tree>
+:r thread_instance (f_thread_instance)
+	:m thread (f_thread)
+	:g [1, 1]
+		: single (f_single)
+		: multiple (f_multiple)
+			:o coroutine (f_coroutine)
+				:m size (f_size)
+				:m minimal_set (f_minimal_set)
+				:m location (f_location)
+				:o dispatching (f_dispatching)
+					:m dispach_method (f_dispach_method)
+					:m global_life (f_global_life)
+					:o scheduling (f_scheduling)
+						:m thread_schedule (f_thread_schedule)
+						:m thread_strategy (f_thread_strategy)
+						:o thread_strategy_replugging (f_thread_strategy_replugging)
+						:o query_schedule (f_query_schedule)
+						:o bundle_schedule (f_bundle_schedule)
+							:m bundle_strategy (f_bundle_strategy)
+							:o bundle_preemption (f_bundle_preemption)
+							:o bundle_strategy_replugging (f_bundle_strategy_replugging)
+							:g [1, 1]
+								: bundle_fcfs (f_bundle_fcfs)
+								: bundle_lcfs (f_bundle_lcfs)
+						:o thread_preemption (f_thread_preemption)
+							:o scheduler_lockable (f_scheduler_lockable)
+							:o non_preemptable_threads (f_non_preemptable_threads)
+						:o idle_control (f_idle_control)
+							:g [1, 1]
+								: idle_user (f_idle_user)
+								: idle_panic (f_idle_panic)
+								: idle_guard (f_idle_guard)
+						:g [1, 1]
+							: thread_fcfs (f_thread_fcfs)
+							: thread_lcfs (f_thread_lcfs)
+							: priority (f_priority)
+								:m priority_count (f_priority_count)
+								:m priority_behaviour (f_priority_behaviour)
+								:o schedule_same_priority (f_schedule_same_priority)
+								:g [1, 1]
+									: priority_preemptive (f_priority_preemptive)
+									: priority_cooperative (f_priority_cooperative)
+								:g [1, 1]
+									: priority_16 (f_priority_16)
+									: priority_32 (f_priority_32)
+									: priority_8 (f_priority_8)
+				:o volatile_set (f_volatile_set)
+				:o float_set (f_float_set)
+				:g [1, 1]
+					: separated (f_separated)
+					: integrated (f_integrated)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

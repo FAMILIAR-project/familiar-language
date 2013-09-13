@@ -1,0 +1,31 @@
+<feature_model name="GPL">
+<feature_tree>
+:r GPL (f_GPL)
+	:m Graph Type (f_Graph_Type)
+	:m Algorithms (f_Algorithms)
+	:o search (f_search)
+		:g [1, 1]
+			: DFS (f_DFS)
+			: BFS (f_BFS)
+	:g [1, *]
+		: Cycle Detection (f_Cycle_Detection)
+		: Strongly Connected (f_Strongly_Connected)
+		: Shortest Path (f_Shortest_Path)
+		: Coloring (f_Coloring)
+			:g [1, *]
+				: Approximation (f_Approximation)
+				: Brute Force (f_Brute_Force)
+		: MST (f_MST)
+	:g [1, 1]
+		: directed (f_directed)
+		: undirected (f_undirected)
+	:g [1, 1]
+		: weighted (f_weighted)
+		: unweighted (f_unweighted)
+</feature_tree>
+<constraints>
+constraint_1:~f_Strongly_Connected or f_DFS
+constraint_2:~f_Strongly_Connected or f_directed
+constraint_3:~f_Cycle_Detection or f_DFS
+</constraints>
+</feature_model>

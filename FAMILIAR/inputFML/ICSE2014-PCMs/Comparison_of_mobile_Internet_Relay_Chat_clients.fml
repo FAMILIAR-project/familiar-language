@@ -1,0 +1,9 @@
+Comparison_of_mobile_Internet_Relay_Chat_clients: Features [General] "Protocol support" ; 
+Features: ["UTF-8"] ["Multi-server"] ["irc:// URI scheme"] ["Push notifications"] ["Automatic updates"] ["Scripting language"] ["Proxy server"] ; 
+General: Cost "Software license" ["Programming language"] "User interface" ["Computing platform"] ; 
+"Protocol support": [CHAT] [Server] [TSEND] [DCC] [Whiteboard] [RDCC] [SEND] [GET] [XMIT] ["File servers (FSERVs)"] ["Reverse / Firewall DCC"] [REVERSE] ["Passive DCC"] [RESUME] [OCSP] [TLS] [CTCP] [XDCC] ["SEND T"] ["IPv6"] [RSEND] [SSL] [CRL] ; 
+Cost: ("[[Free software]] Free software"|"[[US$]]1.49 US$"|"[[US$]]2.99 US$"|"Freeware iPhone: US$3"|"[[Shareware]] [[US$]]10 Shareware"|"[[Freeware]] Freeware"|"[[US$]]1.99 US$"|"[[Demoware]] [[US$]]20 Demoware") ; 
+"Software license": ("3-clause BSD"|"GNU LGPL"|"BSD License"|"GNU GPL"|"Proprietary software") ; 
+"Programming language": ("C++"|"Objective-C"|Java|"C#"|"C & JavaScript"|C)? ; 
+"User interface": (TUI|"TUI, GUI"|GUI) ; 
+"Computing platform": (Android|"PlayStation Portable"|"Java ME"|"Windows Mobile 5 (and above)"|iOS|Symbian|"Windows Mobile"|"iOS, Windows Mobile"|"Windows Phone"|WebOS) ;

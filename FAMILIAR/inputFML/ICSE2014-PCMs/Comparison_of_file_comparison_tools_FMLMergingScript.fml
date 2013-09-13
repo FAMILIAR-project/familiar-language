@@ -1,0 +1,387 @@
+fmProduct0 = FM (Comparison_of_file_comparison_tools: "Compare Features" "API / Editor Features" Aspects "Other features" General ; 
+"Compare Features": Merge "Directory comparison" "Show in-line changes" "3-way comparison" ["Moved lines"] "Binary comparison" ; 
+"API / Editor Features": "Syntax Highlighting" Reports GUI Scripting CLI "Horizontal / Vertical" ; 
+Aspects: "Daylight saving" "Filename casing" Filedate "Character casing" CRC ; 
+"Other features": ["Patch application"] "Patch creation" "Unicode support" ["Version Control browsing"] "ZIP support" "FTP support" ; 
+General: Windows "Software license" [Macintosh] Linux ; 
+Reports: "XML, HTML, CSV, Text, Unix Patch" ; 
+"Horizontal / Vertical": both ; 
+"Software license": Proprietary ; 
+!Macintosh;
+!"Moved lines";
+!"Patch application";
+!"Version Control browsing";
+)
+
+fmProduct1 = FM (Comparison_of_file_comparison_tools: "Compare Features" "API / Editor Features" Aspects "Other features" General ; 
+"Compare Features": Merge "Directory comparison" "Show in-line changes" "Structured comparison" "3-way comparison" "Moved lines" ; 
+"API / Editor Features": "Syntax Highlighting" CLI GUI "Horizontal / Vertical" ; 
+Aspects: Filedate "Character casing" ; 
+"Other features": "Unicode support" ["Version Control browsing"] ; 
+General: Windows "Software license" [Macintosh] [Linux] ; 
+"Horizontal / Vertical": both ; 
+"Software license": Proprietary ; 
+!Linux;
+!Macintosh;
+!"Version Control browsing";
+)
+
+fmProduct2 = FM (Comparison_of_file_comparison_tools: "Compare Features" "API / Editor Features" Aspects "Other features" General ; 
+"Compare Features": Merge "Directory comparison" "Structured comparison" "Show in-line changes" "3-way comparison" ; 
+"API / Editor Features": "Syntax Highlighting" Reports GUI CLI "Horizontal / Vertical" ; 
+Aspects: "Filename casing" Filedate "Character casing" CRC ; 
+"Other features": "Unicode support" "Version Control browsing" ; 
+General: Windows "Software license" [Macintosh] [Linux] ; 
+Reports: "HTML, Text(combined or side-by-side) " ; 
+"Horizontal / Vertical": both ; 
+"Version Control browsing": "SVN, CVS, Git, Microsoft TFS, Perforce, VSS using command line" ; 
+"Software license": Proprietary ; 
+!Linux;
+!Macintosh;
+)
+
+fmProduct3 = FM (Comparison_of_file_comparison_tools: General ; 
+General: Windows "Software license" Macintosh Linux ; 
+"Software license": "BSD 3-clause, BSD 4-clause, CDDL, GPL, Proprietary" ;
+)
+
+fmProduct4 = FM (Comparison_of_file_comparison_tools: General ; 
+General: [Windows] "Software license" Macintosh [Linux] ; 
+"Software license": Proprietary ; 
+!Linux;
+!Windows;
+)
+
+fmProduct5 = FM (Comparison_of_file_comparison_tools: "Compare Features" "API / Editor Features" Aspects "Other features" General ; 
+"Compare Features": Merge "Directory comparison" "Show in-line changes" "3-way comparison" "Binary comparison" ; 
+"API / Editor Features": "Syntax Highlighting" CLI Scripting GUI "Horizontal / Vertical" ; 
+"Other features": "Patch application" "Patch creation" "Patch preview" "Version Control browsing" "FTP support" "ZIP support" ; 
+General: Windows "Software license" Macintosh Linux ; 
+Scripting: elisp ; 
+"Horizontal / Vertical": both ; 
+"Version Control browsing": "RCS, CVS, SVN, Mercurial, git (anything supported by Emacs' VC-mode)" ; 
+"Software license": GPL ;
+)
+
+fmProduct6 = FM (Comparison_of_file_comparison_tools: "Compare Features" "API / Editor Features" Aspects "Other features" General ; 
+"Compare Features": Merge "Directory comparison" "Show in-line changes" ["3-way comparison"] "Moved lines" "Binary comparison" ; 
+"API / Editor Features": "Syntax Highlighting" [Reports] CLI GUI ["Horizontal / Vertical"] ; 
+Aspects: "Daylight saving" Filedate ["Filename casing"] "Character casing" CRC ; 
+"Other features": ["Patch creation"] "Unicode support" "ZIP support" "FTP support" ; 
+General: Windows "Software license" [Macintosh] [Linux] ; 
+"Software license": Proprietary ; 
+!Linux;
+!Macintosh;
+!"3-way comparison";
+!"Patch creation";
+!"Filename casing";
+)
+
+fmProduct7 = FM (Comparison_of_file_comparison_tools: "Compare Features" "API / Editor Features" Aspects "Other features" General ; 
+"Compare Features": [Merge] ["Directory comparison"] ["Show in-line changes"] ["3-way comparison"] "Binary comparison" ; 
+"API / Editor Features": CLI [GUI] "Horizontal / Vertical" ; 
+Aspects: ["Filename casing"] ["Character casing"] ; 
+"Other features": ["Patch creation"] ["FTP support"] ["ZIP support"] ; 
+General: Windows "Software license" [Macintosh] [Linux] ; 
+"Horizontal / Vertical": horizontal ; 
+"Software license": Proprietary ; 
+!Linux;
+!GUI;
+!Macintosh;
+!Merge;
+!"3-way comparison";
+!"ZIP support";
+!"Patch creation";
+!"FTP support";
+!"Show in-line changes";
+!"Directory comparison";
+!"Filename casing";
+)
+
+fmProduct8 = FM (Comparison_of_file_comparison_tools: "Compare Features" "API / Editor Features" Aspects "Other features" General ; 
+"Compare Features": Merge "Directory comparison" "Show in-line changes" "3-way comparison" "Binary comparison" ; 
+"API / Editor Features": "Syntax Highlighting" [Reports] CLI GUI "Horizontal / Vertical" ; 
+Aspects: [Filedate] ["Filename casing"] ["Character casing"] [CRC] ; 
+"Other features": ["Patch creation"] ["XML-aware"] ["Unicode support"] "FTP support" ["ZIP support"] ; 
+General: [Windows] "Software license" Macintosh [Linux] ; 
+"Horizontal / Vertical": vertical ; 
+"FTP support": "supported by OS" ; 
+"Software license": Proprietary ; 
+!Linux;
+!CRC;
+!Reports;
+!Windows;
+!Filedate;
+!"ZIP support";
+!"Patch creation";
+!"XML-aware";
+!"Unicode support";
+!"Filename casing";
+)
+
+fmProduct9 = FM (Comparison_of_file_comparison_tools: "Compare Features" "API / Editor Features" Aspects "Other features" General ; 
+"Compare Features": Merge "Directory comparison" "Show in-line changes" "3-way comparison" ; 
+"API / Editor Features": "Syntax Highlighting" Reports GUI CLI "Horizontal / Vertical" ; 
+Aspects: "Filename casing" Filedate "Character casing" ; 
+"Other features": "Patch creation" "Unicode support" "ZIP support" ; 
+General: Windows "Software license" Macintosh Linux ; 
+Reports: HTML ; 
+"Horizontal / Vertical": both ; 
+"Filename casing": "filesystem dependent" ; 
+"Software license": Proprietary ;
+)
+
+fmProduct10 = FM (Comparison_of_file_comparison_tools: "Compare Features" "API / Editor Features" Aspects "Other features" General ; 
+"Compare Features": Merge "Show in-line changes" "3-way comparison" ; 
+"API / Editor Features": "Syntax Highlighting" GUI "Horizontal / Vertical" ; 
+"Other features": "Patch application" "Patch creation" "Patch preview" "Unicode support" "Version Control browsing" "ZIP support" ; 
+General: Windows "Software license" Macintosh Linux ; 
+"Horizontal / Vertical": vertical ; 
+"Software license": Proprietary ;
+)
+
+fmProduct11 = FM (Comparison_of_file_comparison_tools: "Compare Features" "API / Editor Features" Aspects "Other features" General ; 
+"Compare Features": Merge "Show in-line changes" ["3-way comparison"] ; 
+"API / Editor Features": "Syntax Highlighting" GUI "Horizontal / Vertical" ; 
+"Other features": "Patch application" "Patch creation" "Patch preview" "Unicode support" "Version Control browsing" "ZIP support" "FTP support" ; 
+General: Windows "Software license" Macintosh Linux ; 
+"Horizontal / Vertical": both ; 
+"Software license": GPL ; 
+!"3-way comparison";
+)
+
+fmProduct12 = FM (Comparison_of_file_comparison_tools: "Compare Features" "API / Editor Features" Aspects "Other features" General ; 
+"Compare Features": "Directory comparison" ["3-way comparison"] ["Binary comparison"] ; 
+"API / Editor Features": ["Syntax Highlighting"] GUI "Horizontal / Vertical" ; 
+Aspects: "Filename casing" ; 
+"Other features": "Patch creation" ; 
+General: Windows "Software license" Macintosh Linux ; 
+"Horizontal / Vertical": vertical ; 
+"Software license": GPL ; 
+!"3-way comparison";
+!"Binary comparison";
+!"Syntax Highlighting";
+)
+
+fmProduct13 = FM (Comparison_of_file_comparison_tools: "Compare Features" "API / Editor Features" Aspects "Other features" General ; 
+"API / Editor Features": "Syntax Highlighting" GUI ; 
+General: Windows "Software license" Macintosh Linux ; 
+"Software license": GPL ;
+)
+
+fmProduct14 = FM (Comparison_of_file_comparison_tools: "Compare Features" "API / Editor Features" Aspects "Other features" General ; 
+"Compare Features": Merge "Directory comparison" "Show in-line changes" "3-way comparison" "Moved lines" ["Binary comparison"] ; 
+"API / Editor Features": "Syntax Highlighting" [Reports] GUI "Horizontal / Vertical" ; 
+"Other features": "Patch creation" "Unicode support" "Version Control browsing" ; 
+General: Windows "Software license" Macintosh Linux ; 
+"Horizontal / Vertical": horizontal ; 
+"Version Control browsing": "[[Concurrent Versions System|CVS]], [[Subversion]], [[Git (software)|Git]]CVS" ; 
+"Software license": GPL ; 
+!Reports;
+!"Binary comparison";
+)
+
+fmProduct15 = FM (Comparison_of_file_comparison_tools: "Compare Features" "API / Editor Features" Aspects "Other features" General ; 
+"Compare Features": Merge ["Directory comparison"] "Show in-line changes" "3-way comparison" ["Binary comparison"] ; 
+"API / Editor Features": ["Syntax Highlighting"] [Reports] CLI GUI "Horizontal / Vertical" ; 
+Aspects: ["Daylight saving"] [Filedate] ["Filename casing"] "Character casing" [CRC] ; 
+"Other features": "Unicode support" ["Version Control browsing"] ; 
+General: Windows "Software license" Macintosh Linux ; 
+"Horizontal / Vertical": vertical ; 
+"Software license": Proprietary ; 
+!CRC;
+!Reports;
+!Filedate;
+!"Binary comparison";
+!"Version Control browsing";
+!"Directory comparison";
+!"Syntax Highlighting";
+!"Daylight saving";
+)
+
+fmProduct16 = FM (Comparison_of_file_comparison_tools: "Compare Features" "API / Editor Features" Aspects "Other features" General ; 
+"Compare Features": [Merge] ["Directory comparison"] "Structured comparison" "Show in-line changes" ["3-way comparison"] ["Moved lines"] ["Binary comparison"] ; 
+"API / Editor Features": ["Syntax Highlighting"] Reports CLI GUI Scripting "Horizontal / Vertical" ; 
+Aspects: ["Daylight saving"] [Filedate] ["Filename casing"] ["Character casing"] [CRC] ; 
+"Other features": ["Patch application"] ["Patch creation"] "XML-aware" ["Patch preview"] "Unicode support" ["Version Control browsing"] ["FTP support"] ["ZIP support"] ; 
+General: Windows "Software license" Macintosh Linux ; 
+Reports: " XHTML" ; 
+Scripting: JavaScript ; 
+"Horizontal / Vertical": Both ; 
+"Software license": "GPL-compatible" ; 
+!Merge;
+!"3-way comparison";
+!"Patch creation";
+!"Binary comparison";
+!"Version Control browsing";
+!"Directory comparison";
+!"Syntax Highlighting";
+!CRC;
+!"Moved lines";
+!"Patch application";
+!Filedate;
+!"ZIP support";
+!"FTP support";
+!"Patch preview";
+!"Daylight saving";
+)
+
+fmProduct17 = FM (Comparison_of_file_comparison_tools: "Compare Features" "API / Editor Features" Aspects "Other features" General ; 
+"Compare Features": [Merge] ["Directory comparison"] "Show in-line changes" ["3-way comparison"] ["Moved lines"] ["Binary comparison"] ; 
+"API / Editor Features": GUI ; 
+"Other features": ["Patch application"] ["Patch creation"] ["XML-aware"] ["Patch preview"] ["Unicode support"] "Version Control browsing" ["ZIP support"] ["FTP support"] ; 
+General: Windows "Software license" Macintosh Linux ; 
+"Version Control browsing": "CVS, RCS, Subversion" ; 
+"Software license": GPL ; 
+!Merge;
+!"3-way comparison";
+!"Patch creation";
+!"Binary comparison";
+!"XML-aware";
+!"Unicode support";
+!"Directory comparison";
+!"Moved lines";
+!"Patch application";
+!"ZIP support";
+!"FTP support";
+!"Patch preview";
+)
+
+fmProduct18 = FM (Comparison_of_file_comparison_tools: "Compare Features" "API / Editor Features" Aspects "Other features" General ; 
+"Compare Features": Merge "Directory comparison" "Show in-line changes" ["3-way comparison"] "Binary comparison" ; 
+"API / Editor Features": GUI ["Horizontal / Vertical"] ; 
+Aspects: [Filedate] ["Character casing"] ; 
+"Other features": "FTP support" "ZIP support" ; 
+General: Windows "Software license" [Macintosh] [Linux] ; 
+"Software license": Proprietary ; 
+!Linux;
+!Macintosh;
+!"3-way comparison";
+)
+
+fmProduct19 = FM (Comparison_of_file_comparison_tools: General ; 
+General: [Windows] "Software license" Macintosh [Linux] ; 
+"Software license": Proprietary ; 
+!Linux;
+!Windows;
+)
+
+fmProduct20 = FM (Comparison_of_file_comparison_tools: "Compare Features" "API / Editor Features" Aspects "Other features" General ; 
+"Compare Features": "Directory comparison" "Show in-line changes" "3-way comparison" ; 
+"API / Editor Features": "Syntax Highlighting" Reports CLI GUI Scripting "Horizontal / Vertical" ; 
+Aspects: ["Daylight saving"] ["Filename casing"] [Filedate] "Character casing" [CRC] ; 
+"Other features": "Patch creation" "Unicode support" "FTP support" "ZIP support" ; 
+General: Windows "Software license" Macintosh Linux ; 
+Reports: HTML ; 
+Scripting: "vim script" ; 
+"Horizontal / Vertical": both ; 
+"Software license": "GPL-compatible" ; 
+!CRC;
+!Filedate;
+!"Filename casing";
+!"Daylight saving";
+)
+
+fmProduct21 = FM (Comparison_of_file_comparison_tools: "Compare Features" "API / Editor Features" Aspects "Other features" General ; 
+"Compare Features": [Merge] "Directory comparison" "Show in-line changes" ["3-way comparison"] "Moved lines" "Binary comparison" ; 
+"API / Editor Features": ["Syntax Highlighting"] Reports GUI CLI "Horizontal / Vertical" ; 
+Aspects: "Daylight saving" ["Filename casing"] [Filedate] ["Character casing"] [CRC] ; 
+"Other features": ["Patch creation"] ["Unicode support"] ["FTP support"] ["ZIP support"] ; 
+General: Windows "Software license" [Macintosh] [Linux] ; 
+Reports: Text ; 
+"Horizontal / Vertical": horizontal ; 
+"Software license": Proprietary ; 
+!Linux;
+!CRC;
+!Macintosh;
+!Merge;
+!"3-way comparison";
+!"ZIP support";
+!"Patch creation";
+!"FTP support";
+!"Unicode support";
+!"Filename casing";
+!"Syntax Highlighting";
+)
+
+fmProduct22 = FM (Comparison_of_file_comparison_tools: "Compare Features" "API / Editor Features" Aspects "Other features" General ; 
+"Compare Features": Merge "Directory comparison" "Show in-line changes" ["3-way comparison"] "Moved lines" "Binary comparison" ; 
+"API / Editor Features": "Syntax Highlighting" Reports GUI CLI "Horizontal / Vertical" ; 
+Aspects: [Filedate] ["Filename casing"] ["Character casing"] [CRC] ; 
+"Other features": "Patch creation" "Unicode support" ["Version Control browsing"] "ZIP support" ["FTP support"] ; 
+General: Windows "Software license" [Macintosh] [Linux] ; 
+Reports: "CSV, Tab-delimited, HTML, XML" ; 
+"Horizontal / Vertical": vertical ; 
+"Software license": GPL ; 
+!Linux;
+!CRC;
+!Macintosh;
+!"3-way comparison";
+!"FTP support";
+!"Version Control browsing";
+!"Filename casing";
+)
+
+fmProduct23 = FM (Comparison_of_file_comparison_tools: "Compare Features" "API / Editor Features" Aspects "Other features" General ; 
+"Compare Features": Merge "Directory comparison" "Show in-line changes" ["3-way comparison"] "Moved lines" "Binary comparison" ; 
+"API / Editor Features": "Syntax Highlighting" Reports GUI CLI "Horizontal / Vertical" ; 
+Aspects: ["Daylight saving"] ["Filename casing"] Filedate [CRC] ; 
+"Other features": "Unicode support" ["FTP support"] "ZIP support" ; 
+General: Windows "Software license" Macintosh Linux ; 
+Reports: "Text, CSV" ; 
+"Horizontal / Vertical": vertical ; 
+"Software license": "USC-CSSE Limited Public License" ; 
+!CRC;
+!"3-way comparison";
+!"FTP support";
+!"Filename casing";
+!"Daylight saving";
+)
+
+fmProduct24 = FM (Comparison_of_file_comparison_tools: "Compare Features" "API / Editor Features" Aspects "Other features" ; 
+"Compare Features": [Merge] "Directory comparison" ["Show in-line changes"] ["3-way comparison"] ["Moved lines"] ["Binary comparison"] ; 
+"API / Editor Features": [GUI] CLI "Horizontal / Vertical" ; 
+Aspects: ["Daylight saving"] [Filedate] "Filename casing" ["Character casing"] [CRC] ; 
+"Other features": ["Patch application"] "Patch creation" ["XML-aware"] ["Patch preview"] "Unicode support" ["Version Control browsing"] ["ZIP support"] ["FTP support"] ; 
+"Horizontal / Vertical": horizontal ; 
+!Merge;
+!"3-way comparison";
+!"Version Control browsing";
+!"XML-aware";
+!CRC;
+!GUI;
+!"Moved lines";
+!"Patch application";
+!Filedate;
+!"ZIP support";
+!"FTP support";
+!"Show in-line changes";
+!"Patch preview";
+!"Daylight saving";
+)
+
+fmProduct25 = FM (Comparison_of_file_comparison_tools: "Compare Features" "API / Editor Features" Aspects "Other features" ; 
+"Compare Features": ["Directory comparison"] ["Show in-line changes"] ["3-way comparison"] ; 
+"API / Editor Features": [GUI] CLI "Horizontal / Vertical" ; 
+"Other features": ["XML-aware"] ["ZIP support"] ["FTP support"] ; 
+"Horizontal / Vertical": horizontal ; 
+!GUI;
+!"3-way comparison";
+!"ZIP support";
+!"FTP support";
+!"Show in-line changes";
+!"XML-aware";
+!"Directory comparison";
+)
+
+fmProduct26 = FM (Comparison_of_file_comparison_tools: "Compare Features" "API / Editor Features" Aspects "Other features" ; 
+"Compare Features": Merge "Directory comparison" "3-way comparison" ; 
+"API / Editor Features": "Syntax Highlighting" GUI "Horizontal / Vertical" ; 
+"Other features": "Unicode support" ; 
+"Horizontal / Vertical": vertical ;
+)
+
+fmProduct27 = FM (Comparison_of_file_comparison_tools: "Compare Features" ; 
+"Compare Features": Merge "Directory comparison" "Structured comparison" "Show in-line changes" "3-way comparison" "Moved lines" "Binary comparison" ;
+)
+

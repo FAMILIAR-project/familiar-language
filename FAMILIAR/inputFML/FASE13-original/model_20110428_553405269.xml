@@ -1,0 +1,56 @@
+<feature_model name="EmptyOMOD">
+<feature_tree>
+:r EmptyOMOD (f_EmptyOMOD)
+	:m CDODConsistency (f_CDODConsistency)
+	:m ODSemantics (f_ODSemantics)
+	:m ObjectTypingOD (f_ObjectTypingOD)
+	:m CDSemantics (f_CDSemantics)
+	:m CompletenessOD (f_CompletenessOD)
+	:m EmptyOMCD (f_EmptyOMCD)
+	:m ClassesCD (f_ClassesCD)
+	:m DefaultMultiplicity (f_DefaultMultiplicity)
+	:m CompletenessCD (f_CompletenessCD)
+	:m AttributesCD (f_AttributesCD)
+	:m AttributesOD (f_AttributesOD)
+	:m TypesOD (f_TypesOD)
+	:m LinksOD (f_LinksOD)
+	:m ObjectsOD (f_ObjectsOD)
+	:g [1, 1]
+		: AllAttributesShownOD (f_AllAttributesShownOD)
+		: AllowAttributesOmittedOD (f_AllowAttributesOmittedOD)
+	:g [1, 1]
+		: DefMultOpt (f_DefMultOpt)
+		: DefMultOne (f_DefMultOne)
+		: DefMultStar (f_DefMultStar)
+		: DefMultSome (f_DefMultSome)
+	:g [1, 1]
+		: AllObjectsShownOD (f_AllObjectsShownOD)
+		: AllowObjectsOmittedOD (f_AllowObjectsOmittedOD)
+	:g [1, 1]
+		: AllLinksShownOD (f_AllLinksShownOD)
+		: AllowLinksOmittedOD (f_AllowLinksOmittedOD)
+	:g [1, 1]
+		: NonStrictOD (f_NonStrictOD)
+		: StrictOD (f_StrictOD)
+	:g [1, 1]
+		: AllTypesShownOD (f_AllTypesShownOD)
+		: AllowTypesOmittedOD (f_AllowTypesOmittedOD)
+	:g [1, 1]
+		: AllClassesShownCD (f_AllClassesShownCD)
+		: AllowClassesOmittedCD (f_AllowClassesOmittedCD)
+	:g [1, 1]
+		: AllAttributesShownCD (f_AllAttributesShownCD)
+		: AllowAttributesOmittedCD (f_AllowAttributesOmittedCD)
+	:g [1, 1]
+		: EmptyOMInvalidOD (f_EmptyOMInvalidOD)
+			:m EmptyOMInvalidCD (f_EmptyOMInvalidCD)
+		: EmptyOMValidInstanceOD (f_EmptyOMValidInstanceOD)
+			:m EmptyOMValidInstanceCD (f_EmptyOMValidInstanceCD)
+</feature_tree>
+<constraints>
+constraint_1:~f_AllowTypesOmittedOD or f_AllClassesShownCD
+constraint_2:~f_AllowClassesOmittedCD or f_AllTypesShownOD
+constraint_3:~f_AllLinksShownOD or f_AllObjectsShownOD
+constraint_4:~f_AllowObjectsOmittedOD or f_AllowLinksOmittedOD
+</constraints>
+</feature_model>

@@ -1,0 +1,44 @@
+<feature_model name="UI">
+<feature_tree>
+:r UI (f_UI)
+	:m Consumer Report (f_Consumer_Report)
+	:m Temperature (f_Temperature)
+	:m Generate Reports (f_Generate_Reports)
+	:m On-Off Light (f_On_Off_Light)
+	:m On-Off Water (f_On_Off_Water)
+	:m Log (f_Log)
+	:m Platform (f_Platform)
+	:m Alarms (f_Alarms)
+	:m Alarm No water (f_Alarm_No_water)
+	:m Alarm No lights (f_Alarm_No_lights)
+	:m GreenHouse (f_GreenHouse)
+	:m Control (f_Control)
+	:m Mode (f_Mode)
+	:m Monitoring (f_Monitoring)
+	:m Notification (f_Notification)
+	:o Graphic (f_Graphic)
+		:o Mobile Interface (f_Mobile_Interface)
+			:o Mobile (f_Mobile)
+		:o Web Interface (f_Web_Interface)
+			:o Web (f_Web)
+		:o PC Interface (f_PC_Interface)
+			:o PC (f_PC)
+	:o Console (f_Console)
+	:o SMS (f_SMS)
+	:o e-mail (f_e_mail)
+	:o Day (f_Day)
+	:o Night (f_Night)
+	:o Production Report (f_Production_Report)
+	:o Others Alarms (f_Others_Alarms)
+	:o Call phone (f_Call_phone)
+</feature_tree>
+<constraints>
+constraint_1:~f_Console or ~f_Graphic
+constraint_2:~f_Console or ~f_Mobile
+constraint_3:~f_Console or ~f_PC
+constraint_4:~f_Console or ~f_Web
+constraint_5:~f_Console or ~f_Mobile_Interface
+constraint_6:~f_Console or ~f_PC_Interface
+constraint_7:~f_Console or ~f_Web_Interface
+</constraints>
+</feature_model>

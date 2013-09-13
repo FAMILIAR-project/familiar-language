@@ -1,0 +1,17 @@
+Comparison_of_relational_database_management_systems: "Database capabilities" "Tables and views" "Other objects" "Operating system support" "Fundamental features" Indexes Partitioning "General information" "Access control" ; 
+"Database capabilities": ["Parallel Query"] [Intersect] ["Common Table Expressions"] ["Inner selects"] ["Outer joins"] ["Blobs and Clobs"] [Union] ["Windowing Functions"] ["Inner joins"] ["Merge joins"] [Except] ; 
+"Tables and views": ["Materialized view"] ["Temporary table"] ; 
+"Other objects": ["Data Domain"] ["External routine?1"] [Cursor] ["Function?1"] ["Procedure?1"] [Trigger] ; 
+"Operating system support": [Android] [iOS] [Symbian] [Windows] [BSD] ["z/OS"] [UNIX] [AmigaOS] [Linux] ["OS X"] ; 
+"Fundamental features": [ACID] [Interface] [Unicode] ["Referential integrity"] [Transactions] ; 
+Indexes: [GiST] [Partial] [Expression] [Spatial] [FOT] ["R-/R+ tree"] [Reverse] [GIN] [Bitmap] [Hash] ["Full-text"] ; 
+Partitioning: [Range] [List] ["Composite (Range+Hash)"] ; 
+"General information": "Software license" ; 
+"Access control": ["Run unprivileged4"] ["Brute-force protection"] ["Security Certification"] ["Enterprise directory compatibility"] ["Resource limit"] ["Native network encryption1"] ["Patch access3"] ["Label Based Access Control (LBAC)"] ["Separation of duties (RBAC)5"] ["Password complexity rules2"] [Audit] ; 
+"Materialized view": ["Planned for inclusion in next major release"] ; 
+"z/OS": ["Under Linux on System z"] ; 
+Interface: (SQL|"SQL & API"|"SQL & QUEL"|"API & SQL"|Multiple|"API & GUI & SQL"|"GUI & SQL")? ; 
+Spatial: (PostGIS|SpatiaLite)? ; 
+Bitmap: ["Ingres v10"] ; 
+Hash: (Cluster|"Cluster Tables")? ; 
+"Software license": ("GPL and Proprietary"|"MonetDB Public License v1.1"|SaaS|Proprietary|"Apache License"|LGPL|"IPL and IDPL"|"GPL or Proprietary"|"Public domain"|"GPL v2"|"BSD, GPL v2"|"PostgreSQL Licence (a liberal Open Source license)")? ;

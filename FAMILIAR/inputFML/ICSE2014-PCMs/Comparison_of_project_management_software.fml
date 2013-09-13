@@ -1,0 +1,8 @@
+Comparison_of_project_management_software: "Monetary features" Features "General information" ; 
+"Monetary features": ["Budget Management"] [Invoicing] ["Time Tracking"] ; 
+Features: ["Workflow system"] ["Document Management"] ["Issue tracking system"] ["Resource Management"] [Scheduling] ["Collaborative software"] ["Reporting and Analyses"] ["Project Portfolio Management"] ; 
+"General information": License [SaaS] "Programming language" ["Hosted On-Premises"] ["Web-based"] ; 
+License: (GPL|"2-clause BSD license"|"Open source"|Proprietary|"Apache License"|"Open source (disputed)"|LGPL|"Proprietary, GPL"|"Mozilla Public License"|"Eclipse Public License"|AGPL|"AGPL; Proprietary (version 4)"|CPAL|"Proprietary, Open source")? ; 
+"Programming language": ("Java and PHP"|"C++ and Java"|Ruby|Java|Python|"SQLite and C"|PHP|"ASP.NET"|"Ruby on Rails") ; 
+License;
+"Programming language";

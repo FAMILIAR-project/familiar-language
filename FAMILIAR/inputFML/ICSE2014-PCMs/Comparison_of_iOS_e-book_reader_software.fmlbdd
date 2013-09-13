@@ -1,0 +1,43 @@
+<FMLBDD>
+<FM>
+Comparison_of_iOS_ebook_reader_software: ("Supported File Formats"|"Navigation features") "Edit/tool features" "Display features" "Book source management features" ; 
+"Edit/tool features": ("Edit meta-data"|"TTS support")? [Annotate] ["Online dictionary"] ["Offline dictionary"] [Highlight] ["Lookup Wikipedia"] ["DRM support"] [Translate] "Export to iTunes" [Share] ; 
+"Supported File Formats": (".djvu"|".html")? [".epub"] [".pdf"] [".cbr/.cbz"] [".chm"] [".pdb"] [".fb2"] [".rtf"] [".txt"] [".mobi"] ; 
+"Navigation features": [Bookmarks] ["Auto-scroll"] Resume Pagination "Backward/forward" ["Cloud synchronisation"] ["Progress indicator"] ["Rotation Lock"] "Go To" "Table of Contents" ["Full text search"] ; 
+"Display features": ["Customize text alignment"] "Customize font" ["Customize spacing: line/paragraph"] ["Day/Night mode"] ["Enable/Disable sleep mode"] [Themes] ["Page Turn Effects"] ["Multi-column mode"] "Styles (bold/italic/etc.)" ["Indent paragraph"] ["Customize margins"] ["Enable/Disable CSS"] ["Enable/Disable hyphenation"] "Brightness Control" ; 
+"Book source management features": ["Sort books"] ["Browser downloading"] "Other import via" ["Book search"] ["Book store(s)"] ["Manual downloading"] ["Tag books"] ["OPDS catalog"] ["Epub downloading"] ; 
+"DRM support": ("Adobe DRM"|"[[FairPlay|Apple FairPlay]]Apple FairPlay")? ; 
+"Edit meta-data": ("Author, Title, Publisher"|"Author, Title, Label")? ; 
+Share: (eMail|"Facebook, Twitter"|"Facebook, Twitter, eMail, SMS"|"Facebook, Twitter, eMail")? ; 
+"Auto-scroll": [Manual] ; 
+Pagination: ["Mixed scrolling & pagination"] ; 
+"Progress indicator": ["In library and in-book"] ; 
+"Day/Night mode": ("Using themes"|"Using styles")? ; 
+"Page Turn Effects": [Configurable] ; 
+"Styles (bold/italic/etc.)": [Buggy] ; 
+"Brightness Control": ["Vertical swipe"] ; 
+"Other import via": ("eMail (MIME type) Built-in web server"|"iTunes File Sharing"|"Calibre (Bonjour) eMail (MIME type) iTunes File Sharing"|"Calibre (Bonjour) Built-in web server"|"eMail (MIME type)"|"Calibre (Plugin) eMail (MIME type) Dropbox iTunes File Sharing"|"Calibre (Bonjour) eMail (MIME type)"|"eMail (MIME type) iTunes File Sharing Built-in Web Server") ; 
+"Book store(s)": ["Apple [[IBookstore#iBookstore|iBookstore]]iBookstore"] ; 
+((Comparison_of_iOS_ebook_reader_software -> "Navigation features") | (Comparison_of_iOS_ebook_reader_software -> "Book source management features"));
+(".djvu" -> !".rtf");
+(Translate -> !"TTS support");
+((Comparison_of_iOS_ebook_reader_software -> "Edit/tool features") | (Comparison_of_iOS_ebook_reader_software -> "Navigation features"));
+(".djvu" -> !".chm");
+("Edit/tool features" -> !"Navigation features");
+((Comparison_of_iOS_ebook_reader_software -> "Navigation features") | (Comparison_of_iOS_ebook_reader_software -> "Display features"));
+("Navigation features" -> !"Book source management features");
+(".djvu" -> !".txt");
+(".djvu" -> !".mobi");
+("TTS support" -> !Share);
+(".djvu" -> !".fb2");
+("Navigation features" -> !"Display features");
+("DRM support" -> !"TTS support");
+</FM>
+<BUILDER>
+75=>.chm;85=>Backward/forward;74=>Author, Title, Publisher;73=>Sort books;72=>.html;71=>.txt;70=>Annotate;69=>Enable/Disable CSS;68=>Customize spacing: line/paragraph;67=>OPDS catalog;66=>Page Turn Effects;65=>Translate;64=>Calibre (Bonjour) eMail (MIME type);63=>Brightness Control;62=>Display features;61=>Tag books;60=>Edit/tool features;83=>Rotation Lock;80=>Progress indicator;59=>Online dictionary;58=>.cbr/.cbz;89=>Pagination;78=>Unlimited;57=>.mobi;56=>Manual downloading;55=>Buggy;54=>Customize margins;84=>Full text search;82=>Auto-scroll;53=>Enable/Disable hyphenation;52=>Multi-column mode;51=>Facebook, Twitter, eMail, SMS;50=>eMail (MIME type) Built-in web server;49=>Styles (bold/italic/etc.);48=>Offline dictionary;47=>Facebook, Twitter, eMail;46=>Calibre (Plugin) eMail (MIME type) Dropbox iTunes File Sharing;45=>Book store(s);42=>Other import via;43=>TTS support;44=>Enable/Disable sleep mode;41=>Customize text alignment;40=>Calibre (Bonjour) eMail (MIME type) iTunes File Sharing;39=>Configurable;35=>as of v2.0;36=>Mixed scrolling & pagination;37=>Share;38=>Calibre (Bonjour) Built-in web server;1=>Comparison_of_iOS_ebook_reader_software;81=>In library and in-book;34=>Export to iTunes;33=>.fb2;31=>Edit meta-data;32=>eMail (MIME type);30=>Day/Night mode;88=>Resume;76=>Bookmarks;29=>Adobe DRM;28=>iTunes File Sharing;25=>Supported File Formats;26=>eMail;27=>Using styles;24=>Highlight;23=>Browser downloading;22=>Customize font;21=>Book search;20=>Facebook, Twitter;19=>.epub;18=>[[FairPlay|Apple FairPlay]]Apple FairPlay;17=>DRM support;16=>Using themes;15=>Manual;14=>Vertical swipe;13=>.pdb;12=>Indent paragraph;87=>Go To;11=>.pdf;86=>Cloud synchronisation;10=>Epub downloading;9=>eMail (MIME type) iTunes File Sharing Built-in Web Server;79=>Table of Contents;8=>Apple [[IBookstore#iBookstore|iBookstore]]iBookstore;7=>Themes;6=>.djvu;4=>Book source management features;5=>Author, Title, Label;77=>Navigation features;2=>Lookup Wikipedia;3=>.rtf;
+</BUILDER>
+<BDD>
+0 0 0
+
+</BDD>
+</FMLBDD>

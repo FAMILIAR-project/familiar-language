@@ -1,0 +1,30 @@
+<feature_model name="Configuration">
+<feature_tree>
+:r Configuration (f_Configuration)
+	:m Input (f_Input)
+	:m Output (f_Output)
+	:m FIRE-ALARM SYSTEM (f_FIRE_ALARM_SYSTEM)
+	:m Devices (f_Devices)
+	:g [1, 1]
+		: Low-end systems (f_Low_end_systems)
+			:m ConventionalI (f_ConventionalI)
+			:m ConventionalO (f_ConventionalO)
+			:g [1, *]
+				: Temperature (f_Temperature)
+				: Smoke sensor (f_Smoke_sensor)
+			:g [1, *]
+				: Alarm texts on display (f_Alarm_texts_on_display)
+				: Alarm bell (f_Alarm_bell)
+		: High-end systems (f_High_end_systems)
+			:m AdvanceO (f_AdvanceO)
+			:m AdvanceI (f_AdvanceI)
+			:g [1, *]
+				: High-speed stinguisher system (f_High_speed_stinguisher_system)
+				: Automatic alert (f_Automatic_alert)
+			:g [1, *]
+				: Laser smoke (f_Laser_smoke)
+				: Ultra-sensitivelaser (f_Ultra_sensitivelaser)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

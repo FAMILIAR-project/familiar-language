@@ -56,6 +56,7 @@ public class InteractiveFMSynthesizer extends Observable{
 	private double clusteringThreshold;
 	private List<FeatureSimilarityMetric> complementaryParentSimilarityMetrics;
 	private Set<FGroup> orGroups;
+	private FeatureModelVariable originalFmv;
 
 
 
@@ -65,11 +66,12 @@ public class InteractiveFMSynthesizer extends Observable{
 			FeatureSimilarityMetric clusteringSimilarityMetric,
 			double clusteringThreshold) {
 
+		originalFmv = fmv;
 		// Initialize data
 		big = new WeightedImplicationGraph<String>(fmv.computeImplicationGraph());
 		originalBig = big.clone();
-		xorGroups = fmv.computeXorGroups();
-		orGroups = fmv.computeOrGroups();
+
+
 		
 		this.fmv = new FeatureModelVariable(fmv.getIdentifier() + "_synthesis",
 				new FeatureModel<String>(FeatureGraphFactory.mkStringFactory().mkTop()),
@@ -79,10 +81,15 @@ public class InteractiveFMSynthesizer extends Observable{
 		featureComparator = new OutDegreeComparator(big.getImplicationGraph());
 
 		// Check algorithm's parameters
-		this.parentSimilarityMetric = parentSimilarityMetric != null ? 
-				parentSimilarityMetric : new AlwaysZeroMetric();	
+		if (parentSimilarityMetric != null) {
+			this.parentSimilarityMetric = parentSimilarityMetric;
+		} else {
+			this.parentSimilarityMetric = new AlwaysZeroMetric();
+		}
+
 		this.clusteringSimilarityMetric = clusteringSimilarityMetric != null ? 
 				clusteringSimilarityMetric : new SimmetricsMetric(MetricName.SIMMETRICS_SMITHWATERMAN);
+		
 		if (clusteringThreshold >= 0 && clusteringThreshold <=1) {
 			this.clusteringThreshold = clusteringThreshold;		
 		} else {
@@ -95,9 +102,25 @@ public class InteractiveFMSynthesizer extends Observable{
 		}
 			
 
+		// Compute groups if necessary
+		if (this.parentSimilarityMetric.isXorGroupRequired()) {
+			xorGroups = originalFmv.computeXorGroups();	
+		} else {
+			xorGroups = null;
+		}
+		
+		if (this.parentSimilarityMetric.isOrGroupRequired()) {
+			orGroups = originalFmv.computeOrGroups();	
+		} else {
+			orGroups = null;
+		}
+		
 		// Compute clusters and weights
 		computeClusters();
 		computeBIGWeights();
+		
+		
+
 	}
 
 	public InteractiveFMSynthesizer(FeatureModelVariable fmv) {
@@ -255,6 +278,14 @@ public class InteractiveFMSynthesizer extends Observable{
 	 */
 	public void setParentSimilarityMetric(FeatureSimilarityMetric parentSimilarityMetric) {
 		this.parentSimilarityMetric = parentSimilarityMetric;
+		
+		if (parentSimilarityMetric.isXorGroupRequired() && xorGroups == null) {
+			xorGroups = originalFmv.computeXorGroups();
+			
+		}
+		if (parentSimilarityMetric.isOrGroupRequired() && orGroups == null) {
+			orGroups = originalFmv.computeOrGroups();	
+		}
 		computeBIGWeights();
 	}
 
@@ -292,15 +323,84 @@ public class InteractiveFMSynthesizer extends Observable{
 	 * Compute clusters according to the previously specified similarity metric and threshold
 	 */
 	private void computeClusters() {
+		similarityClusters = new HashSet<Set<String>>();
+		
 		HierarchicalFeatureClusterer hierarchicalClustering = new HierarchicalFeatureClusterer();
 		FMExperiment experiment = new FMExperiment(big.getImplicationGraph(), xorGroups, orGroups);
 		Dendrogram dendrogram = hierarchicalClustering.computeDendrogram(experiment, clusteringSimilarityMetric);
-		similarityClusters = hierarchicalClustering.extractClusters(experiment, dendrogram, clusteringThreshold);
+		Set<Set<String>> clusters = hierarchicalClustering.extractClusters(experiment, dendrogram, clusteringThreshold);
 
+		for (Set<String> cluster : clusters) {
+			if (cluster.size() > 1 && checkCluster(cluster)) {
+				similarityClusters.add(cluster);
+			}
+		}
+		 
+		
 		setChanged();
 		notifyObservers();
 	}
 
+	/**
+	 * Check if the cluster is correct w.r.t the BIG
+	 * @param cluster
+	 * @return
+	 */
+	private boolean checkCluster(Set<String> cluster) {
+		return checkClusterForSiblings(cluster) || checkClusterForParentAndChildren(cluster);
+	}
+	
+	/**
+	 * Check if the cluster is formed of siblings w.r.t the BIG
+	 * @param cluster
+	 * @return
+	 */
+	private boolean checkClusterForSiblings(Set<String> cluster) {
+		for (String parent : big.vertices()) {
+			
+			if (!cluster.contains(parent)) {
+				boolean ok = true;
+				
+				for (String child : cluster) {
+					if (!big.containsEdge(child, parent)) {
+						ok = false;
+						break;
+					}
+				}
+				
+				if (ok) {
+					return true;
+				}	
+			}
+		}
+		
+		return false;
+	}
+
+	/**
+	 * Check if the cluster is formed of a parent and its children w.r.t the BIG
+	 * @param cluster
+	 * @return
+	 */
+	private boolean checkClusterForParentAndChildren(Set<String> cluster) {
+		for (String parent : cluster) {
+			boolean ok = true;
+			
+			for (String child : cluster) {
+				if (!parent.equals(child) && !big.containsEdge(child, parent)) {
+					ok = false;
+					break;
+				}
+			}
+			
+			if (ok) {
+				return true;
+			}
+		}
+		
+		return false;
+	}
+	
 	private void computeSupportClusters() {
 		supportClusters = new ArrayList<Set<Set<String>>>();
 

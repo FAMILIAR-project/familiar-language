@@ -14,6 +14,11 @@ public class TransitiveReductionMetric implements FeatureSimilarityMetric {
 
 	private ImplicationGraph<String> implicationGraph;
 	private ImplicationGraph<String> hierarchy;
+	private boolean orRequired;
+	
+	public TransitiveReductionMetric() {
+		orRequired = true;
+	}
 
 	@Override
 	public double similarity(ImplicationGraph<String> implicationGraph, Set<FGroup> xorGroups, Set<FGroup> orGroups, String feature, String parent) {
@@ -28,6 +33,7 @@ public class TransitiveReductionMetric implements FeatureSimilarityMetric {
 		
 		if (hierarchy.containsEdge(feature, parent)) {
 //			System.out.println(feature + " : " + parent);
+//			return new RandomMetric().similarity(null, null, null, null, null);
 			return 1;
 		} else {
 			return 0;
@@ -52,8 +58,6 @@ public class TransitiveReductionMetric implements FeatureSimilarityMetric {
 		
 		selectParents(xorGroups, orGroups);
 		
-		pushUpFalseOptionals();
-		
 		return hierarchy;
 	}
 
@@ -75,7 +79,7 @@ public class TransitiveReductionMetric implements FeatureSimilarityMetric {
 			for (String f : clique) {
 				hierarchy.addVertex(f);
 				
-				if (representativeFeature == null || f.compareTo(representativeFeature) < 0) {
+				if (representativeFeature == null){ // || f.compareTo(representativeFeature) < 0) {
 					representativeFeature = f;
 				} 
 			}
@@ -123,15 +127,15 @@ public class TransitiveReductionMetric implements FeatureSimilarityMetric {
 		}
 	}
 	
-	private void pushUpFalseOptionals() {
-		
-	}
-	
 	private void selectParents(Set<FGroup> xorGroups, Set<FGroup> orGroups) {
 		
 		Set<FGroup> groups = new HashSet<FGroup>();
-		groups.addAll(xorGroups);
-		groups.addAll(orGroups);
+		if (xorGroups != null) {
+			groups.addAll(xorGroups);	
+		}
+		if (orGroups != null) {
+			groups.addAll(orGroups);	
+		}
 		
 		for (String feature : hierarchy.vertices()) {
 			Set<String> possibleParents = hierarchy.parents(feature);
@@ -185,6 +189,20 @@ public class TransitiveReductionMetric implements FeatureSimilarityMetric {
 	@Override
 	public String toString() {
 		return "Transitive reduction metric";
+	}
+
+	@Override
+	public boolean isXorGroupRequired() {
+		return true;
+	}
+
+	@Override
+	public boolean isOrGroupRequired() {
+		return this.orRequired;
+	}
+
+	public void setOrRequired(boolean orRequired) {
+		this.orRequired = orRequired;
 	}
  
 

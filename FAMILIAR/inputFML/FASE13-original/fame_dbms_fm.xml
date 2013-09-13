@@ -1,0 +1,32 @@
+<feature_model name="API">
+<feature_tree>
+:r API (f_API)
+	:m Storage (f_Storage)
+	:m OS (f_OS)
+	:m FAME-DBMS (f_FAME_DBMS)
+	:m Buffer Manager (f_Buffer_Manager)
+	:o Put (f_Put)
+	:o Delete (f_Delete)
+	:o Debug Logging (f_Debug_Logging)
+	:o Get (f_Get)
+	:g [1, 1]
+		: In Memory (f_In_Memory)
+		: Persistent (f_Persistent)
+			:m Memory Allocation (f_Memory_Allocation)
+			:m Page Replication (f_Page_Replication)
+			:g [1, 1]
+				: Static (f_Static)
+				: Dynamic (f_Dynamic)
+			:g [1, 1]
+				: LRU (f_LRU)
+				: LFU (f_LFU)
+	:g [1, 1]
+		: Unindexed (f_Unindexed)
+		: B+ Tree (f_B__Tree)
+	:g [1, 1]
+		: Nut/OS (f_Nut_OS)
+		: Win (f_Win)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

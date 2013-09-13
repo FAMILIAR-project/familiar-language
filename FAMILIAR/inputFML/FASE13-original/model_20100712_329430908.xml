@@ -1,0 +1,26 @@
+<feature_model name="Fees and Charges">
+<feature_tree>
+:r Fees and Charges (f_Fees_and_Charges)
+	:m Minimum Credit Limit (f_Minimum_Credit_Limit)
+	:m Maximum Credit Limit (f_Maximum_Credit_Limit)
+	:m Interest Rates (f_Interest_Rates)
+	:m card product (f_card_product)
+	:m Interest Rate (f_Interest_Rate)
+	:m Variable Interest Rate (f_Variable_Interest_Rate)
+	:m Payments (f_Payments)
+	:m Credit (f_Credit)
+	:m Rewards (f_Rewards)
+	:o GO Business Rewards (f_GO_Business_Rewards)
+	:o Interest Free Days (f_Interest_Free_Days)
+	:o Cash Advance Rate (f_Cash_Advance_Rate)
+	:o Fly-by Points (f_Fly_by_Points)
+	:o Fuel Savings (f_Fuel_Savings)
+	:o Deferred (f_Deferred)
+	:o Balance Transfer Rate (f_Balance_Transfer_Rate)
+	:o Card (f_Card)
+		:o Multiple Cards (f_Multiple_Cards)
+		:o Name on Card (f_Name_on_Card)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

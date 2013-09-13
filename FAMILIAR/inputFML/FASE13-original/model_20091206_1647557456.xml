@@ -1,0 +1,17 @@
+<feature_model name="Input">
+<feature_tree>
+:r Input (f_Input)
+	:m Mobile Game (f_Mobile_Game)
+	:o Output (f_Output)
+		:o Force Feedback (f_Force_Feedback)
+	:o Network Support (f_Network_Support)
+		:o Online Multiplayer (f_Online_Multiplayer)
+	:g [1, *]
+		: Movement Detection (f_Movement_Detection)
+		: Keypad (f_Keypad)
+		: Speech Input (f_Speech_Input)
+		: Touchscreen (f_Touchscreen)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

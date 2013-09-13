@@ -1,0 +1,639 @@
+fmProduct0 = FM (Comparison_of_image_viewers: "Supported desktop environments" Features "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] Windows [MorphOS] "Mac OS" [AmigaOS] ["X Window System"] ; 
+Features: "sort (schemes)" "thumbnails (sizes)" "navigation views" "Unicode support" slideshow "zoom (styles)" "color management (ICC)" Fullscreen hotkeys "search (criteria)" "JPEG Lossless operations" "thumbnail caching" "cache decoded images" metadata print "adjust image (functions)" "selection (styles)" ; 
+"Supported file formats": PNG GIF BMP JPEG TIFF "Other Graphics file formats" PSD ; 
+"navigation views": "directory-tree, albums, calendar, favourites, search results" ; 
+"Other Graphics file formats": "EMF, PCX, PIC, PICT, PSD, PSP, SGI, TGA, WMF, XBM, various camera formats among others" ; 
+!"IBM z/OS";
+!"X Window System";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct1 = FM (Comparison_of_image_viewers: "Supported desktop environments" "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] Windows [MorphOS] "Mac OS" [AmigaOS] ["X Window System"] ; 
+"Supported file formats": "Other Graphics file formats" ; 
+"Other Graphics file formats": "Displays all file types supported by Adobe Creative Suite" ; 
+!"IBM z/OS";
+!"X Window System";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct2 = FM (Comparison_of_image_viewers: "Supported desktop environments" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] Windows [MorphOS] "Mac OS" [AmigaOS] ["X Window System"] ; 
+!"IBM z/OS";
+!"X Window System";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct3 = FM (Comparison_of_image_viewers: "Supported desktop environments" Features "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [Windows] [MorphOS] "Mac OS" [AmigaOS] ["X Window System"] ; 
+"Supported file formats": PNG GIF JPEG "Other Graphics file formats" TIFF PDF PSD ; 
+"Other Graphics file formats": "PSD RAW Formats: ARW, CR2, CRW, MOS, NEF, RAF, RAW, SRW, OLY, FFF, 3FR, DNG. Various video formats including: AVI, MOV, MPEG" ; 
+!"IBM z/OS";
+!"X Window System";
+!Windows;
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct4 = FM (Comparison_of_image_viewers: "General information" ;
+)
+
+fmProduct5 = FM (Comparison_of_image_viewers: "Supported desktop environments" Features "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [MorphOS] Windows ["Mac OS"] [AmigaOS] ["X Window System"] ; 
+Features: ["sort (schemes)"] hotkeys "thumbnails (sizes)" ["search (criteria)"] ["JPEG Lossless operations"] "navigation views" ["Unicode support"] slideshow metadata [print] "adjust image (functions)" "zoom (styles)" ["selection (styles)"] "color management (ICC)" Fullscreen ; 
+"Supported file formats": PNG GIF BMP JPEG ; 
+"navigation views": "Thumbnails(of current folder images or archive)" ; 
+!"sort (schemes)";
+!"X Window System";
+!"selection (styles)";
+!"Mac OS";
+!AmigaOS;
+!MorphOS;
+!"JPEG Lossless operations";
+!"Unicode support";
+!"IBM z/OS";
+!"search (criteria)";
+!"OS/2";
+!print;
+)
+
+fmProduct6 = FM (Comparison_of_image_viewers: "Supported desktop environments" Features "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [MorphOS] [Windows] ["Mac OS"] [AmigaOS] "X Window System" ; 
+Features: ["sort (schemes)"] "thumbnails (sizes)" ["search (criteria)"] "navigation views" slideshow [print] "adjust image (functions)" "zoom (styles)" ["selection (styles)"] Fullscreen ; 
+"Supported file formats": PNG JPEG "Other Graphics file formats" ; 
+"navigation views": "Thumbnails(of current folder images or archive)" ; 
+"Other Graphics file formats": "..." ; 
+!"IBM z/OS";
+!"sort (schemes)";
+!"search (criteria)";
+!"selection (styles)";
+!Windows;
+!"Mac OS";
+!"OS/2";
+!AmigaOS;
+!print;
+!MorphOS;
+)
+
+fmProduct7 = FM (Comparison_of_image_viewers: "Supported desktop environments" Features "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] Windows [MorphOS] ["Mac OS"] [AmigaOS] ["X Window System"] ; 
+Features: "sort (schemes)" "thumbnails (sizes)" "navigation views" "Unicode support" slideshow "zoom (styles)" ["color management (ICC)"] Fullscreen hotkeys "search (criteria)" "JPEG Lossless operations" "thumbnail caching" ["cache decoded images"] metadata [print] "adjust image (functions)" "selection (styles)" ; 
+"Supported file formats": PNG GIF BMP JPEG "Other Graphics file formats" TIFF ; 
+"adjust image (functions)": "crop, rotate and color adjust" ; 
+"Other Graphics file formats": "Most raw file formats including DNG, CR2 and NEF. Video AVI, MP4, MKV and audio MP3." ; 
+!"IBM z/OS";
+!"X Window System";
+!"Mac OS";
+!"cache decoded images";
+!"OS/2";
+!AmigaOS;
+!print;
+!"color management (ICC)";
+!MorphOS;
+)
+
+fmProduct8 = FM (Comparison_of_image_viewers: "Supported desktop environments" Features "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [MorphOS] [Windows] "Mac OS" [AmigaOS] "X Window System" ; 
+Features: "sort (schemes)" "thumbnails (sizes)" "navigation views" "Unicode support" slideshow "zoom (styles)" "color management (ICC)" Fullscreen hotkeys "search (criteria)" "JPEG Lossless operations" "thumbnail caching" "cache decoded images" metadata print "adjust image (functions)" "selection (styles)" ; 
+"Supported file formats": PNG GIF BMP JPEG "Other Graphics file formats" TIFF ; 
+"Other Graphics file formats": "JPEG 2000, PCX, WMF, PNM, PPM, XCF, XPM, PGX, all RAW formats, DNG, MPEG, MPO, MPE, AVI, MOV, ASF" ; 
+!"IBM z/OS";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct9 = FM (Comparison_of_image_viewers: "Supported desktop environments" "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [MorphOS] [Windows] ["Mac OS"] [AmigaOS] "X Window System" ; 
+"Supported file formats": PNG GIF BMP JPEG TIFF "Other Graphics file formats" ; 
+"Other Graphics file formats": "PNM, RAS, ICO, XPM, SVG" ; 
+!"IBM z/OS";
+!Windows;
+!"Mac OS";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct10 = FM (Comparison_of_image_viewers: "Supported desktop environments" Features "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] Windows [MorphOS] ["Mac OS"] [AmigaOS] ["X Window System"] ; 
+Features: "sort (schemes)" "thumbnails (sizes)" "navigation views" "Unicode support" slideshow "zoom (styles)" "color management (ICC)" Fullscreen hotkeys ["search (criteria)"] ["JPEG Lossless operations"] "thumbnail caching" "cache decoded images" metadata [print] ["adjust image (functions)"] "selection (styles)" ; 
+"Supported file formats": PNG BMP JPEG ["Other Graphics file formats"] TIFF PSD ; 
+!"IBM z/OS";
+!"search (criteria)";
+!"X Window System";
+!"Mac OS";
+!"adjust image (functions)";
+!"OS/2";
+!AmigaOS;
+!print;
+!MorphOS;
+)
+
+fmProduct11 = FM (Comparison_of_image_viewers: "Supported desktop environments" Features "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] Windows [MorphOS] ["Mac OS"] [AmigaOS] ["X Window System"] ; 
+Features: "sort (schemes)" "thumbnails (sizes)" "navigation views" ["Unicode support"] slideshow "zoom (styles)" Fullscreen "JPEG Lossless operations" "thumbnail caching" ["cache decoded images"] [metadata] print "adjust image (functions)" "selection (styles)" ; 
+"Supported file formats": PNG GIF BMP JPEG "Other Graphics file formats" TIFF ; 
+"navigation views": "dir-tree" ; 
+PNG: "PNG/PNG" ; 
+GIF: "GIF/GIF" ; 
+BMP: "BMP/BMP" ; 
+JPEG: "JPEG/JPEG" ; 
+"Other Graphics file formats": "loading of: JPEG 2000, PCX, WMF, ICO, CUR, TGA, CRW, saving to: JPEG 2000, PCX, TGA" ; 
+TIFF: "TIFF/TIFF" ; 
+!"IBM z/OS";
+!"X Window System";
+!"Mac OS";
+!"cache decoded images";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+!"Unicode support";
+)
+
+fmProduct12 = FM (Comparison_of_image_viewers: "Supported desktop environments" "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [MorphOS] Windows ["Mac OS"] [AmigaOS] ["X Window System"] ; 
+"Supported file formats": PNG BMP JPEG ; 
+!"IBM z/OS";
+!"X Window System";
+!"Mac OS";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct13 = FM (Comparison_of_image_viewers: "Supported desktop environments" Features "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [MorphOS] [Windows] ["Mac OS"] [AmigaOS] "X Window System" ; 
+Features: "sort (schemes)" "thumbnails (sizes)" "navigation views" slideshow metadata "zoom (styles)" Fullscreen ; 
+"Supported file formats": PNG GIF JPEG "Other Graphics file formats" TIFF ; 
+"navigation views": "list, file-tree" ; 
+"Other Graphics file formats": "CR2, CRW, DNG, MRW, NEF, ORF, PEF, PPM, RAF, RAW, SRF, SVG" ; 
+!"IBM z/OS";
+!Windows;
+!"Mac OS";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct14 = FM (Comparison_of_image_viewers: "Supported desktop environments" Features "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [MorphOS] [Windows] ["Mac OS"] [AmigaOS] "X Window System" ; 
+Features: "sort (schemes)" "thumbnails (sizes)" "navigation views" slideshow metadata "zoom (styles)" Fullscreen ; 
+"Supported file formats": PNG GIF BMP JPEG TIFF "Other Graphics file formats" ; 
+"navigation views": "list, file-tree" ; 
+"Other Graphics file formats": "CR2, CRW, DNG, ICO, MRW, NEF, ORF, PEF, PPM, RAF, RAW, SRF, SVG" ; 
+!"IBM z/OS";
+!Windows;
+!"Mac OS";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct15 = FM (Comparison_of_image_viewers: "Supported desktop environments" Features "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [Windows] [MorphOS] "Mac OS" [AmigaOS] "X Window System" ; 
+Features: "sort (schemes)" "thumbnails (sizes)" hotkeys "search (criteria)" "navigation views" "thumbnail caching" "cache decoded images" metadata slideshow print "zoom (styles)" "adjust image (functions)" "selection (styles)" Fullscreen ; 
+"Supported file formats": PNG GIF BMP JPEG TIFF "Other Graphics file formats" ; 
+"navigation views": "list, dir-tree, collection" ; 
+"Other Graphics file formats": "3FR, ANI, APM, ARW, CR2, CRW, CUR, DCR, DNG, ERF, ICNS, ICO, JP2/JPC/JPX/J2K/JPF, JPS, K25, KDC, MEF, MPO, MOS, MRW, NEF, ORF, PCX, PEF, PBM/PGM/PNM/PPM, PTX, QIF/QTIF (QuickTime Image Format), R3D, RAF, RAS (Sun raster), RAW, SR2, SRF, SVG/SVGZ, TGA/TARGA, WBMP, WMF, X3F, XBM, XPM " ; 
+!"IBM z/OS";
+!Windows;
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct16 = FM (Comparison_of_image_viewers: "Supported desktop environments" "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [MorphOS] [Windows] "Mac OS" [AmigaOS] ["X Window System"] ; 
+"Supported file formats": PNG GIF BMP JPEG PDF "Other Graphics file formats" TIFF PSD ; 
+"Other Graphics file formats": "190 types read, 79 types saved" ; 
+!"IBM z/OS";
+!"X Window System";
+!Windows;
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct17 = FM (Comparison_of_image_viewers: "Supported desktop environments" Features "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [Windows] [MorphOS] ["Mac OS"] [AmigaOS] "X Window System" ; 
+Features: "sort (schemes)" "thumbnails (sizes)" "navigation views" slideshow "zoom (styles)" Fullscreen hotkeys "search (criteria)" "JPEG Lossless operations" ["thumbnail caching"] [metadata] print "adjust image (functions)" "selection (styles)" ; 
+"Supported file formats": ["Other Graphics file formats"] ; 
+"navigation views": "list, icon, subfolders, categories" ; 
+!"IBM z/OS";
+!Windows;
+!"Mac OS";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+!"Other Graphics file formats";
+)
+
+fmProduct18 = FM (Comparison_of_image_viewers: "Supported desktop environments" Features "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [MorphOS] [Windows] ["Mac OS"] [AmigaOS] "X Window System" ; 
+Features: "sort (schemes)" "thumbnails (sizes)" "navigation views" "Unicode support" slideshow "zoom (styles)" Fullscreen hotkeys "search (criteria)" "JPEG Lossless operations" "thumbnail caching" metadata print "adjust image (functions)" ; 
+"Supported file formats": PNG GIF BMP JPEG "Other Graphics file formats" TIFF PSD ; 
+"Other Graphics file formats": "MNG, SVG, MNG, XCF etc." ; 
+!"IBM z/OS";
+!Windows;
+!"Mac OS";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct19 = FM (Comparison_of_image_viewers: "Supported desktop environments" Features "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] Windows [MorphOS] "Mac OS" [AmigaOS] ["X Window System"] ; 
+Features: "sort (schemes)" hotkeys "thumbnails (sizes)" "search (criteria)" "navigation views" slideshow metadata print "zoom (styles)" "adjust image (functions)" "selection (styles)" Fullscreen ; 
+"Supported file formats": PNG GIF BMP JPEG "Other Graphics file formats" TIFF ; 
+"search (criteria)": "tags, comments, rename series, create HTML album" ; 
+"Other Graphics file formats": "Read/Write: DIB, ICO, TGA, PCX, DiCOM." ; 
+!"IBM z/OS";
+!"X Window System";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct20 = FM (Comparison_of_image_viewers: "Supported desktop environments" "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [MorphOS] Windows ["Mac OS"] [AmigaOS] ["X Window System"] ; 
+"Supported file formats": PNG GIF BMP JPEG "Other Graphics file formats" TIFF PSD ; 
+"Other Graphics file formats": "ANI, ANM (Deluxe Paint Animation), CorelDRAW drawing (CDR,CDT,PAT,CMX), CUR, DCX, DDS, EMF, ICL, ICO, MacPaint, MNG, PBM, PCD, PCX, PGM, PIC, CEL, PPM, PSD, PSP (Paint Shop Pro image), RAS, RLA, RLE, SGI (RGB,BW), SPR (Pro Motion Animation), TGA, WBMP, WMF, XBM, XCF, XPM" ; 
+!"IBM z/OS";
+!"X Window System";
+!"Mac OS";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct21 = FM (Comparison_of_image_viewers: "Supported desktop environments" "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [MorphOS] Windows ["Mac OS"] [AmigaOS] ["X Window System"] ; 
+"Supported file formats": "Other Graphics file formats" ; 
+"Other Graphics file formats": "over 50 types including RAW, also Unicode" ; 
+!"IBM z/OS";
+!"X Window System";
+!"Mac OS";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct22 = FM (Comparison_of_image_viewers: "Supported desktop environments" "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [MorphOS] Windows "Mac OS" [AmigaOS] "X Window System" ; 
+"Supported file formats": "Other Graphics file formats" ; 
+"Other Graphics file formats": "12 types" ; 
+!"IBM z/OS";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct23 = FM (Comparison_of_image_viewers: "Supported desktop environments" "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [MorphOS] [Windows] "Mac OS" [AmigaOS] ["X Window System"] ; 
+"Supported file formats": PNG GIF JPEG "Other Graphics file formats" PSD ; 
+"Other Graphics file formats": "RAW (All QuickTime supported images), PSD (Leopard), AVI (Leopard), MOV (Leopard)" ; 
+!"IBM z/OS";
+!"X Window System";
+!Windows;
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct24 = FM (Comparison_of_image_viewers: "Supported desktop environments" Features "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [MorphOS] Windows ["Mac OS"] [AmigaOS] ["X Window System"] ; 
+Features: "sort (schemes)" "thumbnails (sizes)" "navigation views" "Unicode support" slideshow "zoom (styles)" "color management (ICC)" Fullscreen hotkeys "search (criteria)" "JPEG Lossless operations" ["thumbnail caching"] ["cache decoded images"] metadata print "adjust image (functions)" "selection (styles)" ; 
+"Supported file formats": PNG GIF BMP JPEG TIFF PDF ["Other Graphics file formats"] PSD ; 
+"navigation views": "dir-tree, search results" ; 
+!"IBM z/OS";
+!"X Window System";
+!"thumbnail caching";
+!"Mac OS";
+!"cache decoded images";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct25 = FM (Comparison_of_image_viewers: "Supported desktop environments" Features "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [MorphOS] Windows ["Mac OS"] [AmigaOS] ["X Window System"] ; 
+Features: "sort (schemes)" "thumbnails (sizes)" "navigation views" "Unicode support" slideshow "zoom (styles)" "color management (ICC)" Fullscreen hotkeys "search (criteria)" "thumbnail caching" "cache decoded images" metadata print "adjust image (functions)" "selection (styles)" ; 
+"Supported file formats": PNG GIF BMP JPEG PDF "Other Graphics file formats" TIFF ; 
+"Other Graphics file formats": "3100+ types read, 250 types saved (3D, Images, Audio, Video, Text)" ; 
+!"IBM z/OS";
+!"X Window System";
+!"Mac OS";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct26 = FM (Comparison_of_image_viewers: "Supported desktop environments" "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [MorphOS] [Windows] ["Mac OS"] [AmigaOS] "X Window System" ; 
+"Supported file formats": "Other Graphics file formats" ; 
+"Other Graphics file formats": "51 types" ; 
+!"IBM z/OS";
+!Windows;
+!"Mac OS";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct27 = FM (Comparison_of_image_viewers: "Supported desktop environments" Features "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [MorphOS] [Windows] ["Mac OS"] [AmigaOS] "X Window System" ; 
+Features: "sort (schemes)" "thumbnails (sizes)" hotkeys "search (criteria)" "navigation views" [metadata] slideshow "adjust image (functions)" "zoom (styles)" "selection (styles)" Fullscreen ; 
+"Supported file formats": "Other Graphics file formats" ; 
+"sort (schemes)": "by date" ; 
+"navigation views": "views search results" ; 
+"Other Graphics file formats": "Photo formats supported by KDE; AVI, MPEG, RAW" ; 
+!"IBM z/OS";
+!Windows;
+!"Mac OS";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct28 = FM (Comparison_of_image_viewers: "Supported desktop environments" "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [Windows] [MorphOS] ["Mac OS"] [AmigaOS] "X Window System" ; 
+"Supported file formats": PSD ; 
+PSD: "|| iPhoto Clone" ; 
+!"IBM z/OS";
+!Windows;
+!"Mac OS";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct29 = FM (Comparison_of_image_viewers: "Supported desktop environments" "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] Windows [MorphOS] "Mac OS" [AmigaOS] ["X Window System"] ; 
+"Supported file formats": PNG GIF JPEG PDF TIFF "Other Graphics file formats" PSD ; 
+"Other Graphics file formats": "Supports over true00 file formats for images, videos and documents, including: PSD, IIQ, CR, CRW, MOS, NEF, RAF, RAW, SRW, DNG, EIP, DOC" ; 
+!"IBM z/OS";
+!"X Window System";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct30 = FM (Comparison_of_image_viewers: "Supported desktop environments" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [MorphOS] Windows ["Mac OS"] [AmigaOS] ["X Window System"] ; 
+!"IBM z/OS";
+!"X Window System";
+!"Mac OS";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct31 = FM (Comparison_of_image_viewers: "Supported desktop environments" Features "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] Windows [MorphOS] "Mac OS" [AmigaOS] ["X Window System"] ; 
+Features: ["sort (schemes)"] "thumbnails (sizes)" "navigation views" "Unicode support" slideshow ["zoom (styles)"] "color management (ICC)" [Fullscreen] hotkeys "search (criteria)" "JPEG Lossless operations" "thumbnail caching" ["cache decoded images"] [metadata] print ["adjust image (functions)"] "selection (styles)" ; 
+"Supported file formats": PNG GIF BMP JPEG TIFF "Other Graphics file formats" ; 
+"navigation views": "directory-tree, albums, timeline" ; 
+"Other Graphics file formats": "8 types including TGA, RAW, and some movie formats" ; 
+!"IBM z/OS";
+!"X Window System";
+!"cache decoded images";
+!"OS/2";
+!"zoom (styles)";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct32 = FM (Comparison_of_image_viewers: "Supported desktop environments" "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [Windows] [MorphOS] "Mac OS" [AmigaOS] ["X Window System"] ; 
+"Supported file formats": PNG GIF BMP JPEG PDF TIFF "Other Graphics file formats" ; 
+"Other Graphics file formats": "All QuickTime images:" ; 
+!"IBM z/OS";
+!"X Window System";
+!Windows;
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct33 = FM (Comparison_of_image_viewers: "General information" ;
+)
+
+fmProduct34 = FM (Comparison_of_image_viewers: "Supported desktop environments" Features "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [MorphOS] [Windows] ["Mac OS"] [AmigaOS] "X Window System" ; 
+Features: "sort (schemes)" "thumbnails (sizes)" "navigation views" "Unicode support" slideshow "zoom (styles)" ["color management (ICC)"] Fullscreen hotkeys ["search (criteria)"] ["JPEG Lossless operations"] "thumbnail caching" ["cache decoded images"] metadata print "adjust image (functions)" "selection (styles)" ; 
+"Supported file formats": PNG JPEG TIFF "Other Graphics file formats" ; 
+"navigation views": "Thumbs, Events (dates), tags" ; 
+"Other Graphics file formats": "RAW and some video formats" ; 
+!"IBM z/OS";
+!"search (criteria)";
+!Windows;
+!"Mac OS";
+!"cache decoded images";
+!"OS/2";
+!AmigaOS;
+!"color management (ICC)";
+!MorphOS;
+!"JPEG Lossless operations";
+)
+
+fmProduct35 = FM (Comparison_of_image_viewers: "Supported desktop environments" "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [MorphOS] [Windows] ["Mac OS"] [AmigaOS] "X Window System" ; 
+"Supported file formats": PNG GIF JPEG "Other Graphics file formats" PSD ; 
+"Other Graphics file formats": "XCF etc." ; 
+!"IBM z/OS";
+!Windows;
+!"Mac OS";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct36 = FM (Comparison_of_image_viewers: "Supported desktop environments" Features "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [MorphOS] [Windows] "Mac OS" [AmigaOS] ["X Window System"] ; 
+Features: ["sort (schemes)"] "thumbnails (sizes)" hotkeys ["search (criteria)"] "navigation views" [metadata] slideshow [print] "zoom (styles)" "adjust image (functions)" Fullscreen ; 
+"Supported file formats": PNG GIF JPEG "Other Graphics file formats" ; 
+"Other Graphics file formats": "JPEG2000, any other Core Image supported format. Also opens 7-Zip, LHA, RAR, ZIP" ; 
+!"IBM z/OS";
+!"search (criteria)";
+!"X Window System";
+!Windows;
+!"OS/2";
+!AmigaOS;
+!print;
+!metadata;
+!MorphOS;
+)
+
+fmProduct37 = FM (Comparison_of_image_viewers: "General information" ;
+)
+
+fmProduct38 = FM (Comparison_of_image_viewers: "Supported desktop environments" "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] MorphOS Windows ["Mac OS"] AmigaOS ["X Window System"] ; 
+"Supported file formats": PNG GIF BMP JPEG TIFF "Other Graphics file formats" PDF PSD ; 
+TIFF: "TIFF (multipage)" ; 
+"Other Graphics file formats": "Reads more than true40 file formats and writes more than 60." ; 
+!"IBM z/OS";
+!"X Window System";
+!"Mac OS";
+!"OS/2";
+)
+
+fmProduct39 = FM (Comparison_of_image_viewers: "Supported desktop environments" Features "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] Windows [MorphOS] ["Mac OS"] [AmigaOS] ["X Window System"] ; 
+Features: ["sort (schemes)"] "thumbnails (sizes)" ["navigation views"] "Unicode support" [slideshow] "zoom (styles)" ["color management (ICC)"] Fullscreen hotkeys ["search (criteria)"] ["JPEG Lossless operations"] ["thumbnail caching"] ["cache decoded images"] [metadata] print ["adjust image (functions)"] ["selection (styles)"] ; 
+"Supported file formats": PNG GIF BMP JPEG TIFF PDF "Other Graphics file formats" PSD ; 
+TIFF: "TIFF (multipage)" ; 
+"Other Graphics file formats": "TXT, EMF, WMF, DjVu, XPS" ; 
+!"sort (schemes)";
+!"X Window System";
+!"selection (styles)";
+!"thumbnail caching";
+!"Mac OS";
+!AmigaOS;
+!MorphOS;
+!"JPEG Lossless operations";
+!"navigation views";
+!"IBM z/OS";
+!"search (criteria)";
+!slideshow;
+!"cache decoded images";
+!"adjust image (functions)";
+!"OS/2";
+!"color management (ICC)";
+!metadata;
+)
+
+fmProduct40 = FM (Comparison_of_image_viewers: "Supported desktop environments" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [MorphOS] Windows ["Mac OS"] [AmigaOS] ["X Window System"] ; 
+!"IBM z/OS";
+!"X Window System";
+!"Mac OS";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct41 = FM (Comparison_of_image_viewers: "Supported desktop environments" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [MorphOS] Windows ["Mac OS"] [AmigaOS] ["X Window System"] ; 
+!"IBM z/OS";
+!"X Window System";
+!"Mac OS";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct42 = FM (Comparison_of_image_viewers: "Supported desktop environments" Features "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [MorphOS] Windows ["Mac OS"] [AmigaOS] ["X Window System"] ; 
+Features: ["sort (schemes)"] ["thumbnails (sizes)"] ["navigation views"] "Unicode support" slideshow "zoom (styles)" Fullscreen hotkeys ["search (criteria)"] "JPEG Lossless operations" ["thumbnail caching"] "cache decoded images" metadata print ["adjust image (functions)"] ["selection (styles)"] ; 
+"Supported file formats": PNG GIF BMP JPEG "Other Graphics file formats" TIFF ; 
+"Other Graphics file formats": "WMF, EMF, ICO" ; 
+!"sort (schemes)";
+!"X Window System";
+!"thumbnail caching";
+!"selection (styles)";
+!"Mac OS";
+!"thumbnails (sizes)";
+!AmigaOS;
+!MorphOS;
+!"navigation views";
+!"IBM z/OS";
+!"search (criteria)";
+!"adjust image (functions)";
+!"OS/2";
+)
+
+fmProduct43 = FM (Comparison_of_image_viewers: "Supported desktop environments" Features "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [MorphOS] Windows "Mac OS" [AmigaOS] ["X Window System"] ; 
+Features: ["sort (schemes)"] "thumbnails (sizes)" "navigation views" ["Unicode support"] slideshow "zoom (styles)" "color management (ICC)" Fullscreen hotkeys "search (criteria)" "JPEG Lossless operations" "thumbnail caching" "cache decoded images" metadata print "adjust image (functions)" "selection (styles)" ; 
+"Supported file formats": PNG GIF BMP [JPEG] TIFF "Other Graphics file formats" PSD ; 
+"navigation views": "dir-tree, favourites, categories" ; 
+TIFF: "TIFF (multipage)" ; 
+"Other Graphics file formats": "reads about 400 formats, including: FAX, NEF, CRW, RWZ, Paint Shop Pro Photo PSPIMAGE, EPS, WMF, DICOM; writes about 50 formats" ; 
+!"IBM z/OS";
+!"sort (schemes)";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+!"Unicode support";
+)
+
+fmProduct44 = FM (Comparison_of_image_viewers: "Supported desktop environments" "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [MorphOS] [Windows] ["Mac OS"] [AmigaOS] "X Window System" ; 
+"Supported file formats": PNG GIF BMP JPEG "Other Graphics file formats" TIFF ; 
+PNG: "PNG (with patch)" ; 
+"Other Graphics file formats": "PBM, PGM, PPM, XPM, Sun Rasterfile, Targa, RGB, PCX, FITS, PM, PostScript" ; 
+!"IBM z/OS";
+!Windows;
+!"Mac OS";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct45 = FM (Comparison_of_image_viewers: "Supported desktop environments" Features "Supported file formats" "General information" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] [MorphOS] Windows ["Mac OS"] [AmigaOS] ["X Window System"] ; 
+Features: "sort (schemes)" "thumbnails (sizes)" "navigation views" "Unicode support" slideshow "zoom (styles)" "color management (ICC)" Fullscreen hotkeys "search (criteria)" "JPEG Lossless operations" "thumbnail caching" "cache decoded images" metadata print "adjust image (functions)" "selection (styles)" ; 
+"Supported file formats": PNG GIF BMP JPEG "Other Graphics file formats" TIFF ; 
+"navigation views": "dir-tree, albums, CD compilations, media archive, search results, web albums" ; 
+GIF: "GIF/aGIF" ; 
+"Other Graphics file formats": "HDP/WDP, PSD, PSB, PSP/PSPIMAGE, DIB/RLE, J2K/JPC/JP2, PAM, PBM, PGM, PNM, PCD, PCX, WBMP/WBM, TGA, ICO, MAC, WPG, BMI, MDM, THN, ARW/SR2, CRW/CR2, DNG, ERF, KDC, MEF, MRW, NEF, ORF, RAF, RAW, X3F, 3FR, RW2, PEF, SRF, DCM, RWZ, stereo pictures: JPS, PNS, BMS." ; 
+!"IBM z/OS";
+!"X Window System";
+!"Mac OS";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct46 = FM (Comparison_of_image_viewers: "General information" ;
+)
+
+fmProduct47 = FM (Comparison_of_image_viewers: "Supported desktop environments" "Supported file formats" ; 
+"Supported desktop environments": ["IBM z/OS"] ["OS/2"] Windows [MorphOS] ["Mac OS"] [AmigaOS] ["X Window System"] ; 
+"Supported file formats": PNG GIF BMP JPEG "Other Graphics file formats" PDF TIFF ; 
+"Other Graphics file formats": "RAR, ZIP, TAR, LZH, ARJ, CAB, GZ, BZ2, 7Z, DJVU, WEBP" ; 
+!"IBM z/OS";
+!"X Window System";
+!"Mac OS";
+!"OS/2";
+!AmigaOS;
+!MorphOS;
+)
+
+fmProduct48 = FM (Comparison_of_image_viewers: Features "Supported file formats" ; 
+Features: "sort (schemes)" [hotkeys] "thumbnails (sizes)" "search (criteria)" "navigation views" "thumbnail caching" "cache decoded images" slideshow metadata print "zoom (styles)" "adjust image (functions)" "selection (styles)" Fullscreen ; 
+"Supported file formats": "Other Graphics file formats" ; 
+"navigation views": "thumbs, list, events, tags" ; 
+"Other Graphics file formats": "Hundreds; all types supported by ImageMagick and FFmpeg plus InDesign" ; 
+!hotkeys;
+)
+
+fmProduct49 = FM (Comparison_of_image_viewers: Features ; 
+Features: ["sort (schemes)"] ["thumbnails (sizes)"] "navigation views" slideshow "zoom (styles)" Fullscreen hotkeys ["search (criteria)"] "JPEG Lossless operations" metadata print "adjust image (functions)" ["selection (styles)"] ; 
+"navigation views": "Thumbnails(of current folder images)" ; 
+!"sort (schemes)";
+!"search (criteria)";
+!"selection (styles)";
+)
+
+fmProduct50 = FM (Comparison_of_image_viewers: Features ; 
+Features: "sort (schemes)" "thumbnails (sizes)" "navigation views" "Unicode support" slideshow "zoom (styles)" "color management (ICC)" Fullscreen hotkeys "search (criteria)" "thumbnail caching" "cache decoded images" metadata print "adjust image (functions)" "selection (styles)" ;
+)
+
+fmProduct51 = FM (Comparison_of_image_viewers: Features ; 
+Features: ["sort (schemes)"] hotkeys "thumbnails (sizes)" ["search (criteria)"] "thumbnail caching" ["cache decoded images"] slideshow [metadata] print "adjust image (functions)" ["selection (styles)"] [Fullscreen] ; 
+!"search (criteria)";
+!"cache decoded images";
+!Fullscreen;
+)
+

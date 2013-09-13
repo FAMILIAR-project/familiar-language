@@ -23,4 +23,14 @@ public class RandomMetric implements FeatureSimilarityMetric {
 	public String toString() {
 		return "Random metric";
 	}
+
+	@Override
+	public boolean isXorGroupRequired() {
+		return false;
+	}
+
+	@Override
+	public boolean isOrGroupRequired() {
+		return false;
+	}
 }

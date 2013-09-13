@@ -18,15 +18,13 @@ import gsd.synthesis.FeatureEdge;
 import gsd.synthesis.FeatureGraph;
 
 public class ConstraintGenerator {
-
-	private static final String OUTPUT_FOLDER = "inputFML/splot-modified/";
-	
-	private static final double CONSTRAINT_PER_FEATURE = 1;
-	private static final double PERCENTAGE_IMPLIES = 0.8;
-
 	private Random random;
 
 	public static void main(String[] args) {
+		final String OUTPUT_FOLDER = "inputFML/splot-modified/";
+		final int CONSTRAINT_PER_FEATURE = 1;
+		final double PERCENTAGE_IMPLIES = 0.8;
+		
 		ASE2013KSynthesisTest ase2013kSynthesisTest = new ASE2013KSynthesisTest();
 		List<FeatureModelVariable> fms = ase2013kSynthesisTest.getSPLOTFeatureModels();
 		ConstraintGenerator constraintGenerator = new ConstraintGenerator();
@@ -34,7 +32,8 @@ public class ConstraintGenerator {
 		for (FeatureModelVariable fm : fms) {
 			System.out.println(fm.getCompleteIdentifier());
 			constraintGenerator.clearFM(fm);
-			int nbAddedConstraints = constraintGenerator.generateConstraints(fm, CONSTRAINT_PER_FEATURE, PERCENTAGE_IMPLIES);
+			int nbAddedConstraints = constraintGenerator.generateConstraints(fm, CONSTRAINT_PER_FEATURE * (fm.features().size() -1), PERCENTAGE_IMPLIES);
+			constraintGenerator.saveFM(fm, OUTPUT_FOLDER);
 			System.out.println(nbAddedConstraints + " added constraints");
 		}
 	}
@@ -47,9 +46,11 @@ public class ConstraintGenerator {
 	/**
 	 * Remove all the constraints and keep only the hierarchy with optional features
 	 * @param fm
+	 * @return 
 	 */
-	private void clearFM(FeatureModelVariable fm) {
+	public void clearFM(FeatureModelVariable fm) {
 		fm.removeAllConstraints();
+		
 		FeatureGraph<String> diagram = fm.getFm().getDiagram();
 		for (FeatureEdge edge : new HashSet<FeatureEdge>(diagram.edges())) {
 			if (edge.getType() != FeatureEdge.HIERARCHY) {
@@ -62,19 +63,18 @@ public class ConstraintGenerator {
 	/**
 	 * Generate constraints and save the new FM
 	 * @param percentageImplies 
-	 * @param constraintPerFeature 
+	 * @param maxConstraints : maximal number of constraint added
 	 * @param fms
 	 * @return number of added constraints
 	 */
-	public int generateConstraints(FeatureModelVariable fm, double constraintPerFeature, double percentageImplies) {
+	public int generateConstraints(FeatureModelVariable fm, int maxConstraints, double percentageImplies) {
 
 		ImplicationGraph<String> big = fm.computeImplicationGraph();
 		Set<Expression<String>> excludesEdges = fm.computeExcludesEdge();
 
-		int maxNbAddedConstraints = (int) (fm.features().size() * constraintPerFeature);
 		int nbAddedConstraints = 0;
 
-		for (int i = 0; i < maxNbAddedConstraints ; i++) {
+		for (int i = 0; i < maxConstraints ; i++) {
 			boolean addedConstraint = false;
 			for (int nbTry = 0; nbTry<10 && !addedConstraint; nbTry++) {
 				if (random.nextDouble() < percentageImplies) {
@@ -87,9 +87,7 @@ public class ConstraintGenerator {
 				nbAddedConstraints++;
 			}
 		}
-
-		saveFM(fm);
-
+		
 		return nbAddedConstraints;
 
 	}
@@ -214,9 +212,10 @@ public class ConstraintGenerator {
 	/**
 	 * Save the FM in the ouput folder
 	 * @param fm
+	 * @param outputFolder 
 	 */
-	private void saveFM(FeatureModelVariable fm) {
-		File computedFMFile = new File(OUTPUT_FOLDER + fm.getIdentifier().substring(8) + ".xml");
+	private void saveFM(FeatureModelVariable fm, String outputFolder) {
+		File computedFMFile = new File(outputFolder + fm.getIdentifier().substring(8) + ".xml");
 		try {
 			PrintStream standardOutput = System.out;
 			PrintStream fileOutput = new PrintStream(computedFMFile);
