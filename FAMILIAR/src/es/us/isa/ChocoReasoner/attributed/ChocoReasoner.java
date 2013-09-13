@@ -39,6 +39,7 @@ import static choco.Choco.or;
 import static choco.Choco.plus;
 import static choco.Choco.power;
 import static choco.Choco.sum;
+import inria.FAMILIAR.Model.ConstantIntConverter;
 import inria.FAMILIAR.Model.Feature;
 import inria.FAMILIAR.Model.GenericAttribute;
 import inria.FAMILIAR.Model.Relation;
@@ -59,7 +60,6 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.SortedSet;
 import java.util.StringTokenizer;
 import java.util.TreeSet;
@@ -84,7 +84,7 @@ public class ChocoReasoner extends FeatureModelReasoner {
 	protected boolean reify;
 	protected ChocoParser chocoParser;
 	protected List<Constraint> configConstraints;
-
+	protected ConstantIntConverter constantIntConverter = new ConstantIntConverter();
 	public ChocoReasoner() {
 		super();
 		reset();
@@ -112,68 +112,72 @@ public class ChocoReasoner extends FeatureModelReasoner {
 		this.problem = problem;
 	}
 
-//	@Override
-//	protected void addRoot_(Feature feature) {
-//		IntegerVariable root = variables.get(feature.getName());
-//		problem.addConstraint(eq(root, 1));
-//	}
-//
-//	@Override
-//	protected void addMandatory_(Relation rel,
-//			Feature child, Feature parent) {
-//
-//		Constraint mandatoryConstraint = createMandatory(rel, child, parent);
-//		problem.addConstraint(mandatoryConstraint);
-//
-//	}
-//
-//	@Override
-//	protected void addOptional_(Relation rel,
-//			Feature child, Feature parent) {
-//
-//		Constraint optionalConstraint = createOptional(rel, child, parent);
-//		problem.addConstraint(optionalConstraint);
-//
-//	}
-//
-//	@Override
-//	protected void addCardinality_(Relation rel,
-//			Feature child, Feature parent,
-//			Iterator<Cardinality> cardinalities) {
-//
-//		Constraint cardConstraint = createCardinality(rel, child, parent,
-//				cardinalities);
-//		problem.addConstraint(cardConstraint);
-//
-//	}
-//
-//	@Override
-//	protected void addRequires_(Relation rel,
-//			Feature origin,
-//			Feature destination) {
-//
-//		Constraint requiresConstraint = createRequires(rel, origin, destination);
-//		problem.addConstraint(requiresConstraint);
-//
-//	}
-//
-//	@Override
-//	protected void addExcludes_(Relation rel,
-//			Feature origin, Feature dest) {
-//
-//		Constraint excludesConstraint = createExcludes(rel, origin, dest);
-//		problem.addConstraint(excludesConstraint);
-//
-//	}
-//
-//	@Override
-//	public void addFeature_(Feature f,
-//			Collection<Cardinality> cards) {
-//
-//		createFeature(f, cards);
-//		addAttributes(f);
-//
-//	}
+
+	public void addRoot(Feature feature) {
+		IntegerVariable root = variables.get(feature.getName());
+		problem.addConstraint(eq(root, 1));
+	}
+
+	public void addMandatory(Relation rel,
+			Feature child, Feature parent) {
+
+		Constraint mandatoryConstraint = createMandatory(rel, child, parent);
+		problem.addConstraint(mandatoryConstraint);
+
+	}
+
+	@Override
+	public void addOptional(Relation rel,
+			Feature child, Feature parent) {
+
+		Constraint optionalConstraint = createOptional(rel, child, parent);
+		problem.addConstraint(optionalConstraint);
+
+	}
+
+	@Override
+	public void addCardinality(Relation rel,
+			Feature child, Feature parent,
+			Iterator<Cardinality> cardinalities) {
+
+		Constraint cardConstraint = createCardinality(rel, child, parent,
+				cardinalities);
+		problem.addConstraint(cardConstraint);
+
+	}
+
+	@Override
+	public void addRequires(Relation rel,
+			Feature origin,
+			Feature destination) {
+
+		Constraint requiresConstraint = createRequires(rel, origin, destination);
+		problem.addConstraint(requiresConstraint);
+
+	}
+
+	@Override
+	public void addExcludes(Relation rel,
+			Feature origin, Feature dest) {
+
+		Constraint excludesConstraint = createExcludes(rel, origin, dest);
+		problem.addConstraint(excludesConstraint);
+
+	}
+
+	@Override
+	public void addFeature(Feature f,
+			Collection<Cardinality> cards) {
+
+		createFeature(f, cards);
+		try {
+			addAttributes(f);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
 
 	protected void createFeature(Feature f,
 			Collection<Cardinality> cards) {
@@ -367,17 +371,17 @@ public class ChocoReasoner extends FeatureModelReasoner {
 
 	}
 
-//	@Override
-//	protected void addSet_(Relation rel,
-//			Feature parent,
-//			Collection<Feature> children,
-//			Collection<Cardinality> cardinalities) {
-//
-//		Constraint setConstraint = createSet(rel, parent, children,
-//				cardinalities);
-//		problem.addConstraint(setConstraint);// add only this constraint
-//
-//	}
+	@Override
+	public void addSet(Relation rel,
+			Feature parent,
+			Collection<Feature> children,
+			Collection<Cardinality> cardinalities) {
+
+		Constraint setConstraint = createSet(rel, parent, children,
+				cardinalities);
+		problem.addConstraint(setConstraint);// add only this constraint
+
+	}
 
 
 
@@ -497,15 +501,15 @@ public class ChocoReasoner extends FeatureModelReasoner {
 //
 //	}
 
-	@Override
-	public void unapplyStagedConfigurations() {
-		Iterator<Constraint> it = this.configConstraints.iterator();
-		while (it.hasNext()) {
-			Constraint cons = it.next();
-			problem.removeConstraint(cons);
-			it.remove();
-		}
-	}
+//	@Override
+//	public void unapplyStagedConfigurations() {
+//		Iterator<Constraint> it = this.configConstraints.iterator();
+//		while (it.hasNext()) {
+//			Constraint cons = it.next();
+//			problem.removeConstraint(cons);
+//			it.remove();
+//		}
+//	}
 
 	@Override
 	public void addConstraint(inria.FAMILIAR.Model.Constraint c) {
@@ -804,11 +808,11 @@ public class ChocoReasoner extends FeatureModelReasoner {
 			}
 			else {
 				//es una constante, usamos el intConverter
-				//TODO
-				//Integer i = constantIntConverter.translate2Integer(tree.getData());
-				//if (i != null){
-				//	res = constant(i);
-				//}
+				
+				Integer i = constantIntConverter.translate2Integer(tree.getData());
+				if (i != null){
+					res = constant(i);
+				}
 			}
 			return res;
 		}
@@ -887,6 +891,17 @@ public class ChocoReasoner extends FeatureModelReasoner {
 		}
 
 	}
+
+
+
+	@Override
+	public void setConstantIntConverter(
+			ConstantIntConverter constantIntConverter) {
+		this.constantIntConverter=constantIntConverter;
+		
+	}
+
+
 
 
 
