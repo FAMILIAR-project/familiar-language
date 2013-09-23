@@ -36,6 +36,11 @@ public class AttributedFeatureModelVariable extends VariableImpl implements
 	 */
 	String reasoner = "Choco2";
 
+	
+	public AttributedFeatureModelVariable(){}
+
+	public AttributedFeatureModelVariable(AttributedFeatureModel fm){this.fm=fm;}
+
 	public void readModelFAMAFormat(String location) {
 		AttributedReader reader = new AttributedReader();
 		try {

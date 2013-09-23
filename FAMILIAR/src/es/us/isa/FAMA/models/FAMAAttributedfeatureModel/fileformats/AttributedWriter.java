@@ -182,20 +182,22 @@ public class AttributedWriter implements IWriter {
 				} else {
 
 					Iterator<Cardinality> cardIt = rel.getCardinalities();
-					relsStr += "[";
 
 					while (cardIt.hasNext()) {
+						relsStr += "[";
+
 						Cardinality card = cardIt.next();
 						relsStr += card.getMin() + "," + card.getMax();
+						relsStr += "] {";
+						while (destIt.hasNext()) {
+							Feature dest = destIt.next();
+							relsStr += dest.getName() + " ";
+							
 
+						}
+						relsStr += "}";
 					}
-					relsStr += "] {";
-					while (destIt.hasNext()) {
-						Feature dest = destIt.next();
-						relsStr += dest.getName() + " ";
-
-					}
-					relsStr += "}";
+					
 
 				}
 
