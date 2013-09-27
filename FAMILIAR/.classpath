@@ -33,6 +33,6 @@
 	<classpathentry exported="true" kind="lib" path="lib/org.sat4j.core.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/simmetrics_jar_v1_6_2_d07_02_07.jar"/>
 	<classpathentry kind="lib" path="lib/wikipedia-miner/wikipedia-miner-1.6.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/fr.inria.lang.vm2"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/fr.inria.lang.vm"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

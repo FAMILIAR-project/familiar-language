@@ -13,15 +13,15 @@ import com.google.inject.Injector;
 
 //import inria.FAMILIAR.Model.Relation;
 import es.us.isa.FAMA.models.variabilityModel.parsers.IReader;
-import fr.inria.lang.vm.VMStandaloneSetup;
-import fr.inria.lang.vm.vM.Feature;
-import fr.inria.lang.vm.vM.FeatureDefinition;
-import fr.inria.lang.vm.vM.FeatureHierarchy;
-import fr.inria.lang.vm.vM.FeaturesGroup;
-import fr.inria.lang.vm.vM.Model;
-import fr.inria.lang.vm.vM.Orgroup;
-import fr.inria.lang.vm.vM.Relationships;
-import fr.inria.lang.vm.vM.Xorgroup;
+import fr.inria.lang.VMStandaloneSetup;
+import fr.inria.lang.vM.Feature;
+import fr.inria.lang.vM.FeatureDefinition;
+import fr.inria.lang.vM.FeatureHierarchy;
+import fr.inria.lang.vM.FeaturesGroup;
+import fr.inria.lang.vM.Model;
+import fr.inria.lang.vM.Orgroup;
+import fr.inria.lang.vM.Relationships;
+import fr.inria.lang.vM.Xorgroup;
 
 public class VMReader implements IReader {
 
@@ -65,7 +65,7 @@ public class VMReader implements IReader {
 			inria.FAMILIAR.Model.Relation frel = new inria.FAMILIAR.Model.Relation();
 
 			if (fd instanceof Feature) {
-				fr.inria.lang.vm.vM.Feature f = (fr.inria.lang.vm.vM.Feature) fd;
+				fr.inria.lang.vM.Feature f = (fr.inria.lang.vM.Feature) fd;
 				if (f.isOptional()) {
 					frel.addCardinality(new Cardinality(0, 1));
 				} else if (!f.isOptional()) {// isMandatory
