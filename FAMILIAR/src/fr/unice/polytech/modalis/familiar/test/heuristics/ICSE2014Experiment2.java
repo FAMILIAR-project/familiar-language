@@ -57,13 +57,13 @@ public class ICSE2014Experiment2 extends KSynthesisTest {
 		testTopN(getSPLOTFeatureModelsForFASE(), N_START, N_END, true);
 	}
 
-	@Ignore
 	@Test
 	public void testClustersSPLOT() {
 		System.out.println("Clusters SPLOT");
 		testClusters(getSPLOTFeatureModelsForFASE(), false); 
 	}
 	
+	@Ignore
 	@Test
 	public void testClustersSPLOTReduced() {
 		System.out.println("Clusters SPLOT (BIG reduced)");
@@ -120,6 +120,7 @@ public class ICSE2014Experiment2 extends KSynthesisTest {
 		testClusters(getPCMFeatureModels(), false);
 	}
 	
+	@Ignore
 	@Test
 	public void testClustersPCMReduced() {
 		System.out.println("Clusters PCM (BIG Reduced)");
@@ -334,7 +335,7 @@ public class ICSE2014Experiment2 extends KSynthesisTest {
 					Set<Set<String>> clusters = synthesizer.getSimilarityClusters();
 					
 					
-					
+					// Check clusters
 					int sumClusterSize = 0;
 					int sumCorrectClusters = 0;
 					int sumFeaturesInCorrectClusters = 0;
@@ -342,40 +343,13 @@ public class ICSE2014Experiment2 extends KSynthesisTest {
 					for (Set<String> cluster : clusters) {
 						sumClusterSize += cluster.size();
 						
-						
-						// Check that the cluster is correct
-						for (Set<String> siblings : siblingsList) {
-
-							// Check if the cluster contains siblings
-							if (siblings.containsAll(cluster)) {
-								sumCorrectClusters++;
-								sumFeaturesInCorrectClusters += cluster.size();
-								break;
-							} 
-
-							// Check if the cluster contains a parent and its children
-							for (String possibleParent : cluster) {
-								// Compute the cluster without a possible parent
-								Set<String> reducedCluster = new HashSet<String>(cluster);
-								reducedCluster.remove(possibleParent);
-
-								// The features of the reduced cluster are siblings and the chosen parent is correct
-								boolean undirectlyCorrect = siblings.containsAll(reducedCluster)
-										&& hierarchy.containsEdge(
-												hierarchy.findVertex(reducedCluster.iterator().next()), 
-												hierarchy.findVertex(possibleParent), 
-												FeatureEdge.HIERARCHY);
-								
-								if (undirectlyCorrect) {
-									sumCorrectClusters++;
-									sumFeaturesInCorrectClusters += cluster.size();
-									break;
-								}
-							}
-
+						if (checkCluster(cluster, hierarchy, siblingsList)) {
+							sumCorrectClusters++;
+							sumFeaturesInCorrectClusters += cluster.size();
 						}
 					}
 					
+					// Compute metrics on clusters
 					listNbClusters.add(clusters.size());
 
 
@@ -397,6 +371,7 @@ public class ICSE2014Experiment2 extends KSynthesisTest {
 				}
 			}
 
+			// Display results
 			double nbClustersAv = averageInt(listNbClusters);
 			double nbClustersMed = medianInt(listNbClusters);
 			System.out.println("Number of clusters: " + nbClustersAv + " (average) " + nbClustersMed + " (median)");

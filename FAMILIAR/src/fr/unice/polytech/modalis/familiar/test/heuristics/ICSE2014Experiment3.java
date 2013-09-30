@@ -28,13 +28,14 @@ public class ICSE2014Experiment3 extends KSynthesisTest {
 
 
 	// Implication graph
-
+	@Ignore
 	@Test
 	public void testTransitiveReductionSPLOT() {
 		System.out.println("Transitive reduction SPLOT");
 		testTransitiveReduction(getSPLOTFeatureModelsForFASE());
 	}
 	
+	@Ignore
 	@Test
 	public void testTransitiveReductionPCM() {
 		System.out.println("Transitive reduction PCM");
@@ -117,25 +118,29 @@ public class ICSE2014Experiment3 extends KSynthesisTest {
 		List<Double> listUnrelatedFeatures = new ArrayList<Double>();
 		List<Double> listUnrelatedCliques = new ArrayList<Double>();
 		List<Double> listConnectedCliques = new ArrayList<Double>();
-		List<Double> listOneLevelCliques = new ArrayList<Double>();
+		
 		List<Integer> listCliques = new ArrayList<Integer>();
+		List<Double> listCliquesSize = new ArrayList<Double>();
+		List<Double> listOneLevelCliques = new ArrayList<Double>();
+		List<Double> listFeaturesInOneLevelCliques = new ArrayList<Double>();
 
 
 		for (FeatureModelVariable fm : fms) {
 			FeatureGraph<String> diagram = fm.getFm().getDiagram();
 			List<Set<String>> cliques = DirectedCliqueFinder.INSTANCE.findAll(fm.computeImplicationGraph());
-
+ 
 			int sumFeaturesInCliques = 0;
 			int sumUnrelatedFeatures = 0;
 			int sumUnrelatedCliques = 0;
 			int sumConnectedCliques = 0;
 			int sumOneLevelCliques = 0;
+			int sumFeaturesOneLevelClique = 0;
 			
 			for (Set<String> clique : cliques) {
 				featuresInCliques += clique.size();
-				sumFeaturesInCliques += featuresInCliques;
+				sumFeaturesInCliques += clique.size();
 				nbCliques++;
-
+				
 				int countUnrelatedFeatures = countUnrelatedFeatures(diagram, clique);
 				unrelatedFeatures += countUnrelatedFeatures;
 				sumUnrelatedFeatures+= countUnrelatedFeatures;
@@ -153,16 +158,23 @@ public class ICSE2014Experiment3 extends KSynthesisTest {
 				if (checkOneLevelClique(diagram, clique)) {
 					oneLevelCliques++;
 					sumOneLevelCliques++;
+					sumFeaturesOneLevelClique += clique.size();
 				}
 			}
 			
 			listCliques.add(cliques.size());
+			
 			if (!cliques.isEmpty()) {
 				listUnrelatedFeatures.add(sumUnrelatedFeatures / ((double)sumFeaturesInCliques));
 				double cliquesSize = cliques.size();
 				listUnrelatedCliques.add(sumUnrelatedCliques / cliquesSize);
 				listConnectedCliques.add(sumConnectedCliques / cliquesSize);
-				listOneLevelCliques.add(sumOneLevelCliques / cliquesSize);				
+				listOneLevelCliques.add(sumOneLevelCliques / cliquesSize);
+				double nbFeatures = diagram.features().size();
+				listFeaturesInOneLevelCliques.add(sumFeaturesOneLevelClique / nbFeatures);
+				listCliquesSize.add(sumFeaturesInCliques / ((double) cliques.size()));
+			} else {
+				listCliquesSize.add(0.0);
 			}
 		}
 
@@ -183,6 +195,21 @@ public class ICSE2014Experiment3 extends KSynthesisTest {
 		System.out.println(averageDouble(listOneLevelCliques) + " (average) " +
 				medianDouble(listOneLevelCliques) + " (median) " +
 				" cliques contains a parent with his children (one level)");
+		System.out.println();
+		
+		System.out.println("Number of cliques : " + 
+				averageInt(listCliques) + " (average) " + 
+				medianInt(listCliques) + " (median)");
+		System.out.println("Cliques'size : " + 
+				averageDouble(listCliquesSize) + " (average) " + 
+				medianDouble(listCliquesSize) + " (median)");
+		System.out.println("Correct cliques : " + 
+				averageDouble(listOneLevelCliques) + " (average) " +
+				medianDouble(listOneLevelCliques) + " (median)");
+		System.out.println("Features in correct cliques : " + 
+				averageDouble(listFeaturesInOneLevelCliques) + " (average) " + 
+				medianDouble(listFeaturesInOneLevelCliques) + " (median)");
+		System.out.println();
 		
 		System.out.println("Global results");
 		System.out.println(unrelatedFeatures + " / " + featuresInCliques + " features of a clique were not in a child-parent relation");
@@ -269,18 +296,21 @@ public class ICSE2014Experiment3 extends KSynthesisTest {
 
 	// Feature groups
 
+	@Ignore
 	@Test
 	public void testFeatureGroupsOnCompleteBIGSPLOT() {
 		System.out.println("Feature groups on complete BIG - SPLOT");
 		testFeatureGroups(getSPLOTFeatureModelsForFASE(), false, true);
 	}
 
+	@Ignore
 	@Test
 	public void testFeatureGroupsOnFeatureGraphSPLOT() {
 		System.out.println("Feature groups on feature graph - SPLOT");
 		testFeatureGroups(getSPLOTFeatureModelsForFASE(), true, true);
 	}
 	
+	@Ignore
 	@Test
 	public void testFeatureGroupsOnCompleteBIGPCM() {
 		System.out.println("Feature groups on complete BIG - PCM");
@@ -309,19 +339,33 @@ public class ICSE2014Experiment3 extends KSynthesisTest {
 		int nbValidXorGroups = 0;
 		int nbValidOrGroups = 0;
 		
-		List<Integer> listGroups = new ArrayList<Integer>();
-		List<Integer> listMutex = new ArrayList<Integer>();
-		List<Integer> listXor = new ArrayList<Integer>();
-		List<Integer> listOr= new ArrayList<Integer>();
 		
+		
+		List<Integer> listGroups = new ArrayList<Integer>();
+		List<Double> listGroupSize = new ArrayList<Double>();
 		List<Double> listValidGroups = new ArrayList<Double>();
+		List<Double> listFeaturesInCorrectGroups= new ArrayList<Double>();
+		
+		List<Integer> listMutex = new ArrayList<Integer>();
+		List<Double> listMutexSize = new ArrayList<Double>();
 		List<Double> listValidMutex = new ArrayList<Double>();
+		List<Double> listFeaturesInCorrectMutex= new ArrayList<Double>();
+		
+		List<Integer> listXor = new ArrayList<Integer>();
+		List<Double> listXorSize = new ArrayList<Double>();
 		List<Double> listValidXor = new ArrayList<Double>();
+		List<Double> listFeaturesInCorrectXor= new ArrayList<Double>();
+		
+		List<Integer> listOr= new ArrayList<Integer>();
+		List<Double> listOrSize = new ArrayList<Double>();
 		List<Double> listValidOr= new ArrayList<Double>();
+		List<Double> listFeaturesInCorrectOr= new ArrayList<Double>();
 
 		for (FeatureModelVariable fm : fms) {
 			FeatureGraph<String> diagram = fm.getFm().getDiagram();
-
+			List<Set<String>> siblingsList = convertInSetOfString(diagram.getSiblingSetsInBFS());
+			double nbFeatures = diagram.vertices().size();
+			
 			// Mutex
 			Set<FGroup> mutexGroups = null; 
 			if (useFeatureGraph) {
@@ -329,17 +373,20 @@ public class ICSE2014Experiment3 extends KSynthesisTest {
 			} else {
 				mutexGroups = fm.computeMutexGroups();
 			}
-			Set<Set<String>> expandedMutexGroups = expandGroups(mutexGroups);
 			
-			nbMutexGroups += expandedMutexGroups.size();
-			listMutex.add(expandedMutexGroups.size());
+			ClusteringResult mutexResult = computeStatsOnGroups(mutexGroups, diagram, siblingsList);
+
+			nbMutexGroups += mutexResult.getNbClusters();
+			listMutex.add(mutexResult.getNbClusters());
 			
-			int validMutex= countValidGroups(diagram, expandedMutexGroups);
-			nbValidMutexGroups += validMutex;
-			if (!expandedMutexGroups.isEmpty()) {
-				listValidMutex.add(validMutex / ((double) expandedMutexGroups.size()));	
-			}
+			nbValidMutexGroups += mutexResult.getNbValidClusters();
+			listMutexSize.add(mutexResult.getMeanSize());
 			
+			if (mutexResult.getNbClusters() > 0){
+				listValidMutex.add(mutexResult.getNbValidClusters() / ((double) mutexResult.getNbClusters()));
+			} 
+			
+			listFeaturesInCorrectMutex.add(mutexResult.getNbFeaturesInCorrectClusters() / nbFeatures);
 			
 			// Xor
 			Set<FGroup> xorGroups = null;
@@ -348,70 +395,102 @@ public class ICSE2014Experiment3 extends KSynthesisTest {
 			} else {
 				xorGroups = fm.computeXorGroups();
 			}
-			Set<Set<String>> expandedXorGroups = expandGroups(xorGroups);
 			
-			nbXorGroups += expandedXorGroups.size();
-			listXor.add(expandedXorGroups.size());
-			
-			int validXor = countValidGroups(diagram, expandedXorGroups);
-			nbValidXorGroups += validXor;
-			if (!expandedXorGroups.isEmpty()) {
-				listValidXor.add(validXor / ((double) expandedXorGroups.size()));
-			}
-			
+			ClusteringResult xorResult = computeStatsOnGroups(xorGroups, diagram, siblingsList);
 
+			nbXorGroups += xorResult.getNbClusters();
+			listXor.add(xorResult.getNbClusters());
+			
+			nbValidXorGroups += xorResult.getNbValidClusters();
+			listXorSize.add(xorResult.getMeanSize());
+			
+			if (xorResult.getNbClusters() > 0){
+				listValidXor.add(xorResult.getNbValidClusters() / ((double) xorResult.getNbClusters()));
+			} 
+			
+			listFeaturesInCorrectXor.add(xorResult.getNbFeaturesInCorrectClusters() / nbFeatures);
+
+//			System.out.println(fm.getCompleteIdentifier());
+//			System.out.println("mtx: " + validMutex + "/" + expandedMutexGroups.size());
+//			System.out.println("xor: " + validXor + "/" + expandedXorGroups.size());
+			
+			int nbGroups = mutexResult.getNbClusters() + xorResult.getNbClusters();
+			double validGroups = mutexResult.getNbValidClusters() + xorResult.getNbValidClusters();
+			int groupSize = mutexResult.getSumSize() + xorResult.getSumSize();
+			int featuresInCorrectGroups = mutexResult.getNbFeaturesInCorrectClusters() + xorResult.getNbFeaturesInCorrectClusters();
+			
 			if (computeOrGroups) {
 				// Or
 				Set<FGroup> orGroups = fm.computeOrGroups();
-				Set<Set<String>> expandedOrGroups = expandGroups(orGroups);
-				nbOrGroups += expandedOrGroups.size();
-				listOr.add(expandedOrGroups.size());
 				
-				int validOr = countValidGroups(diagram, expandedOrGroups);
-				nbValidOrGroups += validOr;
-				if (!expandedOrGroups.isEmpty()) {
-					listValidOr.add(validOr / ((double) expandedOrGroups.size()));
-				}
+				ClusteringResult orResult = computeStatsOnGroups(orGroups, diagram, siblingsList);
+
+				nbOrGroups += orResult.getNbClusters();
+				listOr.add(orResult.getNbClusters());
 				
-				int nbGroups = expandedMutexGroups.size() + expandedXorGroups.size() + expandedOrGroups.size();
-				if (nbGroups != 0) {
-					listValidGroups.add((validMutex + validXor + validOr) / ((double) nbGroups));	
-				}
-				listGroups.add(nbGroups);
+				nbValidOrGroups += orResult.getNbValidClusters();
+				listOrSize.add(orResult.getMeanSize());
 				
-			} else {
-				int nbGroups = expandedMutexGroups.size() + expandedXorGroups.size();
-				if (nbGroups != 0) {
-					listValidGroups.add((validMutex + validXor) / ((double) nbGroups));
-				}
-				listGroups.add(nbGroups);
+				if (orResult.getNbClusters() > 0){
+					listValidOr.add(orResult.getNbValidClusters() / ((double) orResult.getNbClusters()));
+				} 
+				
+				listFeaturesInCorrectOr.add(orResult.getNbFeaturesInCorrectClusters() / nbFeatures);
+				
+				nbGroups += orResult.getNbClusters();
+				validGroups += orResult.getNbValidClusters();
+				groupSize += orResult.getSumSize();
+				featuresInCorrectGroups += orResult.getNbFeaturesInCorrectClusters();
+//				System.out.println("or: " + validOr + "/" + expandedOrGroups.size());
+				
 			}
+
+			// Stats on all the groups
+			listGroups.add(nbGroups);
+			if (nbGroups > 0) {
+				listGroupSize.add(groupSize / ((double) nbGroups));
+				listValidGroups.add(validGroups / ((double) nbGroups));
+			} else {
+				listGroupSize.add(0.0);
+			}
+			listFeaturesInCorrectGroups.add(featuresInCorrectGroups / nbFeatures);
 			
-			
+//			System.out.println();
 		}
 
 
 
 		
-		System.out.println("Results by fm");
+		System.out.println("--- Results by fm ---");
+		System.out.println("Total");
 		System.out.println("Nb of groups : " + averageInt(listGroups) + " (average) " + medianInt(listGroups) + " (median)");
-		System.out.println(averageDouble(listValidGroups) + " (average) " + medianDouble(listValidGroups) + " (median) " +
-		" groups are valid clusters");
-		
-		System.out.println("Nb of Mutex groups : " + averageInt(listMutex) + " (average) " + medianInt(listMutex) + " (median)");
-		System.out.println(averageDouble(listValidMutex) + " (average) " + medianDouble(listValidMutex) + " (median) " +
-		" are valid mutex groups");
-		
-		System.out.println("Nb of Xor groups : " + averageInt(listXor) + " (average) " + medianInt(listXor) + " (median)");
-		System.out.println(averageDouble(listValidXor) + " (average) " + medianDouble(listValidXor) + " (median) " +
-		" are valid xor groups");
-		
-		System.out.println("Nb of Or groups : " + averageInt(listOr) + " (average) " + medianInt(listOr) + " (median)");
-		System.out.println(averageDouble(listValidOr) + " (average) " + medianDouble(listValidOr) + " (median) " +
-		" are valid or groups");
-		
+		System.out.println("Groups'size : " + averageDouble(listGroupSize) + " (average) " + medianDouble(listGroupSize) + " (median)");
+		System.out.println("Correct groups : " + averageDouble(listValidGroups) + " (average) " + medianDouble(listValidGroups) + " (median)");
+		System.out.println("Features in a correct group : " + averageDouble(listFeaturesInCorrectGroups) + " (average) " + medianDouble(listFeaturesInCorrectGroups) + " (median)");
 		System.out.println();
-		System.out.println("Global results");
+		
+		System.out.println("Mutex");
+		System.out.println("Nb of groups : " + averageInt(listMutex) + " (average) " + medianInt(listMutex) + " (median)");
+		System.out.println("Groups'size : " + averageDouble(listMutexSize) + " (average) " + medianDouble(listMutexSize) + " (median)");
+		System.out.println("Correct groups : " + averageDouble(listValidMutex) + " (average) " + medianDouble(listValidMutex) + " (median)");
+		System.out.println("Features in a correct group : " + averageDouble(listFeaturesInCorrectMutex) + " (average) " + medianDouble(listFeaturesInCorrectMutex) + " (median)");
+		System.out.println();
+		
+		System.out.println("Xor");
+		System.out.println("Nb of groups : " + averageInt(listXor) + " (average) " + medianInt(listXor) + " (median)");
+		System.out.println("Groups'size : " + averageDouble(listXorSize) + " (average) " + medianDouble(listXorSize) + " (median)");
+		System.out.println("Correct groups : " + averageDouble(listValidXor) + " (average) " + medianDouble(listValidXor) + " (median)");
+		System.out.println("Features in a correct group : " + averageDouble(listFeaturesInCorrectXor) + " (average) " + medianDouble(listFeaturesInCorrectXor) + " (median)");
+		System.out.println();
+		
+		System.out.println("Or");
+		System.out.println("Nb of groups : " + averageInt(listOr) + " (average) " + medianInt(listOr) + " (median)");
+		System.out.println("Groups'size : " + averageDouble(listOrSize) + " (average) " + medianDouble(listOrSize) + " (median)");
+		System.out.println("Correct groups : " + averageDouble(listValidOr) + " (average) " + medianDouble(listValidOr) + " (median)");
+		System.out.println("Features in a correct group : " + averageDouble(listFeaturesInCorrectOr) + " (average) " + medianDouble(listFeaturesInCorrectOr) + " (median)");
+		System.out.println();
+				
+		System.out.println("--- Global results ---");
 		int nbGroups = nbMutexGroups + nbXorGroups + nbOrGroups; 
 		int nbValidGroups = nbValidMutexGroups + nbValidXorGroups + nbValidOrGroups;
 		System.out.println(nbValidGroups + " / " + nbGroups + " groups are valid clusters");
@@ -421,6 +500,32 @@ public class ICSE2014Experiment3 extends KSynthesisTest {
 	}
 
 
+
+	private ClusteringResult computeStatsOnGroups(Set<FGroup> groups, FeatureGraph<String> diagram, List<Set<String>> siblingsList) {
+		ClusteringResult result = new ClusteringResult();
+		
+		Set<Set<String>> expandedGroups = expandGroups(groups);
+		
+
+		int valid = 0;
+		int sumSize = 0;
+		int featuresInCorrectClusters = 0;
+		
+		for (Set<String> group : expandedGroups) {
+			sumSize += group.size();
+			if (checkCluster(group, diagram, siblingsList)) {
+				valid++;
+				featuresInCorrectClusters += group.size();
+			}
+		}
+		
+		result.setNbClusters(expandedGroups.size());
+		result.setSumSize(sumSize);
+		result.setNbValidClusters(valid);
+		result.setNbFeaturesInCorrectClusters(featuresInCorrectClusters);
+
+		return result;
+	}
 
 	private Set<Set<String>> expandGroups(Set<FGroup> fGroups) {
 		Set<Set<String>> expandedGroups = new HashSet<Set<String>>();

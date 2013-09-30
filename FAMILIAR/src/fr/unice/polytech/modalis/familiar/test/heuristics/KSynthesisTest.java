@@ -834,8 +834,12 @@ public abstract class KSynthesisTest extends FMLTest {
 	}
 	
 	public double medianInt(List<Integer> list) {
-		Collections.sort(list);
-		return list.get(list.size() / 2);
+		if (list.isEmpty()) {
+			return Double.NaN;
+		} else {
+			Collections.sort(list);
+			return list.get(list.size() / 2);	
+		}
 	}
 	
 	
@@ -849,7 +853,48 @@ public abstract class KSynthesisTest extends FMLTest {
 	}
 	
 	public double medianDouble(List<Double> list) {
-		Collections.sort(list);
-		return list.get(list.size() / 2);
+		if (list.isEmpty()) {
+			return Double.NaN;
+		} else {
+			Collections.sort(list);
+			return list.get(list.size() / 2);	
+		}
+	}
+	
+	/**
+	 * Check that the cluster is correct w.r.t to the ground truth
+	 * @param cluster
+	 * @param siblingsList : list of siblings representing the ground truth
+	 * @return
+	 */
+	public boolean checkCluster(Set<String> cluster, FeatureGraph<String> hierarchy, List<Set<String>> siblingsList) {
+		for (Set<String> siblings : siblingsList) {
+
+			// Check if the cluster contains siblings
+			if (siblings.containsAll(cluster)) {
+				return true;
+			}
+
+			// Check if the cluster contains a parent and its children
+			for (String possibleParent : cluster) {
+				// Compute the cluster without a possible parent
+				Set<String> reducedCluster = new HashSet<String>(cluster);
+				reducedCluster.remove(possibleParent);
+
+				// The features of the reduced cluster are siblings and the chosen parent is correct
+				boolean undirectlyCorrect = siblings.containsAll(reducedCluster)
+						&& hierarchy.containsEdge(
+								hierarchy.findVertex(reducedCluster.iterator().next()), 
+								hierarchy.findVertex(possibleParent), 
+								FeatureEdge.HIERARCHY);
+				
+				if (undirectlyCorrect) {
+					return true;
+				}
+			}
+
+		}
+		
+		return false;
 	}
 }
