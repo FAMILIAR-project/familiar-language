@@ -1,0 +1,6 @@
+Comparison_of_desktop_publishing_software: Overview "Operating system" "Input format" ; 
+Overview: License ; 
+"Operating system": ["Mac OS (X)"] [BSD] [Windows] [UNIX] [Linux] ; 
+"Input format": (RTF|"TeX/LaTeX")? [PDF] [SVG] [HTML] ["Word .doc"] ["OOXML .docx"] [EPS] ; 
+License: ("[[LGPL]] v3 LGPL"|" [[Trialware]] Trialware"|"[[Apache License]] 2.0 (Apache OpenOffice 3.4 and later) Apache License"|"[[GPL]] GPL"|" [[Freeware]] Freeware"|" [[Commercial software|Commercial]], [[Proprietary software|proprietary]]Commercial") ; 
+("OOXML .docx" -> !"TeX/LaTeX");

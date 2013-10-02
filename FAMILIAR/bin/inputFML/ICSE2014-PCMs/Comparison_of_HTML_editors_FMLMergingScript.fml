@@ -1,0 +1,642 @@
+fmProduct0 = FM (Comparison_of_HTML_editors: "Image format support" "Operating system support" "Editor features" "General information" ; 
+"Image format support": PNG [APNG] GIF JPEG TIFF [MNG] SVG ; 
+"Operating system support": [Android] [iOS] Windows [BSD] [Unix] ["Mac OS 9"] "Mac OS X" Linux ; 
+"Editor features": WYSIWYG "Spell checking" "WebDAV Upload" ["Shared editing"] "Page Preview" ["FTP Upload"] ["Server-side scripting"] [Templates] ["Form Handler"] ["Templates Update Sync"] ; 
+"General information": ["Software license"] ; 
+!iOS;
+!"Shared editing";
+!"Software license";
+!"Mac OS 9";
+!Android;
+!"Server-side scripting";
+!"Templates Update Sync";
+!"FTP Upload";
+)
+
+fmProduct1 = FM (Comparison_of_HTML_editors: "Image format support" "Web technology support" "Operating system support" "Editor features" "General information" ; 
+"Image format support": PNG GIF [APNG] JPEG TIFF [MNG] [SVG] ; 
+"Web technology support": "CSS2" [XSLT] Java Frames [XForms] [MathML] [XPath] JavaScript [RSS] [Atom] ; 
+"Operating system support": [Android] [iOS] BSD Windows [Unix] ["Mac OS 9"] "Mac OS X" Linux ; 
+"Editor features": [WYSIWYG] ["Spell checking"] ["WebDAV Upload"] "Shared editing" "Page Preview" "FTP Upload" "Server-side scripting" Templates ["Form Handler"] ["Templates Update Sync"] ; 
+"General information": "Software license" ; 
+Templates: "some (i.e. Snippets)" ; 
+"Software license": " [[Aptana Public License|APL]]/[[GNU General Public License|GPL]]APL" ; 
+!iOS;
+!MathML;
+!"Mac OS 9";
+!XPath;
+!Atom;
+!"Spell checking";
+!MNG;
+!XForms;
+!Android;
+!Unix;
+!WYSIWYG;
+!RSS;
+!XSLT;
+)
+
+fmProduct2 = FM (Comparison_of_HTML_editors: "Image format support" "Web technology support" "Operating system support" "Editor features" "General information" ; 
+"Image format support": [PNG] [GIF] [APNG] [JPEG] [TIFF] [MNG] [SVG] ; 
+"Web technology support": "CSS2" [XSLT] [Java] Frames [XForms] [MathML] [XPath] [RSS] JavaScript [Atom] ; 
+"Operating system support": [Android] [iOS] BSD Windows [Unix] "Mac OS 9" "Mac OS X" Linux ; 
+"Editor features": [WYSIWYG] "Spell checking" ["WebDAV Upload"] ["Shared editing"] "Page Preview" ["Server-side scripting"] ["FTP Upload"] ["Form Handler"] Templates ["Templates Update Sync"] ; 
+"General information": "Software license" ; 
+"Software license": "Careware3" ; 
+!iOS;
+!Android;
+!Unix;
+!WYSIWYG;
+)
+
+fmProduct3 = FM (Comparison_of_HTML_editors: "Image format support" "Web technology support" "Operating system support" "Editor features" "General information" ; 
+"Image format support": PNG [APNG] GIF JPEG TIFF [MNG] SVG ; 
+"Web technology support": "CSS2" XSLT Java Frames XForms XPath MathML JavaScript RSS Atom ; 
+"Operating system support": [Android] [iOS] BSD Windows Unix ["Mac OS 9"] "Mac OS X" Linux ; 
+"Editor features": [WYSIWYG] "Spell checking" "WebDAV Upload" ["Shared editing"] "Page Preview" "Server-side scripting" "FTP Upload" ["Form Handler"] Templates "Templates Update Sync" ; 
+"General information": "Software license" ; 
+"Software license": "[[GNU General Public License|GPL]]GPL" ; 
+!iOS;
+!"Shared editing";
+!"Mac OS 9";
+!Android;
+!WYSIWYG;
+!MNG;
+)
+
+fmProduct4 = FM (Comparison_of_HTML_editors: "Image format support" "Web technology support" "Operating system support" "Editor features" "General information" ; 
+"Image format support": PNG APNG GIF JPEG [TIFF] [MNG] SVG ; 
+"Web technology support": "CSS2" [XSLT] [Java] [Frames] [XForms] [XPath] MathML [JavaScript] [RSS] [Atom] ; 
+"Operating system support": [Android] [iOS] [BSD] Windows [Unix] ["Mac OS 9"] "Mac OS X" Linux ; 
+"Editor features": WYSIWYG "Spell checking" ["WebDAV Upload"] ["Shared editing"] "Page Preview" ["Server-side scripting"] "FTP Upload" ["Form Handler"] Templates ["Templates Update Sync"] ; 
+"General information": "Software license" ; 
+"Software license": "[[Mozilla Public License|MPL true.1]]/[[GNU General Public License|GPL 2.0]]/[[GNU Lesser General Public License|LGPL 2.1]]MPL true.1" ; 
+!BSD;
+!iOS;
+!"Shared editing";
+!"Mac OS 9";
+!Android;
+!Unix;
+!"WebDAV Upload";
+!"Templates Update Sync";
+!MNG;
+)
+
+fmProduct5 = FM (Comparison_of_HTML_editors: "General information" ; 
+"General information": "Software license" ; 
+"Software license": proprietary ;
+)
+
+fmProduct6 = FM (Comparison_of_HTML_editors: "General information" ; 
+"General information": "Software license" ; 
+"Software license": Proprietary ;
+)
+
+fmProduct7 = FM (Comparison_of_HTML_editors: "Image format support" "Web technology support" "Operating system support" "Editor features" "General information" ; 
+"Image format support": PNG [APNG] GIF JPEG TIFF [MNG] [SVG] ; 
+"Web technology support": "CSS2" [XSLT] [Java] Frames [XForms] [MathML] [XPath] JavaScript RSS Atom ; 
+"Operating system support": [Android] [iOS] [BSD] Windows [Unix] ["Mac OS 9"] "Mac OS X" [Linux] ; 
+"Editor features": [WYSIWYG] "Spell checking" ["WebDAV Upload"] ["Shared editing"] "Page Preview" ["Server-side scripting"] "FTP Upload" ["Form Handler"] Templates ["Templates Update Sync"] ; 
+"General information": "Software license" ; 
+"Software license": proprietary ; 
+!MathML;
+!iOS;
+!BSD;
+!"Shared editing";
+!"Mac OS 9";
+!XPath;
+!MNG;
+!Java;
+!XForms;
+!Linux;
+!"Server-side scripting";
+!Android;
+!SVG;
+!Unix;
+!WYSIWYG;
+!XSLT;
+)
+
+fmProduct8 = FM (Comparison_of_HTML_editors: "Operating system support" "General information" ; 
+"Operating system support": [Android] [iOS] [BSD] Windows [Unix] ["Mac OS 9"] "Mac OS X" [Linux] ; 
+"General information": "Software license" ; 
+"Software license": proprietary ; 
+!BSD;
+!iOS;
+!Linux;
+!"Mac OS 9";
+!Android;
+!Unix;
+)
+
+fmProduct9 = FM (Comparison_of_HTML_editors: "Image format support" "Web technology support" "Operating system support" "Editor features" "General information" ; 
+"Image format support": PNG [APNG] GIF JPEG TIFF [MNG] SVG ; 
+"Web technology support": "CSS2" XSLT Java Frames XForms [MathML] XPath RSS JavaScript [Atom] ; 
+"Operating system support": [Android] [iOS] Windows [BSD] [Unix] ["Mac OS 9"] "Mac OS X" [Linux] ; 
+"Editor features": WYSIWYG "Spell checking" "WebDAV Upload" "Shared editing" "Page Preview" "Server-side scripting" "FTP Upload" Templates "Form Handler" "Templates Update Sync" ; 
+"General information": "Software license" ; 
+"Software license": proprietary ; 
+!BSD;
+!iOS;
+!Linux;
+!"Mac OS 9";
+!Android;
+!Unix;
+!MNG;
+)
+
+fmProduct10 = FM (Comparison_of_HTML_editors: "Operating system support" "Editor features" "General information" ; 
+"Operating system support": [Android] [iOS] [BSD] Windows [Unix] ["Mac OS 9"] ["Mac OS X"] [Linux] ; 
+"Editor features": WYSIWYG "Spell checking" ["WebDAV Upload"] ["Shared editing"] "Page Preview" ["Server-side scripting"] "FTP Upload" ["Form Handler"] Templates ["Templates Update Sync"] ; 
+"General information": "Software license" ; 
+"Software license": proprietary ; 
+!BSD;
+!iOS;
+!Linux;
+!"Mac OS 9";
+!Android;
+!"Mac OS X";
+!Unix;
+)
+
+fmProduct11 = FM (Comparison_of_HTML_editors: "Image format support" "Web technology support" "Operating system support" "Editor features" "General information" ; 
+"Image format support": PNG GIF [APNG] JPEG TIFF [MNG] SVG ; 
+"Web technology support": "CSS2" XSLT [Java] Frames [XForms] [MathML] [XPath] JavaScript RSS [Atom] ; 
+"Operating system support": [Android] [iOS] [Windows] [BSD] [Unix] ["Mac OS 9"] "Mac OS X" [Linux] ; 
+"Editor features": WYSIWYG "Spell checking" ["WebDAV Upload"] ["Shared editing"] "Page Preview" "Server-side scripting" "FTP Upload" Templates ["Form Handler"] ["Templates Update Sync"] ; 
+"General information": "Software license" ; 
+"Software license": proprietary ; 
+!BSD;
+!iOS;
+!MathML;
+!"Shared editing";
+!"Mac OS 9";
+!XPath;
+!Atom;
+!MNG;
+!Linux;
+!XForms;
+!Android;
+!Windows;
+!Unix;
+!"WebDAV Upload";
+)
+
+fmProduct12 = FM (Comparison_of_HTML_editors: "General information" ; 
+"General information": "Software license" ; 
+"Software license": proprietary ;
+)
+
+fmProduct13 = FM (Comparison_of_HTML_editors: "Image format support" "Operating system support" "Editor features" "General information" ; 
+"Image format support": PNG [APNG] [GIF] JPEG [TIFF] [MNG] [SVG] ; 
+"Operating system support": Android iOS [Windows] [BSD] [Unix] ["Mac OS 9"] ["Mac OS X"] [Linux] ; 
+"Editor features": WYSIWYG ["Spell checking"] ["WebDAV Upload"] "Shared editing" "Page Preview" ["Server-side scripting"] "FTP Upload" "Form Handler" Templates "Templates Update Sync" ; 
+"General information": "Software license" ; 
+"Software license": proprietary ; 
+!BSD;
+!"Mac OS 9";
+!"Spell checking";
+!MNG;
+!Linux;
+!"Mac OS X";
+!"Server-side scripting";
+!SVG;
+!Windows;
+!Unix;
+!"WebDAV Upload";
+!TIFF;
+)
+
+fmProduct14 = FM (Comparison_of_HTML_editors: "Web technology support" "Operating system support" "Editor features" "General information" ; 
+"Web technology support": "CSS2" XSLT Java Frames [XForms] [XPath] MathML JavaScript [RSS] [Atom] ; 
+"Operating system support": [Android] [iOS] Windows [BSD] [Unix] ["Mac OS 9"] ["Mac OS X"] [Linux] ; 
+"Editor features": [WYSIWYG] "Spell checking" ["WebDAV Upload"] ["Shared editing"] "Page Preview" "Server-side scripting" "FTP Upload" ["Form Handler"] Templates ["Templates Update Sync"] ; 
+"General information": "Software license" ; 
+"Software license": proprietary ; 
+!iOS;
+!BSD;
+!"Shared editing";
+!"Mac OS 9";
+!XPath;
+!Atom;
+!XForms;
+!Linux;
+!"Mac OS X";
+!Android;
+!Unix;
+!WYSIWYG;
+!RSS;
+)
+
+fmProduct15 = FM (Comparison_of_HTML_editors: "Image format support" "Web technology support" "Editor features" "General information" ; 
+"Image format support": PNG [APNG] GIF JPEG [TIFF] [MNG] [SVG] ; 
+"Web technology support": "CSS2" [XSLT] Java [Frames] [XForms] [XPath] [MathML] [RSS] JavaScript [Atom] ; 
+"Editor features": WYSIWYG "Spell checking" ["WebDAV Upload"] ["Shared editing"] "Page Preview" ["Server-side scripting"] "FTP Upload" ["Form Handler"] Templates ["Templates Update Sync"] ; 
+"General information": "Software license" ; 
+"Software license": "[[Mozilla Public License|MPL true.1]]/[[GNU General Public License|GPL 2.0]]/[[GNU Lesser General Public License|LGPL 2.1]]MPL true.1" ; 
+!MathML;
+!"Shared editing";
+!XPath;
+!Atom;
+!"Templates Update Sync";
+!MNG;
+!Frames;
+!XForms;
+!"Server-side scripting";
+!SVG;
+!"WebDAV Upload";
+!RSS;
+!XSLT;
+!TIFF;
+)
+
+fmProduct16 = FM (Comparison_of_HTML_editors: "General information" ; 
+"General information": "Software license" ; 
+"Software license": proprietary ;
+)
+
+fmProduct17 = FM (Comparison_of_HTML_editors: "General information" ; 
+"General information": "Software license" ; 
+"Software license": proprietary ;
+)
+
+fmProduct18 = FM (Comparison_of_HTML_editors: "General information" ; 
+"General information": "Software license" ; 
+"Software license": proprietary ;
+)
+
+fmProduct19 = FM (Comparison_of_HTML_editors: "Image format support" "Web technology support" "Operating system support" "Editor features" "General information" ; 
+"Image format support": PNG [APNG] GIF JPEG TIFF [MNG] [SVG] ; 
+"Web technology support": "CSS2" XSLT Java Frames [XForms] [XPath] [MathML] RSS JavaScript Atom ; 
+"Operating system support": [Android] [iOS] [BSD] Windows [Unix] ["Mac OS 9"] ["Mac OS X"] [Linux] ; 
+"Editor features": [WYSIWYG] "Spell checking" ["WebDAV Upload"] ["Shared editing"] "Page Preview" "Server-side scripting" "FTP Upload" ["Form Handler"] Templates ["Templates Update Sync"] ; 
+"General information": "Software license" ; 
+"Software license": proprietary ; 
+!BSD;
+!iOS;
+!MathML;
+!"Shared editing";
+!Linux;
+!"Mac OS 9";
+!XForms;
+!Android;
+!"Mac OS X";
+!Unix;
+!WYSIWYG;
+)
+
+fmProduct20 = FM (Comparison_of_HTML_editors: "Image format support" "Web technology support" "Operating system support" "Editor features" "General information" ; 
+"Image format support": PNG [APNG] GIF JPEG TIFF [MNG] [SVG] ; 
+"Web technology support": "CSS2" XSLT Java Frames [XForms] MathML XPath RSS JavaScript Atom ; 
+"Operating system support": [Android] [iOS] Windows [BSD] [Unix] ["Mac OS 9"] ["Mac OS X"] [Linux] ; 
+"Editor features": WYSIWYG "Spell checking" "WebDAV Upload" "Shared editing" "Page Preview" "FTP Upload" "Server-side scripting" ["Form Handler"] Templates ["Templates Update Sync"] ; 
+"General information": "Software license" ; 
+"Software license": proprietary ; 
+!BSD;
+!iOS;
+!Linux;
+!"Mac OS 9";
+!XForms;
+!Android;
+!"Mac OS X";
+!SVG;
+!Unix;
+!MNG;
+)
+
+fmProduct21 = FM (Comparison_of_HTML_editors: "Image format support" "Web technology support" "Operating system support" "Editor features" "General information" ; 
+"Image format support": PNG [APNG] GIF JPEG TIFF [MNG] [SVG] ; 
+"Web technology support": "CSS2" XSLT Java Frames [XForms] XPath MathML RSS JavaScript Atom ; 
+"Operating system support": [Android] [iOS] Windows [BSD] [Unix] ["Mac OS 9"] ["Mac OS X"] [Linux] ; 
+"Editor features": WYSIWYG "Spell checking" "WebDAV Upload" "Shared editing" "Page Preview" "Server-side scripting" "FTP Upload" ["Form Handler"] Templates ["Templates Update Sync"] ; 
+"General information": "Software license" ; 
+"Software license": proprietary ; 
+!BSD;
+!iOS;
+!Linux;
+!"Mac OS 9";
+!XForms;
+!Android;
+!"Mac OS X";
+!SVG;
+!Unix;
+!MNG;
+)
+
+fmProduct22 = FM (Comparison_of_HTML_editors: "General information" ; 
+"General information": "Software license" ; 
+"Software license": "[[Mozilla Public License|MPL true.1]]/[[GNU General Public License|GPL 2.0]]/[[GNU Lesser General Public License|LGPL 2.1]]MPL true.1" ;
+)
+
+fmProduct23 = FM (Comparison_of_HTML_editors: "General information" ; 
+"General information": "Software license" ; 
+"Software license": "[[Mozilla Public License|MPL true.1]]/[[GNU General Public License|GPL 2.0]]/[[GNU Lesser General Public License|LGPL 2.1]]MPL true.1" ;
+)
+
+fmProduct24 = FM (Comparison_of_HTML_editors: "Image format support" "Web technology support" "Operating system support" "Editor features" "General information" ; 
+"Image format support": PNG [APNG] GIF JPEG TIFF [MNG] SVG ; 
+"Web technology support": "CSS2" XSLT Java Frames [XForms] [XPath] [MathML] RSS JavaScript [Atom] ; 
+"Operating system support": [Android] [iOS] BSD Windows Unix ["Mac OS 9"] ["Mac OS X"] Linux ; 
+"Editor features": WYSIWYG "Spell checking" ["WebDAV Upload"] ["Shared editing"] "Page Preview" "Server-side scripting" "FTP Upload" Templates ["Form Handler"] "Templates Update Sync" ; 
+"General information": "Software license" ; 
+"Software license": "[[GNU General Public License|GPL]]GPL" ; 
+!iOS;
+!MathML;
+!"Shared editing";
+!"Mac OS 9";
+!XForms;
+!Android;
+!"Mac OS X";
+!XPath;
+!Atom;
+)
+
+fmProduct25 = FM (Comparison_of_HTML_editors: "Image format support" "Web technology support" "Operating system support" "Editor features" "General information" ; 
+"Image format support": [PNG] [GIF] [APNG] [JPEG] [TIFF] [MNG] [SVG] ; 
+"Web technology support": "CSS2" [XSLT] [Java] Frames [XForms] [XPath] [MathML] JavaScript [RSS] [Atom] ; 
+"Operating system support": [Android] [iOS] [BSD] Windows [Unix] ["Mac OS 9"] "Mac OS X" Linux ; 
+"Editor features": WYSIWYG "Spell checking" ["WebDAV Upload"] ["Shared editing"] "Page Preview" ["Server-side scripting"] ["FTP Upload"] ["Form Handler"] [Templates] ["Templates Update Sync"] ; 
+"General information": "Software license" ; 
+"Software license": "[[GNU General Public License|GPL]]GPL" ; 
+!iOS;
+!"Mac OS 9";
+!Android;
+)
+
+fmProduct26 = FM (Comparison_of_HTML_editors: "Image format support" "Web technology support" "Operating system support" "Editor features" "General information" ; 
+"Image format support": PNG [APNG] GIF JPEG TIFF [MNG] SVG ; 
+"Web technology support": "CSS2" XSLT Java Frames XForms [MathML] XPath JavaScript RSS [Atom] ; 
+"Operating system support": [Android] [iOS] [Windows] BSD Unix ["Mac OS 9"] "Mac OS X" Linux ; 
+"Editor features": WYSIWYG "Spell checking" ["WebDAV Upload"] "Shared editing" "Page Preview" "FTP Upload" "Server-side scripting" ["Form Handler"] Templates "Templates Update Sync" ; 
+"General information": "Software license" ; 
+"Software license": "[[GPL]] GPL" ; 
+!iOS;
+!"Mac OS 9";
+!Android;
+!Windows;
+!"WebDAV Upload";
+!MNG;
+)
+
+fmProduct27 = FM (Comparison_of_HTML_editors: "Image format support" "Web technology support" "Operating system support" "Editor features" "General information" ; 
+"Image format support": PNG GIF [APNG] JPEG TIFF [MNG] [SVG] ; 
+"Web technology support": "CSS2" [XSLT] [Java] Frames [XForms] [MathML] [XPath] RSS JavaScript [Atom] ; 
+"Operating system support": [Android] [iOS] [BSD] [Windows] [Unix] ["Mac OS 9"] "Mac OS X" [Linux] ; 
+"Editor features": WYSIWYG "Spell checking" ["WebDAV Upload"] ["Shared editing"] "Page Preview" "Server-side scripting" "FTP Upload" Templates ["Form Handler"] ["Templates Update Sync"] ; 
+"General information": "Software license" ; 
+"Software license": proprietary ; 
+!MathML;
+!iOS;
+!BSD;
+!"Shared editing";
+!"Mac OS 9";
+!XPath;
+!Atom;
+!MNG;
+!Java;
+!XForms;
+!Linux;
+!Android;
+!SVG;
+!Windows;
+!"WebDAV Upload";
+!Unix;
+!XSLT;
+)
+
+fmProduct28 = FM (Comparison_of_HTML_editors: "Image format support" "Web technology support" "Operating system support" "Editor features" "General information" ; 
+"Image format support": PNG [APNG] GIF JPEG [TIFF] [MNG] [SVG] ; 
+"Web technology support": "CSS2" [XSLT] [Java] Frames [XForms] [MathML] [XPath] JavaScript [RSS] [Atom] ; 
+"Operating system support": [Android] [iOS] BSD Windows Unix ["Mac OS 9"] "Mac OS X" Linux ; 
+"Editor features": WYSIWYG "Spell checking" "WebDAV Upload" ["Shared editing"] "Page Preview" ["Server-side scripting"] "FTP Upload" ["Form Handler"] [Templates] ["Templates Update Sync"] ; 
+"General information": "Software license" ; 
+"Software license": "[[Mozilla Public License|MPL]]MPL" ; 
+!MathML;
+!iOS;
+!"Shared editing";
+!"Mac OS 9";
+!Atom;
+!"Templates Update Sync";
+!MNG;
+!Java;
+!XForms;
+!Templates;
+!"Server-side scripting";
+!Android;
+!SVG;
+!RSS;
+!XSLT;
+!TIFF;
+)
+
+fmProduct29 = FM (Comparison_of_HTML_editors: "Image format support" "Web technology support" "Operating system support" "Editor features" "General information" ; 
+"Image format support": PNG GIF [APNG] JPEG [TIFF] [MNG] [SVG] ; 
+"Web technology support": "CSS2" [XSLT] Java Frames [XForms] MathML [XPath] JavaScript RSS [Atom] ; 
+"Operating system support": [Android] [iOS] Windows [BSD] [Unix] ["Mac OS 9"] ["Mac OS X"] [Linux] ; 
+"Editor features": WYSIWYG "Spell checking" ["WebDAV Upload"] ["Shared editing"] "Page Preview" "Server-side scripting" "FTP Upload" "Form Handler" Templates ["Templates Update Sync"] ; 
+"General information": "Software license" ; 
+"Software license": proprietary ; 
+!iOS;
+!BSD;
+!"Shared editing";
+!"Mac OS 9";
+!XPath;
+!Atom;
+!MNG;
+!XForms;
+!Linux;
+!"Mac OS X";
+!Android;
+!SVG;
+!"WebDAV Upload";
+!Unix;
+!XSLT;
+!TIFF;
+)
+
+fmProduct30 = FM (Comparison_of_HTML_editors: "Image format support" "Web technology support" "Operating system support" "General information" ; 
+"Image format support": PNG GIF [APNG] JPEG [TIFF] [MNG] [SVG] ; 
+"Web technology support": "CSS2" XSLT [Java] Frames [XForms] [MathML] XPath JavaScript [RSS] [Atom] ; 
+"Operating system support": [Android] [iOS] BSD Windows Unix ["Mac OS 9"] "Mac OS X" Linux ; 
+"General information": "Software license" ; 
+"Software license": proprietary ; 
+!iOS;
+!MathML;
+!Java;
+!"Mac OS 9";
+!XForms;
+!Android;
+!SVG;
+!TIFF;
+!MNG;
+)
+
+fmProduct31 = FM (Comparison_of_HTML_editors: "Image format support" "Web technology support" "Operating system support" "Editor features" ; 
+"Image format support": [PNG] [APNG] GIF JPEG [TIFF] [MNG] [SVG] ; 
+"Web technology support": ["CSS2"] [XSLT] [Java] Frames [XForms] [MathML] [XPath] [RSS] JavaScript [Atom] ; 
+"Operating system support": [Android] [iOS] [BSD] [Windows] [Unix] ["Mac OS 9"] ["Mac OS X"] [Linux] ; 
+"Editor features": WYSIWYG "Spell checking" ["WebDAV Upload"] ["Shared editing"] "Page Preview" "FTP Upload" ["Server-side scripting"] ["Form Handler"] Templates ["Templates Update Sync"] ; 
+!iOS;
+!BSD;
+!MathML;
+!"Shared editing";
+!"Mac OS 9";
+!XPath;
+!Atom;
+!"Templates Update Sync";
+!MNG;
+!Java;
+!Linux;
+!XForms;
+!"Server-side scripting";
+!"Mac OS X";
+!Android;
+!SVG;
+!Windows;
+!"WebDAV Upload";
+!Unix;
+!PNG;
+!RSS;
+!XSLT;
+!TIFF;
+)
+
+fmProduct32 = FM (Comparison_of_HTML_editors: "Image format support" "Web technology support" "Operating system support" "Editor features" ; 
+"Image format support": PNG [APNG] GIF JPEG [TIFF] [MNG] SVG ; 
+"Web technology support": "CSS2" [XSLT] Java Frames [XForms] [MathML] [XPath] [RSS] JavaScript [Atom] ; 
+"Operating system support": [Android] [iOS] [Windows] [BSD] [Unix] ["Mac OS 9"] ["Mac OS X"] [Linux] ; 
+"Editor features": WYSIWYG "Spell checking" "WebDAV Upload" ["Shared editing"] "Page Preview" "FTP Upload" "Server-side scripting" ["Form Handler"] Templates ["Templates Update Sync"] ; 
+!MathML;
+!iOS;
+!BSD;
+!"Shared editing";
+!"Mac OS 9";
+!XPath;
+!Atom;
+!MNG;
+!XForms;
+!Linux;
+!"Mac OS X";
+!Android;
+!Windows;
+!Unix;
+!RSS;
+!XSLT;
+!TIFF;
+)
+
+fmProduct33 = FM (Comparison_of_HTML_editors: "Operating system support" ; 
+"Operating system support": [Android] [iOS] BSD Windows [Unix] ["Mac OS 9"] "Mac OS X" Linux ; 
+!iOS;
+!"Mac OS 9";
+!Android;
+!Unix;
+)
+
+fmProduct34 = FM (Comparison_of_HTML_editors: "Image format support" "Web technology support" "Operating system support" "Editor features" ; 
+"Image format support": PNG GIF [APNG] JPEG TIFF [MNG] [SVG] ; 
+"Web technology support": "CSS2" XSLT Java Frames [XForms] MathML XPath JavaScript RSS Atom ; 
+"Operating system support": [Android] [iOS] [BSD] Windows [Unix] ["Mac OS 9"] ["Mac OS X"] [Linux] ; 
+"Editor features": WYSIWYG "Spell checking" "WebDAV Upload" "Shared editing" "Page Preview" "Server-side scripting" "FTP Upload" ["Form Handler"] Templates "Templates Update Sync" ; 
+!BSD;
+!iOS;
+!Linux;
+!"Mac OS 9";
+!XForms;
+!Android;
+!"Mac OS X";
+!SVG;
+!Unix;
+!MNG;
+)
+
+fmProduct35 = FM (Comparison_of_HTML_editors: "Web technology support" "Operating system support" "Editor features" ; 
+"Web technology support": ["CSS2"] XSLT Java Frames [XForms] MathML [XPath] JavaScript [RSS] [Atom] ; 
+"Operating system support": [Android] [iOS] [Windows] [BSD] [Unix] ["Mac OS 9"] ["Mac OS X"] [Linux] ; 
+"Editor features": WYSIWYG "Spell checking" "WebDAV Upload" "Shared editing" "Page Preview" "FTP Upload" "Server-side scripting" ["Form Handler"] Templates ["Templates Update Sync"] ; 
+!BSD;
+!iOS;
+!"Mac OS 9";
+!XPath;
+!Atom;
+!Linux;
+!XForms;
+!Android;
+!"Mac OS X";
+!Windows;
+!Unix;
+!RSS;
+)
+
+fmProduct36 = FM (Comparison_of_HTML_editors: "Operating system support" ; 
+"Operating system support": [Android] [iOS] [BSD] [Windows] [Unix] ["Mac OS 9"] ["Mac OS X"] [Linux] ; 
+!BSD;
+!iOS;
+!Linux;
+!"Mac OS 9";
+!Android;
+!"Mac OS X";
+!Windows;
+!Unix;
+)
+
+fmProduct37 = FM (Comparison_of_HTML_editors: "Operating system support" ; 
+"Operating system support": [Android] [iOS] [Windows] [BSD] [Unix] ["Mac OS 9"] ["Mac OS X"] [Linux] ; 
+!BSD;
+!iOS;
+!Linux;
+!"Mac OS 9";
+!Android;
+!"Mac OS X";
+!Windows;
+!Unix;
+)
+
+fmProduct38 = FM (Comparison_of_HTML_editors: "Operating system support" ; 
+"Operating system support": [Android] [iOS] Windows [BSD] [Unix] ["Mac OS 9"] "Mac OS X" Linux ; 
+!BSD;
+!iOS;
+!"Mac OS 9";
+!Android;
+!Unix;
+)
+
+fmProduct39 = FM (Comparison_of_HTML_editors: "Image format support" "Web technology support" "Editor features" ; 
+"Image format support": PNG [APNG] GIF JPEG [TIFF] [MNG] [SVG] ; 
+"Web technology support": "CSS2" [XSLT] [Java] [Frames] [XForms] [MathML] [XPath] [RSS] JavaScript [Atom] ; 
+"Editor features": WYSIWYG "Spell checking" "WebDAV Upload" ["Shared editing"] "Page Preview" ["Server-side scripting"] "FTP Upload" Templates ["Form Handler"] ["Templates Update Sync"] ; 
+!MathML;
+!"Shared editing";
+!XPath;
+!Atom;
+!"Templates Update Sync";
+!MNG;
+!Frames;
+!Java;
+!XForms;
+!"Server-side scripting";
+!SVG;
+!RSS;
+!XSLT;
+!TIFF;
+)
+
+fmProduct40 = FM (Comparison_of_HTML_editors: "Web technology support" ; 
+"Web technology support": ["CSS2"] [XSLT] [Java] [Frames] [XForms] [XPath] MathML [RSS] [JavaScript] [Atom] ; 
+!Java;
+!XForms;
+!JavaScript;
+!Atom;
+!RSS;
+!XSLT;
+!Frames;
+)
+
+fmProduct41 = FM (Comparison_of_HTML_editors: "Web technology support" ; 
+"Web technology support": "CSS2" XSLT Java Frames XForms XPath MathML JavaScript RSS Atom ;
+)
+
+fmProduct42 = FM (Comparison_of_HTML_editors: "Image format support" ; 
+"Image format support": PNG GIF [APNG] JPEG TIFF [MNG] [SVG] ;
+)
+

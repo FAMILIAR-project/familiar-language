@@ -1,0 +1,14 @@
+Comparison_of_mail_servers: "Feature comparison" Authentication "Antispam Features" ; 
+"Feature comparison": [License] [SMTP] [NNTP] [Windows] [Database] ["Mail server"] [ActiveSync] ["POP over TLS"] ["POP3"] ["IPv6"] ["IMAP IDLE"] [SSL] ["Mac OS"] [IMAP] ["Linux/Unix"] [Filesystem] [Webmail] ["SMTP over TLS"] ; 
+Authentication: ["POP before SMTP"] ["SMTP AUTH"] [LDAP] [APOP] ; 
+"Antispam Features": ["Embedded Antispam"] ["Bayesian filters"] ["Embedded Antivirus"] ["Mail Server"] [Tarpit] [SPF] [Greylisting] ["Regular expressions"] [DNSBL] [SURBL] [Spamtraps] ; 
+License: ("[[GNU GPL]] (V5.0 Proprietary) GNU GPL"|GPL|"[[Apache license|Apache License 2.0]]Apache License 2.0"|"Proprietary/[[SaaS]], with open-source parts SaaS"|Proprietary|"[[Public domain]] Public domain"|"[[Freeware]] with support option Freeware"|"[[Affero General Public License|AGPLv3]]AGPLv3"|"[http://ftp.sunet.se/pub/unix/mail/sendmail/LICENSE Sendmail License]"|"[[GNU Public License|GPLv2]]GPLv2"|"Proprietary (true00 user/30 day demo)"|"[[BSD licenses#4-clause|4-clause BSD]]4-clause BSD"|"[[GNU General Public License|GPLv3]]GPLv3"|"[[ISC license|ISC]]ISC"|"[[GPL|GPLv2+]]GPLv2+"|"Proprietary (free version: email true00 users / calendar 5 users)"|"Proprietary donationware"|"[[Apache Software License|ASLv2]]ASLv2"|"[[IBM Public License]] IBM Public License"|"Proprietary (free for up to 5 users)"|"Mixed: [[MIT License|MIT]] and [[GNU Lesser General Public License|LGPL 2.1]]MIT"|"[http://www.zimbra.com/license/zimbra-public-license-1-3.html ZPL] and proprietary editions"|"[[GNU General Public License|GPLv2]]GPLv2"|"Proprietary (Free for up to 5 users)")? ; 
+Database: ("(cdb)"|"[[Postgresql|PostgreSQL]], [[Mysql|MySQL]], [[Sqlite|SQLite]]PostgreSQL"|"possible through custom backends")? ; 
+"Mail server": (qmail|"IceWarp Mail Server"|"Blue Mind"|"UW IMAP"|Citadel|"CommuniGate Pro"|Atmail|Zimbra|"agorum core"|DBMail|MagicMail|Dovecot|SparkEngine|Axigen|"Cyrus SASL Library"|masqmail|Xeams|OpenSMTPD|Sendmail|"Cyrus IMAP"|"Open-Xchange"|Kolab|Momentum|IndiMail)? ; 
+"IMAP IDLE": ["[[Dovecot (software)|Dovecot]], [[UW IMAP]]Dovecot"] ; 
+"Mac OS": ["Mac OS X"] ; 
+Filesystem: ["[[maildir]], [[mbox]], dbox maildir"] ; 
+Webmail: (WebPine|"Ajax & Basic")? ; 
+"SMTP over TLS": ["[[Postfix (software)|Postfix]], [[Exim]], [[Sendmail]], [[qmail]]Postfix"] ; 
+"POP before SMTP": ["with vpopmail"] ; 
+"Mail Server": ("Hexamail Server"|hMailServer|Mirapoint|"Oracle Communications Messaging Server"|"Mercury Mail Transport System"|FirstClass|Mailsite|SurgeMail|Exim|Zarafa|"Apache James"|Mailtraq|Postfix)? ;

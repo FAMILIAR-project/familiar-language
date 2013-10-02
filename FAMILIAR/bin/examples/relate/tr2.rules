@@ -1,0 +1,6 @@
+using ctxt
+using system
+Vehicle implies NaturalLight
+Resolution and ~NaturalLight implies Person
+~Vehicle implies NaturalLight
+Person excludes ArtificialLight 

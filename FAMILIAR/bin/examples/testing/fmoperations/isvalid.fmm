@@ -1,0 +1,13 @@
+fm1 = FM (A: B C ; B : (D|E); C -> D; ) // valid
+
+validfm1 = isValid fm1
+assert (validfm1)
+c1 = configuration fm1
+bc1 = isValid c1
+assert (bc1)
+
+fm2 = FM (A: B C ; B : (D|E); !C -> !D; !C -> !E; ) // not valid
+
+validfm2 = isValid fm2
+FALSE = false
+assert (validfm2 eq FALSE)

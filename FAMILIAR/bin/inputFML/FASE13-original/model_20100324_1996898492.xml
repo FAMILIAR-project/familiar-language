@@ -1,0 +1,17 @@
+<feature_model name="SelectMovie">
+<feature_tree>
+:r SelectMovie (f_SelectMovie)
+	:m StartPlayer (f_StartPlayer)
+	:m VCRInterface (f_VCRInterface)
+	:m VODPlayer (f_VODPlayer)
+	:m StartMovie (f_StartMovie)
+	:m PlayImm (f_PlayImm)
+	:o ChangeServer (f_ChangeServer)
+	:o StopMovie (f_StopMovie)
+	:o Quit (f_Quit)
+	:o Detail (f_Detail)
+	:o Pause (f_Pause)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

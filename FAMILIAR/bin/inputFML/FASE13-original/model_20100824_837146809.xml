@@ -1,0 +1,32 @@
+<feature_model name="Catalog">
+<feature_tree>
+:r Catalog (f_Catalog)
+	:m StoreFront (f_StoreFront)
+	:m HomePage (f_HomePage)
+	:m BuyPath (f_BuyPath)
+	:o UserBehTrack (f_UserBehTrack)
+	:o WishList (f_WishList)
+	:o CustomerService (f_CustomerService)
+	:o Registration (f_Registration)
+		:m RegistEnforc (f_RegistEnforc)
+		:m RegistInform (f_RegistInform)
+		:m UserBehTracInf (f_UserBehTracInf)
+		:g [1, *]
+			: RegToBrowse (f_RegToBrowse)
+			: RegToBuy (f_RegToBuy)
+			: None (f_None)
+	:g [1, *]
+		: StaticContent (f_StaticContent)
+		: VariationSource (f_VariationSource)
+			:m DynamicContent (f_DynamicContent)
+			:m ContentType (f_ContentType)
+			:g [1, *]
+				: WelcomeMessage (f_WelcomeMessage)
+				: SpecialOffers (f_SpecialOffers)
+			:g [1, *]
+				: TimeDependant (f_TimeDependant)
+				: Personalized (f_Personalized)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

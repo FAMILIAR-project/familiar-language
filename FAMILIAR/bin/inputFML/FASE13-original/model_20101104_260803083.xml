@@ -1,0 +1,20 @@
+<feature_model name="E-Shop">
+<feature_tree>
+:r E-Shop (f_E_Shop)
+	:m Order Prepration (f_Order_Prepration)
+	:m Shipment (f_Shipment)
+	:o Customer Verification (f_Customer_Verification)
+		:g [1, *]
+			: Check Return customer (f_Check_Return_customer)
+			: Check credit Rate (f_Check_credit_Rate)
+	:g [1, 1]
+		: Physical Shipmnet (f_Physical_Shipmnet)
+			:g [1, *]
+				: DHL (f_DHL)
+				: Canada Post (f_Canada_Post)
+				: American Express (f_American_Express)
+		: E-Shipment (f_E_Shipment)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

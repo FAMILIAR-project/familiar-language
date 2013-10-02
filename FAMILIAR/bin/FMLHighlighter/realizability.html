@@ -1,0 +1,8 @@
+<div class="code"><pre><span class="n">fmSoftware</span> <span class="o">=</span> <span class="kd">FM</span> <span class="o">(</span><span class="s">&quot;fmSoftware.tvl&quot;</span><span class="o">)</span>
+<span class="n">fmPL</span> <span class="o">=</span> <span class="kd">FM</span> <span class="o">(</span><span class="s">&quot;PL.fml&quot;</span><span class="o">)</span>
+<span class="n">xLink</span> <span class="o">=</span> <span class="kd">constraints</span> <span class="o">(</span><span class="n">V1</span> <span class="o">&lt;-&gt;</span> <span class="n">f1</span> <span class="o">;</span> <span class="n">V2</span> <span class="o">&lt;-&gt;</span> <span class="n">f2</span> <span class="o">;</span> <span class="n">V3</span> <span class="o">&lt;-&gt;</span> <span class="n">F3</span><span class="o">;</span> <span class="o">)</span>
+<span class="n">fmG</span> <span class="o">=</span> <span class="kd">aggregate</span> <span class="o">{</span> <span class="n">fmPL</span> <span class="n">fmSoftware</span> <span class="o">}</span> <span class="kd">withMapping</span> <span class="n">xLink</span>
+
+<span class="n">fmPLPrime</span> <span class="o">=</span> <span class="kd">slice</span> <span class="n">fmG</span> <span class="kd">including</span> <span class="n">fmPL</span><span class="o">.*</span>
+<span class="n">fmPLDiff</span> <span class="o">=</span> <span class="kd">merge</span> <span class="kd">diff</span> <span class="o">{</span> <span class="n">fmPL</span> <span class="n">fmPLPrime</span> <span class="o">}</span>
+</pre></div>

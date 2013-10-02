@@ -1,0 +1,14 @@
+Comparison_of_file_managers: "Network protocols" "Manager views" "Operating system support" "Browsing features" ["General information"] "Search features" Extensibility "File features" ; 
+"Network protocols": ["FISH/SSH"] [NFS] [WebDAV] [FTP] [AFP] ["SMB/CIFS"] ; 
+"Manager views": ["Column view"] [Thumbnails] UI [Grouping] ["Panel tabs"] ["Twin panel"] ["Icon view"] ["List view"] Family ["Details + Thumbs"] ["Favorites / Bookmark"] ; 
+"Operating system support": [DOS] [Windows] [BSD] [Unix] [OpenVMS] [AmigaOS] ["Mac OS X"] [Linux] ["OS/2 & eCS"] ; 
+"Browsing features": ["Branch Sizes"] ["Directory Sizes"] [Synchronizer] ["Directory Compare"] ["Find as you type (Type-ahead find)"] ["Browse compressed folders"] [Slideshows] ; 
+"General information": [Cost] "Software license" ; 
+"Search features": ["All metadata search"] ["Fuzzy logic"] ["Boolean (nesting levels)"] [RegExp] ["Basic metadata search"] ["File name / content search"] ["Save searches "] ["Refined searches "] ; 
+Extensibility: ["Metadata indexing"] ["File previews"] ["Visual Themes"] ["Attribute columns"] ["Filesystem support"] ["Unicode support"] ; 
+"File features": ["Rename busy files"] ["File preview"] ["File compression"] ["File encryption"] ["ACL (Access control list)"] ["File and folder reports"] ["Paste clipboard as file"] ["File selection filter"] ["File coloring filter "] ["Mass Rename "] ; 
+UI: (GUI|"Text "|Text) ; 
+Family: (Navigational|Spatial|"Hybrid Navigational / Orthodox"|"[[Spatial file manager|Spatial]] / [[Miller Columns]]Spatial"|"[[Navigational file manager|Navigational]] / [[Orthodox File Manager|Orthodox]]Navigational"|Orthodox|"[[Spatial file manager|Spatial]] / [[Navigational file manager|Navigational]]Spatial") ; 
+Cost: ("Part of Xandros Desktop"|"US$29.95"|" [[United States dollar|US$]]30US$"|"shareware / freeware"|"[[Australian dollar|A$]]85A$"|"[[Swiss franc|CHF]]40, ?32CHF"|"A$35.00"|"Part of OS X"|"US$39.95"|"Part of Windows"|"US$79.00<br>(with 80+ other apps)"|"US$29.95, ?24.95<br>"|"US$29.95 (true-4)"|"US$29.95<br>(lite: free)"|free)? ; 
+"Software license": (GPL|"[[GNU General Public License|GPL]]GPL"|proprietary|"BSD revised"|"[[BSD licenses|BSD]] originalBSD") ; 
+"ACL (Access control list)": ["Log file"] ;

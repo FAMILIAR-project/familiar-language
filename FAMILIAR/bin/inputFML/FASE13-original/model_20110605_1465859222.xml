@@ -1,0 +1,24 @@
+<feature_model name="Media Selection">
+<feature_tree>
+:r Media Selection (f_Media_Selection)
+	:m Album Management (f_Album_Management)
+	:m Type name for root feature (f_Type_name_for_root_feature)
+	:m Create Album (f_Create_Album)
+	:m Media Management (f_Media_Management)
+	:m Delete Media (f_Delete_Media)
+	:m Basic Media Operations (f_Basic_Media_Operations)
+	:m Delete Album (f_Delete_Album)
+	:m Create Media (f_Create_Media)
+	:m Edit Media Label (f_Edit_Media_Label)
+	:o Sorting (f_Sorting)
+	:o Favorites (f_Favorites)
+	:o Copy Media (f_Copy_Media)
+	:o SMS (f_SMS)
+	:g [1, *]
+		: Music (f_Music)
+		: Photo (f_Photo)
+		: Video (f_Video)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

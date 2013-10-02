@@ -1,0 +1,28 @@
+<FMLBDD>
+<FM>
+Comparison_of_relational_database_management_systems: "Database capabilities" "Tables and views" "Other objects" "Operating system support" "Fundamental features" Indexes Partitioning "General information" "Access control" ; 
+"Database capabilities": ["Parallel Query"] [Intersect] ["Common Table Expressions"] ["Inner selects"] ["Outer joins"] ["Blobs and Clobs"] [Union] ["Windowing Functions"] ["Inner joins"] ["Merge joins"] [Except] ; 
+"Tables and views": ["Materialized view"] ["Temporary table"] ; 
+"Other objects": ["Data Domain"] ["External routine?1"] [Cursor] ["Function?1"] ["Procedure?1"] [Trigger] ; 
+"Operating system support": [Android] [iOS] [Symbian] [Windows] [BSD] ["z/OS"] [UNIX] [AmigaOS] [Linux] ["OS X"] ; 
+"Fundamental features": [ACID] [Interface] [Unicode] ["Referential integrity"] [Transactions] ; 
+Indexes: [GiST] [Partial] [Expression] [Spatial] [FOT] ["R-/R+ tree"] [Reverse] [GIN] [Bitmap] [Hash] ["Full-text"] ; 
+Partitioning: [Range] [List] ["Composite (Range+Hash)"] ; 
+"General information": "Software license" ; 
+"Access control": ["Run unprivileged4"] ["Brute-force protection"] ["Security Certification"] ["Enterprise directory compatibility"] ["Resource limit"] ["Native network encryption1"] ["Patch access3"] ["Label Based Access Control (LBAC)"] ["Separation of duties (RBAC)5"] ["Password complexity rules2"] [Audit] ; 
+"Materialized view": ["Planned for inclusion in next major release"] ; 
+"z/OS": ["Under Linux on System z"] ; 
+Interface: (SQL|"SQL & API"|"SQL & QUEL"|"API & SQL"|Multiple|"API & GUI & SQL"|"GUI & SQL")? ; 
+Spatial: (PostGIS|SpatiaLite)? ; 
+Bitmap: ["Ingres v10"] ; 
+Hash: (Cluster|"Cluster Tables")? ; 
+"Software license": ("GPL and Proprietary"|"MonetDB Public License v1.1"|SaaS|Proprietary|"Apache License"|LGPL|"IPL and IDPL"|"GPL or Proprietary"|"Public domain"|"GPL v2"|"BSD, GPL v2"|"PostgreSQL Licence (a liberal Open Source license)")? ;
+</FM>
+<BUILDER>
+162=>;159=>Linter SQL RDBMS;158=>SaaS;157=>OpenEdge;156=>Separation of duties (RBAC)5;155=>External routine?1;154=>Run unprivileged4;153=>Clustrix;152=>Cluster;151=>Hash;150=>Advantage Database Server (ADS);149=>Firebird;148=>MonetDB Public License v1.1;147=>SQLBase;146=>Other objects;145=>SQL & QUEL;163=>Proprietary;144=>Except;143=>DB2;142=>API & GUI & SQL;141=>SQL;140=>Teradata;139=>BSD;138=>Union;137=>FileMaker;136=>Advantage Database Server;135=>Microsoft SQL Server Compact (Embedded Database);134=>Referential integrity;133=>Access control;132=>Drizzle;131=>Microsoft Visual FoxPro;130=>MonetDB;129=>ADABAS;128=>Microsoft Visual Foxpro;127=>R:Base;126=>PostgreSQL Licence (a liberal Open Source license);125=>Oracle Rdb;124=>Materialized view;123=>Tables and views;122=>mSQL;121=>Unicode;120=>Procedure?1;119=>Transactions;118=>BSD, GPL v2;117=>RDM Server;116=>GUI 5 & SQL;115=>Polyhedra;114=>Inner joins;113=>Cluster Tables;112=>Oracle;111=>UniData;110=>Expression;109=>Label Based Access Control (LBAC);108=>Windowing Functions;107=>SQL & API;106=>MySQL;105=>Partial;104=>Range;103=>ACID;102=>Polyhedra DBMS;101=>Outer joins;100=>R-/R+ tree;99=>Adaptive Server Enterprise;98=>Informix Dynamic Server;97=>Public domain;95=>MonetDB/SQL;96=>MemSQL;93=>Ingres v10;94=>OpenLink Virtuoso;92=>RDM Embedded;91=>MaxDB;90=>Composite (Range+Hash);89=>UNIX;87=>Windows;88=>Intersect;86=>Audit;85=>UniVerse;83=>H2;84=>Apache Derby;82=>OS X;81=>Reverse;78=>Resource limit;79=>Data Domain;80=>iOS;77=>4th Dimension;76=>PostgreSQL;75=>z/OS;74=>MariaDB;73=>GPL or Proprietary;72=>Datacom;71=>InterBase;70=>PostGIS;69=>Blobs and Clobs;66=>Empress Embedded Database;67=>Merge joins;68=>Nexusdb;62=>Security Certification;63=>FOT;64=>Database capabilities;65=>IBM DB2;61=>Paradox;59=>Apache License;60=>SQL Anywhere;57=>Temporary table;58=>Omnis Studio;54=>Inner selects;55=>GIN;56=>Under Linux on System z;53=>Bitmap;164=>Software license;52=>Spatial;51=>Microsoft SQL Server;49=>Planned for inclusion in next major release;50=>ScimoreDB;48=>Native network encryption1;47=>OpenBase SQL;46=>LucidDB;45=>Parallel Query;44=>Linux;43=>Interface;42=>Altibase;41=>Indexes;161=>4D (4th Dimension);40=>AmigaOS;39=>EXASolution;38=>SpatiaLite;37=>Linter SQL RDBMS10;36=>Password complexity rules2;35=>Multiple;34=>CUBRID;33=>API & SQL;32=>GPL v2;31=>Patch access3;30=>GPL and Proprietary;29=>GiST;28=>Operating system support;27=>GUI & SQL;26=>Function?1;25=>Cursor;24=>Trigger;23=>Common Table Expressions;22=>Symbian;21=>Enterprise directory compatibility;20=>Fundamental features;1=>Comparison_of_relational_database_management_systems;160=>General information;19=>List;18=>Full-text;17=>Brute-force protection;16=>LGPL;15=>Partitioning;14=>SmallSQL;13=>Ingres;12=>SQLite;11=>Microsoft Access (JET);10=>Pervasive PSQL;9=>Superbase;8=>Android;7=>HSQLDB;6=>4D;5=>RDM;4=>IPL and IDPL;3=>SAP HANA;2=>Xeround Cloud Database;
+</BUILDER>
+<BDD>
+0 0 0
+
+</BDD>
+</FMLBDD>

@@ -1,0 +1,23 @@
+fm1 = FM ( A: D F?; D: (G|H)+; F: I J?; )
+fm2 = FM ( A: D E F?; D: (G|H); F: I J; )
+nfm1 = card fm1
+nfm2 = card fm2
+security = copy fm2 
+exist? fm2
+exist? security
+n1 = copy nfm1 
+n2 = copy nfm2 
+exist? nfm1
+exist? n1
+exist? nfm2
+exist? n2
+fm2renamed = remove_variable fm2 // new way to rename
+fm2exist = exist? fm2 
+securityExist = exist? security
+fm2renamedExist = exist? fm2renamed
+run "assertTrue" fm2renamedExist
+run "assertFalse" fm2exist
+assert (securityExist eq fm2renamedExist)
+//run "assertFalse" fm2renamedExist // fail
+run "assertTrue" fm2exist // fail
+//assert (securityExist neq fm2renamedExist) // fail

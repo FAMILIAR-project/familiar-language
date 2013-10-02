@@ -1,0 +1,18 @@
+Comparison_of_Internet_Relay_Chat_clients: "Operating system support" Features [General] "Protocol support" ; 
+"Operating system support": (DOS|"System 7 (PPC/68k)")? ["AmigaOS 4, MorphOS (PPC)"] ["OS 8"] [QNX] [ReactOS] ["OS 9"] ["FreeBSD, NetBSD, OpenBSD"] ["OS X (Intel/PPC)"] [Linux] ["OS/2, eCS"] ["BeOS, Haiku"] ["AmigaOS (68k)"] ["OSF/1"] [SunOS] ["NT 4.0"] ["3.1x"] ["Tru64 UNIX"] ["XP, 2000"] ["SCO OpenServer"] ["BSD/OS (BSD/386, BSDI)"] [UnixWare] [OpenVMS] ["Me, 98"] [IRIX] ["NT 3.x"] ["Windows 7, Vista"] [ULTRIX] [NeXTSTEP] [AIX] ["HP-UX"] [Solaris] ["95"] ["386BSD"] ["A/UX"] ; 
+Features: ["Multi-server"] ["UTF-8"] ["irc:// URI scheme"] ["Automatic updates"] ["Scripting language"] ["Proxy server"] ; 
+General: ["Programming language"] ["Software license"] ["User interface"] "Distribution model" ["Computing platform"] ; 
+"Protocol support": [CHAT] [TSEND] [Server] [DCC] [Whiteboard] [RDCC] [SEND] [XMIT] ["File servers (FSERVs)"] [REVERSE] ["Reverse / Firewall DCC"] ["Passive DCC"] [RESUME] [OCSP] [TLS] [CTCP] [XDCC] ["IPv6"] ["SEND T"] [RSEND] [SASL] [SSL] [CRL] ; 
+"Scripting language": ("Perl, Python, Tcl, Ruby, C++, ECMAScript, Scheme (Guile)"|"mIRC script"|Versus|"Shell script"|Perl|"AppleScript, IrcII script"|"IrcII script"|"AppleScript, Cocoa, F-Script, JavaScript, Python"|"VBScript, custom"|"KVS (custom), Perl, Python, C++"|"Perl, Python, Tcl, Lua, C, C++"|"Custom Actions system, Java plugins"|"Enhanced IrcII script"|VBScript|JavaScript|AppleScript|"C, Perl, Python, Ruby, Lua, Tcl, Scheme (Guile)"|ARexx|"AppleScript, Cocoa")? ; 
+"Proxy server": [SOCKS] ; 
+"Programming language": ("Visual Basic .NET"|"Emacs Lisp"|"C++"|"C# (Visual Basic until 2004)"|"Objective-C"|"JavaScript frontend, Java backend"|QuickBasic|"Erlang, JavaScript"|"JavaScript frontend, Python backend"|C|"JavaScript, XUL"|"C (forked from XChat)"|"C (Delphi originally)"|"C++, WTL"|"Visual Basic"|"C, C++"|"RubyCocoa (2007?2010) Objective-C(2010?)"|Java|"C/C++ (Borland C++ originally)"|"C#"|Delphi)? ; 
+"Software license": ("Desktop: GPL,<br />Mobile: BSD"|GPL|"[[Affero General Public License|AGPL]]AGPL"|"[[GNU Lesser General Public License|LGPL]]LGPL"|"proprietary (source available)"|"GPL; or proprietary for Windows"|"[[Artistic License|Artistic 2.0]]Artistic 2.0"|"[[Apache license|Apache]] 2.0Apache"|"[[BSD licenses|BSD]]BSD"|BSD|proprietary|"proprietary (violates GPL)"|"[[Mozilla Public License|MPL]], [[GNU General Public License|GPL]], LGPL<br />[[tri-license]]MPL"|"[[MIT License|MIT/X Consortium]]MIT/X Consortium")? ; 
+"User interface": (TUI|"filesystem based FIFO"|"TUI, GUI"|GUI|"GUI, TUI"|Web) ; 
+"Distribution model": ("Shareware 30-day trial"|"Free software"|Freeware|"Free Software"|"Subscription service (free in alpha phase)"|"Commercial, true5 day trial"|Commercial|"Commercial 30-day trial"|"Desktop: free software, Mobile: commercial"|"Textual Adbar"|"Unix/Linux: free software; Windows: commercial, 30-day trial"|Shareware) ; 
+"Computing platform": ("x86, VAX"|"Cross-platform"|"alpha, arm, hppa, ia64, ppc, ppc64, sparc, x86, x86-64"|"All with modern browser"|"Windows x86 / x64 compatible (requires .NET 2.0 or higher)"|"x86"|"x86, x86-64"|"ARM, PowerPC, s390, SPARC, x86, x86-64"|"m68k, PowerPC"|"ARM, MIPS, PowerPC, s390, SPARC, x86, x86-64"|"ARM, m68k, MIPS, PowerPC, s390, SPARC, x86, x86-64"|"x86, x86-64, s390, SPARC, MIPS, PowerPC"|"PowerPC, x86, x86-64")? ; 
+SASL: [script] ; 
+(DOS -> !"NT 3.x");
+(DOS -> !"OS 9");
+(DOS -> !"OS/2, eCS");
+("OS 8" -> !DOS);
+(DOS -> !"3.1x");

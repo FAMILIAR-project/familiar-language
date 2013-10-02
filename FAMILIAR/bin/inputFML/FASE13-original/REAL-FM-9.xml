@@ -1,0 +1,26 @@
+<feature_model name="modules">
+<feature_tree>
+:r modules (f_modules)
+	:m james (f_james)
+	:m gui (f_gui)
+	:m core (f_core)
+	:m user_mngt (f_user_mngt)
+	:o ws_interface (f_ws_interface)
+	:g [1, *]
+		: pda (f_pda)
+		: pc (f_pc)
+	:g [1, *]
+		: forum (f_forum)
+		: repository (f_repository)
+			:o congress_mngt (f_congress_mngt)
+		: calendar (f_calendar)
+	:g [1, 1]
+		: db (f_db)
+		: ldap (f_ldap)
+</feature_tree>
+<constraints>
+constraint_1:~f_repository or f_pc
+constraint_2:~f_pda or ~f_congress_mngt
+constraint_3:~f_pda or ~f_repository
+</constraints>
+</feature_model>

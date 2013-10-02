@@ -1,0 +1,33 @@
+<feature_model name="Check for content updates">
+<feature_tree>
+:r Check for content updates (f_Check_for_content_updates)
+	:m Web Content Delivery (f_Web_Content_Delivery)
+	:o Encrypt content (f_Encrypt_content)
+	:g [1, *]
+		: Serve from cache (f_Serve_from_cache)
+			:o Store in cache (f_Store_in_cache)
+				:g [1, 1]
+					: Store in browser cache (f_Store_in_browser_cache)
+						:g [1, 1]
+							: Short-term cache (f_Short_term_cache)
+							: Long-term cache (f_Long_term_cache)
+					: Store in proxy cache (f_Store_in_proxy_cache)
+			:g [1, 1]
+				: Serve from browser cache (f_Serve_from_browser_cache)
+				: Serve from proxy cache (f_Serve_from_proxy_cache)
+		: Authorise access to content (f_Authorise_access_to_content)
+	:g [1, 1]
+		: Check after heuristic wait (f_Check_after_heuristic_wait)
+		: Check after defined wait (f_Check_after_defined_wait)
+		: Always check for updates (f_Always_check_for_updates)
+</feature_tree>
+<constraints>
+constraint_1:~f_Always_check_for_updates or f_Authorise_access_to_content
+constraint_2:~f_Store_in_browser_cache or f_Serve_from_browser_cache
+constraint_3:~f_Store_in_proxy_cache or f_Serve_from_proxy_cache
+constraint_4:~f_Check_after_heuristic_wait or f_Store_in_cache
+constraint_5:~f_Check_after_defined_wait or f_Store_in_cache
+constraint_6:~f_Serve_from_proxy_cache or ~f_Short_term_cache
+constraint_7:~f_Serve_from_proxy_cache or ~f_Long_term_cache
+</constraints>
+</feature_model>

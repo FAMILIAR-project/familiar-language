@@ -1,0 +1,25 @@
+// running example MODELS'10
+//gc1 = FM ( GraphicCard: DirectX Speed Bus [Multi]; 
+//					DirectX: (v10dot1 | v10) ; 
+//					Speed: (n800 | n1000) ;
+//					Bus: n128 ; )
+gc1 = FM ( GraphicCard: DirectX Speed Bus [Multi]; DirectX: (v10dot1 | v10) ; Speed: (n800 | n1000) ; Bus: n128 ; )
+					
+//gc2 = FM ( GraphicCard: DirectX Speed Bus [Vertex]; 
+//					DirectX: (v10 | v9) ; 
+//					Speed: n800  ;
+//					Bus: (n64 | n128) ; )
+
+gc2 = FM ( GraphicCard: DirectX Speed Bus [Vertex]; DirectX: (v10dot1 | v10 | v9) ;	Speed: n800  ;	Bus: (n64 | n128) ; )
+					
+					
+//gc3 = FM ( GraphicCard: DirectX Speed Bus Multi; 
+//					DirectX: (v11 | v10dot1) ; 
+//					Speed: n1000  ;
+//					Bus: n256 ; )
+					
+gc3 = FM ( GraphicCard: DirectX Speed Bus Multi; DirectX: (v11 | v10dot1) ; Speed: n1000  ;	Bus: n256 ; )
+
+
+exit
+					 

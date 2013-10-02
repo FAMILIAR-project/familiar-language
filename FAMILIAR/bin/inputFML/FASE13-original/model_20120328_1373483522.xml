@@ -1,0 +1,21 @@
+<feature_model name="Car manager">
+<feature_tree>
+:r Car manager (f_Car_manager)
+	:m Parking lot Manager (f_Parking_lot_Manager)
+	:m Car register (f_Car_register)
+	:m Transfer controller (f_Transfer_controller)
+	:m Car Finder (f_Car_Finder)
+	:m Parking lot register (f_Parking_lot_register)
+	:o Statistics (f_Statistics)
+		:o Car Location statistics (f_Car_Location_statistics)
+		:o Dashboard (f_Dashboard)
+	:o Register user (f_Register_user)
+		:m User Manager (f_User_Manager)
+	:g [1, 1]
+		: Manual Mapping (f_Manual_Mapping)
+		: GPS (f_GPS)
+</feature_tree>
+<constraints>
+constraint_1:~f_Car_Location_statistics or f_GPS
+</constraints>
+</feature_model>

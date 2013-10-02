@@ -1,0 +1,74 @@
+// testing 'renameFeature' operation
+
+// syntacs: b = renameFeature ft as ftnew
+ 
+// ft is a feature
+ 
+// ftnew is a string
+
+// b is a boolean value:
+ 
+// true if the renaming can be performed (ft does exist, ftnew does not exist)
+
+// false otherwise (and the feature model is not modified)
+
+
+fm1 = FM (A: B [C] D; D : (E|F)+; F : (I|J|K); E : [Z]; )
+fm1bis = copy fm1 // save the original version
+
+
+renameFeature fm1.B as "Bbis"
+bExist = isExisting fm1.B // B does not exist anymore
+
+FALSE = false
+assert (bExist eq FALSE)
+bBisExist = isExisting fm1.Bbis // Bbis does exist
+
+TRUE = true 
+assert (bBisExist eq TRUE)
+
+renameFeature Bbis as "B" // come back to the original version
+
+assert (fm1 eq fm1bis)
+
+ibis = "Ibis"
+jbis = "Jbis"
+kbis = "Kbis"
+renameFeature fm1bis.I as ibis
+renameFeature fm1bis.J as jbis
+renameFeature fm1bis.K as kbis
+
+// checking that fm1bis is actually modified
+
+chF = children fm1bis.F
+chStrF = setEmpty
+foreach (ch in chF) do 
+	chStr = name ch 
+	setAdd chStrF chStr 
+end
+chStrFExpected = setEmpty
+setAdd chStrFExpected ibis
+setAdd chStrFExpected jbis
+setAdd chStrFExpected kbis
+assert (chStrFExpected eq chStrF)
+
+fm1bisbis = copy fm1
+b = renameFeature fm1.D as "C" // C already exists!
+
+assert (b eq FALSE)
+assert (fm1bisbis eq fm1) // fm1 is not modified
+
+
+b2 = renameFeature fm1.U as "Y" // U does not exist!
+
+assert (b2 eq FALSE) 
+assert (fm1bisbis eq fm1) // fm1 is not modified
+
+
+b3 = renameFeature B as "Y" // B is ambigous (fm1, fm1bis, fm1bisbis?)
+
+assert (b3 eq FALSE)
+ 
+exit
+
+

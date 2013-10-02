@@ -1,0 +1,152 @@
+fmProduct0 = FM (Comparison_of_audio_synthesis_environments: General Technical "Programming language features" ; 
+General: License "Development status" "Main user interface type" ; 
+Technical: "Operating system(s)" "Source code language(s)" ; 
+"Programming language features": ["Object-oriented"] "Textual/graphical" ; 
+License: Proprietary ; 
+"Development status": Stable ; 
+"Main user interface type": Graphical ; 
+"Operating system(s)": "iOS, Mac OS X" ; 
+"Source code language(s)": "C++, Objective-C, Lua" ; 
+"Textual/graphical": Graphical ; 
+!"Object-oriented";
+)
+
+fmProduct1 = FM (Comparison_of_audio_synthesis_environments: General Technical "Programming language features" ; 
+General: License "Main user interface type" "Development status" ; 
+Technical: "Operating system(s)" "Source code language(s)" ; 
+"Programming language features": "Object-oriented" "Textual/graphical" "Type system" ; 
+License: GPL ; 
+"Main user interface type": Document ; 
+"Development status": Immature ; 
+"Operating system(s)": "Mac OS X, Linux, Windows" ; 
+"Source code language(s)": "C++" ; 
+"Textual/graphical": Textual ; 
+"Type system": Static ;
+)
+
+fmProduct2 = FM (Comparison_of_audio_synthesis_environments: General Technical "Programming language features" ; 
+General: License "Main user interface type" "Development status" ; 
+Technical: "Operating system(s)" "Source code language(s)" ; 
+"Programming language features": ["Object-oriented"] "Textual/graphical" ; 
+License: LGPL ; 
+"Main user interface type": "Document, graphical for realtime" ; 
+"Development status": Mature ; 
+"Operating system(s)": "Mac OS X, Linux, Windows" ; 
+"Source code language(s)": "C, C++" ; 
+"Textual/graphical": "Textual/Graphical (FLTK)" ; 
+!"Object-oriented";
+)
+
+fmProduct3 = FM (Comparison_of_audio_synthesis_environments: General Technical "Programming language features" ; 
+General: License "Development status" "Main user interface type" ; 
+Technical: "Operating system(s)" "Source code language(s)" ; 
+"Programming language features": "Textual/graphical" ["Object-oriented"] "Type system" ; 
+License: Proprietary ; 
+"Development status": Stable ; 
+"Main user interface type": Document ; 
+"Operating system(s)": "Mac OS X" ; 
+"Source code language(s)": "Lisp, Objective-C, Scheme" ; 
+"Textual/graphical": "Mostly textual" ; 
+"Type system": "Dynamic & static" ; 
+!"Object-oriented";
+)
+
+fmProduct4 = FM (Comparison_of_audio_synthesis_environments: General Technical "Programming language features" ; 
+General: License "Development status" "Main user interface type" ; 
+Technical: "Operating system(s)" "Source code language(s)" ; 
+"Programming language features": ["Object-oriented"] "Textual/graphical" ; 
+License: Proprietary ; 
+"Development status": Mature ; 
+"Main user interface type": Graphical ; 
+"Operating system(s)": "Mac OS X, Windows" ; 
+"Source code language(s)": "C, Objective-C" ; 
+"Textual/graphical": Graphical ; 
+!"Object-oriented";
+)
+
+fmProduct5 = FM (Comparison_of_audio_synthesis_environments: General Technical "Programming language features" ; 
+General: License "Main user interface type" "Development status" ; 
+Technical: "Operating system(s)" "Source code language(s)" ; 
+"Programming language features": "Object-oriented" "Textual/graphical" "Type system" ; 
+License: GPL ; 
+"Main user interface type": Document ; 
+"Development status": Mature ; 
+"Operating system(s)": "Mac OS X, Linux, Windows" ; 
+"Source code language(s)": "C++" ; 
+"Textual/graphical": Textual ; 
+"Type system": Dynamic ;
+)
+
+fmProduct6 = FM (Comparison_of_audio_synthesis_environments: General Technical "Programming language features" ; 
+General: License "Main user interface type" "Development status" ; 
+Technical: "Operating system(s)" "Source code language(s)" ; 
+"Programming language features": "Textual/graphical" ["Object-oriented"] ; 
+License: "BSD-like" ; 
+"Main user interface type": Graphical ; 
+"Development status": Mature ; 
+"Operating system(s)": "Mac OS X, Linux, Windows, iPod, Android" ; 
+"Source code language(s)": C ; 
+"Textual/graphical": Graphical ; 
+!"Object-oriented";
+)
+
+fmProduct7 = FM (Comparison_of_audio_synthesis_environments: General Technical "Programming language features" ; 
+General: License "Main user interface type" "Development status" ; 
+Technical: "Operating system(s)" ; 
+"Programming language features": ["Object-oriented"] "Textual/graphical" ; 
+License: Proprietary ; 
+"Main user interface type": Graphical ; 
+"Development status": Mature ; 
+"Operating system(s)": "Mac OS X, Windows" ; 
+"Textual/graphical": Graphical ; 
+!"Object-oriented";
+)
+
+fmProduct8 = FM (Comparison_of_audio_synthesis_environments: General Technical "Programming language features" ; 
+General: License "Main user interface type" "Development status" ; 
+Technical: "Operating system(s)" "Source code language(s)" ; 
+"Programming language features": "Object-oriented" "Textual/graphical" "Type system" ; 
+License: GPL ; 
+"Main user interface type": Document ; 
+"Development status": Mature ; 
+"Operating system(s)": "Mac OS X, Linux, Windows, FreeBSD" ; 
+"Source code language(s)": "C, C++, Objective-C" ; 
+"Textual/graphical": "Textual/Graphical (Cocoa/Swing/Qt)" ; 
+"Type system": Dynamic ;
+)
+
+fmProduct9 = FM (Comparison_of_audio_synthesis_environments: General Technical ; 
+General: License "Main user interface type" "Development status" ; 
+Technical: ["Operating system(s)"] "Source code language(s)" ; 
+License: "BSD-like" ; 
+"Main user interface type": Document ; 
+"Development status": Stable ; 
+"Source code language(s)": "C++" ;
+)
+
+fmProduct10 = FM (Comparison_of_audio_synthesis_environments: General Technical "Programming language features" ; 
+General: License "Main user interface type" "Development status" ; 
+Technical: "Operating system(s)" "Source code language(s)" ; 
+"Programming language features": "Textual/graphical" "Object-oriented" "Type system" ; 
+License: Proprietary ; 
+"Main user interface type": Graphical ; 
+"Development status": Mature ; 
+"Operating system(s)": "Mac OS X/Windows" ; 
+"Source code language(s)": Delphi ; 
+"Textual/graphical": Graphical ; 
+"Type system": Dynamic ;
+)
+
+fmProduct11 = FM (Comparison_of_audio_synthesis_environments: "Programming language features" ; 
+"Programming language features": ["Object-oriented"] "Textual/graphical" ["Type system"] ; 
+"Textual/graphical": Textual ; 
+!"Type system";
+!"Object-oriented";
+)
+
+fmProduct12 = FM (Comparison_of_audio_synthesis_environments: Technical ; 
+Technical: "Operating system(s)" "Source code language(s)" ; 
+"Operating system(s)": "Mac OS X, Linux, Windows" ; 
+"Source code language(s)": "Scheme, C++" ;
+)
+

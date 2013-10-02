@@ -1,0 +1,42 @@
+fm1 = FM (A : [B] [C] D ; D : (E|F|G) ; C : (I|J|K|L)+ ; )
+
+c1 = configuration fm1
+deselect C in c1
+deselect B in c1
+fmConvert = asFM c1
+
+println fmConvert
+
+fmExpected = FM (A : D ; D : (E|F|G) ; )
+cmp = compare fmExpected fmConvert
+assert (cmp eq REFACTORING)
+
+
+// another example
+
+fm2 = FM (A : [B] [C] D ; D : (E|F|G) ; C : (I|J|K|L) ; )
+
+c2 = configuration fm2
+select C in c2
+select E in c2
+deselect B in c2
+fmConvert2 = asFM c2
+
+fmExpected2 = FM (A : C D ; D : E ; C : (I|J|K|L) ; )
+cmp2 = compare fmExpected2 fmConvert2
+assert (cmp2 eq REFACTORING)
+
+
+// yet another example
+
+fm3 = FM (A : [B] [C] D ; D : (E|F|G)+ ; C : (I|J|K|L)+ ; )
+
+c3 = configuration fm3
+select B C in c3 // B, C and D are selected
+deselect E F in c3 // only G
+deselect J K L in c3 // only I
+fmConvert3 = asFM c3
+
+fmExpected3 = FM (A : B C D ; D : G ; C : I ; )
+cmp3 = compare fmExpected3 fmConvert3
+assert (cmp3 eq REFACTORING)

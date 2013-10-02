@@ -1,0 +1,20 @@
+<feature_model name="Basic Photo Operations">
+<feature_tree>
+:r Basic Photo Operations (f_Basic_Photo_Operations)
+	:m View Photo (f_View_Photo)
+	:m Edit Photo Label (f_Edit_Photo_Label)
+	:m Create Album (f_Create_Album)
+	:m Delete Album (f_Delete_Album)
+	:m Album Management (f_Album_Management)
+	:m MobilePhone (f_MobilePhone)
+	:m Create Photo (f_Create_Photo)
+	:m Delete Photo (f_Delete_Photo)
+	:m Photo Management (f_Photo_Management)
+	:o Sorting (f_Sorting)
+	:o Favorites (f_Favorites)
+	:o Copy Photo (f_Copy_Photo)
+	:o SMS (f_SMS)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

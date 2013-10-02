@@ -1,0 +1,57 @@
+run "task.fmm" into task
+
+//ctask = configuration taskFM
+//autoSelect ctask MIN
+//ctaskFM = asFM ctask
+
+run "oointerest.fmm" into ooi 
+run "scene" into scene
+run "qos" into QoS
+
+specification = aggregate taskFM ooiFM sceneFM QoSFM with { Precision implies VingtCinqFrSec ; 	
+										Counting implies Precision ; 
+										Infrared excludes Large ; 
+										IntrusionDetection implies LowFrameRate ; 
+										NaturalLight and Night implies Infrared ; 
+										Tracking implies HighFrameRate ; } 
+										
+//removeFeature QoS // syntactical 										
+//removeFeature Counting // specialize
+
+//extract specification.QoS // same problem occurs 
+ 
+//removeFeature : syntactic / semantic (implication?)		
+//aggregate (non existing constraints (features)) 							
+//configuration specification.Task 
+
+//gdisplay specification
+
+//addConstraint 
+
+addConstraint { specification.Counting implies specification.Large ; }
+
+addConstraint { specification.Task excludes specification.QoS ; } 
+
+
+
+b = isValid specification // buggy
+FALSE = false
+assert (b eq FALSE) 
+
+n = counting specification 
+nExpected = 0
+assert (nExpected eq n)
+
+
+
+//exit
+
+//addConstraint
+c2 = configuration specification
+autoSelect c2 MIN
+//println c2
+
+fmc2 = asFM c2
+gdisplay fmc2
+
+//println specification 

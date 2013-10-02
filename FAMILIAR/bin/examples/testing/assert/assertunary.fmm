@@ -1,0 +1,9 @@
+fm1 = FM (A : B [C]; )
+b = true
+assert (b) 
+
+// TODO
+// b2 = false
+// assert (not b2)
+
+exit

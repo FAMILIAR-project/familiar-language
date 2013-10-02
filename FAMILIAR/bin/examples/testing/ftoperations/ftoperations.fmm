@@ -1,0 +1,42 @@
+// misc
+
+fm1 = FM ( A: B [C] [D] E; E : (F|G) ; D : I [J] ; )
+fa = name fm1.A
+fm2 = whichfm fm1.A
+// asser eq ....
+parentB = parent fm1.B
+rootFM1 = root fm1
+assert (rootFM1 eq parentB)
+
+name_parentB = name parentB
+faa = "A"
+assert (faa eq name_parentB)
+
+name_rootFM1 = name rootFM1
+assert (fa eq name_rootFM1)
+
+parentJ = parent fm2.J
+fD1 = parent fm1.J
+fD2 = parent J // ambigous
+bfD2 = isNull fD2
+run "assertTrue" bfD2
+
+assert (fD1 eq parentJ)
+
+name_D = "D"
+name_fD1 = name fD1
+name_parentJ = name parentJ
+assert (name_D eq name_parentJ)
+assert (name_parentJ eq name_fD1)
+assert (name_D eq name_fD1)
+
+ref_fD1 = whichfm fD1
+ref_parentJ = whichfm parentJ
+assert (ref_fD1 eq ref_parentJ)
+
+debug = false
+
+if (debug) then print ref_fD1 print ref_parentJ print fm1 print fm2 end
+
+
+if (not (debug)) then exit end

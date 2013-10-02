@@ -1,0 +1,25 @@
+<feature_model name="PTVL">
+<feature_tree>
+:r PTVL (f_PTVL)
+	:m Trans (f_Trans)
+	:m Series (f_Series)
+	:m Trim (f_Trim)
+	:o Ice (f_Ice)
+		:g [1, 1]
+			: Pack 1 (f_Pack_1)
+			: Pack 2 (f_Pack_2)
+	:g [1, 1]
+		: 10 (f_10)
+		: 20 (f_20)
+	:g [1, 1]
+		: Cloth (f_Cloth)
+		: Leather (f_Leather)
+</feature_tree>
+<constraints>
+constraint_1:~f_20 or f_Pack_2
+constraint_2:~f_20 or f_Leather
+constraint_3:~f_Pack_1 or f_PTVL
+constraint_4:~f_Pack_1 or f_10
+constraint_5:~f_Cloth or f_10
+</constraints>
+</feature_model>

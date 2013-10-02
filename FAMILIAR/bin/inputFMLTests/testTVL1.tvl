@@ -1,0 +1,16 @@
+root A {
+
+	group allOf {
+		B,
+		opt C, 
+		opt D, 
+		E {
+			group oneOf {
+				F, 
+				G
+			}
+		}
+		
+	}
+
+}

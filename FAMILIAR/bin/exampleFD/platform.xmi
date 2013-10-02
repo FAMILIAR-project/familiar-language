@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fD:FeatureDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fD="http://www.xtext.org/example/mydsl/FD" root="//@features.0">
+  <features name="VideoSurveillanceSystem" children="//@features.1 //@features.2 //@features.17 //@features.21 //@features.37 //@features.38 //@features.39 //@features.40 //@features.41"/>
+  <features xsi:type="fD:PrimitiveFeature" name="ImageAcquisition" parents="//@features.0"/>
+  <features name="SegmentationModule" children="//@features.3 //@features.9" parents="//@features.0"/>
+  <features name="TraversalAlgorithm" children="//@features.4 //@features.5" parents="//@features.2"/>
+  <features xsi:type="fD:PrimitiveFeature" name="GridStep" parents="//@features.3"/>
+  <features name="TraversalParameters" children="//@features.6 //@features.7 //@features.8" parents="//@features.3">
+    <operator xsi:type="fD:Or"/>
+  </features>
+  <features xsi:type="fD:PrimitiveFeature" name="WithMask" parents="//@features.5"/>
+  <features xsi:type="fD:PrimitiveFeature" name="WithWindow" parents="//@features.5"/>
+  <features xsi:type="fD:PrimitiveFeature" name="Fast" parents="//@features.5"/>
+  <features name="KernelFunction" children="//@features.10 //@features.11 //@features.14" parents="//@features.2"/>
+  <features xsi:type="fD:PrimitiveFeature" name="ShadowElimination" optional="true" parents="//@features.9"/>
+  <features name="ColorType" children="//@features.12 //@features.13" parents="//@features.9">
+    <operator xsi:type="fD:Xor"/>
+  </features>
+  <features xsi:type="fD:PrimitiveFeature" name="SystemColor" parents="//@features.11"/>
+  <features xsi:type="fD:PrimitiveFeature" name="GreyLevel" parents="//@features.11"/>
+  <features name="ObjectAspect" children="//@features.15 //@features.16" parents="//@features.9">
+    <operator xsi:type="fD:Xor"/>
+  </features>
+  <features xsi:type="fD:PrimitiveFeature" name="Edge" parents="//@features.14"/>
+  <features xsi:type="fD:PrimitiveFeature" name="Region" parents="//@features.14"/>
+  <features name="Clustering" children="//@features.18 //@features.19 //@features.20" parents="//@features.0">
+    <operator xsi:type="fD:Xor"/>
+  </features>
+  <features xsi:type="fD:PrimitiveFeature" name="FastClustering" parents="//@features.17"/>
+  <features xsi:type="fD:PrimitiveFeature" name="DistanceRGBAnd3DClustering" parents="//@features.17"/>
+  <features xsi:type="fD:PrimitiveFeature" name="KMeansClustering" parents="//@features.17"/>
+  <features name="ClassificationModule" children="//@features.22 //@features.23 //@features.31 //@features.34" parents="//@features.0"/>
+  <features xsi:type="fD:PrimitiveFeature" name="ClassificationStandard" parents="//@features.21"/>
+  <features name="Model" children="//@features.27 //@features.28 //@features.29 //@features.30 //@features.24" parents="//@features.21">
+    <operator xsi:type="fD:Xor"/>
+  </features>
+  <features name="ModelType" children="//@features.25 //@features.26" parents="//@features.23">
+    <operator xsi:type="fD:Or"/>
+  </features>
+  <features xsi:type="fD:PrimitiveFeature" name="ThreeDModel" parents="//@features.24"/>
+  <features xsi:type="fD:PrimitiveFeature" name="OmegaModel" parents="//@features.24"/>
+  <features xsi:type="fD:PrimitiveFeature" name="Ellipse" parents="//@features.23"/>
+  <features xsi:type="fD:PrimitiveFeature" name="Shape" parents="//@features.23"/>
+  <features xsi:type="fD:PrimitiveFeature" name="GravityCenter" parents="//@features.23"/>
+  <features xsi:type="fD:PrimitiveFeature" name="Parallelepiped" parents="//@features.23"/>
+  <features name="Merge" optional="true" children="//@features.32 //@features.33" parents="//@features.21">
+    <operator xsi:type="fD:Xor"/>
+  </features>
+  <features xsi:type="fD:PrimitiveFeature" name="FusionStandard" parents="//@features.31"/>
+  <features xsi:type="fD:PrimitiveFeature" name="FusionGravityCenter" parents="//@features.31"/>
+  <features name="Split" optional="true" children="//@features.35 //@features.36" parents="//@features.21">
+    <operator xsi:type="fD:Xor"/>
+  </features>
+  <features xsi:type="fD:PrimitiveFeature" name="SplitStandard" parents="//@features.34"/>
+  <features xsi:type="fD:PrimitiveFeature" name="SplitGravityCenter" parents="//@features.34"/>
+  <features xsi:type="fD:PrimitiveFeature" name="ReferenceImageUpdating" parents="//@features.0"/>
+  <features xsi:type="fD:PrimitiveFeature" name="FrameToFrameTracking" parents="//@features.0"/>
+  <features xsi:type="fD:PrimitiveFeature" name="TrackingDataFusion" optional="true" parents="//@features.0"/>
+  <features xsi:type="fD:PrimitiveFeature" name="LongTermTracking" optional="true" parents="//@features.0"/>
+  <features xsi:type="fD:PrimitiveFeature" name="ScenarioRecognition" optional="true" parents="//@features.0"/>
+</fD:FeatureDiagram>

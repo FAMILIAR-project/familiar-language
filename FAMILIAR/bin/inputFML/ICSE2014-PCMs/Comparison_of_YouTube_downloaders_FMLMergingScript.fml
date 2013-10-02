@@ -1,0 +1,187 @@
+fmProduct0 = FM (Comparison_of_YouTube_downloaders: "Inbuilt conversion to formats and devices" Features "Supported Operating Systems" ; 
+"Inbuilt conversion to formats and devices": "YouTube Downloader" FLV "MP3" "3GP" [WMV] [AVI] ["OGG Theora"] ["MPEG4"] ["OGG Vorbis"] [SWF] "Special device profiles (e.g. iPhone)" Matroska ; 
+Features: "Ad-Free Video Download" "Private YouTube Videos Download" "Multi-thread Downloads" "Show Lists, Artist Playlists, Charts Download" ["Batch Download"] "HD YouTube Videos Download" "Max Download Speed" ["Browser extensions"] "YouTube Downloader" "One Step Download" "More web sites support" "Embedded YouTube Videos Download" "Automatic Download" ["Integrated Browser"] "Stop, Pause & Resume" "Multi-Lingual" "User's Playlists, User's Uploads, User's Favourites Download" "Exraction of Original Audio from YouTube" ; 
+"Supported Operating Systems": [Android] "YouTube Downloader" Windows "Mac OS X" Linux [Online] ; 
+"YouTube Downloader": "4KDownload" ; 
+"YouTube Downloader": "4KDownload" ; 
+"YouTube Downloader": "4KDownload" ; 
+!SWF;
+!"Integrated Browser";
+!"OGG Vorbis";
+!AVI;
+!Android;
+!"Batch Download";
+!"MPEG4";
+!"OGG Theora";
+!"Browser extensions";
+!WMV;
+!Online;
+)
+
+fmProduct1 = FM (Comparison_of_YouTube_downloaders: "Inbuilt conversion to formats and devices" Features "Supported Operating Systems" ; 
+"Inbuilt conversion to formats and devices": [FLV] "YouTube Downloader" "MP3" ["3GP"] WMV [AVI] "OGG Theora" "OGG Vorbis" "MPEG4" [Matroska] [SWF] ["Special device profiles (e.g. iPhone)"] ; 
+Features: "Ad-Free Video Download" "Private YouTube Videos Download" "Multi-thread Downloads" ["Show Lists, Artist Playlists, Charts Download"] ["Batch Download"] "HD YouTube Videos Download" ["Max Download Speed"] ["Browser extensions"] "YouTube Downloader" ["One Step Download"] "More web sites support" ["Embedded YouTube Videos Download"] "Automatic Download" "Integrated Browser" ["Stop, Pause & Resume"] "Multi-Lingual" "Exraction of Original Audio from YouTube" ["User's Playlists, User's Uploads, User's Favourites Download"] ; 
+"Supported Operating Systems": [Android] "YouTube Downloader" Windows "Mac OS X" Linux Online ; 
+"YouTube Downloader": ClipGrab ; 
+"YouTube Downloader": ClipGrab ; 
+"YouTube Downloader": ClipGrab ; 
+!SWF;
+!"Max Download Speed";
+!"3GP";
+!"Batch Download";
+!"Embedded YouTube Videos Download";
+!"Special device profiles (e.g. iPhone)";
+!"Browser extensions";
+!FLV;
+!AVI;
+!Android;
+!"User's Playlists, User's Uploads, User's Favourites Download";
+!"Show Lists, Artist Playlists, Charts Download";
+!"Stop, Pause & Resume";
+!"One Step Download";
+!Matroska;
+)
+
+fmProduct2 = FM (Comparison_of_YouTube_downloaders: Features ; 
+Features: "Ad-Free Video Download" "Private YouTube Videos Download" "Multi-thread Downloads" ["Show Lists, Artist Playlists, Charts Download"] "Batch Download" "HD YouTube Videos Download" "Max Download Speed" "Browser extensions" "YouTube Downloader" "One Step Download" "More web sites support" "Embedded YouTube Videos Download" "Automatic Download" ["Integrated Browser"] "Stop, Pause & Resume" "Multi-Lingual" "User's Playlists, User's Uploads, User's Favourites Download" "Exraction of Original Audio from YouTube" ; 
+"YouTube Downloader": "Freemake Video Downloader" ; 
+!"Integrated Browser";
+!"Show Lists, Artist Playlists, Charts Download";
+)
+
+fmProduct3 = FM (Comparison_of_YouTube_downloaders: "Inbuilt conversion to formats and devices" Features "Supported Operating Systems" ; 
+"Inbuilt conversion to formats and devices": "YouTube Downloader" FLV "MP3" WMV "3GP" AVI "MPEG4" ["OGG Theora"] ["OGG Vorbis"] SWF ["Special device profiles (e.g. iPhone)"] Matroska ; 
+Features: ["Ad-Free Video Download"] "Private YouTube Videos Download" "Multi-thread Downloads" "Show Lists, Artist Playlists, Charts Download" "Batch Download" "HD YouTube Videos Download" "Max Download Speed" "Browser extensions" "YouTube Downloader" "One Step Download" "More web sites support" "Automatic Download" "Embedded YouTube Videos Download" ["Integrated Browser"] "Stop, Pause & Resume" "Multi-Lingual" "Exraction of Original Audio from YouTube" "User's Playlists, User's Uploads, User's Favourites Download" ; 
+"Supported Operating Systems": [Android] "YouTube Downloader" Windows ["Mac OS X"] [Linux] [Online] ; 
+"YouTube Downloader": "Free Studio" ; 
+"YouTube Downloader": "Free Studio" ; 
+"YouTube Downloader": "Free Studio" ; 
+!"Integrated Browser";
+!"Ad-Free Video Download";
+!Linux;
+!"OGG Vorbis";
+!Android;
+!"Mac OS X";
+!"OGG Theora";
+!"Special device profiles (e.g. iPhone)";
+!Online;
+)
+
+fmProduct4 = FM (Comparison_of_YouTube_downloaders: "Inbuilt conversion to formats and devices" Features "Supported Operating Systems" ; 
+"Inbuilt conversion to formats and devices": [FLV] "YouTube Downloader" ["MP3"] [WMV] ["3GP"] [AVI] ["OGG Vorbis"] ["MPEG4"] ["OGG Theora"] ["Special device profiles (e.g. iPhone)"] [SWF] [Matroska] ; 
+Features: "Ad-Free Video Download" ["Private YouTube Videos Download"] "Multi-thread Downloads" ["Show Lists, Artist Playlists, Charts Download"] "Batch Download" "HD YouTube Videos Download" "Max Download Speed" "Browser extensions" "YouTube Downloader" "One Step Download" "More web sites support" ["Embedded YouTube Videos Download"] "Automatic Download" ["Integrated Browser"] "Stop, Pause & Resume" "Multi-Lingual" ["Exraction of Original Audio from YouTube"] ["User's Playlists, User's Uploads, User's Favourites Download"] ; 
+"Supported Operating Systems": "YouTube Downloader" Android Windows "Mac OS X" Linux [Online] ; 
+"YouTube Downloader": JDownloader ; 
+"YouTube Downloader": JDownloader ; 
+"YouTube Downloader": JDownloader ; 
+!SWF;
+!"Integrated Browser";
+!"3GP";
+!"Embedded YouTube Videos Download";
+!"OGG Theora";
+!"Special device profiles (e.g. iPhone)";
+!WMV;
+!Online;
+!"Exraction of Original Audio from YouTube";
+!FLV;
+!"OGG Vorbis";
+!AVI;
+!"MPEG4";
+!"Private YouTube Videos Download";
+!"User's Playlists, User's Uploads, User's Favourites Download";
+!"Show Lists, Artist Playlists, Charts Download";
+!Matroska;
+!"MP3";
+)
+
+fmProduct5 = FM (Comparison_of_YouTube_downloaders: Features ; 
+Features: ["Ad-Free Video Download"] ["Private YouTube Videos Download"] "Multi-thread Downloads" ["Show Lists, Artist Playlists, Charts Download"] "Batch Download" "HD YouTube Videos Download" "Max Download Speed" "Browser extensions" "YouTube Downloader" "One Step Download" "More web sites support" "Automatic Download" "Embedded YouTube Videos Download" ["Integrated Browser"] "Stop, Pause & Resume" "Multi-Lingual" ["Exraction of Original Audio from YouTube"] ["User's Playlists, User's Uploads, User's Favourites Download"] ; 
+"YouTube Downloader": "Orbit Downloader" ; 
+!"Integrated Browser";
+!"Exraction of Original Audio from YouTube";
+!"Ad-Free Video Download";
+!"Private YouTube Videos Download";
+!"User's Playlists, User's Uploads, User's Favourites Download";
+!"Show Lists, Artist Playlists, Charts Download";
+)
+
+fmProduct6 = FM (Comparison_of_YouTube_downloaders: Features ; 
+Features: ["Ad-Free Video Download"] ["Private YouTube Videos Download"] "Multi-thread Downloads" ["Show Lists, Artist Playlists, Charts Download"] "Batch Download" "HD YouTube Videos Download" ["Max Download Speed"] "Browser extensions" "YouTube Downloader" "One Step Download" "More web sites support" "Embedded YouTube Videos Download" "Automatic Download" "Integrated Browser" "Stop, Pause & Resume" "Multi-Lingual" ["Exraction of Original Audio from YouTube"] ["User's Playlists, User's Uploads, User's Favourites Download"] ; 
+"YouTube Downloader": RealDownloader ; 
+!"Exraction of Original Audio from YouTube";
+!"Ad-Free Video Download";
+!"Max Download Speed";
+!"Private YouTube Videos Download";
+!"User's Playlists, User's Uploads, User's Favourites Download";
+!"Show Lists, Artist Playlists, Charts Download";
+)
+
+fmProduct7 = FM (Comparison_of_YouTube_downloaders: Features "Supported Operating Systems" ; 
+Features: "Ad-Free Video Download" "Private YouTube Videos Download" "Multi-thread Downloads" ["Show Lists, Artist Playlists, Charts Download"] "Batch Download" "HD YouTube Videos Download" ["Max Download Speed"] "Browser extensions" "YouTube Downloader" "One Step Download" "More web sites support" "Automatic Download" "Embedded YouTube Videos Download" "Integrated Browser" "Stop, Pause & Resume" ["Multi-Lingual"] ["User's Playlists, User's Uploads, User's Favourites Download"] "Exraction of Original Audio from YouTube" ; 
+"Supported Operating Systems": [Android] "YouTube Downloader" Windows "Mac OS X" Linux Online ; 
+"YouTube Downloader": "Video DownloadHelper" ; 
+"YouTube Downloader": "Video DownloadHelper" ; 
+!"Max Download Speed";
+!Android;
+!"Multi-Lingual";
+!"User's Playlists, User's Uploads, User's Favourites Download";
+!"Show Lists, Artist Playlists, Charts Download";
+)
+
+fmProduct8 = FM (Comparison_of_YouTube_downloaders: "Inbuilt conversion to formats and devices" "Supported Operating Systems" ; 
+"Inbuilt conversion to formats and devices": "YouTube Downloader" [FLV] "MP3" ["3GP"] [WMV] AVI "OGG Vorbis" ["MPEG4"] ["OGG Theora"] "Special device profiles (e.g. iPhone)" Matroska SWF ; 
+"Supported Operating Systems": [Android] "YouTube Downloader" Windows ["Mac OS X"] [Linux] [Online] ; 
+"YouTube Downloader": "Freemake Video Downloader" ; 
+"YouTube Downloader": "Freemake Video Downloader" ; 
+!Linux;
+!FLV;
+!"3GP";
+!Android;
+!"Mac OS X";
+!"MPEG4";
+!"OGG Theora";
+!WMV;
+!Online;
+)
+
+fmProduct9 = FM (Comparison_of_YouTube_downloaders: "Inbuilt conversion to formats and devices" ; 
+"Inbuilt conversion to formats and devices": FLV "YouTube Downloader" "MP3" WMV ["3GP"] AVI ["OGG Vorbis"] ["OGG Theora"] "MPEG4" "Special device profiles (e.g. iPhone)" [SWF] [Matroska] ; 
+"YouTube Downloader": "MP3 Rocket" ; 
+!SWF;
+!"OGG Vorbis";
+!"3GP";
+!"OGG Theora";
+!Matroska;
+)
+
+fmProduct10 = FM (Comparison_of_YouTube_downloaders: "Inbuilt conversion to formats and devices" "Supported Operating Systems" ; 
+"Inbuilt conversion to formats and devices": [FLV] "YouTube Downloader" ["MP3"] [WMV] ["3GP"] [AVI] ["MPEG4"] ["OGG Vorbis"] ["OGG Theora"] [SWF] [Matroska] ["Special device profiles (e.g. iPhone)"] ; 
+"Supported Operating Systems": [Android] "YouTube Downloader" Windows ["Mac OS X"] [Linux] [Online] ; 
+"YouTube Downloader": "Orbit Downloader" ; 
+"YouTube Downloader": "Orbit Downloader" ; 
+!SWF;
+!"3GP";
+!"OGG Theora";
+!"Special device profiles (e.g. iPhone)";
+!WMV;
+!Online;
+!Linux;
+!FLV;
+!"OGG Vorbis";
+!AVI;
+!Android;
+!"Mac OS X";
+!"MPEG4";
+!Matroska;
+!"MP3";
+)
+
+fmProduct11 = FM (Comparison_of_YouTube_downloaders: "Supported Operating Systems" ; 
+"Supported Operating Systems": [Android] "YouTube Downloader" Windows ["Mac OS X"] [Linux] [Online] ; 
+"YouTube Downloader": "MP3 Rocket" ; 
+!Linux;
+!Android;
+!"Mac OS X";
+!Online;
+)
+

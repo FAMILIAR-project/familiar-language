@@ -1,0 +1,61 @@
+run "aggregateRepository"
+
+fm5 = aggregate fm1 fm2 fm3 fm4 with { J implies B ; I implies ~R; X excludes Q; }
+conf = configuration fm5
+autoSelect conf
+
+fm6 = aggregate fm1 fm2 fm3 fm4 with { J implies B ; I implies ~R; X excludes Q; O and P implies Z ; }
+conf2 = configuration fm6
+autoSelect conf MAX
+
+fm7 = aggregate fm1 fm2
+fm8 = aggregate fm3 fm4
+
+//fm9 = aggregate fm7 fm8 
+
+fm12a = aggregate fm1 fm2
+fm12b = aggregate fm1 fm2 
+fm12 = merge intersection { fm12a fm12b }
+cmp12 = compare fm12 fm12a
+assert (cmp12 eq REFACTORING)
+
+
+
+fm121 = aggregate fm1 fm2 fm3 fm4
+// J is a full mandatory feature in fm1 while B is a full mandatory feature in fm2
+
+fm122 = aggregate fm1 fm2 fm3 fm4 with { J implies B ; } // no incidence on the set of configurations
+
+cmp1212 = compare fm121 fm122
+assert (cmp1212 eq REFACTORING)
+
+
+fm12c = aggregate fm1 fm2 fm3 fm4
+fm12d = aggregate fm1 fm2 fm3 fm4 with { J implies C ; }
+cmp12cd = compare fm12c fm12d
+assert (cmp12cd eq GENERALIZATION)
+
+
+nbefore = counting fm12c
+println "before: " nbefore " configurations" 
+nafter = counting fm12d 
+println "after: " nafter " configurations" 
+nexpected = nbefore - nafter  
+
+fm12e = merge diff { fm12c fm12d }
+n = counting fm12e
+println "constraints remove " n " configurations" 
+
+assert (nexpected eq n)
+
+
+fm12z = aggregate fm1 fm2 fm3 fm4
+n1 = counting fm1
+n2 = counting fm2
+n3 = counting fm3
+n4 = counting fm4
+nsum = n1 * n2 * n3 * n4
+nz = counting fm12z
+assert (nz eq nsum)
+
+exit

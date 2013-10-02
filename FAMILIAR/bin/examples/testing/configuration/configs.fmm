@@ -1,0 +1,41 @@
+fm1 = FM (A : [B] [C] D [E] ; )
+sfm1 = configs fm1
+
+n1 = size sfm1
+n2 = counting fm1
+assert (n1 eq n2) 
+
+fm2 = FM (A : [C] D [E] [B] ; )
+sfm2 = configs fm2
+n3 = size sfm2
+n4 = counting fm2
+assert (n3 eq n4)
+assert (n1 eq n4)
+assert (n3 eq n1)
+
+fm3 = FM (A : B C [D] ; )
+sfm3 = configs fm3
+firstConfig = { fm3.A fm3.B fm3.C }
+secondConfig = { fm3.A fm3.B fm3.C fm3.D }
+sfm3Expected = setEmpty
+setAdd sfm3Expected firstConfig 
+setAdd sfm3Expected secondConfig
+
+assert (sfm3Expected eq sfm3)
+
+fm4 = FM (A : B C [D] ; )
+addConstraint { fm4.B excludes fm4.C ; }
+bf4 = isValid fm4
+FALSE = false
+assert (bf4 eq FALSE)
+convert fm4 in featureide
+sfm4 = configs fm4
+bfm4 = setIsEmpty sfm4
+TRUE = true
+assert (bfm4 eq TRUE)
+
+fm5 = FM (A : B C [D] ; )
+addConstraint { fm5.B implies fm5.D ; }
+nfm5 = counting fm5
+ONE = 1
+assert (ONE eq nfm5)

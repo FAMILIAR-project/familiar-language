@@ -1,0 +1,37 @@
+<feature_model name="GPL">
+<feature_tree>
+:r GPL (f_GPL)
+	:m Algorithms (f_Algorithms)
+	:m Gtp (f_Gtp)
+	:o Weight (f_Weight)
+		:g [1, 1]
+			: weighted (f_weighted)
+			: unweighted (f_unweighted)
+	:o Search (f_Search)
+		:g [1, 1]
+			: BFS (f_BFS)
+			: DFS (f_DFS)
+	:g [1, *]
+		: mstprim (f_mstprim)
+		: mstkruskal (f_mstkruskal)
+		: cycle (f_cycle)
+		: connected (f_connected)
+		: stronglyc (f_stronglyc)
+		: shortest (f_shortest)
+	:g [1, 1]
+		: directed (f_directed)
+		: undirected (f_undirected)
+</feature_tree>
+<constraints>
+constraint_1:~f_cycle or f_DFS
+constraint_2:~f_stronglyc or f_undirected
+constraint_3:~f_connected or f_Search
+constraint_4:~f_shortest or f_directed
+constraint_5:~f_mstkruskal or f_unweighted
+constraint_6:~f_mstkruskal or f_undirected
+constraint_7:~f_mstprim or f_unweighted
+constraint_8:~f_mstprim or f_undirected
+constraint_9:~f_stronglyc or ~f_connected
+constraint_10:~f_mstkruskal or ~f_mstprim
+</constraints>
+</feature_model>

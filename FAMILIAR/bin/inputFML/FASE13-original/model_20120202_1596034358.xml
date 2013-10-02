@@ -1,0 +1,17 @@
+<feature_model name="MobileMedia">
+<feature_tree>
+:r MobileMedia (f_MobileMedia)
+	:m Folder (f_Folder)
+	:m Create Folder (f_Create_Folder)
+	:m Delete Folder (f_Delete_Folder)
+	:m Media Type (f_Media_Type)
+	:o Sorting (f_Sorting)
+	:o Favourites (f_Favourites)
+	:g [1, *]
+		: Photo (f_Photo)
+		: Music (f_Music)
+		: Video (f_Video)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

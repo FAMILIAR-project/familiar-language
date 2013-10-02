@@ -1,0 +1,26 @@
+<feature_model name="Distribution">
+<feature_tree>
+:r Distribution (f_Distribution)
+	:m LocationMonitor (f_LocationMonitor)
+	:m PowerMonitor (f_PowerMonitor)
+	:m Agent (f_Agent)
+	:m Representation (f_Representation)
+	:m CPUMonitor (f_CPUMonitor)
+	:m Coordination (f_Coordination)
+	:m Forward (f_Forward)
+	:m RoutePlanning (f_RoutePlanning)
+	:m Content Sharing (f_Content_Sharing)
+	:m SecurityNotification (f_SecurityNotification)
+	:m Monitoring (f_Monitoring)
+	:o ACLBased (f_ACLBased)
+	:o StringBased (f_StringBased)
+	:o JadePlugin (f_JadePlugin)
+	:o BluePlugin (f_BluePlugin)
+	:o SolPlugin (f_SolPlugin)
+</feature_tree>
+<constraints>
+constraint_1:~f_JadePlugin or f_ACLBased
+constraint_2:~f_SolPlugin or f_StringBased
+constraint_3:~f_BluePlugin or f_StringBased
+</constraints>
+</feature_model>

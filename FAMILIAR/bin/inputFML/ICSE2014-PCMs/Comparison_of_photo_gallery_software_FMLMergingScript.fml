@@ -1,0 +1,132 @@
+fmProduct0 = FM (Comparison_of_photo_gallery_software: "Server applications" ; 
+"Server applications": Upload [License] ["GeoTagging Support"] "IPTC Support" Languages Platform Resizing Output ; 
+Upload: "HTTP, FTP, Web Service" ; 
+Languages: Multilingual ; 
+Platform: "ASP.NET/SQL Server" ; 
+Resizing: Automatic ; 
+Output: "XHTML true.0, CSS" ; 
+!License;
+!"GeoTagging Support";
+)
+
+fmProduct1 = FM (Comparison_of_photo_gallery_software: "Server applications" ; 
+"Server applications": [Upload] License "GeoTagging Support" "IPTC Support" "Dynamic Image Processing" Languages Platform "Access Control" "Tags Categories Keywords" Resizing Output "LDAP support" ; 
+License: GPL ; 
+"GeoTagging Support": "Plugin available" ; 
+"Dynamic Image Processing": "Plugin available" ; 
+Languages: "Multilingual (33)" ; 
+Platform: "PHP/MySQL" ; 
+Resizing: "Automatic (GD/ImageMagick)" ; 
+Output: "XHTML true.0 Transitional" ; 
+"LDAP support": "User contributed bridge file available" ;
+)
+
+fmProduct2 = FM (Comparison_of_photo_gallery_software: "Server applications" ; 
+"Server applications": Upload License ["GeoTagging Support"] ["IPTC Support"] Languages Platform Resizing Output ; 
+Upload: FTP ; 
+License: "Creative Commons Attribution" ; 
+Languages: English ; 
+Platform: "Flash, PHP, XML" ; 
+Resizing: Automatic ; 
+Output: "Flash, XHTML, CSS" ; 
+!"GeoTagging Support";
+!"IPTC Support";
+)
+
+fmProduct3 = FM (Comparison_of_photo_gallery_software: "Server applications" ; 
+"Server applications": Upload License "GeoTagging Support" "IPTC Support" ["Dynamic Image Processing"] Languages [Platform] ["Access Control"] Resizing "Tags Categories Keywords" Output ; 
+Upload: "Local filesystem, HTTP, Java applet, Gallery Remote, Picasa 2, Import from Gallery true.x, Windows XP Publishing Wizard, Local server, GLoSS, WebDAV (as of 2.2)" ; 
+License: GPL ; 
+"GeoTagging Support": module ; 
+Languages: Multilingual ; 
+Resizing: "Automatic (GD/ImageMagick)" ; 
+Output: "XHTML true.0 Strict, CSS" ; 
+!"Dynamic Image Processing";
+!"Access Control";
+)
+
+fmProduct4 = FM (Comparison_of_photo_gallery_software: "Server applications" ; 
+"Server applications": License "GeoTagging Support" ["Dynamic Image Processing"] Languages Platform Resizing ["Tags Categories Keywords"] Output ; 
+License: "AGPLv3" ; 
+Languages: Multilingual ; 
+Platform: Python ; 
+Resizing: Automatic ; 
+Output: "HTML5" ; 
+!"Dynamic Image Processing";
+!"Tags Categories Keywords";
+)
+
+fmProduct5 = FM (Comparison_of_photo_gallery_software: "Server applications" ; 
+"Server applications": Upload License ["GeoTagging Support"] "IPTC Support" Languages Platform "Tags Categories Keywords" Resizing Output ; 
+Upload: "Local filesystem / FTP / HTTP" ; 
+License: GPL ; 
+Languages: Multilingual ; 
+Platform: PHP ; 
+Resizing: Automatic ; 
+Output: "XHTML, CSS" ; 
+!"GeoTagging Support";
+)
+
+fmProduct6 = FM (Comparison_of_photo_gallery_software: "Server applications" ; 
+"Server applications": Upload License "GeoTagging Support" "IPTC Support" "Dynamic Image Processing" Languages Platform "Access Control" Resizing "Tags Categories Keywords" [Output] "LDAP support" ; 
+Upload: "HTTP, FTP, local filesystem, Flash, Digikam, Shotwell, Lightroom, iPhone/iPad and Android" ; 
+License: GPL ; 
+"GeoTagging Support": plugin ; 
+Languages: "Multilingual (50)" ; 
+Platform: "PHP/MySQL" ; 
+Resizing: "Automatic (GD/ImageMagick), up to 9 sizes" ; 
+"LDAP support": plugin ;
+)
+
+fmProduct7 = FM (Comparison_of_photo_gallery_software: "Server applications" ; 
+"Server applications": Upload License ["GeoTagging Support"] ["IPTC Support"] Languages Platform Resizing Output ; 
+Upload: "HTTP, FTP using Image Files, Zip Files, Remote Upload" ; 
+License: GPL ; 
+Languages: Multilingual ; 
+Platform: "PHP/MySQL" ; 
+Resizing: Automatic ; 
+Output: "XHTML true.1, CSS, RSS" ; 
+!"GeoTagging Support";
+!"IPTC Support";
+)
+
+fmProduct8 = FM (Comparison_of_photo_gallery_software: "Server applications" ; 
+"Server applications": Upload License "GeoTagging Support" "IPTC Support" "Dynamic Image Processing" Languages Platform "Access Control" ["Tags Categories Keywords"] Resizing Output ; 
+Upload: "HTTP multiple in-browser uploads, FTP from external server" ; 
+License: "BSD-style license" ; 
+Languages: Multilingual ; 
+Platform: "PHP/MySQL" ; 
+Resizing: Automatic ; 
+Output: "XHTML true.0, CSS" ;
+)
+
+fmProduct9 = FM (Comparison_of_photo_gallery_software: "Server applications" ; 
+"Server applications": Upload [License] "GeoTagging Support" "IPTC Support" "Dynamic Image Processing" Languages Platform "Access Control" "Tags Categories Keywords" Resizing Output ; 
+Upload: "HTTP, FTP, Flash Uploader, scan remote location" ; 
+Languages: "Multilingual (25)" ; 
+Platform: "PHP, XML" ; 
+Resizing: "Automatic (GD/ImageMagick), also from video (ffmpeg)" ; 
+Output: "HTML 4.01 Transitional, CSS" ;
+)
+
+fmProduct10 = FM (Comparison_of_photo_gallery_software: "Server applications" ; 
+"Server applications": License "GeoTagging Support" "Dynamic Image Processing" Languages Platform "Access Control" Resizing "Tags Categories Keywords" Output ; 
+License: "Apache License" ; 
+Languages: English ; 
+Platform: "PHP/MySQL" ; 
+Resizing: Automatic ; 
+Output: HTML ;
+)
+
+fmProduct11 = FM (Comparison_of_photo_gallery_software: "Server applications" ; 
+"Server applications": Upload License "GeoTagging Support" ["IPTC Support"] ["Dynamic Image Processing"] Languages Platform "Access Control" "Tags Categories Keywords" Resizing Output ; 
+Upload: "HTTP, FTP, Flash, Java" ; 
+License: GPL ; 
+Languages: Multilingual ; 
+Platform: "PHP (Joomla), MySQL" ; 
+Resizing: Automatic ; 
+Output: "XHTML, CSS" ; 
+!"Dynamic Image Processing";
+!"IPTC Support";
+)
+

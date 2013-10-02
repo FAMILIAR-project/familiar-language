@@ -1,0 +1,6 @@
+fm1 = FM (A : B C D; ) 
+fm2 = FM (H : (I|J|K) ; )
+fm3 = FM (M : (N|O|P)+ ; )
+a = 7
+b = 8
+c = "foo" 

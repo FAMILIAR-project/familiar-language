@@ -1,0 +1,43 @@
+// testing 'removeFeature' operation
+
+// syntacs: b = removeFeature ft 
+ 
+// ft is a feature
+ 
+// b is a boolean value:
+ 
+// true if the removal can be performed (ft does exist)
+
+// false otherwise (and the feature model is not modified)
+
+
+fm1 = FM (A: B [C] D; D : (E|F); F : (I|J|K); E : [Z]; )
+fm1bis = copy fm1 // save the original version
+
+
+b0 = removeFeature fm1.B 
+TRUE = true
+assert (b0 eq TRUE)
+bExist = isExisting fm1.B // B does not exist anymore
+
+FALSE = false
+assert (bExist eq FALSE)
+
+b1 = removeFeature B // fm1bis.B (non ambigous)
+
+assert (b1 eq TRUE)
+assert (fm1 eq fm1bis)
+
+b2 = removeFeature fm1.B // does not exist
+
+assert (b2 eq FALSE)
+
+b3 = removeFeature fm1bis.B // does not exist
+
+assert (b3 eq FALSE)
+
+b4 = removeFeature fm1.D // D, E, F, I, J, K, Z are removed
+
+assert (b4 eq TRUE) 
+fm1Expected = FM (A: [C];)
+assert (fm1 eq fm1Expected)

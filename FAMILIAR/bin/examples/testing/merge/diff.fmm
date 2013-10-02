@@ -1,0 +1,36 @@
+fm1 = FM (A: B [C]; )
+fm2 = FM (A: B ; )
+fm3 = merge diff { fm1 fm2 }
+println "FM3 " fm3
+fm3expected = FM (A: B C; )
+checkfm3 = compare fm3 fm3expected
+assert (checkfm3 eq REFACTORING)
+
+// reasoning about suppliers' products (unique, common products)
+
+supp1 = FM (S : [F1] F2 [F4] ; F2 : (F5|F6); )
+supp2 = FM (S : F1 F2 [F3] ; F2 : [F5] [F6]; )
+
+supp21 = merge diff { supp2 supp1 }
+nsupp21 = counting supp21
+supp21expected = FM (S: F1 F2 [F3] ; F2: [F6] [F5] ; )
+cmp = compare supp21 supp21expected
+assert (cmp eq REFACTORING) 
+println "family of products not in supp1 but in supp2: " supp21
+println "number of products not in supp1 but in supp2: " nsupp21
+
+
+supp12 = merge diff { supp1 supp2 }
+nsupp12 = counting supp12
+println "family of products not in supp2 but in supp1: " supp12
+println "number of products not in supp2 but in supp1: " nsupp12
+
+
+suppCommon = merge intersection { supp1 supp2 }
+nsuppCommon = counting suppCommon
+println "number of common products in supp1 and in supp2: " nsuppCommon 
+println "family of common products of supp1 and supp2: " suppCommon
+
+exit
+
+

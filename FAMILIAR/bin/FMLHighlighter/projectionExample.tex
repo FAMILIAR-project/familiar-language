@@ -1,0 +1,95 @@
+
+\documentclass{article}
+\usepackage{fancyvrb}
+\usepackage{color}
+\usepackage[latin1]{inputenc}
+
+
+\newcommand\PYZat{@}
+\newcommand\PYZlb{[}
+\newcommand\PYZrb{]}
+\newcommand\PYaJ[1]{\textcolor[rgb]{0.00,0.53,0.00}{\textit{#1}}}
+\newcommand\PYaK[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
+\newcommand\PYaH[1]{\textcolor[rgb]{1.00,0.00,0.00}{#1}}
+\newcommand\PYaI[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
+\newcommand\PYaN[1]{\textcolor[rgb]{0.60,0.60,0.60}{#1}}
+\newcommand\PYaO[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
+\newcommand\PYaL[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
+\newcommand\PYaM[1]{\textcolor[rgb]{0.00,0.00,0.50}{\textbf{#1}}}
+\newcommand\PYaB[1]{\textcolor[rgb]{0.00,0.00,0.50}{\textbf{#1}}}
+\newcommand\PYaC[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
+\newcommand\PYaA[1]{\colorbox[rgb]{0.89,0.82,0.82}{\textcolor[rgb]{0.65,0.09,0.09}{#1}}}
+\newcommand\PYaF[1]{\textcolor[rgb]{0.00,0.50,0.50}{#1}}
+\newcommand\PYaG[1]{\textcolor[rgb]{0.33,0.33,0.33}{#1}}
+\newcommand\PYaD[1]{\textcolor[rgb]{0.00,0.00,0.50}{\textbf{#1}}}
+\newcommand\PYaE[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
+\newcommand\PYaR[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
+\newcommand\PYaS[1]{\textcolor[rgb]{0.00,0.00,0.50}{\textbf{#1}}}
+\newcommand\PYaP[1]{\textcolor[rgb]{0.00,0.00,0.50}{\textbf{#1}}}
+\newcommand\PYaQ[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
+\newcommand\PYaj[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
+\newcommand\PYak[1]{\textcolor[rgb]{0.00,0.00,0.50}{\textbf{#1}}}
+\newcommand\PYah[1]{\colorbox[rgb]{1.00,0.87,0.87}{\textcolor[rgb]{0.00,0.00,0.00}{#1}}}
+\newcommand\PYai[1]{\textcolor[rgb]{0.00,0.53,0.00}{\textbf{#1}}}
+\newcommand\PYan[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
+\newcommand\PYao[1]{\textcolor[rgb]{0.67,0.67,0.67}{#1}}
+\newcommand\PYal[1]{\textbf{#1}}
+\newcommand\PYam[1]{\textbf{#1}}
+\newcommand\PYab[1]{\textit{#1}}
+\newcommand\PYac[1]{\textcolor[rgb]{0.50,0.00,0.50}{#1}}
+\newcommand\PYaa[1]{\textcolor[rgb]{0.53,0.53,0.53}{#1}}
+\newcommand\PYaf[1]{\textcolor[rgb]{0.00,0.53,0.00}{\textit{#1}}}
+\newcommand\PYag[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
+\newcommand\PYad[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
+\newcommand\PYae[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
+\newcommand\PYaz[1]{\textcolor[rgb]{0.67,0.00,0.00}{#1}}
+\newcommand\PYax[1]{\textcolor[rgb]{0.67,0.00,0.00}{#1}}
+\newcommand\PYay[1]{\textcolor[rgb]{0.00,0.53,0.00}{\textit{#1}}}
+\newcommand\PYar[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
+\newcommand\PYas[1]{\textcolor[rgb]{0.00,0.00,0.50}{\textbf{#1}}}
+\newcommand\PYap[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
+\newcommand\PYaq[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
+\newcommand\PYav[1]{\textcolor[rgb]{0.73,0.73,0.73}{#1}}
+\newcommand\PYaw[1]{\colorbox[rgb]{0.87,1.00,0.87}{\textcolor[rgb]{0.00,0.00,0.00}{#1}}}
+\newcommand\PYat[1]{\textcolor[rgb]{0.00,0.00,1.00}{#1}}
+\newcommand\PYau[1]{\textcolor[rgb]{0.00,0.00,0.50}{\textbf{#1}}}
+
+\begin{document}
+
+\section*{}
+
+\begin{Verbatim}[commandchars=@\[\],numbers=left,firstnumber=1,stepnumber=1]
+fmArch150 = @PYaS[FM] ( Arch : Ar1 Ar2; Ar1: (Ar3|Ar4); Ar2 : (Ar5|Ar6); )
+fmPlugin = @PYaS[FM] ( Plugin : (Pl1|Pl2|Pl3)+ ; Pl1 -> Pl2 ; )
+fmFull = @PYaS[aggregate] { fmArch150 fmPlugin } @PYaS[withMapping] @PYaS[constraints] (Ar3 -> Pl1 ; Pl2 -> Ar5; )
+fmArch = @PYaS[slice] fmFull @PYaS[including] fmArch150.* @PYaf[// // enforced architectural FM]
+
+@PYaf[// let us play with the models...]
+sArch = @PYaS[configs] fmArch
+nArch = @PYaS[counting] fmArch
+
+@PYaf[// we know by construction that fmArch either a refactoring or a specialization of fmArch150]
+cmp = @PYaS[compare] fmArch150 fmArch
+@PYaf[//assert (cmp eq REFACTORING || cmp eq SPECIALIZATION)]
+
+@PYaf[// or, equivalently, that the difference (or complement) bewteen the set of configurations of ]
+@PYaf[// fmArch and fmArch150 is empty]
+dArch = @PYaS[merge] @PYaS[diff] { fmArch fmArch150 }
+@PYau[assert] (@PYaS[not] (@PYaS[isValid] dArch))
+
+@PYaf[// we now compute the difference bewteen the set of configurations of fmArch150 and fmArch]
+@PYaf[// fmArch150Removal is an FM that compactly represents this difference]
+fmArch150Removal = @PYaS[merge] @PYaS[diff] { fmArch150 fmArch }
+@PYau[if] (@PYaS[compare] fmArch fmArch150 @PYaS[eq] SPECIALIZATION) @PYaS[then]
+   	    @PYaS[println] @PYad["configurations removed from fmArch150="] 
+   	    smissing = @PYaS[configs] fmArch150Removal
+   	    @PYaS[foreach] (s @PYaS[in] smissing) @PYau[do]
+   	    	@PYaS[println] s
+   	    @PYaS[end]
+@PYau[else]
+	@PYaf[// refactoring]
+    @PYaS[println] @PYad["configurations of fmArch150 have not been modified"]
+@PYaS[end]
+\end{Verbatim}
+
+\end{document}

@@ -55,11 +55,11 @@ public class FGBuilder<T extends Comparable<T>> {
 	private int maxsib = 0;
 	private int maxnodesize = 0;
 
-	private BDD _formula;
-	private BDDFactory _factory;
-	private final BDDBuilder<T> _builder;
-	private final FeatureGraphFactory<T> _fgf;
-	private Set<T> _support;
+	protected BDD _formula; // AM: protected
+	protected BDDFactory _factory; // AM: protected
+	protected final BDDBuilder<T> _builder; // AM: protected
+	protected final FeatureGraphFactory<T> _fgf; // AM: protected
+	protected Set<T> _support; // AM: protected
 
 	/**
 	 * Assigned in mkMutexGroups (should refactor this out)

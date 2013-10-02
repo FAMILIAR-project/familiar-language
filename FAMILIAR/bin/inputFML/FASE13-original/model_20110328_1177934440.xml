@@ -1,0 +1,26 @@
+<feature_model name="Software Requirement Specification">
+<feature_tree>
+:r Software Requirement Specification (f_Software_Requirement_Specification)
+	:m RE-CC51A (f_RE_CC51A)
+	:m Software Requirement Validation (f_Software_Requirement_Validation)
+	:m User Requirements Specification and Validation (f_User_Requirements_Specification_and_Validation)
+	:m Software Requirement Specification and Validation (f_Software_Requirement_Specification_and_Validation)
+	:m Analyst (f_Analyst)
+	:m Roles (f_Roles)
+	:m Programmer (f_Programmer)
+	:m Designer (f_Designer)
+	:m WorkProducts (f_WorkProducts)
+	:m User Requirements Specification (f_User_Requirements_Specification)
+	:m Software Requirements Specification (f_Software_Requirements_Specification)
+	:m Log (f_Log)
+	:o Operational Prototyping (f_Operational_Prototyping)
+	:o Exploration (f_Exploration)
+	:g [1, 1]
+		: Operational Prototype (f_Operational_Prototype)
+			:m Prototype Based Validation (f_Prototype_Based_Validation)
+		: Internal Validation (f_Internal_Validation)
+</feature_tree>
+<constraints>
+constraint_1:~f_Operational_Prototype or f_Operational_Prototyping
+</constraints>
+</feature_model>

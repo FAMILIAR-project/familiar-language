@@ -1,0 +1,16 @@
+FM (VSPlatform: [ScenarioRecognition] Clustering ImageAcquisition FrameToFrameTracking [TrackingDataFusion] ClassificationModule [ReferenceImageUpdating] SegmentationModule [LongTermTracking] ; 
+			Clustering: (DistanceRGBAnd3DClustering|FastClustering|KMeansClustering) ; 
+			ClassificationModule: [Merge] [Split] ClassificationStandard Model [Contour] ; 
+			ClassificationStandard : [Density]; // added
+			SegmentationModule: TraversalAlgorithm KernelFunction Threshold [SegmFineTune] ; 
+			Threshold : (LowThreshold|MidThreshold|HighThreshold) ; // added
+			Merge: (FusionGravityCenter|FusionStandard) ; 
+			Split: (SplitStandard|SplitGravityCenter) ; 
+			Model: (ModelType|Ellipse|Shape|Parallelepiped|GravityCenter) ; 
+			TraversalAlgorithm: TraversalParameters GridStep ; 
+			GridStep : (HighGridStep|LowGridStep) ; // added
+			KernelFunction: ColorType [ShadowElimination] ObjectAspect ; 
+			ModelType: (OmegaModel|ThreeDModel)+ ; 
+			TraversalParameters: (WithWindow|WithMask|Fast)+ ; 
+			ColorType: (GreyLevel|SystemColor) ; 
+			ObjectAspect: (Edge|Region) ; )

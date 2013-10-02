@@ -1,0 +1,36 @@
+// deprecated
+
+base = FM (Keyboard: [ControlCD] Wireless Wiring [International] ; Wiring: (USB|PS2); )
+aspect1 = FM ( Lang : [US] European [Chinese]; )
+insert aspect1 into International with OPT // 'base' is modified
+
+fInt = parent base.Lang // feature International in 'base' FM
+fNameInt = name fInt
+fNameExpected = "International"
+assert (fNameInt eq fNameExpected) 
+
+chLang = children base.Lang // child features of 'Lang'
+nchLang = size chLang // number of child features
+nchExpected = 3 
+assert (nchLang eq nchExpected)
+
+// check that the operator is correct
+
+op = operator base.Lang
+assert (op eq XOR)
+
+exit
+
+base = FM (A: B D [C] F1; B: (E|F); C: (G|H)+ ;)
+concern1 = FM (Z: (X|Y) ;)
+concern2 = FM ( L: M [N]; M: O [J]; ) //N: K V?; 
+concern3 = FM (P: Q R [S] ;)
+insert concern3.P into concern2.L with OPT // concern3.P concern2.L 
+print_var concern2
+insert concern2.L into base.D with MAND // concern2.L base.D
+print_var base
+baseWithConcerns = copy base 
+print_var baseWithConcerns
+
+
+

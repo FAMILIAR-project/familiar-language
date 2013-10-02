@@ -1,0 +1,18 @@
+Comparison_of_file_comparison_tools: "Compare Features" "API / Editor Features" "Other features" Aspects General ; 
+"Compare Features": [Merge] ["Directory comparison"] ["Show in-line changes"] ["Structured comparison"] ["3-way comparison"] ["Moved lines"] ["Binary comparison"] ; 
+"API / Editor Features": ["Syntax Highlighting"] [Reports] [Scripting] [GUI] [CLI] ["Horizontal / Vertical"] ; 
+"Other features": ("XML-aware"|"Version Control browsing")? ["Patch application"] ["Patch creation"] ["Patch preview"] ["Unicode support"] ["FTP support"] ["ZIP support"] ; 
+Aspects: ["Daylight saving"] ["Filename casing"] [Filedate] ["Character casing"] [CRC] ; 
+General: [Windows] "Software license" [Macintosh] [Linux] ; 
+Reports: ("HTML, Text(combined or side-by-side) "|"XML, HTML, CSV, Text, Unix Patch"|"CSV, Tab-delimited, HTML, XML"|HTML|" XHTML"|"Text, CSV"|Text)? ; 
+Scripting: ("vim script"|JavaScript|elisp)? ; 
+"Horizontal / Vertical": (vertical|horizontal)? ; 
+"Version Control browsing": ("CVS, RCS, Subversion"|"RCS, CVS, SVN, Mercurial, git (anything supported by Emacs' VC-mode)"|"[[Concurrent Versions System|CVS]], [[Subversion]], [[Git (software)|Git]]CVS"|"SVN, CVS, Git, Microsoft TFS, Perforce, VSS using command line")? ; 
+"FTP support": ["supported by OS"] ; 
+"Filename casing": ["filesystem dependent"] ; 
+"Software license": (GPL|Proprietary|"GPL-compatible"|"BSD 3-clause, BSD 4-clause, CDDL, GPL, Proprietary"|"USC-CSSE Limited Public License") ; 
+("XML-aware" -> !"FTP support");
+("Patch application" -> !"XML-aware");
+("Patch creation" -> !"XML-aware");
+("XML-aware" -> !"Patch preview");
+("XML-aware" -> !"ZIP support");

@@ -1,0 +1,42 @@
+<feature_model name="Queue">
+<feature_tree>
+:r Queue (f_Queue)
+	:m Protocol (f_Protocol)
+	:m BitTorrent Client Feature Model (f_BitTorrent_Client_Feature_Model)
+	:o MAGNET URI (f_MAGNET_URI)
+	:o UPnP (f_UPnP)
+	:o Web Management (f_Web_Management)
+		:o SMS Warnings (f_SMS_Warnings)
+	:o NAT Traversal (f_NAT_Traversal)
+		:g [1, *]
+			: RSIP (f_RSIP)
+			: SOCKS (f_SOCKS)
+			: MIDCOM (f_MIDCOM)
+	:o NAT-PMP (f_NAT_PMP)
+	:o Super-seeding (f_Super_seeding)
+	:o Embedded tracker (f_Embedded_tracker)
+		:g [1, *]
+			: Multi-tracker (f_Multi_tracker)
+			: Trackerless (f_Trackerless)
+	:o Encryption (f_Encryption)
+		:g [1, 1]
+			: PHE (f_PHE)
+			: MSE-PE (f_MSE_PE)
+				:o Peer Exchange (f_Peer_Exchange)
+					:g [1, 1]
+						: MainLine (f_MainLine)
+						: BitComent-like (f_BitComent_like)
+						: Azureus-like (f_Azureus_like)
+	:g [1, *]
+		: UDP (f_UDP)
+			:o LDP (f_LDP)
+		: IPv4 (f_IPv4)
+		: IPv6 (f_IPv6)
+	:g [1, 1]
+		: Linear (f_Linear)
+		: Priority (f_Priority)
+</feature_tree>
+<constraints>
+constraint_1:~f_Trackerless or ~f_IPv6
+</constraints>
+</feature_model>

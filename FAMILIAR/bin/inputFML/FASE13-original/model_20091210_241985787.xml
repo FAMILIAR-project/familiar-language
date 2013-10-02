@@ -1,0 +1,23 @@
+<feature_model name="Input">
+<feature_tree>
+:r Input (f_Input)
+	:m Mobile Games (f_Mobile_Games)
+	:o Output (f_Output)
+		:o Force Feedback (f_Force_Feedback)
+	:o Internationalization (f_Internationalization)
+		:o International languanges support (f_International_languanges_support)
+	:o Pay and bill support (f_Pay_and_bill_support)
+		:o Pay and bill system (f_Pay_and_bill_system)
+	:o Platform Independence (f_Platform_Independence)
+		:o Platform independence support (f_Platform_independence_support)
+	:o Network Support (f_Network_Support)
+		:o Online Multiplayer (f_Online_Multiplayer)
+	:g [1, *]
+		: Touch Screen (f_Touch_Screen)
+		: Keypad (f_Keypad)
+		: Speech (f_Speech)
+		: Movement detection (f_Movement_detection)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

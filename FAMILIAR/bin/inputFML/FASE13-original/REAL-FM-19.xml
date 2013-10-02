@@ -1,0 +1,41 @@
+<feature_model name="moving_mode">
+<feature_tree>
+:r moving_mode (f_moving_mode)
+	:m select (f_select)
+	:m add (f_add)
+	:m selection_mode (f_selection_mode)
+	:m entity_add (f_entity_add)
+	:m connector_add (f_connector_add)
+	:m move (f_move)
+	:m services (f_services)
+	:m graph (f_graph)
+	:m delete (f_delete)
+	:m graph_manipulation (f_graph_manipulation)
+	:o moving_constraint (f_moving_constraint)
+		:g [1, 1]
+			: horizontal_constraint (f_horizontal_constraint)
+			: vertical_constraint (f_vertical_constraint)
+	:o compose (f_compose)
+		:o compose_do_undo_redo (f_compose_do_undo_redo)
+	:o zoom_inout (f_zoom_inout)
+	:o layer_adjust (f_layer_adjust)
+		:m up_layer (f_up_layer)
+		:m down_layer (f_down_layer)
+		:o layer_adjust_do_undo_redo (f_layer_adjust_do_undo_redo)
+	:o move_do_undo_redo (f_move_do_undo_redo)
+		:m do_undo_redo (f_do_undo_redo)
+		:m select_do_undo_redo (f_select_do_undo_redo)
+		:m add_do_undo_redo (f_add_do_undo_redo)
+		:m delete _do_undo_redo (f_delete__do_undo_redo)
+	:g [1, 1]
+		: non_increment_selection (f_non_increment_selection)
+		: increment_selection (f_increment_selection)
+	:g [1, 1]
+		: content_moving (f_content_moving)
+		: outline_moving (f_outline_moving)
+</feature_tree>
+<constraints>
+constraint_1:~f_layer_adjust_do_undo_redo or f_move_do_undo_redo
+constraint_2:~f_compose_do_undo_redo or f_move_do_undo_redo
+</constraints>
+</feature_model>

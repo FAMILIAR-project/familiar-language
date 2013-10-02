@@ -1,0 +1,11 @@
+// feature models
+base = FM (Keyboard: [ControlCD] Wireless Wiring [International] ; Wiring: (USB|PS2); )
+concern1 = FM ( Lang : [US] European [Chinese]; )
+insert Lang into International with mand  // 'base' is modified
+fInt = parent Lang
+assert ((name fInt) eq "International") 
+assert ((size (children fInt)) eq 3)
+
+
+
+

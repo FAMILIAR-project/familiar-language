@@ -1,0 +1,11 @@
+a = true
+b = false
+assert (a neq b)
+true
+existA = exist? a
+existC = exist? c
+run "assertTrue" existA
+run "assertFalse" existC 
+ls
+//run "assertTrue" existC // fail
+exit

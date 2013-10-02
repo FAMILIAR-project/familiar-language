@@ -1,0 +1,676 @@
+fmProduct0 = FM (Comparison_of_genealogy_software: Languages "General features" "General information" "Genealogical features" ; 
+Languages: German Polish Dutch [Norwegian] [Afrikaans] [Swedish] French [Danish] Italian English Spanish ; 
+"General features": ["DNA charts"] ["Fan charts"] "Family view" "Pedigree view" "Ancestor pedigree reports" ["Research Guidance"] ["Chronology view"] ["Research Manager"] "Individual view" "Descendant narrative reports" [Mapping] "Ancestor charts" "Descendant charts" "Ancestor narrative reports" ; 
+"General information": Windows "Software license" ["Free software"] Linux ["OS X"] ["Free to use"] ; 
+"Genealogical features": ["Source surety"] ["Witness to events"] ["Same sex marriage"] ["Conflicting evidence"] "Single parent family" ["Name variants"] ["non-standard calendar in date fields"] "Unicode Support" ["Adoption & foster parent"] ; 
+"Software license": Proprietary ; 
+Linux: Winebbb ; 
+!Afrikaans;
+!"Free software";
+!"Research Manager";
+!Danish;
+!"Free to use";
+!"OS X";
+!Mapping;
+!Norwegian;
+!"DNA charts";
+!"Chronology view";
+!"Fan charts";
+!Swedish;
+!"Research Guidance";
+)
+
+fmProduct1 = FM (Comparison_of_genealogy_software: "General information" ; 
+"General information": Windows "Software license" ["Free software"] Linux ["OS X"] ["Free to use"] ; 
+"Software license": Proprietary ; 
+Linux: Winebbb ; 
+!"Free software";
+!"OS X";
+!"Free to use";
+)
+
+fmProduct2 = FM (Comparison_of_genealogy_software: "General features" "General information" "Genealogical features" ; 
+"General features": ["Fan charts"] "Pedigree view" "Ancestor pedigree reports" ["Research Guidance"] "Descendant charts" ["DNA charts"] "Family view" "Chronology view" ["Research Manager"] "Descendant narrative reports" "Individual view" Mapping "Ancestor charts" "Ancestor narrative reports" ; 
+"General information": Windows "Software license" ["Free software"] Linux "Free to use" ["OS X"] ; 
+"Genealogical features": ["Source surety"] ["Witness to events"] ["Same sex marriage"] ["Conflicting evidence"] ["Single parent family"] ["Name variants"] ["non-standard calendar in date fields"] ["Adoption & foster parent"] "Unicode Support" ; 
+"Software license": Proprietary ; 
+Linux: Winebbb ; 
+!"Free software";
+!"DNA charts";
+!"Fan charts";
+!"Research Manager";
+!"Research Guidance";
+!"OS X";
+)
+
+fmProduct3 = FM (Comparison_of_genealogy_software: "General features" "General information" "Genealogical features" ; 
+"General features": "Fan charts" "Ancestor pedigree reports" "Pedigree view" "Research Guidance" "Descendant charts" ["DNA charts"] "Family view" ["Chronology view"] "Research Manager" "Descendant narrative reports" "Individual view" [Mapping] "Ancestor charts" "Ancestor narrative reports" ; 
+"General information": Windows "Software license" "Free software" [Linux] ["OS X"] "Free to use" ; 
+"Genealogical features": ["Source surety"] ["Witness to events"] ["Same sex marriage"] ["Conflicting evidence"] ["Single parent family"] ["Name variants"] ["non-standard calendar in date fields"] ["Unicode Support"] ["Adoption & foster parent"] ; 
+"Software license": Freeware ; 
+!"OS X";
+)
+
+fmProduct4 = FM (Comparison_of_genealogy_software: "General features" "General information" "Genealogical features" ; 
+"General features": ["DNA charts"] "Fan charts" "Family view" "Pedigree view" "Ancestor pedigree reports" ["Research Guidance"] ["Chronology view"] "Research Manager" "Descendant narrative reports" "Individual view" Mapping "Ancestor charts" "Descendant charts" "Ancestor narrative reports" ; 
+"General information": Windows ["Free software"] "Software license" Linux ["OS X"] "Free to use" ; 
+"Genealogical features": ["Source surety"] ["Witness to events"] ["Same sex marriage"] ["Conflicting evidence"] ["Single parent family"] ["Name variants"] ["non-standard calendar in date fields"] "Unicode Support" "Adoption & foster parent" ; 
+"Software license": Proprietary ; 
+Linux: Winebbb ; 
+!"Free software";
+!"Chronology view";
+!"DNA charts";
+!"Research Guidance";
+!"OS X";
+)
+
+fmProduct5 = FM (Comparison_of_genealogy_software: Languages "General features" "General information" "Genealogical features" ; 
+Languages: German Polish Dutch Norwegian [Afrikaans] [Swedish] French [Danish] Italian English Spanish ; 
+"General features": "Fan charts" "Ancestor pedigree reports" "Pedigree view" ["Research Guidance"] "Descendant charts" ["DNA charts"] "Family view" "Chronology view" ["Research Manager"] "Descendant narrative reports" "Individual view" Mapping "Ancestor charts" "Ancestor narrative reports" ; 
+"General information": Windows "Software license" "Free software" Linux "OS X" "Free to use" ; 
+"Genealogical features": ["Source surety"] ["Witness to events"] ["Same sex marriage"] ["Conflicting evidence"] ["Single parent family"] ["Name variants"] ["non-standard calendar in date fields"] ["Adoption & foster parent"] "Unicode Support" ; 
+Windows: Javaaaa ; 
+"Software license": "GNU GPL" ; 
+Linux: Javaaaa ; 
+"OS X": Javaaaa ; 
+!Afrikaans;
+!"DNA charts";
+!"Research Manager";
+!Swedish;
+!"Research Guidance";
+!Danish;
+)
+
+fmProduct6 = FM (Comparison_of_genealogy_software: "General information" ; 
+"General information": Windows "Software license" ["Free software"] [Linux] ["Free to use"] ["OS X"] ; 
+"Software license": Proprietary ; 
+!"Free software";
+!"OS X";
+!"Free to use";
+)
+
+fmProduct7 = FM (Comparison_of_genealogy_software: Languages "General features" "General information" "Genealogical features" ; 
+Languages: German Polish Dutch Norwegian Afrikaans Swedish French Danish [Italian] English [Spanish] ; 
+"General features": "Fan charts" "Pedigree view" "Ancestor pedigree reports" ["Research Guidance"] "Descendant charts" ["DNA charts"] "Family view" ["Chronology view"] ["Research Manager"] "Descendant narrative reports" "Individual view" [Mapping] "Ancestor charts" "Ancestor narrative reports" ; 
+"General information": Windows ["Free software"] "Software license" Linux "Free to use" ["OS X"] ; 
+"Genealogical features": "Source surety" ["Witness to events"] ["Same sex marriage"] ["Conflicting evidence"] ["Single parent family"] "Name variants" ["non-standard calendar in date fields"] "Adoption & foster parent" ["Unicode Support"] ; 
+"Software license": Shareware ; 
+Linux: Winebbb ; 
+!"Free software";
+!"Unicode Support";
+!"Research Guidance";
+!"OS X";
+!Spanish;
+!Italian;
+)
+
+fmProduct8 = FM (Comparison_of_genealogy_software: Languages "General information" ; 
+Languages: [German] [Polish] [Dutch] [Norwegian] [Afrikaans] [French] [Swedish] [Danish] [Italian] [Spanish] English ; 
+"General information": Windows ["Free software"] "Software license" Linux ["Free to use"] ["OS X"] ; 
+"Software license": Proprietary ; 
+Linux: Winebbb ; 
+!Afrikaans;
+!German;
+!"Free software";
+!French;
+!Dutch;
+!Danish;
+!"Free to use";
+!"OS X";
+!Spanish;
+!Norwegian;
+!Swedish;
+!Polish;
+!Italian;
+)
+
+fmProduct9 = FM (Comparison_of_genealogy_software: Languages "General features" "General information" "Genealogical features" ; 
+Languages: German Polish Dutch Norwegian Afrikaans French Swedish Danish Italian English Spanish ; 
+"General features": ["DNA charts"] "Fan charts" "Family view" "Pedigree view" "Ancestor pedigree reports" "Research Guidance" "Chronology view" "Research Manager" "Descendant narrative reports" "Individual view" Mapping "Ancestor charts" "Descendant charts" "Ancestor narrative reports" ; 
+"General information": Windows ["Free software"] "Software license" Linux ["OS X"] "Free to use" ; 
+"Genealogical features": ["Source surety"] ["Witness to events"] ["Same sex marriage"] ["Conflicting evidence"] ["Single parent family"] ["Name variants"] ["non-standard calendar in date fields"] ["Unicode Support"] ["Adoption & foster parent"] ; 
+"Software license": Proprietary ; 
+Linux: Winebbb ; 
+!"Free software";
+!"DNA charts";
+!"Unicode Support";
+!"OS X";
+)
+
+fmProduct10 = FM (Comparison_of_genealogy_software: Languages "General features" "General information" "Genealogical features" ; 
+Languages: [German] [Polish] [Dutch] [Norwegian] [Afrikaans] [Swedish] [French] Danish [Italian] [Spanish] English ; 
+"General features": "Fan charts" "Pedigree view" "Ancestor pedigree reports" "Research Guidance" "Descendant charts" ["DNA charts"] "Family view" "Chronology view" "Research Manager" "Descendant narrative reports" "Individual view" Mapping "Ancestor charts" "Ancestor narrative reports" ; 
+"General information": Windows ["Free software"] "Software license" Linux ["Free to use"] ["OS X"] ; 
+"Genealogical features": "Source surety" ["Witness to events"] "Same sex marriage" "Conflicting evidence" "Single parent family" "Name variants" ["non-standard calendar in date fields"] "Unicode Support" "Adoption & foster parent" ; 
+"Software license": Proprietary ; 
+Linux: Winebbb ; 
+!Afrikaans;
+!German;
+!"Free software";
+!"non-standard calendar in date fields";
+!French;
+!Dutch;
+!"Free to use";
+!"OS X";
+!Spanish;
+!Norwegian;
+!Swedish;
+!Polish;
+!"Witness to events";
+!Italian;
+)
+
+fmProduct11 = FM (Comparison_of_genealogy_software: "General information" ; 
+"General information": [Windows] ["Free software"] "Software license" [Linux] "OS X" ["Free to use"] ; 
+"Software license": Proprietary ; 
+!"Free software";
+!Linux;
+!Windows;
+!"Free to use";
+)
+
+fmProduct12 = FM (Comparison_of_genealogy_software: Languages "General features" "General information" "Genealogical features" ; 
+Languages: [German] [Polish] [Dutch] [Norwegian] [Afrikaans] Swedish French [Danish] [Italian] Spanish English ; 
+"General features": "Fan charts" "Ancestor pedigree reports" "Pedigree view" ["Research Guidance"] "Descendant charts" ["DNA charts"] "Family view" ["Chronology view"] "Research Manager" "Individual view" "Descendant narrative reports" Mapping "Ancestor charts" "Ancestor narrative reports" ; 
+"General information": [Windows] ["Free software"] "Software license" [Linux] ["Free to use"] "OS X" ; 
+"Genealogical features": ["Source surety"] ["Witness to events"] ["Same sex marriage"] ["Conflicting evidence"] ["Single parent family"] ["Name variants"] ["non-standard calendar in date fields"] ["Adoption & foster parent"] "Unicode Support" ; 
+"Software license": Proprietary ; 
+!Afrikaans;
+!German;
+!"Free software";
+!Dutch;
+!Danish;
+!"Free to use";
+!Norwegian;
+!"DNA charts";
+!"Chronology view";
+!Linux;
+!Windows;
+!Polish;
+!"Research Guidance";
+!Italian;
+)
+
+fmProduct13 = FM (Comparison_of_genealogy_software: "General features" "General information" "Genealogical features" ; 
+"General features": "Fan charts" "Ancestor pedigree reports" "Pedigree view" ["Research Guidance"] "Descendant charts" ["DNA charts"] "Family view" "Chronology view" "Research Manager" "Individual view" "Descendant narrative reports" [Mapping] "Ancestor charts" "Ancestor narrative reports" ; 
+"General information": Windows ["Free software"] "Software license" Linux ["OS X"] ["Free to use"] ; 
+"Genealogical features": ["Source surety"] ["Witness to events"] ["Same sex marriage"] ["Conflicting evidence"] ["Single parent family"] ["Name variants"] ["non-standard calendar in date fields"] ["Adoption & foster parent"] "Unicode Support" ; 
+"Software license": Proprietary ; 
+Linux: Winebbb ; 
+!"Free software";
+!"DNA charts";
+!"Research Guidance";
+!"OS X";
+!"Free to use";
+!Mapping;
+)
+
+fmProduct14 = FM (Comparison_of_genealogy_software: Languages "General features" "General information" "Genealogical features" ; 
+Languages: German Polish Dutch [Norwegian] [Afrikaans] [Swedish] French [Danish] [Italian] English Spanish ; 
+"General features": "Fan charts" "Ancestor pedigree reports" "Pedigree view" ["Research Guidance"] "Descendant charts" ["DNA charts"] "Family view" "Chronology view" ["Research Manager"] "Individual view" "Descendant narrative reports" Mapping "Ancestor charts" "Ancestor narrative reports" ; 
+"General information": Windows "Software license" "Free software" Linux "OS X" "Free to use" ; 
+"Genealogical features": ["Source surety"] ["Witness to events"] "Same sex marriage" "Conflicting evidence" ["Single parent family"] "Name variants" ["non-standard calendar in date fields"] "Adoption & foster parent" "Unicode Support" ; 
+Windows: Javaaaa ; 
+"Software license": "GNU GPL" ; 
+Linux: Javaaaa ; 
+"OS X": Javaaaa ; 
+!Afrikaans;
+!"DNA charts";
+!"Research Manager";
+!Swedish;
+!"Research Guidance";
+!Danish;
+!"Witness to events";
+!Italian;
+!Norwegian;
+)
+
+fmProduct15 = FM (Comparison_of_genealogy_software: Languages "General features" "General information" "Genealogical features" ; 
+Languages: [German] [Polish] [Dutch] [Norwegian] [Afrikaans] [Swedish] French [Danish] [Italian] [Spanish] [English] ; 
+"General features": ["DNA charts"] ["Fan charts"] ["Family view"] ["Pedigree view"] ["Ancestor pedigree reports"] ["Research Guidance"] ["Chronology view"] ["Research Manager"] ["Descendant narrative reports"] ["Individual view"] [Mapping] ["Ancestor charts"] ["Descendant charts"] ["Ancestor narrative reports"] ; 
+"General information": Windows ["Free software"] "Software license" [Linux] ["Free to use"] ["OS X"] ; 
+"Genealogical features": ["Source surety"] "Witness to events" ["Same sex marriage"] ["Conflicting evidence"] ["Single parent family"] ["Name variants"] ["non-standard calendar in date fields"] ["Adoption & foster parent"] ["Unicode Support"] ; 
+"Software license": Proprietary ; 
+!Afrikaans;
+!German;
+!"Free software";
+!Dutch;
+!Danish;
+!"Free to use";
+!"OS X";
+!Spanish;
+!Norwegian;
+!English;
+!Swedish;
+!Polish;
+!Italian;
+)
+
+fmProduct16 = FM (Comparison_of_genealogy_software: "General features" "General information" "Genealogical features" ; 
+"General features": "Fan charts" "Pedigree view" ["Ancestor pedigree reports"] ["Research Guidance"] "Descendant charts" ["DNA charts"] "Family view" ["Chronology view"] ["Research Manager"] "Descendant narrative reports" "Individual view" Mapping "Ancestor charts" ["Ancestor narrative reports"] ; 
+"General information": Windows ["Free software"] "Software license" Linux ["OS X"] ["Free to use"] ; 
+"Genealogical features": ["Source surety"] ["Witness to events"] ["Same sex marriage"] ["Conflicting evidence"] ["Single parent family"] ["Name variants"] ["non-standard calendar in date fields"] ["Adoption & foster parent"] "Unicode Support" ; 
+"Software license": Proprietary ; 
+Linux: Winebbb ; 
+!"Ancestor pedigree reports";
+!"Free software";
+!"Chronology view";
+!"Ancestor narrative reports";
+!"Research Guidance";
+!"OS X";
+!"Free to use";
+)
+
+fmProduct17 = FM (Comparison_of_genealogy_software: "General information" ; 
+"General information": Windows "Software license" "Free software" Linux "Free to use" "OS X" ; 
+"Software license": "GNU GPL" ;
+)
+
+fmProduct18 = FM (Comparison_of_genealogy_software: Languages "General features" "General information" "Genealogical features" ; 
+Languages: [German] [Polish] [Dutch] [Norwegian] [Afrikaans] French [Swedish] [Danish] [Italian] [English] [Spanish] ; 
+"General features": "Fan charts" "Pedigree view" "Ancestor pedigree reports" ["Research Guidance"] "Descendant charts" ["DNA charts"] "Family view" "Chronology view" ["Research Manager"] "Individual view" "Descendant narrative reports" Mapping "Ancestor charts" "Ancestor narrative reports" ; 
+"General information": Windows "Software license" ["Free software"] [Linux] ["OS X"] ["Free to use"] ; 
+"Genealogical features": "Source surety" "Witness to events" "Same sex marriage" "Conflicting evidence" "Single parent family" ["Name variants"] "non-standard calendar in date fields" "Adoption & foster parent" "Unicode Support" ; 
+"Software license": Proprietary ; 
+!Afrikaans;
+!German;
+!"Free software";
+!"Research Manager";
+!Dutch;
+!Danish;
+!"Free to use";
+!"OS X";
+!Spanish;
+!Norwegian;
+!"DNA charts";
+!"Name variants";
+!English;
+!Swedish;
+!"Research Guidance";
+!Polish;
+!Italian;
+)
+
+fmProduct19 = FM (Comparison_of_genealogy_software: "General information" ; 
+"General information": [Windows] ["Free software"] "Software license" [Linux] "OS X" ["Free to use"] ; 
+"Software license": Proprietary ; 
+!"Free software";
+!Linux;
+!Windows;
+!"Free to use";
+)
+
+fmProduct20 = FM (Comparison_of_genealogy_software: "General information" ; 
+"General information": Windows ["Free software"] "Software license" [Linux] ["OS X"] ["Free to use"] ; 
+"Software license": Proprietary ; 
+!"Free software";
+!"OS X";
+!"Free to use";
+)
+
+fmProduct21 = FM (Comparison_of_genealogy_software: "General information" ; 
+"General information": [Windows] "Software license" ["Free software"] [Linux] ["Free to use"] "OS X" ; 
+"Software license": Proprietary ; 
+!"Free software";
+!Linux;
+!Windows;
+!"Free to use";
+)
+
+fmProduct22 = FM (Comparison_of_genealogy_software: "General information" ; 
+"General information": Windows "Software license" ["Free software"] [Linux] ["OS X"] ["Free to use"] ; 
+"Software license": Shareware ; 
+!"Free software";
+!"OS X";
+!"Free to use";
+)
+
+fmProduct23 = FM (Comparison_of_genealogy_software: "General information" ; 
+"General information": Windows ["Free software"] "Software license" Linux ["OS X"] "Free to use" ; 
+"Software license": Proprietary ; 
+Linux: Winebbb ; 
+!"Free software";
+!"OS X";
+)
+
+fmProduct24 = FM (Comparison_of_genealogy_software: Languages "General features" "General information" "Genealogical features" ; 
+Languages: German [Polish] [Dutch] [Norwegian] [Afrikaans] Swedish French Danish [Italian] English [Spanish] ; 
+"General features": ["DNA charts"] ["Fan charts"] "Family view" ["Ancestor pedigree reports"] "Pedigree view" ["Chronology view"] ["Research Guidance"] ["Research Manager"] ["Descendant narrative reports"] "Individual view" [Mapping] ["Ancestor charts"] ["Descendant charts"] ["Ancestor narrative reports"] ; 
+"General information": Windows "Free software" "Software license" Linux "OS X" "Free to use" ; 
+"Genealogical features": ["Source surety"] ["Witness to events"] "Same sex marriage" ["Conflicting evidence"] ["Single parent family"] ["Name variants"] ["non-standard calendar in date fields"] ["Adoption & foster parent"] "Unicode Support" ; 
+"Software license": "MIT License" ; 
+!Afrikaans;
+!Dutch;
+!"Research Guidance";
+!Polish;
+!Spanish;
+!Italian;
+!Norwegian;
+)
+
+fmProduct25 = FM (Comparison_of_genealogy_software: Languages "General features" "General information" "Genealogical features" ; 
+Languages: German Polish Dutch Norwegian [Afrikaans] Swedish French Danish Italian English Spanish ; 
+"General features": "Fan charts" "Pedigree view" "Ancestor pedigree reports" ["Research Guidance"] "Descendant charts" ["DNA charts"] "Family view" "Chronology view" ["Research Manager"] "Individual view" ["Descendant narrative reports"] Mapping "Ancestor charts" ["Ancestor narrative reports"] ; 
+"General information": [Windows] "Software license" ["Free software"] [Linux] ["Free to use"] "OS X" ; 
+"Genealogical features": ["Source surety"] ["Witness to events"] ["Same sex marriage"] ["Conflicting evidence"] ["Single parent family"] ["Name variants"] ["non-standard calendar in date fields"] "Unicode Support" ["Adoption & foster parent"] ; 
+"Software license": Proprietary ; 
+!Afrikaans;
+!"Free software";
+!"DNA charts";
+!Linux;
+!"Research Manager";
+!Windows;
+!"Descendant narrative reports";
+!"Ancestor narrative reports";
+!"Research Guidance";
+!"Free to use";
+)
+
+fmProduct26 = FM (Comparison_of_genealogy_software: "General features" "General information" "Genealogical features" ; 
+"General features": ["Fan charts"] ["Ancestor pedigree reports"] "Pedigree view" ["Research Guidance"] "Descendant charts" ["DNA charts"] "Family view" "Chronology view" ["Research Manager"] "Individual view" ["Descendant narrative reports"] Mapping "Ancestor charts" ["Ancestor narrative reports"] ; 
+"General information": Windows ["Free software"] "Software license" [Linux] "OS X" ["Free to use"] ; 
+"Genealogical features": ["Source surety"] ["Witness to events"] ["Same sex marriage"] ["Conflicting evidence"] ["Single parent family"] ["Name variants"] ["non-standard calendar in date fields"] "Unicode Support" ["Adoption & foster parent"] ; 
+"Software license": Proprietary ; 
+!"Ancestor pedigree reports";
+!"Free software";
+!"DNA charts";
+!"Research Manager";
+!"Descendant narrative reports";
+!"Ancestor narrative reports";
+!"Research Guidance";
+!"Free to use";
+)
+
+fmProduct27 = FM (Comparison_of_genealogy_software: Languages "General features" "General information" "Genealogical features" ; 
+Languages: [German] [Polish] [Dutch] [Norwegian] [Afrikaans] [Swedish] French [Danish] [Italian] English [Spanish] ; 
+"General features": ["Fan charts"] ["Pedigree view"] ["Ancestor pedigree reports"] ["Research Guidance"] ["Descendant charts"] ["DNA charts"] ["Family view"] ["Chronology view"] ["Research Manager"] ["Individual view"] ["Descendant narrative reports"] [Mapping] ["Ancestor charts"] ["Ancestor narrative reports"] ; 
+"General information": Windows ["Free software"] "Software license" [Linux] "OS X" "Free to use" ; 
+"Genealogical features": ["Source surety"] ["Witness to events"] ["Same sex marriage"] ["Conflicting evidence"] ["Single parent family"] ["Name variants"] ["non-standard calendar in date fields"] ["Adoption & foster parent"] ["Unicode Support"] ; 
+"Software license": Proprietary ; 
+!Afrikaans;
+!"Free software";
+!German;
+!Swedish;
+!Dutch;
+!Danish;
+!Polish;
+!Spanish;
+!Italian;
+!Norwegian;
+)
+
+fmProduct28 = FM (Comparison_of_genealogy_software: Languages "General features" "General information" "Genealogical features" ; 
+Languages: German [Polish] [Dutch] [Norwegian] [Afrikaans] French Swedish [Danish] [Italian] Spanish English ; 
+"General features": ["Fan charts"] "Pedigree view" "Ancestor pedigree reports" ["Research Guidance"] "Descendant charts" ["DNA charts"] "Family view" ["Chronology view"] ["Research Manager"] "Individual view" "Descendant narrative reports" [Mapping] "Ancestor charts" "Ancestor narrative reports" ; 
+"General information": Windows "Software license" ["Free software"] Linux ["OS X"] "Free to use" ; 
+"Genealogical features": ["Source surety"] ["Witness to events"] ["Same sex marriage"] ["Conflicting evidence"] ["Single parent family"] ["Name variants"] ["non-standard calendar in date fields"] "Unicode Support" ["Adoption & foster parent"] ; 
+German: "(v4.x/5.x)" ; 
+French: "(v4.x)" ; 
+Swedish: "(v5.x)" ; 
+Spanish: "(v4.x)" ; 
+English: "(v4.x/5.x)" ; 
+"Software license": Proprietary ; 
+Linux: Winebbb ; 
+!Afrikaans;
+!"Free software";
+!"Research Manager";
+!Dutch;
+!Danish;
+!"OS X";
+!Norwegian;
+!"Chronology view";
+!"Fan charts";
+!"Research Guidance";
+!Polish;
+!Italian;
+)
+
+fmProduct29 = FM (Comparison_of_genealogy_software: Languages "General features" "General information" "Genealogical features" ; 
+Languages: German [Polish] Dutch Norwegian [Afrikaans] French [Swedish] [Danish] [Italian] [Spanish] English ; 
+"General features": ["DNA charts"] "Fan charts" "Family view" "Ancestor pedigree reports" "Pedigree view" "Chronology view" ["Research Guidance"] ["Research Manager"] "Individual view" "Descendant narrative reports" Mapping "Ancestor charts" "Descendant charts" "Ancestor narrative reports" ; 
+"General information": [Windows] ["Free software"] "Software license" [Linux] ["Free to use"] "OS X" ; 
+"Genealogical features": ["Source surety"] ["Witness to events"] ["Same sex marriage"] ["Conflicting evidence"] ["Single parent family"] ["Name variants"] ["non-standard calendar in date fields"] "Adoption & foster parent" "Unicode Support" ; 
+"Software license": Proprietary ; 
+!Afrikaans;
+!"Free software";
+!"Research Manager";
+!Danish;
+!"Free to use";
+!Spanish;
+!"DNA charts";
+!Linux;
+!Windows;
+!Swedish;
+!Polish;
+!"Research Guidance";
+!Italian;
+)
+
+fmProduct30 = FM (Comparison_of_genealogy_software: Languages "General features" "General information" "Genealogical features" ; 
+Languages: [German] [Polish] [Dutch] [Norwegian] [Afrikaans] [French] [Swedish] [Danish] [Italian] [Spanish] English ; 
+"General features": "DNA charts" "Fan charts" "Family view" "Ancestor pedigree reports" "Pedigree view" "Research Guidance" "Chronology view" "Research Manager" "Individual view" "Descendant narrative reports" Mapping "Ancestor charts" "Descendant charts" "Ancestor narrative reports" ; 
+"General information": Windows ["Free software"] "Software license" [Linux] "Free to use" ["OS X"] ; 
+"Genealogical features": ["Source surety"] "Witness to events" ["Same sex marriage"] ["Conflicting evidence"] ["Single parent family"] ["Name variants"] ["non-standard calendar in date fields"] "Unicode Support" "Adoption & foster parent" ; 
+"Software license": Proprietary ; 
+!Afrikaans;
+!German;
+!"Free software";
+!French;
+!Dutch;
+!Danish;
+!"OS X";
+!Spanish;
+!Norwegian;
+!Linux;
+!Swedish;
+!Polish;
+!Italian;
+)
+
+fmProduct31 = FM (Comparison_of_genealogy_software: "General features" "General information" "Genealogical features" ; 
+"General features": ["Fan charts"] "Ancestor pedigree reports" "Pedigree view" ["Research Guidance"] "Descendant charts" ["DNA charts"] "Family view" "Chronology view" ["Research Manager"] "Individual view" ["Descendant narrative reports"] Mapping "Ancestor charts" ["Ancestor narrative reports"] ; 
+"General information": Windows ["Free software"] "Software license" [Linux] ["OS X"] "Free to use" ; 
+"Genealogical features": ["Source surety"] ["Witness to events"] "Same sex marriage" ["Conflicting evidence"] "Single parent family" "Name variants" "non-standard calendar in date fields" "Unicode Support" "Adoption & foster parent" ; 
+"Software license": Freeware ; 
+!"Free software";
+!"Research Manager";
+!"Descendant narrative reports";
+!"OS X";
+!"Source surety";
+!"DNA charts";
+!Linux;
+!"Fan charts";
+!"Conflicting evidence";
+!"Ancestor narrative reports";
+!"Research Guidance";
+!"Witness to events";
+)
+
+fmProduct32 = FM (Comparison_of_genealogy_software: Languages "General features" "General information" "Genealogical features" ; 
+Languages: [German] [Polish] [Dutch] [Norwegian] [Afrikaans] [Swedish] French [Danish] [Italian] [Spanish] English ; 
+"General features": ["DNA charts"] ["Fan charts"] "Family view" "Ancestor pedigree reports" "Pedigree view" ["Research Guidance"] ["Chronology view"] ["Research Manager"] "Individual view" "Descendant narrative reports" [Mapping] "Ancestor charts" "Descendant charts" "Ancestor narrative reports" ; 
+"General information": Windows "Software license" "Free software" [Linux] ["OS X"] "Free to use" ; 
+"Genealogical features": ["Source surety"] ["Witness to events"] ["Same sex marriage"] ["Conflicting evidence"] ["Single parent family"] ["Name variants"] ["non-standard calendar in date fields"] ["Adoption & foster parent"] ["Unicode Support"] ; 
+"Software license": Freeware ; 
+!Afrikaans;
+!German;
+!"Unicode Support";
+!Dutch;
+!Danish;
+!"OS X";
+!Spanish;
+!Norwegian;
+!Linux;
+!Swedish;
+!Polish;
+!"Research Guidance";
+!Italian;
+)
+
+fmProduct33 = FM (Comparison_of_genealogy_software: Languages "General features" "General information" "Genealogical features" ; 
+Languages: German [Polish] Dutch Norwegian Afrikaans French Swedish Danish [Italian] English [Spanish] ; 
+"General features": ["DNA charts"] "Fan charts" "Family view" "Pedigree view" "Ancestor pedigree reports" ["Research Guidance"] "Chronology view" ["Research Manager"] "Individual view" "Descendant narrative reports" [Mapping] "Ancestor charts" "Descendant charts" "Ancestor narrative reports" ; 
+"General information": Windows ["Free software"] "Software license" Linux ["OS X"] ["Free to use"] ; 
+"Genealogical features": "Source surety" "Witness to events" "Same sex marriage" "Conflicting evidence" "Single parent family" "Name variants" ["non-standard calendar in date fields"] ["Unicode Support"] "Adoption & foster parent" ; 
+"Software license": Proprietary ; 
+Linux: Winebbb ; 
+!"Free software";
+!"Unicode Support";
+!"Research Guidance";
+!Polish;
+!"OS X";
+!"Free to use";
+!Spanish;
+)
+
+fmProduct34 = FM (Comparison_of_genealogy_software: "General features" "Genealogical features" ; 
+"General features": ["DNA charts"] "Fan charts" "Family view" "Pedigree view" "Ancestor pedigree reports" "Chronology view" ["Research Guidance"] ["Research Manager"] "Individual view" "Descendant narrative reports" Mapping "Ancestor charts" "Descendant charts" "Ancestor narrative reports" ; 
+"Genealogical features": "Source surety" "Witness to events" "Same sex marriage" "Conflicting evidence" "Single parent family" "Name variants" "non-standard calendar in date fields" ["Unicode Support"] "Adoption & foster parent" ; 
+!"DNA charts";
+!"Research Manager";
+!"Unicode Support";
+!"Research Guidance";
+)
+
+fmProduct35 = FM (Comparison_of_genealogy_software: Languages "General features" "Genealogical features" ; 
+Languages: [German] [Polish] [Dutch] [Norwegian] [Afrikaans] [Swedish] [French] [Danish] [Italian] [Spanish] English ; 
+"General features": "Fan charts" "Ancestor pedigree reports" "Pedigree view" ["Research Guidance"] "Descendant charts" ["DNA charts"] "Family view" ["Chronology view"] ["Research Manager"] "Descendant narrative reports" "Individual view" Mapping "Ancestor charts" "Ancestor narrative reports" ; 
+"Genealogical features": ["Source surety"] ["Witness to events"] ["Same sex marriage"] ["Conflicting evidence"] ["Single parent family"] ["Name variants"] ["non-standard calendar in date fields"] ["Adoption & foster parent"] ["Unicode Support"] ; 
+!Afrikaans;
+!German;
+!French;
+!"Unicode Support";
+!Dutch;
+!Danish;
+!Spanish;
+!Norwegian;
+!Swedish;
+!Polish;
+!"Research Guidance";
+!Italian;
+!"Witness to events";
+)
+
+fmProduct36 = FM (Comparison_of_genealogy_software: "General features" "Genealogical features" ; 
+"General features": "Fan charts" "Pedigree view" "Ancestor pedigree reports" ["Research Guidance"] "Descendant charts" ["DNA charts"] "Family view" "Chronology view" ["Research Manager"] "Descendant narrative reports" "Individual view" Mapping "Ancestor charts" "Ancestor narrative reports" ; 
+"Genealogical features": ["Source surety"] ["Witness to events"] ["Same sex marriage"] ["Conflicting evidence"] ["Single parent family"] "Name variants" "non-standard calendar in date fields" "Adoption & foster parent" "Unicode Support" ; 
+!"DNA charts";
+!"Research Manager";
+!"Research Guidance";
+)
+
+fmProduct37 = FM (Comparison_of_genealogy_software: Languages "General features" "Genealogical features" ; 
+Languages: [German] [Polish] [Dutch] [Norwegian] [Afrikaans] [Swedish] French [Danish] [Italian] English [Spanish] ; 
+"General features": "Fan charts" "Pedigree view" "Ancestor pedigree reports" ["Research Guidance"] "Descendant charts" ["DNA charts"] "Family view" "Chronology view" ["Research Manager"] "Individual view" "Descendant narrative reports" Mapping "Ancestor charts" "Ancestor narrative reports" ; 
+"Genealogical features": "Source surety" "Witness to events" "Same sex marriage" "Conflicting evidence" "Single parent family" ["Name variants"] "non-standard calendar in date fields" "Unicode Support" "Adoption & foster parent" ; 
+!Afrikaans;
+!German;
+!"Research Manager";
+!Dutch;
+!Danish;
+!Spanish;
+!Norwegian;
+!"DNA charts";
+!"Name variants";
+!Swedish;
+!Polish;
+!"Research Guidance";
+!Italian;
+)
+
+fmProduct38 = FM (Comparison_of_genealogy_software: Languages "General features" "Genealogical features" ; 
+Languages: [German] [Polish] [Dutch] [Norwegian] [Afrikaans] [Swedish] French [Danish] [Italian] [Spanish] English ; 
+"General features": "Fan charts" "Pedigree view" "Ancestor pedigree reports" ["Research Guidance"] "Descendant charts" ["DNA charts"] "Family view" "Chronology view" ["Research Manager"] "Descendant narrative reports" "Individual view" Mapping "Ancestor charts" "Ancestor narrative reports" ; 
+"Genealogical features": "Source surety" "Witness to events" "Same sex marriage" "Conflicting evidence" "Single parent family" ["Name variants"] "non-standard calendar in date fields" "Adoption & foster parent" "Unicode Support" ; 
+!Afrikaans;
+!German;
+!"Research Manager";
+!Dutch;
+!Danish;
+!Spanish;
+!Norwegian;
+!"DNA charts";
+!"Name variants";
+!Swedish;
+!Polish;
+!"Research Guidance";
+!Italian;
+)
+
+fmProduct39 = FM (Comparison_of_genealogy_software: "General features" "Genealogical features" ; 
+"General features": "Fan charts" "Pedigree view" "Ancestor pedigree reports" "Research Guidance" "Descendant charts" "DNA charts" "Family view" "Chronology view" "Research Manager" "Descendant narrative reports" "Individual view" Mapping "Ancestor charts" "Ancestor narrative reports" ; 
+"Genealogical features": ["Source surety"] ["Witness to events"] ["Same sex marriage"] ["Conflicting evidence"] ["Single parent family"] ["Name variants"] ["non-standard calendar in date fields"] ["Unicode Support"] ["Adoption & foster parent"] ; 
+!"Same sex marriage";
+!"Unicode Support";
+)
+
+fmProduct40 = FM (Comparison_of_genealogy_software: Languages ; 
+Languages: German Polish Dutch Norwegian [Afrikaans] French Swedish Danish Italian Spanish English ; 
+!Afrikaans;
+)
+
+fmProduct41 = FM (Comparison_of_genealogy_software: Languages ; 
+Languages: [German] [Polish] Dutch [Norwegian] [Afrikaans] [French] [Swedish] [Danish] [Italian] [English] [Spanish] ; 
+!Afrikaans;
+!German;
+!French;
+!English;
+!Swedish;
+!Danish;
+!Polish;
+!Spanish;
+!Italian;
+!Norwegian;
+)
+
+fmProduct42 = FM (Comparison_of_genealogy_software: Languages ; 
+Languages: German [Polish] [Dutch] Norwegian [Afrikaans] [Swedish] French Danish [Italian] Spanish English ; 
+!Afrikaans;
+!Dutch;
+!Polish;
+!Italian;
+)
+
+fmProduct43 = FM (Comparison_of_genealogy_software: Languages ; 
+Languages: German Polish Dutch [Norwegian] [Afrikaans] [Swedish] French Danish Italian [Spanish] English ; 
+!Afrikaans;
+)
+
+fmProduct44 = FM (Comparison_of_genealogy_software: Languages ; 
+Languages: German Polish Dutch [Norwegian] Afrikaans French Swedish Danish Italian English Spanish ; 
+!Norwegian;
+)
+
+fmProduct45 = FM (Comparison_of_genealogy_software: Languages ; 
+Languages: German Polish Dutch Norwegian [Afrikaans] Swedish French Danish Italian Spanish English ; 
+!Afrikaans;
+)
+
+fmProduct46 = FM (Comparison_of_genealogy_software: Languages ; 
+Languages: German [Polish] Dutch Norwegian Afrikaans French Swedish Danish Italian English Spanish ; 
+Afrikaans: " public<br />test" ; 
+French: " public<br />test" ; 
+Italian: " public<br />test" ; 
+Spanish: " public<br />test" ; 
+!Polish;
+)
+
+fmProduct47 = FM (Comparison_of_genealogy_software: Languages ; 
+Languages: German [Polish] Dutch [Norwegian] [Afrikaans] French [Swedish] [Danish] [Italian] English Spanish ; 
+!Afrikaans;
+!Swedish;
+!Danish;
+!Polish;
+!Italian;
+!Norwegian;
+)
+
+fmProduct48 = FM (Comparison_of_genealogy_software: Languages ; 
+Languages: [German] [Polish] [Dutch] [Norwegian] [Afrikaans] [French] [Swedish] [Danish] [Italian] [Spanish] English ; 
+!Afrikaans;
+!Danish;
+!Spanish;
+!Italian;
+!Norwegian;
+)
+

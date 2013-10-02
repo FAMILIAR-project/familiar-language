@@ -1,0 +1,9 @@
+// GCSupplier_3.fmm: grahic card products specification of Supplier_3
+GCproducts1 = FM ( GC: Speed MemoryBus DirectX ; Speed: n800 ; DirectX: v10 ; MemoryBus: n64; )
+GCproducts2 = FM ( GC: Speed MemoryBus DirectX ; Speed: n800 ; DirectX: v9 ; MemoryBus: n64; )
+GCproducts3 = FM ( GC: Speed MemoryBus DirectX ; Speed: n1200 ; DirectX: v10 ; MemoryBus: n64; )
+GCproducts4 = FM ( GC: Speed MemoryBus DirectX ; Speed: n1200 ; DirectX: v9 ; MemoryBus: n64; )
+GCproducts5 = FM ( GC: Speed MemoryBus DirectX Multi ; Speed: n800 ; DirectX: v10 ; MemoryBus: n128; )
+GCproducts6 = FM ( GC: Speed MemoryBus DirectX Multi ; Speed: n800 ; DirectX: v9 ; MemoryBus: n128; )
+GCproducts7 = FM ( GC: Speed MemoryBus DirectX Multi ; Speed: n1200 ; DirectX: v10 ; MemoryBus: n128; )
+GCproducts8 = FM ( GC: Speed MemoryBus DirectX Multi ; Speed: n1200 ; DirectX: v9 ; MemoryBus: n128; )

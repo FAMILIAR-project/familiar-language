@@ -1,0 +1,4 @@
+parameter b1 : Boolean
+TRUE = true 
+assert (b1 eq TRUE)
+hide TRUE 

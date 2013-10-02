@@ -1,0 +1,14 @@
+run "Hartmann"
+run "service"
+supplierOneModified = removeFeature supplierOne.F4 
+originalImage = copy MI.medicalimage
+image = removeVariable MI.medicalimage
+image = removeFeature image::Header
+fm1 = FM ( A : B [C] D; C: (E|F)+ ; F: G H?; )
+fm1Modified = removeFeature fm1.C
+compare fm1Modified fm1 // fm1 is a generalization of fm1Modified
+fm1Modified2 = removeFeature F
+print fm1Modified2
+fm2 = FM (A : B C; )
+fm2Modified = removeFeature fm2.C
+//fmAmbigous = removeFeature C // ambiguity

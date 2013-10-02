@@ -1,0 +1,1 @@
+ctxt = {Context: Camera LightingConditions OOI; Camera : Resolution DepthOfFied? ; OOI: (Vehicle|Person)+ ; LightingConditions: (NaturalLight|ArtificialLight) ; }

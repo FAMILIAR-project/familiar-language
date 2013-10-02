@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="ASCII"?>
+<featureDiagram:FeatureDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:featureDiagram="http://www.kermeta.org/featureDiagram" xsi:schemaLocation="http://www.kermeta.org/featureDiagram ../metamodel/featureDiagram.ecore" root="//@features.0">
+  <features name="VideoSurveillanceApplication" selected="true" children="//@features.43 //@features.44 //@features.45 //@features.46">
+    <operator xsi:type="featureDiagram:And"/>
+  </features>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="Counting" parents="//@features.43"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="IntrusionDetection" parents="//@features.68"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="Tracking" parents="//@features.43"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="Person" parents="//@features.66"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="Vehicle" parents="//@features.67"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="Immovable" parents="//@features.63"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="SelfPropelled" parents="//@features.65"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="ExternallyPropelled" parents="//@features.65"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="SingleObject" parents="//@features.64"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="GroupOfObjects" parents="//@features.64"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="MonoSensor" parents="//@features.50"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="MultiSensor" parents="//@features.50"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="Server" parents="//@features.50"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="ProgrammerDefined" optional="true" parents="//@features.50"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="ClientDefined" optional="true" parents="//@features.50"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="TopView" parents="//@features.52"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="SideView" parents="//@features.52"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="Normal" parents="//@features.52"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="BlackAndWhite" parents="//@features.54"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="FramesPerSecond" parents="//@features.53"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="Color" parents="//@features.54"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="InfraRed" parents="//@features.54"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="Resolution" parents="//@features.53"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="Large" parents="//@features.55"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="Narrow" parents="//@features.55"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="DepthOfField" parents="//@features.53"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="NaturalLight" parents="//@features.56"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="ArtificialLight" parents="//@features.56"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="Day" parents="//@features.69"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="Night" parents="//@features.69"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="Indoors" parents="//@features.57"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="VegetationMovement" optional="true" parents="//@features.59"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="SandOrDust" optional="true" parents="//@features.59"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="SeaOceanWaves" optional="true" parents="//@features.59"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="Flashes" optional="true" parents="//@features.60"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="Shadows" optional="true" parents="//@features.60"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="ComputerLoad" parents="//@features.46"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="ResponseTime" parents="//@features.46"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="Precision" parents="//@features.61"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="Sensitivity" parents="//@features.61"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="Scenery3DModel" parents="//@features.49"/>
+  <features xsi:type="featureDiagram:PrimitiveFeature" name="BehaviourLibrary" optional="true" parents="//@features.49"/>
+  <features name="Task" children="//@features.1 //@features.68 //@features.3" parents="//@features.0">
+    <operator xsi:type="featureDiagram:Or"/>
+  </features>
+  <features name="ObjectOfInterest" children="//@features.62 //@features.64 //@features.63" parents="//@features.0">
+    <operator xsi:type="featureDiagram:And"/>
+  </features>
+  <features name="Scene" children="//@features.49 //@features.47" parents="//@features.0">
+    <operator xsi:type="featureDiagram:And"/>
+  </features>
+  <features name="QualityOfService" children="//@features.37 //@features.38 //@features.61" parents="//@features.0">
+    <operator xsi:type="featureDiagram:Or"/>
+  </features>
+  <features name="Environment" children="//@features.57 //@features.48" parents="//@features.45">
+    <operator xsi:type="featureDiagram:And"/>
+  </features>
+  <features name="Noise" optional="true" children="//@features.59 //@features.60" parents="//@features.47">
+    <operator xsi:type="featureDiagram:And"/>
+  </features>
+  <features name="APrioriKnowledge" children="//@features.41 //@features.50 //@features.42" parents="//@features.45">
+    <operator xsi:type="featureDiagram:And"/>
+  </features>
+  <features name="DeploymentArchitecture" optional="true" children="//@features.11 //@features.12 //@features.13 //@features.14 //@features.15 //@features.51" parents="//@features.49">
+    <operator xsi:type="featureDiagram:And"/>
+  </features>
+  <features name="Sensor" children="//@features.52 //@features.53" parents="//@features.50">
+    <operator xsi:type="featureDiagram:And"/>
+  </features>
+  <features name="SensorView" children="//@features.16 //@features.17 //@features.18" parents="//@features.51">
+    <operator xsi:type="featureDiagram:Xor"/>
+  </features>
+  <features name="Camera" children="//@features.20 //@features.54 //@features.23 //@features.26 //@features.55" parents="//@features.51">
+    <operator xsi:type="featureDiagram:And"/>
+  </features>
+  <features name="CameraType" children="//@features.19 //@features.22 //@features.21" parents="//@features.53">
+    <operator xsi:type="featureDiagram:Xor"/>
+  </features>
+  <features name="FieldOfView" children="//@features.24 //@features.25" parents="//@features.53">
+    <operator xsi:type="featureDiagram:Xor"/>
+  </features>
+  <features name="LightingType" children="//@features.27 //@features.28" parents="//@features.57">
+    <operator xsi:type="featureDiagram:Or"/>
+  </features>
+  <features name="LightingConditions" children="//@features.56 //@features.58 //@features.31" parents="//@features.47">
+    <operator xsi:type="featureDiagram:Or"/>
+  </features>
+  <features name="Outdoors" children="//@features.69" parents="//@features.57">
+    <operator xsi:type="featureDiagram:And"/>
+  </features>
+  <features name="BackgroundMovement" optional="true" children="//@features.32 //@features.33 //@features.34" parents="//@features.48">
+    <operator xsi:type="featureDiagram:Or"/>
+  </features>
+  <features name="LightingVariation" optional="true" children="//@features.35 //@features.36" parents="//@features.48">
+    <operator xsi:type="featureDiagram:Or"/>
+  </features>
+  <features name="Quality" children="//@features.39 //@features.40" parents="//@features.46">
+    <operator xsi:type="featureDiagram:Or"/>
+  </features>
+  <features name="Sort" children="//@features.66 //@features.67" parents="//@features.44">
+    <operator xsi:type="featureDiagram:Or"/>
+  </features>
+  <features name="Mobility" children="//@features.6 //@features.65" parents="//@features.44">
+    <operator xsi:type="featureDiagram:Xor"/>
+  </features>
+  <features name="Cardinality" children="//@features.9 //@features.10" parents="//@features.44">
+    <operator xsi:type="featureDiagram:Xor"/>
+  </features>
+  <features name="Movable" children="//@features.7 //@features.8" parents="//@features.63">
+    <operator xsi:type="featureDiagram:Xor"/>
+  </features>
+  <features name="Natural" children="//@features.4" parents="//@features.62">
+    <operator xsi:type="featureDiagram:And"/>
+  </features>
+  <features name="Manufactured" children="//@features.5" parents="//@features.62">
+    <operator xsi:type="featureDiagram:And"/>
+  </features>
+  <features name="BehaviourRecognition" children="//@features.2" parents="//@features.43">
+    <operator xsi:type="featureDiagram:Or"/>
+  </features>
+  <features name="TimeOfDay" children="//@features.29 //@features.30" parents="//@features.58">
+    <operator xsi:type="featureDiagram:Or"/>
+  </features>
+</featureDiagram:FeatureDiagram>

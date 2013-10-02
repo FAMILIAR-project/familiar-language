@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project FAMILIAR with Jar-in-Jar Loader">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="/Users/macher1/Documents/FML-1.0.5.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="fr.unice.polytech.modalis.familiar.standalone.FML"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ org.eclipse.core.runtime_3.8.0.v20120521-2346.jar org.eclipse.osgi_3.8.0.v20120529-1548.jar org.eclipse.equinox.common_3.6.100.v20120522-1841.jar org.eclipse.core.jobs_3.5.200.v20120521-2346.jar runtime_registry_compatibility.jar org.eclipse.equinox.registry_3.5.200.v20120522-1841.jar org.eclipse.equinox.preferences_3.5.0.v20120522-1841.jar org.eclipse.core.contenttype_3.4.200.v20120523-2004.jar org.eclipse.equinox.app_1.3.100.v20120522-1841.jar org.eclipse.debug.core_3.7.100.v20120521-2012.jar org.eclipse.core.resources_3.8.0.v20120522-2034.jar org.eclipse.jdt.launching_3.6.100.v20120523-1953.jar org.eclipse.swt_3.100.0.v4233d.jar org.eclipse.swt.cocoa.macosx.x86_64_3.100.0.v4233d.jar org.eclipse.ui_3.103.0.v20120521-2329.jar org.eclipse.jface_3.8.0.v20120521-2329.jar org.eclipse.core.commands_3.6.1.v20120521-2329.jar org.eclipse.ui.workbench_3.103.0.v20120530-1824.jar org.eclipse.e4.ui.workbench3_0.12.0.v20120521-2329.jar org.eclipse.draw2d_3.8.1.201208200205.jar guidsl.jar jakarta.jar org.sat4j.core.jar annotations.jar org.eclipse.jdt.core_3.8.1.v20120531-0637.jar org.eclipse.jdt.compiler.apt_1.0.500.v20120522-1651.jar org.eclipse.jdt.compiler.tool_1.0.101.v20120522-1651.jar org.eclipse.jface.text_3.8.0.v20120531-0600.jar org.eclipse.text_3.5.200.v20120523-1310.jar org.eclipse.ui.editors_3.8.0.v20120523-1540.jar org.eclipse.core.filebuffers_3.5.200.v20120523-1310.jar org.eclipse.ui.workbench.texteditor_3.8.0.v20120523-1310.jar org.eclipse.ui.ide_3.8.0.v20120521-2329.jar org.eclipse.jdt.ui_3.8.0.v20120524-1551.jar org.eclipse.debug.ui_3.8.0.v20120530-1753.jar org.eclipse.jdt.debug.ui_3.6.100.v20120530-1425.jar org.eclipse.ui.views_3.6.100.v20120521-2329.jar org.eclipse.gef_3.8.1.201208200205.jar platform.jar tools.jar org.antlr.generator_3.2.0.v201108011202.jar org.eclipse.ui.console_3.5.100.v20120521-2012.jar org.eclipse.xtext_2.3.1.v201208210947.jar org.eclipse.emf.ecore.xmi_2.8.0.v20120606-0717.jar org.eclipse.emf.ecore_2.8.0.v20120606-0717.jar org.eclipse.emf.common_2.8.0.v20120606-0717.jar org.antlr.runtime_3.2.0.v201101311130.jar com.google.inject_3.0.0.v201203062045.jar org.eclipse.emf.mwe.core_1.2.1.v201206110920.jar org.apache.commons.cli_1.2.0.v201105210650.jar org.eclipse.emf.mwe2.runtime_2.3.0.v201206110920.jar org.eclipse.emf.mwe.utils_1.2.1.v201206110920.jar org.eclipse.xtext.util_2.3.1.v201208210947.jar com.google.guava_10.0.1.v201203051515.jar javax.inject_1.0.0.v20091030.jar org.eclipse.xtext.xbase_2.3.1.v201208210947.jar org.eclipse.xtext.common.types_2.3.1.v201208210947.jar org.eclipse.jdt.annotation_1.0.0.v20120522-1651.jar org.eclipse.xtend.lib_2.3.1.v201208210947.jar org.eclipse.xtext.generator_2.3.1.v201208210947.jar org.eclipse.xtend_1.2.0.v201206110941.jar com.ibm.icu_4.4.2.v20110823.jar org.eclipse.xpand_1.2.0.v201206110941.jar org.eclipse.xtend.typesystem.emf_1.2.0.v201206110941.jar org.eclipse.emf.codegen.ecore_2.8.0.v20120608-0554.jar org.eclipse.emf.codegen_2.8.0.v20120608-0554.jar de.itemis.xtext.antlr_2.0.0.v201108011202.jar org.eclipse.emf.mwe2.lib_2.3.0.v201206110920.jar org.eclipse.xtext.xbase.lib_2.3.1.v201208210947.jar org.apache.commons.logging_1.0.4.v201101211617.jar org.eclipse.emf.mwe2.launch_2.3.0.v201206120758.jar org.eclipse.emf.mwe2.language_2.3.0.v201206120758.jar org.apache.log4j_1.2.15.v201012070815.jar org.eclipse.xtext.ui_2.3.1.v201208210947.jar org.eclipse.emf.edit.ui_2.8.0.v20120608-0554.jar org.eclipse.emf.edit_2.8.0.v20120608-0554.jar org.eclipse.emf.ecore.change_2.8.0.v20120606-0717.jar org.eclipse.emf.common.ui_2.7.0.v20120608-0554.jar org.eclipse.ltk.core.refactoring_3.6.0.v20120523-1543.jar org.eclipse.xtext.ui.shared_2.3.1.v201208210947.jar org.eclipse.xtext.builder_2.3.1.v201208210947.jar org.eclipse.xtext.common.types.ui_2.3.1.v201208210947.jar org.eclipse.xtext.common.types.edit_2.3.1.v201208210947.jar org.eclipse.xtext.ui.codetemplates.ui_2.3.1.v201208210947.jar org.eclipse.xtext.ui.codetemplates_2.3.1.v201208210947.jar org.eclipse.compare_3.5.300.v20120522-1148.jar org.eclipse.compare.core_3.5.200.v20120522-1148.jar org.eclipse.xtext.junit_2.3.1.v201208210947.jar junit.jar junit.jar org.sat4j.core_2.3.0.v20110329.jar pacogenIntern.jar org.hamcrest.core_1.1.0.v20090501071000.jar ie.lero.spl.emf.config_1.0.0.jar ie.lero.spl.emf.config.edit_1.0.0.jar ie.lero.spl.emf.config.editor_1.0.0.jar ie.lero.spl.fmprimitives_1.0.0.jar ie.lero.spl.fmprimitives.edit_1.0.0.jar ie.lero.spl.fmprimitives.editor_1.0.0.jar org.eclipse.emf.ecore.xmi_2.5.0.v20100521-1846.jar org.eclipse.core.resources_3.6.1.R36x_v20110131-1630.jar simmetrics_jar_v1_6_2_d07_02_07.jar jsap-2.1.jar collections-generic-4.01.jar log4j-1.2.17.jar"/>
+            </manifest>
+            <zipfileset src="jar-in-jar-loader.zip"/>
+            <fileset dir="/Users/macher1/git/familiar-language/FAMILIAR/target/classes"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.core.runtime_3.8.0.v20120521-2346.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.osgi_3.8.0.v20120529-1548.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.equinox.common_3.6.100.v20120522-1841.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.core.jobs_3.5.200.v20120521-2346.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins/org.eclipse.core.runtime.compatibility.registry_3.5.100.v20120521-2346" includes="runtime_registry_compatibility.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.equinox.registry_3.5.200.v20120522-1841.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.equinox.preferences_3.5.0.v20120522-1841.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.core.contenttype_3.4.200.v20120523-2004.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.equinox.app_1.3.100.v20120522-1841.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.debug.core_3.7.100.v20120521-2012.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.core.resources_3.8.0.v20120522-2034.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.jdt.launching_3.6.100.v20120523-1953.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.swt_3.100.0.v4233d.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.swt.cocoa.macosx.x86_64_3.100.0.v4233d.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.ui_3.103.0.v20120521-2329.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.jface_3.8.0.v20120521-2329.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.core.commands_3.6.1.v20120521-2329.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.ui.workbench_3.103.0.v20120530-1824.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.e4.ui.workbench3_0.12.0.v20120521-2329.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.draw2d_3.8.1.201208200205.jar"/>
+            <fileset dir="/Users/macher1/Documents/workspaceFML/de.ovgu.featureide.fm.core/bin"/>
+            <zipfileset dir="/Users/macher1/Documents/workspaceFML/de.ovgu.featureide.fm.core/lib" includes="guidsl.jar"/>
+            <zipfileset dir="/Users/macher1/Documents/workspaceFML/de.ovgu.featureide.fm.core/lib" includes="jakarta.jar"/>
+            <zipfileset dir="/Users/macher1/Documents/workspaceFML/de.ovgu.featureide.fm.core/lib" includes="org.sat4j.core.jar"/>
+            <zipfileset dir="/Users/macher1/Documents/workspaceFML/de.ovgu.featureide.fm.core/lib" includes="annotations.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.jdt.core_3.8.1.v20120531-0637.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.jdt.compiler.apt_1.0.500.v20120522-1651.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.jdt.compiler.tool_1.0.101.v20120522-1651.jar"/>
+            <fileset dir="/Users/macher1/Documents/workspaceFML/de.ovgu.featureide.core/bin"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.jface.text_3.8.0.v20120531-0600.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.text_3.5.200.v20120523-1310.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.ui.editors_3.8.0.v20120523-1540.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.core.filebuffers_3.5.200.v20120523-1310.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.ui.workbench.texteditor_3.8.0.v20120523-1310.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.ui.ide_3.8.0.v20120521-2329.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.jdt.ui_3.8.0.v20120524-1551.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.debug.ui_3.8.0.v20120530-1753.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.jdt.debug.ui_3.6.100.v20120530-1425.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.ui.views_3.6.100.v20120521-2329.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.gef_3.8.1.201208200205.jar"/>
+            <fileset dir="/Users/macher1/Documents/workspaceFML/de.ovgu.featureide.fm.ui/bin"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins/org.eclipse.platform_4.2.0.v201206081400" includes="platform.jar"/>
+            <fileset dir="/Users/macher1/Documents/workspaceFML/de.ovgu.featureide.ui/bin"/>
+            <zipfileset dir="/Users/macher1/Documents/workspaceFML/de.ovgu.featureide.ui/lib" includes="tools.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.antlr.generator_3.2.0.v201108011202.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.ui.console_3.5.100.v20120521-2012.jar"/>
+            <fileset dir="/Users/macher1/git/familiar-language/TVLPackagedAsPlugin"/>
+            <fileset dir="/Users/macher1/git/familiar-language/org.xtext.example.fmlero.ui/bin"/>
+            <fileset dir="/Users/macher1/git/familiar-language/org.xtext.example.fmlero/bin"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.xtext_2.3.1.v201208210947.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.emf.ecore.xmi_2.8.0.v20120606-0717.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.emf.ecore_2.8.0.v20120606-0717.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.emf.common_2.8.0.v20120606-0717.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.antlr.runtime_3.2.0.v201101311130.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="com.google.inject_3.0.0.v201203062045.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.emf.mwe.core_1.2.1.v201206110920.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.apache.commons.cli_1.2.0.v201105210650.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.emf.mwe2.runtime_2.3.0.v201206110920.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.emf.mwe.utils_1.2.1.v201206110920.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.xtext.util_2.3.1.v201208210947.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="com.google.guava_10.0.1.v201203051515.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="javax.inject_1.0.0.v20091030.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.xtext.xbase_2.3.1.v201208210947.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.xtext.common.types_2.3.1.v201208210947.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.jdt.annotation_1.0.0.v20120522-1651.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.xtend.lib_2.3.1.v201208210947.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.xtext.generator_2.3.1.v201208210947.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.xtend_1.2.0.v201206110941.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="com.ibm.icu_4.4.2.v20110823.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.xpand_1.2.0.v201206110941.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.xtend.typesystem.emf_1.2.0.v201206110941.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.emf.codegen.ecore_2.8.0.v20120608-0554.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.emf.codegen_2.8.0.v20120608-0554.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="de.itemis.xtext.antlr_2.0.0.v201108011202.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.emf.mwe2.lib_2.3.0.v201206110920.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.xtext.xbase.lib_2.3.1.v201208210947.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.apache.commons.logging_1.0.4.v201101211617.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.emf.mwe2.launch_2.3.0.v201206120758.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.emf.mwe2.language_2.3.0.v201206120758.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.apache.log4j_1.2.15.v201012070815.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.xtext.ui_2.3.1.v201208210947.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.emf.edit.ui_2.8.0.v20120608-0554.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.emf.edit_2.8.0.v20120608-0554.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.emf.ecore.change_2.8.0.v20120606-0717.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.emf.common.ui_2.7.0.v20120608-0554.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.ltk.core.refactoring_3.6.0.v20120523-1543.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.xtext.ui.shared_2.3.1.v201208210947.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.xtext.builder_2.3.1.v201208210947.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.xtext.common.types.ui_2.3.1.v201208210947.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.xtext.common.types.edit_2.3.1.v201208210947.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.xtext.ui.codetemplates.ui_2.3.1.v201208210947.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.xtext.ui.codetemplates_2.3.1.v201208210947.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.compare_3.5.300.v20120522-1148.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.compare.core_3.5.200.v20120522-1148.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.eclipse.xtext.junit_2.3.1.v201208210947.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins/org.junit_3.8.2.v3_8_2_v20100427-1100" includes="junit.jar"/>
+            <fileset dir="/Users/macher1/git/familiar-language/SPLAR-plugin"/>
+            <fileset dir="/Users/macher1/git/familiar-language/FML3rdPartiesForSynthesis"/>
+            <fileset dir="/Users/macher1/git/familiar-language/FML3rdPartiesMisc"/>
+            <fileset dir="/Users/macher1/git/familiar-language/org.xtext.example.fml/bin"/>
+            <fileset dir="/Users/macher1/git/familiar-language/org.xtext.example.fml.ui/bin"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins/org.junit_4.10.0.v4_10_0_v20120426-0900" includes="junit.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.sat4j.core_2.3.0.v20110329.jar"/>
+            <fileset dir="/Users/macher1/Documents/workspaceFML/org.xtext.example.varicell/bin"/>
+            <zipfileset dir="/Users/macher1/git/familiar-language/FAMILIAR/lib" includes="pacogenIntern.jar"/>
+            <zipfileset dir="/Users/macher1/Downloads/eclipseFML2/plugins" includes="org.hamcrest.core_1.1.0.v20090501071000.jar"/>
+            <fileset dir="/Users/macher1/git/familiar-language/S2T2toFML/bin"/>
+            <zipfileset dir="/Users/macher1/git/familiar-language/S2T2toFML/lib" includes="ie.lero.spl.emf.config_1.0.0.jar"/>
+            <zipfileset dir="/Users/macher1/git/familiar-language/S2T2toFML/lib" includes="ie.lero.spl.emf.config.edit_1.0.0.jar"/>
+            <zipfileset dir="/Users/macher1/git/familiar-language/S2T2toFML/lib" includes="ie.lero.spl.emf.config.editor_1.0.0.jar"/>
+            <zipfileset dir="/Users/macher1/git/familiar-language/S2T2toFML/lib" includes="ie.lero.spl.fmprimitives_1.0.0.jar"/>
+            <zipfileset dir="/Users/macher1/git/familiar-language/S2T2toFML/lib" includes="ie.lero.spl.fmprimitives.edit_1.0.0.jar"/>
+            <zipfileset dir="/Users/macher1/git/familiar-language/S2T2toFML/lib" includes="ie.lero.spl.fmprimitives.editor_1.0.0.jar"/>
+            <zipfileset dir="/Users/macher1/git/familiar-language/FAMILIAR/plugs" includes="org.eclipse.emf.ecore.xmi_2.5.0.v20100521-1846.jar"/>
+            <zipfileset dir="/Users/macher1/git/familiar-language/FAMILIAR/plugs" includes="org.eclipse.core.resources_3.6.1.R36x_v20110131-1630.jar"/>
+            <zipfileset dir="/Users/macher1/git/familiar-language/FAMILIAR/lib" includes="simmetrics_jar_v1_6_2_d07_02_07.jar"/>
+            <zipfileset dir="/Users/macher1/.m2/repository/com/martiansoftware/jsap/2.1" includes="jsap-2.1.jar"/>
+            <zipfileset dir="/Users/macher1/.m2/repository/net/sourceforge/collections/collections-generic/4.01" includes="collections-generic-4.01.jar"/>
+            <zipfileset dir="/Users/macher1/.m2/repository/log4j/log4j/1.2.17" includes="log4j-1.2.17.jar"/>
+        </jar>
+    </target>
+</project>

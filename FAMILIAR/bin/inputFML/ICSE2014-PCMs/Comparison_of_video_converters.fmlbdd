@@ -1,0 +1,74 @@
+<FMLBDD>
+<FM>
+Comparison_of_video_converters: (Input|Features)? "Help and support" Overview [Output] ; 
+Input: [FLV] VCD SVCD ["MP4"] [AVI] ["DVD video"] ; 
+"Help and support": ["By email"] ; 
+Features: ("Converts without transcoding"|"Blu-ray burning")? "Splitting into chapters" ["DVD burning"] Preview "Converts audio files" ["Extract audio"] ["Include effects"] ["Editing tools"] "Batch convert" ["Converts photos"] ["Subtitles support"] "Converts online videos" ["Join files"] ["Upload to YouTube"] ; 
+Overview: [Windows] ["Mac OS X"] [Linux] "Licensing scheme" ; 
+Output: ("Apple-TV"|"3GP") ["MPEG-PS"] [Ogg] ["Video CD"] [Webm] "Nokia mobile phones" BlackBerry ["Super Video CD"] PSP iPad ["Blu-ray video"] [WMV] [HTC] [TOD] [Android] "PS3" ["Nintendo DS"] iPhone [Zune] [TS] ["Samsung mobile phones"] [QuickTime] [Xbox] iPod [Matroska] ; 
+"Licensing scheme": ("[[Free and open-source]] Free and open-source"|"Ad supported [[freeware]] freeware"|"[[Freeware]] Freeware"|"Ad supported [[Freeware]] Freeware") ; 
+(Input -> Comparison_of_video_converters);
+("Subtitles support" -> Features);
+(Input -> !Output);
+("Editing tools" -> !"Converts without transcoding");
+((Output -> "Apple-TV") | (Output -> Webm));
+((Features -> "Subtitles support") | (Features -> "Converts without transcoding"));
+(TS -> Output);
+(Ogg -> Output);
+("Blu-ray video" -> !"Apple-TV");
+("Nintendo DS" -> !"Apple-TV");
+("Help and support" -> !Input);
+(WMV -> Output);
+(Matroska -> Output);
+(Webm -> Output);
+((Output -> "Apple-TV") | (Output -> Matroska));
+("Converts without transcoding" -> Features);
+(Input -> !Overview);
+((Output -> "Apple-TV") | (Output -> Ogg));
+(QuickTime -> Output);
+("Subtitles support" -> !"Converts without transcoding");
+(Ogg -> !"Apple-TV");
+("Apple-TV" -> !TOD);
+((Output -> "Apple-TV") | (Output -> "Super Video CD"));
+("Video CD" -> !"Apple-TV");
+("MPEG-PS" -> !"Apple-TV");
+("Super Video CD" -> Output);
+("DVD burning" -> !"Converts without transcoding");
+("Blu-ray video" -> Output);
+("Apple-TV" -> !Matroska);
+("Converts without transcoding" -> !"Upload to YouTube");
+((Output -> "Apple-TV") | (Output -> "Nintendo DS"));
+(Output -> Comparison_of_video_converters);
+((Features -> "Converts without transcoding") | (Features -> "Editing tools"));
+("Nintendo DS" -> Output);
+(Overview -> Comparison_of_video_converters);
+("Video CD" -> Output);
+("Apple-TV" -> !WMV);
+(TOD -> Output);
+((Output -> "Apple-TV") | (Output -> WMV));
+("Upload to YouTube" -> Features);
+("Apple-TV" -> Output);
+((Output -> "Apple-TV") | (Output -> "MPEG-PS"));
+("Super Video CD" -> !"Apple-TV");
+((Output -> "Apple-TV") | (Output -> QuickTime));
+("Apple-TV" -> !QuickTime);
+("Help and support" -> Comparison_of_video_converters);
+((Output -> "Apple-TV") | (Output -> "Blu-ray video"));
+("Editing tools" -> Features);
+("MPEG-PS" -> Output);
+((Output -> "Apple-TV") | (Output -> TS));
+("Converts photos" -> !"Converts without transcoding");
+((Output -> "Apple-TV") | (Output -> "Video CD"));
+("DVD burning" -> Features);
+("Converts photos" -> Features);
+(Webm -> !"Apple-TV");
+(TS -> !"Apple-TV");
+</FM>
+<BUILDER>
+23=>iPad;57=>Extract audio;39=>Nokia mobile phones;20=>BlackBerry;9=>By telephone;29=>PS3;35=>Video CD;60=>VCD;70=>Supported output container formats;68=>Supported input container formats;12=>Output;51=>Converts photos;14=>iPhone;8=>By live chat;62=>[[Trialware]] Trialware;45=>Converts online videos;36=>DVD video;13=>QuickTime;41=>MP4;47=>Batch convert;56=>Editing tools;16=>Webm;65=>Overview;6=>Ad supported [[Freeware]] Freeware;24=>iPod;33=>HTC;7=>Help and support;31=>AVI;42=>Features;66=>Linux;50=>Blu-ray burning;22=>PSP;61=>SVCD;67=>Mac OS X;52=>Converts without transcoding;63=>Licensing scheme;26=>Ogg;44=>Converts audio files;32=>Matroska;18=>3GP;53=>Subtitles support;28=>Apple-TV;34=>TS;11=>Samsung mobile phones;19=>Xbox;54=>Upload to YouTube;48=>Include effects;49=>DVD burning;40=>Blu-ray video;17=>Nintendo DS;2=>Comparison_of_video_converters;46=>Splitting into chapters;59=>Input;37=>TOD;58=>Preview;21=>FLV;5=>[[Freeware]] Freeware;4=>[[Shareware]] Shareware;30=>Zune;3=>[[Free and open-source]] Free and open-source;64=>Windows;25=>WMV;15=>MPEG-PS;27=>Android;38=>Super Video CD;43=>Menu templates;1=>Ad supported [[freeware]] freeware;69=>Supported target devices;55=>Join files;10=>By email;
+</BUILDER>
+<BDD>
+0 0 0
+
+</BDD>
+</FMLBDD>

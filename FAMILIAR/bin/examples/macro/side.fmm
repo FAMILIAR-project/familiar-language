@@ -1,0 +1,6 @@
+fm1 = FM (A: B C?;)
+run "simplesideeffect" fm1 into plop
+rfm1 = root fm1
+expected = "ROOT"
+ls
+assert (rfm1 eq expected)

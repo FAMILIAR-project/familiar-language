@@ -1,0 +1,14 @@
+Comparison_of_audio_synthesis_environments: General [Technical] "Programming language features" ; 
+General: License "Main user interface type" "Development status" ; 
+Technical: ["Operating system(s)"] ["Source code language(s)"] ; 
+"Programming language features": "Textual/graphical" ["Object-oriented"] ["Type system"] ; 
+License: (GPL|Proprietary|LGPL|"BSD-like") ; 
+"Main user interface type": (Document|"Document, graphical for realtime")? ; 
+"Development status": (Immature|Mature|Stable) ; 
+"Operating system(s)": ("Mac OS X, Linux, Windows, FreeBSD"|"Mac OS X, Linux, Windows"|"Mac OS X, Linux, Windows, iPod, Android"|"Mac OS X/Windows"|"iOS, Mac OS X"|"Mac OS X"|"Mac OS X, Windows")? ; 
+"Source code language(s)": ("C++"|"Lisp, Objective-C, Scheme"|"C++, Objective-C, Lua"|"C, Objective-C"|"C, C++"|"Scheme, C++"|"C, C++, Objective-C"|Delphi|C) ; 
+"Textual/graphical": ("Textual/Graphical (Cocoa/Swing/Qt)"|Graphical|"Mostly textual"|Textual|"Textual/Graphical (FLTK)") ; 
+"Type system": (Dynamic|"Dynamic & static"|Static) ; 
+Technical;
+"Programming language features";
+General;

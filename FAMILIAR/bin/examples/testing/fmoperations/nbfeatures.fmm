@@ -1,0 +1,27 @@
+fm1 = FM (A: (B|C)+ ; )
+nfm1 = nbFeatures fm1
+nfm1Expected = 3
+nfm1bis = size fm1.*
+assert (nfm1 eq nfm1Expected)
+assert (nfm1 eq nfm1bis)
+
+fm2 = FM (A: B [C]; B : [D]; )
+nfm2 = nbFeatures fm2
+nfm2Expected = 4
+nfm2bis = size fm2.*
+assert (nfm2 eq nfm2Expected)
+assert (nfm2 eq nfm2bis)
+
+fm3 = FM (U: X Y [Z] [W]; X : (F|G|H); Y : (I|J|K|L)+ ; )
+nfm3 = nbFeatures fm3
+nfm3Expected = 12
+nfm3bis = size fm3.*
+assert (nfm3 eq nfm3Expected)
+assert (nfm3 eq nfm3bis)
+
+fm4 = FM (U: X Y [Z] [W]; X : (F|G|H); Y : (I|J|K|L)+ ; W : [T] [A] B; )
+nfm4 = nbFeatures fm4
+nfm4Expected = 15
+nfm4bis = size fm4.*
+assert (nfm4 eq nfm4Expected)
+assert (nfm4 eq nfm4bis)

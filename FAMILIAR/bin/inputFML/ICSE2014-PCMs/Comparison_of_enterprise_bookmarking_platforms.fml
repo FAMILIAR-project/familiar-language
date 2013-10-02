@@ -1,0 +1,13 @@
+Comparison_of_enterprise_bookmarking_platforms: "Server operating system support" "Platform and security capabilities" "Tag management capabilities" "Content enrichment capabilities" General "Date and content types" ; 
+"Server operating system support": [IIS] [Windows] [BSD] [Unix] ["Mac OS X"] [Apache] [Linux] ; 
+"Platform and security capabilities": ["Hosted Platform"] ["Multi-user support"] ["Role-level permissions"] ["Encryption level"] "On-Premises Platform" ["LDAP integration"] "Access permissions" ["Information-level permissions"] ["Workspace-level permissions"] ; 
+"Tag management capabilities": ["Predefined tags"] ["Mandatory facets"] ["Restricted facets"] ["Related/synonym tags"] ["Faceted classification"] ; 
+"Content enrichment capabilities": [Metadata] ["Knowledge Tags"] [Descriptions] ["Custom Tag Fields"] Keywords ; 
+General: [Multilingual] ["Open source"] ["Contract support offered"] ["Programming language"] ["Cost (USD)"] "User Interface" ["Community website support"] ; 
+"Date and content types": (Discussions|"Flat-files")? (Contacts|"Database tables")? ["Wiki pages"] [Images] [Emails] [Video] ["Book references"] "Web pages" [Documents] ; 
+"Encryption level": ("HTTPS with high-grade 256-bit AES"|"HTTPS is available")? ; 
+"Programming language": ("Javascript & PHP"|Java|"Javascript and Python (programming language)")? ; 
+"Cost (USD)": ("per instance"|"free trial, starts at 35?/month/instance"|free) ; 
+"User Interface": browser ; 
+(Discussions -> !"Database tables");
+(Contacts -> !"Flat-files");

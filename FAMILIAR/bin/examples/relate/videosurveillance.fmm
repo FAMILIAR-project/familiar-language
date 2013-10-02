@@ -1,0 +1,10 @@
+run "system.fmm"
+run "ctxt.fmm"
+//run "trWithNS.rules" // "tr.rules"
+//display ctxt
+//display system
+convert ctxt in featureide
+convert system in featureide
+//global_system = relate system ctxt with trules
+//display ctxt
+//display system

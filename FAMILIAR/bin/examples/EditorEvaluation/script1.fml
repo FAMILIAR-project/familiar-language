@@ -1,0 +1,8 @@
+fm1 = FM (A : B C [D]; D -> C; )
+fm2 = FM (W : [X] Y Z; X <-> Y ; )
+fm3 = FM (R : S [T] U; !U -> !S; )
+fm4 = FM (A : B [D]; )
+d1 = configuration fm4 
+fm6 = FM (A : (B|C|D)+ ; )
+configs fm6
+c3=configuration fm3

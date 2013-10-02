@@ -1,0 +1,23 @@
+<feature_model name="Exhaust">
+<feature_tree>
+:r Exhaust (f_Exhaust)
+	:m Engine (f_Engine)
+	:m Venza (f_Venza)
+	:m AT6 (f_AT6)
+	:m Drive (f_Drive)
+	:m Wheels (f_Wheels)
+	:m Transmission (f_Transmission)
+	:g [1, 1]
+		: TWD (f_TWD)
+		: AWD (f_AWD)
+	:g [1, 1]
+		: SingleExhaust (f_SingleExhaust)
+			:m W19 (f_W19)
+			:m L4 (f_L4)
+		: DualExhaust (f_DualExhaust)
+			:m W20 (f_W20)
+			:m V6 (f_V6)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -538,11 +538,13 @@ public class FeatureModelVariable extends VariableImpl implements FMLFeatureMode
 			_LOGGER.warn("Many parents for " + ft);
 			return false ; 
 		}
-		else {
+		else if (parents.size() == 1) {
 		    FeatureNode<String> parent = parents.iterator().next(); // the first and only
 		    // FIXME normally more to do like sblings settings variability information
 			return iFD.addEdge(ftName, parent, FeatureEdge.MANDATORY);			
 		}
+		else 
+			return false ; 
 				
 	}
 
@@ -2107,6 +2109,39 @@ public class FeatureModelVariable extends VariableImpl implements FMLFeatureMode
 		logger.setLevel(Level.OFF);
 		 
 		FGBuilder<String> synthesizer = new FGBuilder<String>(getBuilder());
+		FeatureModel<String> fmR = synthesizer.build(properFla);
+		
+		
+		/*
+		KnowledgeSynthesis<String> kn = new KnowledgeSynthesis<String>() ;
+		kn.setHierarchy(hierarchy());
+		KSynthesis synthesizer = new KSynthesis(properFla, kn, getBuilder());
+		FeatureModel<String> fmR = synthesizer.buildWithoutKST() ;
+		//normalizeCliques(fmR);
+		//new FeatureHierarchySelector<String>(getBuilder()).contractSameLevel(fmR);
+		*/ 
+
+		fla.free() ;
+		properFla.free() ;		
+
+		return new FeatureModelVariable("", fmR);
+	}
+	
+	/** of course we have to factor out with generalizedNotation
+	 * @return
+	 */
+	@Deprecated
+	public FeatureModelVariable toGeneralizedNotationWithoutOR() {
+		
+				
+		
+		Formula<String> fla = getFormula().id() ;
+		Formula<String> properFla = new FormulaAnalyzer<String>(fla, getBuilder()).removeDeadFeatures() ; // precondition
+		
+		java.util.logging.Logger logger = java.util.logging.Logger.getLogger("fmm.FGBuilder");
+		logger.setLevel(Level.OFF);
+		 
+		FGBuilder<String> synthesizer = new MyFGBuilder<String>(getBuilder());
 		FeatureModel<String> fmR = synthesizer.build(properFla);
 		
 		

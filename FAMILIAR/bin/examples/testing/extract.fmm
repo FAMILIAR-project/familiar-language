@@ -1,0 +1,8 @@
+fmTest = FM (A: B C D?; D: (E|F)+; F: J K?;)
+fmD = extract fmTest::D 
+fmC = extract fmTest::C
+nC = nfeatures fmC
+nD = nfeatures fmD
+NprodD = card fmD
+collectionOfFMs = { fmD fmC fmTest }
+

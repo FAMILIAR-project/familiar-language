@@ -1,0 +1,10 @@
+Comparison_of_photo_gallery_software: "Server applications" ; 
+"Server applications": [Upload] [License] ["GeoTagging Support"] ["IPTC Support"] ["Dynamic Image Processing"] Languages [Platform] ["Access Control"] ["Tags Categories Keywords"] Resizing [Output] ["LDAP support"] ; 
+Upload: ("HTTP multiple in-browser uploads, FTP from external server"|"HTTP, FTP, Flash, Java"|"HTTP, FTP, local filesystem, Flash, Digikam, Shotwell, Lightroom, iPhone/iPad and Android"|"HTTP, FTP, Web Service"|"Local filesystem, HTTP, Java applet, Gallery Remote, Picasa 2, Import from Gallery true.x, Windows XP Publishing Wizard, Local server, GLoSS, WebDAV (as of 2.2)"|"HTTP, FTP using Image Files, Zip Files, Remote Upload"|FTP|"Local filesystem / FTP / HTTP"|"HTTP, FTP, Flash Uploader, scan remote location")? ; 
+License: (GPL|"Apache License"|"BSD-style license"|"AGPLv3"|"Creative Commons Attribution")? ; 
+"GeoTagging Support": (module|"Plugin available")? ; 
+Languages: (Multilingual|"Multilingual (50)"|"Multilingual (33)"|"Multilingual (25)"|English) ; 
+Platform: ("ASP.NET/SQL Server"|"PHP, XML"|"PHP (Joomla), MySQL"|"Flash, PHP, XML"|Python|"PHP/MySQL"|PHP)? ; 
+Resizing: ("Automatic (GD/ImageMagick)"|Automatic|"Automatic (GD/ImageMagick), also from video (ffmpeg)"|"Automatic (GD/ImageMagick), up to 9 sizes") ; 
+Output: ("HTML 4.01 Transitional, CSS"|"XHTML, CSS"|"HTML5"|"XHTML true.1, CSS, RSS"|"XHTML true.0, CSS"|"XHTML true.0 Transitional"|"XHTML true.0 Strict, CSS"|"Flash, XHTML, CSS"|HTML)? ; 
+"LDAP support": ("User contributed bridge file available"|plugin) ;

@@ -1,0 +1,20 @@
+<feature_model name="Transmission">
+<feature_tree>
+:r Transmission (f_Transmission)
+	:m Wheels (f_Wheels)
+	:m Engine (f_Engine)
+	:m Bumpers (f_Bumpers)
+	:m Car (f_Car)
+	:m Breaks (f_Breaks)
+	:g [1, 1]
+		: 2004  Lexus RX330  Gas Engine (f_2004__Lexus_RX330__Gas_Engine)
+		: 2006  Mazda 5  Gas Engine (f_2006__Mazda_5__Gas_Engine)
+		: 1992  Toyota Camry  Gas Engine (f_1992__Toyota_Camry__Gas_Engine)
+	:g [1, 1]
+		: 2006  Hummer H3  Transfer Case (f_2006__Hummer_H3__Transfer_Case)
+		: 2000  Cadillac Escalade  Transfer Case (f_2000__Cadillac_Escalade__Transfer_Case)
+		: 2009  Lincoln MKS  Transfer Case (f_2009__Lincoln_MKS__Transfer_Case)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

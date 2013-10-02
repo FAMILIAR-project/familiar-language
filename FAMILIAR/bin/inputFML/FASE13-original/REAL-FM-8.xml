@@ -1,0 +1,25 @@
+<feature_model name="methods">
+<feature_tree>
+:r methods (f_methods)
+	:m rpm (f_rpm)
+	:m transmission (f_transmission)
+	:m fuel_consumption (f_fuel_consumption)
+	:m exhaust_level_temp (f_exhaust_level_temp)
+	:m measures (f_measures)
+	:m engine_performance (f_engine_performance)
+	:m monitor_engine_system (f_monitor_engine_system)
+	:m temperatures (f_temperatures)
+	:m engine (f_engine)
+	:m oil (f_oil)
+	:o colant (f_colant)
+	:g [1, *]
+		: distance (f_distance)
+		: type_of_driving (f_type_of_driving)
+		: drive (f_drive)
+	:g [1, 1]
+		: l_km (f_l_km)
+		: gallon_mile (f_gallon_mile)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,16 @@
+<feature_model name="Ship-to-Shore SubSystem">
+<feature_tree>
+:r Ship-to-Shore SubSystem (f_Ship_to_Shore_SubSystem)
+	:m CTOS (f_CTOS)
+	:m Berth Planning Module (f_Berth_Planning_Module)
+	:m Stowage Planning Module (f_Stowage_Planning_Module)
+	:m Transfer System (f_Transfer_System)
+	:m Storage System (f_Storage_System)
+	:m Yard Control Module (f_Yard_Control_Module)
+	:m Yard Handler Module (f_Yard_Handler_Module)
+	:m Delivery and Receipt SubSystem (f_Delivery_and_Receipt_SubSystem)
+	:m Gate Inspection Module (f_Gate_Inspection_Module)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

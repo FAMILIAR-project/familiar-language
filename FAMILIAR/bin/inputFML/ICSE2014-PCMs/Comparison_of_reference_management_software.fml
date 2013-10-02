@@ -1,0 +1,11 @@
+Comparison_of_reference_management_software: "Word processor integration" "Operating system support" "Export file formats" "Password protection and network versions" "Reference list file formats" "Citation styles" General "Database connectivity" ; 
+"Word processor integration": ["Apache OpenOffice / LibreOffice"] ["Microsoft Word"] ["Kile/LyX"] ; 
+"Operating system support": [Windows] [BSD] [Unix] ["Mac OS X"] [Linux] ; 
+"Export file formats": ("MODS XML"|Medline)? [BibTeX] [RIS] ["Endnote/Refer/BibIX"] ; 
+"Password protection and network versions": ["User-specific permissions"] ["Simultaneous write access"] [Passworded] ; 
+"Reference list file formats": ["Plain text"] [LaTeX] [HTML] [RTF] [RSS] ; 
+"Citation styles": [APA] ["Extension method"] [Harvard] [MLA] ["Chicago/Turabian"] ; 
+General: License ["Free software"] ; 
+"Database connectivity": [PubMed] ["IEEE Xplore"] [CiteSeer] [ArXiv] ; 
+"Extension method": ("Sente format through [[GUI]] GUI"|"[[citation style language|CSL]]CSL"|"RefWorks format through [[GUI]] GUI"|"XML (citestylex.dtd), interactive script"|"[[OSBIB]] OSBIB"|"bibus format (through [[GUI]]) GUI"|"WizFolio format (through [[GUI]]) GUI"|"[[BibTeX]] BibTeX"|"SciRef format through [[GUI]] GUI"|"SA format through [[GUI]] GUI"|"[[BibTeX]] and [[citation style language|CSL]] BibTeX"|"GUI style editor"|"[[PHP]] PHP"|"Pybliographer [[XML]] XML"|"Citavi format, conditions and programmable components supported (through [[GUI]]) GUI") ; 
+License: (GPL|"GPL, LGPL"|proprietary|AGPL|"(proprietary OS API clients exist)")? ;

@@ -1,0 +1,5 @@
+Comparison_of_Internet_forum_software: Features ["General information"] ; 
+Features: [Threaded] "Unread message tracking" ["User-selectable themes"] Flat [Calendar] ["WYSIWYG Editor"] ["Image attachment"] ; 
+"General information": [License] "Programming language" ; 
+License: (GPL|"Phorum License 2 (BSD like)"|Proprietary|"BSD License"|LGPL) ; 
+"Programming language": ("Ruby, Javascript"|ASP|PHP|Perl|C|"ASP.NET 3.5") ;

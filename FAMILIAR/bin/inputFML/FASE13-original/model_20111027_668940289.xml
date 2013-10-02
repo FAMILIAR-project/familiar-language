@@ -1,0 +1,43 @@
+<feature_model name="Analyst">
+<feature_tree>
+:r Analyst (f_Analyst)
+	:m Commercial (f_Commercial)
+	:m RhiscomProcessModel (f_RhiscomProcessModel)
+	:m Activities (f_Activities)
+	:m Deployment (f_Deployment)
+	:m Work Products (f_Work_Products)
+	:m Implementation (f_Implementation)
+	:m SRS baseline (f_SRS_baseline)
+	:m Roles (f_Roles)
+	:o Verify requirements (f_Verify_requirements)
+		:m Approve requirements (f_Approve_requirements)
+		:m Requirements (f_Requirements)
+		:m Analyze requirements (f_Analyze_requirements)
+		:m Hold first meeting (f_Hold_first_meeting)
+		:m Establish requirements baseline (f_Establish_requirements_baseline)
+		:m Specify requirements (f_Specify_requirements)
+		:m Validate requirements (f_Validate_requirements)
+		:g [1, 1]
+			: Specify requirements in plain text (f_Specify_requirements_in_plain_text)
+			: Specify requirements in uses cases (f_Specify_requirements_in_uses_cases)
+				:m Specify SRS (f_Specify_SRS)
+		:g [1, 1]
+			: Establish requirements baseline without test cases (f_Establish_requirements_baseline_without_test_cases)
+			: Establish requirements baseline and test cases (f_Establish_requirements_baseline_and_test_cases)
+	:o Design (f_Design)
+		:o Meet for integration agreements (f_Meet_for_integration_agreements)
+	:o Execute test cases (f_Execute_test_cases)
+	:g [1, 1]
+		: SRS and test cases (f_SRS_and_test_cases)
+		: Final SRS (f_Final_SRS)
+	:g [1, 1]
+		: Analyst tester (f_Analyst_tester)
+		: Analyst with use case skills (f_Analyst_with_use_case_skills)
+</feature_tree>
+<constraints>
+constraint_1:~f_Specify_requirements_in_plain_text or f_Analyst_tester
+constraint_2:~f_Specify_requirements_in_uses_cases or f_Analyst_with_use_case_skills
+constraint_3:~f_Establish_requirements_baseline_without_test_cases or f_Final_SRS
+constraint_4:~f_Establish_requirements_baseline_and_test_cases or f_SRS_and_test_cases
+</constraints>
+</feature_model>

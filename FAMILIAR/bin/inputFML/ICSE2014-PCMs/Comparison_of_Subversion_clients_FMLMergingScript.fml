@@ -1,0 +1,504 @@
+fmProduct0 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License Languages "Programming language, toolkit" "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "http, https, svn, svn+ssh, file" ; 
+License: "proprietary, trial with commercial upgrade" ; 
+Languages: English ; 
+"Programming language, toolkit": "C, C++" ; 
+"Operating system": "Microsoft Windows" ; 
+Integration: "Any MS-SCCI compatible IDE, e.g., Microsoft Visual Studio, Microsoft SQL Server Management, PowerBuilder, Zeus etc." ;
+)
+
+fmProduct1 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License Languages "Programming language, toolkit" "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "http, https, svn, svn+ssh, file" ; 
+License: "Apache License" ; 
+Languages: English ; 
+"Programming language, toolkit": "C#, SharpSvn" ; 
+"Operating system": "Microsoft Windows" ; 
+Integration: "Microsoft Visual Studio (all editions except Express)" ;
+)
+
+fmProduct2 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License "Programming language, toolkit" Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "http, https, svn, svn+ssh, file" ; 
+License: "GPL v3" ; 
+"Programming language, toolkit": "Python, C" ; 
+Languages: English ; 
+"Operating system": "Linux, Unix, [[Mac OS X]] Mac OS X, Microsoft Windows, Solaris, many more" ; 
+Integration: Bazaar ;
+)
+
+fmProduct3 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License Languages "Programming language, toolkit" "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "http, https, svn, svn+ssh, file" ; 
+License: MIT ; 
+Languages: English ; 
+"Programming language, toolkit": "C++" ; 
+"Operating system": "Microsoft Windows" ; 
+Integration: "command-line wrapper" ; 
+!"Server functionality";
+)
+
+fmProduct4 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "http, https, svn" ; 
+License: "proprietary, free for personal use even in professional environments" ; 
+Languages: English ; 
+"Operating system": "Linux, Mac OS X, Microsoft Windows" ; 
+Integration: "Windows Shell (Explorer), file system driver" ;
+)
+
+fmProduct5 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License "Programming language, toolkit" Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "http, https, svn, svn+ssh, file" ; 
+License: "proprietary, trials can be negotiated" ; 
+"Programming language, toolkit": "C#, SharpSvn" ; 
+Languages: "English, German" ; 
+"Operating system": "Microsoft Windows" ; 
+Integration: "SVN plugin for CoDeSys V3" ; 
+!"Server functionality";
+)
+
+fmProduct6 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License "Programming language, toolkit" Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "file, http, https, svn and svn+ssh" ; 
+License: proprietary ; 
+"Programming language, toolkit": "Objective-C, Cocoa" ; 
+Languages: English ; 
+"Operating system": "Mac OS X" ; 
+Integration: "GUI, standalone" ; 
+!"Server functionality";
+)
+
+fmProduct7 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License Languages "Programming language, toolkit" "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "http, https, svn" ; 
+License: GPL ; 
+Languages: English ; 
+"Programming language, toolkit": "C++" ; 
+"Operating system": "Microsoft Windows x86 and x86-64" ; 
+Integration: "Windows shell, Linux command line, Mac OS X Finder integration. It needs TortoiseSVN installed." ; 
+!"Server functionality";
+)
+
+fmProduct8 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License "Programming language, toolkit" Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "http, svn" ; 
+License: GPL ; 
+"Programming language, toolkit": "C++, Qt" ; 
+Languages: English ; 
+"Operating system": "Unix-like operating systems (GNU/Linux distributions, FreeBSD, Sun Solaris and others), Mac OS X and Windows" ; 
+Integration: "GUI, standalone (like WinCVS, Cervisia)" ; 
+!"Server functionality";
+)
+
+fmProduct9 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": License "Programming language, toolkit" Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+License: "GPLv2" ; 
+"Programming language, toolkit": PHP ; 
+Languages: "English, German, Chinese" ; 
+"Operating system": "Linux, Unix, Microsoft Windows" ; 
+Integration: "web-based. It requires Apache HTTP (web) Server installed." ;
+)
+
+fmProduct10 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License "Programming language, toolkit" Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "svn, http, https" ; 
+License: proprietary ; 
+"Programming language, toolkit": "Objective-C, C" ; 
+Languages: English ; 
+"Operating system": "iOS 3.0" ; 
+Integration: "GUI, standalone" ;
+)
+
+fmProduct11 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License Languages "Programming language, toolkit" "Operating system" "Server functionality" Integration [Visualization] ; 
+"Network protocols": "file, http, https, (k)svn, (k)svn+file, (k)svn+http, (k)svn+https, (k)svn+ssh" ; 
+License: GPL ; 
+Languages: English ; 
+"Programming language, toolkit": "C++, Qt" ; 
+"Operating system": "Linux, Unix, Mac OS X" ; 
+Integration: "Konqueror, Dolphin, standalone" ;
+)
+
+fmProduct12 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "file, http, https, svn and svn+ssh" ; 
+License: proprietary ; 
+Languages: English ; 
+"Operating system": "Microsoft Windows Windows XP / Vista / 7 64-bit)" ; 
+Integration: "Microsoft Office (2007 and 2010, Word and Excel)" ;
+)
+
+fmProduct13 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": License "Programming language, toolkit" Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+License: GPL ; 
+"Programming language, toolkit": "C, GTK+" ; 
+Languages: English ; 
+"Operating system": "Linux, etc." ; 
+Integration: Nautilus ;
+)
+
+fmProduct14 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License "Programming language, toolkit" Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": svn ; 
+License: "Apache License 2.0" ; 
+"Programming language, toolkit": "C++" ; 
+Languages: English ; 
+"Operating system": "Microsoft Windows" ; 
+Integration: "SVN Plugin for PowerBuilder" ;
+)
+
+fmProduct15 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" [License] "Programming language, toolkit" Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": svn ; 
+"Programming language, toolkit": "C++" ; 
+Languages: English ; 
+"Operating system": "Mac OS X, Microsoft Windows" ; 
+Integration: "Adobe Photoshop" ; 
+!License;
+)
+
+fmProduct16 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": License Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+License: proprietary ; 
+Languages: English ; 
+"Operating system": "Microsoft Windows" ; 
+Integration: "Any MSSCCI-compatible program (Microsoft Visual Studio and other programs)" ;
+)
+
+fmProduct17 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": License Languages "Programming language, toolkit" "Operating system" ["Server functionality"] [Visualization] ; 
+License: GPL ; 
+Languages: English ; 
+"Programming language, toolkit": "Python, Qt" ; 
+"Operating system": "Linux, Unix, Mac OS X, Microsoft Windows" ;
+)
+
+fmProduct18 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": License "Programming language, toolkit" Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+License: GPL ; 
+"Programming language, toolkit": "C++, Qt" ; 
+Languages: English ; 
+"Operating system": "Linux, Unix, Mac OS X, Microsoft Windows" ; 
+Integration: "GUI, standalone (like WinCVS)" ; 
+!"Server functionality";
+)
+
+fmProduct19 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License "Programming language, toolkit" Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "http, https, svn, svn+ssh, file" ; 
+License: GPL ; 
+"Programming language, toolkit": "Python, GTK+" ; 
+Languages: "ca, cs, de, en, es, fa, fr, he, hr, it, ja, nb, nl, pl, pt, ro, ru, sk, sl, sv, zh_CN" ; 
+"Operating system": Linux ; 
+Integration: "Nautilus, Thunar, Gedit, CLI" ;
+)
+
+fmProduct20 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": License "Programming language, toolkit" Languages "Operating system" ["Server functionality"] Integration Visualization ; 
+License: GPL ; 
+"Programming language, toolkit": "C++, wxWidgets" ; 
+Languages: "Unicode, many" ; 
+"Operating system": "Linux, Unix, Mac OS X, Microsoft Windows, Solaris, many more" ; 
+Integration: "GUI, standalone" ; 
+Visualization: External ; 
+!"Server functionality";
+)
+
+fmProduct21 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": License Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+License: "X/MIT" ; 
+Languages: English ; 
+"Operating system": "Mac OS X" ; 
+Integration: "Finder integration" ;
+)
+
+fmProduct22 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License "Programming language, toolkit" Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "http, https" ; 
+License: GPL ; 
+"Programming language, toolkit": Java ; 
+Languages: English ; 
+"Operating system": "Linux, Unix, Mac OS X, Microsoft Windows" ; 
+Integration: "GUI, standalone, Java Web Start" ;
+)
+
+fmProduct23 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License "Programming language, toolkit" Languages "Operating system" ["Server functionality"] Integration ; 
+"Network protocols": "http, https, svn" ; 
+License: BSD ; 
+"Programming language, toolkit": C ; 
+Languages: "Unicode, many" ; 
+"Operating system": FreeBSD ; 
+Integration: standalone ; 
+!"Server functionality";
+)
+
+fmProduct24 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" [License] "Programming language, toolkit" Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "http, https, svn, svn+ssh" ; 
+"Programming language, toolkit": Java ; 
+Languages: English ; 
+"Operating system": "Linux, Unix, Mac OS X, Microsoft Windows (Any with a true.5 or higher JRE)" ; 
+Integration: "GUI, standalone" ; 
+!"Server functionality";
+!License;
+)
+
+fmProduct25 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License Languages "Programming language, toolkit" "Operating system" "Server functionality" Integration [Visualization] ; 
+"Network protocols": "http, https, svn, svn+ssh" ; 
+License: "Trial with commercial upgrade or free 'Foundation' edition" ; 
+Languages: English ; 
+"Programming language, toolkit": Java ; 
+"Operating system": "Linux, Unix, Mac OS X, Microsoft Windows (Any with a true.5 or higher JRE)" ; 
+Integration: "GUI, standalone, Finder and Windows Shell (Explorer) integration" ;
+)
+
+fmProduct26 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License "Programming language, toolkit" "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "http, https, svn, svn+ssh, file" ; 
+License: EPL ; 
+"Programming language, toolkit": Java ; 
+"Operating system": "Linux, Mac OS X, Microsoft Windows" ; 
+Integration: Eclipse ;
+)
+
+fmProduct27 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License Languages "Programming language, toolkit" "Operating system" "Server functionality" Integration [Visualization] ; 
+"Network protocols": "http, https, svn, file" ; 
+License: GPL ; 
+Languages: "en, de, zh_CN" ; 
+"Programming language, toolkit": "C++, Qt" ; 
+"Operating system": "Linux, Unix, Mac OS X, Microsoft Windows" ; 
+Integration: "GUI, standalone" ;
+)
+
+fmProduct28 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License Languages "Programming language, toolkit" "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "http, https, svn, svn+ssh, file" ; 
+License: GPL ; 
+Languages: English ; 
+"Programming language, toolkit": gtkmm ; 
+"Operating system": Linux ; 
+Integration: "Nautilus, Thunar" ;
+)
+
+fmProduct29 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License "Programming language, toolkit" Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "http, https, svn, svn+ssh, file" ; 
+License: EPL ; 
+"Programming language, toolkit": Java ; 
+Languages: English ; 
+"Operating system": "Linux, Mac OS X, Microsoft Windows" ; 
+Integration: Eclipse ;
+)
+
+fmProduct30 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License "Programming language, toolkit" Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "http, https, svn, svn+ssh, file" ; 
+License: "GPLv3" ; 
+"Programming language, toolkit": Java ; 
+Languages: "en, sv" ; 
+"Operating system": "Any with a true.5 or higher JRE" ; 
+Integration: "web-based" ;
+)
+
+fmProduct31 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License "Programming language, toolkit" Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "http, https, svn, svn+ssh, file" ; 
+License: "proprietary, trial with commercial upgrade" ; 
+"Programming language, toolkit": "C++, JavaScript" ; 
+Languages: English ; 
+"Operating system": "Microsoft Windows, Mac OS X" ; 
+Integration: "Adobe Dreamweaver Extensions" ;
+)
+
+fmProduct32 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License "Programming language, toolkit" Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "http, https, svn, svn+ssh, file" ; 
+License: GPL ; 
+"Programming language, toolkit": "C#" ; 
+Languages: English ; 
+"Operating system": "Microsoft Windows" ; 
+Integration: "GUI, standalone. It needs TortoiseSVN installed." ;
+)
+
+fmProduct33 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": License Languages ["Server functionality"] [Visualization] ; 
+License: "Apache License" ; 
+Languages: English ;
+)
+
+fmProduct34 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": License "Programming language, toolkit" Languages "Operating system" ["Server functionality"] [Visualization] ; 
+License: "Apache License" ; 
+"Programming language, toolkit": "Python, wxWidgets" ; 
+Languages: English ; 
+"Operating system": "Linux, Unix, Mac OS X, Microsoft Windows" ;
+)
+
+fmProduct35 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License "Programming language, toolkit" Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "http, https, svn, svn+ssh, file" ; 
+License: "proprietary, freeware (After a trial of 30 days, you will be able to use the Free Edition or buy one of the other licenses.)" ; 
+"Programming language, toolkit": "C#" ; 
+Languages: English ; 
+"Operating system": "Microsoft Windows" ; 
+Integration: "GUI, standalone. It needs TortoiseSVN installed." ;
+)
+
+fmProduct36 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License "Programming language, toolkit" Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "http, https, svn, file" ; 
+License: "Paid license needed (free trial available)" ; 
+"Programming language, toolkit": "C#" ; 
+Languages: en ; 
+"Operating system": "Microsoft Windows" ; 
+Integration: "GUI, standalone" ;
+)
+
+fmProduct37 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License "Programming language, toolkit" Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "http, https, svn, svn+ssh, file, com" ; 
+License: GPL ; 
+"Programming language, toolkit": "ActiveX control, COM object" ; 
+Languages: English ; 
+"Operating system": "Microsoft Windows" ; 
+Integration: "IIS, Windows Scripting Host" ;
+)
+
+fmProduct38 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "http, https, svn, svn+ssh, file" ; 
+License: LGPL ; 
+Languages: English ; 
+"Operating system": "Mac OS X" ; 
+Integration: GUI ;
+)
+
+fmProduct39 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License Languages "Programming language, toolkit" "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "http, https, svn, svn+ssh, file" ; 
+License: "Paid Named-User license needed (free trial available)" ; 
+Languages: "en, de, fr, jp, it, nl" ; 
+"Programming language, toolkit": Java ; 
+"Operating system": "Linux, Unix, Mac OS X, Microsoft Windows (Any with a true.5 or higher JRE)" ; 
+Integration: "GUI, standalone" ;
+)
+
+fmProduct40 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": License Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+License: "proprietary, free (nagware) and commercial" ; 
+Languages: English ; 
+"Operating system": "Microsoft Windows" ; 
+Integration: "Microsoft Visual Studio .NET" ;
+)
+
+fmProduct41 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": License Languages "Programming language, toolkit" "Operating system" ["Server functionality"] [Visualization] ; 
+License: GPL ; 
+Languages: English ; 
+"Programming language, toolkit": "Tcl, Tk" ; 
+"Operating system": "Linux, Unix, Mac OS X, Microsoft Windows" ;
+)
+
+fmProduct42 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License Languages "Programming language, toolkit" "Operating system" "Server functionality" Integration [Visualization] ; 
+"Network protocols": "http, https, svn, svn+ssh, file, svn+XXX" ; 
+License: GPL ; 
+Languages: "36 languages (including en)" ; 
+"Programming language, toolkit": "C++, MFC" ; 
+"Operating system": "Microsoft Windows (32/64-bit)" ; 
+Integration: "Windows Shell (Explorer)" ;
+)
+
+fmProduct43 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" [License] "Programming language, toolkit" Languages "Operating system" "Server functionality" Integration Visualization ; 
+"Network protocols": file ; 
+"Programming language, toolkit": Python ; 
+Languages: "[31 languages]46" ; 
+"Operating system": "Linux, Unix, Mac OS X, Microsoft Windows" ; 
+Integration: "web-based" ; 
+Visualization: Log ;
+)
+
+fmProduct44 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": License Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+License: "proprietary; Freeware version is available for members of the active open source project" ; 
+Languages: English ; 
+"Operating system": "Microsoft Windows (32/64-bit)" ; 
+Integration: "Any MSSCCI-compatible program (Microsoft Visual Studio and other programs)" ;
+)
+
+fmProduct45 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": License "Programming language, toolkit" Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+License: GPL ; 
+"Programming language, toolkit": PHP ; 
+Languages: "> 25 languages" ; 
+"Operating system": "Linux, Unix, Mac OS X, Microsoft Windows" ; 
+Integration: "web-based" ;
+)
+
+fmProduct46 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License Languages "Programming language, toolkit" "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "http, https, svn, svn+ssh, file" ; 
+License: proprietary ; 
+Languages: English ; 
+"Programming language, toolkit": "Objective-C, Cocoa" ; 
+"Operating system": "Mac OS X" ; 
+Integration: "GUI, standalone" ;
+)
+
+fmProduct47 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License Languages "Programming language, toolkit" "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "http, https, svn, svn+ssh, file" ; 
+License: "two-clause Berkeley-style" ; 
+Languages: English ; 
+"Programming language, toolkit": Python ; 
+"Operating system": "http, https" ; 
+Integration: "web-based" ; 
+!Visualization;
+)
+
+fmProduct48 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License Languages "Operating system" "Server functionality" Integration [Visualization] ; 
+"Network protocols": "http, https, svn, svn+ssh, file" ; 
+License: proprietary ; 
+Languages: English ; 
+"Operating system": "Microsoft Windows (32/64-bit)" ; 
+Integration: "Microsoft Visual Studio (all editions except Express)" ;
+)
+
+fmProduct49 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License "Programming language, toolkit" Languages "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "http, https, svn, svn+ssh, file" ; 
+License: "Apache License V2.0" ; 
+"Programming language, toolkit": "Visual C++ 6.0" ; 
+Languages: "All from the official SVN release (en, de, es, fr, it,ja, ko, nb, pl, pt_BR, sv, zh_CN, zh_TW)" ; 
+"Operating system": "Microsoft Windows" ; 
+Integration: "Windows Command Line" ; 
+!"Server functionality";
+!Visualization;
+)
+
+fmProduct50 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": License Languages "Programming language, toolkit" "Operating system" ["Server functionality"] Integration [Visualization] ; 
+License: "Proprietary, free on Mac App Store" ; 
+Languages: English ; 
+"Programming language, toolkit": "Objective-C, Cocoa" ; 
+"Operating system": "Mac OS X" ; 
+Integration: "Xcode IDE" ;
+)
+
+fmProduct51 = FM (Comparison_of_Subversion_clients: "Subversion clients comparison table" ; 
+"Subversion clients comparison table": "Network protocols" License Languages "Programming language, toolkit" "Operating system" ["Server functionality"] Integration [Visualization] ; 
+"Network protocols": "http, https, svn, file" ; 
+License: "Freeware with commercial upgrade" ; 
+Languages: English ; 
+"Programming language, toolkit": "Objective-C, Cocoa" ; 
+"Operating system": "Mac OS X" ; 
+Integration: "GUI, standalone" ;
+)
+

@@ -1,0 +1,33 @@
+<feature_model name="Paradigm">
+<feature_tree>
+:r Paradigm (f_Paradigm)
+	:m Technology (f_Technology)
+	:m Connector (f_Connector)
+	:g [1, 1]
+		: CAN (f_CAN)
+		: Local (f_Local)
+	:g [1, 1]
+		: Message-Based (f_Message_Based)
+			:m Sender (f_Sender)
+			:m Receiver (f_Receiver)
+			:g [1, 1]
+				: Pull (f_Pull)
+					:g [1, *]
+						: Queued (f_Queued)
+						: Non-Queued (f_Non_Queued)
+				: Push (f_Push)
+		: Client/Server (f_Client_Server)
+			:g [1, 1]
+				: Asynchronous (f_Asynchronous)
+					:g [1, 1]
+						: Polling (f_Polling)
+							:g [1, 1]
+								: Non-blocking (f_Non_blocking)
+								: Blocking (f_Blocking)
+						: Callback (f_Callback)
+				: Synchronous (f_Synchronous)
+					:o Timeout (f_Timeout)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

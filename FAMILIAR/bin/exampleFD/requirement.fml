@@ -1,0 +1,29 @@
+FM (VSApplicationRequirement: Scene QualityOfService ObjectOfInterest Task ; 
+				Scene: Environment APrioriKnowledge ; 
+				QualityOfService: (ComputerLoad|ResponseTime|Quality)+ ; 
+				ObjectOfInterest: Mobility Cardinality Sort ; 
+				Task: (Counting|Tracking|BehaviourRecognition)+ ; 
+				Environment: [Noise] LightingConditions LightingType; // LightingType: added
+				APrioriKnowledge: [DeploymentArchitecture] [BehaviourLibrary] Scenery3DModel ; 
+				Quality: (Sensitivity|Precision)+ ; 
+				Precision : [LessPrecision] ; // added
+				Mobility: (Movable|Immovable) ; 
+				Cardinality: (SingleObject|GroupOfObjects) ; 
+				Sort: (Natural|Manufactured)+ ; 
+				BehaviourRecognition: [IntrusionDetection] ; 
+				Noise: [BackgroundMovement] [LightingVariation] ; 
+				LightingConditions: (Indoors|Outdoors)+ ; 
+				DeploymentArchitecture: Server [ProgrammerDefined] Sensor [ClientDefined] ; 
+				Movable: (ExternallyPropelled|SelfPropelled) ; 
+				Natural: Person ; Manufactured: Vehicle ; 
+				BackgroundMovement: (SandOrDust|SeaOceanWaves|VegetationMovement)+ ; 
+				LightingVariation: (Flashes|Shadows|HeadLight)+ ; 
+				Outdoors: TimeOfDay ; 
+				LightingType: (ArtificialLight|NaturalLight)+ ; 
+				Sensor: SensorView Camera SensorProperty ; TimeOfDay: (Day|Night)+ ; 
+				SensorProperty : (MultiSensor|MonoSensor); // added
+				SensorView: (NormalView|SideView|TopView) ; 
+				Camera: FieldOfView Resolution CameraType DepthOfField FramesPerSecond ;
+					FramesPerSecond : (HighFrameRate|IntermediateFrameRate|LowFrameRate) ; // added
+					HighFrameRate : VingtCinqFrSec ;  // added
+				FieldOfView: (Large|Narrow) ; CameraType: (BlackAndWhite|Infrared|Color) ; )

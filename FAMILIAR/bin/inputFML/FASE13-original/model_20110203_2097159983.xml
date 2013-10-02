@@ -1,0 +1,25 @@
+<feature_model name="basic editing">
+<feature_tree>
+:r basic editing (f_basic_editing)
+	:m debbuging (f_debbuging)
+	:m language and model support (f_language_and_model_support)
+	:m IDE4OCL (f_IDE4OCL)
+	:m autocompletion (f_autocompletion)
+	:m syntax highlighting (f_syntax_highlighting)
+	:m OCL compliance (f_OCL_compliance)
+	:m architetural support (f_architetural_support)
+	:o modularisation (f_modularisation)
+	:o syntax and sementics extensions (f_syntax_and_sementics_extensions)
+	:o user friendly support (f_user_friendly_support)
+	:o OCL and model perspective (f_OCL_and_model_perspective)
+	:o standarisation support (f_standarisation_support)
+	:o variability (f_variability)
+	:o hybrid OCL - MOF view (f_hybrid_OCL___MOF_view)
+	:g [1, *]
+		: syntax compliance (f_syntax_compliance)
+		: XMI compliance (f_XMI_compliance)
+		: evaluation compliance (f_evaluation_compliance)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

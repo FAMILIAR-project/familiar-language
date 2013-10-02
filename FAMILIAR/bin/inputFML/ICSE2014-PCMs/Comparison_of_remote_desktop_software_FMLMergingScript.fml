@@ -1,0 +1,1454 @@
+fmProduct0 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": "Client: Blackberry" "Client: Android ImageLink" Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" "Seamless window" "Client/server /listening" ["Server: OS/2 eComStation ImageLink"] ["Audio support ImageLink"] "Access permission request" ["Client: FreeBSD"] "Remote assistance" "Server: Microsoft Windows ImageLink" License "Multiple sessions ImageLinkImageLink" [Video] ["Client: Linux ImageLink"] ["IPv6 support"] ["Free for personal use"] ["Free for commercial use"] ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] "Server: Windows Mobile ImageLink" "Client: iOS (iPod Touch, iPhone, iPad)" ["Client: Java ImageLink"] "Client: Windows Mobile ImageLink" "NAT passthrough" "Client: Mac OS X ImageLink" "Server: Mac OS X ImageLink" ; 
+Protocol: Proprietary ; 
+"Client/server /listening": "Client & server" ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[Secure Sockets Layer|SSL]], [[Transport Layer Security|TLS]]SSL" ; 
+!"Free for personal use";
+!"Client: Java ImageLink";
+!"Server: FreeBSD";
+!"Client: OS/2 eComStation ImageLink";
+!"Server: Linux ImageLink";
+!"Client: Linux ImageLink";
+!"Free for commercial use";
+!"Audio support ImageLink";
+!"Client: FreeBSD";
+!"Server: OS/2 eComStation ImageLink";
+)
+
+fmProduct1 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": License "Multiple sessions ImageLinkImageLink" [Video] Protocol ["IPv6 support"] ["Free for personal use"] ["Free for commercial use"] "Built-in encryption ImageLink" ["3D"] "File transfer ImageLink" "Seamless window" "Client/server /listening" "Access permission request" "Audio support ImageLink" "NAT passthrough" "Remote assistance" ; 
+License: Proprietary ; 
+Protocol: Proprietary ; 
+"Built-in encryption ImageLink": "[[RC4]], [[RSA (algorithm)|RSA]] RC4" ; 
+"Client/server /listening": "Client & server" ; 
+!"Free for personal use";
+!"Free for commercial use";
+)
+
+fmProduct2 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": License [Video] "Multiple sessions ImageLinkImageLink" Protocol ["IPv6 support"] "Free for personal use" "Free for commercial use" "Built-in encryption ImageLink" ["3D"] "File transfer ImageLink" ["Seamless window"] ["Client/server /listening"] ["Access permission request"] "Audio support ImageLink" ["NAT passthrough"] ["Remote assistance"] ; 
+License: BSD ; 
+Protocol: "RDP, ICA" ; 
+"Built-in encryption ImageLink": "[[Secure Sockets Layer|SSL]], [[Transport Layer Security|TLS]]SSL" ; 
+!"Seamless window";
+)
+
+fmProduct3 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" ["Seamless window"] "Client/server /listening" ["Server: OS/2 eComStation ImageLink"] ["Audio support ImageLink"] "Access permission request" ["Client: FreeBSD"] "Remote assistance" ["Server: Microsoft Windows ImageLink"] License "Multiple sessions ImageLinkImageLink" [Video] ["Client: Linux ImageLink"] "IPv6 support" ["Free for commercial use"] ["Free for personal use"] ["Client: Microsoft Windows ImageLink"] "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Client: Java ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] ["NAT passthrough"] "Client: Mac OS X ImageLink" "Server: Mac OS X ImageLink" ; 
+Protocol: "RFB(VNC)" ; 
+"Client/server /listening": "Client & server" ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[AES-128]] AES-128" ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Client: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Client: FreeBSD";
+!"Seamless window";
+!"Free for personal use";
+!"Client: Java ImageLink";
+!"Server: Microsoft Windows ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Client: Microsoft Windows ImageLink";
+!"Free for commercial use";
+!"Audio support ImageLink";
+!"NAT passthrough";
+)
+
+fmProduct4 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": License [Video] "Multiple sessions ImageLinkImageLink" Protocol "IPv6 support" "Free for commercial use" "Free for personal use" "Built-in encryption ImageLink" ["3D"] ["File transfer ImageLink"] ["Seamless window"] "Client/server /listening" ["Audio support ImageLink"] ["Access permission request"] ["NAT passthrough"] ["Remote assistance"] ; 
+License: Proprietary ; 
+Protocol: "Proprietary, RFB(VNC)" ; 
+"Built-in encryption ImageLink": "[[AES-256]] AES-256" ; 
+"Client/server /listening": "Client & server" ; 
+!"Audio support ImageLink";
+!"File transfer ImageLink";
+!"Seamless window";
+)
+
+fmProduct5 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": License [Video] "Multiple sessions ImageLinkImageLink" Protocol "IPv6 support" ["Free for commercial use"] ["Free for personal use"] "Built-in encryption ImageLink" ["3D"] "File transfer ImageLink" "Seamless window" "Client/server /listening" ["Audio support ImageLink"] "Access permission request" "NAT passthrough" "Remote assistance" ; 
+License: Proprietary ; 
+Protocol: Proprietary ; 
+"Built-in encryption ImageLink": "[[Secure Sockets Layer|SSL]], [[AES 256|AES-256]]SSL" ; 
+"Client/server /listening": "Client, server, & listening" ; 
+!"Free for personal use";
+!"Free for commercial use";
+!"Audio support ImageLink";
+)
+
+fmProduct6 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] "3D" "File transfer ImageLink" "Seamless window" "Client/server /listening" ["Server: OS/2 eComStation ImageLink"] ["Access permission request"] "Audio support ImageLink" ["Client: FreeBSD"] "Remote assistance" ["Server: Microsoft Windows ImageLink"] License Video "Multiple sessions ImageLinkImageLink" "IPv6 support" "Client: Linux ImageLink" "Free for commercial use" "Free for personal use" "Server: Linux ImageLink" "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] "Client: Java ImageLink" ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] "NAT passthrough" "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: "RFB(VNC)" ; 
+"3D": "[[VirtualGL]] VirtualGL" ; 
+"Client/server /listening": "Client & server" ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[Secure Shell|SSH]]SSH" ; 
+!"Client: Android ImageLink";
+!"Access permission request";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Server: Mac OS X ImageLink";
+!"Client: Windows Mobile ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Client: FreeBSD";
+!"Server: OS/2 eComStation ImageLink";
+!"Server: Microsoft Windows ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+)
+
+fmProduct7 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": License ["Multiple sessions ImageLinkImageLink"] [Video] Protocol ["IPv6 support"] "Free for commercial use" "Free for personal use" ["Built-in encryption ImageLink"] ["3D"] ["File transfer ImageLink"] ["Seamless window"] ["Client/server /listening"] ["Audio support ImageLink"] ["Access permission request"] ["NAT passthrough"] ["Remote assistance"] ; 
+License: GPL ; 
+Protocol: "RFB(VNC)" ; 
+!"Multiple sessions ImageLinkImageLink";
+!"Built-in encryption ImageLink";
+!"Audio support ImageLink";
+!"File transfer ImageLink";
+!"Seamless window";
+)
+
+fmProduct8 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": License Video "Multiple sessions ImageLinkImageLink" Protocol "IPv6 support" "Free for commercial use" "Free for personal use" "Built-in encryption ImageLink" ["3D"] ["File transfer ImageLink"] ["Seamless window"] "Client/server /listening" "Access permission request" "Audio support ImageLink" "NAT passthrough" "Remote assistance" ; 
+License: BSD ; 
+Protocol: Chromoting ; 
+"Built-in encryption ImageLink": "[[Secure Sockets Layer|SSL]], [[Transport Layer Security|TLS]]SSL" ; 
+"Client/server /listening": "Client & server" ; 
+!"File transfer ImageLink";
+!"Seamless window";
+)
+
+fmProduct9 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": "Client: Blackberry" "Client: Android ImageLink" Protocol "Client: OS/2 eComStation ImageLink" "3D" "File transfer ImageLink" "Seamless window" ["Server: OS/2 eComStation ImageLink"] "Client/server /listening" "Audio support ImageLink" "Access permission request" "Client: FreeBSD" "Remote assistance" "Server: Microsoft Windows ImageLink" License "Multiple sessions ImageLinkImageLink" Video "IPv6 support" "Client: Linux ImageLink" ["Free for commercial use"] ["Free for personal use"] ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] "Client: iOS (iPod Touch, iPhone, iPad)" "Client: Java ImageLink" "Client: Windows Mobile ImageLink" "NAT passthrough" "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: "RDP, ICA" ; 
+"Client/server /listening": "Client & server" ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[Secure Sockets Layer|SSL]], [[Transport Layer Security|TLS]]SSL" ; 
+!"Free for personal use";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Free for commercial use";
+!"Server: Mac OS X ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+)
+
+fmProduct10 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" ["Seamless window"] "Client/server /listening" ["Server: OS/2 eComStation ImageLink"] ["Audio support ImageLink"] ["Access permission request"] ["Client: FreeBSD"] ["Remote assistance"] ["Server: Microsoft Windows ImageLink"] License ["Multiple sessions ImageLinkImageLink"] [Video] ["Client: Linux ImageLink"] ["IPv6 support"] "Free for commercial use" "Free for personal use" ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Client: Java ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: "RFB(VNC)" ; 
+"Client/server /listening": "Client & server" ; 
+License: Proprietary ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Linux ImageLink";
+!"Server: Mac OS X ImageLink";
+!"Client: Windows Mobile ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Client: FreeBSD";
+!"Server: OS/2 eComStation ImageLink";
+!"Seamless window";
+!"Server: Microsoft Windows ImageLink";
+!"Client: Java ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Multiple sessions ImageLinkImageLink";
+!"Audio support ImageLink";
+)
+
+fmProduct11 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" ["Seamless window"] "Client/server /listening" ["Server: OS/2 eComStation ImageLink"] ["Audio support ImageLink"] ["Access permission request"] ["Client: FreeBSD"] ["Remote assistance"] ["Server: Microsoft Windows ImageLink"] License [Video] "Multiple sessions ImageLinkImageLink" "Client: Linux ImageLink" ["IPv6 support"] "Free for commercial use" "Free for personal use" ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Java ImageLink"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] ["Client: Mac OS X ImageLink"] ["Server: Mac OS X ImageLink"] ; 
+Protocol: "RFB(VNC)" ; 
+"Client/server /listening": "Client & server" ; 
+License: GPL ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Windows Mobile ImageLink";
+!"Server: Mac OS X ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Client: FreeBSD";
+!"Seamless window";
+!"Client: Java ImageLink";
+!"Server: Microsoft Windows ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Client: Mac OS X ImageLink";
+!"Audio support ImageLink";
+)
+
+fmProduct12 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": "Client: Blackberry" "Client: Android ImageLink" Protocol ["Client: OS/2 eComStation ImageLink"] "3D" "File transfer ImageLink" "Seamless window" ["Server: OS/2 eComStation ImageLink"] "Client/server /listening" "Access permission request" "Audio support ImageLink" ["Client: FreeBSD"] "Remote assistance" "Server: Microsoft Windows ImageLink" License "Multiple sessions ImageLinkImageLink" Video "IPv6 support" "Client: Linux ImageLink" ["Free for commercial use"] ["Free for personal use"] "Server: Linux ImageLink" "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] "Client: iOS (iPod Touch, iPhone, iPad)" "Client: Java ImageLink" ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: "RDP, Telnet, Ericom Blaze, PCoIP" ; 
+"Client/server /listening": "Client & server" ; 
+License: Proprietary ; 
+!"Free for personal use";
+!"Server: FreeBSD";
+!"Client: OS/2 eComStation ImageLink";
+!"Free for commercial use";
+!"Server: Mac OS X ImageLink";
+!"Client: Windows Mobile ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Client: FreeBSD";
+!"Server: OS/2 eComStation ImageLink";
+!"NAT passthrough";
+)
+
+fmProduct13 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": "Client: Blackberry" "Client: Android ImageLink" Protocol ["Client: OS/2 eComStation ImageLink"] "3D" "File transfer ImageLink" "Seamless window" ["Server: OS/2 eComStation ImageLink"] "Client/server /listening" ["Access permission request"] "Audio support ImageLink" ["Client: FreeBSD"] ["Remote assistance"] "Server: Microsoft Windows ImageLink" License "Multiple sessions ImageLinkImageLink" Video "IPv6 support" "Client: Linux ImageLink" ["Free for personal use"] ["Free for commercial use"] ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] "Client: iOS (iPod Touch, iPhone, iPad)" ["Client: Java ImageLink"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: RDP ; 
+"Client/server /listening": "Client & server" ; 
+License: Proprietary ; 
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: Windows Mobile ImageLink";
+!"Server: Mac OS X ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Client: FreeBSD";
+!"Free for personal use";
+!"Client: Java ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Remote assistance";
+!"Free for commercial use";
+!"NAT passthrough";
+)
+
+fmProduct14 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" ["Seamless window"] ["Server: OS/2 eComStation ImageLink"] "Client/server /listening" ["Access permission request"] ["Audio support ImageLink"] ["Client: FreeBSD"] ["Remote assistance"] ["Server: Microsoft Windows ImageLink"] License [Video] ["Multiple sessions ImageLinkImageLink"] ["Client: Linux ImageLink"] ["IPv6 support"] ["Free for personal use"] ["Free for commercial use"] ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Client: Java ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: "RFB(VNC)" ; 
+"Client/server /listening": "Client & server" ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[Secure Sockets Layer|SSL]]SSL" ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Linux ImageLink";
+!"Server: Mac OS X ImageLink";
+!"Client: Windows Mobile ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Client: FreeBSD";
+!"Seamless window";
+!"Free for personal use";
+!"Server: Microsoft Windows ImageLink";
+!"Client: Java ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Multiple sessions ImageLinkImageLink";
+!"Free for commercial use";
+!"Audio support ImageLink";
+)
+
+fmProduct15 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" ["Seamless window"] ["Server: OS/2 eComStation ImageLink"] ["Client/server /listening"] "Audio support ImageLink" ["Access permission request"] "Client: FreeBSD" ["Remote assistance"] ["Server: Microsoft Windows ImageLink"] License [Video] "Multiple sessions ImageLinkImageLink" "Client: Linux ImageLink" ["IPv6 support"] "Free for personal use" "Free for commercial use" ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Java ImageLink"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: RDP ; 
+License: "Apache license" ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Server: Mac OS X ImageLink";
+!"Client: Windows Mobile ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Seamless window";
+!"Server: Microsoft Windows ImageLink";
+!"Client: Java ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+)
+
+fmProduct16 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" "Seamless window" "Client/server /listening" ["Server: OS/2 eComStation ImageLink"] ["Access permission request"] "Audio support ImageLink" ["Client: FreeBSD"] ["Remote assistance"] ["Server: Microsoft Windows ImageLink"] License [Video] "Multiple sessions ImageLinkImageLink" ["IPv6 support"] "Client: Linux ImageLink" ["Free for commercial use"] ["Free for personal use"] ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] "Client: Java ImageLink" ["Client: iOS (iPod Touch, iPhone, iPad)"] "Client: Windows Mobile ImageLink" ["NAT passthrough"] "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: Proprietary ; 
+"Client/server /listening": "Client & server" ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[Secure Sockets Layer|SSL]], [[DES-56]], [[DES-168]], [[AES-256]]SSL" ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Server: Mac OS X ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Client: FreeBSD";
+!"Server: OS/2 eComStation ImageLink";
+!"Free for personal use";
+!"Server: Microsoft Windows ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Free for commercial use";
+)
+
+fmProduct17 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] "Client: Android ImageLink" Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" ["Seamless window"] ["Client/server /listening"] ["Server: OS/2 eComStation ImageLink"] "Access permission request" "Audio support ImageLink" ["Client: FreeBSD"] "Remote assistance" "Server: Microsoft Windows ImageLink" License [Video] ["Multiple sessions ImageLinkImageLink"] ["IPv6 support"] "Client: Linux ImageLink" ["Free for personal use"] ["Free for commercial use"] ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] "Client: Java ImageLink" "Client: iOS (iPod Touch, iPhone, iPad)" "Client: Windows Mobile ImageLink" ["NAT passthrough"] "Client: Mac OS X ImageLink" "Server: Mac OS X ImageLink" ; 
+Protocol: Proprietary ; 
+License: Proprietary ; 
+!"Free for personal use";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Client: OS/2 eComStation ImageLink";
+!"Server: Linux ImageLink";
+!"Free for commercial use";
+!"Server: Windows Mobile ImageLink";
+!"Client: FreeBSD";
+!"Server: OS/2 eComStation ImageLink";
+)
+
+fmProduct18 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" "Seamless window" "Client/server /listening" ["Server: OS/2 eComStation ImageLink"] ["Audio support ImageLink"] "Access permission request" ["Client: FreeBSD"] "Remote assistance" "Server: Microsoft Windows ImageLink" License [Video] "Multiple sessions ImageLinkImageLink" ["IPv6 support"] "Client: Linux ImageLink" ["Free for commercial use"] ["Free for personal use"] ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Client: Java ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: "Proprietary, RDP, Citrix ICA, RFB(VNC)" ; 
+"Client/server /listening": "Client & server" ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[RC4]] RC4" ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Windows Mobile ImageLink";
+!"Server: Mac OS X ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Client: FreeBSD";
+!"Free for personal use";
+!"Client: Java ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Free for commercial use";
+!"Audio support ImageLink";
+!"NAT passthrough";
+)
+
+fmProduct19 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" "Seamless window" ["Server: OS/2 eComStation ImageLink"] "Client/server /listening" ["Access permission request"] "Audio support ImageLink" "Client: FreeBSD" ["Remote assistance"] ["Server: Microsoft Windows ImageLink"] License "Multiple sessions ImageLinkImageLink" [Video] ["IPv6 support"] "Client: Linux ImageLink" "Free for personal use" "Free for commercial use" "Server: Linux ImageLink" "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" "Server: FreeBSD" ["Server: Windows Mobile ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Java ImageLink"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: "NX, RDP, RFB(VNC)" ; 
+"Client/server /listening": "Client & server" ; 
+License: GPL ; 
+"Built-in encryption ImageLink": "[[Advanced Encryption Standard|AES]]AES" ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: Microsoft Windows ImageLink";
+!"Client: Java ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Server: Mac OS X ImageLink";
+!"Client: Windows Mobile ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+)
+
+fmProduct20 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] "Client: Android ImageLink" Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" "Seamless window" ["Client/server /listening"] ["Server: OS/2 eComStation ImageLink"] "Audio support ImageLink" ["Access permission request"] "Client: FreeBSD" ["Remote assistance"] ["Server: Microsoft Windows ImageLink"] License [Video] "Multiple sessions ImageLinkImageLink" "Client: Linux ImageLink" ["IPv6 support"] ["Free for commercial use"] ["Free for personal use"] ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] "Client: Java ImageLink" ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: RDP ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[Secure Sockets Layer|SSL]], [[Transport Layer Security|TLS]]SSL" ; 
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Server: Mac OS X ImageLink";
+!"Client: Windows Mobile ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Free for personal use";
+!"Server: Microsoft Windows ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Free for commercial use";
+)
+
+fmProduct21 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" "Seamless window" ["Server: OS/2 eComStation ImageLink"] ["Client/server /listening"] ["Access permission request"] "Audio support ImageLink" "Client: FreeBSD" ["Remote assistance"] ["Server: Microsoft Windows ImageLink"] License [Video] "Multiple sessions ImageLinkImageLink" ["IPv6 support"] "Client: Linux ImageLink" ["Free for personal use"] ["Free for commercial use"] ["Server: Linux ImageLink"] ["Client: Microsoft Windows ImageLink"] "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Client: Java ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: RDP ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[Secure Sockets Layer|SSL]], [[Transport Layer Security|TLS]]SSL" ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Server: Mac OS X ImageLink";
+!"Client: Windows Mobile ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Free for personal use";
+!"Client: Java ImageLink";
+!"Server: Microsoft Windows ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Client: Microsoft Windows ImageLink";
+!"Free for commercial use";
+)
+
+fmProduct22 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] ["File transfer ImageLink"] ["Seamless window"] ["Client/server /listening"] ["Server: OS/2 eComStation ImageLink"] ["Audio support ImageLink"] ["Access permission request"] "Client: FreeBSD" ["Remote assistance"] ["Server: Microsoft Windows ImageLink"] License [Video] ["Multiple sessions ImageLinkImageLink"] ["IPv6 support"] "Client: Linux ImageLink" ["Free for personal use"] ["Free for commercial use"] ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] "Client: Java ImageLink" ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: RDP ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[Secure Sockets Layer|SSL]], [[Transport Layer Security|TLS]]SSL" ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Windows Mobile ImageLink";
+!"Server: Mac OS X ImageLink";
+!"File transfer ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Seamless window";
+!"Free for personal use";
+!"Server: Microsoft Windows ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Multiple sessions ImageLinkImageLink";
+!"Free for commercial use";
+!"Audio support ImageLink";
+)
+
+fmProduct23 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" ["Seamless window"] ["Server: OS/2 eComStation ImageLink"] "Client/server /listening" "Audio support ImageLink" ["Access permission request"] ["Client: FreeBSD"] ["Remote assistance"] "Server: Microsoft Windows ImageLink" License "Multiple sessions ImageLinkImageLink" [Video] ["IPv6 support"] ["Client: Linux ImageLink"] ["Free for personal use"] ["Free for commercial use"] ["Server: Linux ImageLink"] ["Client: Microsoft Windows ImageLink"] "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Client: Java ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] ["Client: Mac OS X ImageLink"] ["Server: Mac OS X ImageLink"] ; 
+Protocol: Proprietary ; 
+"Client/server /listening": "Web Client & Win server" ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[Secure Sockets Layer|SSL]], [[AES-256]]SSL" ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Windows Mobile ImageLink";
+!"Server: Mac OS X ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Client: FreeBSD";
+!"Server: OS/2 eComStation ImageLink";
+!"Seamless window";
+!"Free for personal use";
+!"Client: Java ImageLink";
+!"Client: Microsoft Windows ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Client: Mac OS X ImageLink";
+!"Free for commercial use";
+)
+
+fmProduct24 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] ["File transfer ImageLink"] ["Seamless window"] "Client/server /listening" ["Server: OS/2 eComStation ImageLink"] ["Audio support ImageLink"] ["Access permission request"] ["Client: FreeBSD"] ["Remote assistance"] "Server: Microsoft Windows ImageLink" License [Video] "Multiple sessions ImageLinkImageLink" "Client: Linux ImageLink" ["IPv6 support"] "Free for commercial use" "Free for personal use" "Server: Linux ImageLink" "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Java ImageLink"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] ["Client: Mac OS X ImageLink"] ["Server: Mac OS X ImageLink"] ; 
+Protocol: "RFB(VNC)" ; 
+"Client/server /listening": "Client & server" ; 
+License: GPL ; 
+"Built-in encryption ImageLink": "[[Secure Shell|SSH]]SSH" ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Windows Mobile ImageLink";
+!"Server: Mac OS X ImageLink";
+!"File transfer ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Client: FreeBSD";
+!"Seamless window";
+!"Client: Java ImageLink";
+!"Client: Mac OS X ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Audio support ImageLink";
+)
+
+fmProduct25 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" ["Seamless window"] "Client/server /listening" ["Server: OS/2 eComStation ImageLink"] ["Audio support ImageLink"] ["Access permission request"] ["Client: FreeBSD"] ["Remote assistance"] "Server: Microsoft Windows ImageLink" License [Video] "Multiple sessions ImageLinkImageLink" ["IPv6 support"] ["Client: Linux ImageLink"] ["Free for commercial use"] ["Free for personal use"] ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] "Client: Java ImageLink" ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] ["Client: Mac OS X ImageLink"] ["Server: Mac OS X ImageLink"] ; 
+Protocol: Proprietary ; 
+"Client/server /listening": "Client & server" ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[Advanced Encryption Standard|AES]], [[Triple DES]], [[Data Encryption Standard|DES]]AES" ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Windows Mobile ImageLink";
+!"Server: Mac OS X ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Client: FreeBSD";
+!"Server: OS/2 eComStation ImageLink";
+!"Seamless window";
+!"Free for personal use";
+!"Client: OS/2 eComStation ImageLink";
+!"Client: Mac OS X ImageLink";
+!"Free for commercial use";
+!"Audio support ImageLink";
+)
+
+fmProduct26 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] ["File transfer ImageLink"] "Seamless window" ["Client/server /listening"] ["Server: OS/2 eComStation ImageLink"] ["Access permission request"] "Audio support ImageLink" "Client: FreeBSD" ["Remote assistance"] ["Server: Microsoft Windows ImageLink"] License [Video] "Multiple sessions ImageLinkImageLink" "Client: Linux ImageLink" ["IPv6 support"] "Free for commercial use" "Free for personal use" ["Server: Linux ImageLink"] ["Client: Microsoft Windows ImageLink"] ["Built-in encryption ImageLink"] ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Java ImageLink"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] ["Client: Mac OS X ImageLink"] ["Server: Mac OS X ImageLink"] ; 
+Protocol: "RFB(VNC), RDP" ; 
+License: GPL ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Built-in encryption ImageLink";
+!"Client: Windows Mobile ImageLink";
+!"Server: Mac OS X ImageLink";
+!"File transfer ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Client: Java ImageLink";
+!"Server: Microsoft Windows ImageLink";
+!"Client: Microsoft Windows ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Client: Mac OS X ImageLink";
+)
+
+fmProduct27 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] "Client: Android ImageLink" Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] ["File transfer ImageLink"] ["Seamless window"] "Client/server /listening" ["Server: OS/2 eComStation ImageLink"] ["Audio support ImageLink"] "Access permission request" ["Client: FreeBSD"] "Remote assistance" "Server: Microsoft Windows ImageLink" License [Video] "Multiple sessions ImageLinkImageLink" ["IPv6 support"] ["Client: Linux ImageLink"] ["Free for personal use"] ["Free for commercial use"] ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] "Client: iOS (iPod Touch, iPhone, iPad)" "Client: Java ImageLink" "Client: Windows Mobile ImageLink" "NAT passthrough" "Client: Mac OS X ImageLink" "Server: Mac OS X ImageLink" ; 
+Protocol: Proprietary ; 
+"Client/server /listening": "Client & server" ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[Secure Sockets Layer|SSL-256]]SSL-256" ; 
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: Linux ImageLink";
+!"File transfer ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Client: FreeBSD";
+!"Server: OS/2 eComStation ImageLink";
+!"Seamless window";
+!"Free for personal use";
+!"Client: OS/2 eComStation ImageLink";
+!"Free for commercial use";
+!"Audio support ImageLink";
+)
+
+fmProduct28 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] "Client: Android ImageLink" Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" ["Seamless window"] ["Server: OS/2 eComStation ImageLink"] "Client/server /listening" "Access permission request" "Audio support ImageLink" ["Client: FreeBSD"] "Remote assistance" "Server: Microsoft Windows ImageLink" License [Video] "Multiple sessions ImageLinkImageLink" ["IPv6 support"] ["Client: Linux ImageLink"] ["Free for personal use"] ["Free for commercial use"] ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] "Client: Java ImageLink" "Client: iOS (iPod Touch, iPhone, iPad)" ["Client: Windows Mobile ImageLink"] "NAT passthrough" "Client: Mac OS X ImageLink" "Server: Mac OS X ImageLink" ; 
+Protocol: Proprietary ; 
+"Client/server /listening": "Client & server" ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[Secure Sockets Layer|SSL-256]]SSL-256" ; 
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: Linux ImageLink";
+!"Client: Windows Mobile ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Client: FreeBSD";
+!"Server: OS/2 eComStation ImageLink";
+!"Seamless window";
+!"Free for personal use";
+!"Client: OS/2 eComStation ImageLink";
+!"Free for commercial use";
+)
+
+fmProduct29 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] ["File transfer ImageLink"] ["Seamless window"] "Client/server /listening" ["Server: OS/2 eComStation ImageLink"] ["Audio support ImageLink"] ["Access permission request"] ["Client: FreeBSD"] ["Remote assistance"] ["Server: Microsoft Windows ImageLink"] License "Multiple sessions ImageLinkImageLink" [Video] ["Client: Linux ImageLink"] ["IPv6 support"] ["Free for personal use"] ["Free for commercial use"] ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] "Client: Java ImageLink" ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: "RFB(VNC)" ; 
+"Client/server /listening": "Client & Server" ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[AES-128]] AES-128" ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Linux ImageLink";
+!"Server: Mac OS X ImageLink";
+!"Client: Windows Mobile ImageLink";
+!"File transfer ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Client: FreeBSD";
+!"Seamless window";
+!"Free for personal use";
+!"Server: Microsoft Windows ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Free for commercial use";
+!"Audio support ImageLink";
+)
+
+fmProduct30 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] "Client: Android ImageLink" Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" ["Seamless window"] ["Server: OS/2 eComStation ImageLink"] "Client/server /listening" ["Audio support ImageLink"] ["Access permission request"] ["Client: FreeBSD"] ["Remote assistance"] ["Server: Microsoft Windows ImageLink"] License [Video] "Multiple sessions ImageLinkImageLink" ["Client: Linux ImageLink"] ["IPv6 support"] ["Free for commercial use"] "Free for personal use" ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Client: Java ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: Proprietary ; 
+"Client/server /listening": "Client & server" ; 
+License: Freeware ; 
+"Built-in encryption ImageLink": "[[AES-256]] AES-256" ; 
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Linux ImageLink";
+!"Server: Mac OS X ImageLink";
+!"Client: Windows Mobile ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Client: FreeBSD";
+!"Server: OS/2 eComStation ImageLink";
+!"Seamless window";
+!"Client: Java ImageLink";
+!"Server: Microsoft Windows ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Free for commercial use";
+!"Audio support ImageLink";
+)
+
+fmProduct31 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": License ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol "Client: Linux ImageLink" ["Free for commercial use"] ["Free for personal use"] "Server: Linux ImageLink" ["Client: OS/2 eComStation ImageLink"] "Client: Microsoft Windows ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Server: OS/2 eComStation ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Java ImageLink"] ["Client: Windows Mobile ImageLink"] ["Client: FreeBSD"] ["Client: Mac OS X ImageLink"] "Server: Microsoft Windows ImageLink" ["Server: Mac OS X ImageLink"] ; 
+License: Proprietary ; 
+Protocol: "User Extenstion Protocol (UXP)" ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Windows Mobile ImageLink";
+!"Server: Mac OS X ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Client: FreeBSD";
+!"Free for personal use";
+!"Client: Java ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Client: Mac OS X ImageLink";
+!"Free for commercial use";
+)
+
+fmProduct32 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol "Client: OS/2 eComStation ImageLink" "3D" "File transfer ImageLink" "Seamless window" "Server: OS/2 eComStation ImageLink" "Client/server /listening" "Audio support ImageLink" "Access permission request" ["Client: FreeBSD"] "Remote assistance" "Server: Microsoft Windows ImageLink" License Video "Multiple sessions ImageLinkImageLink" "IPv6 support" "Client: Linux ImageLink" "Free for commercial use" "Free for personal use" "Server: Linux ImageLink" "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] "Server: Windows Mobile ImageLink" "Client: iOS (iPod Touch, iPhone, iPad)" ["Client: Java ImageLink"] "Client: Windows Mobile ImageLink" "NAT passthrough" "Client: Mac OS X ImageLink" "Server: Mac OS X ImageLink" ; 
+Protocol: Proprietary ; 
+"Client/server /listening": "Client, server, & listening" ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[Secure Sockets Layer|SSL]], [[AES-256]]SSL" ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Client: Java ImageLink";
+!"Server: FreeBSD";
+!"Client: FreeBSD";
+)
+
+fmProduct33 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" "Seamless window" "Client/server /listening" ["Server: OS/2 eComStation ImageLink"] ["Access permission request"] "Audio support ImageLink" "Client: FreeBSD" ["Remote assistance"] "Server: Microsoft Windows ImageLink" License "Multiple sessions ImageLinkImageLink" [Video] ["IPv6 support"] "Client: Linux ImageLink" ["Free for personal use"] ["Free for commercial use"] "Server: Linux ImageLink" "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] "Client: Java ImageLink" ["Client: iOS (iPod Touch, iPhone, iPad)"] "Client: Windows Mobile ImageLink" ["NAT passthrough"] "Client: Mac OS X ImageLink" "Server: Mac OS X ImageLink" ; 
+Protocol: Proprietary ; 
+"Client/server /listening": "Client & server" ; 
+License: Proprietary ; 
+!"Client: Android ImageLink";
+!"Free for personal use";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Client: OS/2 eComStation ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Free for commercial use";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+)
+
+fmProduct34 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] "Client: Android ImageLink" Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" ["Seamless window"] ["Server: OS/2 eComStation ImageLink"] "Client/server /listening" "Audio support ImageLink" "Access permission request" ["Client: FreeBSD"] "Remote assistance" ["Server: Microsoft Windows ImageLink"] License "Multiple sessions ImageLinkImageLink" [Video] ["Client: Linux ImageLink"] ["IPv6 support"] ["Free for commercial use"] "Free for personal use" ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Java ImageLink"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] ["Client: Mac OS X ImageLink"] ["Server: Mac OS X ImageLink"] ; 
+Protocol: Proprietary ; 
+"Client/server /listening": "Client & Server" ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[AES-128]] AES-128" ; 
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Windows Mobile ImageLink";
+!"Server: Mac OS X ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Client: FreeBSD";
+!"Seamless window";
+!"Server: Microsoft Windows ImageLink";
+!"Client: Java ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Client: Mac OS X ImageLink";
+!"Free for commercial use";
+)
+
+fmProduct35 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": License Protocol "Free for commercial use" "Free for personal use" ; 
+License: Proprietary ; 
+Protocol: "NX, RDP, RFB(VNC)" ;
+)
+
+fmProduct36 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" "Seamless window" ["Server: OS/2 eComStation ImageLink"] "Client/server /listening" ["Audio support ImageLink"] ["Access permission request"] "Client: FreeBSD" ["Remote assistance"] "Server: Microsoft Windows ImageLink" License "Multiple sessions ImageLinkImageLink" [Video] ["IPv6 support"] "Client: Linux ImageLink" ["Free for personal use"] ["Free for commercial use"] "Server: Linux ImageLink" "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] "Client: iOS (iPod Touch, iPhone, iPad)" ["Client: Java ImageLink"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: Proprietary ; 
+"Client/server /listening": "Client & server" ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[Secure Sockets Layer|SSL]], [[Secure Shell|SSH]]SSL" ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Mac OS X ImageLink";
+!"Client: Windows Mobile ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Free for personal use";
+!"Client: Java ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Free for commercial use";
+!"Audio support ImageLink";
+)
+
+fmProduct37 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" "Seamless window" ["Server: OS/2 eComStation ImageLink"] "Client/server /listening" "Audio support ImageLink" ["Access permission request"] "Client: FreeBSD" ["Remote assistance"] ["Server: Microsoft Windows ImageLink"] License [Video] "Multiple sessions ImageLinkImageLink" ["IPv6 support"] "Client: Linux ImageLink" ["Free for personal use"] ["Free for commercial use"] ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] "Client: Java ImageLink" ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: AIP ; 
+"Client/server /listening": "Client & server" ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[Secure Sockets Layer|SSL]], [[Transport Layer Security|TLS]] ([[AES-256]])SSL" ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Server: Mac OS X ImageLink";
+!"Client: Windows Mobile ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Free for personal use";
+!"Server: Microsoft Windows ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Free for commercial use";
+)
+
+fmProduct38 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" "Seamless window" "Client/server /listening" ["Server: OS/2 eComStation ImageLink"] "Access permission request" ["Audio support ImageLink"] "Client: FreeBSD" "Remote assistance" "Server: Microsoft Windows ImageLink" License "Multiple sessions ImageLinkImageLink" [Video] "Client: Linux ImageLink" "IPv6 support" ["Free for commercial use"] ["Free for personal use"] ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Client: Java ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] "NAT passthrough" "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: Proprietary ; 
+"Client/server /listening": "Client, server, & gateway" ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[Secure Sockets Layer|SSL]], [[AES-256]]SSL" ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Windows Mobile ImageLink";
+!"Server: Mac OS X ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Free for personal use";
+!"Client: Java ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Free for commercial use";
+!"Audio support ImageLink";
+)
+
+fmProduct39 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] License "Client: Android ImageLink" Protocol "Client: Linux ImageLink" "Free for commercial use" "Free for personal use" "Server: Linux ImageLink" ["Client: OS/2 eComStation ImageLink"] "Client: Microsoft Windows ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Server: OS/2 eComStation ImageLink"] "Client: Java ImageLink" ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] ["Client: FreeBSD"] "Client: Mac OS X ImageLink" ["Server: Microsoft Windows ImageLink"] ["Server: Mac OS X ImageLink"] ; 
+License: GPL ; 
+Protocol: "NX and HTTP" ; 
+!"Client: Blackberry";
+!"Server: Microsoft Windows ImageLink";
+!"Server: FreeBSD";
+!"Client: OS/2 eComStation ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Server: Mac OS X ImageLink";
+!"Client: Windows Mobile ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Client: FreeBSD";
+)
+
+fmProduct40 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" "Seamless window" ["Client/server /listening"] ["Server: OS/2 eComStation ImageLink"] "Audio support ImageLink" ["Access permission request"] "Client: FreeBSD" ["Remote assistance"] "Server: Microsoft Windows ImageLink" License [Video] "Multiple sessions ImageLinkImageLink" "Client: Linux ImageLink" "IPv6 support" "Free for personal use" "Free for commercial use" "Server: Linux ImageLink" ["Client: Microsoft Windows ImageLink"] "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] "Client: Java ImageLink" ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: RDP ; 
+License: GPL ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Client: OS/2 eComStation ImageLink";
+!"Client: Microsoft Windows ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Server: Mac OS X ImageLink";
+!"Client: Windows Mobile ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+)
+
+fmProduct41 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": License Protocol "Free for personal use" "Free for commercial use" ; 
+License: GPL ; 
+Protocol: "RFB(VNC)" ;
+)
+
+fmProduct42 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] "Client: Android ImageLink" Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] ["File transfer ImageLink"] ["Seamless window"] "Client/server /listening" ["Server: OS/2 eComStation ImageLink"] ["Audio support ImageLink"] "Access permission request" "Client: FreeBSD" "Remote assistance" "Server: Microsoft Windows ImageLink" License [Video] "Multiple sessions ImageLinkImageLink" ["IPv6 support"] "Client: Linux ImageLink" ["Free for commercial use"] "Free for personal use" "Server: Linux ImageLink" "Client: Microsoft Windows ImageLink" ["Built-in encryption ImageLink"] ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] "Client: Java ImageLink" "Client: iOS (iPod Touch, iPhone, iPad)" ["Client: Windows Mobile ImageLink"] "NAT passthrough" "Client: Mac OS X ImageLink" "Server: Mac OS X ImageLink" ; 
+Protocol: "RFB(VNC)" ; 
+"Client/server /listening": "Client, server, & listening" ; 
+License: Proprietary ; 
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Built-in encryption ImageLink";
+!"Client: Windows Mobile ImageLink";
+!"File transfer ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Seamless window";
+!"IPv6 support";
+!"Client: OS/2 eComStation ImageLink";
+!"Free for commercial use";
+!"Audio support ImageLink";
+)
+
+fmProduct43 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] "Client: Android ImageLink" Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" ["Seamless window"] ["Server: OS/2 eComStation ImageLink"] "Client/server /listening" ["Audio support ImageLink"] "Access permission request" ["Client: FreeBSD"] "Remote assistance" "Server: Microsoft Windows ImageLink" License [Video] "Multiple sessions ImageLinkImageLink" "IPv6 support" "Client: Linux ImageLink" ["Free for personal use"] ["Free for commercial use"] "Server: Linux ImageLink" "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] "Client: iOS (iPod Touch, iPhone, iPad)" "Client: Java ImageLink" ["Client: Windows Mobile ImageLink"] "NAT passthrough" "Client: Mac OS X ImageLink" "Server: Mac OS X ImageLink" ; 
+Protocol: "RFB(VNC)" ; 
+"Client/server /listening": "Client, server, & listening" ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[AES-128]] AES-128" ; 
+!"Free for personal use";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Client: OS/2 eComStation ImageLink";
+!"Free for commercial use";
+!"Client: Windows Mobile ImageLink";
+!"Audio support ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Client: FreeBSD";
+!"Server: OS/2 eComStation ImageLink";
+!"Seamless window";
+)
+
+fmProduct44 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] "Client: Android ImageLink" Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" ["Seamless window"] ["Server: OS/2 eComStation ImageLink"] "Client/server /listening" ["Audio support ImageLink"] "Access permission request" ["Client: FreeBSD"] "Remote assistance" "Server: Microsoft Windows ImageLink" License [Video] "Multiple sessions ImageLinkImageLink" "IPv6 support" "Client: Linux ImageLink" ["Free for commercial use"] ["Free for personal use"] "Server: Linux ImageLink" "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] "Client: iOS (iPod Touch, iPhone, iPad)" "Client: Java ImageLink" ["Client: Windows Mobile ImageLink"] "NAT passthrough" "Client: Mac OS X ImageLink" "Server: Mac OS X ImageLink" ; 
+Protocol: "RFB(VNC)" ; 
+"Client/server /listening": "Client, server, & listening" ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[AES-256]] AES-256" ; 
+!"Free for personal use";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Client: OS/2 eComStation ImageLink";
+!"Free for commercial use";
+!"Client: Windows Mobile ImageLink";
+!"Audio support ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Client: FreeBSD";
+!"Server: OS/2 eComStation ImageLink";
+!"Seamless window";
+)
+
+fmProduct45 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": License Protocol ["Free for personal use"] ["Free for commercial use"] ; 
+License: Proprietary ; 
+Protocol: Proprietary ; 
+!"Free for personal use";
+!"Free for commercial use";
+)
+
+fmProduct46 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": License Protocol "Free for commercial use" "Free for personal use" ; 
+License: Proprietary ; 
+Protocol: "RDP, ICA, RFB(VNC)" ;
+)
+
+fmProduct47 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] "Client: Android ImageLink" Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" "Seamless window" ["Server: OS/2 eComStation ImageLink"] "Client/server /listening" "Access permission request" "Audio support ImageLink" "Client: FreeBSD" "Remote assistance" "Server: Microsoft Windows ImageLink" License "Multiple sessions ImageLinkImageLink" [Video] "IPv6 support" "Client: Linux ImageLink" ["Free for commercial use"] "Free for personal use" "Server: Linux ImageLink" "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Client: Java ImageLink"] "Client: iOS (iPod Touch, iPhone, iPad)" "Client: Windows Mobile ImageLink" ["NAT passthrough"] "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: RDP ; 
+"Client/server /listening": "Client & server" ; 
+License: Proprietary ; 
+!"Client: Blackberry";
+!"Client: Java ImageLink";
+!"Server: FreeBSD";
+!"Client: OS/2 eComStation ImageLink";
+!"Free for commercial use";
+!"Server: Mac OS X ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"NAT passthrough";
+)
+
+fmProduct48 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] "3D" "File transfer ImageLink" "Seamless window" "Client/server /listening" ["Server: OS/2 eComStation ImageLink"] "Audio support ImageLink" "Access permission request" ["Client: FreeBSD"] ["Remote assistance"] ["Server: Microsoft Windows ImageLink"] License Video "Multiple sessions ImageLinkImageLink" ["IPv6 support"] "Client: Linux ImageLink" "Free for personal use" "Free for commercial use" "Server: Linux ImageLink" "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Java ImageLink"] "Client: Windows Mobile ImageLink" ["NAT passthrough"] ["Client: Mac OS X ImageLink"] ["Server: Mac OS X ImageLink"] ; 
+Protocol: Proprietary ; 
+"Client/server /listening": "Client & server" ; 
+License: Proprietary ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Server: Mac OS X ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Client: FreeBSD";
+!"Server: OS/2 eComStation ImageLink";
+!"IPv6 support";
+!"Server: Microsoft Windows ImageLink";
+!"Client: Java ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Client: Mac OS X ImageLink";
+)
+
+fmProduct49 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" "Seamless window" ["Server: OS/2 eComStation ImageLink"] "Client/server /listening" "Audio support ImageLink" "Access permission request" ["Client: FreeBSD"] "Remote assistance" "Server: Microsoft Windows ImageLink" License "Multiple sessions ImageLinkImageLink" [Video] "IPv6 support" "Client: Linux ImageLink" ["Free for commercial use"] "Free for personal use" ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Client: Java ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] "NAT passthrough" ["Client: Mac OS X ImageLink"] ["Server: Mac OS X ImageLink"] ; 
+Protocol: Proprietary ; 
+"Client/server /listening": "Client, server, & listening" ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[AES-256]] AES-256" ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Windows Mobile ImageLink";
+!"Server: Mac OS X ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Client: FreeBSD";
+!"Client: Java ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Client: Mac OS X ImageLink";
+!"Free for commercial use";
+)
+
+fmProduct50 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" "Seamless window" "Client/server /listening" ["Server: OS/2 eComStation ImageLink"] "Audio support ImageLink" ["Access permission request"] ["Client: FreeBSD"] "Remote assistance" "Server: Microsoft Windows ImageLink" License Video "Multiple sessions ImageLinkImageLink" ["Client: Linux ImageLink"] ["IPv6 support"] ["Free for commercial use"] ["Free for personal use"] "Server: Linux ImageLink" "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Client: Java ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] "NAT passthrough" "Client: Mac OS X ImageLink" "Server: Mac OS X ImageLink" ; 
+Protocol: Proprietary ; 
+"Client/server /listening": "Client, server, & listening" ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[Secure Sockets Layer|SSL]]SSL" ; 
+!"Client: Android ImageLink";
+!"Access permission request";
+!"3D";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Client: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Windows Mobile ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Client: FreeBSD";
+!"Server: OS/2 eComStation ImageLink";
+!"Free for personal use";
+!"Client: Java ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Free for commercial use";
+)
+
+fmProduct51 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] "Client: Android ImageLink" Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" "Seamless window" ["Server: OS/2 eComStation ImageLink"] "Client/server /listening" "Access permission request" "Audio support ImageLink" "Client: FreeBSD" "Remote assistance" "Server: Microsoft Windows ImageLink" License [Video] "Multiple sessions ImageLinkImageLink" ["IPv6 support"] "Client: Linux ImageLink" ["Free for commercial use"] ["Free for personal use"] "Server: Linux ImageLink" "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" "Server: FreeBSD" ["Server: Windows Mobile ImageLink"] "Client: iOS (iPod Touch, iPhone, iPad)" "Client: Java ImageLink" ["Client: Windows Mobile ImageLink"] "NAT passthrough" "Client: Mac OS X ImageLink" "Server: Mac OS X ImageLink" ; 
+Protocol: Proprietary ; 
+"Client/server /listening": "Client & server" ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[AES 256|AES-256]]AES-256" ; 
+!"Free for personal use";
+!"Client: Blackberry";
+!"Client: OS/2 eComStation ImageLink";
+!"Free for commercial use";
+!"Client: Windows Mobile ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+)
+
+fmProduct52 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" ["Seamless window"] ["Server: OS/2 eComStation ImageLink"] "Client/server /listening" ["Access permission request"] ["Audio support ImageLink"] "Client: FreeBSD" ["Remote assistance"] ["Server: Microsoft Windows ImageLink"] License "Multiple sessions ImageLinkImageLink" [Video] ["IPv6 support"] "Client: Linux ImageLink" ["Free for commercial use"] ["Free for personal use"] ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] "Client: Java ImageLink" ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: Proprietary ; 
+"Client/server /listening": "Client & server" ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "448-bitMay 2010" ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Windows Mobile ImageLink";
+!"Server: Mac OS X ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Seamless window";
+!"Free for personal use";
+!"Server: Microsoft Windows ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Free for commercial use";
+!"Audio support ImageLink";
+)
+
+fmProduct53 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] ["File transfer ImageLink"] "Seamless window" "Client/server /listening" ["Server: OS/2 eComStation ImageLink"] ["Access permission request"] ["Audio support ImageLink"] "Client: FreeBSD" ["Remote assistance"] ["Server: Microsoft Windows ImageLink"] License [Video] "Multiple sessions ImageLinkImageLink" "IPv6 support" "Client: Linux ImageLink" "Free for commercial use" "Free for personal use" ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] "Client: iOS (iPod Touch, iPhone, iPad)" ["Client: Java ImageLink"] ["Client: Windows Mobile ImageLink"] "NAT passthrough" "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: "X11" ; 
+"Client/server /listening": "Client & server" ; 
+License: BSD ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Server: Mac OS X ImageLink";
+!"Client: Windows Mobile ImageLink";
+!"File transfer ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Server: Microsoft Windows ImageLink";
+!"Client: Java ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Audio support ImageLink";
+)
+
+fmProduct54 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": "Client: Blackberry" "Client: Android ImageLink" Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] ["File transfer ImageLink"] "Seamless window" ["Server: OS/2 eComStation ImageLink"] "Client/server /listening" "Access permission request" "Audio support ImageLink" ["Client: FreeBSD"] "Remote assistance" "Server: Microsoft Windows ImageLink" License "Multiple sessions ImageLinkImageLink" [Video] ["Client: Linux ImageLink"] ["IPv6 support"] "Free for personal use" ["Free for commercial use"] ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" ["Built-in encryption ImageLink"] ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] "Client: iOS (iPod Touch, iPhone, iPad)" ["Client: Java ImageLink"] ["Client: Windows Mobile ImageLink"] "NAT passthrough" "Client: Mac OS X ImageLink" "Server: Mac OS X ImageLink" ; 
+Protocol: Proprietary ; 
+"Client/server /listening": "Client & server" ; 
+License: Proprietary ; 
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: Linux ImageLink";
+!"Built-in encryption ImageLink";
+!"Client: Windows Mobile ImageLink";
+!"File transfer ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Client: FreeBSD";
+!"Server: OS/2 eComStation ImageLink";
+!"Client: Java ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Free for commercial use";
+)
+
+fmProduct55 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] ["File transfer ImageLink"] ["Seamless window"] "Client/server /listening" ["Server: OS/2 eComStation ImageLink"] ["Access permission request"] "Audio support ImageLink" ["Client: FreeBSD"] ["Remote assistance"] ["Server: Microsoft Windows ImageLink"] License [Video] "Multiple sessions ImageLinkImageLink" ["IPv6 support"] "Client: Linux ImageLink" ["Free for personal use"] ["Free for commercial use"] ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] "Client: Java ImageLink" ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] ["Client: Mac OS X ImageLink"] ["Server: Mac OS X ImageLink"] ; 
+Protocol: ALP ; 
+"Client/server /listening": "Client, server, & hardware" ; 
+License: Proprietary ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Windows Mobile ImageLink";
+!"Server: Mac OS X ImageLink";
+!"File transfer ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Client: FreeBSD";
+!"Seamless window";
+!"Free for personal use";
+!"Server: Microsoft Windows ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Client: Mac OS X ImageLink";
+!"Free for commercial use";
+)
+
+fmProduct56 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] ["File transfer ImageLink"] ["Seamless window"] "Client/server /listening" ["Server: OS/2 eComStation ImageLink"] ["Access permission request"] ["Audio support ImageLink"] ["Client: FreeBSD"] ["Remote assistance"] ["Server: Microsoft Windows ImageLink"] License [Video] ["Multiple sessions ImageLinkImageLink"] ["Client: Linux ImageLink"] ["IPv6 support"] "Free for commercial use" "Free for personal use" ["Server: Linux ImageLink"] ["Client: Microsoft Windows ImageLink"] ["Built-in encryption ImageLink"] ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] "Client: Java ImageLink" ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] ["Client: Mac OS X ImageLink"] ["Server: Mac OS X ImageLink"] ; 
+Protocol: Proprietary ; 
+"Client/server /listening": "Client & server" ; 
+License: GPL ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Built-in encryption ImageLink";
+!"Client: Windows Mobile ImageLink";
+!"Server: Mac OS X ImageLink";
+!"File transfer ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Client: FreeBSD";
+!"Seamless window";
+!"Server: Microsoft Windows ImageLink";
+!"Client: Microsoft Windows ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Client: Mac OS X ImageLink";
+!"Multiple sessions ImageLinkImageLink";
+!"Audio support ImageLink";
+)
+
+fmProduct57 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": "Client: Blackberry" ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" ["Seamless window"] ["Server: OS/2 eComStation ImageLink"] "Client/server /listening" ["Access permission request"] ["Audio support ImageLink"] ["Client: FreeBSD"] ["Remote assistance"] ["Server: Microsoft Windows ImageLink"] License "Multiple sessions ImageLinkImageLink" [Video] ["IPv6 support"] "Client: Linux ImageLink" ["Free for personal use"] ["Free for commercial use"] ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] "Client: Java ImageLink" ["Client: iOS (iPod Touch, iPhone, iPad)"] "Client: Windows Mobile ImageLink" ["NAT passthrough"] "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: Proprietary ; 
+"Client/server /listening": "Client & server" ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[AES-256]] AES-256" ; 
+!"Client: Android ImageLink";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Server: Mac OS X ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Client: FreeBSD";
+!"Seamless window";
+!"IPv6 support";
+!"Free for personal use";
+!"Server: Microsoft Windows ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Free for commercial use";
+!"Audio support ImageLink";
+)
+
+fmProduct58 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] "Client: Android ImageLink" Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" "Seamless window" "Client/server /listening" ["Server: OS/2 eComStation ImageLink"] "Audio support ImageLink" "Access permission request" ["Client: FreeBSD"] "Remote assistance" "Server: Microsoft Windows ImageLink" License Video "Multiple sessions ImageLinkImageLink" ["IPv6 support"] "Client: Linux ImageLink" ["Free for commercial use"] "Free for personal use" "Server: Linux ImageLink" "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] "Client: Java ImageLink" "Client: iOS (iPod Touch, iPhone, iPad)" ["Client: Windows Mobile ImageLink"] "NAT passthrough" "Client: Mac OS X ImageLink" "Server: Mac OS X ImageLink" ; 
+Protocol: Proprietary ; 
+"Client/server /listening": "Client & server" ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[AES-256]] AES-256" ; 
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Client: OS/2 eComStation ImageLink";
+!"Free for commercial use";
+!"Client: Windows Mobile ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Client: FreeBSD";
+!"Server: OS/2 eComStation ImageLink";
+)
+
+fmProduct59 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": License Protocol ["Free for personal use"] ["Free for commercial use"] ; 
+License: Proprietary ; 
+Protocol: PCoIP ; 
+!"Free for personal use";
+!"Free for commercial use";
+)
+
+fmProduct60 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" ["Seamless window"] "Client/server /listening" ["Server: OS/2 eComStation ImageLink"] ["Audio support ImageLink"] "Access permission request" ["Client: FreeBSD"] "Remote assistance" "Server: Microsoft Windows ImageLink" License [Video] "Multiple sessions ImageLinkImageLink" ["Client: Linux ImageLink"] ["IPv6 support"] ["Free for commercial use"] ["Free for personal use"] ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Java ImageLink"] ["Client: Windows Mobile ImageLink"] "NAT passthrough" ["Client: Mac OS X ImageLink"] ["Server: Mac OS X ImageLink"] ; 
+Protocol: RDP ; 
+"Client/server /listening": "Client & server" ; 
+License: Proprietary ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Windows Mobile ImageLink";
+!"Server: Mac OS X ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Client: FreeBSD";
+!"Server: OS/2 eComStation ImageLink";
+!"Free for personal use";
+!"Client: Java ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Client: Mac OS X ImageLink";
+!"Free for commercial use";
+!"Audio support ImageLink";
+)
+
+fmProduct61 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": License Protocol ["Free for personal use"] ["Free for commercial use"] ; 
+License: GPL ; 
+Protocol: Thinc ; 
+!"Free for personal use";
+!"Free for commercial use";
+)
+
+fmProduct62 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] ["File transfer ImageLink"] ["Seamless window"] "Client/server /listening" ["Server: OS/2 eComStation ImageLink"] ["Access permission request"] ["Audio support ImageLink"] "Client: FreeBSD" ["Remote assistance"] "Server: Microsoft Windows ImageLink" License "Multiple sessions ImageLinkImageLink" Video "Client: Linux ImageLink" "IPv6 support" "Free for commercial use" "Free for personal use" "Server: Linux ImageLink" "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" "Server: FreeBSD" ["Server: Windows Mobile ImageLink"] "Client: Java ImageLink" ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] "NAT passthrough" "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: "RFB(VNC)" ; 
+"Client/server /listening": "Client, server, & listening" ; 
+License: GPL ; 
+"Built-in encryption ImageLink": "[[Secure Sockets Layer|SSL]], [[Transport Layer Security|TLS]]SSL" ; 
+!"Client: Android ImageLink";
+!"Access permission request";
+!"Client: Blackberry";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Server: Mac OS X ImageLink";
+!"Client: Windows Mobile ImageLink";
+!"File transfer ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Seamless window";
+!"Client: OS/2 eComStation ImageLink";
+!"Remote assistance";
+!"Audio support ImageLink";
+)
+
+fmProduct63 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] "Client: Android ImageLink" Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" ["Seamless window"] "Client/server /listening" ["Server: OS/2 eComStation ImageLink"] ["Audio support ImageLink"] "Access permission request" "Client: FreeBSD" "Remote assistance" "Server: Microsoft Windows ImageLink" License [Video] "Multiple sessions ImageLinkImageLink" ["IPv6 support"] "Client: Linux ImageLink" "Free for commercial use" "Free for personal use" "Server: Linux ImageLink" "Client: Microsoft Windows ImageLink" ["Built-in encryption ImageLink"] "Server: FreeBSD" ["Server: Windows Mobile ImageLink"] "Client: Java ImageLink" ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] "NAT passthrough" "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: "RFB(VNC)" ; 
+"Client/server /listening": "Client, server, & listening" ; 
+License: GPL ; 
+!"Client: Blackberry";
+!"Client: OS/2 eComStation ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Server: Mac OS X ImageLink";
+!"Client: Windows Mobile ImageLink";
+!"Audio support ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Seamless window";
+)
+
+fmProduct64 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" ["Seamless window"] ["Server: OS/2 eComStation ImageLink"] "Client/server /listening" ["Access permission request"] ["Audio support ImageLink"] ["Client: FreeBSD"] ["Remote assistance"] ["Server: Microsoft Windows ImageLink"] License [Video] "Multiple sessions ImageLinkImageLink" ["Client: Linux ImageLink"] ["IPv6 support"] ["Free for personal use"] ["Free for commercial use"] ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Client: Java ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: Proprietary ; 
+"Client/server /listening": "Client & server" ; 
+License: Proprietary ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Linux ImageLink";
+!"Server: Mac OS X ImageLink";
+!"Client: Windows Mobile ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Client: FreeBSD";
+!"Seamless window";
+!"Free for personal use";
+!"Server: Microsoft Windows ImageLink";
+!"Client: Java ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Free for commercial use";
+!"Audio support ImageLink";
+)
+
+fmProduct65 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] "3D" ["File transfer ImageLink"] ["Seamless window"] "Client/server /listening" ["Server: OS/2 eComStation ImageLink"] ["Access permission request"] ["Audio support ImageLink"] "Client: FreeBSD" ["Remote assistance"] ["Server: Microsoft Windows ImageLink"] License "Multiple sessions ImageLinkImageLink" Video "IPv6 support" "Client: Linux ImageLink" "Free for personal use" "Free for commercial use" "Server: Linux ImageLink" "Client: Microsoft Windows ImageLink" ["Built-in encryption ImageLink"] "Server: FreeBSD" ["Server: Windows Mobile ImageLink"] "Client: Java ImageLink" ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] "NAT passthrough" "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: "RFB(VNC)" ; 
+"3D": "[[VirtualGL]] VirtualGL" ; 
+"Client/server /listening": "Client, server, & listening" ; 
+License: GPL ; 
+!"Access permission request";
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Built-in encryption ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Windows Mobile ImageLink";
+!"Server: Mac OS X ImageLink";
+!"File transfer ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Seamless window";
+!"Server: Microsoft Windows ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Remote assistance";
+!"Audio support ImageLink";
+)
+
+fmProduct66 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": "Client: Blackberry" "Client: Android ImageLink" Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" "Seamless window" ["Server: OS/2 eComStation ImageLink"] "Client/server /listening" ["Access permission request"] "Audio support ImageLink" ["Client: FreeBSD"] ["Remote assistance"] "Server: Microsoft Windows ImageLink" License [Video] "Multiple sessions ImageLinkImageLink" ["IPv6 support"] "Client: Linux ImageLink" "Free for personal use" "Free for commercial use" "Server: Linux ImageLink" "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] "Client: Java ImageLink" ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] ["Client: Mac OS X ImageLink"] ["Server: Mac OS X ImageLink"] ; 
+Protocol: RDP ; 
+"Client/server /listening": "Client & server" ; 
+License: GPL ; 
+!"Server: FreeBSD";
+!"Client: OS/2 eComStation ImageLink";
+!"Client: Mac OS X ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Server: Mac OS X ImageLink";
+!"Client: Windows Mobile ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Client: FreeBSD";
+!"Server: OS/2 eComStation ImageLink";
+)
+
+fmProduct67 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" ["Seamless window"] ["Server: OS/2 eComStation ImageLink"] "Client/server /listening" ["Audio support ImageLink"] ["Access permission request"] ["Client: FreeBSD"] ["Remote assistance"] "Server: Microsoft Windows ImageLink" License "Multiple sessions ImageLinkImageLink" [Video] ["IPv6 support"] ["Client: Linux ImageLink"] "Free for personal use" "Free for commercial use" ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] "Client: Java ImageLink" ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] ["Client: Mac OS X ImageLink"] ["Server: Mac OS X ImageLink"] ; 
+Protocol: "RFB(VNC)" ; 
+"Client/server /listening": "Client & server" ; 
+License: GPL ; 
+"Built-in encryption ImageLink": "With plugin" ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Windows Mobile ImageLink";
+!"Server: Mac OS X ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Client: FreeBSD";
+!"Client: OS/2 eComStation ImageLink";
+!"Client: Mac OS X ImageLink";
+!"Audio support ImageLink";
+)
+
+fmProduct68 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": "Client: Blackberry" ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" ["Seamless window"] "Client/server /listening" ["Server: OS/2 eComStation ImageLink"] "Audio support ImageLink" "Access permission request" ["Client: FreeBSD"] "Remote assistance" ["Server: Microsoft Windows ImageLink"] License "Multiple sessions ImageLinkImageLink" Video ["IPv6 support"] "Client: Linux ImageLink" ["Free for personal use"] ["Free for commercial use"] ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] "Client: Java ImageLink" "Client: iOS (iPod Touch, iPhone, iPad)" ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: Proprietary ; 
+"Client/server /listening": "Client & server" ; 
+License: Proprietary ; 
+!"Client: Android ImageLink";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Server: Mac OS X ImageLink";
+!"Client: Windows Mobile ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Client: FreeBSD";
+!"Server: OS/2 eComStation ImageLink";
+!"Seamless window";
+!"Free for personal use";
+!"Server: Microsoft Windows ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Free for commercial use";
+)
+
+fmProduct69 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" ["Seamless window"] "Client/server /listening" ["Server: OS/2 eComStation ImageLink"] ["Access permission request"] "Audio support ImageLink" ["Client: FreeBSD"] ["Remote assistance"] ["Server: Microsoft Windows ImageLink"] License [Video] "Multiple sessions ImageLinkImageLink" ["IPv6 support"] ["Client: Linux ImageLink"] ["Free for personal use"] ["Free for commercial use"] ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Client: Java ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] ["Client: Mac OS X ImageLink"] ["Server: Mac OS X ImageLink"] ; 
+Protocol: Proprietary ; 
+"Client/server /listening": "Client & server" ; 
+License: Proprietary ; 
+"Built-in encryption ImageLink": "[[Secure Sockets Layer|SSL]], [[Transport Layer Security|TLS]]SSL" ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Windows Mobile ImageLink";
+!"Server: Mac OS X ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Client: FreeBSD";
+!"Server: OS/2 eComStation ImageLink";
+!"Seamless window";
+!"Free for personal use";
+!"Server: Microsoft Windows ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Client: Mac OS X ImageLink";
+!"Free for commercial use";
+)
+
+fmProduct70 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] ["File transfer ImageLink"] ["Seamless window"] "Client/server /listening" ["Server: OS/2 eComStation ImageLink"] ["Access permission request"] ["Audio support ImageLink"] "Client: FreeBSD" ["Remote assistance"] ["Server: Microsoft Windows ImageLink"] License [Video] "Multiple sessions ImageLinkImageLink" ["IPv6 support"] "Client: Linux ImageLink" "Free for personal use" "Free for commercial use" "Server: Linux ImageLink" ["Client: Microsoft Windows ImageLink"] ["Built-in encryption ImageLink"] "Server: FreeBSD" ["Server: Windows Mobile ImageLink"] ["Client: Java ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: "X11" ; 
+"Client/server /listening": "Client & server" ; 
+License: MIT ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Built-in encryption ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Windows Mobile ImageLink";
+!"Server: Mac OS X ImageLink";
+!"File transfer ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Seamless window";
+!"Client: Java ImageLink";
+!"Server: Microsoft Windows ImageLink";
+!"Client: Microsoft Windows ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Audio support ImageLink";
+)
+
+fmProduct71 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] ["File transfer ImageLink"] "Seamless window" ["Server: OS/2 eComStation ImageLink"] "Client/server /listening" ["Access permission request"] "Audio support ImageLink" "Client: FreeBSD" ["Remote assistance"] "Server: Microsoft Windows ImageLink" License [Video] "Multiple sessions ImageLinkImageLink" "IPv6 support" "Client: Linux ImageLink" ["Free for commercial use"] "Free for personal use" "Server: Linux ImageLink" "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" "Server: FreeBSD" ["Server: Windows Mobile ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Java ImageLink"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: "Bencode-based" ; 
+"Client/server /listening": "Client & server" ; 
+License: GPL ; 
+"Built-in encryption ImageLink": "[[Secure Shell|SSH]]SSH" ; 
+!"Access permission request";
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Windows Mobile ImageLink";
+!"Server: Mac OS X ImageLink";
+!"File transfer ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Client: Java ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Remote assistance";
+!"Free for commercial use";
+!"NAT passthrough";
+)
+
+fmProduct72 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" ["Seamless window"] ["Client/server /listening"] ["Server: OS/2 eComStation ImageLink"] ["Access permission request"] ["Audio support ImageLink"] "Client: FreeBSD" "Remote assistance" ["Server: Microsoft Windows ImageLink"] License "Multiple sessions ImageLinkImageLink" [Video] "IPv6 support" "Client: Linux ImageLink" ["Free for commercial use"] "Free for personal use" "Server: Linux ImageLink" "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] "Client: Java ImageLink" ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] "Client: Mac OS X ImageLink" "Server: Mac OS X ImageLink" ; 
+Protocol: "RFB(VNC)" ; 
+License: GPL ; 
+"Built-in encryption ImageLink": "[[Secure Sockets Layer|SSL]]SSL" ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Windows Mobile ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Seamless window";
+!"Server: Microsoft Windows ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Free for commercial use";
+!"Audio support ImageLink";
+)
+
+fmProduct73 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] ["File transfer ImageLink"] ["Seamless window"] ["Client/server /listening"] ["Server: OS/2 eComStation ImageLink"] ["Access permission request"] ["Audio support ImageLink"] "Client: FreeBSD" ["Remote assistance"] ["Server: Microsoft Windows ImageLink"] License "Multiple sessions ImageLinkImageLink" [Video] ["IPv6 support"] "Client: Linux ImageLink" ["Free for commercial use"] "Free for personal use" ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" ["Built-in encryption ImageLink"] ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Client: Java ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: "X11" ; 
+License: BSD ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Built-in encryption ImageLink";
+!"Client: Windows Mobile ImageLink";
+!"Server: Mac OS X ImageLink";
+!"File transfer ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Client: Java ImageLink";
+!"Server: Microsoft Windows ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Free for commercial use";
+!"Audio support ImageLink";
+)
+
+fmProduct74 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] Protocol ["Client: OS/2 eComStation ImageLink"] ["3D"] ["File transfer ImageLink"] ["Seamless window"] ["Client/server /listening"] ["Server: OS/2 eComStation ImageLink"] ["Access permission request"] ["Audio support ImageLink"] "Client: FreeBSD" ["Remote assistance"] ["Server: Microsoft Windows ImageLink"] License [Video] "Multiple sessions ImageLinkImageLink" ["IPv6 support"] "Client: Linux ImageLink" ["Free for commercial use"] "Free for personal use" ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Client: Java ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] "Client: Mac OS X ImageLink" ["Server: Mac OS X ImageLink"] ; 
+Protocol: "X11" ; 
+License: BSD ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Windows Mobile ImageLink";
+!"Server: Mac OS X ImageLink";
+!"File transfer ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Client: Java ImageLink";
+!"Server: Microsoft Windows ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Free for commercial use";
+!"Audio support ImageLink";
+)
+
+fmProduct75 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] ["Client: OS/2 eComStation ImageLink"] ["3D"] ["File transfer ImageLink"] ["Seamless window"] ["Server: OS/2 eComStation ImageLink"] "Client/server /listening" "Audio support ImageLink" ["Access permission request"] "Client: FreeBSD" ["Remote assistance"] "Server: Microsoft Windows ImageLink" ["Multiple sessions ImageLinkImageLink"] [Video] "Client: Linux ImageLink" ["IPv6 support"] "Server: Linux ImageLink" "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Client: Java ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] "NAT passthrough" "Client: Mac OS X ImageLink" "Server: Mac OS X ImageLink" ; 
+"Client/server /listening": "Client & server" ; 
+"Built-in encryption ImageLink": " [[Secure Shell|SSH]]SSH" ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Client: Java ImageLink";
+!"Server: FreeBSD";
+!"Client: OS/2 eComStation ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Windows Mobile ImageLink";
+!"File transfer ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Seamless window";
+)
+
+fmProduct76 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["Client: Blackberry"] ["Client: Android ImageLink"] ["Client: OS/2 eComStation ImageLink"] ["3D"] "File transfer ImageLink" "Seamless window" ["Server: OS/2 eComStation ImageLink"] "Client/server /listening" "Audio support ImageLink" "Access permission request" ["Client: FreeBSD"] "Remote assistance" "Server: Microsoft Windows ImageLink" [Video] "Multiple sessions ImageLinkImageLink" ["IPv6 support"] "Client: Linux ImageLink" ["Server: Linux ImageLink"] "Client: Microsoft Windows ImageLink" "Built-in encryption ImageLink" ["Server: FreeBSD"] ["Server: Windows Mobile ImageLink"] ["Client: Java ImageLink"] ["Client: iOS (iPod Touch, iPhone, iPad)"] ["Client: Windows Mobile ImageLink"] ["NAT passthrough"] ["Client: Mac OS X ImageLink"] ["Server: Mac OS X ImageLink"] ; 
+"Client/server /listening": "Client & server" ; 
+"Built-in encryption ImageLink": "[[AES-256]] AES-256" ; 
+!"Client: Android ImageLink";
+!"Client: Blackberry";
+!"Server: FreeBSD";
+!"Server: Linux ImageLink";
+!"Client: iOS (iPod Touch, iPhone, iPad)";
+!"Client: Windows Mobile ImageLink";
+!"Server: Mac OS X ImageLink";
+!"Server: Windows Mobile ImageLink";
+!"Server: OS/2 eComStation ImageLink";
+!"Client: FreeBSD";
+!"Client: Java ImageLink";
+!"Client: OS/2 eComStation ImageLink";
+!"Client: Mac OS X ImageLink";
+!"NAT passthrough";
+)
+
+fmProduct77 = FM (Comparison_of_remote_desktop_software: "Remote desktop software" ; 
+"Remote desktop software": ["3D"] ["File transfer ImageLink"] ["Seamless window"] ["Client/server /listening"] ["Multiple sessions ImageLinkImageLink"] [Video] ["Access permission request"] "Audio support ImageLink" ["IPv6 support"] ["NAT passthrough"] ["Remote assistance"] "Built-in encryption ImageLink" ; 
+"Built-in encryption ImageLink": SSL ;
+)
+

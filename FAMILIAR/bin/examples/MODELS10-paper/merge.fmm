@@ -1,0 +1,8 @@
+gc4 = FM ( GraphicCard: DirectX Speed Bus [Multi] ; 
+                            DirectX: (v10dot1 | v10) ; Speed: (n800 | n1000) ; Bus: n128; )
+gc5 = FM ( GraphicCard: DirectX Speed Bus [Vertex] ; 
+                            DirectX: (v10dot1 | v10 | v9) ; Speed: n800 ; Bus: (n64 | n128); )
+gc_expected = FM ( GraphicCard: DirectX Speed Bus ; 
+                                   DirectX: (v10dot1 | v10) ; Speed: n800 ; Bus: n128 ; )
+gc_merged = merge intersection gc4 gc5
+assert (gc_merged eq gc_expected)

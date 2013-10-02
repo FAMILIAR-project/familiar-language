@@ -1,0 +1,6 @@
+run "GraphicalCard.fmm"
+msplGC = merge sunion { GraphicalCardn1 GraphicalCardn2 GraphicalCardn3 GraphicalCardn4 GraphicalCardn5 GraphicalCardn6 GraphicalCardn7 GraphicalCardn8 GraphicalCardn9}
+printinfo msplGC
+convert msplGC in featureide
+nproducts = card msplGC
+ls

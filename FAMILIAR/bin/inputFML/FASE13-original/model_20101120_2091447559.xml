@@ -1,0 +1,26 @@
+<feature_model name="1 per km">
+<feature_tree>
+:r 1 per km (f_1_per_km)
+	:m Monitor Engine performance (f_Monitor_Engine_performance)
+	:m Monitor Engine (f_Monitor_Engine)
+	:m transmission (f_transmission)
+	:m engine (f_engine)
+	:m Measures (f_Measures)
+	:m Based on type of driving (f_Based_on_type_of_driving)
+	:m Based on driving (f_Based_on_driving)
+	:m Monitor temperatures (f_Monitor_temperatures)
+	:m oil (f_oil)
+	:m Methods (f_Methods)
+	:m gallon per mile (f_gallon_per_mile)
+	:m Monitor Fuel Consumption (f_Monitor_Fuel_Consumption)
+	:m Monitor exhaust levels and temperature (f_Monitor_exhaust_levels_and_temperature)
+	:m Monitor RPM (f_Monitor_RPM)
+	:m Based on distance (f_Based_on_distance)
+	:o F2 (f_F2)
+		:m F1 (f_F1)
+		:m temperature (f_temperature)
+	:o coolant (f_coolant)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

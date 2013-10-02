@@ -1,0 +1,64 @@
+// testing the 'parent' operation
+
+// syntacs: b = parent a
+
+// a is a variable of feature type
+
+// b is a reference to a feature
+
+fm1 = FM (Z: (W|X|Y)+; )
+fm2 = FM (Z: (X|Y); )
+
+f1 = parent W
+f2 = parent fm1.W
+f3 = parent W
+assert (f1 eq f2)
+assert (f3 eq f1)
+root_fm1 = root fm1
+assert (root_fm1 eq f1)
+assert (root_fm1 eq f3)
+assert (root_fm1 eq f2)
+
+fX = parent X // ambigous
+
+ambigous_X = isNull fX
+TRUE = true
+assert (ambigous_X eq TRUE)
+
+fm3 = FM (Z: Y U; U: V X [W]; )
+fu = parent fm3.W
+name_U = "U"
+name_fu = name fu
+assert (name_U eq name_fu)
+
+fm4 = FM (Z: (Y|S)+; S: [V] X W; )
+fs = parent fm4.V // S
+
+fz = parent fs // Z
+
+root_fm4 = root fm4 // Z
+
+assert (root_fm4 eq fz)
+ref_fm4 = whichfm fz
+ref2_fm4 = whichfm root_fm4
+assert (ref_fm4 eq ref2_fm4)
+assert (fm4 eq ref_fm4)
+assert (ref2_fm4 eq fm4)
+
+fZ1 = parent fm1.X // Z (fm1)
+
+fZ2 = parent fm2.X // Z (fm2)
+
+fZ3 = parent fm3.U // Z (fm3)
+
+assert (fZ1 neq fZ2) // features do not belong to the same feature model
+
+assert (fZ2 neq fZ3) // features do not belong to the same feature model
+
+assert (fZ1 neq fZ3) // features do not belong to the same feature model
+
+namefZ1 = name fZ1
+namefZ2 = name fZ2
+assert (namefZ1 eq namefZ2) // equality between feature's names
+
+// ...

@@ -1,0 +1,17 @@
+Comparison_of_HTML_editors: "Web technology support" "Operating system support" "Image format support" "Editor features" "General information" ; 
+"Web technology support": ["CSS2"] [XSLT] [Java] [Frames] [XForms] [XPath] [MathML] [RSS] [JavaScript] [Atom] ; 
+"Operating system support": (iOS|"Mac OS X")? (Android|Unix|"Mac OS 9")? [BSD] [Windows] [Linux] ; 
+"Image format support": [PNG] [APNG] [GIF] [JPEG] [TIFF] [MNG] [SVG] ; 
+"Editor features": [WYSIWYG] ["Spell checking"] ["WebDAV Upload"] ["Shared editing"] "Page Preview" ["FTP Upload"] ["Server-side scripting"] [Templates] ["Form Handler"] ["Templates Update Sync"] ; 
+"General information": ["Software license"] ; 
+Templates: ["some (i.e. Snippets)"] ; 
+"Software license": ("[[Mozilla Public License|MPL true.1]]/[[GNU General Public License|GPL 2.0]]/[[GNU Lesser General Public License|LGPL 2.1]]MPL true.1"|"Careware3"|" [[Aptana Public License|APL]]/[[GNU General Public License|GPL]]APL"|"[[GNU General Public License|GPL]]GPL"|Proprietary|proprietary|"[[GPL]] GPL"|"[[Mozilla Public License|MPL]]MPL") ; 
+(iOS -> !Windows);
+(Android -> !"Mac OS X");
+(Android -> !BSD);
+(iOS -> !"Mac OS 9");
+(Android -> !Linux);
+(iOS -> !BSD);
+(iOS -> !Unix);
+(Android -> !Windows);
+(iOS -> !Linux);

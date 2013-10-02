@@ -1,0 +1,26 @@
+<feature_model name="Modify Design">
+<feature_tree>
+:r Modify Design (f_Modify_Design)
+	:m Rescheduling of tasks (f_Rescheduling_of_tasks)
+	:m Project Status Review (f_Project_Status_Review)
+	:m Develop Change and Test Unit (f_Develop_Change_and_Test_Unit)
+	:m Schedule and Assign Tasks (f_Schedule_and_Assign_Tasks)
+	:m Review Design (f_Review_Design)
+	:m Modify Code (f_Modify_Code)
+	:m Modify Test Plans (f_Modify_Test_Plans)
+	:m Modify Unit Test Package (f_Modify_Unit_Test_Package)
+	:m Test Unit (f_Test_Unit)
+	:m Monitor Progress (f_Monitor_Progress)
+	:o Resource Availability Analysis (f_Resource_Availability_Analysis)
+	:o Integration Testing (f_Integration_Testing)
+	:g [1, *]
+		: Design Inspection (f_Design_Inspection)
+		: Design Pair Review (f_Design_Pair_Review)
+	:g [1, 1]
+		: Dynamic Scheduling (f_Dynamic_Scheduling)
+			:m Schedule Revision (f_Schedule_Revision)
+		: Basic Scheduling (f_Basic_Scheduling)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

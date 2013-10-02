@@ -1,0 +1,20 @@
+<feature_model name="Previous song">
+<feature_tree>
+:r Previous song (f_Previous_song)
+	:m Music player (f_Music_player)
+	:m Next song (f_Next_song)
+	:m Pause (f_Pause)
+	:m Play (f_Play)
+	:m Player controls (f_Player_controls)
+	:m Stop (f_Stop)
+	:g [1, *]
+		: FLAC (f_FLAC)
+		: Mp3 (f_Mp3)
+		: Ogg (f_Ogg)
+		: midi (f_midi)
+		: acc (f_acc)
+		: wav (f_wav)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

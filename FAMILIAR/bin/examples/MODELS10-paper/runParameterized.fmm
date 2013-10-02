@@ -1,0 +1,23 @@
+originalLaptop = FM ( Laptop: Motherboard Processor [Wifi] [GraphicCard] ;
+								Motherboard: Slot BIOS ; 
+								Processor : Mhz [Dual] ;
+								GraphicCard: Bus [Multi] ; Bus: (128|64) ;
+								)
+newGC = FM (GraphicCard: Bus [Vertex] ; Bus: (128|256);)
+
+commonFeature = "GraphicCard" // note that we could automatically detect the feature common to newGC and originalLaptop with a script
+
+run "parameterized.fmm" originalLaptop commonFeature newGC 
+
+childrenGC = children originalLaptop.GraphicCard // originalLaptop is modified
+
+// check that 'Vertex' is now in originalLaptop
+
+i = 0
+foreach (cGC in childrenGC) do 
+	nGC = name cGC
+	if (nGC eq "Vertex") then
+		i = i + 1
+	end
+end
+assert (i eq 1)

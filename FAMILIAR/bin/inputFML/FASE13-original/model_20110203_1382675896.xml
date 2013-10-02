@@ -1,0 +1,20 @@
+<feature_model name="architetural support">
+<feature_tree>
+:r architetural support (f_architetural_support)
+	:m OCL compliance (f_OCL_compliance)
+	:m language and model support (f_language_and_model_support)
+	:m debbuging (f_debbuging)
+	:m syntax highlighting (f_syntax_highlighting)
+	:m basic editing (f_basic_editing)
+	:m autocompletion (f_autocompletion)
+	:m IDE4OCL (f_IDE4OCL)
+	:o OCL and model perspective (f_OCL_and_model_perspective)
+	:o syntax and sementics extensions (f_syntax_and_sementics_extensions)
+	:o hybrid OCL - MOF view (f_hybrid_OCL___MOF_view)
+	:o modularisation (f_modularisation)
+	:o user friendly support (f_user_friendly_support)
+	:o variability (f_variability)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>
