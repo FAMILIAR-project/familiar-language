@@ -30,6 +30,29 @@ public class FMLGeneralizedNotationTest extends FMLTest {
 	}
 	
 	@Test
+	public void test3() throws Exception {
+		
+		String _fm1Specification = 
+			"A : B C ; B : E F ; F : (G|H|I) ; C : Z ; Z : X [Y] ;" ;
+		
+		FeatureModelVariable fmv1 = FM ("fm1", _fm1Specification);
+		FeatureModelVariable fm1G = fmv1.toGeneralizedNotationWithoutOR();
+		assertEquals(1, fm1G.getXorGroups().size());
+		assertEquals(0, fm1G.getMutexGroups().size());
+		
+		
+		String _fm2Specification = 
+				"A : B C ; B : E F ; F : (G|H|I) ; G : U ; C : Z ; Z : X [Y] ;" ;
+			
+			FeatureModelVariable fmv2 = FM ("fm2", _fm2Specification);
+			FeatureModelVariable fm2G = fmv2.toGeneralizedNotationWithoutOR();
+			assertEquals(1, fm2G.getXorGroups().size());
+			assertEquals(0, fm2G.getMutexGroups().size());
+			
+			System.err.println("fm2" + fm2G);
+	}
+	
+	@Test
 	public void test2() throws Exception {
 		
 		String _fm1Specification = 

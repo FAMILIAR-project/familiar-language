@@ -83,7 +83,10 @@ public class MyFGBuilder<T extends Comparable<T>> extends FGBuilder<T> {
 		FeatureNode<T> target = g.getTarget(e); 
 		Set<FeatureNode<T>> sources = g.getSources(e) ;
 		
-		BDD parent = _builder.get(target.getFeature());
+		Set<T> fts = target.features() ;
+		T ft = fts.iterator().next() ;  // first one is sufficient 
+		
+		BDD parent = _builder.get(ft);
 		BDD children = mkDisjunction(sources);
 
 		BDD entail = parent.imp(children);
@@ -99,7 +102,9 @@ public class MyFGBuilder<T extends Comparable<T>> extends FGBuilder<T> {
 	private BDD mkDisjunction(Set<FeatureNode<T>> fnodes) {
 		BDD result = _builder.zero();
 		for (FeatureNode<T> f : fnodes) {
-			result.orWith(_builder.get(f.getFeature()));
+			Set<T> fts = f.features() ;
+			T ft = fts.iterator().next() ; // first one is sufficient 
+			result.orWith(_builder.get(ft));
 		}
 		return result;
 
