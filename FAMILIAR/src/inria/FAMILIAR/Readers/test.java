@@ -5,7 +5,8 @@ import fr.unice.polytech.modalis.familiar.variable.AttributedFeatureModelVariabl
 import inria.FAMILIAR.Model.AttributedFeatureModel;
 
 public class test {
-	static String vml2FilePath = "/Users/ealferez/git/VM/fr.inria.lang.vm.examples.MOTIV/VideoContent.vm";
+	static String vml2FilePath = "/Users/macher1/Documents/runtime-EclipseXtext/VM-examples/foo.vm" ; 
+			// "/Users/ealferez/git/VM/fr.inria.lang.vm.examples.MOTIV/VideoContent.vm";
 
 	public static void main(String[] args) {
 	
