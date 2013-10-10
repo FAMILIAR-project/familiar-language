@@ -2,12 +2,16 @@ package fr.unice.polytech.modalis.familiar.variable;
 
 import inria.FAMILIAR.Model.AttributedFeatureModel;
 import inria.FAMILIAR.Model.Feature;
+import inria.FAMILIAR.Reasoning.ChocoReasoner;
+import inria.FAMILIAR.Reasoning.PacogenReasoner;
 
+import java.io.IOException;
 import java.util.Collection;
 import java.util.HashSet;
-
 import java.util.Map;
 import java.util.Set;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.xtext.example.mydsl.fML.SliceMode;
 
@@ -17,8 +21,6 @@ import choco.kernel.model.variables.integer.IntegerVariable;
 import choco.kernel.solver.ContradictionException;
 import choco.kernel.solver.Solver;
 import choco.kernel.solver.variables.integer.IntDomainVar;
-
-import es.us.isa.ChocoReasoner.attributed.ChocoReasoner;
 import es.us.isa.FAMA.models.FAMAAttributedfeatureModel.fileformats.AttributedReader;
 import fr.unice.polytech.modalis.familiar.fm.basic.FMLFeatureModel;
 import fr.unice.polytech.modalis.familiar.operations.KnowledgeSynthesis;
@@ -35,11 +37,6 @@ public class AttributedFeatureModelVariable extends VariableImpl implements
 	 * reasoner to be used, possible values Choco2,Choco3, SAt4j (extend if necessary)
 	 */
 	String reasoner = "Choco2";
-
-	
-	public AttributedFeatureModelVariable(){}
-
-	public AttributedFeatureModelVariable(AttributedFeatureModel fm){this.fm=fm;}
 
 	public void readModelFAMAFormat(String location) {
 		AttributedReader reader = new AttributedReader();
@@ -61,7 +58,18 @@ public class AttributedFeatureModelVariable extends VariableImpl implements
 			Solver solver = new CPSolver();
 			solver.read(chocoProblem);
 			res = solver.solve();
-		} else if (reasoner.equals("Choco3")) {
+		} else if (reasoner.equals("Pacogen")) {
+			
+			PacogenReasoner paco = new PacogenReasoner();
+			try {
+				paco.buildModel() ;
+				paco.Reason() ;
+
+			} catch (IOException e) {
+				e.printStackTrace();
+				Logger.getLogger(Logger.GLOBAL_LOGGER_NAME).log(Level.SEVERE, "Where is Paco??");
+			}
+			System.out.println(paco.getVarDomain());
 
 		} else if (reasoner.equals("Sat4j")) {
 
@@ -146,7 +154,8 @@ public class AttributedFeatureModelVariable extends VariableImpl implements
 
 	@Override
 	public double CTCR() {
-		return fm.getFeaturesNumber()/fm.getNumberOfConstraints();
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 	@Override
@@ -208,4 +217,7 @@ public class AttributedFeatureModelVariable extends VariableImpl implements
 	public FeatureVariable root() {
 		return null;
 	}
+
+
+
 }

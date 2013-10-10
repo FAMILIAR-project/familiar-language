@@ -15,7 +15,7 @@
     along with FaMaTS.  If not, see <http://www.gnu.org/licenses/>.
 
  */
-package es.us.isa.ChocoReasoner.attributed;
+package inria.FAMILIAR.Reasoning;
 
 import static choco.Choco.and;
 import static choco.Choco.constant;
@@ -51,7 +51,6 @@ import inria.FAMILIAR.Model.Domain.ObjectDomain;
 import inria.FAMILIAR.Model.Domain.Range;
 import inria.FAMILIAR.Model.Domain.RangeIntegerDomain;
 import inria.FAMILIAR.Model.Domain.SetIntegerDomain;
-import inria.FAMILIAR.Reasoning.FeatureModelReasoner;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -64,6 +63,8 @@ import java.util.SortedSet;
 import java.util.StringTokenizer;
 import java.util.TreeSet;
 
+import javax.security.auth.login.Configuration;
+
 import choco.cp.model.CPModel;
 import choco.kernel.model.Model;
 import choco.kernel.model.constraints.Constraint;
@@ -72,7 +73,7 @@ import choco.kernel.model.variables.integer.IntegerVariable;
 import es.us.isa.util.Node;
 import es.us.isa.util.Tree;
 
-public class ChocoReasoner extends FeatureModelReasoner {
+public class ChocoReasoner implements FeatureModelReasoner {
 
 	protected Map<String, Feature> features;
 	protected Map<String, IntegerVariable> variables;
@@ -84,7 +85,7 @@ public class ChocoReasoner extends FeatureModelReasoner {
 	protected boolean reify;
 	protected ChocoParser chocoParser;
 	protected List<Constraint> configConstraints;
-	protected ConstantIntConverter constantIntConverter = new ConstantIntConverter();
+
 	public ChocoReasoner() {
 		super();
 		reset();
@@ -112,12 +113,12 @@ public class ChocoReasoner extends FeatureModelReasoner {
 		this.problem = problem;
 	}
 
-
 	public void addRoot(Feature feature) {
 		IntegerVariable root = variables.get(feature.getName());
 		problem.addConstraint(eq(root, 1));
 	}
 
+	
 	public void addMandatory(Relation rel,
 			Feature child, Feature parent) {
 
@@ -126,7 +127,7 @@ public class ChocoReasoner extends FeatureModelReasoner {
 
 	}
 
-	@Override
+	
 	public void addOptional(Relation rel,
 			Feature child, Feature parent) {
 
@@ -135,7 +136,7 @@ public class ChocoReasoner extends FeatureModelReasoner {
 
 	}
 
-	@Override
+	
 	public void addCardinality(Relation rel,
 			Feature child, Feature parent,
 			Iterator<Cardinality> cardinalities) {
@@ -146,7 +147,7 @@ public class ChocoReasoner extends FeatureModelReasoner {
 
 	}
 
-	@Override
+	
 	public void addRequires(Relation rel,
 			Feature origin,
 			Feature destination) {
@@ -156,7 +157,7 @@ public class ChocoReasoner extends FeatureModelReasoner {
 
 	}
 
-	@Override
+	
 	public void addExcludes(Relation rel,
 			Feature origin, Feature dest) {
 
@@ -165,7 +166,7 @@ public class ChocoReasoner extends FeatureModelReasoner {
 
 	}
 
-	@Override
+	
 	public void addFeature(Feature f,
 			Collection<Cardinality> cards) {
 
@@ -173,7 +174,6 @@ public class ChocoReasoner extends FeatureModelReasoner {
 		try {
 			addAttributes(f);
 		} catch (Exception e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 
@@ -317,7 +317,7 @@ public class ChocoReasoner extends FeatureModelReasoner {
 			} else {
 				throw new Exception("Unknown domain type");
 			}
-			// a�adimos la IntegerVariable
+			// a���adimos la IntegerVariable
 			attVars.put(attName, attVar);
 			atts.put(attName, att);
 			problem.addVariable(attVar);
@@ -371,7 +371,7 @@ public class ChocoReasoner extends FeatureModelReasoner {
 
 	}
 
-	@Override
+	
 	public void addSet(Relation rel,
 			Feature parent,
 			Collection<Feature> children,
@@ -501,15 +501,15 @@ public class ChocoReasoner extends FeatureModelReasoner {
 //
 //	}
 
-//	@Override
-//	public void unapplyStagedConfigurations() {
-//		Iterator<Constraint> it = this.configConstraints.iterator();
-//		while (it.hasNext()) {
-//			Constraint cons = it.next();
-//			problem.removeConstraint(cons);
-//			it.remove();
-//		}
-//	}
+	@Override
+	public void unapplyStagedConfigurations() {
+		Iterator<Constraint> it = this.configConstraints.iterator();
+		while (it.hasNext()) {
+			Constraint cons = it.next();
+			problem.removeConstraint(cons);
+			it.remove();
+		}
+	}
 
 	@Override
 	public void addConstraint(inria.FAMILIAR.Model.Constraint c) {
@@ -808,11 +808,11 @@ public class ChocoReasoner extends FeatureModelReasoner {
 			}
 			else {
 				//es una constante, usamos el intConverter
-				
-				Integer i = constantIntConverter.translate2Integer(tree.getData());
-				if (i != null){
-					res = constant(i);
-				}
+				//TODO
+				//Integer i = constantIntConverter.translate2Integer(tree.getData());
+//				if (i != null){
+//					res = constant(i);
+//				}
 			}
 			return res;
 		}
@@ -895,13 +895,17 @@ public class ChocoReasoner extends FeatureModelReasoner {
 
 
 	@Override
-	public void setConstantIntConverter(
-			ConstantIntConverter constantIntConverter) {
-		this.constantIntConverter=constantIntConverter;
+	public void applyStagedConfiguration(Configuration conf) {
+		// TODO Auto-generated method stub
 		
 	}
 
-
+	@Override
+	public void setConstantIntConverter(
+			ConstantIntConverter constantIntConverter) {
+		// TODO Auto-generated method stub
+		
+	}
 
 
 
