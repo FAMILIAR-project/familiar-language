@@ -57,8 +57,6 @@ public class VMReader implements IReader {
 	 */
 	private void visitFeatureHierarchy(inria.FAMILIAR.Model.Feature ffeatroot,
 			FeatureHierarchy fh) {
-
-		System.out.println("FeatureHierarchy Parent:"+ fh.getParent().getName());
 		EList<FeatureDefinition> fhchildren = fh.getChildren();
 		for (FeatureDefinition fd : fhchildren) {
 
