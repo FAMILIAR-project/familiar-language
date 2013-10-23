@@ -5,10 +5,10 @@ import fr.unice.polytech.modalis.familiar.variable.AttributedFeatureModelVariabl
 import inria.FAMILIAR.Model.AttributedFeatureModel;
 
 public class test {
-	static String vml2FilePath = "/Users/ealferez/git/VM/fr.inria.lang.vm.examples.MOTIV/VideoContent.vm";
+	static String vml2FilePath = "/Users/malawito/git/VM/fr.inria.lang.vm.examples.MOTIV/VideoContent.vm";
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
 		VMReader myReader = new VMReader();
 		try {
 			AttributedFeatureModel model = myReader.parseFile(vml2FilePath);
@@ -19,7 +19,7 @@ public class test {
 
 			AttributedWriter writer = new AttributedWriter();
 			writer.writeFile("./fama.txt", model);
-			System.out.println(model);
+			//System.out.println(model);
 
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

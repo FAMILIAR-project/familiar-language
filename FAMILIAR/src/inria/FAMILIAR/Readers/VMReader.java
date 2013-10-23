@@ -19,6 +19,7 @@ import com.google.inject.Injector;
 
 
 
+
 //import inria.FAMILIAR.Model.Relation;
 import es.us.isa.FAMA.models.variabilityModel.parsers.IReader;
 import fr.inria.lang.VMStandaloneSetup;
@@ -38,6 +39,7 @@ import fr.inria.lang.vM.LeftImplication;
 import fr.inria.lang.vM.Model;
 import fr.inria.lang.vM.Orgroup;
 import fr.inria.lang.vM.RealAttrDefBounded;
+import fr.inria.lang.vM.RealAttrDefUnbounded;
 import fr.inria.lang.vM.Relationships;
 import fr.inria.lang.vM.RightImplication;
 import fr.inria.lang.vM.StringAttrDef;
@@ -59,6 +61,8 @@ public class VMReader implements IReader {
 				true);
 		Model model = (Model) resource.getContents().get(0);
 		Relationships rel = model.getVm().getRelationships();
+		
+		//Create features
 		FeatureHierarchy fhs = rel.getRoot();
 		inria.FAMILIAR.Model.Feature ffeat = new inria.FAMILIAR.Model.Feature(
 				fhs.getParent().getName());
@@ -66,6 +70,9 @@ public class VMReader implements IReader {
 		inria.FAMILIAR.Model.AttributedFeatureModel fm = new AttributedFeatureModel();
 		fm.setRoot(ffeat);
 		
+		//Create atts
+		visitAttributes(model);
+		//Create ctc
 		visitConstriants(model);
 		return fm;
 	}
@@ -100,7 +107,9 @@ public class VMReader implements IReader {
 				System.out.println("StrUnBounded att val:"+((IntegerAttrDefUnbounded)att).getVal());
 			}else if (att instanceof RealAttrDefBounded) {
 				System.out.println("RealAttrDefBounded att val:"+((RealAttrDefBounded)att).getMin()+" max:"+((RealAttrDefBounded)att).getMax()+" delta: "+((RealAttrDefBounded)att).getDelta());
-			}
+			}else if (att instanceof RealAttrDefUnbounded) {
+				System.out.println("RealAttrDefUnbounded att val:"+((RealAttrDefUnbounded)att).getVal());
+			}else{System.out.println(att);}
 			
 		}
 	}
