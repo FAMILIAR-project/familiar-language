@@ -11,16 +11,36 @@ import org.eclipse.xtext.resource.XtextResourceSet;
 
 import com.google.inject.Injector;
 
+
+
+
+
+
+
+
+
 //import inria.FAMILIAR.Model.Relation;
 import es.us.isa.FAMA.models.variabilityModel.parsers.IReader;
 import fr.inria.lang.VMStandaloneSetup;
+import fr.inria.lang.vM.AttrDef;
+import fr.inria.lang.vM.Attributes;
+import fr.inria.lang.vM.BooleanAttrDef;
+import fr.inria.lang.vM.ComplexExpression;
+import fr.inria.lang.vM.Constraint;
+import fr.inria.lang.vM.Constraints;
 import fr.inria.lang.vM.Feature;
 import fr.inria.lang.vM.FeatureDefinition;
 import fr.inria.lang.vM.FeatureHierarchy;
 import fr.inria.lang.vM.FeaturesGroup;
+import fr.inria.lang.vM.IntegerAttrDefBounded;
+import fr.inria.lang.vM.IntegerAttrDefUnbounded;
+import fr.inria.lang.vM.LeftImplication;
 import fr.inria.lang.vM.Model;
 import fr.inria.lang.vM.Orgroup;
+import fr.inria.lang.vM.RealAttrDefBounded;
 import fr.inria.lang.vM.Relationships;
+import fr.inria.lang.vM.RightImplication;
+import fr.inria.lang.vM.StringAttrDef;
 import fr.inria.lang.vM.Xorgroup;
 
 public class VMReader implements IReader {
@@ -28,7 +48,6 @@ public class VMReader implements IReader {
 	@Override
 	public AttributedFeatureModel parseFile(String fileName) throws Exception {
 		// AttributedFeatureModel res = new AttributedFeatureModel();
-		// new
 		// org.eclipse.emf.mwe.utils.StandaloneSetup().setPlatformUri("../");
 		Injector injector = new VMStandaloneSetup()
 				.createInjectorAndDoEMFRegistration();
@@ -39,18 +58,53 @@ public class VMReader implements IReader {
 		Resource resource = resourceSet.getResource(URI.createURI(fileName),
 				true);
 		Model model = (Model) resource.getContents().get(0);
-		System.out.println("Obtaining relationships...");
 		Relationships rel = model.getVm().getRelationships();
-
 		FeatureHierarchy fhs = rel.getRoot();
 		inria.FAMILIAR.Model.Feature ffeat = new inria.FAMILIAR.Model.Feature(
 				fhs.getParent().getName());
 		visitFeatureHierarchy(ffeat, fhs);
-
 		inria.FAMILIAR.Model.AttributedFeatureModel fm = new AttributedFeatureModel();
 		fm.setRoot(ffeat);
+		
+		visitConstriants(model);
 		return fm;
 	}
+	
+	private void visitConstriants(Model model) {
+		Constraints cons = model.getVm().getConstraints();
+		EList<Constraint> con = cons.getConstraints();
+		for (Constraint co : con) {
+			ComplexExpression cex = (ComplexExpression) co.getExpression();
+			if (cex instanceof RightImplication) {
+				RightImplication ri = (RightImplication) cex;
+				System.out.println("Do something with RightImplication"+
+						" left:"+ (ComplexExpression)ri.getLeft()+
+						" right:"+ (ComplexExpression)ri.getRight());
+			} else if (cex instanceof LeftImplication) {
+				System.out.println("Do something with RightImplication");
+			}
+			// System.out.println("clase"+cex.eClass().getName());
+		}
+	}
+	private void visitAttributes(Model model) {
+		Attributes atts = model.getVm().getAttributes();
+		EList<AttrDef> att = atts.getAttrDefs();
+		for (AttrDef at : att) {
+			if (att instanceof BooleanAttrDef) {
+				System.out.println("Bool att value:"+((BooleanAttrDef)att).getVal());
+			}else if (att instanceof StringAttrDef) {
+				System.out.println("Str att value:"+((StringAttrDef)att).getVal());
+			}else if (att instanceof IntegerAttrDefBounded) {
+				System.out.println("StrBounded att min:"+((IntegerAttrDefBounded)att).getMin()+" max:"+((IntegerAttrDefBounded)att).getMax());
+			}else if (att instanceof IntegerAttrDefUnbounded) {
+				System.out.println("StrUnBounded att val:"+((IntegerAttrDefUnbounded)att).getVal());
+			}else if (att instanceof RealAttrDefBounded) {
+				System.out.println("RealAttrDefBounded att val:"+((RealAttrDefBounded)att).getMin()+" max:"+((RealAttrDefBounded)att).getMax()+" delta: "+((RealAttrDefBounded)att).getDelta());
+			}
+			
+		}
+	}
+	
 
 	/**
 	 * @param fh
