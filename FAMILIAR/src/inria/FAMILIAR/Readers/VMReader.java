@@ -20,11 +20,13 @@ import com.google.inject.Injector;
 
 
 
+
 //import inria.FAMILIAR.Model.Relation;
 import es.us.isa.FAMA.models.variabilityModel.parsers.IReader;
 import fr.inria.lang.VMStandaloneSetup;
 import fr.inria.lang.vM.AttrDef;
 import fr.inria.lang.vM.Attributes;
+import fr.inria.lang.vM.BasicAttrDef;
 import fr.inria.lang.vM.BooleanAttrDef;
 import fr.inria.lang.vM.ComplexExpression;
 import fr.inria.lang.vM.Constraint;
@@ -73,7 +75,7 @@ public class VMReader implements IReader {
 		//Create atts
 		visitAttributes(model);
 		//Create ctc
-		visitConstriants(model);
+		//visitConstriants(model);
 		return fm;
 	}
 	
@@ -97,20 +99,19 @@ public class VMReader implements IReader {
 		Attributes atts = model.getVm().getAttributes();
 		EList<AttrDef> att = atts.getAttrDefs();
 		for (AttrDef at : att) {
-			if (att instanceof BooleanAttrDef) {
-				System.out.println("Bool att value:"+((BooleanAttrDef)att).getVal());
-			}else if (att instanceof StringAttrDef) {
-				System.out.println("Str att value:"+((StringAttrDef)att).getVal());
-			}else if (att instanceof IntegerAttrDefBounded) {
-				System.out.println("StrBounded att min:"+((IntegerAttrDefBounded)att).getMin()+" max:"+((IntegerAttrDefBounded)att).getMax());
-			}else if (att instanceof IntegerAttrDefUnbounded) {
-				System.out.println("StrUnBounded att val:"+((IntegerAttrDefUnbounded)att).getVal());
-			}else if (att instanceof RealAttrDefBounded) {
-				System.out.println("RealAttrDefBounded att val:"+((RealAttrDefBounded)att).getMin()+" max:"+((RealAttrDefBounded)att).getMax()+" delta: "+((RealAttrDefBounded)att).getDelta());
-			}else if (att instanceof RealAttrDefUnbounded) {
-				System.out.println("RealAttrDefUnbounded att val:"+((RealAttrDefUnbounded)att).getVal());
-			}else{System.out.println(att);}
-			
+			if (at instanceof BooleanAttrDef) {
+				System.out.println("Bool att value:"+((BooleanAttrDef)at).getVal());
+			}else if (at instanceof StringAttrDef) {
+				System.out.println("Str att value:"+((StringAttrDef)at).getVal());
+			}else if (at instanceof IntegerAttrDefBounded) {
+				System.out.println("StrBounded att min:"+((IntegerAttrDefBounded)at).getMin()+" max:"+((IntegerAttrDefBounded)at).getMax());
+			}else if (at instanceof IntegerAttrDefUnbounded) {
+				System.out.println("StrUnBounded att val:"+((IntegerAttrDefUnbounded)at).getVal());
+			}else if (at instanceof RealAttrDefBounded) {
+				System.out.println("RealAttrDefBounded att val:"+((RealAttrDefBounded)at).getMin()+" max:"+((RealAttrDefBounded)at).getMax()+" delta: "+((RealAttrDefBounded)at).getDelta());
+			}else if (at instanceof RealAttrDefUnbounded) {
+				System.out.println("RealAttrDefUnbounded att val:"+((RealAttrDefUnbounded)at).getVal());
+			}
 		}
 	}
 	
