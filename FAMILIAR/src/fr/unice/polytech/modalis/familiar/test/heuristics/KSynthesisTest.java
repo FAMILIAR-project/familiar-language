@@ -60,9 +60,9 @@ public abstract class KSynthesisTest extends FMLTest {
 	private static final String MODIFIED_SPLOT_FOLDER = "inputFML/splot-modified";
 	
 
-	private static final String WORDNET_DB = "/udd/gbecan/Documents/workspaces/workspace/Heuristics/resources/wordnet_properties.xml";
-	private static final String WIKIPEDIA_DB = "/local/wikipedia/WikipediaMiner/db_wikipedia/wikipedia-template.xml";
-	private static final String WIKTIONARY_DB = "/local/wikipedia/WikipediaMiner/db_wiktionary/wikipedia-template.xml";
+	private static final String WORDNET_DB = "wordnet_properties.xml";
+	private static final String WIKIPEDIA_DB = "/mnt/windows/Users/gbecan/Documents/db_wikipedia/wikipedia-template.xml";
+	private static final String WIKTIONARY_DB = "/mnt/windows/Users/gbecan/Documents/db_wiktionary/wikipedia-template.xml";
 	private static final String LSA_DB = "C:\\db_wikipedia\\wikipedia-template.xml";
 
 	public static final String OUTPUT_FOLDER = "output/generated-with-heuristics/";

@@ -95,12 +95,14 @@ public class ICSE2014Experiment3 extends KSynthesisTest {
 
 	// Cliques
 
+	@Ignore
 	@Test
 	public void testCliquesSPLOT() {
 		System.out.println("Cliques SPLOT");
 		testCliques(getSPLOTFeatureModelsForFASE());
 	}
 	
+	@Ignore
 	@Test
 	public void testCliquesPCM() {
 		System.out.println("Cliques PCM");
@@ -296,28 +298,24 @@ public class ICSE2014Experiment3 extends KSynthesisTest {
 
 	// Feature groups
 
-	@Ignore
 	@Test
 	public void testFeatureGroupsOnCompleteBIGSPLOT() {
 		System.out.println("Feature groups on complete BIG - SPLOT");
 		testFeatureGroups(getSPLOTFeatureModelsForFASE(), false, true);
 	}
 
-	@Ignore
 	@Test
 	public void testFeatureGroupsOnFeatureGraphSPLOT() {
 		System.out.println("Feature groups on feature graph - SPLOT");
 		testFeatureGroups(getSPLOTFeatureModelsForFASE(), true, true);
 	}
 	
-	@Ignore
 	@Test
 	public void testFeatureGroupsOnCompleteBIGPCM() {
 		System.out.println("Feature groups on complete BIG - PCM");
 		testFeatureGroups(getPCMFeatureModels(), false, false);
 	}
 
-	@Ignore
 	@Test
 	public void testFeatureGroupsOnFeatureGraphPCM() {
 		System.out.println("Feature groups on feature graph - PCM");
@@ -368,8 +366,10 @@ public class ICSE2014Experiment3 extends KSynthesisTest {
 			
 			// Mutex
 			Set<FGroup> mutexGroups = null; 
-			if (useFeatureGraph) {
+			if (useFeatureGraph && computeOrGroups) {
 				mutexGroups = fm.toGeneralizedNotation().getMutexGroups();
+			} else if (useFeatureGraph && !computeOrGroups){
+				mutexGroups = fm.toGeneralizedNotationWithoutOR().getMutexGroups();
 			} else {
 				mutexGroups = fm.computeMutexGroups();
 			}
@@ -390,8 +390,10 @@ public class ICSE2014Experiment3 extends KSynthesisTest {
 			
 			// Xor
 			Set<FGroup> xorGroups = null;
-			if (useFeatureGraph) {
+			if (useFeatureGraph && computeOrGroups) {
 				xorGroups = fm.toGeneralizedNotation().getXorGroups();
+			} else if (useFeatureGraph && !computeOrGroups){
+				xorGroups = fm.toGeneralizedNotationWithoutOR().getXorGroups();
 			} else {
 				xorGroups = fm.computeXorGroups();
 			}
