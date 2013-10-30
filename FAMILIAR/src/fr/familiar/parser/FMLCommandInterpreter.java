@@ -1905,18 +1905,20 @@ public class FMLCommandInterpreter {
 		_varManager.removeVariable(var);
 
 	}
-
-	public void printAllVariables() {
+	
+	
+	public String allVariablesToString() {
+		StringBuilder sb = new StringBuilder() ; 
 		List<Variable> vars = getVariables();
 		for (Variable variable : vars) {
-			FMLShell.getInstance().printDisplay(
+			sb.append(
 					"(" + variable.getType() + "" + ", completeName: "
 							+ variable.getVid() + ", ns:" + variable.getNS()
 							+ ") " + variable.getIdentifier() + " = "
 							+ variable.getValue()
 							+ System.getProperty("line.separator"));
 		}
-
+		return sb.toString() ; 
 	}
 
 	public void hiddenVariables() {

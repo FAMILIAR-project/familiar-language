@@ -389,7 +389,7 @@ public class FMLShell {
 
 		if (_executionMode == ExecutionMode.NON_INTERACTIVE) { // TODO
 			if (isVerbose())
-				_currentEnv.printAllVariables();
+				FMLShell.getInstance().printDisplay(_currentEnv.allVariablesToString());
 		}
 
 		if (_errorMode == ErrorMode.STRONG)

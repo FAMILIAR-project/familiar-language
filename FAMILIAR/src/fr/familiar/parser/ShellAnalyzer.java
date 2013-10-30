@@ -35,6 +35,7 @@ import fr.familiar.interpreter.FMLShell;
 import fr.familiar.interpreter.VariableNotExistingException;
 import fr.familiar.variable.BooleanVariable;
 import fr.familiar.variable.RType;
+import fr.familiar.variable.StringVariable;
 import fr.familiar.variable.Variable;
 
 /**
@@ -98,9 +99,10 @@ public class ShellAnalyzer extends FMLAbstractCommandAnalyzer {
 		// listing variables
 		else if (rcmd instanceof ListingImpl) {
 			// FMShell.getInstance().printInfoMessage(BDDBuilderSerializer.asString(getBuilder()));
-			_type = RType.VOID;
+			_type = RType.STRING ; // AM: now 'ls' returns a String RType.VOID;
 			
-			
+			StringBuilder sb = new StringBuilder() ; 
+			sb.append(System.getProperty("line.separator"));
 			
 			ListingImpl lsCmd = (ListingImpl) rcmd ; 
 			OPT_LISTING opt = lsCmd.getOpt() ;
@@ -109,17 +111,25 @@ public class ShellAnalyzer extends FMLAbstractCommandAnalyzer {
 			if (opt == OPT_LISTING.NORMAL || (opt == null)) {
 				List<Variable> vars = _environment.getVariables();
 				for (Variable variable : vars) {
-					FMLShell.getInstance().printDisplay("(" + variable.getType() + ") " + variable.getIdentifier() + System.getProperty("line.separator"));
+					String s = System.getProperty("line.separator") + "(" + variable.getType() + ") " + variable.getIdentifier() ; 
+					sb.append(s);
 				}
+				setVariable(new StringVariable(getAssigner(), sb.toString()));
+				return ;
 			}			
 			else if (opt == OPT_LISTING.VERBOSE) {
-				_environment.printAllVariables();
+				String s = _environment.allVariablesToString();
+				setVariable(new StringVariable(getAssigner(), System.getProperty("line.separator") + s));
+				return ;
 			}
 			else if (opt == OPT_LISTING.VALUE_ONLY) {
 				List<Variable> vars = _environment.getVariables();
 				for (Variable variable : vars) {
-					FMLShell.getInstance().printDisplay("(" + variable.getType() + ") " + variable.getIdentifier() + " = " + variable.getValue() + System.getProperty("line.separator"));
+					String s = 	System.getProperty("line.separator") + "(" + variable.getType() + ") " + variable.getIdentifier() + " = " + variable.getValue()  ; 
+					sb.append(s);
 				}
+				setVariable(new StringVariable(getAssigner(), sb.toString()));
+				return ;
 			}
 			else {
 				FMLShell.getInstance().printError("Unable to understand the option associated to the listing command " + opt);

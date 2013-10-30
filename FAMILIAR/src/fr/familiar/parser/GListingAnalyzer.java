@@ -30,8 +30,9 @@ import fr.familiar.variable.Variable;
 
 /**
  * @author mathieuacher
- * 
+ * I think the original idea was to display a multiplicy of feature models in one shot
  */
+@Deprecated
 public class GListingAnalyzer extends FMLAbstractCommandAnalyzer {
 
 	/**
