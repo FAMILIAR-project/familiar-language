@@ -239,7 +239,7 @@ public class PacogenReasoner  implements FeatureModelReasoner {
 		VarAttrList = new LinkedList<String>() ;
 		FamaToPacoName = new HashMap<String,String>() ;
 		attrDomain = new LinkedList<String>() ;
-		AttributesName = new HashMap<>() ;
+		AttributesName = new HashMap<String,HashMap<String, String>>() ;
 		ftListFamaName = new LinkedList<String>() ;
 		AttrListFamaName = new LinkedList<String>() ;
 		AttrPrologNameList = new LinkedList<String>() ;
@@ -273,7 +273,7 @@ public class PacogenReasoner  implements FeatureModelReasoner {
 
 	public String Reason() throws IOException
 	{
-		domainList = new LinkedList<>() ;
+		domainList = new LinkedList<String>() ;
 		String res = "" ;
 		Runtime runtime = Runtime.getRuntime();
 		Process p =	runtime.exec("./Pacogen");
