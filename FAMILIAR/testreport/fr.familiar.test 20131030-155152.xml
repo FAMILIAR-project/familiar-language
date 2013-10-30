@@ -1,0 +1,1956 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="fr.familiar.test" project="FAMILIAR" tests="441" started="441" failures="21" errors="13" ignored="20">
+  <testsuite name="fr.familiar.test.FMLGeneralizedNotationTest" time="3.225">
+    <testcase name="test1" classname="fr.familiar.test.FMLGeneralizedNotationTest" time="2.515"/>
+    <testcase name="test2" classname="fr.familiar.test.FMLGeneralizedNotationTest" time="0.408"/>
+    <testcase name="test3" classname="fr.familiar.test.FMLGeneralizedNotationTest" time="0.302"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLCleanupTest" time="2.968">
+    <testcase name="testCleanUpScript1" classname="fr.familiar.test.FMLCleanupTest" time="0.418"/>
+    <testcase name="testCleanUpScript2" classname="fr.familiar.test.FMLCleanupTest" time="0.317"/>
+    <testcase name="testDead1" classname="fr.familiar.test.FMLCleanupTest" time="0.279"/>
+    <testcase name="testBenavides1" classname="fr.familiar.test.FMLCleanupTest" time="0.292"/>
+    <testcase name="testBenavides2" classname="fr.familiar.test.FMLCleanupTest" time="0.274"/>
+    <testcase name="testBenavides3" classname="fr.familiar.test.FMLCleanupTest" time="0.22"/>
+    <testcase name="testCleanup1" classname="fr.familiar.test.FMLCleanupTest" time="0.207"/>
+    <testcase name="testCleanup2" classname="fr.familiar.test.FMLCleanupTest" time="0.248"/>
+    <testcase name="testCleanup3" classname="fr.familiar.test.FMLCleanupTest" time="0.167"/>
+    <testcase name="testCleanup4" classname="fr.familiar.test.FMLCleanupTest" time="0.229"/>
+    <testcase name="testFullMandatory1" classname="fr.familiar.test.FMLCleanupTest" time="0.156"/>
+    <testcase name="testFullMandatory2" classname="fr.familiar.test.FMLCleanupTest" time="0.161"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLIntegerTest" time="0.343">
+    <testcase name="testInteger1" classname="fr.familiar.test.FMLIntegerTest" time="0.185"/>
+    <testcase name="testInteger2" classname="fr.familiar.test.FMLIntegerTest" time="0.158"/>
+    <testcase name="testInteger3" classname="fr.familiar.test.FMLIntegerTest" time="0.0" ignored="true"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLICVS2011Test" time="0.345">
+    <testcase name="testScenario" classname="fr.familiar.test.FMLICVS2011Test" time="0.345"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLDeadsTest" time="0.955">
+    <testcase name="testDead1" classname="fr.familiar.test.FMLDeadsTest" time="0.149"/>
+    <testcase name="testDead2" classname="fr.familiar.test.FMLDeadsTest" time="0.139"/>
+    <testcase name="testDeadScript1" classname="fr.familiar.test.FMLDeadsTest" time="0.141"/>
+    <testcase name="testBenavides1" classname="fr.familiar.test.FMLDeadsTest" time="0.183"/>
+    <testcase name="testBenavides2" classname="fr.familiar.test.FMLDeadsTest" time="0.2"/>
+    <testcase name="testBenavides3" classname="fr.familiar.test.FMLDeadsTest" time="0.143"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLctcrTest" time="1.943">
+    <testsuite name="[0]" time="0.483">
+      <testcase name="testCTCR1[0]" classname="fr.familiar.test.FMLctcrTest" time="0.483"/>
+    </testsuite>
+    <testsuite name="[1]" time="0.175">
+      <testcase name="testCTCR1[1]" classname="fr.familiar.test.FMLctcrTest" time="0.175"/>
+    </testsuite>
+    <testsuite name="[2]" time="0.164">
+      <testcase name="testCTCR1[2]" classname="fr.familiar.test.FMLctcrTest" time="0.164"/>
+    </testsuite>
+    <testsuite name="[3]" time="0.151">
+      <testcase name="testCTCR1[3]" classname="fr.familiar.test.FMLctcrTest" time="0.151"/>
+    </testsuite>
+    <testsuite name="[4]" time="0.165">
+      <testcase name="testCTCR1[4]" classname="fr.familiar.test.FMLctcrTest" time="0.165"/>
+    </testsuite>
+    <testsuite name="[5]" time="0.161">
+      <testcase name="testCTCR1[5]" classname="fr.familiar.test.FMLctcrTest" time="0.161"/>
+    </testsuite>
+    <testsuite name="[6]" time="0.161">
+      <testcase name="testCTCR1[6]" classname="fr.familiar.test.FMLctcrTest" time="0.161"/>
+    </testsuite>
+    <testsuite name="[7]" time="0.152">
+      <testcase name="testCTCR1[7]" classname="fr.familiar.test.FMLctcrTest" time="0.152"/>
+    </testsuite>
+    <testsuite name="[8]" time="0.153">
+      <testcase name="testCTCR1[8]" classname="fr.familiar.test.FMLctcrTest" time="0.153"/>
+    </testsuite>
+    <testsuite name="[9]" time="0.178">
+      <testcase name="testCTCR1[9]" classname="fr.familiar.test.FMLctcrTest" time="0.178"/>
+    </testsuite>
+  </testsuite>
+  <testcase name="fr.familiar.test.FMLCountingTest" classname="fr.familiar.test.FMLCountingTest" time="0.0" ignored="true"/>
+  <testsuite name="fr.familiar.test.FMLVisualization2Test" time="0.404">
+    <testcase name="testProtovisVS" classname="fr.familiar.test.FMLVisualization2Test" time="0.404">
+      <error>fr.familiar.interpreter.VariableNotExistingException: variable null does not exist
+	at fr.familiar.parser.FMLCommandInterpreter.getVariable(FMLCommandInterpreter.java:1733)
+	at fr.familiar.test.FMLTest.getFMVariable(FMLTest.java:426)
+	at fr.familiar.test.FMLVisualization2Test.testProtovisVS(FMLVisualization2Test.java:14)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLIsValidTest" time="1.429">
+    <testsuite name="[0]" time="0.162">
+      <testcase name="testIsValid1[0]" classname="fr.familiar.test.FMLIsValidTest" time="0.162"/>
+    </testsuite>
+    <testsuite name="[1]" time="0.146">
+      <testcase name="testIsValid1[1]" classname="fr.familiar.test.FMLIsValidTest" time="0.146"/>
+    </testsuite>
+    <testsuite name="[2]" time="0.14">
+      <testcase name="testIsValid1[2]" classname="fr.familiar.test.FMLIsValidTest" time="0.14"/>
+    </testsuite>
+    <testsuite name="[3]" time="0.143">
+      <testcase name="testIsValid1[3]" classname="fr.familiar.test.FMLIsValidTest" time="0.143"/>
+    </testsuite>
+    <testsuite name="[4]" time="0.136">
+      <testcase name="testIsValid1[4]" classname="fr.familiar.test.FMLIsValidTest" time="0.136"/>
+    </testsuite>
+    <testsuite name="[5]" time="0.136">
+      <testcase name="testIsValid1[5]" classname="fr.familiar.test.FMLIsValidTest" time="0.136"/>
+    </testsuite>
+    <testsuite name="[6]" time="0.137">
+      <testcase name="testIsValid1[6]" classname="fr.familiar.test.FMLIsValidTest" time="0.137"/>
+    </testsuite>
+    <testsuite name="[7]" time="0.137">
+      <testcase name="testIsValid1[7]" classname="fr.familiar.test.FMLIsValidTest" time="0.137"/>
+    </testsuite>
+    <testsuite name="[8]" time="0.134">
+      <testcase name="testIsValid1[8]" classname="fr.familiar.test.FMLIsValidTest" time="0.134"/>
+    </testsuite>
+    <testsuite name="[9]" time="0.158">
+      <testcase name="testIsValid1[9]" classname="fr.familiar.test.FMLIsValidTest" time="0.158"/>
+    </testsuite>
+  </testsuite>
+  <testcase name="fr.familiar.test.VideoSurveillanceREFSQTest" classname="fr.familiar.test.VideoSurveillanceREFSQTest" time="0.0" ignored="true"/>
+  <testsuite name="fr.familiar.test.FMLVisualizationTest" time="1.644">
+    <testsuite name="[0]" time="0.146">
+      <testcase name="testProtovis[0]" classname="fr.familiar.test.FMLVisualizationTest" time="0.146"/>
+    </testsuite>
+    <testsuite name="[1]" time="0.136">
+      <testcase name="testProtovis[1]" classname="fr.familiar.test.FMLVisualizationTest" time="0.136"/>
+    </testsuite>
+    <testsuite name="[2]" time="0.134">
+      <testcase name="testProtovis[2]" classname="fr.familiar.test.FMLVisualizationTest" time="0.134"/>
+    </testsuite>
+    <testsuite name="[3]" time="0.136">
+      <testcase name="testProtovis[3]" classname="fr.familiar.test.FMLVisualizationTest" time="0.136"/>
+    </testsuite>
+    <testsuite name="[4]" time="0.138">
+      <testcase name="testProtovis[4]" classname="fr.familiar.test.FMLVisualizationTest" time="0.138"/>
+    </testsuite>
+    <testsuite name="[5]" time="0.132">
+      <testcase name="testProtovis[5]" classname="fr.familiar.test.FMLVisualizationTest" time="0.132"/>
+    </testsuite>
+    <testsuite name="[6]" time="0.139">
+      <testcase name="testProtovis[6]" classname="fr.familiar.test.FMLVisualizationTest" time="0.139"/>
+    </testsuite>
+    <testsuite name="[7]" time="0.134">
+      <testcase name="testProtovis[7]" classname="fr.familiar.test.FMLVisualizationTest" time="0.134"/>
+    </testsuite>
+    <testsuite name="[8]" time="0.139">
+      <testcase name="testProtovis[8]" classname="fr.familiar.test.FMLVisualizationTest" time="0.139"/>
+    </testsuite>
+    <testsuite name="[9]" time="0.135">
+      <testcase name="testProtovis[9]" classname="fr.familiar.test.FMLVisualizationTest" time="0.135"/>
+    </testsuite>
+    <testsuite name="[10]" time="0.134">
+      <testcase name="testProtovis[10]" classname="fr.familiar.test.FMLVisualizationTest" time="0.134"/>
+    </testsuite>
+    <testsuite name="[11]" time="0.14">
+      <testcase name="testProtovis[11]" classname="fr.familiar.test.FMLVisualizationTest" time="0.14"/>
+    </testsuite>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLRemoveFeatureTest" time="1.808">
+    <testcase name="testRemoveRoot1" classname="fr.familiar.test.FMLRemoveFeatureTest" time="0.134"/>
+    <testcase name="testRemoveRoot2" classname="fr.familiar.test.FMLRemoveFeatureTest" time="0.138"/>
+    <testcase name="testRemoveTrue1" classname="fr.familiar.test.FMLRemoveFeatureTest" time="0.132"/>
+    <testcase name="testRemoveTrue2" classname="fr.familiar.test.FMLRemoveFeatureTest" time="0.135"/>
+    <testcase name="testRemoveTrue3" classname="fr.familiar.test.FMLRemoveFeatureTest" time="0.132"/>
+    <testcase name="testRemoveTrue4" classname="fr.familiar.test.FMLRemoveFeatureTest" time="0.147"/>
+    <testcase name="testRemoveTrue5" classname="fr.familiar.test.FMLRemoveFeatureTest" time="0.133"/>
+    <testcase name="testRemoveTrue6" classname="fr.familiar.test.FMLRemoveFeatureTest" time="0.146"/>
+    <testcase name="testRemoveTrue7" classname="fr.familiar.test.FMLRemoveFeatureTest" time="0.134"/>
+    <testcase name="testRemoveFalse1" classname="fr.familiar.test.FMLRemoveFeatureTest" time="0.145"/>
+    <testcase name="testFMLRemove1" classname="fr.familiar.test.FMLRemoveFeatureTest" time="0.165"/>
+    <testcase name="testRemoveWithConstraints1" classname="fr.familiar.test.FMLRemoveFeatureTest" time="0.132"/>
+    <testcase name="testRemoveWithConstraints2" classname="fr.familiar.test.FMLRemoveFeatureTest" time="0.135"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLFM2ConstraintTest" time="0.168">
+    <testcase name="test1" classname="fr.familiar.test.FMLFM2ConstraintTest" time="0.168">
+      <failure>java.lang.AssertionError: expected:&lt;1.0&gt; but was:&lt;12.0&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:494)
+	at org.junit.Assert.assertEquals(Assert.java:592)
+	at fr.familiar.test.FMLFM2ConstraintTest.test1(FMLFM2ConstraintTest.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLSetVariableTest" time="0.149">
+    <testcase name="test1" classname="fr.familiar.test.FMLSetVariableTest" time="0.149"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLBooleanTest" time="0.179">
+    <testcase name="testBool1" classname="fr.familiar.test.FMLBooleanTest" time="0.178"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLConstraintSimplificatorTest" time="1.27">
+    <testsuite name="[0]" time="0.182">
+      <testcase name="testDetection[0]" classname="fr.familiar.test.FMLConstraintSimplificatorTest" time="0.182"/>
+    </testsuite>
+    <testsuite name="[1]" time="0.164">
+      <testcase name="testDetection[1]" classname="fr.familiar.test.FMLConstraintSimplificatorTest" time="0.164"/>
+    </testsuite>
+    <testsuite name="[2]" time="0.151">
+      <testcase name="testDetection[2]" classname="fr.familiar.test.FMLConstraintSimplificatorTest" time="0.151"/>
+    </testsuite>
+    <testsuite name="[3]" time="0.174">
+      <testcase name="testDetection[3]" classname="fr.familiar.test.FMLConstraintSimplificatorTest" time="0.174"/>
+    </testsuite>
+    <testsuite name="[4]" time="0.15">
+      <testcase name="testDetection[4]" classname="fr.familiar.test.FMLConstraintSimplificatorTest" time="0.149"/>
+    </testsuite>
+    <testsuite name="[5]" time="0.159">
+      <testcase name="testDetection[5]" classname="fr.familiar.test.FMLConstraintSimplificatorTest" time="0.159"/>
+    </testsuite>
+    <testsuite name="[6]" time="0.147">
+      <testcase name="testDetection[6]" classname="fr.familiar.test.FMLConstraintSimplificatorTest" time="0.147"/>
+    </testsuite>
+    <testsuite name="[7]" time="0.143">
+      <testcase name="testDetection[7]" classname="fr.familiar.test.FMLConstraintSimplificatorTest" time="0.143"/>
+    </testsuite>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLFeatureOperationsTest" time="2.831">
+    <testcase name="testOperator1" classname="fr.familiar.test.FMLFeatureOperationsTest" time="0.159"/>
+    <testcase name="testOperator2" classname="fr.familiar.test.FMLFeatureOperationsTest" time="0.15"/>
+    <testcase name="testMisc1" classname="fr.familiar.test.FMLFeatureOperationsTest" time="0.293"/>
+    <testcase name="testMisc2" classname="fr.familiar.test.FMLFeatureOperationsTest" time="0.16"/>
+    <testcase name="testMisc3" classname="fr.familiar.test.FMLFeatureOperationsTest" time="0.136"/>
+    <testcase name="testName1" classname="fr.familiar.test.FMLFeatureOperationsTest" time="0.406"/>
+    <testcase name="testRoot1" classname="fr.familiar.test.FMLFeatureOperationsTest" time="0.139"/>
+    <testcase name="testParent1" classname="fr.familiar.test.FMLFeatureOperationsTest" time="0.159"/>
+    <testcase name="testMisc2bis" classname="fr.familiar.test.FMLFeatureOperationsTest" time="0.14"/>
+    <testcase name="testAncestors1" classname="fr.familiar.test.FMLFeatureOperationsTest" time="0.149"/>
+    <testcase name="testChildren1" classname="fr.familiar.test.FMLFeatureOperationsTest" time="0.162"/>
+    <testcase name="testSibling1" classname="fr.familiar.test.FMLFeatureOperationsTest" time="0.141"/>
+    <testcase name="testSibling2" classname="fr.familiar.test.FMLFeatureOperationsTest" time="0.144"/>
+    <testcase name="testSibling3" classname="fr.familiar.test.FMLFeatureOperationsTest" time="0.147"/>
+    <testcase name="testWhichfm" classname="fr.familiar.test.FMLFeatureOperationsTest" time="0.197"/>
+    <testcase name="testDescendants1" classname="fr.familiar.test.FMLFeatureOperationsTest" time="0.149"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FeatureNodeUtilsTest" time="1.329">
+    <testcase name="testOR1" classname="fr.familiar.test.FeatureNodeUtilsTest" time="0.133"/>
+    <testcase name="testOR2" classname="fr.familiar.test.FeatureNodeUtilsTest" time="0.133"/>
+    <testcase name="testMultiGroup1" classname="fr.familiar.test.FeatureNodeUtilsTest" time="0.132"/>
+    <testcase name="testMultiGroup2" classname="fr.familiar.test.FeatureNodeUtilsTest" time="0.134"/>
+    <testcase name="testMAND1" classname="fr.familiar.test.FeatureNodeUtilsTest" time="0.137"/>
+    <testcase name="testMAND2" classname="fr.familiar.test.FeatureNodeUtilsTest" time="0.133"/>
+    <testcase name="testOPT1" classname="fr.familiar.test.FeatureNodeUtilsTest" time="0.135"/>
+    <testcase name="testOPT2" classname="fr.familiar.test.FeatureNodeUtilsTest" time="0.13"/>
+    <testcase name="testXOR1" classname="fr.familiar.test.FeatureNodeUtilsTest" time="0.13"/>
+    <testcase name="testXOR2" classname="fr.familiar.test.FeatureNodeUtilsTest" time="0.132"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLDisjunctiveSATMergerTest" time="0.228">
+    <testcase name="test1" classname="fr.familiar.test.FMLDisjunctiveSATMergerTest" time="0.228"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.HelloWorldTest" time="0.282">
+    <testcase name="test1" classname="fr.familiar.test.HelloWorldTest" time="0.136"/>
+    <testcase name="test2" classname="fr.familiar.test.HelloWorldTest" time="0.146"/>
+  </testsuite>
+  <testcase name="fr.familiar.test.FMLConfigurationTest" classname="fr.familiar.test.FMLConfigurationTest" time="0.0" ignored="true"/>
+  <testsuite name="fr.familiar.test.FMLFMBuilderTest" time="2.564">
+    <testcase name="testConstraints1" classname="fr.familiar.test.FMLFMBuilderTest" time="0.145"/>
+    <testcase name="testConstraints2" classname="fr.familiar.test.FMLFMBuilderTest" time="0.138"/>
+    <testcase name="testConstraints3" classname="fr.familiar.test.FMLFMBuilderTest" time="0.132"/>
+    <testcase name="testConstraints4" classname="fr.familiar.test.FMLFMBuilderTest" time="0.132"/>
+    <testcase name="testConstraints5" classname="fr.familiar.test.FMLFMBuilderTest" time="0.132"/>
+    <testcase name="testConstraints6" classname="fr.familiar.test.FMLFMBuilderTest" time="0.136"/>
+    <testcase name="testORGroup1" classname="fr.familiar.test.FMLFMBuilderTest" time="0.13"/>
+    <testcase name="testORGroup2" classname="fr.familiar.test.FMLFMBuilderTest" time="0.133"/>
+    <testcase name="testORGroup3" classname="fr.familiar.test.FMLFMBuilderTest" time="0.131"/>
+    <testcase name="testXORGroup1" classname="fr.familiar.test.FMLFMBuilderTest" time="0.133"/>
+    <testcase name="testXORGroup2" classname="fr.familiar.test.FMLFMBuilderTest" time="0.13"/>
+    <testcase name="testXORGroup3" classname="fr.familiar.test.FMLFMBuilderTest" time="0.134"/>
+    <testcase name="testNotWellFormed1" classname="fr.familiar.test.FMLFMBuilderTest" time="0.131"/>
+    <testcase name="testNotWellFormed2" classname="fr.familiar.test.FMLFMBuilderTest" time="0.133"/>
+    <testcase name="testNotWellFormed3" classname="fr.familiar.test.FMLFMBuilderTest" time="0.147"/>
+    <testcase name="testNotWellFormed4" classname="fr.familiar.test.FMLFMBuilderTest" time="0.136"/>
+    <testcase name="testNotWellFormed5" classname="fr.familiar.test.FMLFMBuilderTest" time="0.139"/>
+    <testcase name="testNotWellFormed6" classname="fr.familiar.test.FMLFMBuilderTest" time="0.135"/>
+    <testcase name="testNotWellFormed7" classname="fr.familiar.test.FMLFMBuilderTest" time="0.136"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLFM2ConstraintTest2" time="1.564">
+    <testsuite name="[0]" time="0.14">
+      <testcase name="test1[0]" classname="fr.familiar.test.FMLFM2ConstraintTest2" time="0.14"/>
+    </testsuite>
+    <testsuite name="[1]" time="0.138">
+      <testcase name="test1[1]" classname="fr.familiar.test.FMLFM2ConstraintTest2" time="0.138">
+        <failure>java.lang.AssertionError: expected:&lt;1.0&gt; but was:&lt;2.0&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:494)
+	at org.junit.Assert.assertEquals(Assert.java:592)
+	at fr.familiar.test.FMLFM2ConstraintTest2.test1(FMLFM2ConstraintTest2.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[2]" time="0.141">
+      <testcase name="test1[2]" classname="fr.familiar.test.FMLFM2ConstraintTest2" time="0.141">
+        <failure>java.lang.AssertionError: expected:&lt;1.0&gt; but was:&lt;14.0&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:494)
+	at org.junit.Assert.assertEquals(Assert.java:592)
+	at fr.familiar.test.FMLFM2ConstraintTest2.test1(FMLFM2ConstraintTest2.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[3]" time="0.148">
+      <testcase name="test1[3]" classname="fr.familiar.test.FMLFM2ConstraintTest2" time="0.148">
+        <failure>java.lang.AssertionError: expected:&lt;1.0&gt; but was:&lt;4.0&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:494)
+	at org.junit.Assert.assertEquals(Assert.java:592)
+	at fr.familiar.test.FMLFM2ConstraintTest2.test1(FMLFM2ConstraintTest2.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[4]" time="0.144">
+      <testcase name="test1[4]" classname="fr.familiar.test.FMLFM2ConstraintTest2" time="0.144">
+        <failure>java.lang.AssertionError: expected:&lt;1.0&gt; but was:&lt;7.0&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:494)
+	at org.junit.Assert.assertEquals(Assert.java:592)
+	at fr.familiar.test.FMLFM2ConstraintTest2.test1(FMLFM2ConstraintTest2.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[5]" time="0.137">
+      <testcase name="test1[5]" classname="fr.familiar.test.FMLFM2ConstraintTest2" time="0.137">
+        <failure>java.lang.AssertionError: expected:&lt;1.0&gt; but was:&lt;2.0&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:494)
+	at org.junit.Assert.assertEquals(Assert.java:592)
+	at fr.familiar.test.FMLFM2ConstraintTest2.test1(FMLFM2ConstraintTest2.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[6]" time="0.216">
+      <testcase name="test1[6]" classname="fr.familiar.test.FMLFM2ConstraintTest2" time="0.216">
+        <failure>java.lang.AssertionError: expected:&lt;1.0&gt; but was:&lt;256.0&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:494)
+	at org.junit.Assert.assertEquals(Assert.java:592)
+	at fr.familiar.test.FMLFM2ConstraintTest2.test1(FMLFM2ConstraintTest2.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[7]" time="0.145">
+      <testcase name="test1[7]" classname="fr.familiar.test.FMLFM2ConstraintTest2" time="0.145">
+        <failure>java.lang.AssertionError: expected:&lt;1.0&gt; but was:&lt;40.0&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:494)
+	at org.junit.Assert.assertEquals(Assert.java:592)
+	at fr.familiar.test.FMLFM2ConstraintTest2.test1(FMLFM2ConstraintTest2.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[8]" time="0.138">
+      <testcase name="test1[8]" classname="fr.familiar.test.FMLFM2ConstraintTest2" time="0.138">
+        <failure>java.lang.AssertionError: expected:&lt;1.0&gt; but was:&lt;2.0&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:494)
+	at org.junit.Assert.assertEquals(Assert.java:592)
+	at fr.familiar.test.FMLFM2ConstraintTest2.test1(FMLFM2ConstraintTest2.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+      </testcase>
+    </testsuite>
+    <testsuite name="[9]" time="0.217">
+      <testcase name="test1[9]" classname="fr.familiar.test.FMLFM2ConstraintTest2" time="0.217">
+        <failure>java.lang.AssertionError: expected:&lt;1.0&gt; but was:&lt;1827.0&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:494)
+	at org.junit.Assert.assertEquals(Assert.java:592)
+	at fr.familiar.test.FMLFM2ConstraintTest2.test1(FMLFM2ConstraintTest2.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.junit.runners.Suite.runChild(Suite.java:127)
+	at org.junit.runners.Suite.runChild(Suite.java:26)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+      </testcase>
+    </testsuite>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLRendererTest" time="0.335">
+    <testcase name="testZest1" classname="fr.familiar.test.FMLRendererTest" time="0.142"/>
+    <testcase name="testDot1" classname="fr.familiar.test.FMLRendererTest" time="0.05"/>
+    <testcase name="testDot2" classname="fr.familiar.test.FMLRendererTest" time="0.143"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLModelTypesSurveyTest" time="0.044">
+    <testcase name="test1" classname="fr.familiar.test.FMLModelTypesSurveyTest" time="0.044"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLRewritingTest" time="1.024">
+    <testcase name="testReconciliationClarke1" classname="fr.familiar.test.FMLRewritingTest" time="0.238"/>
+    <testcase name="testReconciliationClarke2" classname="fr.familiar.test.FMLRewritingTest" time="0.096"/>
+    <testcase name="testReconciliationClarke3" classname="fr.familiar.test.FMLRewritingTest" time="0.217"/>
+    <testcase name="testReconciliationClarke1bis" classname="fr.familiar.test.FMLRewritingTest" time="0.151"/>
+    <testcase name="testReconciliationClarke3bis" classname="fr.familiar.test.FMLRewritingTest" time="0.204"/>
+    <testcase name="testRefactoring" classname="fr.familiar.test.FMLRewritingTest" time="0.118"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLRefactoring2Test" time="1.005">
+    <testcase name="testEdit1" classname="fr.familiar.test.FMLRefactoring2Test" time="0.155"/>
+    <testcase name="testEdit2" classname="fr.familiar.test.FMLRefactoring2Test" time="0.136"/>
+    <testcase name="testRefactoring1" classname="fr.familiar.test.FMLRefactoring2Test" time="0.042"/>
+    <testcase name="testRefactoring2" classname="fr.familiar.test.FMLRefactoring2Test" time="0.147"/>
+    <testcase name="testCompare1" classname="fr.familiar.test.FMLRefactoring2Test" time="0.063"/>
+    <testcase name="testCompare2" classname="fr.familiar.test.FMLRefactoring2Test" time="0.2"/>
+    <testcase name="testNonValid1" classname="fr.familiar.test.FMLRefactoring2Test" time="0.048"/>
+    <testcase name="testRefactoringDead1" classname="fr.familiar.test.FMLRefactoring2Test" time="0.153">
+      <failure>
+        <expected>REFACTORING</expected>
+        <actual>SPECIALIZATION</actual>org.junit.ComparisonFailure: expected:&lt;[REFACTORING]&gt; but was:&lt;[SPECIALIZATION]&gt;
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at fr.familiar.test.FMLRefactoring2Test.testRefactoringDead1(FMLRefactoring2Test.java:111)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+    </testcase>
+    <testcase name="testRefactoringDead2" classname="fr.familiar.test.FMLRefactoring2Test" time="0.06"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLBDDSerializerTest" time="0.201">
+    <testsuite name="[0]" time="0.15">
+      <testcase name="testWriter[0]" classname="fr.familiar.test.FMLBDDSerializerTest" time="0.15"/>
+    </testsuite>
+    <testsuite name="[1]" time="0.051">
+      <testcase name="testWriter[1]" classname="fr.familiar.test.FMLBDDSerializerTest" time="0.051"/>
+    </testsuite>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLCounting2Test" time="0.0">
+    <testcase name="testFMLCounting1" classname="fr.familiar.test.FMLCounting2Test" time="0.0" ignored="true"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLExpressionTest" time="0.348">
+    <testcase name="testEqualityExcludes" classname="fr.familiar.test.FMLExpressionTest" time="0.14"/>
+    <testcase name="testCNF1" classname="fr.familiar.test.FMLExpressionTest" time="0.037"/>
+    <testcase name="testCNF2" classname="fr.familiar.test.FMLExpressionTest" time="0.127"/>
+    <testcase name="testCNF3" classname="fr.familiar.test.FMLExpressionTest" time="0.044"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLFGroupManagementTest" time="0.919">
+    <testcase name="testGetter1" classname="fr.familiar.test.FMLFGroupManagementTest" time="0.161"/>
+    <testcase name="testGetter2" classname="fr.familiar.test.FMLFGroupManagementTest" time="0.04"/>
+    <testcase name="testGetter3" classname="fr.familiar.test.FMLFGroupManagementTest" time="0.131"/>
+    <testcase name="testGetter4" classname="fr.familiar.test.FMLFGroupManagementTest" time="0.068"/>
+    <testcase name="testGetter5" classname="fr.familiar.test.FMLFGroupManagementTest" time="0.158"/>
+    <testcase name="testComputerMtx" classname="fr.familiar.test.FMLFGroupManagementTest" time="0.135"/>
+    <testcase name="testGetterCompute1" classname="fr.familiar.test.FMLFGroupManagementTest" time="0.153">
+      <failure>java.lang.AssertionError: expected:&lt;26&gt; but was:&lt;3&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:542)
+	at fr.familiar.test.FMLFGroupManagementTest.testGetterCompute1(FMLFGroupManagementTest.java:172)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+    </testcase>
+    <testcase name="testCompute1" classname="fr.familiar.test.FMLFGroupManagementTest" time="0.073">
+      <failure>java.lang.AssertionError: expected:&lt;26&gt; but was:&lt;3&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:542)
+	at fr.familiar.test.FMLFGroupManagementTest.testCompute1(FMLFGroupManagementTest.java:136)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLSliceCOPTest" time="0.198">
+    <testcase name="testIdea" classname="fr.familiar.test.FMLSliceCOPTest" time="0.198"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FGroupToExpressionTest" time="0.918">
+    <testcase name="testOR1" classname="fr.familiar.test.FGroupToExpressionTest" time="0.14"/>
+    <testcase name="testOR2" classname="fr.familiar.test.FGroupToExpressionTest" time="0.047"/>
+    <testcase name="testOR3" classname="fr.familiar.test.FGroupToExpressionTest" time="0.145"/>
+    <testcase name="testMTX1" classname="fr.familiar.test.FGroupToExpressionTest" time="0.039"/>
+    <testcase name="testMTX2" classname="fr.familiar.test.FGroupToExpressionTest" time="0.157"/>
+    <testcase name="testMTX3" classname="fr.familiar.test.FGroupToExpressionTest" time="0.038"/>
+    <testcase name="testXOR1" classname="fr.familiar.test.FGroupToExpressionTest" time="0.156"/>
+    <testcase name="testXOR2" classname="fr.familiar.test.FGroupToExpressionTest" time="0.038"/>
+    <testcase name="testXOR3" classname="fr.familiar.test.FGroupToExpressionTest" time="0.158"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.BDDPropertyTest" time="0.312">
+    <testcase name="testOrBDD" classname="fr.familiar.test.BDDPropertyTest" time="0.312">
+      <error>java.lang.OutOfMemoryError: Java heap space
+	at net.sf.javabdd.JFactory.initialize(JFactory.java:3191)
+	at net.sf.javabdd.JFactory.init(JFactory.java:44)
+	at splar.plugins.reasoners.bdd.javabdd.ReasoningWithBDD.&lt;init&gt;(ReasoningWithBDD.java:63)
+	at splar.plugins.reasoners.bdd.javabdd.FTReasoningWithBDD.&lt;init&gt;(FTReasoningWithBDD.java:37)
+	at splar.plugins.reasoners.bdd.javabdd.FMReasoningWithBDD.&lt;init&gt;(FMReasoningWithBDD.java:25)
+	at splar.plugins.reasoners.bdd.javabdd.FMReasoningWithBDD.&lt;init&gt;(FMReasoningWithBDD.java:21)
+	at fr.familiar.test.regression.SPLOTUtility.getSPLOTBDDReasoner(SPLOTUtility.java:38)
+	at fr.familiar.variable.FeatureModelVariable.getSPLOTBDDReasoner(FeatureModelVariable.java:900)
+	at fr.familiar.variable.FeatureModelVariable.getSPLOTFormula(FeatureModelVariable.java:199)
+	at fr.familiar.test.BDDPropertyTest.testOrBDD(BDDPropertyTest.java:26)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+
+</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLSPLOT2FMConverterTest" time="0.26">
+    <testcase name="testSPLOT2FM1" classname="fr.familiar.test.FMLSPLOT2FMConverterTest" time="0.26">
+      <error>java.lang.NullPointerException
+	at fr.familiar.parser.FMBuilder.eval(FMBuilder.java:235)
+	at fr.familiar.parser.FMLAbstractCommandAnalyzer.parse(FMLAbstractCommandAnalyzer.java:104)
+	at fr.familiar.parser.FMAnalyzer.eval(FMAnalyzer.java:89)
+	at fr.familiar.parser.FMLAbstractCommandAnalyzer.parse(FMLAbstractCommandAnalyzer.java:104)
+	at fr.familiar.parser.FMLCommandInterpreter.parseFMCommand(FMLCommandInterpreter.java:794)
+	at fr.familiar.parser.FMLCommandInterpreter.parse(FMLCommandInterpreter.java:503)
+	at fr.familiar.parser.FMLCommandInterpreter.parse(FMLCommandInterpreter.java:446)
+	at fr.familiar.parser.FMLCommandInterpreter.parse(FMLCommandInterpreter.java:1036)
+	at fr.familiar.parser.FMLCommandInterpreter.parse(FMLCommandInterpreter.java:951)
+	at fr.familiar.parser.FMLCommandInterpreter.parse(FMLCommandInterpreter.java:818)
+	at fr.familiar.parser.FMLCommandInterpreter.parseCommand(FMLCommandInterpreter.java:379)
+	at fr.familiar.interpreter.FMLShell.parse(FMLShell.java:685)
+	at fr.familiar.test.FMLSPLOT2FMConverterTest.testSPLOT2FM1(FMLSPLOT2FMConverterTest.java:25)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLFeaturesTest" time="0.847">
+    <testcase name="testFeaturesWithRemove1" classname="fr.familiar.test.FMLFeaturesTest" time="0.04"/>
+    <testcase name="testFeaturesWithRemove2" classname="fr.familiar.test.FMLFeaturesTest" time="0.128"/>
+    <testcase name="testFeaturesWithRemove3" classname="fr.familiar.test.FMLFeaturesTest" time="0.05"/>
+    <testcase name="testFeaturesWithRename1" classname="fr.familiar.test.FMLFeaturesTest" time="0.122"/>
+    <testcase name="testFeaturesWithRename2" classname="fr.familiar.test.FMLFeaturesTest" time="0.041"/>
+    <testcase name="testFMLFeatures1" classname="fr.familiar.test.FMLFeaturesTest" time="0.131"/>
+    <testcase name="testFeatures1" classname="fr.familiar.test.FMLFeaturesTest" time="0.053"/>
+    <testcase name="testFeatures2" classname="fr.familiar.test.FMLFeaturesTest" time="0.121"/>
+    <testcase name="testFeatures3" classname="fr.familiar.test.FMLFeaturesTest" time="0.037"/>
+    <testcase name="testFeatures4" classname="fr.familiar.test.FMLFeaturesTest" time="0.124"/>
+  </testsuite>
+  <testcase name="fr.familiar.test.FMLMetricsTest" classname="fr.familiar.test.FMLMetricsTest" time="0.0" ignored="true"/>
+  <testsuite name="fr.familiar.test.FMLPlaygroundTest" time="0.148">
+    <testcase name="testExistentialQ" classname="fr.familiar.test.FMLPlaygroundTest" time="0.028"/>
+    <testcase name="testExistentialQ2" classname="fr.familiar.test.FMLPlaygroundTest" time="0.119"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLComparisonTest" time="2.773">
+    <testsuite name="[0]" time="0.046">
+      <testcase name="testCompare[0]" classname="fr.familiar.test.FMLComparisonTest" time="0.046"/>
+    </testsuite>
+    <testsuite name="[1]" time="0.253">
+      <testcase name="testCompare[1]" classname="fr.familiar.test.FMLComparisonTest" time="0.253"/>
+    </testsuite>
+    <testsuite name="[2]" time="0.075">
+      <testcase name="testCompare[2]" classname="fr.familiar.test.FMLComparisonTest" time="0.075"/>
+    </testsuite>
+    <testsuite name="[3]" time="0.145">
+      <testcase name="testCompare[3]" classname="fr.familiar.test.FMLComparisonTest" time="0.145"/>
+    </testsuite>
+    <testsuite name="[4]" time="0.045">
+      <testcase name="testCompare[4]" classname="fr.familiar.test.FMLComparisonTest" time="0.045"/>
+    </testsuite>
+    <testsuite name="[5]" time="0.165">
+      <testcase name="testCompare[5]" classname="fr.familiar.test.FMLComparisonTest" time="0.165"/>
+    </testsuite>
+    <testsuite name="[6]" time="0.072">
+      <testcase name="testCompare[6]" classname="fr.familiar.test.FMLComparisonTest" time="0.072"/>
+    </testsuite>
+    <testsuite name="[7]" time="0.154">
+      <testcase name="testCompare[7]" classname="fr.familiar.test.FMLComparisonTest" time="0.154"/>
+    </testsuite>
+    <testsuite name="[8]" time="0.053">
+      <testcase name="testCompare[8]" classname="fr.familiar.test.FMLComparisonTest" time="0.053"/>
+    </testsuite>
+    <testsuite name="[9]" time="0.148">
+      <testcase name="testCompare[9]" classname="fr.familiar.test.FMLComparisonTest" time="0.148"/>
+    </testsuite>
+    <testsuite name="[10]" time="0.052">
+      <testcase name="testCompare[10]" classname="fr.familiar.test.FMLComparisonTest" time="0.052"/>
+    </testsuite>
+    <testsuite name="[11]" time="0.149">
+      <testcase name="testCompare[11]" classname="fr.familiar.test.FMLComparisonTest" time="0.149"/>
+    </testsuite>
+    <testsuite name="[12]" time="0.054">
+      <testcase name="testCompare[12]" classname="fr.familiar.test.FMLComparisonTest" time="0.054"/>
+    </testsuite>
+    <testsuite name="[13]" time="0.153">
+      <testcase name="testCompare[13]" classname="fr.familiar.test.FMLComparisonTest" time="0.153"/>
+    </testsuite>
+    <testsuite name="[14]" time="0.053">
+      <testcase name="testCompare[14]" classname="fr.familiar.test.FMLComparisonTest" time="0.053"/>
+    </testsuite>
+    <testsuite name="[15]" time="0.153">
+      <testcase name="testCompare[15]" classname="fr.familiar.test.FMLComparisonTest" time="0.153"/>
+    </testsuite>
+    <testsuite name="[16]" time="0.045">
+      <testcase name="testCompare[16]" classname="fr.familiar.test.FMLComparisonTest" time="0.045"/>
+    </testsuite>
+    <testsuite name="[17]" time="0.152">
+      <testcase name="testCompare[17]" classname="fr.familiar.test.FMLComparisonTest" time="0.152"/>
+    </testsuite>
+    <testsuite name="[18]" time="0.04">
+      <testcase name="testCompare[18]" classname="fr.familiar.test.FMLComparisonTest" time="0.04"/>
+    </testsuite>
+    <testsuite name="[19]" time="0.153">
+      <testcase name="testCompare[19]" classname="fr.familiar.test.FMLComparisonTest" time="0.153"/>
+    </testsuite>
+    <testsuite name="[20]" time="0.051">
+      <testcase name="testCompare[20]" classname="fr.familiar.test.FMLComparisonTest" time="0.051"/>
+    </testsuite>
+    <testsuite name="[21]" time="0.148">
+      <testcase name="testCompare[21]" classname="fr.familiar.test.FMLComparisonTest" time="0.148"/>
+    </testsuite>
+    <testsuite name="[22]" time="0.041">
+      <testcase name="testCompare[22]" classname="fr.familiar.test.FMLComparisonTest" time="0.041"/>
+    </testsuite>
+    <testsuite name="[23]" time="0.163">
+      <testcase name="testCompare[23]" classname="fr.familiar.test.FMLComparisonTest" time="0.163"/>
+    </testsuite>
+    <testsuite name="[24]" time="0.055">
+      <testcase name="testCompare[24]" classname="fr.familiar.test.FMLComparisonTest" time="0.055"/>
+    </testsuite>
+    <testsuite name="[25]" time="0.155">
+      <testcase name="testCompare[25]" classname="fr.familiar.test.FMLComparisonTest" time="0.155"/>
+    </testsuite>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLRenameFeatureTest" time="0.992">
+    <testcase name="testRenameRootTrue1" classname="fr.familiar.test.FMLRenameFeatureTest" time="0.036"/>
+    <testcase name="testRenameRootTrue2" classname="fr.familiar.test.FMLRenameFeatureTest" time="0.127"/>
+    <testcase name="testRenameConstraints1" classname="fr.familiar.test.FMLRenameFeatureTest" time="0.04"/>
+    <testcase name="testRenameConstraints2" classname="fr.familiar.test.FMLRenameFeatureTest" time="0.122"/>
+    <testcase name="testRenameConstraints3" classname="fr.familiar.test.FMLRenameFeatureTest" time="0.039"/>
+    <testcase name="testRenameTrue1" classname="fr.familiar.test.FMLRenameFeatureTest" time="0.126"/>
+    <testcase name="testRenameTrue2" classname="fr.familiar.test.FMLRenameFeatureTest" time="0.037"/>
+    <testcase name="testRenameRootFalse1" classname="fr.familiar.test.FMLRenameFeatureTest" time="0.127"/>
+    <testcase name="testRenameRootFalse2" classname="fr.familiar.test.FMLRenameFeatureTest" time="0.037"/>
+    <testcase name="testRenameFalse1" classname="fr.familiar.test.FMLRenameFeatureTest" time="0.123"/>
+    <testcase name="testRenameFalse2" classname="fr.familiar.test.FMLRenameFeatureTest" time="0.037"/>
+    <testcase name="testFMLRename1" classname="fr.familiar.test.FMLRenameFeatureTest" time="0.141"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLLongFeatureNameTest" time="0.41">
+    <testcase name="test1" classname="fr.familiar.test.FMLLongFeatureNameTest" time="0.254"/>
+    <testcase name="test2" classname="fr.familiar.test.FMLLongFeatureNameTest" time="0.156"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLCliquesTest" time="0.855">
+    <testcase name="testCliqueFar" classname="fr.familiar.test.FMLCliquesTest" time="0.049"/>
+    <testcase name="test1" classname="fr.familiar.test.FMLCliquesTest" time="0.173"/>
+    <testcase name="test2" classname="fr.familiar.test.FMLCliquesTest" time="0.041"/>
+    <testcase name="test3" classname="fr.familiar.test.FMLCliquesTest" time="0.16"/>
+    <testcase name="testMutexCliques1" classname="fr.familiar.test.FMLCliquesTest" time="0.045"/>
+    <testcase name="testBenavides" classname="fr.familiar.test.FMLCliquesTest" time="0.171"/>
+    <testcase name="testBenavides2" classname="fr.familiar.test.FMLCliquesTest" time="0.068"/>
+    <testcase name="testSegura" classname="fr.familiar.test.FMLCliquesTest" time="0.148"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLExtractTest" time="0.244">
+    <testcase name="testExtract1" classname="fr.familiar.test.FMLExtractTest" time="0.042">
+      <failure>java.lang.AssertionError: expected:&lt;5&gt; but was:&lt;1&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:555)
+	at org.junit.Assert.assertEquals(Assert.java:542)
+	at fr.familiar.test.FMLExtractTest.testExtract1(FMLExtractTest.java:52)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+    </testcase>
+    <testcase name="testExtract2" classname="fr.familiar.test.FMLExtractTest" time="0.152"/>
+    <testcase name="testExtract3" classname="fr.familiar.test.FMLExtractTest" time="0.05">
+      <failure>java.lang.AssertionError: Assertion errors: [ org.xtext.example.mydsl.fML.impl.ComplexCommandImpl@25f3178e (eProxyURI: dummy:/example1857945386.fml#//@cmds.4/@left/@assertion/@left),  org.xtext.example.mydsl.fML.impl.ComplexCommandImpl@590b4f1a (eProxyURI: dummy:/example1857945386.fml#//@cmds.9/@left/@assertion/@left)]
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertFalse(Assert.java:64)
+	at fr.familiar.test.FMLTest.tearDown(FMLTest.java:770)
+	at sun.reflect.GeneratedMethodAccessor81.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLMetaAttributeTest" time="0.701">
+    <testcase name="test2bis" classname="fr.familiar.test.FMLMetaAttributeTest" time="0.154"/>
+    <testcase name="test3bis" classname="fr.familiar.test.FMLMetaAttributeTest" time="0.037"/>
+    <testcase name="test1" classname="fr.familiar.test.FMLMetaAttributeTest" time="0.13"/>
+    <testcase name="test2" classname="fr.familiar.test.FMLMetaAttributeTest" time="0.037"/>
+    <testcase name="test3" classname="fr.familiar.test.FMLMetaAttributeTest" time="0.133"/>
+    <testcase name="test4" classname="fr.familiar.test.FMLMetaAttributeTest" time="0.036"/>
+    <testcase name="test5" classname="fr.familiar.test.FMLMetaAttributeTest" time="0.134"/>
+    <testcase name="testProgrammativeWay1" classname="fr.familiar.test.FMLMetaAttributeTest" time="0.04"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLMergeOperatorTest" time="5.973">
+    <testcase name="testDiff1" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.164"/>
+    <testcase name="testDiff2" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.065"/>
+    <testcase name="testDiff3" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.168"/>
+    <testcase name="testDiff4" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.182"/>
+    <testcase name="testDiff5" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.171"/>
+    <testcase name="testDiff6" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.173"/>
+    <testcase name="testJOTCE" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.2"/>
+    <testcase name="testJOT1" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.154"/>
+    <testcase name="testPaaS" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.17"/>
+    <testcase name="testIntersectionAND1" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.112"/>
+    <testcase name="testIntersectionAND2" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.237"/>
+    <testcase name="testIntersectionAND3" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.186"/>
+    <testcase name="testIntersectionAND4" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.169"/>
+    <testcase name="testIntersectionXOR1" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.112"/>
+    <testcase name="testIntersectionXOR2" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.232"/>
+    <testcase name="testUnionOR1bis" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.178"/>
+    <testcase name="testUnionAND5" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.179"/>
+    <testcase name="testUnionAND6" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.083"/>
+    <testcase name="testUnionAND7" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.196"/>
+    <testcase name="testUnionAND8" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.197"/>
+    <testcase name="testUnionXOR1" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.138"/>
+    <testcase name="testUnionOR1" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.217"/>
+    <testcase name="testUnionOR2" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.222"/>
+    <testcase name="testUnionOR3" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.222"/>
+    <testcase name="testUnionOR4" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.202"/>
+    <testcase name="testUnionOR5" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.166"/>
+    <testcase name="testNonValid1" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.149"/>
+    <testcase name="testECMFA1" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.109"/>
+    <testcase name="testECMFA2" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.217"/>
+    <testcase name="testECMFA3" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.215"/>
+    <testcase name="testECMFA4" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.368"/>
+    <testcase name="testIntersectionOR1" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.226"/>
+    <testcase name="testJOTInteractions" classname="fr.familiar.test.FMLMergeOperatorTest" time="0.194"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLAlaXPathTest" time="0.567">
+    <testcase name="testQualifiedFeature1" classname="fr.familiar.test.FMLAlaXPathTest" time="0.167"/>
+    <testcase name="testQualifiedFeatureStar1" classname="fr.familiar.test.FMLAlaXPathTest" time="0.045"/>
+    <testcase name="testQualifiedFeatureStarDiff1" classname="fr.familiar.test.FMLAlaXPathTest" time="0.148"/>
+    <testcase name="testQualifiedFeatureStarUnion" classname="fr.familiar.test.FMLAlaXPathTest" time="0.056"/>
+    <testcase name="testQualifiedFeatureStarUnion2" classname="fr.familiar.test.FMLAlaXPathTest" time="0.151"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLScriptTest" time="1.28">
+    <testcase name="testExternalScript1" classname="fr.familiar.test.FMLScriptTest" time="0.123">
+      <error>fr.familiar.interpreter.VariableNotExistingException: variable null does not exist
+	at fr.familiar.parser.FMLCommandInterpreter.getVariable(FMLCommandInterpreter.java:1733)
+	at fr.familiar.test.FMLTest.getFMVariable(FMLTest.java:426)
+	at fr.familiar.test.FMLScriptTest.testExternalScript1(FMLScriptTest.java:71)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+    </testcase>
+    <testcase name="testExternalScript2" classname="fr.familiar.test.FMLScriptTest" time="0.228">
+      <error>fr.familiar.interpreter.VariableNotExistingException: variable null does not exist
+	at fr.familiar.parser.FMLCommandInterpreter.getVariable(FMLCommandInterpreter.java:1733)
+	at fr.familiar.test.FMLTest.getFMVariable(FMLTest.java:426)
+	at fr.familiar.test.FMLScriptTest.testExternalScript2(FMLScriptTest.java:108)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+    </testcase>
+    <testcase name="testExternalScript3" classname="fr.familiar.test.FMLScriptTest" time="0.199"/>
+    <testcase name="testExternalScript4" classname="fr.familiar.test.FMLScriptTest" time="0.301">
+      <error>fr.familiar.interpreter.VariableNotExistingException: variable null does not exist
+	at fr.familiar.parser.FMLCommandInterpreter.getVariable(FMLCommandInterpreter.java:1733)
+	at fr.familiar.test.FMLTest.getFMVariable(FMLTest.java:426)
+	at fr.familiar.test.FMLScriptTest.testExternalScript4(FMLScriptTest.java:217)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+    </testcase>
+    <testcase name="testExternalScriptWithParameters1" classname="fr.familiar.test.FMLScriptTest" time="0.0" ignored="true"/>
+    <testcase name="testInternalScript1" classname="fr.familiar.test.FMLScriptTest" time="0.119"/>
+    <testcase name="testInternalScript2" classname="fr.familiar.test.FMLScriptTest" time="0.211"/>
+    <testcase name="testInternalScript3" classname="fr.familiar.test.FMLScriptTest" time="0.099"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLRefactoringTest" time="1.114">
+    <testsuite name="[0]" time="0.155">
+      <testcase name="testEquality[0]" classname="fr.familiar.test.FMLRefactoringTest" time="0.155"/>
+    </testsuite>
+    <testsuite name="[1]" time="0.052">
+      <testcase name="testEquality[1]" classname="fr.familiar.test.FMLRefactoringTest" time="0.052"/>
+    </testsuite>
+    <testsuite name="[2]" time="0.152">
+      <testcase name="testEquality[2]" classname="fr.familiar.test.FMLRefactoringTest" time="0.152"/>
+    </testsuite>
+    <testsuite name="[3]" time="0.056">
+      <testcase name="testEquality[3]" classname="fr.familiar.test.FMLRefactoringTest" time="0.056"/>
+    </testsuite>
+    <testsuite name="[4]" time="0.167">
+      <testcase name="testEquality[4]" classname="fr.familiar.test.FMLRefactoringTest" time="0.167"/>
+    </testsuite>
+    <testsuite name="[5]" time="0.052">
+      <testcase name="testEquality[5]" classname="fr.familiar.test.FMLRefactoringTest" time="0.052"/>
+    </testsuite>
+    <testsuite name="[6]" time="0.172">
+      <testcase name="testEquality[6]" classname="fr.familiar.test.FMLRefactoringTest" time="0.172"/>
+    </testsuite>
+    <testsuite name="[7]" time="0.056">
+      <testcase name="testEquality[7]" classname="fr.familiar.test.FMLRefactoringTest" time="0.056"/>
+    </testsuite>
+    <testsuite name="[8]" time="0.149">
+      <testcase name="testEquality[8]" classname="fr.familiar.test.FMLRefactoringTest" time="0.149"/>
+    </testsuite>
+    <testsuite name="[9]" time="0.102">
+      <testcase name="testEquality[9]" classname="fr.familiar.test.FMLRefactoringTest" time="0.102"/>
+    </testsuite>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLCAiSE2012DiffTest" time="0.775">
+    <testcase name="testWasowskiToGeneralization" classname="fr.familiar.test.FMLCAiSE2012DiffTest" time="0.281"/>
+    <testcase name="testRE07" classname="fr.familiar.test.FMLCAiSE2012DiffTest" time="0.0" ignored="true"/>
+    <testcase name="testWasowski2" classname="fr.familiar.test.FMLCAiSE2012DiffTest" time="0.214"/>
+    <testcase name="testWasowski3" classname="fr.familiar.test.FMLCAiSE2012DiffTest" time="0.184"/>
+    <testcase name="testWasowski4" classname="fr.familiar.test.FMLCAiSE2012DiffTest" time="0.0" ignored="true"/>
+    <testcase name="testWasowski5" classname="fr.familiar.test.FMLCAiSE2012DiffTest" time="0.0" ignored="true"/>
+    <testcase name="testSlicingAndDifferencing" classname="fr.familiar.test.FMLCAiSE2012DiffTest" time="0.096"/>
+    <testcase name="testWasowski" classname="fr.familiar.test.FMLCAiSE2012DiffTest" time="0.0" ignored="true"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLPhDThesisTest" time="0.632">
+    <testcase name="testFooExample" classname="fr.familiar.test.FMLPhDThesisTest" time="0.181"/>
+    <testcase name="testInternalBDDTranslation" classname="fr.familiar.test.FMLPhDThesisTest" time="0.156"/>
+    <testcase name="testFooSCPExample" classname="fr.familiar.test.FMLPhDThesisTest" time="0.062"/>
+    <testcase name="testAnomaliesExample" classname="fr.familiar.test.FMLPhDThesisTest" time="0.233"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLReaderWriterTest" time="0.668">
+    <testsuite name="[0]" time="0.098">
+      <testcase name="testReader1[0]" classname="fr.familiar.test.FMLReaderWriterTest" time="0.033"/>
+      <testcase name="testReader2[0]" classname="fr.familiar.test.FMLReaderWriterTest" time="0.065"/>
+    </testsuite>
+    <testsuite name="[1]" time="0.096">
+      <testcase name="testReader1[1]" classname="fr.familiar.test.FMLReaderWriterTest" time="0.033"/>
+      <testcase name="testReader2[1]" classname="fr.familiar.test.FMLReaderWriterTest" time="0.063"/>
+    </testsuite>
+    <testsuite name="[2]" time="0.093">
+      <testcase name="testReader1[2]" classname="fr.familiar.test.FMLReaderWriterTest" time="0.03"/>
+      <testcase name="testReader2[2]" classname="fr.familiar.test.FMLReaderWriterTest" time="0.063"/>
+    </testsuite>
+    <testsuite name="[3]" time="0.098">
+      <testcase name="testReader1[3]" classname="fr.familiar.test.FMLReaderWriterTest" time="0.033"/>
+      <testcase name="testReader2[3]" classname="fr.familiar.test.FMLReaderWriterTest" time="0.065"/>
+    </testsuite>
+    <testsuite name="[4]" time="0.099">
+      <testcase name="testReader1[4]" classname="fr.familiar.test.FMLReaderWriterTest" time="0.031"/>
+      <testcase name="testReader2[4]" classname="fr.familiar.test.FMLReaderWriterTest" time="0.068"/>
+    </testsuite>
+    <testsuite name="[5]" time="0.092">
+      <testcase name="testReader1[5]" classname="fr.familiar.test.FMLReaderWriterTest" time="0.03"/>
+      <testcase name="testReader2[5]" classname="fr.familiar.test.FMLReaderWriterTest" time="0.062"/>
+    </testsuite>
+    <testsuite name="[6]" time="0.092">
+      <testcase name="testReader1[6]" classname="fr.familiar.test.FMLReaderWriterTest" time="0.029"/>
+      <testcase name="testReader2[6]" classname="fr.familiar.test.FMLReaderWriterTest" time="0.063"/>
+    </testsuite>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLImplicationExclusionTest" time="0.888">
+    <testcase name="testImplication1" classname="fr.familiar.test.FMLImplicationExclusionTest" time="0.044"/>
+    <testcase name="testImplication2" classname="fr.familiar.test.FMLImplicationExclusionTest" time="0.16"/>
+    <testcase name="testImplication3" classname="fr.familiar.test.FMLImplicationExclusionTest" time="0.044"/>
+    <testcase name="testImplication4" classname="fr.familiar.test.FMLImplicationExclusionTest" time="0.17"/>
+    <testcase name="testImplication5" classname="fr.familiar.test.FMLImplicationExclusionTest" time="0.043"/>
+    <testcase name="testImplication6" classname="fr.familiar.test.FMLImplicationExclusionTest" time="0.17"/>
+    <testcase name="testExclusion1" classname="fr.familiar.test.FMLImplicationExclusionTest" time="0.042"/>
+    <testcase name="testExclusion2" classname="fr.familiar.test.FMLImplicationExclusionTest" time="0.174"/>
+    <testcase name="testImplicationExclusion1" classname="fr.familiar.test.FMLImplicationExclusionTest" time="0.041"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLSoSyMFraSCAtiTest" time="0.175">
+    <testcase name="test1" classname="fr.familiar.test.FMLSoSyMFraSCAtiTest" time="0.175"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.CarlosMiscTest" time="0.437">
+    <testcase name="test1" classname="fr.familiar.test.CarlosMiscTest" time="0.437">
+      <error>java.lang.OutOfMemoryError: Java heap space
+	at net.sf.javabdd.JFactory.initialize(JFactory.java:3191)
+	at net.sf.javabdd.JFactory.init(JFactory.java:44)
+	at splar.plugins.reasoners.bdd.javabdd.ReasoningWithBDD.&lt;init&gt;(ReasoningWithBDD.java:63)
+	at splar.plugins.reasoners.bdd.javabdd.FTReasoningWithBDD.&lt;init&gt;(FTReasoningWithBDD.java:37)
+	at splar.plugins.reasoners.bdd.javabdd.FMReasoningWithBDD.&lt;init&gt;(FMReasoningWithBDD.java:25)
+	at splar.plugins.reasoners.bdd.javabdd.FMReasoningWithBDD.&lt;init&gt;(FMReasoningWithBDD.java:21)
+	at fr.familiar.test.regression.SPLOTUtility.getSPLOTBDDReasoner(SPLOTUtility.java:38)
+	at fr.familiar.variable.FeatureModelVariable.getSPLOTBDDReasoner(FeatureModelVariable.java:900)
+	at fr.familiar.variable.FeatureModelVariable._countingBDDSPLOT(FeatureModelVariable.java:882)
+	at fr.familiar.variable.FeatureModelVariable.counting(FeatureModelVariable.java:835)
+	at fr.familiar.test.CarlosMiscTest.test1(CarlosMiscTest.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+
+</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLCoresTest" time="0.471">
+    <testcase name="testCore1" classname="fr.familiar.test.FMLCoresTest" time="0.223"/>
+    <testcase name="testCore2" classname="fr.familiar.test.FMLCoresTest" time="0.0" ignored="true"/>
+    <testcase name="testCore3" classname="fr.familiar.test.FMLCoresTest" time="0.045"/>
+    <testcase name="testScriptCore2" classname="fr.familiar.test.FMLCoresTest" time="0.164"/>
+    <testcase name="testScriptCore3" classname="fr.familiar.test.FMLCoresTest" time="0.038"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLUnmapTest" time="0.393">
+    <testcase name="testUnMap1" classname="fr.familiar.test.FMLUnmapTest" time="0.176"/>
+    <testcase name="testUnMap2" classname="fr.familiar.test.FMLUnmapTest" time="0.05">
+      <failure>java.lang.AssertionError: fm1 is actually valid!
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at fr.familiar.test.FMLUnmapTest.testUnMap2(FMLUnmapTest.java:89)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+    </testcase>
+    <testcase name="testUnMap3" classname="fr.familiar.test.FMLUnmapTest" time="0.167"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLMergeHierarchyTest" time="1.261">
+    <testsuite name="[0]" time="0.08">
+      <testcase name="repeat[0]" classname="fr.familiar.test.FMLMergeHierarchyTest" time="0.08"/>
+    </testsuite>
+    <testsuite name="[1]" time="0.175">
+      <testcase name="repeat[1]" classname="fr.familiar.test.FMLMergeHierarchyTest" time="0.175"/>
+    </testsuite>
+    <testsuite name="[2]" time="0.061">
+      <testcase name="repeat[2]" classname="fr.familiar.test.FMLMergeHierarchyTest" time="0.061"/>
+    </testsuite>
+    <testsuite name="[3]" time="0.169">
+      <testcase name="repeat[3]" classname="fr.familiar.test.FMLMergeHierarchyTest" time="0.169"/>
+    </testsuite>
+    <testsuite name="[4]" time="0.062">
+      <testcase name="repeat[4]" classname="fr.familiar.test.FMLMergeHierarchyTest" time="0.062"/>
+    </testsuite>
+    <testsuite name="[5]" time="0.173">
+      <testcase name="repeat[5]" classname="fr.familiar.test.FMLMergeHierarchyTest" time="0.173"/>
+    </testsuite>
+    <testsuite name="[6]" time="0.07">
+      <testcase name="repeat[6]" classname="fr.familiar.test.FMLMergeHierarchyTest" time="0.07"/>
+    </testsuite>
+    <testsuite name="[7]" time="0.157">
+      <testcase name="repeat[7]" classname="fr.familiar.test.FMLMergeHierarchyTest" time="0.157"/>
+    </testsuite>
+    <testsuite name="[8]" time="0.084">
+      <testcase name="repeat[8]" classname="fr.familiar.test.FMLMergeHierarchyTest" time="0.084"/>
+    </testsuite>
+    <testsuite name="[9]" time="0.169">
+      <testcase name="repeat[9]" classname="fr.familiar.test.FMLMergeHierarchyTest" time="0.169"/>
+    </testsuite>
+    <testsuite name="[10]" time="0.061">
+      <testcase name="repeat[10]" classname="fr.familiar.test.FMLMergeHierarchyTest" time="0.061"/>
+    </testsuite>
+  </testsuite>
+  <testcase name="fr.familiar.test.BDDOperationsTest" classname="fr.familiar.test.BDDOperationsTest" time="0.0" ignored="true"/>
+  <testsuite name="fr.familiar.test.FMLConfigurationFMWithMultipleGroups" time="0.514">
+    <testcase name="testConfigurationWithMultipleGroupsSelectsByDefaultMandatoryFeaturesWithFeatureIDE" classname="fr.familiar.test.FMLConfigurationFMWithMultipleGroups" time="0.265">
+      <error>java.lang.OutOfMemoryError: Java heap space
+	at net.sf.javabdd.JFactory.initialize(JFactory.java:3191)
+	at net.sf.javabdd.JFactory.init(JFactory.java:44)
+	at splar.plugins.reasoners.bdd.javabdd.ReasoningWithBDD.&lt;init&gt;(ReasoningWithBDD.java:63)
+	at splar.plugins.reasoners.bdd.javabdd.FTReasoningWithBDD.&lt;init&gt;(FTReasoningWithBDD.java:37)
+	at splar.plugins.reasoners.bdd.javabdd.FMReasoningWithBDD.&lt;init&gt;(FMReasoningWithBDD.java:25)
+	at splar.plugins.reasoners.bdd.javabdd.FMReasoningWithBDD.&lt;init&gt;(FMReasoningWithBDD.java:21)
+	at fr.familiar.test.regression.SPLOTUtility.getSPLOTBDDReasoner(SPLOTUtility.java:38)
+	at fr.familiar.variable.FeatureModelVariable.mkSPLOTFla(FeatureModelVariable.java:1797)
+	at fr.familiar.test.FMLConfigurationFMWithMultipleGroups.testConfigurationWithMultipleGroupsSelectsByDefaultMandatoryFeaturesWithFeatureIDE(FMLConfigurationFMWithMultipleGroups.java:17)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+
+</error>
+    </testcase>
+    <testcase name="testConfigurationWithMultipleGroupsSelectsByDefaultMandatoryFeaturesWithSPLOT" classname="fr.familiar.test.FMLConfigurationFMWithMultipleGroups" time="0.249">
+      <error>java.lang.OutOfMemoryError: Java heap space
+	at net.sf.javabdd.JFactory.initialize(JFactory.java:3191)
+	at net.sf.javabdd.JFactory.init(JFactory.java:44)
+	at splar.plugins.reasoners.bdd.javabdd.ReasoningWithBDD.&lt;init&gt;(ReasoningWithBDD.java:63)
+	at splar.plugins.reasoners.bdd.javabdd.FTReasoningWithBDD.&lt;init&gt;(FTReasoningWithBDD.java:37)
+	at splar.plugins.reasoners.bdd.javabdd.FMReasoningWithBDD.&lt;init&gt;(FMReasoningWithBDD.java:25)
+	at splar.plugins.reasoners.bdd.javabdd.FMReasoningWithBDD.&lt;init&gt;(FMReasoningWithBDD.java:21)
+	at fr.familiar.test.regression.SPLOTUtility.getSPLOTBDDReasoner(SPLOTUtility.java:38)
+	at fr.familiar.variable.FeatureModelVariable.mkSPLOTFla(FeatureModelVariable.java:1797)
+	at fr.familiar.test.FMLConfigurationFMWithMultipleGroups.testConfigurationWithMultipleGroupsSelectsByDefaultMandatoryFeaturesWithSPLOT(FMLConfigurationFMWithMultipleGroups.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+
+</error>
+    </testcase>
+  </testsuite>
+  <testcase name="fr.familiar.test.FMLIsValid2Test" classname="fr.familiar.test.FMLIsValid2Test" time="0.0" ignored="true"/>
+  <testsuite name="fr.familiar.test.FMLOntologicalASETest" time="0.737">
+    <testcase name="testFASE" classname="fr.familiar.test.FMLOntologicalASETest" time="0.223"/>
+    <testcase name="testFG" classname="fr.familiar.test.FMLOntologicalASETest" time="0.073"/>
+    <testcase name="testIllustrativeExamples2" classname="fr.familiar.test.FMLOntologicalASETest" time="0.2">
+      <failure>java.lang.AssertionError: expected:&lt;REFACTORING&gt; but was:&lt;ARBITRARY&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at fr.familiar.test.FMLOntologicalASETest.testIllustrativeExamples2(FMLOntologicalASETest.java:271)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+    </testcase>
+    <testcase name="testIllustrativeExamples" classname="fr.familiar.test.FMLOntologicalASETest" time="0.241">
+      <failure>java.lang.AssertionError: expected:&lt;REFACTORING&gt; but was:&lt;ARBITRARY&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:118)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at fr.familiar.test.FMLOntologicalASETest.testIllustrativeExamples(FMLOntologicalASETest.java:184)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLtoPrefuseTest" time="0.251">
+    <testcase name="testTree1" classname="fr.familiar.test.FMLtoPrefuseTest" time="0.251"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLSupportTest" time="0.189">
+    <testcase name="testSupp1" classname="fr.familiar.test.FMLSupportTest" time="0.189"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLConfigurationBDDTest" time="1.829">
+    <testcase name="testMergeAndSyntacticRepresentationAreConsistent" classname="fr.familiar.test.FMLConfigurationBDDTest" time="0.235">
+      <failure>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at fr.familiar.test.FMLConfigurationBDDTest.testMergeAndSyntacticRepresentationAreConsistent(FMLConfigurationBDDTest.java:168)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+    </testcase>
+    <testcase name="testNewConfigurationIsValid" classname="fr.familiar.test.FMLConfigurationBDDTest" time="0.174"/>
+    <testcase name="testInit1" classname="fr.familiar.test.FMLConfigurationBDDTest" time="0.153"/>
+    <testcase name="testInit2" classname="fr.familiar.test.FMLConfigurationBDDTest" time="0.045"/>
+    <testcase name="testInit3" classname="fr.familiar.test.FMLConfigurationBDDTest" time="0.163"/>
+    <testcase name="testMerge" classname="fr.familiar.test.FMLConfigurationBDDTest" time="0.125"/>
+    <testcase name="test1" classname="fr.familiar.test.FMLConfigurationBDDTest" time="0.151"/>
+    <testcase name="testConflicts1" classname="fr.familiar.test.FMLConfigurationBDDTest" time="0.042"/>
+    <testcase name="testConflicts2" classname="fr.familiar.test.FMLConfigurationBDDTest" time="0.151"/>
+    <testcase name="testConflicts3" classname="fr.familiar.test.FMLConfigurationBDDTest" time="0.053"/>
+    <testcase name="testConflicts4" classname="fr.familiar.test.FMLConfigurationBDDTest" time="0.153"/>
+    <testcase name="testNewConfigurationIsNotCompleteNorValid" classname="fr.familiar.test.FMLConfigurationBDDTest" time="0.042"/>
+    <testcase name="testDeselectOrderShouldDeselectPicasa" classname="fr.familiar.test.FMLConfigurationBDDTest" time="0.148"/>
+    <testcase name="testNewConfigurationIsNotComplete" classname="fr.familiar.test.FMLConfigurationBDDTest" time="0.042"/>
+    <testcase name="testNewConfigurationIsComplete" classname="fr.familiar.test.FMLConfigurationBDDTest" time="0.152">
+      <failure>java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertTrue(Assert.java:52)
+	at fr.familiar.test.FMLConfigurationBDDTest.testNewConfigurationIsComplete(FMLConfigurationBDDTest.java:126)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="fr.familiar.test.PacogenIOperationTest" time="5.757">
+    <testcase name="testPaco1" classname="fr.familiar.test.PacogenIOperationTest" time="2.766">
+      <error>java.lang.NullPointerException
+	at fr.familiar.variable.ConfigurationVariableSPLOTImpl.applyBasicDecisions(ConfigurationVariableSPLOTImpl.java:176)
+	at fr.familiar.operations.PacogenLauncher.confBuilder(PacogenLauncher.java:204)
+	at fr.familiar.operations.PacogenLauncher.launchPacogen(PacogenLauncher.java:152)
+	at fr.familiar.test.PacogenIOperationTest.testPaco1(PacogenIOperationTest.java:37)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+    </testcase>
+    <testcase name="testPaco2" classname="fr.familiar.test.PacogenIOperationTest" time="0.213"/>
+    <testcase name="testPaco3" classname="fr.familiar.test.PacogenIOperationTest" time="2.778">
+      <error>java.lang.NullPointerException
+	at fr.familiar.variable.ConfigurationVariableSPLOTImpl.applyBasicDecisions(ConfigurationVariableSPLOTImpl.java:176)
+	at fr.familiar.operations.PacogenLauncher.confBuilder(PacogenLauncher.java:204)
+	at fr.familiar.operations.PacogenLauncher.launchPacogen(PacogenLauncher.java:152)
+	at fr.familiar.test.PacogenIOperationTest.testPaco3(PacogenIOperationTest.java:86)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLCountingConfigsTest" time="3.32">
+    <testcase name="testCountingFMLaptop" classname="fr.familiar.test.FMLCountingConfigsTest" time="3.32">
+      <error>java.lang.OutOfMemoryError: Java heap space
+
+</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLMergeOperationsTest" time="1.422">
+    <testcase name="testJOTCrossProduct1" classname="fr.familiar.test.FMLMergeOperationsTest" time="0.225"/>
+    <testcase name="testSC1" classname="fr.familiar.test.FMLMergeOperationsTest" time="0.131"/>
+    <testcase name="testSC2" classname="fr.familiar.test.FMLMergeOperationsTest" time="0.171"/>
+    <testcase name="testJOT1" classname="fr.familiar.test.FMLMergeOperationsTest" time="0.0" ignored="true"/>
+    <testcase name="testMST1" classname="fr.familiar.test.FMLMergeOperationsTest" time="0.182"/>
+    <testcase name="testSLE1" classname="fr.familiar.test.FMLMergeOperationsTest" time="0.072"/>
+    <testcase name="testECMFA1" classname="fr.familiar.test.FMLMergeOperationsTest" time="0.197"/>
+    <testcase name="testECMFA2" classname="fr.familiar.test.FMLMergeOperationsTest" time="0.17"/>
+    <testcase name="testECMFA3" classname="fr.familiar.test.FMLMergeOperationsTest" time="0.075"/>
+    <testcase name="testECMFA4" classname="fr.familiar.test.FMLMergeOperationsTest" time="0.199"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLStringTest" time="0.198">
+    <testcase name="testString1" classname="fr.familiar.test.FMLStringTest" time="0.198"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMMergeSunionKeepSemanticInConfiguration" time="0.3">
+    <testcase name="testSimpleMerge" classname="fr.familiar.test.FMMergeSunionKeepSemanticInConfiguration" time="0.069"/>
+    <testcase name="testMergeAndConfigurationS1" classname="fr.familiar.test.FMMergeSunionKeepSemanticInConfiguration" time="0.231">
+      <failure>java.lang.AssertionError: expected:&lt;3.0&gt; but was:&lt;1.0&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:743)
+	at org.junit.Assert.assertEquals(Assert.java:494)
+	at org.junit.Assert.assertEquals(Assert.java:592)
+	at fr.familiar.test.FMMergeSunionKeepSemanticInConfiguration.testMergeAndConfigurationS1(FMMergeSunionKeepSemanticInConfiguration.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:39)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:47)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:44)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:271)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:70)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:50)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:50)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:467)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:683)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:390)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:197)
+
+</failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="fr.familiar.test.VideoSurveillanceICECCSTest" time="0.611">
+    <testcase name="testConfigsTalk" classname="fr.familiar.test.VideoSurveillanceICECCSTest" time="0.158"/>
+    <testcase name="testCleanup" classname="fr.familiar.test.VideoSurveillanceICECCSTest" time="0.453"/>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLConfigurationMiscTest" time="0.363">
+    <testcase name="testSelectingMandatoryFeaturesWontRaiseErrorsInConfig" classname="fr.familiar.test.FMLConfigurationMiscTest" time="0.363">
+      <error>java.lang.OutOfMemoryError: Java heap space
+
+</error>
+    </testcase>
+  </testsuite>
+  <testsuite name="fr.familiar.test.FMLAggregateTest" time="2.179">
+    <testcase name="testMapFailed1" classname="fr.familiar.test.FMLAggregateTest" time="0.0" ignored="true"/>
+    <testcase name="withoutConstraints" classname="fr.familiar.test.FMLAggregateTest" time="0.159"/>
+    <testcase name="unamedAggregatedFM" classname="fr.familiar.test.FMLAggregateTest" time="0.041"/>
+    <testcase name="withConstraints" classname="fr.familiar.test.FMLAggregateTest" time="0.148"/>
+    <testcase name="withInternalConstraints1" classname="fr.familiar.test.FMLAggregateTest" time="0.043"/>
+    <testcase name="withInternalConstraints2" classname="fr.familiar.test.FMLAggregateTest" time="0.138"/>
+    <testcase name="testMap1" classname="fr.familiar.test.FMLAggregateTest" time="0.044"/>
+    <testcase name="testMap2" classname="fr.familiar.test.FMLAggregateTest" time="0.143"/>
+    <testcase name="testMap3" classname="fr.familiar.test.FMLAggregateTest" time="0.047"/>
+    <testcase name="testMap4" classname="fr.familiar.test.FMLAggregateTest" time="0.146"/>
+    <testcase name="testMap6" classname="fr.familiar.test.FMLAggregateTest" time="0.046"/>
+    <testcase name="testMap7" classname="fr.familiar.test.FMLAggregateTest" time="0.0" ignored="true"/>
+    <testcase name="testMap8" classname="fr.familiar.test.FMLAggregateTest" time="0.17"/>
+    <testcase name="aggregateUnvalid1" classname="fr.familiar.test.FMLAggregateTest" time="0.045"/>
+    <testcase name="testSpecificationConstraints" classname="fr.familiar.test.FMLAggregateTest" time="0.138"/>
+    <testcase name="testAggregate1" classname="fr.familiar.test.FMLAggregateTest" time="0.052"/>
+    <testcase name="testAggregate2" classname="fr.familiar.test.FMLAggregateTest" time="0.142"/>
+    <testcase name="testAggregate7" classname="fr.familiar.test.FMLAggregateTest" time="0.0" ignored="true"/>
+    <testcase name="testMap7bis" classname="fr.familiar.test.FMLAggregateTest" time="0.0" ignored="true"/>
+    <testcase name="aggregateModularWay" classname="fr.familiar.test.FMLAggregateTest" time="0.315"/>
+    <testcase name="cleanup1" classname="fr.familiar.test.FMLAggregateTest" time="0.211"/>
+    <testcase name="testMap7bis2" classname="fr.familiar.test.FMLAggregateTest" time="0.0" ignored="true"/>
+    <testcase name="testAddConstraint1" classname="fr.familiar.test.FMLAggregateTest" time="0.151"/>
+  </testsuite>
+</testrun>
