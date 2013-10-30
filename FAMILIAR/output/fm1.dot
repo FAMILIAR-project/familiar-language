@@ -1,26 +1,30 @@
-digraph fm {
+digraph fm1 {
 graph [rankdir=TB];
 node [shape=box];
 edge [arrowhead=normal];
-92[label="C&X&Z",]
-93[label="A&B&E&F",]
-94[label="I",]
-95[label="H",]
-97[label="Y",]
-98[label="KK",]
-100[label="G",]
-102[label="OR",shape="triangle",style="filled",color="black",fontcolor="white"]
-93->102[arrowhead=none];
-102->94[arrowhead=none];
-102->98[arrowhead=none];
-103[label="OR",shape="triangle",style="filled",color="black",fontcolor="white"]
-93->103[arrowhead=none];
-103->92[arrowhead=none];
-103->95[arrowhead=none];
-92->97[arrowhead=odot];
-104[label="OR",shape="triangle",style="filled",color="black",fontcolor="white"]
-93->104[arrowhead=none];
-104->94[arrowhead=none];
-104->95[arrowhead=none];
-104->100[arrowhead=none];
+30[label="I",]
+31[label="H",]
+32[label="B",]
+33[label="K",]
+34[label="C",]
+35[label="F",]
+36[label="J",]
+37[label="A",]
+38[label="D",]
+40[label="E",]
+42[label="G",]
+37->38[arrowhead=odot];
+44[label="XOR",shape="triangle",width=0.3]
+38->44[arrowhead=none];
+44->40[arrowhead=none];
+44->35[arrowhead=none];
+44->42[arrowhead=none];
+45[label="OR",shape="triangle",style="filled",color="black",fontcolor="white"]
+34->45[arrowhead=none];
+45->36[arrowhead=none];
+45->30[arrowhead=none];
+45->31[arrowhead=none];
+45->33[arrowhead=none];
+37->32[arrowhead=dot];
+37->34[arrowhead=dot];
 }

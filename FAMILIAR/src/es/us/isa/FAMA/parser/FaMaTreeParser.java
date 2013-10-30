@@ -1,24 +1,31 @@
 // $ANTLR : "TreeParser.g" -> "FaMaTreeParser.java"$
 
 	package es.us.isa.FAMA.parser;    
-	import java.util.*;	
-	import inria.FAMILIAR.Model.*;
-	import inria.FAMILIAR.Model.Domain.*;
-	
-	import es.us.isa.util.*;
-	import es.us.isa.FAMA.parser.*;
+	import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Map;
 
-import antlr.TreeParser;
-import antlr.Token;
-import antlr.collections.AST;
-import antlr.RecognitionException;
-import antlr.ANTLRException;
 import antlr.NoViableAltException;
-import antlr.MismatchedTokenException;
-import antlr.SemanticException;
-import antlr.collections.impl.BitSet;
-import antlr.ASTPair;
-import antlr.collections.impl.ASTArray;
+import antlr.RecognitionException;
+import antlr.collections.AST;
+import es.us.isa.util.Tree;
+import fr.familiar.attributedfm.AttributedFeatureModel;
+import fr.familiar.attributedfm.ComplexConstraint;
+import fr.familiar.attributedfm.Constraint;
+import fr.familiar.attributedfm.ExcludesDependency;
+import fr.familiar.attributedfm.Feature;
+import fr.familiar.attributedfm.GenericAttribute;
+import fr.familiar.attributedfm.Relation;
+import fr.familiar.attributedfm.RequiresDependency;
+import fr.familiar.attributedfm.domain.Cardinality;
+import fr.familiar.attributedfm.domain.Domain;
+import fr.familiar.attributedfm.domain.ObjectDomain;
+import fr.familiar.attributedfm.domain.Range;
+import fr.familiar.attributedfm.domain.RangeIntegerDomain;
+import fr.familiar.attributedfm.domain.SetIntegerDomain;
 
 
 public class FaMaTreeParser extends antlr.TreeParser       implements FaMaTreeParserTokenTypes

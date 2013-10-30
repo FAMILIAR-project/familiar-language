@@ -1,13 +1,7 @@
 // $ANTLR : "TreeParser.g" -> "FaMaTreeParser.java"$
 
 	package es.us.isa.FAMA.parser;    
-	import java.util.*;	
-	import inria.FAMILIAR.Model.*;
-	import inria.FAMILIAR.Model.Domain.*;
 	
-	import es.us.isa.util.*;
-	import es.us.isa.FAMA.parser.*;
-
 public interface FaMaTreeParserTokenTypes {
 	int EOF = 1;
 	int NULL_TREE_LOOKAHEAD = 3;

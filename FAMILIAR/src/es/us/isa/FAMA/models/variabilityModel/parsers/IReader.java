@@ -19,7 +19,7 @@
  * Created on 04-Dec-2004
  */
 package es.us.isa.FAMA.models.variabilityModel.parsers;
-import inria.FAMILIAR.Model.AttributedFeatureModel;
+import fr.familiar.attributedfm.AttributedFeatureModel;
 
 /**
  * @author trinidad

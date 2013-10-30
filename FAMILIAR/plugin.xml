@@ -5,7 +5,7 @@
          point="org.eclipse.ui.views">
       <view
             category="FAMILIAR.category1"
-            class="fr.unice.polytech.modalis.familiar.views.featureide.VariableView"
+            class="fr.familiar.views.featureide.VariableView"
             icon="icons/actions/help-about-2.ico"
             id="FAMILIAR.varView"
             name="%view.name"
@@ -33,7 +33,7 @@
             id="FAMILIAR.mode.normal"
             name="%command.name.0">
          <defaultHandler
-               class="fr.unice.polytech.modalis.familiar.handlers.NormalHandler">
+               class="fr.familiar.handlers.NormalHandler">
             <parameter
                   name="FAMILIAR.parameter1"
                   value="FAMILIAR.parameter1">
@@ -45,7 +45,7 @@
             id="FAMILIAR.mode.strict"
             name="%command.name.1">
          <defaultHandler
-               class="fr.unice.polytech.modalis.familiar.handlers.StrictHandler">
+               class="fr.familiar.handlers.StrictHandler">
             <parameter
                   name="FAMILIAR.parameter2"
                   value="FAMILIAR.parameter2">
@@ -57,7 +57,7 @@
             id="FAMILIAR.mode.warning"
             name="%command.name.2">
          <defaultHandler
-               class="fr.unice.polytech.modalis.familiar.handlers.WarningHandler">
+               class="fr.familiar.handlers.WarningHandler">
             <parameter
                   name="FAMILIAR.parameter3"
                   value="FAMILIAR.parameter3">
@@ -68,7 +68,7 @@
    <extension
          point="org.eclipse.ui.handlers">
       <handler
-            class="fr.unice.polytech.modalis.familiar.handlers.TopLevelHandler"
+            class="fr.familiar.handlers.TopLevelHandler"
             commandId="FAMILIAR.commands.sampleCommand">
       </handler>
    </extension>
@@ -131,7 +131,7 @@
    <extension
          point="org.eclipse.ui.editors">
       <editor
-            class="fr.unice.polytech.modalis.familiar.gui.featureide.FMConfigurationEditor"
+            class="fr.familiar.gui.featureide.FMConfigurationEditor"
             default="false"
             filenames="*.equation"
             id="FAMILIAR.FMConfigurationEditor"
@@ -142,7 +142,7 @@
          point="org.eclipse.ui.preferencePages">
       <page
             category="familiar.preferences.FamiliarPreferencePage"
-            class="fr.unice.polytech.modalis.familiar.views.featureide.FamiliarPreferencesPage"
+            class="fr.familiar.views.featureide.FamiliarPreferencesPage"
             id="FAMILIAR.preference"
             name="%page.name.0">
       </page>
@@ -161,7 +161,7 @@
       </category>
       <wizard
             category="FAMILIAR"
-            class="fr.unice.polytech.modalis.familiar.wizard.SampleNewWizard"
+            class="fr.familiar.wizard.SampleNewWizard"
             icon="icons/sample.gif"
             id="familiar.wizards.SampleNewWizard"
             name="FAMILIAR script">
@@ -182,7 +182,7 @@
             </separator>
          </menu>
          <action
-               class="fr.unice.polytech.modalis.familiar.views.featureide.FAMILIAREclipseExecutor"
+               class="fr.familiar.views.featureide.FAMILIAREclipseExecutor"
                enablesFor="1"
                id="FAMILIAR.newAction"
                label="Execute fml..."

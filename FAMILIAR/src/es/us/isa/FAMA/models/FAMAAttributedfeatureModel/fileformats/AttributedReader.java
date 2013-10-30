@@ -17,12 +17,11 @@
  */
 package es.us.isa.FAMA.models.FAMAAttributedfeatureModel.fileformats;
 
-import inria.FAMILIAR.Model.AttributedFeatureModel;
-
 import java.io.File;
 
 import es.us.isa.FAMA.models.variabilityModel.parsers.IReader;
 import es.us.isa.FAMA.parser.FMFParser;
+import fr.familiar.attributedfm.AttributedFeatureModel;
 
 public class AttributedReader implements IReader {
 

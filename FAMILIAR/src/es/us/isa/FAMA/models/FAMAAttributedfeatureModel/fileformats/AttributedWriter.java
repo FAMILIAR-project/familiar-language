@@ -17,18 +17,6 @@
 
 package es.us.isa.FAMA.models.FAMAAttributedfeatureModel.fileformats;
 
-import inria.FAMILIAR.Model.AttributedFeatureModel;
-import inria.FAMILIAR.Model.Constraint;
-import inria.FAMILIAR.Model.Feature;
-import inria.FAMILIAR.Model.GenericAttribute;
-import inria.FAMILIAR.Model.Relation;
-import inria.FAMILIAR.Model.Domain.Cardinality;
-import inria.FAMILIAR.Model.Domain.Domain;
-import inria.FAMILIAR.Model.Domain.IntegerDomain;
-import inria.FAMILIAR.Model.Domain.ObjectDomain;
-import inria.FAMILIAR.Model.Domain.Range;
-import inria.FAMILIAR.Model.Domain.RangeIntegerDomain;
-
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
@@ -37,6 +25,17 @@ import java.util.Collection;
 import java.util.Iterator;
 
 import es.us.isa.FAMA.models.variabilityModel.parsers.IWriter;
+import fr.familiar.attributedfm.AttributedFeatureModel;
+import fr.familiar.attributedfm.Constraint;
+import fr.familiar.attributedfm.Feature;
+import fr.familiar.attributedfm.GenericAttribute;
+import fr.familiar.attributedfm.Relation;
+import fr.familiar.attributedfm.domain.Cardinality;
+import fr.familiar.attributedfm.domain.Domain;
+import fr.familiar.attributedfm.domain.IntegerDomain;
+import fr.familiar.attributedfm.domain.ObjectDomain;
+import fr.familiar.attributedfm.domain.Range;
+import fr.familiar.attributedfm.domain.RangeIntegerDomain;
 
 public class AttributedWriter implements IWriter {
 

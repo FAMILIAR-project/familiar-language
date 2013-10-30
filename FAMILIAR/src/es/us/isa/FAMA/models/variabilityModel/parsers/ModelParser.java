@@ -17,7 +17,7 @@
  */
 package es.us.isa.FAMA.models.variabilityModel.parsers;
 
-import inria.FAMILIAR.Model.AttributedFeatureModel;
+import fr.familiar.attributedfm.AttributedFeatureModel;
 
 import java.util.Collection;
 

@@ -17,8 +17,6 @@
 
 package es.us.isa.FAMA.parser;
 
-import inria.FAMILIAR.Model.AttributedFeatureModel;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.StringReader;
@@ -30,6 +28,7 @@ import antlr.TokenStreamException;
 import antlr.collections.AST;
 import es.us.isa.util.Node;
 import es.us.isa.util.Tree;
+import fr.familiar.attributedfm.AttributedFeatureModel;
 
 public class FMFParser {
 
