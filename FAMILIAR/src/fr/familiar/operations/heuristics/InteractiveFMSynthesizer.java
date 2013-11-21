@@ -109,19 +109,19 @@ public class InteractiveFMSynthesizer extends Observable{
 		if (this.parentSimilarityMetric.isMutexGroupsRequired()) {
 			mutexGroups = originalFmv.computeMutexGroups();
 		} else {
-			mutexGroups = null;
+			mutexGroups = new HashSet<FGroup>();
 		}
 		
 		if (this.parentSimilarityMetric.isXorGroupsRequired()) {
 			xorGroups = originalFmv.computeXorGroups();	
 		} else {
-			xorGroups = null;
+			xorGroups = new HashSet<FGroup>();
 		}
 		
 		if (this.parentSimilarityMetric.isOrGroupsRequired()) {
 			orGroups = originalFmv.computeOrGroups();	
 		} else {
-			orGroups = null;
+			orGroups = new HashSet<FGroup>();
 		}
 		
 		// Compute clusters and weights

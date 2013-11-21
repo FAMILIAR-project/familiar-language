@@ -12,6 +12,8 @@ import fr.familiar.operations.heuristics.ConfigurableHeuristicPlugin;
 import fr.familiar.operations.heuristics.Heuristic;
 import fr.familiar.operations.heuristics.KSynthesisPlugin;
 import fr.familiar.operations.heuristics.KSynthesisPluginLoader;
+import fr.familiar.test.FMLTest;
+import fr.familiar.variable.FeatureModelVariable;
 import gsd.graph.ImplicationGraph;
 
 public class HeuristicPluginTest {
@@ -32,4 +34,5 @@ public class HeuristicPluginTest {
 		}	
 		
 	}
+	
 }
