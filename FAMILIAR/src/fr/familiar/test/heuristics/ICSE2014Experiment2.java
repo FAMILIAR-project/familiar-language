@@ -10,7 +10,9 @@ import org.apache.commons.collections15.map.HashedMap;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import fr.familiar.operations.heuristics.Heuristic;
 import fr.familiar.operations.heuristics.InteractiveFMSynthesizer;
+import fr.familiar.operations.heuristics.KSynthesisPlugin;
 import fr.familiar.operations.heuristics.metrics.AlwaysZeroMetric;
 import fr.familiar.operations.heuristics.metrics.FeatureSimilarityMetric;
 import fr.familiar.operations.heuristics.metrics.ImplicationGraphMetrics;
@@ -200,7 +202,7 @@ public class ICSE2014Experiment2 extends KSynthesisTest {
 	private void testTopN(List<FeatureModelVariable> fms, int nStart, int nEnd, boolean reduceBIG) {
 
 
-		for (FeatureSimilarityMetric metric : metrics) {
+		for (Heuristic metric : metrics) {
 			System.out.println(metric);
 
 			// Init map gathering results
@@ -267,7 +269,7 @@ public class ICSE2014Experiment2 extends KSynthesisTest {
 		}
 		System.out.println("Nb of parents : " + nbOfFeatures);
 
-		for (FeatureSimilarityMetric metric : metrics) {
+		for (Heuristic metric : metrics) {
 			double sumNbOfFeaturesInTopN = 0;
 			int nbIterations = metric instanceof RandomMetric ? RANDOM_ITERATIONS : 1; 
 
@@ -277,7 +279,7 @@ public class ICSE2014Experiment2 extends KSynthesisTest {
 				for (FeatureModelVariable fm : fms) {
 
 					InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(
-							fm, metric, new ArrayList<FeatureSimilarityMetric>(), 
+							fm, metric, null, 
 							null, -1);
 
 					nbOfFeaturesInTopNIter += countTopVariableNParents(fm, synthesizer);
@@ -293,7 +295,7 @@ public class ICSE2014Experiment2 extends KSynthesisTest {
 
 	private void testClusters(List<FeatureModelVariable> fms, boolean reduceBIG) {
 
-		for (FeatureSimilarityMetric metric : metrics) {
+		for (Heuristic metric : metrics) {
 			System.out.println(metric);
 			double threshold = clusteringThresholds.get(metric);
 

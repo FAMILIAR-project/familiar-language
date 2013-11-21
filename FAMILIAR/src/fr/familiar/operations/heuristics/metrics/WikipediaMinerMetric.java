@@ -1,32 +1,20 @@
 package fr.familiar.operations.heuristics.metrics;
 
-import fr.familiar.experimental.FGroup;
-import gsd.graph.ImplicationGraph;
-
-import java.util.Set;
+import java.io.File;
 
 import org.wikipedia.miner.comparison.ArticleComparer;
 import org.wikipedia.miner.model.Article;
 import org.wikipedia.miner.model.Wikipedia;
+import org.wikipedia.miner.util.WikipediaConfiguration;
 
-public class WikipediaMinerMetric implements FeatureSimilarityMetric {
+import fr.familiar.operations.heuristics.ConfigurableHeuristicPlugin;
+import fr.familiar.operations.heuristics.SimpleHeuristic;
+
+public class WikipediaMinerMetric extends SimpleHeuristic implements ConfigurableHeuristicPlugin {
 
 	private Wikipedia wikipedia;
 	private ArticleComparer comparer;
 
-
-	/**
-	 * 
-	 * @param wikipediaDB : path to the database template file (wikipedia-template.xml)
-	 */
-	public WikipediaMinerMetric(WikipediaMinerDB wikipediaDB) {
-		this.wikipedia = wikipediaDB.getWikipedia();
-		try {
-			comparer = new ArticleComparer(wikipedia);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
 
 	@Override
 	public String toString() {
@@ -34,12 +22,13 @@ public class WikipediaMinerMetric implements FeatureSimilarityMetric {
 	}
 
 	@Override
-	public double similarity(ImplicationGraph<String> implicationGraph, Set<FGroup> xorGroups, Set<FGroup> orGroups, String featureName1, String featureName2) {
+//	public double similarity(ImplicationGraph<String> implicationGraph, Set<FGroup> xorGroups, Set<FGroup> orGroups, String featureName1, String featureName2) {
+	public double similarity(String child, String parent) {
 		double relatedness = 0;
 
 		// Preprocessing
-		String f1 = featureName1.replaceAll("(\\p{Lower})(\\p{Upper})", "$1 $2");
-		String f2 = featureName2.replaceAll("(\\p{Lower})(\\p{Upper})", "$1 $2");
+		String f1 = child.replaceAll("(\\p{Lower})(\\p{Upper})", "$1 $2");
+		String f2 = parent.replaceAll("(\\p{Lower})(\\p{Upper})", "$1 $2");
 
 		if (wikipedia != null) {
 			Article article1 = wikipedia.getMostLikelyArticle(f1, null);
@@ -124,15 +113,46 @@ public class WikipediaMinerMetric implements FeatureSimilarityMetric {
 		return wikipedia;
 	}
 
+//	@Override
+//	public boolean isXorGroupRequired() {
+//		return false;
+//	}
+//
+//	@Override
+//	public boolean isOrGroupRequired() {
+//		return false;
+//	}
+
 	@Override
-	public boolean isXorGroupRequired() {
-		return false;
+	public String getName() {
+		return "Wikipedia Miner";
+	}
+
+	
+	@Override
+	public boolean init(File configFile) {
+		try {
+			WikipediaConfiguration conf = new WikipediaConfiguration(configFile);
+			this.wikipedia = new Wikipedia(conf, false);
+			this.comparer = new ArticleComparer(this.wikipedia);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		return true;
 	}
 
 	@Override
-	public boolean isOrGroupRequired() {
-		return false;
+	public boolean stop() {
+		if (this.wikipedia != null) {
+			this.wikipedia.close();
+		}
+		return true;
 	}
+
+
+
 
 }
 

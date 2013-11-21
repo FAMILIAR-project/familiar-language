@@ -14,10 +14,6 @@ public class WuPalmerMetric extends WordNetMetric {
 
 	private static final int DEFAULT_DEPTH = 1; // simulates an abstract root node
 
-	public WuPalmerMetric(Dictionary dictionary) {
-		super(dictionary);
-	}
-
 
 	/**
 	 * Compute Wu & Palmer formula on two synsets
@@ -60,21 +56,25 @@ public class WuPalmerMetric extends WordNetMetric {
 	}
 
 	
+//	@Override
+//	public String toString() {
+//		return "WordNet metric (Wu & Palmer)";
+//	}
+//
+//
+//	@Override
+//	public boolean isXorGroupRequired() {
+//		return false;
+//	}
+//
+//
+//	@Override
+//	public boolean isOrGroupRequired() {
+//		return false;
+//	}
 	@Override
-	public String toString() {
-		return "WordNet metric (Wu & Palmer)";
-	}
-
-
-	@Override
-	public boolean isXorGroupRequired() {
-		return false;
-	}
-
-
-	@Override
-	public boolean isOrGroupRequired() {
-		return false;
+	public String getName() {
+		return "Wu & Palmer (WordNet)" ;
 	}
 
 

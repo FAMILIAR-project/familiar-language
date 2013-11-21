@@ -1,26 +1,21 @@
 package fr.familiar.operations.heuristics.metrics;
 
-import java.util.Random;
-
+import uk.ac.shef.wit.simmetrics.similaritymetrics.Levenshtein;
 import fr.familiar.operations.heuristics.KSynthesisPlugin;
 import fr.familiar.operations.heuristics.SimpleHeuristic;
 
-public class RandomMetric extends SimpleHeuristic implements KSynthesisPlugin {
+public class LevenshteinMetric extends SimpleHeuristic implements KSynthesisPlugin {
+
+	private Levenshtein metric = new Levenshtein();
 	
-	private Random rand;
-
-	public RandomMetric() {
-		rand = new Random();
-	}
-
 	@Override
 	public String getName() {
-		return "Random";
+		return "Levenshtein (Simmetrics)";
 	}
 
 	@Override
 	public double similarity(String child, String parent) {
-		return rand.nextDouble();
+		return metric.getSimilarity(child, parent);
 	}
 
 }

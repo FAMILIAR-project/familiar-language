@@ -28,6 +28,8 @@ import fr.familiar.gui.synthesis.actions.IgnoreParentAction;
 import fr.familiar.gui.synthesis.actions.SelectClusterParentAction;
 import fr.familiar.gui.synthesis.actions.SelectParentAction;
 import fr.familiar.gui.synthesis.actions.SynthesisAction;
+import fr.familiar.operations.heuristics.Heuristic;
+import fr.familiar.operations.heuristics.KSynthesisPlugin;
 import fr.familiar.operations.heuristics.InteractiveFMSynthesizer;
 import fr.familiar.operations.heuristics.metrics.FeatureSimilarityMetric;
 import fr.familiar.operations.heuristics.metrics.MetricName;
@@ -147,12 +149,12 @@ public class FMSynthesisEnvironment extends JPanel implements Observer{
 		
 	}
 
-	public void setParentSimilarityMetric(FeatureSimilarityMetric metric) {
+	public void setParentSimilarityMetric(Heuristic metric) {
 		synthesizer.setParentSimilarityMetric(metric);
 	}
 
 
-	public void setClusteringMetric(FeatureSimilarityMetric metric) {
+	public void setClusteringMetric(Heuristic metric) {
 		synthesizer.setClusteringParameters(metric, synthesizer.getClusteringThreshold());
 	}
 

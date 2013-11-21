@@ -11,9 +11,12 @@ import net.sf.extjwnl.dictionary.Dictionary;
 import fr.familiar.gui.FamiliarEditor;
 import fr.familiar.gui.Tab2EnvVar;
 import fr.familiar.operations.heuristics.metrics.AlwaysZeroMetric;
+import fr.familiar.operations.heuristics.metrics.LevenshteinMetric;
 import fr.familiar.operations.heuristics.metrics.MetricName;
+import fr.familiar.operations.heuristics.metrics.PathLengthMetric;
 import fr.familiar.operations.heuristics.metrics.RandomMetric;
 import fr.familiar.operations.heuristics.metrics.SimmetricsMetric;
+import fr.familiar.operations.heuristics.metrics.SmithWatermanMetric;
 import fr.familiar.operations.heuristics.metrics.WikipediaMinerDB;
 import fr.familiar.operations.heuristics.metrics.WikipediaMinerMetric;
 import fr.familiar.operations.heuristics.metrics.WuPalmerMetric;
@@ -40,21 +43,27 @@ public class ClusteringMetricSelectionListener implements ActionListener {
 				environment.setClusteringMetric(new RandomMetric());
 				break;
 			case SIMMETRICS_SMITHWATERMAN:
-				environment.setClusteringMetric(new SimmetricsMetric(metric));
+//				environment.setClusteringMetric(new SimmetricsMetric(metric));
+				environment.setClusteringMetric(new SmithWatermanMetric());
 				break;
 			case SIMMETRICS_LEVENSHTEIN:
-				environment.setClusteringMetric(new SimmetricsMetric(metric));
+//				environment.setClusteringMetric(new SimmetricsMetric(metric));
+				environment.setClusteringMetric(new LevenshteinMetric());
 				break;
 			case WORDNET_WUP:
-				Dictionary dictionaryWUP = WordNetPropertyFileChooser.getInstance();
+				File dictionaryWUP = WordNetPropertyFileChooser.getInstance();
 				if (dictionaryWUP != null) {
-					environment.setClusteringMetric(new WuPalmerMetric(dictionaryWUP));	
+					WuPalmerMetric wup = new WuPalmerMetric();
+					wup.init(dictionaryWUP);
+					environment.setClusteringMetric(wup);	
 				}
 				break;
 			case WORDNET_PATHLENGTH:
-				Dictionary dictionaryPL = WordNetPropertyFileChooser.getInstance();
+				File dictionaryPL = WordNetPropertyFileChooser.getInstance();
 				if (dictionaryPL != null) {
-					environment.setClusteringMetric(new WuPalmerMetric(dictionaryPL));	
+					PathLengthMetric pl = new PathLengthMetric();
+					pl.init(dictionaryPL);
+					environment.setClusteringMetric(pl);	
 				}
 				break;
 			case WIKIPEDIA_MINER:
@@ -62,10 +71,9 @@ public class ClusteringMetricSelectionListener implements ActionListener {
 				int choice = fileChooser.showOpenDialog(FamiliarEditor.INSTANCE);
 				if (choice == JFileChooser.APPROVE_OPTION) {
 					File propertiesFile = fileChooser.getSelectedFile();
-					WikipediaMinerDB wikipediaMinerDB = new WikipediaMinerDB(propertiesFile.getAbsolutePath());
 					try {
-						wikipediaMinerDB.loadDatabase();
-						WikipediaMinerMetric wikipediaMinerMetric = new WikipediaMinerMetric(wikipediaMinerDB);
+						WikipediaMinerMetric wikipediaMinerMetric = new WikipediaMinerMetric();
+						wikipediaMinerMetric.init(propertiesFile);
 						environment.setClusteringMetric(wikipediaMinerMetric);
 					} catch (Exception e1) {
 						e1.printStackTrace();

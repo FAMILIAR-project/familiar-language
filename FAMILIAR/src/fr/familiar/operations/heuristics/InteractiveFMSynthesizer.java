@@ -42,26 +42,28 @@ public class InteractiveFMSynthesizer extends Observable{
 	private FeatureModelVariable fmv;
 	private WeightedImplicationGraph<String> big;
 	private WeightedImplicationGraph<String> originalBig;
+	private Set<FGroup> mutexGroups;
 	private Set<FGroup> xorGroups;
+	private Set<FGroup> orGroups;
 
-	private FeatureSimilarityMetric parentSimilarityMetric;
+	private Heuristic parentSimilarityMetric;
 	private FeatureFrequencyMetric featureFrequencyMetric;
 	private FeatureComparator featureComparator;
 
-	private FeatureSimilarityMetric clusteringSimilarityMetric;
+	private Heuristic clusteringSimilarityMetric;
 	private Set<Set<String>> similarityClusters;
 	private List<Set<Set<String>>> supportClusters;
 	private double clusteringThreshold;
-	private List<FeatureSimilarityMetric> complementaryParentSimilarityMetrics;
-	private Set<FGroup> orGroups;
+	private List<Heuristic> complementaryParentSimilarityMetrics;
+	
 	private FeatureModelVariable originalFmv;
 
 
 
 	public InteractiveFMSynthesizer(FeatureModelVariable fmv,
-			FeatureSimilarityMetric parentSimilarityMetric,
-			List<FeatureSimilarityMetric> complementaryParentSimilarityMetrics,
-			FeatureSimilarityMetric clusteringSimilarityMetric,
+			Heuristic parentSimilarityMetric,
+			List<Heuristic> complementaryParentSimilarityMetrics,
+			Heuristic clusteringSimilarityMetric,
 			double clusteringThreshold) {
 
 		originalFmv = fmv;
@@ -85,8 +87,11 @@ public class InteractiveFMSynthesizer extends Observable{
 			this.parentSimilarityMetric = new AlwaysZeroMetric();
 		}
 
-		this.clusteringSimilarityMetric = clusteringSimilarityMetric != null ? 
-				clusteringSimilarityMetric : new SimmetricsMetric(MetricName.SIMMETRICS_SMITHWATERMAN);
+		if (clusteringSimilarityMetric != null) {
+			this.clusteringSimilarityMetric = clusteringSimilarityMetric;
+		} else {
+			this.clusteringSimilarityMetric = new AlwaysZeroMetric();
+		}
 		
 		if (clusteringThreshold >= 0 && clusteringThreshold <=1) {
 			this.clusteringThreshold = clusteringThreshold;		
@@ -96,18 +101,24 @@ public class InteractiveFMSynthesizer extends Observable{
 
 		this.complementaryParentSimilarityMetrics = complementaryParentSimilarityMetrics;
 		if (complementaryParentSimilarityMetrics  == null ) {
-			this.complementaryParentSimilarityMetrics = new ArrayList<FeatureSimilarityMetric>();
+			this.complementaryParentSimilarityMetrics = new ArrayList<Heuristic>();
 		}
 			
 
 		// Compute groups if necessary
-		if (this.parentSimilarityMetric.isXorGroupRequired()) {
+		if (this.parentSimilarityMetric.isMutexGroupsRequired()) {
+			mutexGroups = originalFmv.computeMutexGroups();
+		} else {
+			mutexGroups = null;
+		}
+		
+		if (this.parentSimilarityMetric.isXorGroupsRequired()) {
 			xorGroups = originalFmv.computeXorGroups();	
 		} else {
 			xorGroups = null;
 		}
 		
-		if (this.parentSimilarityMetric.isOrGroupRequired()) {
+		if (this.parentSimilarityMetric.isOrGroupsRequired()) {
 			orGroups = originalFmv.computeOrGroups();	
 		} else {
 			orGroups = null;
@@ -274,14 +285,18 @@ public class InteractiveFMSynthesizer extends Observable{
 	 * It also computes the associated weighted implication graph
 	 * @param parentSimilarityMetric
 	 */
-	public void setParentSimilarityMetric(FeatureSimilarityMetric parentSimilarityMetric) {
+	public void setParentSimilarityMetric(Heuristic parentSimilarityMetric) {
 		this.parentSimilarityMetric = parentSimilarityMetric;
 		
-		if (parentSimilarityMetric.isXorGroupRequired() && xorGroups == null) {
+		if (parentSimilarityMetric.isMutexGroupsRequired() && mutexGroups == null) {
+			mutexGroups = originalFmv.computeMutexGroups();
+		} 
+		
+		if (parentSimilarityMetric.isXorGroupsRequired() && xorGroups == null) {
 			xorGroups = originalFmv.computeXorGroups();
 			
 		}
-		if (parentSimilarityMetric.isOrGroupRequired() && orGroups == null) {
+		if (parentSimilarityMetric.isOrGroupsRequired() && orGroups == null) {
 			orGroups = originalFmv.computeOrGroups();	
 		}
 		computeBIGWeights();
@@ -305,7 +320,7 @@ public class InteractiveFMSynthesizer extends Observable{
 	 * @param clusteringSimilarityMetric
 	 * @param threshold
 	 */
-	public void setClusteringParameters(FeatureSimilarityMetric clusteringSimilarityMetric, double threshold) {
+	public void setClusteringParameters(Heuristic clusteringSimilarityMetric, double threshold) {
 		this.clusteringSimilarityMetric = clusteringSimilarityMetric;
 		this.clusteringThreshold = threshold;
 		computeClusters();
@@ -559,7 +574,7 @@ public class InteractiveFMSynthesizer extends Observable{
 		return clusteringThreshold;
 	}
 
-	public FeatureSimilarityMetric getClusteringSimilarityMetric() {
+	public Heuristic getClusteringSimilarityMetric() {
 		return clusteringSimilarityMetric;
 	}
 
@@ -638,7 +653,7 @@ public class InteractiveFMSynthesizer extends Observable{
 		return possibleParents;
 	}
 
-	public void setComplementaryParentSimilarityMetrics(List<FeatureSimilarityMetric> complementaryMetrics) {
+	public void setComplementaryParentSimilarityMetrics(List<Heuristic> complementaryMetrics) {
 		this.complementaryParentSimilarityMetrics = complementaryMetrics;
 
 	}
@@ -658,7 +673,15 @@ public class InteractiveFMSynthesizer extends Observable{
 		for (SimpleEdge edge : big.edges()) {
 			String source = big.getSource(edge);
 			String target = big.getTarget(edge);
-			double weight = parentSimilarityMetric.similarity(big.getImplicationGraph(), xorGroups, orGroups, source, target);
+
+			parentSimilarityMetric.setImplicationGraph(big.getImplicationGraph());
+			Set<FGroup> groups = new HashSet<FGroup>();
+			groups.addAll(mutexGroups);
+			groups.addAll(xorGroups);
+			groups.addAll(orGroups);
+			parentSimilarityMetric.setGroups(groups);
+			
+			double weight = parentSimilarityMetric.similarity(source, target);
 			big.setEdgeWeight(edge, weight);
 		}
 
@@ -693,8 +716,16 @@ public class InteractiveFMSynthesizer extends Observable{
 
 			// Compute the complementary heuristic choices
 			boolean veryHigh = false, high = false, veryLow = false, low = false; 
-			for (FeatureSimilarityMetric metric : complementaryParentSimilarityMetrics) {
-				double weight = metric.similarity(big.getImplicationGraph(), xorGroups, orGroups, source, target);
+			for (Heuristic metric : complementaryParentSimilarityMetrics) {
+				
+				metric.setImplicationGraph(big.getImplicationGraph());
+				Set<FGroup> groups = new HashSet<FGroup>();
+				groups.addAll(mutexGroups);
+				groups.addAll(xorGroups);
+				groups.addAll(orGroups);
+				metric.setGroups(groups);
+				
+				double weight = metric.similarity(source, target);
 				if (weight != 0) { // Avoid non representative value
 					if (weight > VERY_HIGH_THRESHOLD)
 						veryHigh = true;

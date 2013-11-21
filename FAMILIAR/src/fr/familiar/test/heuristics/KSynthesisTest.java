@@ -1,7 +1,6 @@
 package fr.familiar.test.heuristics;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -13,25 +12,23 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import net.sf.extjwnl.dictionary.Dictionary;
-
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
 import fr.familiar.gui.synthesis.KeyValue;
 import fr.familiar.interpreter.FMLShell;
+import fr.familiar.operations.heuristics.Heuristic;
 import fr.familiar.operations.heuristics.InteractiveFMSynthesizer;
+import fr.familiar.operations.heuristics.KSynthesisPlugin;
 import fr.familiar.operations.heuristics.metrics.AlwaysZeroMetric;
 import fr.familiar.operations.heuristics.metrics.CommonEdgesMetric;
 import fr.familiar.operations.heuristics.metrics.DirectedPathLengthMetric;
-import fr.familiar.operations.heuristics.metrics.FeatureSimilarityMetric;
-import fr.familiar.operations.heuristics.metrics.MetricName;
+import fr.familiar.operations.heuristics.metrics.LevenshteinMetric;
 import fr.familiar.operations.heuristics.metrics.PathLengthMetric;
 import fr.familiar.operations.heuristics.metrics.RandomMetric;
-import fr.familiar.operations.heuristics.metrics.SimmetricsMetric;
+import fr.familiar.operations.heuristics.metrics.SmithWatermanMetric;
 import fr.familiar.operations.heuristics.metrics.TransitiveReductionMetric;
-import fr.familiar.operations.heuristics.metrics.WikipediaMinerDB;
 import fr.familiar.operations.heuristics.metrics.WikipediaMinerMetric;
 import fr.familiar.operations.heuristics.metrics.WuPalmerMetric;
 import fr.familiar.parser.FMBuilder;
@@ -64,20 +61,17 @@ public abstract class KSynthesisTest extends FMLTest {
 
 	protected static int RANDOM_ITERATIONS = 100;
 
-	private static WikipediaMinerDB wikipediaDB;
-	private static WikipediaMinerDB wiktionaryDB;
-	
-	public static List<FeatureSimilarityMetric> metrics;
+	public static List<Heuristic> metrics;
 	protected static WikipediaMinerMetric wikiMetric;
 	protected static WikipediaMinerMetric wiktionaryMetric;
-	protected static FeatureSimilarityMetric pathLength;
-	protected static FeatureSimilarityMetric levenshtein;
-	protected static FeatureSimilarityMetric smithWaterman;
+	protected static PathLengthMetric pathLength;
+	protected static Heuristic levenshtein;
+	protected static Heuristic smithWaterman;
 	protected static TransitiveReductionMetric reductionMetric;
-	protected static FeatureSimilarityMetric wup;
+	protected static WuPalmerMetric wup;
 	protected static DirectedPathLengthMetric directedPathLength;
 	
-	protected static HashMap<FeatureSimilarityMetric, Double> clusteringThresholds;
+	protected static HashMap<Heuristic, Double> clusteringThresholds;
 
 	private static List<FeatureModelVariable> splotFMs;
 	private static List<FeatureModelVariable> splotFMsForFASE;
@@ -255,54 +249,44 @@ public abstract class KSynthesisTest extends FMLTest {
 	
 	@AfterClass
 	public static void tearDownMetrics() {
-		if (wikipediaDB != null) {
-			wikipediaDB.closeDatabase();	
+		if (wikiMetric != null) {
+			wikiMetric.stop();	
 		}
-		if (wiktionaryDB != null) {
-			wiktionaryDB.closeDatabase();
+		if (wiktionaryMetric != null) {
+			wiktionaryMetric.stop();
 		}
 	}
 	
 	@BeforeClass
 	public static void setUpMetrics() throws Exception {
-		// Set up databases
-		if (new File(WIKIPEDIA_DB).exists()) {
-			wikipediaDB = new WikipediaMinerDB(WIKIPEDIA_DB);
-			wikipediaDB.loadDatabase(); // Must be closed
-		}
-		
-		if (new File(WIKTIONARY_DB).exists()) {
-			wiktionaryDB = new WikipediaMinerDB(WIKTIONARY_DB);
-			wiktionaryDB.loadDatabase(); // Must be closed
-		}
-		
 		
 		// Set up metrics
-		metrics = new ArrayList<FeatureSimilarityMetric>();
-		clusteringThresholds = new HashMap<FeatureSimilarityMetric, Double>();
+		metrics = new ArrayList<Heuristic>();
+		clusteringThresholds = new HashMap<Heuristic, Double>();
 
 		// Random metric
-		FeatureSimilarityMetric random = new RandomMetric();
+		Heuristic random = new RandomMetric();
 		metrics.add(random);
 		clusteringThresholds.put(random, 0.15);
 
 		// Simmetrics metrics
-		smithWaterman = new SimmetricsMetric(MetricName.SIMMETRICS_SMITHWATERMAN);
+		smithWaterman = new SmithWatermanMetric();
 		metrics.add(smithWaterman);
 		clusteringThresholds.put(smithWaterman, 0.6);
 
-		levenshtein = new SimmetricsMetric(MetricName.SIMMETRICS_LEVENSHTEIN);
+		levenshtein = new LevenshteinMetric();
 		metrics.add(levenshtein);
 		clusteringThresholds.put(levenshtein, 0.7);
 
 		// WordNet metrics
 		if (new File(WORDNET_DB).exists()) {
-			Dictionary wordNetDictionary = Dictionary.getInstance(new FileInputStream(WORDNET_DB));
-			wup = new WuPalmerMetric(wordNetDictionary);
+			wup = new WuPalmerMetric();
+			wup.init(new File(WORDNET_DB));
 			metrics.add(wup);
 			clusteringThresholds.put(wup, 0.2);
 
-			pathLength = new PathLengthMetric(wordNetDictionary); 
+			pathLength = new PathLengthMetric();
+			pathLength.init(new File(WORDNET_DB));
 			metrics.add(pathLength);
 			clusteringThresholds.put(pathLength, 0.5);
 			
@@ -312,17 +296,15 @@ public abstract class KSynthesisTest extends FMLTest {
 		}
 
 		// WikipediaMiner metrics
-		if (wikipediaDB.isLoaded()) {
-			wikiMetric = new WikipediaMinerMetric(wikipediaDB);
+			wikiMetric = new WikipediaMinerMetric();
+			wikiMetric.init(new File(WIKIPEDIA_DB));
 			metrics.add(wikiMetric);
 			clusteringThresholds.put(wikiMetric, 0.5);	
-		}
 		
-		if (wiktionaryDB.isLoaded()) {
-			wiktionaryMetric = new WikipediaMinerMetric(wiktionaryDB);
+			wiktionaryMetric = new WikipediaMinerMetric();
+			wiktionaryMetric.init(new File(WIKTIONARY_DB));
 			metrics.add(wiktionaryMetric);
 			clusteringThresholds.put(wiktionaryMetric, 0.5);	
-		}
 
 //		// LSA metric
 //		if (wikipediaDB.isLoaded()) {
@@ -570,7 +552,7 @@ public abstract class KSynthesisTest extends FMLTest {
 	 * @param fm
 	 * @param computedFM
 	 */
-	public void writeFMToFile(String outputFolder, FeatureSimilarityMetric metric, String name, FeatureModelVariable computedFM) {
+	public void writeFMToFile(String outputFolder, Heuristic metric, String name, FeatureModelVariable computedFM) {
 		File computedFMFile ;
 		if (metric == null) {
 			computedFMFile = new File(outputFolder + name + ".xml");
@@ -701,7 +683,7 @@ public abstract class KSynthesisTest extends FMLTest {
 	 * @param metric 
 	 * @return
 	 */
-	public double countTopNParents(int n, FeatureModelVariable fm, InteractiveFMSynthesizer synthesizer, FeatureSimilarityMetric metric) {
+	public double countTopNParents(int n, FeatureModelVariable fm, InteractiveFMSynthesizer synthesizer, Heuristic metric) {
 		List<KeyValue<String,List<String>>> parentCandidateLists = synthesizer.getParentCandidates();
 		FeatureGraph<String> hierarchy = fm.getFm().getDiagram();
 		
@@ -760,7 +742,7 @@ public abstract class KSynthesisTest extends FMLTest {
 	public void testOptimumBranching(List<FeatureModelVariable> fms, boolean reduceBIG) {
 		CommonEdgesMetric commonEdgesMetric = new CommonEdgesMetric();
 
-		for (FeatureSimilarityMetric metric : metrics) {
+		for (Heuristic metric : metrics) {
 			System.out.println(metric);
 			List<Double> listNbCommonEdges = new ArrayList<Double>();
 			

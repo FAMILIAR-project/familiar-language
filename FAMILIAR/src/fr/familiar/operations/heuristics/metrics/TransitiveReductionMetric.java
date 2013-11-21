@@ -1,6 +1,8 @@
 package fr.familiar.operations.heuristics.metrics;
 
 import fr.familiar.experimental.FGroup;
+import fr.familiar.operations.heuristics.Heuristic;
+import fr.familiar.operations.heuristics.KSynthesisPlugin;
 import gsd.graph.ImplicationGraph;
 import gsd.graph.SimpleEdge;
 import gsd.graph.TransitiveReduction;
@@ -10,30 +12,69 @@ import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
-public class TransitiveReductionMetric implements FeatureSimilarityMetric {
+public class TransitiveReductionMetric implements Heuristic, KSynthesisPlugin {
 
 	private ImplicationGraph<String> implicationGraph;
 	private ImplicationGraph<String> hierarchy;
 	private boolean orRequired;
+	private ImplicationGraph<Set<String>> reducedGraph;
+	private Set<FGroup> groups;
+	private boolean computeHierarchy;
 	
 	public TransitiveReductionMetric() {
-		orRequired = true;
+		orRequired = false;
+	}
+
+	
+	@Override
+	public String getName() {
+		return "Transitive Reduction";
 	}
 
 	@Override
-	public double similarity(ImplicationGraph<String> implicationGraph, Set<FGroup> xorGroups, Set<FGroup> orGroups, String feature, String parent) {
+	public boolean isMutexGroupsRequired() {
+		return true;
+	}
+
+	@Override
+	public boolean isXorGroupsRequired() {
+		return true;
+	}
+
+	@Override
+	public boolean isOrGroupsRequired() {
+		return orRequired;
+	}
+
+	public void setOrRequired(boolean orRequired) {
+		this.orRequired = orRequired;
+	}
+	
+	@Override
+	public void setImplicationGraph(ImplicationGraph<String> implicationGraph) {
 		if (this.implicationGraph == null || !this.implicationGraph.equals(implicationGraph)) {
 			this.implicationGraph = implicationGraph.clone();
 			
-			ImplicationGraph<Set<String>> reducedGraph = implicationGraph.reduceCliques();
+			reducedGraph = implicationGraph.reduceCliques();
 			TransitiveReduction.INSTANCE.reduce(reducedGraph);
-			hierarchy = buildHierarchy(reducedGraph, xorGroups, orGroups);
+			computeHierarchy = true;
 		}
+	}
 
+	@Override
+	public void setGroups(Set<FGroup> groups) {
+		this.groups = groups;
+		computeHierarchy = true;
+	}
+
+	@Override
+	public double similarity(String child, String parent) {
+		if (computeHierarchy) {
+			hierarchy = buildHierarchy(reducedGraph, groups);
+			computeHierarchy = false;
+		}
 		
-		if (hierarchy.containsEdge(feature, parent)) {
-//			System.out.println(feature + " : " + parent);
-//			return new RandomMetric().similarity(null, null, null, null, null);
+		if (hierarchy.containsEdge(child, parent)) {
 			return 1;
 		} else {
 			return 0;
@@ -46,7 +87,7 @@ public class TransitiveReductionMetric implements FeatureSimilarityMetric {
 	 * @param xorGroups 
 	 * @return
 	 */
-	private ImplicationGraph<String> buildHierarchy(ImplicationGraph<Set<String>> reducedGraph, Set<FGroup> xorGroups, Set<FGroup> orGroups) {
+	private ImplicationGraph<String> buildHierarchy(ImplicationGraph<Set<String>> reducedGraph, Set<FGroup> groups) {
 		hierarchy = new ImplicationGraph<String>();
 		
 		HashMap<Set<String>, String> representativeFeatures = 
@@ -56,7 +97,7 @@ public class TransitiveReductionMetric implements FeatureSimilarityMetric {
 		
 		createEdges(reducedGraph, representativeFeatures);
 		
-		selectParents(xorGroups, orGroups);
+		selectParents(groups);
 		
 		return hierarchy;
 	}
@@ -127,15 +168,8 @@ public class TransitiveReductionMetric implements FeatureSimilarityMetric {
 		}
 	}
 	
-	private void selectParents(Set<FGroup> xorGroups, Set<FGroup> orGroups) {
+	private void selectParents(Set<FGroup> groups) {
 		
-		Set<FGroup> groups = new HashSet<FGroup>();
-		if (xorGroups != null) {
-			groups.addAll(xorGroups);	
-		}
-		if (orGroups != null) {
-			groups.addAll(orGroups);	
-		}
 		
 		for (String feature : hierarchy.vertices()) {
 			Set<String> possibleParents = hierarchy.parents(feature);
@@ -191,19 +225,9 @@ public class TransitiveReductionMetric implements FeatureSimilarityMetric {
 		return "Transitive reduction metric";
 	}
 
-	@Override
-	public boolean isXorGroupRequired() {
-		return true;
-	}
 
-	@Override
-	public boolean isOrGroupRequired() {
-		return this.orRequired;
-	}
 
-	public void setOrRequired(boolean orRequired) {
-		this.orRequired = orRequired;
-	}
+
  
 
 }

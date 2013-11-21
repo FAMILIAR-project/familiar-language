@@ -1,35 +1,52 @@
 package fr.familiar.operations.heuristics.metrics;
 
-import fr.familiar.experimental.FGroup;
-import gsd.graph.ImplicationGraph;
-
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Set;
 
 import net.sf.extjwnl.JWNLException;
 import net.sf.extjwnl.data.IndexWord;
 import net.sf.extjwnl.data.POS;
 import net.sf.extjwnl.data.Synset;
 import net.sf.extjwnl.dictionary.Dictionary;
+import fr.familiar.operations.heuristics.ConfigurableHeuristicPlugin;
+import fr.familiar.operations.heuristics.SimpleHeuristic;
 
-public abstract class WordNetMetric implements FeatureSimilarityMetric {
+public abstract class WordNetMetric extends SimpleHeuristic implements ConfigurableHeuristicPlugin {
 
 	private Dictionary dictionary;
 	private Synset context;
 
-	public WordNetMetric(Dictionary dictionary) {
-		this.dictionary = dictionary;
+	@Override
+	public boolean init(File configFile) {
+		if (configFile.exists()) {
+			try {
+				dictionary = Dictionary.getInstance(new FileInputStream(configFile.getAbsolutePath()));
+			} catch (FileNotFoundException | JWNLException e) {
+				e.printStackTrace();
+				return false;
+			}	
+		}
+		return true;
 	}
 
 	@Override
-	public double similarity(ImplicationGraph<String> implicationGraph, Set<FGroup> xorGroups, Set<FGroup> orGroups, String featureName1, String featureName2) {
+	public boolean stop() {
+		return true;
+	}
+	
+
+	@Override
+//	public double similarity(ImplicationGraph<String> implicationGraph, Set<FGroup> xorGroups, Set<FGroup> orGroups, String featureName1, String featureName2) {
+	public double similarity(String child, String parent) {
 		List<String> wordsF1 = new ArrayList<String>();
 //		if (lookup(featureName1) != null) {
 //			wordsF1.add(featureName1);
 //		} else {
-			String preprocessedF1 = featureName1.replaceAll("(\\p{Lower})(\\p{Upper})", "$1 $2").toLowerCase();
+			String preprocessedF1 = child.replaceAll("(\\p{Lower})(\\p{Upper})", "$1 $2").toLowerCase();
 			wordsF1.addAll(Arrays.asList(preprocessedF1.split("\\s|\\p{Punct}")));
 //		}
 
@@ -37,7 +54,7 @@ public abstract class WordNetMetric implements FeatureSimilarityMetric {
 //		if (lookup(featureName2) != null) {
 //			wordsF2.add(featureName2);
 //		} else {
-			String preprocessedF2 = featureName2.replaceAll("(\\p{Lower})(\\p{Upper})", "$1 $2").toLowerCase();
+			String preprocessedF2 = parent.replaceAll("(\\p{Lower})(\\p{Upper})", "$1 $2").toLowerCase();
 			wordsF2.addAll(Arrays.asList(preprocessedF2.split("\\s|\\p{Punct}")));
 //		}
 

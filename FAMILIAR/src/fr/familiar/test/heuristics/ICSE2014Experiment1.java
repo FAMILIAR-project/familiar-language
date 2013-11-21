@@ -9,9 +9,9 @@ import java.util.Set;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import fr.familiar.operations.heuristics.Heuristic;
 import fr.familiar.operations.heuristics.InteractiveFMSynthesizer;
 import fr.familiar.operations.heuristics.metrics.CommonEdgesMetric;
-import fr.familiar.operations.heuristics.metrics.FeatureSimilarityMetric;
 import fr.familiar.variable.Comparison;
 import fr.familiar.variable.FeatureModelVariable;
 import gsd.synthesis.FeatureGraph;
@@ -115,7 +115,7 @@ public class ICSE2014Experiment1 extends KSynthesisTest {
 		List<FeatureModelVariable> referenceFMs = getSPLOTFeatureModelsForFASE();
 		List<FeatureModelVariable> faseFMs = getFASEFeatureModels();
 		
-		for (FeatureSimilarityMetric metric : metrics) {
+		for (Heuristic metric : metrics) {
 			System.out.println(metric);
 			
 			int nbFaseAndFamiliar = 0;
