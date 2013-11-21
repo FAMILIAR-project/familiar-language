@@ -77,9 +77,7 @@ public class KSynthesisPluginLoader {
 				
 				return plugins;
 				
-			} catch (IOException 
-					| ClassNotFoundException 
-					| InstantiationException | IllegalAccessException e) {
+			} catch (Exception e) {
 				e.printStackTrace();
 				return null;
 			}

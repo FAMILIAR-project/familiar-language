@@ -25,10 +25,14 @@ public abstract class WordNetMetric extends SimpleHeuristic implements Configura
 		if (configFile.exists()) {
 			try {
 				dictionary = Dictionary.getInstance(new FileInputStream(configFile.getAbsolutePath()));
-			} catch (FileNotFoundException | JWNLException e) {
+			} catch (JWNLException e) {
 				e.printStackTrace();
 				return false;
 			}	
+			 catch (FileNotFoundException e) {
+					e.printStackTrace();
+					return false;
+				}
 		}
 		return true;
 	}
