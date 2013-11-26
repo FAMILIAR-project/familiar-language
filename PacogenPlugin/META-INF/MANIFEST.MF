@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: PacogenPlugin
+Bundle-SymbolicName: PacogenPlugin
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Import-Package: org.junit;version="4.10.0",
+ splar.core.constraints,
+ splar.core.fm
+Require-Bundle: SPLAR-plugin
+Export-Package: fr.pacogen.export,
+ org.pacogen.model,
+ org.pacogen.model.OperatorPck,
+ org.pacogen.model.treeStructure
