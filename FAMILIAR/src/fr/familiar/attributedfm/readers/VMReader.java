@@ -12,11 +12,6 @@ import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.resource.XtextResourceSet;
 
 import com.google.inject.Injector;
-
-
-
-
-//import fr.familiar.attributedfm.Relation;
 import es.us.isa.FAMA.models.variabilityModel.parsers.IReader;
 import fr.familiar.attributedfm.AttributedFeatureModel;
 import fr.familiar.attributedfm.GenericAttribute;
