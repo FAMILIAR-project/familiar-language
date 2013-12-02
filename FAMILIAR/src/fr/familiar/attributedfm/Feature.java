@@ -17,6 +17,8 @@
  */
 package fr.familiar.attributedfm;
 
+
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -130,7 +132,11 @@ public class Feature {
 			//this.addAttribute(aux);
 		}
 	}
+	
+	public void addAttribute(GenericAttribute a){
+		attributes.put(a.getName(),a);
 
+	}
 	/**
 	 * @return
 	 * @uml.property  name="attributes"

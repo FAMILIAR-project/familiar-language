@@ -1,5 +1,10 @@
 package fr.familiar.attributedfm.readers;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
+
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
@@ -10,10 +15,20 @@ import com.google.inject.Injector;
 
 
 
-//import inria.FAMILIAR.Model.Relation;
+
+//import fr.familiar.attributedfm.Relation;
 import es.us.isa.FAMA.models.variabilityModel.parsers.IReader;
 import fr.familiar.attributedfm.AttributedFeatureModel;
+import fr.familiar.attributedfm.GenericAttribute;
+import fr.familiar.attributedfm.StringDomainIntConverter;
+import fr.familiar.attributedfm.domain.BooleanDomain;
 import fr.familiar.attributedfm.domain.Cardinality;
+import fr.familiar.attributedfm.domain.Range;
+import fr.familiar.attributedfm.domain.RangeIntegerDomain;
+import fr.familiar.attributedfm.domain.RangeRealDomain;
+import fr.familiar.attributedfm.domain.RealRange;
+import fr.familiar.attributedfm.domain.SetRealDomain;
+import fr.familiar.attributedfm.domain.StringDomain;
 import fr.inria.lang.VMStandaloneSetup;
 import fr.inria.lang.vM.AttrDef;
 import fr.inria.lang.vM.Attributes;
@@ -27,13 +42,11 @@ import fr.inria.lang.vM.FeatureHierarchy;
 import fr.inria.lang.vM.FeaturesGroup;
 import fr.inria.lang.vM.IntegerAttrDefBounded;
 import fr.inria.lang.vM.IntegerAttrDefUnbounded;
-import fr.inria.lang.vM.LeftImplication;
 import fr.inria.lang.vM.Model;
 import fr.inria.lang.vM.Orgroup;
 import fr.inria.lang.vM.RealAttrDefBounded;
 import fr.inria.lang.vM.RealAttrDefUnbounded;
 import fr.inria.lang.vM.Relationships;
-import fr.inria.lang.vM.RightImplication;
 import fr.inria.lang.vM.StringAttrDef;
 import fr.inria.lang.vM.Xorgroup;
 
@@ -53,58 +66,152 @@ public class VMReader implements IReader {
 				true);
 		Model model = (Model) resource.getContents().get(0);
 		Relationships rel = model.getVm().getRelationships();
-		
-		//Create features
+
+		// Create features
 		FeatureHierarchy fhs = rel.getRoot();
 		fr.familiar.attributedfm.Feature ffeat = new fr.familiar.attributedfm.Feature(
 				fhs.getParent().getName());
 		visitFeatureHierarchy(ffeat, fhs);
 		fr.familiar.attributedfm.AttributedFeatureModel fm = new AttributedFeatureModel();
 		fm.setRoot(ffeat);
-		
-		//Create atts
-		visitAttributes(model);
-		//Create ctc
-		//visitConstriants(model);
+
+		// Create atts
+		visitAttributes(model, fm);
+		// Create ctc
+		visitConstriants(model);
 		return fm;
 	}
-	
+
 	private void visitConstriants(Model model) {
 		Constraints cons = model.getVm().getConstraints();
 		EList<Constraint> con = cons.getConstraints();
-		for (Constraint co : con) {
+		
+		System.out.println(con);for (Constraint co : con) {
 			ComplexExpression cex = (ComplexExpression) co.getExpression();
-			if (cex instanceof RightImplication) {
-				RightImplication ri = (RightImplication) cex;
-				System.out.println("Do something with RightImplication"+
-						" left:"+ (ComplexExpression)ri.getLeft()+
-						" right:"+ (ComplexExpression)ri.getRight());
-			} else if (cex instanceof LeftImplication) {
-				System.out.println("Do something with RightImplication");
-			}
-			// System.out.println("clase"+cex.eClass().getName());
+			System.out.println(cex);
+//			if (cex instanceof RightImplication) {
+//				RightImplication ri = (RightImplication) cex;
+//				System.out.println("Do something with RightImplication"
+//						+ " left:" + (ComplexExpression) ri.getLeft()
+//						+ " right:" + (ComplexExpression) ri.getRight());
+//			} else if (cex instanceof LeftImplication) {
+//				System.out.println("Do something with RightImplication : "
+//						+ cex);
+//			}
+
 		}
 	}
-	private void visitAttributes(Model model) {
+
+	private void visitAttributes(Model model, AttributedFeatureModel fm) {
 		Attributes atts = model.getVm().getAttributes();
 		EList<AttrDef> att = atts.getAttrDefs();
 		for (AttrDef at : att) {
 			if (at instanceof BooleanAttrDef) {
-				System.out.println("Bool att value:"+((BooleanAttrDef)at).getVal());
-			}else if (at instanceof StringAttrDef) {
-				System.out.println("Str att value:"+((StringAttrDef)at).getVal());
-			}else if (at instanceof IntegerAttrDefBounded) {
-				System.out.println("StrBounded att min:"+((IntegerAttrDefBounded)at).getMin()+" max:"+((IntegerAttrDefBounded)at).getMax());
-			}else if (at instanceof IntegerAttrDefUnbounded) {
-				System.out.println("StrUnBounded att val:"+((IntegerAttrDefUnbounded)at).getVal());
-			}else if (at instanceof RealAttrDefBounded) {
-				System.out.println("RealAttrDefBounded att val:"+((RealAttrDefBounded)at).getMin()+" max:"+((RealAttrDefBounded)at).getMax()+" delta: "+((RealAttrDefBounded)at).getDelta());
-			}else if (at instanceof RealAttrDefUnbounded) {
-				System.out.println("RealAttrDefUnbounded att val:"+((RealAttrDefUnbounded)at).getVal());
-			}
+				String fname = ((BooleanAttrDef) at).getName().getHead()
+						.getOwnedFeature().getName();
+				String name = ((BooleanAttrDef) at).getName().getName();
+				Boolean val = Boolean.parseBoolean(((BooleanAttrDef) at)
+						.getVal());
+
+				fr.familiar.attributedfm.Feature feature = fm
+						.searchFeatureByName(fname);
+				GenericAttribute attribute = new GenericAttribute(name,
+						new BooleanDomain(), !val, val);
+				feature.addAttribute(attribute);
+
+			} else if (at instanceof StringAttrDef) {
+				String fname = ((StringAttrDef) at).getName().getHead()
+						.getOwnedFeature().getName();
+				String name = ((StringAttrDef) at).getName().getName();
+				String val = ((StringAttrDef) at).getVal();
+
+				fr.familiar.attributedfm.Feature feature = fm.searchFeatureByName(fname);
+				GenericAttribute attribute = new GenericAttribute(name,	new StringDomain(new StringDomainIntConverter(), val),null, val);
+				feature.addAttribute(attribute);
+
+			} else if (at instanceof IntegerAttrDefBounded) {
+				String fname = ((IntegerAttrDefBounded) at).getName().getHead().getOwnedFeature().getName();
+				String name = ((IntegerAttrDefBounded) at).getName().getName();
+				Integer min = Integer.parseInt(((IntegerAttrDefBounded) at).getMin());
+				Integer max = Integer.parseInt(((IntegerAttrDefBounded) at).getMax());
+
+				fr.familiar.attributedfm.Feature feature = fm.searchFeatureByName(fname);
+				Collection<Range> ranges = new ArrayList<Range>();
+				ranges.add(new Range(min, max));
+				GenericAttribute attribute = new GenericAttribute(name,	new RangeIntegerDomain(ranges), 0, 0);
+				feature.addAttribute(attribute);
+
+			} else if (at instanceof IntegerAttrDefUnbounded) {
+
+
+				String fname = ((IntegerAttrDefUnbounded) at).getName()
+						.getHead().getOwnedFeature().getName();
+				String name = ((IntegerAttrDefUnbounded) at).getName()
+						.getName();
+				Integer integer = Integer
+						.parseInt(((IntegerAttrDefUnbounded) at).getVal()
+								.getValue());
+
+				Collection<Range> ranges = new ArrayList<Range>();
+				ranges.add(new Range(-21474836, 21474836));
+
+				fr.familiar.attributedfm.Feature feature = fm
+						.searchFeatureByName(fname);
+				GenericAttribute attribute = new GenericAttribute(name,
+						new RangeIntegerDomain(ranges), 0, integer);
+				feature.addAttribute(attribute);
+
+			} else if (at instanceof RealAttrDefBounded) {
+				String fname = ((RealAttrDefBounded) at).getName().getHead().getOwnedFeature().getName();
+				String name = ((RealAttrDefBounded) at).getName().getName();
+				float min = Float.parseFloat(((RealAttrDefBounded) at).getMin());
+				float max = Float.parseFloat(((RealAttrDefBounded) at).getMax());
+				fr.familiar.attributedfm.Feature feature = fm.searchFeatureByName(fname);
+				GenericAttribute attribute;
+				if (((RealAttrDefBounded) at).getDelta() != null) {
+					float delta = Float.parseFloat(((RealAttrDefBounded) at)
+							.getDelta());
+					// The magic of real 2 integers happens here
+					Set<Float> ranges = new HashSet<Float>();
+					for (float i = min; i < max; i += delta) {
+						ranges.add(i);
+					}
+					 attribute = new GenericAttribute(name,	new SetRealDomain(ranges), 0, 0);
+				}else{
+					Collection<RealRange> ranges = new ArrayList<RealRange>();
+					ranges.add(new RealRange(-21474837, 21474835));
+					 attribute = new GenericAttribute(name,	new RangeRealDomain(ranges), 0, 0);
+				}
+
+
+				feature.addAttribute(attribute);
+
+			} else if (at instanceof RealAttrDefUnbounded) {
+			
+				// Reason over that without a delta is gonnna be toooooooooo
+				// expensive.
+
+				String fname = ((RealAttrDefUnbounded) at).getName().getHead()
+						.getOwnedFeature().getName();
+				String name = ((RealAttrDefUnbounded) at).getName().getName();
+				float val = Float.parseFloat(((RealAttrDefUnbounded) at)
+						.getVal());
+
+				Collection<RealRange> ranges = new ArrayList<RealRange>();
+				ranges.add(new RealRange(-21474837, 21474835));
+
+				fr.familiar.attributedfm.Feature feature = fm
+						.searchFeatureByName(fname);
+				GenericAttribute attribute = new GenericAttribute(name,
+						new RangeRealDomain(ranges), 0, val);
+				feature.addAttribute(attribute);
+
+			}// else {
+				//System.out.println(att); // TODO decide what to do with the rest
+			//}
+
 		}
 	}
-	
 
 	/**
 	 * @param fh
