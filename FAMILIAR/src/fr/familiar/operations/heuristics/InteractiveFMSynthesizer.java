@@ -130,7 +130,7 @@ public class InteractiveFMSynthesizer extends Observable{
 		
 		// Compute clusters and weights
 		computeClusters();
-		computeBIGWeights();
+		computeBIGWeights(big);
 		
 		
 
@@ -163,7 +163,7 @@ public class InteractiveFMSynthesizer extends Observable{
 		actionRedoHistory = new LinkedList<KSynthesisAction>();
 		
 		// Update weights in case this new information modifies our understanding of the clusters
-		computeBIGWeights();
+		computeBIGWeights(big);
 		
 		setChanged();
 		notifyObservers();
@@ -221,7 +221,7 @@ public class InteractiveFMSynthesizer extends Observable{
 		actionRedoHistory = new LinkedList<KSynthesisAction>();
 		
 		// Update weights in case this new information modifies our understanding of the clusters
-		computeBIGWeights();
+		computeBIGWeights(big);
 
 		setChanged();
 		notifyObservers();
@@ -274,7 +274,7 @@ public class InteractiveFMSynthesizer extends Observable{
 		}
 		
 		// Update weights in case this new information modifies our understanding of the clusters
-		computeBIGWeights();
+		computeBIGWeights(big);
 
 		setChanged();
 		notifyObservers();
@@ -286,6 +286,14 @@ public class InteractiveFMSynthesizer extends Observable{
 	 * @return
 	 */
 	public List<KeyValue<String, List<String>>> getParentCandidates() {
+		return getParentCandidates(big);
+	}
+	
+	public List<KeyValue<String, List<String>>> getOriginalParentCandidates() {
+		return getParentCandidates(originalBig);
+	}
+	
+	public List<KeyValue<String, List<String>>> getParentCandidates(WeightedImplicationGraph<String> big) {
 		List<KeyValue<String, List<String>>> parents = new ArrayList<KeyValue<String,List<String>>>();
 		for (String feature : big.vertices()) {
 			
@@ -327,7 +335,8 @@ public class InteractiveFMSynthesizer extends Observable{
 		if (parentSimilarityMetric.isOrGroupsRequired() && orGroups == null) {
 			orGroups = originalFmv.computeOrGroups();	
 		}
-		computeBIGWeights();
+		computeBIGWeights(big);
+		computeBIGWeights(originalBig);
 	}
 
 	public void selectFeatureFrequencyMetric() {
@@ -352,7 +361,8 @@ public class InteractiveFMSynthesizer extends Observable{
 		this.clusteringSimilarityMetric = clusteringSimilarityMetric;
 		this.clusteringThreshold = threshold;
 		computeClusters();
-		computeBIGWeights();
+		computeBIGWeights(big);
+		computeBIGWeights(originalBig);
 	}
 
 	public void setSupportClusteringParameters(double threshold) {
@@ -514,7 +524,7 @@ public class InteractiveFMSynthesizer extends Observable{
 		big.removeAllEdges(removedEdges);
 
 		// Update weights in case this new information modifies our understanding of the clusters
-		computeBIGWeights();
+		computeBIGWeights(big);
 
 		setChanged();
 		notifyObservers();
@@ -683,7 +693,8 @@ public class InteractiveFMSynthesizer extends Observable{
 
 	public void setComplementaryParentSimilarityMetrics(List<Heuristic> complementaryMetrics) {
 		this.complementaryParentSimilarityMetrics = complementaryMetrics;
-
+		computeBIGWeights(big);
+		computeBIGWeights(originalBig);
 	}
 
 	/**
@@ -692,31 +703,29 @@ public class InteractiveFMSynthesizer extends Observable{
 	 * the complementary heuristics
 	 * and the clusters
 	 */
-	private void computeBIGWeights() {
+	private void computeBIGWeights(WeightedImplicationGraph<String> big) {
 		// TODO : avoid computing the same thing twice
 
 		// Compute weights with the main heuristic
-
+		parentSimilarityMetric.setImplicationGraph(big.getImplicationGraph());
+		Set<FGroup> groups = new HashSet<FGroup>();
+		groups.addAll(mutexGroups);
+		groups.addAll(xorGroups);
+		groups.addAll(orGroups);
+		parentSimilarityMetric.setGroups(groups);
+		
 		for (SimpleEdge edge : big.edges()) {
 			String source = big.getSource(edge);
 			String target = big.getTarget(edge);
-
-			parentSimilarityMetric.setImplicationGraph(big.getImplicationGraph());
-			Set<FGroup> groups = new HashSet<FGroup>();
-			groups.addAll(mutexGroups);
-			groups.addAll(xorGroups);
-			groups.addAll(orGroups);
-			parentSimilarityMetric.setGroups(groups);
-			
 			double weight = parentSimilarityMetric.similarity(source, target);
 			big.setEdgeWeight(edge, weight);
 		}
 
 		// Tune weights with complementary heuristics
-		tuneWeightsWithComplementaryHeuristics();
+		tuneWeightsWithComplementaryHeuristics(big);
 
 		// Tune weights with clusters
-		tuneWeightsWithComplementaryClusters(similarityClusters);
+		tuneWeightsWithComplementaryClusters(big, similarityClusters);
 
 		setChanged();
 		notifyObservers();
@@ -726,7 +735,7 @@ public class InteractiveFMSynthesizer extends Observable{
 	/**
 	 * Tune the weights of the BIG according to the complementary heuristics
 	 */
-	private void tuneWeightsWithComplementaryHeuristics() {
+	private void tuneWeightsWithComplementaryHeuristics(WeightedImplicationGraph<String> big) {
 
 		// TODO : put these thresholds in a better place
 		final double VERY_HIGH_THRESHOLD = 0.6; // the feature should be selected
@@ -777,7 +786,7 @@ public class InteractiveFMSynthesizer extends Observable{
 	/**
 	 * Tune the weights of the BIG according to the clusters
 	 */
-	private void tuneWeightsWithComplementaryClusters(Set<Set<String>> clusters) {
+	private void tuneWeightsWithComplementaryClusters(WeightedImplicationGraph<String> big, Set<Set<String>> clusters) {
 		for (Set<String> cluster : clusters) {
 			if (cluster.size() > 1) {
 				// Look for a parent within the cluster
@@ -789,9 +798,9 @@ public class InteractiveFMSynthesizer extends Observable{
 				}
 				
 				if (bestParent != null) {
-					promoteParentOfCluster(cluster, bestParent);
+					promoteParentOfCluster(big, cluster, bestParent);
 				} else {
-					tuneWeightsWithComplementaryClusters(separateInSubclusters(clusters));
+					tuneWeightsWithComplementaryClusters(big, separateInSubclusters(clusters));
 				}
 				
 			}
@@ -859,7 +868,7 @@ public class InteractiveFMSynthesizer extends Observable{
 		return new HashSet<Set<String>>();
 	}
 
-	private void promoteParentOfCluster(Set<String> cluster, String parent) {
+	private void promoteParentOfCluster(WeightedImplicationGraph<String> big, Set<String> cluster, String parent) {
 		final double MAX = 1;
 		if (parent != null) {
 			for (String feature : cluster) {
