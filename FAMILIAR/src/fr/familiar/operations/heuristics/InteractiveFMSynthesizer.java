@@ -3,6 +3,7 @@ package fr.familiar.operations.heuristics;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Observable;
 import java.util.Set;
@@ -13,14 +14,15 @@ import fr.familiar.gui.synthesis.FeatureComparator;
 import fr.familiar.gui.synthesis.KeyValue;
 import fr.familiar.gui.synthesis.OutDegreeComparator;
 import fr.familiar.gui.synthesis.ParentComparator;
+import fr.familiar.operations.heuristics.actions.IgnoreParentAction;
+import fr.familiar.operations.heuristics.actions.KSynthesisAction;
+import fr.familiar.operations.heuristics.actions.SelectParentAction;
 import fr.familiar.operations.heuristics.clustering.FMExperiment;
 import fr.familiar.operations.heuristics.clustering.HierarchicalFeatureClusterer;
 import fr.familiar.operations.heuristics.metrics.AlwaysZeroMetric;
 import fr.familiar.operations.heuristics.metrics.FeatureFrequencyMetric;
-import fr.familiar.operations.heuristics.metrics.FeatureSimilarityMetric;
 import fr.familiar.operations.heuristics.metrics.FrequencyMetric;
 import fr.familiar.operations.heuristics.metrics.MetricName;
-import fr.familiar.operations.heuristics.metrics.SimmetricsMetric;
 import fr.familiar.operations.heuristics.mst.OptimumBranchingFinder;
 import fr.familiar.operations.heuristics.mst.WeightedImplicationGraph;
 import fr.familiar.operations.measures.cliques.BIGCliques_Threshold;
@@ -58,7 +60,8 @@ public class InteractiveFMSynthesizer extends Observable{
 	
 	private FeatureModelVariable originalFmv;
 
-
+	private LinkedList<KSynthesisAction> actionUndoHistory;
+	private LinkedList<KSynthesisAction> actionRedoHistory;
 
 	public InteractiveFMSynthesizer(FeatureModelVariable fmv,
 			Heuristic parentSimilarityMetric,
@@ -70,8 +73,9 @@ public class InteractiveFMSynthesizer extends Observable{
 		// Initialize data
 		big = new WeightedImplicationGraph<String>(fmv.computeImplicationGraph());
 		originalBig = big.clone();
-
-
+		
+		actionUndoHistory = new LinkedList<KSynthesisAction>();
+		actionRedoHistory = new LinkedList<KSynthesisAction>();
 		
 		this.fmv = new FeatureModelVariable(fmv.getIdentifier() + "_synthesis",
 				new FeatureModel<String>(FeatureGraphFactory.mkStringFactory().mkTop()),
@@ -151,6 +155,21 @@ public class InteractiveFMSynthesizer extends Observable{
 	 */
 
 	public void selectParent(String child, String parent) {
+		SelectParentAction action = new SelectParentAction(this, child, parent);
+		action.execute();
+		actionUndoHistory.push(action);
+		
+		// A new action prevent from redoing actions
+		actionRedoHistory = new LinkedList<KSynthesisAction>();
+		
+		// Update weights in case this new information modifies our understanding of the clusters
+		computeBIGWeights();
+		
+		setChanged();
+		notifyObservers();
+	}
+	
+	public void selectParentUnrecorded(String child, String parent) {
 		FeatureGraph<String> graph = fmv.getFm().getDiagram();
 		FeatureNode<String> childNode;
 		try {
@@ -186,13 +205,6 @@ public class InteractiveFMSynthesizer extends Observable{
 		
 		// Remove the inverse relation in the implication graph, if it exists, to avoid invalid choices
 		big.removeEdge(parent, child);
-		
-
-		// Update weights in case this new information modifies our understanding of the clusters
-		computeBIGWeights();
-
-		setChanged();
-		notifyObservers();
 	}
 
 	/**
@@ -201,6 +213,21 @@ public class InteractiveFMSynthesizer extends Observable{
 	 * @param parent
 	 */
 	public void ignoreParent(String child, String parent) {
+		IgnoreParentAction action = new IgnoreParentAction(this, child, parent);
+		action.execute();
+		actionUndoHistory.push(action);
+		
+		// A new action prevent from redoing actions
+		actionRedoHistory = new LinkedList<KSynthesisAction>();
+		
+		// Update weights in case this new information modifies our understanding of the clusters
+		computeBIGWeights();
+
+		setChanged();
+		notifyObservers();
+	}
+	
+	public void ignoreParentUnrecorded(String child, String parent) {
 		if (big.parents(child).size() > 1) {
 			// Suppress the corresponding edge from the implication graph
 			SimpleEdge edge = big.findEdge(child, parent);
@@ -213,12 +240,6 @@ public class InteractiveFMSynthesizer extends Observable{
 			if (parents.size() == 1) {
 				selectParent(child, parents.iterator().next());
 			}
-
-			// Update weights in case this new information modifies our understanding of the clusters
-			computeBIGWeights();
-
-			setChanged();
-			notifyObservers();
 		}
 	}
 	
@@ -267,16 +288,23 @@ public class InteractiveFMSynthesizer extends Observable{
 	public List<KeyValue<String, List<String>>> getParentCandidates() {
 		List<KeyValue<String, List<String>>> parents = new ArrayList<KeyValue<String,List<String>>>();
 		for (String feature : big.vertices()) {
+			
 			List<String> parentList = new ArrayList<String>(big.parents(feature));
 
-			if (parentSimilarityMetric != null) {
-				Collections.sort(parentList, new ParentComparator(feature, big));	
+			if (parentList.size() > 0) {
+	 			// Sort parent candidates according to big weights
+				if (parentSimilarityMetric != null) {
+					Collections.sort(parentList, new ParentComparator(feature, big));	
+				}
+
+				KeyValue<String, List<String>> parentEntry = new KeyValue<String, List<String>>(feature, parentList);
+				parents.add(parentEntry);				
 			}
 
-			KeyValue<String, List<String>> parentEntry = new KeyValue<String, List<String>>(feature, parentList);
-			parents.add(parentEntry);
 		}
-		Collections.sort(parents, featureComparator);
+		
+		// Sort ranking lists according to number of parent candidates
+		Collections.sort(parents, featureComparator); 
 		return parents;
 	}
 
@@ -627,7 +655,7 @@ public class InteractiveFMSynthesizer extends Observable{
 	public Set<String> getPossibleChildren(String feature, Set<String> cluster) {
 		Set<String> possibleChildren = new HashSet<String>();
 		for (String possibleChild : cluster) {
-			if (big.containsEdge(possibleChild, feature)) { // TODO : with the original big?
+			if (big.containsEdge(possibleChild, feature)) {
 				possibleChildren.add(possibleChild);
 			}
 		}
@@ -645,7 +673,7 @@ public class InteractiveFMSynthesizer extends Observable{
 		for (String feature : features) {
 			if (first) {
 				first = false;
-				possibleParents.addAll(big.parents(feature)); // TODO : with the original big?
+				possibleParents.addAll(big.parents(feature));
 			} else {
 				possibleParents.retainAll(big.parents(feature));	
 			}
@@ -666,7 +694,6 @@ public class InteractiveFMSynthesizer extends Observable{
 	 */
 	private void computeBIGWeights() {
 		// TODO : avoid computing the same thing twice
-		// TODO : offer the choice to ignore clusters or complementary heuristics
 
 		// Compute weights with the main heuristic
 
@@ -846,6 +873,39 @@ public class InteractiveFMSynthesizer extends Observable{
 
 	public WeightedImplicationGraph<String> getOriginalBig() {
 		return originalBig;
+	}
+	
+	/**
+	 * Reset the FM to its initial state (no hierarchy)
+	 */
+	private void reset() {
+		fmv.setFm(new FeatureModel<String>(FeatureGraphFactory.mkStringFactory().mkTop()));
+		big = originalBig.clone();
+	}
+	
+	/**
+	 * Undo the previous action
+	 */
+	public void undo() {
+		if (!actionUndoHistory.isEmpty()) {
+			reset();
+			actionRedoHistory.push(actionUndoHistory.peek());
+			actionUndoHistory.pop();
+			for (KSynthesisAction action : actionUndoHistory) {
+				action.execute();
+			}	
+		}
+	}
+	
+	/**
+	 * Redo the previously undone action
+	 */
+	public void redo() {
+		if (!actionRedoHistory.isEmpty()) {
+			KSynthesisAction action = actionRedoHistory.pop();
+			action.execute();
+			actionUndoHistory.push(action);	
+		}
 	}
 	
 }

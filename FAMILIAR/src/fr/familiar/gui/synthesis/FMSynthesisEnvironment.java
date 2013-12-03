@@ -27,6 +27,7 @@ import fr.familiar.gui.Tab2EnvVar;
 import fr.familiar.gui.synthesis.actions.IgnoreParentAction;
 import fr.familiar.gui.synthesis.actions.SelectClusterParentAction;
 import fr.familiar.gui.synthesis.actions.SelectParentAction;
+import fr.familiar.gui.synthesis.actions.SetRootAction;
 import fr.familiar.gui.synthesis.actions.SynthesisAction;
 import fr.familiar.operations.heuristics.Heuristic;
 import fr.familiar.operations.heuristics.KSynthesisPlugin;
