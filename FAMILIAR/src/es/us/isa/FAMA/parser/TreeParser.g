@@ -18,8 +18,8 @@
 header{
 	package es.us.isa.FAMA.parser;    
 	import java.util.*;	
-	import inria.FAMILIAR.Model.*;
-	import inria.FAMILIAR.Model.Domain.*;
+	import fr.familiar.attributedfm.*;
+	import fr.familiar.attributedfm.domain.*;
 	
 	import es.us.isa.util.*;
 	import es.us.isa.FAMA.parser.*;
