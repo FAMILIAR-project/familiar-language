@@ -14,6 +14,7 @@ import fr.familiar.gui.synthesis.FeatureComparator;
 import fr.familiar.gui.synthesis.KeyValue;
 import fr.familiar.gui.synthesis.OutDegreeComparator;
 import fr.familiar.gui.synthesis.ParentComparator;
+import fr.familiar.operations.heuristics.actions.CompleteFMAction;
 import fr.familiar.operations.heuristics.actions.IgnoreParentAction;
 import fr.familiar.operations.heuristics.actions.KSynthesisAction;
 import fr.familiar.operations.heuristics.actions.SelectParentAction;
@@ -170,6 +171,10 @@ public class InteractiveFMSynthesizer extends Observable{
 	}
 	
 	public void selectParentUnrecorded(String child, String parent) {
+		if (child.equals(parent)) {
+			return;
+		}
+		
 		FeatureGraph<String> graph = fmv.getFm().getDiagram();
 		FeatureNode<String> childNode;
 		try {
@@ -242,6 +247,26 @@ public class InteractiveFMSynthesizer extends Observable{
 				selectParent(child, parents.iterator().next());
 			}
 		}
+	}
+	
+	/**
+	 * Create the child/parent relations in the feature diagram for the cluster
+	 * @param children : cluster of features
+	 * @param parent
+	 */
+	public void selectParentOfCluster(Set<String> children, String parent) {
+		SelectParentAction action = new SelectParentAction(this, children, parent);
+		action.execute();
+		actionUndoHistory.push(action);
+		
+		// A new action prevent from redoing actions
+		actionRedoHistory = new LinkedList<KSynthesisAction>();
+		
+		// Update weights in case this new information modifies our understanding of the clusters
+		computeBIGWeights(big);
+		
+		setChanged();
+		notifyObservers();
 	}
 	
 	/**
@@ -537,6 +562,18 @@ public class InteractiveFMSynthesizer extends Observable{
 	 * @return a complete feature model
 	 */
 	public FeatureModelVariable computeCompleteFeatureModel() {
+		CompleteFMAction action = new CompleteFMAction(this);
+		action.execute();
+		actionUndoHistory.push(action);
+		
+		// A new action prevent from redoing actions
+		actionRedoHistory = new LinkedList<KSynthesisAction>();
+		
+
+		return fmv;
+	}
+	
+	public void computeCompleteFeatureModelUnrecorded() {
 		
 		
 		// FIXME : experimental : choose a root and put the other root candidates as its children 
@@ -605,8 +642,10 @@ public class InteractiveFMSynthesizer extends Observable{
 
 
 		FeatureModel<String> fm = new FeatureModel<String>(fg);
-		FeatureModelVariable completeFM = new FeatureModelVariable(fmv.getIdentifier() + "_completed", fm);
-		return completeFM;
+//		FeatureModelVariable completeFM = new FeatureModelVariable(fmv.getIdentifier() + "_completed", fm);
+//		return completeFM;
+		fmv.setFm(fm);
+		
 	}
 
 	public double getClusteringThreshold() {
