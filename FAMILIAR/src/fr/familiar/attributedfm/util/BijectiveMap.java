@@ -15,40 +15,12 @@
     along with FaMaTS.  If not, see <http://www.gnu.org/licenses/>.
 
  */
-package fr.familiar.attributedfm;
+package fr.familiar.attributedfm.util;
 
-import es.us.isa.FAMA.parser.FMFParser;
-import fr.familiar.attributedfm.util.Tree;
+import java.util.Map;
 
-//TODO esto se podria meter al nucleo
-public class ComplexConstraint extends Constraint {
+public interface BijectiveMap<K, V> extends Map<K, V> {
 
-	private FMFParser parser;
+	public K getKey(V val);
 	
-	private Tree<String> ast;
-	
-	public ComplexConstraint(String rel){
-		setName(rel);
-		parser = new FMFParser();
-		ast = parser.parseConstraint(rel);
-	}
-	
-	public ComplexConstraint(Tree<String> ast){
-		this.ast = ast;
-	}
-	
-	@Override
-	public Tree<String> getAST() {
-		return ast;
-	}
-	
-	public void setAST(Tree<String> ast){
-		this.ast = ast;
-	}
-	
-	public void setRelation(String rel){
-		//name = rel;
-		ast = parser.parseConstraint(rel);
-	}
-
 }

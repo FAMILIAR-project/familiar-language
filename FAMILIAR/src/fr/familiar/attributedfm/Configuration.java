@@ -15,12 +15,36 @@
     along with FaMaTS.  If not, see <http://www.gnu.org/licenses/>.
 
  */
-package es.us.isa.util;
+package fr.familiar.attributedfm;
 
+
+import java.util.HashMap;
 import java.util.Map;
 
-public interface BijectiveMap<K, V> extends Map<K, V> {
 
-	public K getKey(V val);
+public class Configuration {
+
+	private Map<VariabilityElement, Integer> elements;
+
+	public Configuration(Map<VariabilityElement, Integer> elements) {
+		this.elements = elements;
+	}
+
+	public Configuration() {
+		this.elements = new HashMap<VariabilityElement, Integer>();
+	}
+
+	public Map<VariabilityElement, Integer> getElements() {
+		return elements;
+	}
+
+	public void setElements(Map<VariabilityElement, Integer> elements) {
+		this.elements = elements;
+	}
+
+	public void addElement(VariabilityElement ve, Integer integer){
+		elements.put(ve, integer);
+	}
+	
 	
 }

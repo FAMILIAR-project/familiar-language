@@ -1,7 +1,9 @@
 // $ANTLR : "Anasint.g" -> "Anasint.java"$
 
 	package es.us.isa.FAMA.parser;       
-	
+	import java.util.*;	
+	import es.us.isa.FAMA.parser.*;
+
 public interface AnasintTokenTypes {
 	int EOF = 1;
 	int NULL_TREE_LOOKAHEAD = 3;

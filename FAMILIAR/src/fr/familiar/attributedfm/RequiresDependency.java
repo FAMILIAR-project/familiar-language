@@ -20,9 +20,9 @@
  */
 package fr.familiar.attributedfm;
 
-import es.us.isa.util.Node;
-import es.us.isa.util.Tree;
 import fr.familiar.attributedfm.domain.KeyWords;
+import fr.familiar.attributedfm.util.Node;
+import fr.familiar.attributedfm.util.Tree;
 
 /**
  * @author trinidad, Manuel Nieto Ucl

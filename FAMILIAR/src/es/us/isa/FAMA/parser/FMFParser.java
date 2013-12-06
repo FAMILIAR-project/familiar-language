@@ -26,9 +26,9 @@ import java.util.Iterator;
 import antlr.RecognitionException;
 import antlr.TokenStreamException;
 import antlr.collections.AST;
-import es.us.isa.util.Node;
-import es.us.isa.util.Tree;
 import fr.familiar.attributedfm.AttributedFeatureModel;
+import fr.familiar.attributedfm.util.Node;
+import fr.familiar.attributedfm.util.Tree;
 
 public class FMFParser {
 

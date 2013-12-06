@@ -14,7 +14,7 @@
  *     You should have received a copy of the GNU Lesser General Public License
  *     along with FaMaTS.  If not, see <http://www.gnu.org/licenses/>.
  */
-package es.us.isa.util;
+package fr.familiar.attributedfm.util;
 
 import java.util.ArrayList;
 import java.util.List;

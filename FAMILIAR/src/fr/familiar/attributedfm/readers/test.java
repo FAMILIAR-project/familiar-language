@@ -5,7 +5,7 @@ import fr.familiar.attributedfm.AttributedFeatureModel;
 import fr.familiar.parser.AttributedFeatureModelVariable;
 
 public class test {
-	static String vml2FilePath = "/Users/macher1/Documents/runtime-EclipseXtext/VM-examples/foo.vm" ; 
+	static String vml2FilePath = "/Users/malawito/Dropbox/Documentos/Workspaces/genetic/SimpleGenetic/VideoContent_02.vm" ; 
 			// "/Users/ealferez/git/VM/fr.inria.lang.vm.examples.MOTIV/VideoContent.vm";
 
 	public static void main(String[] args) {

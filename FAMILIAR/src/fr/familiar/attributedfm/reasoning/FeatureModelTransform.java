@@ -93,7 +93,7 @@ public class FeatureModelTransform {
 	}
 	
 	private void generateVariables(AttributedFeatureModel fm) {
-		Iterator<Feature> it = fm.getAttributedFeatures().iterator();
+		Iterator<Feature> it = fm.getFeatures().iterator();
 		while (it.hasNext()) {
 			Feature f = (Feature)it.next();
 			Relation parentRelation = f.getParent();
