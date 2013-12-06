@@ -1,6 +1,5 @@
-package fr.familiar.gui.synthesis;
+package fr.familiar.gui.synthesis.actions;
 
-import fr.familiar.gui.synthesis.actions.SynthesisAction;
 import fr.familiar.operations.heuristics.InteractiveFMSynthesizer;
 
 public class SetRootAction implements SynthesisAction {
