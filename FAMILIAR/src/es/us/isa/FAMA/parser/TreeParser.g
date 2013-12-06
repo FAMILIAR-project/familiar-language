@@ -21,7 +21,7 @@ header{
 	import fr.familiar.attributedfm.*;
 	import fr.familiar.attributedfm.domain.*;
 	
-	import es.us.isa.util.*;
+	import fr.familiar.attributedfm.util.*;
 	import es.us.isa.FAMA.parser.*;
 }
 
