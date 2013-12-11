@@ -28,6 +28,7 @@ import fr.familiar.operations.heuristics.mst.OptimumBranchingFinder;
 import fr.familiar.operations.heuristics.mst.WeightedImplicationGraph;
 import fr.familiar.operations.measures.cliques.BIGCliques_Threshold;
 import fr.familiar.variable.FeatureModelVariable;
+import fr.familiar.variable.FeatureModelVariableWithSynchronizedFormula;
 import gsd.graph.DirectedCliqueFinder;
 import gsd.graph.ImplicationGraph;
 import gsd.graph.SimpleEdge;
@@ -78,7 +79,7 @@ public class InteractiveFMSynthesizer extends Observable{
 		actionUndoHistory = new LinkedList<KSynthesisAction>();
 		actionRedoHistory = new LinkedList<KSynthesisAction>();
 		
-		this.fmv = new FeatureModelVariable(fmv.getIdentifier() + "_synthesis",
+		this.fmv = new FeatureModelVariableWithSynchronizedFormula(fmv.getIdentifier() + "_synthesis",
 				new FeatureModel<String>(FeatureGraphFactory.mkStringFactory().mkTop()),
 				fmv.getFormula().clone());
 		

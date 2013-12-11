@@ -169,5 +169,12 @@ public class FMLBasicInterpreter {
 		}
 
 	}
+	
+	/**
+	 * Add or replace a variable in the environment
+	 */
+	public void addOrReplaceVariable(String id, Variable var) {
+		_environment.addOrReplaceVariable(id, var);
+	}
 
 }
