@@ -53,7 +53,7 @@ public class BooleanDomain extends Domain {
 
 	@Override
 	public Set<Integer> getAllIntegerValues() {
-		Set<Integer> res = new HashSet<>();
+		Set<Integer> res = new HashSet<Integer>();
 		res.add(0);res.add(1);
 		return res;
 	}
