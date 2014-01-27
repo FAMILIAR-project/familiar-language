@@ -18,6 +18,7 @@ import fr.familiar.operations.heuristics.actions.CompleteFMAction;
 import fr.familiar.operations.heuristics.actions.IgnoreParentAction;
 import fr.familiar.operations.heuristics.actions.KSynthesisAction;
 import fr.familiar.operations.heuristics.actions.SelectParentAction;
+import fr.familiar.operations.heuristics.actions.SetRootAction;
 import fr.familiar.operations.heuristics.clustering.FMExperiment;
 import fr.familiar.operations.heuristics.clustering.HierarchicalFeatureClusterer;
 import fr.familiar.operations.heuristics.metrics.AlwaysZeroMetric;
@@ -518,6 +519,21 @@ public class InteractiveFMSynthesizer extends Observable{
 	 * @param root
 	 */
 	public void setRoot(String root) {
+		SetRootAction action = new SetRootAction(this, root);
+		action.execute();
+		actionUndoHistory.push(action);
+		
+		// A new action prevent from redoing actions
+		actionRedoHistory = new LinkedList<KSynthesisAction>();
+		
+		// Update weights in case this new information modifies our understanding of the clusters
+		computeBIGWeights(big);
+		
+		setChanged();
+		notifyObservers();
+	}
+	
+	public void setRootUnrecorded(String root) {
 		FeatureGraph<String> graph = fmv.getFm().getDiagram();
 
 		// Restore the state of the old root if it exist
@@ -549,12 +565,6 @@ public class InteractiveFMSynthesizer extends Observable{
 		// Delete every outgoing edges of the root node in the implication graph
 		Set<SimpleEdge> removedEdges = new HashSet<SimpleEdge>(big.outgoingEdges(root));
 		big.removeAllEdges(removedEdges);
-
-		// Update weights in case this new information modifies our understanding of the clusters
-		computeBIGWeights(big);
-
-		setChanged();
-		notifyObservers();
 	}
 
 	/**
