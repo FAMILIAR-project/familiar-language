@@ -35,14 +35,12 @@ public class ICSE2014Experiment2 extends KSynthesisTest {
 
 
 	// Tests SPLOT
-	@Ignore
 	@Test
 	public void testStatsSPLOT() {
 		System.out.println("Stats SPLOT");
 		testStatsFMs(getSPLOTFeatureModelsForFASE());
 	}
 
-	@Ignore
 	@Test
 	public void testTop2SPLOT() {
 		System.out.println("Top SPLOT");

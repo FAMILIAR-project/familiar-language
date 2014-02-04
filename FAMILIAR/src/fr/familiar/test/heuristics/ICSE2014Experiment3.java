@@ -28,14 +28,12 @@ public class ICSE2014Experiment3 extends KSynthesisTest {
 
 
 	// Implication graph
-	@Ignore
 	@Test
 	public void testTransitiveReductionSPLOT() {
 		System.out.println("Transitive reduction SPLOT");
 		testTransitiveReduction(getSPLOTFeatureModelsForFASE());
 	}
 	
-	@Ignore
 	@Test
 	public void testTransitiveReductionPCM() {
 		System.out.println("Transitive reduction PCM");
@@ -82,11 +80,11 @@ public class ICSE2014Experiment3 extends KSynthesisTest {
 		double edgesBeforeTRav = averageInt(listEdgesBeforeTR);
 		double edgesAfterTRav = averageInt(listEdgesAfterTR);
 		
-		System.out.println("BIG edges");
+		System.out.println("average BIG edges");
 		System.out.println("before TR : " + edgesBeforeTRav);
 		System.out.println("after TR : " + edgesAfterTRav);
 		
-		System.out.println("Edges in the BIG: " + nbEdgesBeforeTR + " -> " + nbEdgesAfterTR);
+		System.out.println("Total nb of edges in the BIG: " + nbEdgesBeforeTR + " -> " + nbEdgesAfterTR);
 		System.out.println(keptParents + " / " + nbParents + " parents kept after transitive reduction");
 		
 	}
@@ -95,7 +93,6 @@ public class ICSE2014Experiment3 extends KSynthesisTest {
 
 	// Cliques
 
-	@Ignore
 	@Test
 	public void testCliquesSPLOT() {
 		System.out.println("Cliques SPLOT");

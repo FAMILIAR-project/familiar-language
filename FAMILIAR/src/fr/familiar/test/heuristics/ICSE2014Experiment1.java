@@ -26,7 +26,6 @@ public class ICSE2014Experiment1 extends KSynthesisTest {
 	// SPLOT
 	
 	
-	@Ignore
 	@Test
 	public void testOptimumBranchingSPLOT() {
 		System.out.println("Optimum branching SPLOT");
@@ -34,7 +33,6 @@ public class ICSE2014Experiment1 extends KSynthesisTest {
 		testOptimumBranching(getSPLOTFeatureModelsForFASE(), false);
 	}
 	
-	@Ignore
 	@Test
 	public void testOptimumBranchingSPLOTReduced() {
 		System.out.println("Optimum branching SPLOT (BIG reduced)");

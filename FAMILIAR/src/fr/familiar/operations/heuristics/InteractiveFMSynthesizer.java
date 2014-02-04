@@ -332,10 +332,11 @@ public class InteractiveFMSynthesizer extends Observable{
 				if (parentSimilarityMetric != null) {
 					Collections.sort(parentList, new ParentComparator(feature, big));	
 				}
-
-				KeyValue<String, List<String>> parentEntry = new KeyValue<String, List<String>>(feature, parentList);
-				parents.add(parentEntry);				
 			}
+			
+			KeyValue<String, List<String>> parentEntry = new KeyValue<String, List<String>>(feature, parentList);
+			parents.add(parentEntry);				
+			
 
 		}
 		

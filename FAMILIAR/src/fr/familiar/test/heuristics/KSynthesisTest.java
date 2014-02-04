@@ -313,10 +313,10 @@ public abstract class KSynthesisTest extends FMLTest {
 //			clusteringThresholds.put(lsa, 0.5);
 //		}
 		
-//		// Transitive reduction metric
-//		reductionMetric = new TransitiveReductionMetric();
-//		metrics.add(reductionMetric);
-//		clusteringThresholds.put(reductionMetric, 0.5);
+		// Transitive reduction metric
+		reductionMetric = new TransitiveReductionMetric();
+		metrics.add(reductionMetric);
+		clusteringThresholds.put(reductionMetric, 0.5);
 		
 //		HybridMetric hybrid = new HybridMetric(wikiMetric);
 //		metrics.add(hybrid);
