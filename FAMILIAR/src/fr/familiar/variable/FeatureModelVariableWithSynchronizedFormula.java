@@ -3,6 +3,7 @@
  */
 package fr.familiar.variable;
 
+import fr.familiar.fm.FeatureModelCloner;
 import fr.familiar.parser.NameSpace;
 import gsd.synthesis.FeatureModel;
 import gsd.synthesis.Formula;
@@ -54,6 +55,13 @@ public class FeatureModelVariableWithSynchronizedFormula extends FeatureModelVar
 		// TODO Auto-generated constructor stub
 	}
 	
-	
+	@Override
+	public Variable copy() {
+
+		// clone of the feature model and the formula
+		FeatureModel<String> fmCopy = FeatureModelCloner.clone(_fm);
+
+		return new FeatureModelVariableWithSynchronizedFormula(name, fmCopy, this.getFormula().clone(), ns);
+	}
 
 }

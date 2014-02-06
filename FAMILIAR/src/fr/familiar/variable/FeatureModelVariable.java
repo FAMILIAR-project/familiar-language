@@ -370,7 +370,11 @@ public class FeatureModelVariable extends VariableImpl implements FMLFeatureMode
 		// clone of the feature model and the formula
 		FeatureModel<String> fmCopy = FeatureModelCloner.clone(_fm);
 
-		return new FeatureModelVariable(name, fmCopy, null, ns);
+		if (this.getFormulaAsIs() != null) {
+			return new FeatureModelVariable(name, fmCopy, this.getFormulaAsIs().clone(), ns);
+		} else {
+			return new FeatureModelVariable(name, fmCopy, null, ns);
+		}
 
 	}
 
