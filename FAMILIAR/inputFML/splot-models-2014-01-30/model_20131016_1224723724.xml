@@ -1,0 +1,32 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Oct 23, 2013 - 10:46 AM  -->
+<feature_model name="mo">
+<meta>
+<data name="description">poli</data>
+<data name="creator">pars</data>
+<data name="address"></data>
+<data name="email">pa.restrepo50@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">pars</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r MOdelo(_r)
+	:m Opcion(_r_1)
+		:o OP 1(_r_1_3)
+		:o Op 2(_r_1_4)
+	:m Implicacion(_r_2)
+		:o Costo(_r_2_5)
+			:o 25(_r_2_5_6)
+			:o 60(_r_2_5_7)
+	:m TD(_r_8)
+		:o TD1(_r_8_11)
+		:o TD2(_r_8_13)
+</feature_tree>
+<constraints>
+constraint_4:_r_1 or ~_r_8
+constraint_2:_r_1_3 or ~_r_8_11
+</constraints>
+</feature_model>

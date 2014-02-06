@@ -9,6 +9,8 @@ import java.util.Set;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import com.csvreader.CsvWriter;
+
 import fr.familiar.operations.heuristics.Heuristic;
 import fr.familiar.operations.heuristics.InteractiveFMSynthesizer;
 import fr.familiar.operations.heuristics.metrics.CommonEdgesMetric;
@@ -24,7 +26,6 @@ import gsd.synthesis.FeatureGraph;
 public class ICSE2014Experiment1 extends KSynthesisTest {
 
 	// SPLOT
-	
 	
 	@Test
 	public void testOptimumBranchingSPLOT() {
@@ -45,7 +46,6 @@ public class ICSE2014Experiment1 extends KSynthesisTest {
 	
 	
 	// PCM 
-	@Ignore
 	@Test
 	public void testOptimumBranchingPCM() {
 		System.out.println("Optimum branching PCM");
@@ -53,7 +53,6 @@ public class ICSE2014Experiment1 extends KSynthesisTest {
 		testOptimumBranching(getPCMFeatureModels(), false);
 	}
 	
-	@Ignore
 	@Test
 	public void testOptimumBranchingPCMReduced() {
 		System.out.println("Optimum branching PCM (BIG reduced)");
@@ -62,7 +61,7 @@ public class ICSE2014Experiment1 extends KSynthesisTest {
 	}
 	
 	// FASE
-	
+	@Ignore
 	@Test
 	public void testFASEAlgorithm() {
 		System.out.println("FASE score");

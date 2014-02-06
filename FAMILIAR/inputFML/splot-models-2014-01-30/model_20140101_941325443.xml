@@ -1,0 +1,29 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Jan 1, 2014 - 9:44 PM  -->
+<feature_model name="Prontuário Eletrônico de Pacientes">
+<meta>
+<data name="description">Prontuário Eletrônico de Pacientes</data>
+<data name="creator">Bruno</data>
+<data name="address"></data>
+<data name="email">brunogomes3000@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">IFRN</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r PEP(_r)
+	:m Autenticacao(_r_1)
+		:m Login_Senha(_r_1_2)
+	:m Atendimento(_r_3)
+		:m Ambulatorial(_r_3_4)
+		:o Internado(_r_3_5)
+	:o Evolucao(_r_6)
+		:o Enfermagem(_r_6_8)
+		:o Medica(_r_6_9)
+	:m Cadastro(_r_7)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

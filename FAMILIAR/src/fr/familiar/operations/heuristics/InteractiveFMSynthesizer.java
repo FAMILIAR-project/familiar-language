@@ -33,6 +33,7 @@ import fr.familiar.variable.FeatureModelVariableWithSynchronizedFormula;
 import gsd.graph.DirectedCliqueFinder;
 import gsd.graph.ImplicationGraph;
 import gsd.graph.SimpleEdge;
+import gsd.graph.TransitiveReduction;
 import gsd.synthesis.FeatureEdge;
 import gsd.synthesis.FeatureGraph;
 import gsd.synthesis.FeatureGraphFactory;
@@ -967,6 +968,37 @@ public class InteractiveFMSynthesizer extends Observable{
 			action.execute();
 			actionUndoHistory.push(action);	
 		}
+	}
+	
+	
+	/**
+	 * Transitively reduce the implication graph
+	 */
+	public void reduceBIG() {
+		ImplicationGraph<Set<String>> reducedGraph = big.reduceCliques();
+		TransitiveReduction.INSTANCE.reduce(reducedGraph);
+		
+		WeightedImplicationGraph<String> reducedBIG = new WeightedImplicationGraph<String>();
+		
+		// Create vertices
+		for (String feature : big.vertices()) {
+			reducedBIG.addVertex(feature);
+		}
+		
+		// Create edges
+		for (SimpleEdge edge : reducedGraph.edges()) {
+			Set<String> source = reducedGraph.getSource(edge);
+			Set<String> target = reducedGraph.getTarget(edge);
+			
+			for (String child : source) {
+				for (String parent : target) {
+					SimpleEdge newEdge = reducedBIG.addEdge(child, parent);
+					reducedBIG.setEdgeWeight(newEdge, big.getEdgeWeight(big.findEdge(child, parent)));
+				}
+			}
+		}
+		
+		this.big = reducedBIG;
 	}
 	
 }

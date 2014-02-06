@@ -1,0 +1,78 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Dec 3, 2013 - 3:03 PM  -->
+<feature_model name="MayaVariabilityModel">
+<meta>
+<data name="description">Maya</data>
+<data name="creator">Maya</data>
+<data name="address"></data>
+<data name="email">ch.cabrera38@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Uniandes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Maya(_r)
+	:m HolidayMaker(_r_1)
+		:m Create(_r_1_11)
+		:m Read(_r_1_12)
+		:m Update(_r_1_13)
+		:m Delete(_r_1_14)
+		:g (_r_1_38) [1,1] 
+			: Login Social Nerwork(_r_1_38_39)
+			: Login System User(_r_1_38_62)
+			: Login LDAP(_r_1_38_63)
+	:m Holiday(_r_2)
+		:m Create(_r_2_15)
+		:m Read(_r_2_16)
+		:m Update(_r_2_17)
+		:m Delete(_r_2_18)
+	:m Itinerary(_r_3)
+		:m Create(_r_3_4)
+		:m Read(_r_3_19)
+		:m Update(_r_3_20)
+		:m Delete(_r_3_21)
+		:g (_r_3_43) [1,*] 
+			: View Tree(_r_3_43_44)
+			: View Calendar(_r_3_43_64)
+			: View Map(_r_3_43_65)
+	:m Activity(_r_5)
+		:m Create(_r_5_22)
+		:m Read(_r_5_23)
+		:m Update(_r_5_24)
+		:m Delete(_r_5_25)
+	:o Suggestion(_r_6)
+		:m Create(_r_6_26)
+		:m Read(_r_6_27)
+		:m Update(_r_6_28)
+		:m Delete(_r_6_29)
+	:o Preference(_r_7)
+		:m Create(_r_7_30)
+		:m Read(_r_7_31)
+		:m Update(_r_7_32)
+		:m Delete(_r_7_33)
+	:o Memory(_r_8)
+		:m Create(_r_8_34)
+		:m Read(_r_8_35)
+		:m Update(_r_8_36)
+		:m Delete(_r_8_37)
+		:g (_r_8_48) [1,*] 
+			: View File System(_r_8_48_49)
+			: View Album(_r_8_48_66)
+				:m Create(_r_8_48_66_68)
+				:m Read(_r_8_48_66_69)
+				:m Update(_r_8_48_66_70)
+				:m Delete(_r_8_48_66_71)
+			: View Media(_r_8_48_67)
+		:g (_r_8_57) [1,1] 
+			: 10(_r_8_57_58)
+			: 20(_r_8_57_72)
+			: More than 50(_r_8_57_73)
+	:o Report(_r_9)
+	:o Auditory(_r_10)
+</feature_tree>
+<constraints>
+constraint_1:~_r_6 or _r_7
+</constraints>
+</feature_model>

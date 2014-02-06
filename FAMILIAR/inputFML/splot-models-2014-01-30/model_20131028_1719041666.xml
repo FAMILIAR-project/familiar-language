@@ -1,0 +1,38 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Nov 18, 2013 - 1:17 AM  -->
+<feature_model name="SimulesSPLBruno">
+<meta>
+<data name="description">Trabalho discilina</data>
+<data name="creator">Bruno</data>
+<data name="address"></data>
+<data name="email">brunocardoso1203@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Não possui</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r SimulesSPL(_r)
+	:m Tipos de Carta(_r_1)
+		:m Engenheiro de Software(_r_1_2)
+		:m Conceito(_r_1_3)
+		:m Problema(_r_1_4)
+	:m Artefato(_r_5)
+		:m Construir artefato(_r_5_6)
+		:m Inspecionar artefato(_r_5_7)
+	:m Projeto(_r_8)
+		:m Escolher projeto(_r_8_9)
+		:m Visualizar projeto(_r_8_10)
+		:o Criar projeto(_r_8_20)
+	:m Gerencia de carta(_r_11)
+		:m Comprar carta(_r_11_12)
+		:m Utilizar carta(_r_11_14)
+		:o Ordenar cartas(_r_11_16)
+		:o Consultar carta(_r_11_17)
+			:m Consultar Conceito(_r_11_17_18)
+			:m Consultar Problema(_r_11_17_19)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

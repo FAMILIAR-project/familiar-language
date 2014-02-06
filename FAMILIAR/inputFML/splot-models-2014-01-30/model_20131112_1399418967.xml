@@ -1,0 +1,61 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Nov 12, 2013 - 7:49 PM  -->
+<feature_model name="PortafolioMoreno">
+<meta>
+<data name="description">Portafolio Marcial Moreno</data>
+<data name="creator">Marcial Moreno</data>
+<data name="address"></data>
+<data name="email">marc-mor@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">uniandes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Portafolio(_r)
+	:m Membresia(_r_10)
+		:m TipoMembresia(_r_10_11)
+			:g (_r_10_11_12) [1,1] 
+				: Premium(_r_10_11_12_13)
+				: Media(_r_10_11_12_14)
+				: Basica(_r_10_11_12_15)
+		:o FormaPagoMembresia(_r_10_28)
+			:o TC(_r_10_28_46)
+			:o DB(_r_10_28_47)
+			:o Paypal(_r_10_28_48)
+		:m MedioAutenticacion(_r_10_34)
+			:g (_r_10_34_35) [1,1] 
+				: Google(_r_10_34_35_36)
+				: BDLocal(_r_10_34_35_37)
+				: LDAP(_r_10_34_35_38)
+				: Facebook(_r_10_34_35_39)
+	:m Galeria(_r_16)
+		:m ExportarGaleria(_r_16_17)
+			:g (_r_16_17_25) [1,*] 
+				: HTML(_r_16_17_25_26)
+				: PDF(_r_16_17_25_27)
+		:o MediosSoportados(_r_16_40)
+			:g (_r_16_40_41) [1,*] 
+				: Audio(_r_16_40_41_42)
+				: Video(_r_16_40_41_43)
+				: Imagen(_r_16_40_41_44)
+		:o Comercio(_r_16_49)
+			:g (_r_16_49_50) [1,*] 
+				: Subasta(_r_16_49_50_51)
+				: CompraVentaDirecta(_r_16_49_50_52)
+	:o LookAndFeel(_r_18)
+		:o TipoLookAndFeel(_r_18_19)
+			:g (_r_18_19_22) [1,1] 
+				: HTML(_r_18_19_22_23)
+				: Imagen(_r_18_19_22_24)
+				: TemplateWeb(_r_18_19_22_45)
+	:o Comunidad(_r_29)
+		:o IntegracionRedSocial(_r_29_30)
+		:g (_r_29_31) [1,*] 
+			: Facebook(_r_29_31_32)
+			: Googleplus(_r_29_31_33)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

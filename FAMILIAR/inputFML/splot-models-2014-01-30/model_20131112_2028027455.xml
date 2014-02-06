@@ -1,0 +1,35 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Nov 12, 2013 - 8:45 PM  -->
+<feature_model name="MyHolidays">
+<meta>
+<data name="description">Vacaciones2</data>
+<data name="creator">Andrés Valbuena</data>
+<data name="address"></data>
+<data name="email">af.valbuena84@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">MyHolidays</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Myholidays(_r)
+	:m user(_r_10)
+		:g (_r_10_25) [1,1] 
+			: premium(_r_10_25_26)
+			: basic(_r_10_25_27)
+	:m multimediaFile(_r_11)
+		:g (_r_11_14) [1,*] 
+			: imagen(_r_11_14_15)
+			: sound(_r_11_14_18)
+			: video(_r_11_14_19)
+	:m authentication(_r_12)
+		:g (_r_12_20) [1,1] 
+			: facebook(_r_12_20_21)
+			: google(_r_12_20_22)
+	:o auditoria(_r_13)
+	:o pagos(_r_28)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

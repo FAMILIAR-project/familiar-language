@@ -1,0 +1,35 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Dec 12, 2013 - 5:00 PM  -->
+<feature_model name="Movil">
+<meta>
+<data name="description">ejemplo de movil</data>
+<data name="creator">Alex</data>
+<data name="address"></data>
+<data name="email">a@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UAL</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Movil(_r)
+	:m Pantalla(_r_6)
+		:g (_r_6_7) [1,1] 
+			: Basica(_r_6_7_8)
+			: Color(_r_6_7_9)
+			: Alta resolucion(_r_6_7_10)
+		:m Tactil(_r_6_19)
+	:m Llamadas(_r_11)
+	:o GPS(_r_12)
+	:o Media(_r_13)
+		:g (_r_13_16) [1,*] 
+			: Camara(_r_13_16_17)
+			: MP3(_r_13_16_18)
+	:o Teclado(_r_20)
+</feature_tree>
+<constraints>
+constraint_1:~_r_6_7_8 or ~_r_12
+constraint_2:_r_6_7_10 or ~_r_13_16_17
+</constraints>
+</feature_model>

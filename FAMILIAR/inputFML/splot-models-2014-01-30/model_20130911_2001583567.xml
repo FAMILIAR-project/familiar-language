@@ -1,0 +1,61 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Sep 11, 2013 - 1:23 AM  -->
+<feature_model name="TPL">
+<meta>
+<data name="description">tablet product line</data>
+<data name="creator">Ganesh Khandu Narwane</data>
+<data name="address"></data>
+<data name="email">ganeshk@cse.iitb.ac.in</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">HBNI</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r tablet(_r)
+	:m Screen(_r_1)
+		:m Size(_r_1_5)
+			:g (_r_1_5_9) [1,1] 
+				: 5inches(_r_1_5_9_10)
+				: 7inches(_r_1_5_9_11)
+				: 8inches(_r_1_5_9_12)
+		:m Resolution(_r_1_6)
+			:g (_r_1_6_16) [1,1] 
+				: 800x480(_r_1_6_16_17)
+				: 800x600(_r_1_6_16_18)
+				: 1024x768(_r_1_6_16_19)
+		:m Format(_r_1_7)
+			:g (_r_1_7_20) [1,1] 
+				: 16x9(_r_1_7_20_21)
+				: 4x3(_r_1_7_20_22)
+		:m TouchTechnology(_r_1_8)
+			:g (_r_1_8_23) [1,1] 
+				: Resistive(_r_1_8_23_24)
+				: Capacitive(_r_1_8_23_25)
+				: MultiTouchCapacitive(_r_1_8_23_26)
+	:m Processor(_r_2)
+		:m Type(_r_2_27)
+			:g (_r_2_27_29) [1,1] 
+				: ARM9(_r_2_27_29_30)
+				: A8(_r_2_27_29_31)
+		:m Speed(_r_2_28)
+			:g (_r_2_28_32) [1,1] 
+				: 1GHz(_r_2_28_32_34)
+				: 600MHz(_r_2_28_32_35)
+				: 12GHz(_r_2_28_32_36)
+	:m Memory(_r_3)
+		:m Internal(_r_3_37)
+		:o External(_r_3_38)
+	:o Music(_r_4)
+		:g (_r_4_42) [1,*] 
+			: Wifi(_r_4_42_43)
+			: HDMI(_r_4_42_45)
+			: Camera(_r_4_42_46)
+				:g (_r_4_42_46_47) [1,*] 
+					: Front(_r_4_42_46_47_48)
+					: Back(_r_4_42_46_47_49)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

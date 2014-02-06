@@ -1,0 +1,36 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Nov 21, 2013 - 12:31 PM  -->
+<feature_model name="Multiplicador de n matrices">
+<meta>
+<data name="description">Multiplicador de n matrices</data>
+<data name="creator">Angela Villota</data>
+<data name="address"></data>
+<data name="email">angievig@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Icesi</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Multiplicador_N_Matrices(_r)
+	:m Multiplicador_2_Matrices(_r_1)
+		:g (_r_1_13) [1,1] 
+			: Strassen(_r_1_13_14)
+			: Block_Reduce(_r_1_13_15)
+			: Hybrid_Multiplication(_r_1_13_16)
+	:m Almacenamiento(_r_2)
+		:g (_r_2_17) [1,1] 
+			: Distribuido(_r_2_17_18)
+			: Compartido(_r_2_17_19)
+	:o Parentizacion(_r_3)
+		:g (_r_3_20) [1,1] 
+			: Secuencial(_r_3_20_21)
+			: Paralela(_r_3_20_22)
+	:o Recuperacion(_r_4)
+</feature_tree>
+<constraints>
+constraint_1:~_r_3 or _r_4
+constraint_2:_r_3 or ~_r_4
+</constraints>
+</feature_model>

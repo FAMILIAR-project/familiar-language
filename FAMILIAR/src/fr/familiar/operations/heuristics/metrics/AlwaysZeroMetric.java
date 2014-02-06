@@ -14,5 +14,10 @@ public class AlwaysZeroMetric extends SimpleHeuristic implements KSynthesisPlugi
 	public double similarity(String child, String parent) {
 		return 0;
 	}
+	
+	@Override
+	public String toString() {
+		return getName();
+	}
 
 }

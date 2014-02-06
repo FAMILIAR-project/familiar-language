@@ -1,0 +1,46 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Nov 12, 2013 - 7:43 PM  -->
+<feature_model name="portafolioContreras">
+<meta>
+<data name="description">Modelo de portafolio de artistas</data>
+<data name="creator">Juan Pablo Contreras F</data>
+<data name="address"></data>
+<data name="email">juanp.contreras@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">None</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r portafolio(_r)
+	:m autenticacion(_r_1)
+		:g (_r_1_5) [1,1] 
+			: Google OAuth(_r_1_5_6)
+			: Twitter OAuth(_r_1_5_7)
+			: Github OAuth(_r_1_5_8)
+		:o Feature-20(_r_1_20)
+	:m pasarela de pagos(_r_2)
+		:m tarjeta de credito(_r_2_9)
+			:g (_r_2_9_10) [1,1] 
+				: Visa(_r_2_9_10_11)
+				: American Express(_r_2_9_10_12)
+		:o tarjeta debito(_r_2_19)
+		:m Paypal(_r_2_21)
+	:o Social(_r_14)
+		:g (_r_14_15) [1,*] 
+			: Facebook(_r_14_15_16)
+			: Twitter(_r_14_15_17)
+			: WordPress(_r_14_15_18)
+	:o Auditoria(_r_22)
+		:g (_r_22_23) [1,*] 
+			: Google Analytics(_r_22_23_24)
+			: Local DB(_r_22_23_27)
+	:m Visor multimedia(_r_29)
+		:m image viewer(_r_29_30)
+		:o tunes player(_r_29_31)
+		:o Video player(_r_29_32)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

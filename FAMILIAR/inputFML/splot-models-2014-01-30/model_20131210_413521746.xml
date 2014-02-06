@@ -1,0 +1,38 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Dec 10, 2013 - 12:37 PM  -->
+<feature_model name="cell phones SPL">
+<meta>
+<data name="description">Cell Phone SPL Feature Model</data>
+<data name="creator">AL-Msie'Deen Ra'Fat</data>
+<data name="address"></data>
+<data name="email">rafatals3ode@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">TTU</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Cell_Phone(_r)
+	:m Accu_Cell(_r_6)
+		:g (_r_6_9) [1,1] 
+			: Strong(_r_6_9_10)
+			: Medium(_r_6_9_25)
+			: Weak(_r_6_9_26)
+	:m Display(_r_28)
+	:o Wireless(_r_29)
+		:g (_r_29_30) [1,*] 
+			: Infrared(_r_29_30_31)
+			: Bluetooth(_r_29_30_32)
+	:m Games(_r_33)
+		:g (_r_33_34) [1,*] 
+			: Multi_Player(_r_33_34_35)
+			: Single_Player(_r_33_34_37)
+				:m Artificial_Opponent(_r_33_34_37_41)
+</feature_tree>
+<constraints>
+constraint_17:_r_29 or ~_r_33_34_35
+constraint_2:~_r_6_9_26 or ~_r_33_34_35
+constraint_16:_r_6_9_10 or ~_r_29_30_32
+</constraints>
+</feature_model>

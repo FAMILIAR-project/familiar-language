@@ -1,0 +1,39 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Sep 17, 2013 - 5:23 AM  -->
+<feature_model name="Video On Demand SPL FM">
+<meta>
+<data name="description">Video On Demand SPL FM</data>
+<data name="creator">Ra'fat Ahmad </data>
+<data name="address"></data>
+<data name="email">rafatals3ode@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">ttu</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r cell_phone(_r)
+	:o Wireless(_r_2)
+		:g (_r_2_3) [1,*] 
+			: Infrared(_r_2_3_4)
+			: Bluetooth(_r_2_3_8)
+	:g (_r_15) [1,1] 
+		: Strong(_r_15_16)
+		: Medium(_r_15_17)
+		: Weak(_r_15_19)
+	:g (_r_20) [1,*] 
+		: Multi_Player(_r_20_21)
+		: Single_Player(_r_20_22)
+			:m Artificial_Opponent(_r_20_22_23)
+	:m Display(_r_11)
+	:m Games(_r_12)
+	:m Accu_Cell(_r_13)
+</feature_tree>
+<constraints>
+constraint_13:_r_2 or ~_r_20_21
+constraint_14:~_r_15_19 or ~_r_20_21
+constraint_15:~_r_2_3_8 or _r_15_16
+constraint_16:~_r_15_19 or _r_20_22
+</constraints>
+</feature_model>

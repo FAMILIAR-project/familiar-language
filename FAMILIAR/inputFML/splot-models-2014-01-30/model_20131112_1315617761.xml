@@ -1,0 +1,98 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Dec 3, 2013 - 7:34 AM  -->
+<feature_model name="Portafolio2Fierro">
+<meta>
+<data name="description">Parcial</data>
+<data name="creator">Camilo Fierro</data>
+<data name="address"></data>
+<data name="email">ca-fierr@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Uniandes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r CanvasSplCf(_r)
+	:g (_r_2) [1,*] 
+		: Art Marketplace(_r_2_3)
+			:m Search Type(_r_2_3_5)
+				:g (_r_2_3_5_6) [1,*] 
+					: Basic(_r_2_3_5_6_7)
+					: Advanced(_r_2_3_5_6_8)
+						:m Filter Type(_r_2_3_5_6_8_11)
+						:g (_r_2_3_5_6_8_12) [1,*] 
+							: Artwork Type(_r_2_3_5_6_8_12_13)
+							: Year(_r_2_3_5_6_8_12_14)
+							: Technique(_r_2_3_5_6_8_12_15)
+			:m Sell Artwork Type(_r_2_3_16)
+				:g (_r_2_3_16_17) [1,*] 
+					: Buy It Now(_r_2_3_16_17_19)
+					: Bid(_r_2_3_16_17_58)
+		: Membership(_r_2_20)
+			:m Membership Type(_r_2_20_21)
+				:g (_r_2_20_21_22) [1,*] 
+					: Basic(_r_2_20_21_22_23)
+					: Standard(_r_2_20_21_22_24)
+					: Premium(_r_2_20_21_22_25)
+			:m Membership Provider(_r_2_20_39)
+				:g (_r_2_20_39_40) [1,*] 
+					: Local(_r_2_20_39_40_41)
+					: External(_r_2_20_39_40_42)
+						:g (_r_2_20_39_40_42_43) [1,*] 
+							: Google(_r_2_20_39_40_42_43_44)
+							: Facebook(_r_2_20_39_40_42_43_45)
+							: Twitter(_r_2_20_39_40_42_43_46)
+		: Gallery(_r_2_31)
+			:m Template Type(_r_2_31_32)
+				:g (_r_2_31_32_33) [1,*] 
+					: Predefined(_r_2_31_32_33_34)
+					: Custom(_r_2_31_32_33_36)
+						:m Template Editor Type(_r_2_31_32_33_36_42)
+							:g (_r_2_31_32_33_36_42_43) [1,*] 
+								: HTML(_r_2_31_32_33_36_42_43_44)
+								: Plain Text(_r_2_31_32_33_36_42_43_45)
+								: Rich Text(_r_2_31_32_33_36_42_43_46)
+			:m Media Viewer(_r_2_31_53)
+				:g (_r_2_31_53_54) [1,*] 
+					: Image(_r_2_31_53_54_55)
+					: Video(_r_2_31_53_54_56)
+					: Audio(_r_2_31_53_54_57)
+			:o Gallery Export Type(_r_2_31_54)
+				:g (_r_2_31_54_55) [1,*] 
+					: PDF(_r_2_31_54_55_56)
+					: HTML(_r_2_31_54_55_57)
+					: Wiki(_r_2_31_54_55_58)
+					: Word(_r_2_31_54_55_59)
+		: Logging(_r_2_47)
+			:o Log Format(_r_2_47_48)
+				:g (_r_2_47_48_49) [1,1] 
+					: XML(_r_2_47_48_49_50)
+					: Database(_r_2_47_48_49_51)
+					: Plain Text(_r_2_47_48_49_52)
+		: Payments(__r_2_47)
+			:m Payment Type(___r_2_47_48)
+				:g (___r_2_47_48_49) [1,*] 
+					: Bank - PSE(___r_2_47_48_49_50)
+					: Credit Card(___r_2_47_48_49_51)
+		: Social(_r_2_60)
+			:m Feed Type(_r_2_60_61)
+				:g (_r_2_60_61_62) [1,*] 
+					: RSS(_r_2_60_61_62_63)
+					: Facebook(_r_2_60_61_62_64)
+					: Twitter(_r_2_60_61_62_65)
+					: Google Plus(_r_2_60_61_62_66)
+		: Reporting(_r_2_67)
+			:o Report Type(_r_2_67_68)
+				:g (_r_2_67_68_69) [1,1] 
+					: Basic(_r_2_67_68_69_70)
+</feature_tree>
+<constraints>
+constraint_8:~_r_2_20_21_22_23 or ~_r_2_31_54
+constraint_6:~_r_2_20_21_22_24 or ___r_2_47_48
+constraint_7:~_r_2_20_21_22_25 or ___r_2_47_48
+constraint_4:~_r_2_20_21_22_23 or ~_r_2_31_54_55_59
+constraint_5:~_r_2_20_21_22_23 or ~_r_2_31_32_33_36
+constraint_2:~_r_2_20_21_22_23 or ~_r_2_31_54_55_58
+</constraints>
+</feature_model>

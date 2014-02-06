@@ -18,4 +18,8 @@ public class SmithWatermanMetric extends SimpleHeuristic implements KSynthesisPl
 		return metric.getSimilarity(child, parent);
 	}
 	
+	@Override
+	public String toString() {
+		return getName();
+	}
 }

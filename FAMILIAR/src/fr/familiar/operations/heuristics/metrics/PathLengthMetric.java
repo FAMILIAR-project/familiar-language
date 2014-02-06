@@ -29,11 +29,6 @@ public class PathLengthMetric extends WordNetMetric {
 
 		return maxScore;
 	}
-	
-	@Override
-	public String toString() {
-		return "WordNet metric (Path length)";
-	}
 
 //	@Override
 //	public boolean isXorGroupRequired() {
@@ -50,4 +45,9 @@ public class PathLengthMetric extends WordNetMetric {
 		return "Path Length (WordNet)";
 	}
 
+	@Override
+	public String toString() {
+		return getName();
+	}
+	
 }

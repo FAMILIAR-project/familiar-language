@@ -1,0 +1,31 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Nov 12, 2013 - 9:42 AM  -->
+<feature_model name="Test">
+<meta>
+<data name="description">Model to describe a simple unit test</data>
+<data name="creator">Jaime Romero</data>
+<data name="address"></data>
+<data name="email">ja.romero940@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">uniandes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Prueba(_r)
+	:m Escenario de prueba(_r_1)
+	:m Prueba unitaria(_r_2)
+	:o Prueba De Carga(_r_3)
+		:g (_r_3_4) [1,*] 
+			: Prueba JMeter(_r_3_4_5)
+			: Prueba con otra herramienta(_r_3_4_6)
+	:o Prueba de navegacion browser(_r_7)
+		:g (_r_7_8) [1,*] 
+			: Prueba mediante uso de selenium(_r_7_8_9)
+			: Prueba mediante otra herramienta(_r_7_8_10)
+	:m Prueba de escritorio de funcionalidad(_r_11)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

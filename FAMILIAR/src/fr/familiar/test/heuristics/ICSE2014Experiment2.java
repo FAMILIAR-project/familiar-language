@@ -33,14 +33,21 @@ public class ICSE2014Experiment2 extends KSynthesisTest {
 	private final static int N_START = 2;
 	private final static int N_END = 5;
 
-
+	@Test
+	public void testStatsSPLOTforESE() {
+		System.out.println("Stats SPLOT");
+		testStatsFMs(getSPLOTFeatureModels());
+	}
+	
 	// Tests SPLOT
+	@Ignore
 	@Test
 	public void testStatsSPLOT() {
 		System.out.println("Stats SPLOT");
 		testStatsFMs(getSPLOTFeatureModelsForFASE());
 	}
 
+	@Ignore
 	@Test
 	public void testTop2SPLOT() {
 		System.out.println("Top SPLOT");
@@ -55,6 +62,7 @@ public class ICSE2014Experiment2 extends KSynthesisTest {
 		testTopN(getSPLOTFeatureModelsForFASE(), N_START, N_END, true);
 	}
 
+	@Ignore
 	@Test
 	public void testClustersSPLOT() {
 		System.out.println("Clusters SPLOT");
@@ -153,7 +161,7 @@ public class ICSE2014Experiment2 extends KSynthesisTest {
 			minOutDegrees.add(minOutdegree);
 			int maxOutdegree = graphMetrics.maxOutdegree(implicationGraph);
 			maxOutDegrees.add(maxOutdegree);
-			double meanOutdegree = graphMetrics.meanOutdegree(implicationGraph);
+			double meanOutdegree = graphMetrics.averageOutdegree(implicationGraph);
 			meanOutDegrees.add(meanOutdegree);
 			
 			sumDepth += getDepth(fm);
@@ -256,39 +264,6 @@ public class ICSE2014Experiment2 extends KSynthesisTest {
 			System.out.println();
 
 		}
-	}
-
-	private void testTopVariableN(List<FeatureModelVariable> fms) {
-
-		int nbOfFeatures = 0;
-
-		for (FeatureModelVariable fm : fms) {
-			nbOfFeatures += fm.features().size()-1; // Avoid the root feature
-		}
-		System.out.println("Nb of parents : " + nbOfFeatures);
-
-		for (Heuristic metric : metrics) {
-			double sumNbOfFeaturesInTopN = 0;
-			int nbIterations = metric instanceof RandomMetric ? RANDOM_ITERATIONS : 1; 
-
-			for (int i=0; i<nbIterations; i++) {
-				double nbOfFeaturesInTopNIter = 0;
-
-				for (FeatureModelVariable fm : fms) {
-
-					InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(
-							fm, metric, null, 
-							null, -1);
-
-					nbOfFeaturesInTopNIter += countTopVariableNParents(fm, synthesizer);
-				}
-
-				sumNbOfFeaturesInTopN += nbOfFeaturesInTopNIter;
-			}
-			double nbOfFeaturesInTopN = sumNbOfFeaturesInTopN / nbIterations;
-			System.out.println(metric + " : " + nbOfFeaturesInTopN + " (" + nbOfFeaturesInTopN / ((double) nbOfFeatures) + ")");
-		}
-
 	}
 
 	private void testClusters(List<FeatureModelVariable> fms, boolean reduceBIG) {

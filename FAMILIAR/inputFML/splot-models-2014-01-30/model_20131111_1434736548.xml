@@ -1,0 +1,63 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Nov 12, 2013 - 8:46 PM  -->
+<feature_model name="vacaciones1Kelvin">
+<meta>
+<data name="description">Gestor de Vacaciones</data>
+<data name="creator">Kelvin</data>
+<data name="address"></data>
+<data name="email">kelvin_guerrero@hotmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Uniandes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Vacaciones(_r)
+	:m VisualizaciondeItinerarios(_r_1)
+		:m VisualizacionArbol(_r_1_2)
+		:o VisualizacionCalendario(_r_1_3)
+		:o VisualizacionMapa(_r_1_4)
+	:m Forma de pago(_r_5)
+		:g (_r_5_6) [1,*] 
+			: Tarjeta de Credito(_r_5_6_7)
+			: Paypal(_r_5_6_8)
+			: Tarjeta de debito(_r_5_6_35)
+	:m Album(_r_12)
+		:m Crear Album(_r_12_13)
+			:g (_r_12_13_14) [1,*] 
+				: Fotos(_r_12_13_14_15)
+				: Video(_r_12_13_14_16)
+		:m Editar Album(_r_12_14)
+			:g (_r_12_14_25) [1,*] 
+				: Fotos(_r_12_14_25_26)
+				: Videos(_r_12_14_25_27)
+		:m Formatos Visualizacion Album(_r_12_17)
+			:g (_r_12_17_20) [1,*] 
+				: Plantillas Personalizadas(_r_12_17_20_21)
+				: Plantillas por Defecto(_r_12_17_20_22)
+			:m sistema de Archivos(_r_12_17_24)
+	:m Recuerdos(_r_28)
+		:m CrearRecuerdos(_r_28_29)
+			:g (_r_28_29_31) [1,1] 
+				: Menos de 10(_r_28_29_31_32)
+				: Menos de 50(_r_28_29_31_33)
+				: Ilimitado(_r_28_29_31_34)
+		:m VisualizarRecuerdos(_r_28_35)
+			:m Normal(_r_28_35_36)
+			:o Formas de Visualizar Opcionales(_r_28_35_40)
+				:g (_r_28_35_40_41) [1,1] 
+					: Presentacion(_r_28_35_40_41_42)
+					: Mapa(_r_28_35_40_41_43)
+	:m Autenticacion(_r_30)
+		:g (_r_30_31) [1,*] 
+			: Facebook(_r_30_31_32)
+			: Twitter(_r_30_31_33)
+			: UsuarioPasswordPlataforma(_r_30_31_34)
+</feature_tree>
+<constraints>
+constraint_6:_r_28_29_31_33 or _r_28_29_31_34 or ~_r_28_35_40_41_42
+constraint_7:_r_28_29_31_34 or ~_r_28_35_40_41_43
+constraint_2:~_r_12_13 or _r_12_13_14_15 or _r_12_13_14_16
+</constraints>
+</feature_model>

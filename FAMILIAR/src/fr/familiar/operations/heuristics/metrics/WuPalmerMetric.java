@@ -77,5 +77,9 @@ public class WuPalmerMetric extends WordNetMetric {
 		return "Wu & Palmer (WordNet)" ;
 	}
 
+	@Override
+	public String toString() {
+		return getName();
+	}
 
 }

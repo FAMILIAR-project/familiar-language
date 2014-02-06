@@ -1,6 +1,9 @@
 package fr.familiar.test.heuristics;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -15,6 +18,8 @@ import java.util.Set;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
+
+import com.csvreader.CsvWriter;
 
 import fr.familiar.gui.synthesis.KeyValue;
 import fr.familiar.interpreter.FMLShell;
@@ -46,6 +51,7 @@ public abstract class KSynthesisTest extends FMLTest {
 
 	
 	private static final String SPLOT_FOLDER = "inputFML/splot-models-2012-08-07";
+	
 	private static final String PCM_FOLDER = "inputFML/ICSE2014-PCMs";
 //	private static final String FASE_FOLDER = "inputFML/FASE13-generated-models";
 	private static final String FASE_FOLDER = "inputFML/FASE13-original";
@@ -59,7 +65,7 @@ public abstract class KSynthesisTest extends FMLTest {
 
 	public static final String OUTPUT_FOLDER = "output/generated-with-heuristics/";
 
-	protected static int RANDOM_ITERATIONS = 100;
+	protected static int RANDOM_ITERATIONS = 1;
 
 	public static List<Heuristic> metrics;
 	protected static WikipediaMinerMetric wikiMetric;
@@ -79,7 +85,7 @@ public abstract class KSynthesisTest extends FMLTest {
 	private static List<FeatureModelVariable> faseFMs;
 	private static List<FeatureModelVariable> modifiedSplotFMs;
 	
-	private static final List<String> splotExcludeFiles = Arrays.asList(new String[] {
+	public static final List<String> splotExcludeFiles = Arrays.asList(new String[] {
 			// two features with the same name
 			"model_20110926_400852996.xml",
 			"model_20101112_864228137.xml",
@@ -217,7 +223,7 @@ public abstract class KSynthesisTest extends FMLTest {
 			""
 	});
 	
-	private static final List<String> faseExcludeFiles = Arrays.asList(new String[] {
+	public static final List<String> faseExcludeFiles = Arrays.asList(new String[] {
 			// FASE'13
 			
 			// too long (more than 900 000 products)
@@ -264,47 +270,47 @@ public abstract class KSynthesisTest extends FMLTest {
 		metrics = new ArrayList<Heuristic>();
 		clusteringThresholds = new HashMap<Heuristic, Double>();
 
-		// Random metric
-		Heuristic random = new RandomMetric();
-		metrics.add(random);
-		clusteringThresholds.put(random, 0.15);
+//		// Random metric
+//		Heuristic random = new RandomMetric();
+//		metrics.add(random);
+//		clusteringThresholds.put(random, 0.15);
 
 		// Simmetrics metrics
 		smithWaterman = new SmithWatermanMetric();
 		metrics.add(smithWaterman);
 		clusteringThresholds.put(smithWaterman, 0.6);
 
-		levenshtein = new LevenshteinMetric();
-		metrics.add(levenshtein);
-		clusteringThresholds.put(levenshtein, 0.7);
+//		levenshtein = new LevenshteinMetric();
+//		metrics.add(levenshtein);
+//		clusteringThresholds.put(levenshtein, 0.7);
 
 		// WordNet metrics
 		if (new File(WORDNET_DB).exists()) {
-			wup = new WuPalmerMetric();
-			wup.init(new File(WORDNET_DB));
-			metrics.add(wup);
-			clusteringThresholds.put(wup, 0.2);
-
-			pathLength = new PathLengthMetric();
-			pathLength.init(new File(WORDNET_DB));
-			metrics.add(pathLength);
-			clusteringThresholds.put(pathLength, 0.5);
+//			wup = new WuPalmerMetric();
+//			wup.init(new File(WORDNET_DB));
+//			metrics.add(wup);
+//			clusteringThresholds.put(wup, 0.2);
+//
+//			pathLength = new PathLengthMetric();
+//			pathLength.init(new File(WORDNET_DB));
+//			metrics.add(pathLength);
+//			clusteringThresholds.put(pathLength, 0.5);
 			
 //			directedPathLength = new DirectedPathLengthMetric(wordNetDictionary);
 //			metrics.add(directedPathLength);
 //			clusteringThresholds.put(directedPathLength, 0.5);
 		}
 
-		// WikipediaMiner metrics
-			wikiMetric = new WikipediaMinerMetric();
-			wikiMetric.init(new File(WIKIPEDIA_DB));
-			metrics.add(wikiMetric);
-			clusteringThresholds.put(wikiMetric, 0.5);	
-		
-			wiktionaryMetric = new WikipediaMinerMetric();
-			wiktionaryMetric.init(new File(WIKTIONARY_DB));
-			metrics.add(wiktionaryMetric);
-			clusteringThresholds.put(wiktionaryMetric, 0.5);	
+//		// WikipediaMiner metrics
+//			wikiMetric = new WikipediaMinerMetric();
+//			wikiMetric.init(new File(WIKIPEDIA_DB));
+//			metrics.add(wikiMetric);
+//			clusteringThresholds.put(wikiMetric, 0.5);	
+//		
+//			wiktionaryMetric = new WikipediaMinerMetric();
+//			wiktionaryMetric.init(new File(WIKTIONARY_DB));
+//			metrics.add(wiktionaryMetric);
+//			clusteringThresholds.put(wiktionaryMetric, 0.5);	
 
 //		// LSA metric
 //		if (wikipediaDB.isLoaded()) {
@@ -334,12 +340,13 @@ public abstract class KSynthesisTest extends FMLTest {
 	 * Load all feature models from a specified folder
 	 * @param folder
 	 * @param extension : file extension
+	 * @param includeFiles
 	 * @param excludeFiles
 	 * @param prefix : prefix of FMs' identifier
 	 * @return
 	 */
 	public List<FeatureModelVariable> loadFeatureModelFolder(
-			String folder, final String extension, final List<String> excludeFiles, String prefix) {
+			String folder, final String extension, final List<String> includedFiles, final List<String> excludeFiles, String prefix) {
 		
 		if (_shell == null) {
 			_shell = FMLShell.instantiateStandalone(null);
@@ -356,7 +363,9 @@ public abstract class KSynthesisTest extends FMLTest {
 			File[] files = fmsFolder.listFiles(new FilenameFilter() {
 				@Override
 				public boolean accept(File dir, String name) {
-					return name.endsWith(extension) && (excludeFiles == null || !excludeFiles.contains(name));// && name.equals("model_20120110_1256867454.xml");
+					return name.endsWith(extension) 
+							&& (includedFiles == null || includedFiles.contains(name)) 
+							&& (excludeFiles == null || !excludeFiles.contains(name));
 				}
 			});
 
@@ -375,7 +384,12 @@ public abstract class KSynthesisTest extends FMLTest {
 				} else { // For other files
 					fmIdentifier = fmIdentifier.substring(0, fmIdentifier.lastIndexOf("."));
 					String command = fmIdentifier.replaceAll("-", "_") + " = FM(\"" + file.getPath() + "\")";
-					fm = (FeatureModelVariable) _shell.parse(command);
+					try {
+						fm = (FeatureModelVariable) _shell.parse(command);	
+					} catch (Exception e) {
+						fm = null;
+					}
+					
 				}
 				
 
@@ -393,9 +407,27 @@ public abstract class KSynthesisTest extends FMLTest {
 		return fms;
 	}
 	
+	public List<String> readFMNamesFromFile(String file) {
+		List<String> fmNames = new ArrayList<String>();
+		
+		try {
+			BufferedReader reader = new BufferedReader(new FileReader(file));
+			String filename = reader.readLine();
+			while (filename != null) {
+				fmNames.add(filename);
+				filename = reader.readLine();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return fmNames;
+	}
+	
+	
 	public List<FeatureModelVariable> getSPLOTFeatureModels()  {
 		if (splotFMs == null) {
-			splotFMs = loadFeatureModelFolder(SPLOT_FOLDER, ".xml", splotExcludeFiles, "splotFM");
+			splotFMs = loadFeatureModelFolder(SPLOT_FOLDER, ".xml", null, splotExcludeFiles, "splotFM");
 			System.out.println(splotFMs.size() + " FMs loaded from SPLOT");
 		}
 
@@ -404,7 +436,7 @@ public abstract class KSynthesisTest extends FMLTest {
 	
 	public List<FeatureModelVariable> getModifiedSPLOTFeatureModels() {
 		if (modifiedSplotFMs == null) {
-			modifiedSplotFMs = loadFeatureModelFolder(MODIFIED_SPLOT_FOLDER, ".xml", null, "modified");
+			modifiedSplotFMs = loadFeatureModelFolder(MODIFIED_SPLOT_FOLDER, ".xml", null, null, "modified");
 			System.out.println(modifiedSplotFMs.size() + " FMs loaded from modified SPLOT");
 		}
 
@@ -413,7 +445,7 @@ public abstract class KSynthesisTest extends FMLTest {
 	
 	public List<FeatureModelVariable> getPCMFeatureModels() {
 //		if (variCellFMs == null) {
-			pcmFMs = loadFeatureModelFolder(PCM_FOLDER, ".fmlbdd", pcmExcludeFiles, "PCM");
+			pcmFMs = loadFeatureModelFolder(PCM_FOLDER, ".fmlbdd", null, pcmExcludeFiles, "PCM");
 			System.out.println(pcmFMs.size() + " FMs loaded from PCMs");
 //		}
 
@@ -464,7 +496,7 @@ public abstract class KSynthesisTest extends FMLTest {
 		if (faseFMs == null) {
 			List<String> excludeFiles = new ArrayList<String>(splotExcludeFiles);
 			excludeFiles.addAll(faseExcludeFiles);
-			faseFMs = loadFeatureModelFolder(FASE_FOLDER, ".xml", excludeFiles, "faseFM");
+			faseFMs = loadFeatureModelFolder(FASE_FOLDER, ".xml", null, excludeFiles, "faseFM");
 			System.out.println(faseFMs.size() + " FMs loaded from FASE");
 		}
 		
@@ -475,10 +507,9 @@ public abstract class KSynthesisTest extends FMLTest {
 		if (splotFMsForFASE == null) {
 			List<String> excludeFiles = new ArrayList<String>(splotExcludeFiles);
 			excludeFiles.addAll(faseExcludeFiles);
-			splotFMsForFASE = loadFeatureModelFolder(SPLOT_FOLDER, ".xml", excludeFiles , "splotFM");
+			splotFMsForFASE = loadFeatureModelFolder(SPLOT_FOLDER, ".xml", null, excludeFiles , "splotFM");
 			System.out.println(splotFMsForFASE.size() + " FMs loaded from SPLOT for FASE");
 		}
-
 		return splotFMsForFASE;
 	}
 	
@@ -705,34 +736,7 @@ public abstract class KSynthesisTest extends FMLTest {
 		}
 		return nbTopNParents;
 	}
-	
-	/**
-	 * Count parents from the ground truth that are in the top N positions in the parent candidates 
-	 * @param n
-	 * @param fm : ground truth
-	 * @param synthesizer : synthesizer containing parent candidates
-	 * @return
-	 */
-	public double countTopVariableNParents(FeatureModelVariable fm, InteractiveFMSynthesizer synthesizer) {
-		List<KeyValue<String,List<String>>> parentCandidateLists = synthesizer.getParentCandidates();
-		FeatureGraph<String> hierarchy = fm.getFm().getDiagram();
-		
-		int nbTopNParents = 0;
-		
-		for (KeyValue<String, List<String>> parentCandidates : parentCandidateLists) {
-			String feature = parentCandidates.getKey();
-			List<String> parentCandidatesList = parentCandidates.getValue();
-			FeatureNode<String> parent = hierarchy.parents(hierarchy.findVertex(feature)).iterator().next();
-			if (!parent.isTop()) {
-				int indexOfParent= parentCandidatesList.indexOf(parent.getFeature());
 
-				if (indexOfParent >=0 && (indexOfParent == 0 || indexOfParent < (parentCandidatesList.size() / 2))) {
-					nbTopNParents++;
-				}
-			}
-		}
-		return nbTopNParents;
-	}
 	
 	/**
 	 * Perform an optimum branching test on all the FMs

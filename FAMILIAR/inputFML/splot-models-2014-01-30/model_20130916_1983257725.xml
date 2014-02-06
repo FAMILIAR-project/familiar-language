@@ -1,0 +1,38 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Sep 16, 2013 - 2:39 PM  -->
+<feature_model name="MobileMedia_DiegoTavares">
+<meta>
+<data name="description">Exercício Reuse</data>
+<data name="creator">Diego Tavares</data>
+<data name="address"></data>
+<data name="email">diego.exodo@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Mobile Media(_r)
+	:m Media Selection(_r_1)
+		:m Photo(_r_1_19)
+		:o Music(_r_1_20)
+		:o Video(_r_1_21)
+	:m Media Management(_r_2)
+		:m Favourites(_r_2_12)
+			:m Set Favourites(_r_2_12_15)
+			:m View Favourites(_r_2_12_16)
+		:o Copy Media(_r_2_13)
+		:o SMS Transfer(_r_2_14)
+			:o Receive Photo(_r_2_14_17)
+			:o Send Photo(_r_2_14_18)
+	:m Screnn Size(_r_3)
+		:g (_r_3_22) [1,1] 
+			: Screen1(_r_3_22_23)
+			: Screen2(_r_3_22_24)
+</feature_tree>
+<constraints>
+constraint_1:_r_2_13 or _r_2_14
+constraint_2:_r_3_22_23 or _r_1_19
+</constraints>
+</feature_model>
