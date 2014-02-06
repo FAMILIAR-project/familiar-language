@@ -10,10 +10,6 @@ import net.sf.extjwnl.dictionary.Dictionary;
 public class PathLengthMetric extends WordNetMetric {
 
 
-	public PathLengthMetric(Dictionary dictionary) {
-		super(dictionary);
-	}
-
 	@Override
 	public double synsetSimilarity(Synset synset1, Synset synset2) {
 		double maxScore = 0;
@@ -39,14 +35,19 @@ public class PathLengthMetric extends WordNetMetric {
 		return "WordNet metric (Path length)";
 	}
 
+//	@Override
+//	public boolean isXorGroupRequired() {
+//		return false;
+//	}
+//
+//	@Override
+//	public boolean isOrGroupRequired() {
+//		return false;
+//	}
+	
 	@Override
-	public boolean isXorGroupRequired() {
-		return false;
-	}
-
-	@Override
-	public boolean isOrGroupRequired() {
-		return false;
+	public String getName() {
+		return "Path Length (WordNet)";
 	}
 
 }

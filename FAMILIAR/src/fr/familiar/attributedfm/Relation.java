@@ -27,7 +27,7 @@ import java.util.List;
 /**
  * @author   Manuel Nieto Uc Relation has a name.
  */
-public class Relation {
+public class Relation extends VariabilityElement{
 	protected Feature parent_feature;
 	protected List<Cardinality> cardinalities;	
 	protected List<Feature> destination;

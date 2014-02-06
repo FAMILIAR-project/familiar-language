@@ -17,6 +17,8 @@
  */
 package fr.familiar.attributedfm;
 
+
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
@@ -24,11 +26,11 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
-import es.us.isa.util.Node;
 import fr.familiar.attributedfm.domain.Domain;
 import fr.familiar.attributedfm.domain.SetIntegerDomain;
+import fr.familiar.attributedfm.util.Node;
 
-public class Feature {
+public class Feature extends VariabilityElement{
 	
 	/**
 	 * @uml.property  name="name"
@@ -130,7 +132,11 @@ public class Feature {
 			//this.addAttribute(aux);
 		}
 	}
+	
+	public void addAttribute(GenericAttribute a){
+		attributes.put(a.getName(),a);
 
+	}
 	/**
 	 * @return
 	 * @uml.property  name="attributes"

@@ -11,9 +11,12 @@ import net.sf.extjwnl.dictionary.Dictionary;
 import fr.familiar.gui.FamiliarEditor;
 import fr.familiar.gui.Tab2EnvVar;
 import fr.familiar.operations.heuristics.metrics.AlwaysZeroMetric;
+import fr.familiar.operations.heuristics.metrics.LevenshteinMetric;
 import fr.familiar.operations.heuristics.metrics.MetricName;
+import fr.familiar.operations.heuristics.metrics.PathLengthMetric;
 import fr.familiar.operations.heuristics.metrics.RandomMetric;
 import fr.familiar.operations.heuristics.metrics.SimmetricsMetric;
+import fr.familiar.operations.heuristics.metrics.SmithWatermanMetric;
 import fr.familiar.operations.heuristics.metrics.WikipediaMinerDB;
 import fr.familiar.operations.heuristics.metrics.WikipediaMinerMetric;
 import fr.familiar.operations.heuristics.metrics.WuPalmerMetric;
@@ -40,21 +43,27 @@ public class SimilarityMetricSelectionListener implements ActionListener {
 				environment.setParentSimilarityMetric(new RandomMetric());
 				break;
 			case SIMMETRICS_SMITHWATERMAN:
-				environment.setParentSimilarityMetric(new SimmetricsMetric(metric));
+//				environment.setParentSimilarityMetric(new SimmetricsMetric(metric));
+				environment.setParentSimilarityMetric(new SmithWatermanMetric());
 				break;
 			case SIMMETRICS_LEVENSHTEIN:
-				environment.setParentSimilarityMetric(new SimmetricsMetric(metric));
+//				environment.setParentSimilarityMetric(new SimmetricsMetric(metric));
+				environment.setParentSimilarityMetric(new LevenshteinMetric());
 				break;
 			case WORDNET_WUP:
-				Dictionary dictionaryWUP = WordNetPropertyFileChooser.getInstance();
+				File dictionaryWUP = WordNetPropertyFileChooser.getInstance();
 				if (dictionaryWUP != null) {
-					environment.setParentSimilarityMetric(new WuPalmerMetric(dictionaryWUP));	
+					WuPalmerMetric wup = new WuPalmerMetric();
+					wup.init(dictionaryWUP);
+					environment.setParentSimilarityMetric(wup);	
 				}
 				break;
 			case WORDNET_PATHLENGTH:
-				Dictionary dictionaryPL = WordNetPropertyFileChooser.getInstance();
+				File dictionaryPL = WordNetPropertyFileChooser.getInstance();
 				if (dictionaryPL != null) {
-					environment.setParentSimilarityMetric(new WuPalmerMetric(dictionaryPL));	
+					PathLengthMetric pl = new PathLengthMetric();
+					pl.init(dictionaryPL);
+					environment.setParentSimilarityMetric(pl);	
 				}
 				break;
 //			case LSA_LSI: // TODO : restore this when LSA is ready
@@ -71,10 +80,9 @@ public class SimilarityMetricSelectionListener implements ActionListener {
 				int choice = fileChooser.showOpenDialog(FamiliarEditor.INSTANCE);
 				if (choice == JFileChooser.APPROVE_OPTION) {
 					File propertiesFile = fileChooser.getSelectedFile();
-					WikipediaMinerDB wikipediaMinerDB = new WikipediaMinerDB(propertiesFile.getAbsolutePath());
 					try {
-						wikipediaMinerDB.loadDatabase();
-						WikipediaMinerMetric wikipediaMinerMetric = new WikipediaMinerMetric(wikipediaMinerDB);
+						WikipediaMinerMetric wikipediaMinerMetric = new WikipediaMinerMetric();
+						wikipediaMinerMetric.init(propertiesFile);
 						environment.setParentSimilarityMetric(wikipediaMinerMetric);
 					} catch (Exception e1) {
 						

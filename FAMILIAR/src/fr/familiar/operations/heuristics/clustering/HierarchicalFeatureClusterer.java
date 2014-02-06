@@ -1,5 +1,8 @@
 package fr.familiar.operations.heuristics.clustering;
 
+import fr.familiar.operations.heuristics.Heuristic;
+import gsd.graph.ImplicationGraph;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -12,8 +15,6 @@ import ch.usi.inf.sape.hac.dendrogram.DendrogramNode;
 import ch.usi.inf.sape.hac.dendrogram.MergeNode;
 import ch.usi.inf.sape.hac.dendrogram.ObservationNode;
 import ch.usi.inf.sape.hac.experiment.DissimilarityMeasure;
-import fr.familiar.operations.heuristics.metrics.FeatureSimilarityMetric;
-import gsd.graph.ImplicationGraph;
 
 public class HierarchicalFeatureClusterer {
 
@@ -23,7 +24,7 @@ public class HierarchicalFeatureClusterer {
 	 * @param heuristic
 	 * @return
 	 */
-	public Dendrogram computeDendrogram(FMExperiment experiment, FeatureSimilarityMetric metric) {
+	public Dendrogram computeDendrogram(FMExperiment experiment, Heuristic metric) {
 		DissimilarityMeasure dissimilarityMeasure = new HeuristicDissimilarityMeasure(metric);
 		AgglomerationMethod agglomerationMethod = new AverageLinkage();
 		DendrogramBuilder dendrogramBuilder = new DendrogramBuilder(experiment.getNumberOfObservations());

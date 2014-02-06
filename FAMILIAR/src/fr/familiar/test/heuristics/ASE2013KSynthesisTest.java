@@ -15,7 +15,9 @@ import org.junit.Test;
 
 import fr.familiar.experimental.FGroup;
 import fr.familiar.gui.synthesis.KeyValue;
+import fr.familiar.operations.heuristics.Heuristic;
 import fr.familiar.operations.heuristics.InteractiveFMSynthesizer;
+import fr.familiar.operations.heuristics.Heuristic;
 import fr.familiar.operations.heuristics.metrics.CommonEdgesMetric;
 import fr.familiar.operations.heuristics.metrics.FMEditDistanceMetric;
 import fr.familiar.operations.heuristics.metrics.FeatureSimilarityMetric;
@@ -75,7 +77,7 @@ public class ASE2013KSynthesisTest extends KSynthesisTest {
 		}
 		System.out.println("Nb of features : " + nbOfFeatures);
 
-		for (FeatureSimilarityMetric metric : metrics) {
+		for (Heuristic metric : metrics) {
 			double sumNbOfFeaturesInTopN = 0;
 			int nbIterations = metric instanceof RandomMetric ? RANDOM_ITERATIONS : 1; 
 
@@ -85,7 +87,7 @@ public class ASE2013KSynthesisTest extends KSynthesisTest {
 				for (FeatureModelVariable fm : fms) {
 				
 					InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(
-							fm, metric, new ArrayList<FeatureSimilarityMetric>(), 
+							fm, metric, new ArrayList<Heuristic>(), 
 							null, 0);
 
 					List<KeyValue<String,List<String>>> parentCandidateLists = synthesizer.getParentCandidates();
@@ -115,7 +117,7 @@ public class ASE2013KSynthesisTest extends KSynthesisTest {
 
 	private void testClusters(List<FeatureModelVariable> fms) {
 
-		for (FeatureSimilarityMetric metric : metrics) {
+		for (Heuristic metric : metrics) {
 			double threshold = clusteringThresholds.get(metric);
 
 			int totalNbOfFeatures = 0;
@@ -137,7 +139,7 @@ public class ASE2013KSynthesisTest extends KSynthesisTest {
 				for (FeatureModelVariable fm : fms) {
 
 					InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(
-							fm, null, new ArrayList<FeatureSimilarityMetric>(), 
+							fm, null, new ArrayList<Heuristic>(), 
 							metric, threshold);
 
 					Set<Set<String>> clusters = synthesizer.getSimilarityClusters();
@@ -229,7 +231,7 @@ public class ASE2013KSynthesisTest extends KSynthesisTest {
 		FMEditDistanceMetric refactoringDistanceMetric = new RefactoringEditDistance();
 		CommonEdgesMetric commonEdgesMetric = new CommonEdgesMetric();
 
-		for (FeatureSimilarityMetric metric : metrics) {
+		for (Heuristic metric : metrics) {
 			double sumCommonEdgesDistance = 0;
 			double sumZhangDistance = 0;
 			double sumRefactoringDistance = 0;
@@ -243,7 +245,7 @@ public class ASE2013KSynthesisTest extends KSynthesisTest {
 				for (FeatureModelVariable fm : fms) {
 //					System.out.println(fm.getCompleteIdentifier());
 
-					List<FeatureSimilarityMetric> complementaryHeuristics = new ArrayList<FeatureSimilarityMetric>();
+					List<Heuristic> complementaryHeuristics = new ArrayList<Heuristic>();
 //					complementaryHeuristics.add(pathLength);
 					InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(fm, metric, complementaryHeuristics, null, 0);
 					FeatureModelVariable computedFM = synthesizer.computeCompleteFeatureModel();
@@ -293,8 +295,8 @@ public class ASE2013KSynthesisTest extends KSynthesisTest {
 		CommonEdgesMetric commonEdgesMetric = new CommonEdgesMetric();
 
 		// Init clusters
-		HashMap<FeatureSimilarityMetric, List<FeatureModelVariable>> fmClusters = new HashMap<FeatureSimilarityMetric, List<FeatureModelVariable>>();
-		for (FeatureSimilarityMetric metric : metrics) {
+		HashMap<Heuristic, List<FeatureModelVariable>> fmClusters = new HashMap<Heuristic, List<FeatureModelVariable>>();
+		for (Heuristic metric : metrics) {
 			fmClusters.put(metric, new ArrayList<FeatureModelVariable>());
 		}
 		
@@ -304,11 +306,11 @@ public class ASE2013KSynthesisTest extends KSynthesisTest {
 		// Select best metric for each fm
 		for (FeatureModelVariable fm : fms) {
 
-			FeatureSimilarityMetric bestMetric = null;
+			Heuristic bestMetric = null;
 			double bestMetricDistance = -1;
 			List<String> bestCommonEdges = null;
 			
-			for (FeatureSimilarityMetric metric : metrics) {
+			for (Heuristic metric : metrics) {
 
 				InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(fm, metric, null, null, 0);
 				FeatureModelVariable computedFM = synthesizer.computeCompleteFeatureModel();
@@ -333,7 +335,7 @@ public class ASE2013KSynthesisTest extends KSynthesisTest {
 		}
 		
 		// Print clusters
-		for (FeatureSimilarityMetric metric : fmClusters.keySet()) {
+		for (Heuristic metric : fmClusters.keySet()) {
 			System.out.println("****** " + metric);
 			for (FeatureModelVariable fm : fmClusters.get(metric)) {
 				System.out.println(fm.getCompleteIdentifier());
@@ -351,7 +353,7 @@ public class ASE2013KSynthesisTest extends KSynthesisTest {
 	private void testInteractiveSynthesis(List<FeatureModelVariable> fms) {
 		FMEditDistanceMetric editDistance = new RefactoringEditDistance();
 
-		for (FeatureSimilarityMetric metric : metrics) {
+		for (Heuristic metric : metrics) {
 			System.out.println(metric);
 			for (FeatureModelVariable fm : fms) {
 				FeatureGraph<String> hierarchy = fm.getFm().getDiagram();
@@ -564,7 +566,7 @@ public class ASE2013KSynthesisTest extends KSynthesisTest {
 		List<FeatureModelVariable> referenceFMs = getSPLOTFeatureModels();
 		List<FeatureModelVariable> faseFMs = getFASEFeatureModels();
 		
-		for (FeatureSimilarityMetric metric : metrics) {
+		for (Heuristic metric : metrics) {
 			System.out.println(metric);
 			
 			int nbFaseAndFamiliar = 0;
@@ -628,50 +630,51 @@ public class ASE2013KSynthesisTest extends KSynthesisTest {
 		
 		
 	}
+
+// FIXME : broken with heuristic plugins
+//	@Ignore
+//	@Test
+//	public void testCompareReductionAndPathLength() {
+//
+//		int nbReductionAndPathLength = 0;
+//		int nbReductionOnly = 0;
+//		int nbPathLengthOnly = 0;
+//		int nbEdges = 0;
+//
+//		for (FeatureModelVariable fm : getSPLOTFeatureModels()) {
+//			InteractiveFMSynthesizer synthesizerReduction = new InteractiveFMSynthesizer(fm, reductionMetric, null, null, 0);
+//			FeatureModelVariable reductionFM = synthesizerReduction.computeCompleteFeatureModel();
+//			List<String> reductionCommonEdges = getCommonEdges(fm, reductionFM);				
+//
+//
+//			InteractiveFMSynthesizer synthesizerPathLength = new InteractiveFMSynthesizer(fm, pathLength, null, null, 0);
+//			FeatureModelVariable pathLengthFM = synthesizerPathLength.computeCompleteFeatureModel();
+//			List<String> pathLengthCommonEdges = getCommonEdges(fm, pathLengthFM);
+//
+//			Set<String> reductionAndPathLengthCommonEdges = new HashSet<String>(reductionCommonEdges);
+//			reductionAndPathLengthCommonEdges.retainAll(pathLengthCommonEdges);
+//
+//			reductionCommonEdges.removeAll(reductionAndPathLengthCommonEdges);
+//			pathLengthCommonEdges.removeAll(reductionAndPathLengthCommonEdges);
+//
+//			System.out.println(pathLengthCommonEdges);
+//			
+//			nbEdges += fm.features().size();
+//			nbReductionAndPathLength += reductionAndPathLengthCommonEdges.size();
+//			nbReductionOnly += reductionCommonEdges.size();
+//			nbPathLengthOnly += pathLengthCommonEdges.size();
+//
+//		}
+//
+//		System.out.println("Nb of edges : " + nbEdges);
+//		System.out.println("Reduction and PathLength: " + nbReductionAndPathLength);
+//		System.out.println("Reduction only : " + nbReductionOnly);
+//		System.out.println("PathLength only : " + nbPathLengthOnly);
+//		System.out.println();	
+//		
+//	}
 	
-	@Ignore
-	@Test
-	public void testCompareReductionAndPathLength() {
-
-		int nbReductionAndPathLength = 0;
-		int nbReductionOnly = 0;
-		int nbPathLengthOnly = 0;
-		int nbEdges = 0;
-
-		for (FeatureModelVariable fm : getSPLOTFeatureModels()) {
-			InteractiveFMSynthesizer synthesizerReduction = new InteractiveFMSynthesizer(fm, reductionMetric, null, null, 0);
-			FeatureModelVariable reductionFM = synthesizerReduction.computeCompleteFeatureModel();
-			List<String> reductionCommonEdges = getCommonEdges(fm, reductionFM);				
-
-
-			InteractiveFMSynthesizer synthesizerPathLength = new InteractiveFMSynthesizer(fm, pathLength, null, null, 0);
-			FeatureModelVariable pathLengthFM = synthesizerPathLength.computeCompleteFeatureModel();
-			List<String> pathLengthCommonEdges = getCommonEdges(fm, pathLengthFM);
-
-			Set<String> reductionAndPathLengthCommonEdges = new HashSet<String>(reductionCommonEdges);
-			reductionAndPathLengthCommonEdges.retainAll(pathLengthCommonEdges);
-
-			reductionCommonEdges.removeAll(reductionAndPathLengthCommonEdges);
-			pathLengthCommonEdges.removeAll(reductionAndPathLengthCommonEdges);
-
-			System.out.println(pathLengthCommonEdges);
-			
-			nbEdges += fm.features().size();
-			nbReductionAndPathLength += reductionAndPathLengthCommonEdges.size();
-			nbReductionOnly += reductionCommonEdges.size();
-			nbPathLengthOnly += pathLengthCommonEdges.size();
-
-		}
-
-		System.out.println("Nb of edges : " + nbEdges);
-		System.out.println("Reduction and PathLength: " + nbReductionAndPathLength);
-		System.out.println("Reduction only : " + nbReductionOnly);
-		System.out.println("PathLength only : " + nbPathLengthOnly);
-		System.out.println();	
-		
-	}
-	
-	private double computeOntologicalScore(FeatureModelVariable fm, FeatureSimilarityMetric metric) {
+	private double computeOntologicalScore(FeatureModelVariable fm, Heuristic metric) {
 
 		Set<String> features = fm.getFm().features();
 		ImplicationGraph<String> big = fm.computeImplicationGraph();
@@ -702,7 +705,8 @@ public class ASE2013KSynthesisTest extends KSynthesisTest {
 			if (edge.getType() == FeatureEdge.HIERARCHY) {
 				String feature = diagram.getSource(edge).getFeature();
 				String parent = diagram.getTarget(edge).getFeature();
-				double similarity = metric.similarity(big, xorGroups, orGroups, feature, parent);
+//				double similarity = metric.similarity(big, xorGroups, orGroups, feature, parent);
+				double similarity = metric.similarity(feature, parent);
 				if (similarity > 0.7) {
 					sumSimilarity += 1;
 				}
@@ -722,7 +726,7 @@ public class ASE2013KSynthesisTest extends KSynthesisTest {
 	public void testRankSPLOTFeatureModels() {
 		List<FeatureModelVariable> fms = getSPLOTFeatureModels();
 
-		for (FeatureSimilarityMetric metric : metrics) {
+		for (Heuristic metric : metrics) {
 			List<OptimumBranchingResult> results = new ArrayList<OptimumBranchingResult>();
 			
 			for (FeatureModelVariable fm : fms) {
@@ -759,7 +763,7 @@ public class ASE2013KSynthesisTest extends KSynthesisTest {
 		List<FeatureModelVariable> referenceFMs = getSPLOTFeatureModels();
 		List<FeatureModelVariable> faseFMs = getFASEFeatureModels();
 		
-		for (FeatureSimilarityMetric metric : metrics) {
+		for (Heuristic metric : metrics) {
 			System.out.println(metric);
 			int faseWins = 0;
 			int familiarWins = 0;
@@ -826,7 +830,7 @@ public class ASE2013KSynthesisTest extends KSynthesisTest {
 		for (KeyValue<String, List<String>> parentCandidates : synthesizer.getParentCandidates()) {
 			System.out.println(parentCandidates.getKey());
 			for (String parentCandidate : parentCandidates.getValue()) {
-				System.out.println(parentCandidate + " : " + directedPathLength.similarity(null, null, null, parentCandidates.getKey(), parentCandidate));
+				System.out.println(parentCandidate + " : " + directedPathLength.similarity(parentCandidates.getKey(), parentCandidate));
 			}
 			System.out.println();
 			

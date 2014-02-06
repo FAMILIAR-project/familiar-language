@@ -20,8 +20,8 @@ package fr.familiar.attributedfm.domain;
 import java.util.Collection;
 import java.util.Set;
 
-import es.us.isa.util.BijectiveMap;
-import es.us.isa.util.BijectiveMapImpl;
+import fr.familiar.attributedfm.util.BijectiveMap;
+import fr.familiar.attributedfm.util.BijectiveMapImpl;
 
 /**
  * Represents a Domain based in Object

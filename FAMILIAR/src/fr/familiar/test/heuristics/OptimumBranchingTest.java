@@ -11,7 +11,7 @@ import java.util.List;
 
 import org.junit.Test;
 
-import fr.familiar.operations.heuristics.metrics.FeatureSimilarityMetric;
+import fr.familiar.operations.heuristics.Heuristic;
 import fr.familiar.operations.heuristics.metrics.RandomMetric;
 import fr.familiar.operations.heuristics.mst.OptimumBranchingFinder;
 import fr.familiar.operations.heuristics.mst.WeightedImplicationGraph;
@@ -110,7 +110,7 @@ public class OptimumBranchingTest extends FMLTest {
 	
 	@Test
 	public void testSPLOTSpanningTree() {
-		FeatureSimilarityMetric metric = new RandomMetric();
+		Heuristic metric = new RandomMetric();
 		OptimumBranchingFinder<String> tarjan = new OptimumBranchingFinder<String>();
 
 		for (FeatureModelVariable fm : collectSPLOTFMs()) {
@@ -121,7 +121,7 @@ public class OptimumBranchingTest extends FMLTest {
 			for (SimpleEdge edge : big.edges()) {
 				String source = big.getSource(edge);
 				String target = big.getTarget(edge);
-				big.setEdgeWeight(edge, metric.similarity(big.getImplicationGraph(), null, null, source, target));
+				big.setEdgeWeight(edge, metric.similarity(source, target));
 			}
 			
 			// Compute optimum branching

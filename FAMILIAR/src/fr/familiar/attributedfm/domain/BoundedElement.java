@@ -17,11 +17,13 @@
  */
 package fr.familiar.attributedfm.domain;
 
+import fr.familiar.attributedfm.VariabilityElement;
+
 
 /**
  * This class represent a bounded element.
  */
-public abstract class BoundedElement {
+public abstract class BoundedElement extends VariabilityElement{
 	
 	protected String name;
 	

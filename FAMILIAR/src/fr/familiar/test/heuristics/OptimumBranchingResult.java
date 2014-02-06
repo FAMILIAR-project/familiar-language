@@ -3,7 +3,8 @@ package fr.familiar.test.heuristics;
 import java.util.ArrayList;
 import java.util.List;
 
-import fr.familiar.operations.heuristics.metrics.FeatureSimilarityMetric;
+import fr.familiar.operations.heuristics.Heuristic;
+import fr.familiar.operations.heuristics.KSynthesisPlugin;
 import fr.familiar.variable.FeatureModelVariable;
 
 public class OptimumBranchingResult implements Comparable<OptimumBranchingResult> {
@@ -11,7 +12,7 @@ public class OptimumBranchingResult implements Comparable<OptimumBranchingResult
 	private FeatureModelVariable referenceFM;
 	private FeatureModelVariable synthesizedFM;
 	private List<String> commonEdges;
-	private FeatureSimilarityMetric metric;
+	private Heuristic metric;
 	private double ontologicalScore;
 	
 	public OptimumBranchingResult() {
@@ -38,10 +39,10 @@ public class OptimumBranchingResult implements Comparable<OptimumBranchingResult
 	public void setCommonEdges(List<String> commonEdges) {
 		this.commonEdges = commonEdges;
 	}
-	public FeatureSimilarityMetric getMetric() {
+	public Heuristic getMetric() {
 		return metric;
 	}
-	public void setMetric(FeatureSimilarityMetric metric) {
+	public void setMetric(Heuristic metric) {
 		this.metric = metric;
 	}
 	public double getOntologicalScore() {

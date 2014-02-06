@@ -15,7 +15,7 @@
     along with FaMaTS.  If not, see <http://www.gnu.org/licenses/>.
 
  */
-package es.us.isa.util;
+package fr.familiar.attributedfm.util;
 
 import java.util.Collection;
 import java.util.HashMap;

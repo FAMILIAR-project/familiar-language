@@ -26,10 +26,10 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 
-import es.us.isa.util.Node;
 import fr.familiar.attributedfm.domain.Cardinality;
 import fr.familiar.attributedfm.reasoning.FeatureModelReasoner;
 import fr.familiar.attributedfm.reasoning.FeatureModelTransform;
+import fr.familiar.attributedfm.util.Node;
 import fr.pacogen.model.treeStructure.FeatureModel;
 
 public class AttributedFeatureModel extends FeatureModel{
@@ -84,7 +84,7 @@ public class AttributedFeatureModel extends FeatureModel{
 		return res;
 	}
 		
-	public Collection<Feature> getAttributedFeatures() {
+	public Collection<Feature> getFeatures() {
 		Collection<Feature> res = new HashSet<Feature>();
 		getFeatures(res, root);
 		return res;

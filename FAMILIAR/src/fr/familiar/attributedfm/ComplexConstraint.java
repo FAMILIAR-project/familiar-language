@@ -18,7 +18,7 @@
 package fr.familiar.attributedfm;
 
 import es.us.isa.FAMA.parser.FMFParser;
-import es.us.isa.util.Tree;
+import fr.familiar.attributedfm.util.Tree;
 
 //TODO esto se podria meter al nucleo
 public class ComplexConstraint extends Constraint {

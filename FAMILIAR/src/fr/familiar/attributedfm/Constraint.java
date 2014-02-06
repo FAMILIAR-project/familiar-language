@@ -19,8 +19,8 @@ package fr.familiar.attributedfm;
 
 import java.util.List;
 
-import es.us.isa.util.Node;
-import es.us.isa.util.Tree;
+import fr.familiar.attributedfm.util.Node;
+import fr.familiar.attributedfm.util.Tree;
 
 /**
  * It represents a complex constraint, it is used at Attributed questions. 

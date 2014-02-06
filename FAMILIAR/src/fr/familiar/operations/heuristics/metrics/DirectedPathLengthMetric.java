@@ -1,5 +1,7 @@
 package fr.familiar.operations.heuristics.metrics;
 
+import java.io.File;
+
 import net.sf.extjwnl.data.PointerType;
 import net.sf.extjwnl.data.PointerUtils;
 import net.sf.extjwnl.data.Synset;
@@ -10,10 +12,6 @@ import net.sf.extjwnl.dictionary.Dictionary;
 
 public class DirectedPathLengthMetric extends WordNetMetric {
 
-
-	public DirectedPathLengthMetric(Dictionary dictionary) {
-		super(dictionary);
-	}
 
 	@Override
 	public double synsetSimilarity(Synset synset1, Synset synset2) {
@@ -45,19 +43,25 @@ public class DirectedPathLengthMetric extends WordNetMetric {
 		return maxScore;
 	}
 	
+//	@Override
+//	public String toString() {
+//		return "WordNet metric (Directed path length)";
+//	}
+//
+//	@Override
+//	public boolean isXorGroupRequired() {
+//		return false;
+//	}
+//
+//	@Override
+//	public boolean isOrGroupRequired() {
+//		return false;
+//	}
+	
 	@Override
-	public String toString() {
-		return "WordNet metric (Directed path length)";
+	public String getName() {
+		return "Directed Path Length (WordNet)";
 	}
 
-	@Override
-	public boolean isXorGroupRequired() {
-		return false;
-	}
-
-	@Override
-	public boolean isOrGroupRequired() {
-		return false;
-	}
 
 }

@@ -47,23 +47,21 @@ import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.SortedSet;
 import java.util.StringTokenizer;
 import java.util.TreeSet;
-
-import javax.security.auth.login.Configuration;
 
 import choco.cp.model.CPModel;
 import choco.kernel.model.Model;
 import choco.kernel.model.constraints.Constraint;
 import choco.kernel.model.variables.integer.IntegerExpressionVariable;
 import choco.kernel.model.variables.integer.IntegerVariable;
-import es.us.isa.util.Node;
-import es.us.isa.util.Tree;
-import fr.familiar.attributedfm.ConstantIntConverter;
+import fr.familiar.attributedfm.Configuration;
 import fr.familiar.attributedfm.Feature;
 import fr.familiar.attributedfm.GenericAttribute;
 import fr.familiar.attributedfm.Relation;
+import fr.familiar.attributedfm.VariabilityElement;
 import fr.familiar.attributedfm.domain.Cardinality;
 import fr.familiar.attributedfm.domain.Domain;
 import fr.familiar.attributedfm.domain.IntegerDomain;
@@ -72,8 +70,10 @@ import fr.familiar.attributedfm.domain.ObjectDomain;
 import fr.familiar.attributedfm.domain.Range;
 import fr.familiar.attributedfm.domain.RangeIntegerDomain;
 import fr.familiar.attributedfm.domain.SetIntegerDomain;
+import fr.familiar.attributedfm.util.Node;
+import fr.familiar.attributedfm.util.Tree;
 
-public class ChocoReasoner implements FeatureModelReasoner {
+public class ChocoReasoner extends FeatureModelReasoner {
 
 	protected Map<String, Feature> features;
 	protected Map<String, IntegerVariable> variables;
@@ -421,85 +421,85 @@ public class ChocoReasoner implements FeatureModelReasoner {
 		return atts.values();
 	}
 
-//	@Override
-//	public void applyStagedConfiguration(Configuration conf) {
-//
-//		Iterator<Entry<Object, Integer>> it = conf.getElements().entrySet().iterator();
-//
-//		Map<String, IntegerVariable> vars = getVariables();
-//		Map<String, IntegerExpressionVariable> rels = getSetRelations();
-//		Map<String, IntegerVariable> atts = getAttributesVariables();
-//		while (it.hasNext()) {
-//			Entry<Object, Integer> e = it.next();
-//			Object v = e.getKey();
-//			int arg1 = e.getValue().intValue();
-//			Constraint aux;
-//			// the constraint is created to not have a solution for the problem
-//			IntegerVariable errorVar = makeIntVar("error", 0, 0,
-//					"cp:no_decision");
-//			Constraint error = eq(1, errorVar);
-//			if (v instanceof Feature) {
-//				IntegerVariable arg0 = vars.get(((Feature)v).getName());
-//				if (!getAllFeatures().contains((Feature) v)) {
-//					if (e.getValue() == 0) {
-//						System.err.println("The feature " + ((Feature)v).getName()
-//								+ " do not exist on the model");
-//					} else {
-//						problem.addConstraint(error);
-//						this.configConstraints.add(error);
-//						System.err.println("The feature " + ((Feature)v).getName()
-//								+ " do not exist, and can not be added");
-//					}
-//				} else {
-//					aux = eq(arg0, arg1);
-//					problem.addConstraint(aux);
-//					this.configConstraints.add(aux);
-//				}
-//
-//			} else if (v instanceof Relation) {
-//				IntegerExpressionVariable arg0 = rels.get(((Feature)v).getName());
-//				if (!getSetRelations().keySet().contains(((Feature)v).getName())) {
-//					if (e.getValue() == 0) {
-//						System.err.println("The relation " + ((Feature)v).getName()
-//								+ "do not exist already in to the model");
-//					} else {
-//						problem.addConstraint(error);
-//						this.configConstraints.add(error);
-//						System.err.println("The relation " + ((Feature)v).getName()
-//								+ "do not exist, and can not be added");
-//					}
-//				} else {
-//					aux = eq(arg0, arg1);
-//					problem.addConstraint(aux);
-//					this.configConstraints.add(aux);
-//				}
-//			} else if (v instanceof GenericAttribute) {
-//				GenericAttribute attAux = (GenericAttribute) v;
-//				String attName = attAux.getFeature().getName() + "."
-//						+ ((Feature)v).getName();
-//				IntegerVariable arg0 = atts.get(attName);
-//				if (!getAllAttributes().contains((GenericAttribute) v)) {
-//					if (e.getValue() == 0) {
-//						System.err.println("The attribute " + ((Feature)v).getName()
-//								+ " do not exist on the model");
-//					} else {
-//						problem.addConstraint(error);
-//						this.configConstraints.add(error);
-//						System.err.println("The attribute " + ((Feature)v).getName()
-//								+ " do not exist, and can not be added");
-//					}
-//				} else {
-//					aux = eq(arg0, arg1);
-//					problem.addConstraint(aux);
-//					this.configConstraints.add(aux);
-//				}
-//			} else {
-//				System.err.println("Type of the Variability element "
-//						+ ((Feature)v).getName() + " not recognized");
-//			}
-//		}
-//
-//	}
+	@Override
+	public void applyStagedConfiguration(Configuration conf) {
+
+		Iterator<Entry<VariabilityElement, Integer>> it = conf.getElements().entrySet().iterator();
+
+		Map<String, IntegerVariable> vars = getVariables();
+		Map<String, IntegerExpressionVariable> rels = getSetRelations();
+		Map<String, IntegerVariable> atts = getAttributesVariables();
+		while (it.hasNext()) {
+			Entry<VariabilityElement, Integer> e = it.next();
+			Object v = e.getKey();
+			int arg1 = e.getValue().intValue();
+			Constraint aux;
+			// the constraint is created to not have a solution for the problem
+			IntegerVariable errorVar = makeIntVar("error", 0, 0,
+					"cp:no_decision");
+			Constraint error = eq(1, errorVar);
+			if (v instanceof Feature) {
+				IntegerVariable arg0 = vars.get(((Feature)v).getName());
+				if (!getAllFeatures().contains((Feature) v)) {
+					if (e.getValue() == 0) {
+						System.err.println("The feature " + ((Feature)v).getName()
+								+ " do not exist on the model");
+					} else {
+						problem.addConstraint(error);
+						this.configConstraints.add(error);
+						System.err.println("The feature " + ((Feature)v).getName()
+								+ " do not exist, and can not be added");
+					}
+				} else {
+					aux = eq(arg0, arg1);
+					problem.addConstraint(aux);
+					this.configConstraints.add(aux);
+				}
+
+			} else if (v instanceof Relation) {
+				IntegerExpressionVariable arg0 = rels.get(((Feature)v).getName());
+				if (!getSetRelations().keySet().contains(((Feature)v).getName())) {
+					if (e.getValue() == 0) {
+						System.err.println("The relation " + ((Feature)v).getName()
+								+ "do not exist already in to the model");
+					} else {
+						problem.addConstraint(error);
+						this.configConstraints.add(error);
+						System.err.println("The relation " + ((Feature)v).getName()
+								+ "do not exist, and can not be added");
+					}
+				} else {
+					aux = eq(arg0, arg1);
+					problem.addConstraint(aux);
+					this.configConstraints.add(aux);
+				}
+			} else if (v instanceof GenericAttribute) {
+				GenericAttribute attAux = (GenericAttribute) v;
+				String attName = attAux.getFeature().getName() + "."
+						+ ((Feature)v).getName();
+				IntegerVariable arg0 = atts.get(attName);
+				if (!getAllAttributes().contains((GenericAttribute) v)) {
+					if (e.getValue() == 0) {
+						System.err.println("The attribute " + ((Feature)v).getName()
+								+ " do not exist on the model");
+					} else {
+						problem.addConstraint(error);
+						this.configConstraints.add(error);
+						System.err.println("The attribute " + ((Feature)v).getName()
+								+ " do not exist, and can not be added");
+					}
+				} else {
+					aux = eq(arg0, arg1);
+					problem.addConstraint(aux);
+					this.configConstraints.add(aux);
+				}
+			} else {
+				System.err.println("Type of the Variability element "
+						+ ((Feature)v).getName() + " not recognized");
+			}
+		}
+
+	}
 
 	@Override
 	public void unapplyStagedConfigurations() {
@@ -809,10 +809,10 @@ public class ChocoReasoner implements FeatureModelReasoner {
 			else {
 				//es una constante, usamos el intConverter
 				//TODO
-				//Integer i = constantIntConverter.translate2Integer(tree.getData());
-//				if (i != null){
-//					res = constant(i);
-//				}
+				Integer i = constantIntConverter.translate2Integer(tree.getData());
+				if (i != null){
+					res = constant(i);
+				}
 			}
 			return res;
 		}
@@ -894,18 +894,7 @@ public class ChocoReasoner implements FeatureModelReasoner {
 
 
 
-	@Override
-	public void applyStagedConfiguration(Configuration conf) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void setConstantIntConverter(
-			ConstantIntConverter constantIntConverter) {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 
 
