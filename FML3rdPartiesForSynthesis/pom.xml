@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <relativePath>../../kCVL/familiar.root/pom.xml</relativePath>
+    <relativePath>../familiar.root/pom.xml</relativePath>
     <groupId>fr.inria.familiar</groupId>
     <artifactId>parent</artifactId>
     <version>1.0.10</version>
