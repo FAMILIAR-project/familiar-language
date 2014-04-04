@@ -24,7 +24,10 @@ Export-Package: JFlex,
  java_cup.anttask,
  java_cup.runtime,
  test,
- yices
+ yices,
+ fr.familiar.fm.converter.tvl
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Require-Bundle: org.junit,
- org.sat4j.core
+ org.sat4j.core,
+ org.eclipse.emf.common,
+ FAMILIAR

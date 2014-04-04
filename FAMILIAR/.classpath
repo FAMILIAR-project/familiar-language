@@ -36,4 +36,5 @@
 	<classpathentry combineaccessrules="false" kind="src" path="/fr.inria.lang.vm"/>
 	<classpathentry kind="lib" path="lib/gagawa-1.0.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
+	<classpathentry kind="src" path="/TVLPackagedAsMock"/>
 </classpath>
