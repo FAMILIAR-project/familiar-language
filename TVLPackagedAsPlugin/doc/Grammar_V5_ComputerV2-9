@@ -1,202 +1,0 @@
-
-
-FIELD = META (CONSTANTS)? (TYPES)? FD
-
-//----- Meta section ------------------------------------------------------------------------------------------
-
-META =
-
-
-
-//----- Constant section ------------------------------------------------------------------------------------------
-
-CONSTANTS = (CONSTANT)+ 
-
-CONSTANT =  define bool ATTRIBUTE_ID (true | false);
-		  | define int ATTRIBUTE_ID INTEGER;
-		  | define real ATTRIBUTE_ID REAL:
-		  
-		  
-		  
-//----- Type section ------------------------------------------------------------------------------------------
-		  
-TYPES = (TYPE)+
-
-TYPE =  BASE_SET 
-      | RECORD
-
-BASE_SET =  int ATTRIBUTE_ID INT_SET_EXPRESSION; 
-          | real ATTRIBUTE_ID REAL_SET_EXPRESSION;
-          | enum ATTRIBUTE_ID ENUM_EXPRESSION;
-          
-BASE_TYPE =  int ATTRIBUTE_ID;
-		   | real ATTRIBUTE_ID;
-		   | bool ATTRIBUTE_ID;
-            
-RECORD = struct ATTRIBUTE_ID { RECORD_CONTENT };
-
-RECORD_CONTENT =  BASE_SET
-				| BASE_TYPE
-				| ATTRIBUTE_ID ATTRIBUTE_ID
-				
-				
-				
-//----- ID section ------------------------------------------------------------------------------------------
-
-FEATURE_ID_PATH =  root.FEATURE_ID_CHAIN
-            	 | FEATURE_ID.FEATURE_ID_CHAIN
-
-FEATURE_ID_CHAIN =  FEATURE_ID
-				  | FEATURE_ID.FEATURE_ID_CHAIN
-           
-FEATURE_ID = [A-Z]([a-zA-Z0-9])+ / {"parent", "root", "true", "false", "children", "selectedChildren",...}
-
-ATTRIBUTE_ID_PATH =  parent.ATTRIBUTE_ID_CHAIN
-				   | this.ATTRIBUTE_ID_CHAIN
-              	   | FEATURE_ID.ATTRIBUTE_ID_CHAIN
-              	   | FEATURE_ID_PATH.ATTRIBUTE_ID_CHAIN   
-
-ATTRIBUTE_ID_CHAIN =  ATTRIBUTE_ID
-                    | ATTRIBUTE_ID.ATTRIBUTE_ID_CHAIN
-
-ATTRIBUTE_ID = [a-z]([a-zA-Z0-9])+ / {"parent", "root", "true", "false", "children",...}
-
-CHILDREN_ATTRIBUTE_ID =  selectedChildren.ATTRIBUTE_ID_CHAIN
-      				   | children.ATTRIBUTE_ID_CHAIN
-      				   
-FEATURE_ID_LIST =  (opt)? FEATURE_ID
-				 | (opt)? FEATURE_ID, FEATURE_ID_LIST 
-         
-         
-         
-//----- Feature section ------------------------------------------------------------------------------------------         
-         
-FD =  root FEATURE_ID { DATA? ATTRIBUTES? CONSTRAINTS? FEATURES?}
-	| root FEATURE_ID DATA? ATTRIBUTES? CONSTRAINTS? FEATURES?
-	
-FEATURES =  CARDINALITY { HIERARCHICAL_FEATURE+ }
-          | CARDINALITY { FEATURE_ID_LIST }
-
-FEATURE =  (opt)? FEATURE_ID { DATA? ATTRIBUTES? CONSTRAINTS? FEATURES? } FEATURE?
-         | (opt)? FEATURE_ID DATA? ATTRIBUTES? CONSTRAINTS? FEATURES? FEATURE?
-         
-HIERARCHICAL_FEATURE =  dag FEATURE_ID { DATA? }
-		 			  | dag FEATURE_ID DATA? 
-         			  | (opt)? FEATURE_ID { DATA? ATTRIBUTES? CONSTRAINTS? FEATURES? }
-                      | (opt)? FEATURE_ID DATA? ATTRIBUTES? CONSTRAINTS? FEATURES?
-
-CARDINALITY =  oneOf
-             | someOf
-             | allOf
-             | group [(NATURAL |*)..(NATURAL |*)]
-
-
-             
-//----- Attribute section ------------------------------------------------------------------------------------------  
-
-ATTRIBUTES = (ATTRIBUTE)+
-
-ATTRIBUTE =  BASE_ATTRIBUTE
-		   | ATTRIBUTE_ID ATTRIBUTE_ID (IFIN_IFOUT_INT | IFIN_IFOUT_REAL | IFIN_IFOUT_ENUM)?;
-		   | ATTRIBUTE_ID ATTRIBUTE_ID ({(ATTRIBUTE_ID (IFIN_IFOUT_INT | IFIN_IFOUT_REAL | IFIN_IFOUT_ENUM |IFIN_IFOUT_BOOL))+})?;
-
-BASE_ATTRIBUTE =  int ATTRIBUTE_ID ((in INT_SET_EXPRESSION IFIN_IFOUT_INT) | in INT_SET_EXPRESSION | IFIN_IFOUT_INT)?;    
-           		| real ATTRIBUTE_ID ((in REAL_SET_EXPRESSION IFIN_IFOUT_REAL) | in REAL_SET_EXPRESSION | IFIN_IFOUT_REAL)?;
-           		| bool ATTRIBUTE_ID IFIN_IFOUT_BOOL?;
-           		| enum ATTRIBUTE_ID in ENUM_EXPRESSION (IFIN_IFOUT_ENUM)?;
-           		
-IFIN_IFOUT_INT =  ifIn (INT_EXPRESSION | in INT_SET_EXPRESSION) ifOut (INT_EXPRESSION | in INT_SET_EXPRESSION)
-                | ifIn (INT_EXPRESSION | in INT_SET_EXPRESSION)
-                | ifOut (INT_EXPRESSION | in INT_SET_EXPRESSION)
-
-IFIN_IFOUT_REAL =  ifIn (REAL_EXPRESSION | in REAL_SET_EXPRESSION) ifOut (REAL_EXPRESSION | in REAL_SET_EXPRESSION)
-				 | ifIn (REAL_EXPRESSION | in REAL_SET_EXPRESSION)
-				 | ifOut (REAL_EXPRESSION | in REAL_SET_EXPRESSION)
-
-IFIN_IFOUT_ENUM =  ifIn (ID | in ENUM_EXPRESSION) ifOut (ID | in ENUM_EXPRESSION)
-				 | ifIn (ID | in ENUM_EXPRESSION)
-				 | ifOut (ID | in ENUM_EXPRESSION)
-
-IFIN_IFOUT_BOOL =  ifIn BOOL_EXPRESSION ifOut BOOL_EXPRESSION
-				 | ifIn BOOL_EXPRESSION
-				 | ifOut BOOL_EXPRESSION
-
-
-
-//----- Expression section ------------------------------------------------------------------------------------------
-           
-BOOL_EXPRESSION =  BOOL_EXPRESSION && BOOL_EXPRESSION				 | BOOL_EXPRESSION || BOOL_EXPRESSION				 | BOOL_EXPRESSION ==> BOOL_EXPRESSION				 | BOOL_EXPRESSION <=> BOOL_EXPRESSION                 | !(BOOL_EXPRESSION)                 | (BOOL_EXPRESSION)                 | true                 | false
-                 | FEATURE_ID_PATH
-                 | ATTRIBUTE_ID_PATH                 | INT_EXPRESSION == INT_EXPRESSION                 | INT_EXPRESSION == REAL_EXPRESSION                 | REAL_EXPRESSION == INT_EXPRESSION                 | REAL_EXPRESSION == REAL_EXPRESSION                 | INT_EXPRESSION >= INT_EXPRESSION                 | INT_EXPRESSION <= INT_EXPRESSION                 | REAL_EXPRESSION >= REAL_EXPRESSION                 | REAL_EXPRESSION <= REAL_EXPRESSION
-                 | ATTRIBUTE_ID_PATH in (ENUM_EXPRESSION | INT_SET_EXPRESSION | REAL_SET_EXPRESSION)
-                 | ATTRIBUTE_ID_PATH == ID
-                 | and((BOOL_LIST | CHILDREN_ATTRIBUTE_ID))
-                 | or((BOOL_LIST | CHILDREN_ATTRIBUTE_ID))
-                 | xor((BOOL_LIST | CHILDREN_ATTRIBUTE_ID))
-
-INT_EXPRESSION =  INT_EXPRESSION + INT_EXPRESSION                | INT_EXPRESSION - INT_EXPRESSION                | INT_EXPRESSION * INT_EXPRESSION                | INT_EXPRESSION / INT_EXPRESSION                | -(INT_EXPRESSION)                | (INT_EXPRESSION)                | abs(INT_EXPRESSION)                | ? BOOL_EXPRESSION : INT_EXPRESSION , INT_EXPRESSION ?                | INTEGER
-                | sum((INT_LIST | CHILDREN_ATTRIBUTE_ID))
-                | mul((INT_LIST | CHILDREN_ATTRIBUTE_ID))
-                | min((INT_LIST | CHILDREN_ATTRIBUTE_ID))
-                | max((INT_LIST | CHILDREN_ATTRIBUTE_ID))
-                | count((INT_LIST | CHILDREN_ATTRIBUTE_ID))
-                | avg((INT_LIST | CHILDREN_ATTRIBUTE_ID))
-                | ATTRIBUTE_ID_PATH
-                
-BOOL_LIST =  BOOL_EXPRESSION
-		   | BOOL_EXPRESSION, BOOL_LIST
-                                                
-INT_LIST =  INT_EXPRESSION
-		  | INT_EXPRESSION, INT_LIST
-								 
-REAL_LIST =  REAL_EXPRESSION
-		   | REAL_EXPRESSION, REAL_LIST
-
-ENUM_LIST =  ID
-		   | ID, ENUM_LIST  
-                
-REAL_EXPRESSION =  REAL_EXPRESSION + REAL_EXPRESSION                 | REAL_EXPRESSION - REAL_EXPRESSION                 | REAL_EXPRESSION * REAL_EXPRESSION                 | (REAL_EXPRESSION)                 | REAL                 | ? BOOL_EXPRESSION : REAL_EXPRESSION , REAL_EXPRESSION ?
-                 | sum((REAL_LIST | CHILDREN_ATTRIBUTE_ID))
-                 | mul((REAL_LIST | CHILDREN_ATTRIBUTE_ID))
-                 | min((REAL_LIST | CHILDREN_ATTRIBUTE_ID))
-                 | max((REAL_LIST | CHILDREN_ATTRIBUTE_ID))
-                 | count((REAL_LIST | CHILDREN_ATTRIBUTE_ID))
-                 | avg((REAL_LIST | CHILDREN_ATTRIBUTE_ID))
-                 | ATTRIBUTE_ID_PATH  
-           
-ENUM_EXPRESSION = {ENUM_LIST}
-			  
-INT_SET_EXPRESSION =  {INT_LIST}
-					| [INT_EXPRESSION..INT_EXPRESSION]
-					
-REAL_SET_EXPRESSION =  {REAL_LIST}
-					 | [REAL_EXPRESSION..REAL_EXPRESSION]
-
-
-					 
-//----- Constraint section ------------------------------------------------------------------------------------------
-     			  
-CONSTRAINTS = (ifIn (BOOL_EXPRESSION) | ifOut (BOOL_EXPRESSION))+
-
-               
-               
-NATURAL = 0 | [1-9][0-9]*
-
-INTEGER = 0 | (-)?[1-9][0-9]* 
-
-REAL = INTEGER.([0-9]*[1-9])?
-
-INCLUDE = include(FILE);
-
-FILE = [a-zA-Z0-9:/]+
-
-STRING = [^«</!>»]*
-
-DATA = data{ DATA_PAIR }
-
-DATA_PAIR =  (ID, (STRING))
-           | (ID, (STRING)), DATA_PAIR               
-               
-COMMENT = /** STRING* **/               
-               
-               

@@ -1,7 +1,0 @@
-root HorizontalAlignment {
-	group oneof {
-		Test
-	}
-	real margin;
-	margin == -1; // TODO: check how it is coded in PRISMAprepare
-}

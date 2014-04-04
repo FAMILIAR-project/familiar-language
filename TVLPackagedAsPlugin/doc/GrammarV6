@@ -1,161 +1,0 @@
-
-
-FIELD = META (CONSTANTS)? (TYPES)? FD
-
-//----- Meta section ------------------------------------------------------------------------------------------
-
-META =
-
-
-
-//----- Constant section ------------------------------------------------------------------------------------------
-
-CONSTANTS = (CONSTANT)+ 
-
-CONSTANT =  define bool ATTRIBUTE_ID (true | false);
-		  | define int ATTRIBUTE_ID INTEGER;
-		  | define real ATTRIBUTE_ID REAL:
-		  
-		  
-		  
-//----- Type section ------------------------------------------------------------------------------------------
-		  
-TYPES = (TYPE)+
-
-TYPE =  BASE_SET 
-      | RECORD
-
-BASE_SET =  int ATTRIBUTE_ID SET_EXPRESSION; 
-          | real ATTRIBUTE_ID SET_EXPRESSION;
-          | enum ATTRIBUTE_ID SET_EXPRESSION;
-          
-BASE_TYPE =  int ATTRIBUTE_ID;
-		   | real ATTRIBUTE_ID;
-		   | bool ATTRIBUTE_ID;
-            
-RECORD = struct ATTRIBUTE_ID { RECORD_CONTENT };
-
-RECORD_CONTENT =  BASE_SET
-				| BASE_TYPE
-				| ATTRIBUTE_ID ATTRIBUTE_ID
-				
-				
-				
-//----- ID section ------------------------------------------------------------------------------------------
-
-FEATURE_ID_PATH =  root.FEATURE_ID_CHAIN
-            	 | FEATURE_ID.FEATURE_ID_CHAIN
-
-FEATURE_ID_CHAIN =  FEATURE_ID
-				  | FEATURE_ID.FEATURE_ID_CHAIN
-           
-FEATURE_ID = [A-Z]([a-zA-Z0-9])+ / {"parent", "root", "true", "false", "children", "selectedChildren",...}
-
-ATTRIBUTE_ID_PATH =  parent.ATTRIBUTE_ID_CHAIN
-				   | this.ATTRIBUTE_ID_CHAIN
-              	   | FEATURE_ID.ATTRIBUTE_ID_CHAIN
-              	   | FEATURE_ID_PATH.ATTRIBUTE_ID_CHAIN   
-
-ATTRIBUTE_ID_CHAIN =  ATTRIBUTE_ID
-                    | ATTRIBUTE_ID.ATTRIBUTE_ID_CHAIN
-
-ATTRIBUTE_ID = [a-z]([a-zA-Z0-9])+ / {"parent", "root", "true", "false", "children",...}
-
-CHILDREN_ATTRIBUTE_ID =  selectedChildren.ATTRIBUTE_ID_CHAIN
-      				   | children.ATTRIBUTE_ID_CHAIN
-      				   
-FEATURE_ID_LIST =  (opt)? FEATURE_ID
-				 | (opt)? FEATURE_ID, FEATURE_ID_LIST 
-         
-         
-         
-//----- Feature section ------------------------------------------------------------------------------------------         
-         
-FD =  root FEATURE_ID { DATA? ATTRIBUTES? CONSTRAINTS? FEATURES?}
-	| root FEATURE_ID DATA? ATTRIBUTES? CONSTRAINTS? FEATURES?
-	
-FEATURES =  CARDINALITY { HIERARCHICAL_FEATURE+ }
-          | CARDINALITY { FEATURE_ID_LIST }
-
-FEATURE =  (opt)? FEATURE_ID { DATA? ATTRIBUTES? CONSTRAINTS? FEATURES? } FEATURE?
-         | (opt)? FEATURE_ID DATA? ATTRIBUTES? CONSTRAINTS? FEATURES? FEATURE?
-         
-HIERARCHICAL_FEATURE =  dag FEATURE_ID { DATA? }
-		 			  | dag FEATURE_ID DATA? 
-         			  | (opt)? FEATURE_ID { DATA? ATTRIBUTES? CONSTRAINTS? FEATURES? }
-                      | (opt)? FEATURE_ID DATA? ATTRIBUTES? CONSTRAINTS? FEATURES?
-
-CARDINALITY =  oneOf
-             | someOf
-             | allOf
-             | group [(NATURAL |*)..(NATURAL |*)]
-
-
-             
-//----- Attribute section ------------------------------------------------------------------------------------------  
-
-ATTRIBUTES = (ATTRIBUTE)+
-
-ATTRIBUTE =  BASE_ATTRIBUTE
-		   | ATTRIBUTE_ID ATTRIBUTE_ID (IFIN_IFOUT)?;
-		   | ATTRIBUTE_ID ATTRIBUTE_ID ({(ATTRIBUTE_ID (IFIN_IFOUT))+})?;
-
-BASE_ATTRIBUTE =  int ATTRIBUTE_ID ((in SET_EXPRESSION IFIN_IFOUT) | in SET_EXPRESSION | IFIN_IFOUT)?;    
-           		| real ATTRIBUTE_ID ((in SET_EXPRESSION IFIN_IFOUT) | in SET_EXPRESSION | IFIN_IFOUT)?;
-           		| bool ATTRIBUTE_ID IFIN_IFOUT?;
-           		| enum ATTRIBUTE_ID in SET_EXPRESSION (IFIN_IFOUT)?;
-           		
-IFIN_IFOUT =  ifIn (EXPRESSION | in SET_EXPRESSION) ifOut (EXPRESSION | in SET_EXPRESSION)
-            | ifIn (EXPRESSION | in INT_SET_EXPRESSION)
-            | ifOut (EXPRESSION | in SET_EXPRESSION)
-
-//----- Expression section ------------------------------------------------------------------------------------------
-           
-EXPRESSION =  EXPRESSION && EXPRESSION			| EXPRESSION || EXPRESSION			| EXPRESSION ==> EXPRESSION			| EXPRESSION <=> EXPRESSION            | !(EXPRESSION)            | (EXPRESSION)            | true            | false
-            | FEATURE_ID_PATH
-            | ATTRIBUTE_ID_PATH            | EXPRESSION == EXPRESSION            | EXPRESSION >= EXPRESSION            | EXPRESSION <= EXPRESSION
-            | ATTRIBUTE_ID_PATH in SET_EXPRESSION
-            | ATTRIBUTE_ID_PATH == ATTRIBUTE_ID
-            | and((EXPRESSION_LIST | CHILDREN_ATTRIBUTE_ID))
-            | or((EXPRESSION_LIST | CHILDREN_ATTRIBUTE_ID))
-            | xor((EXPRESSION_LIST | CHILDREN_ATTRIBUTE_ID))
-            | EXPRESSION + EXPRESSION            | EXPRESSION - EXPRESSION            | EXPRESSION * EXPRESSION            | EXPRESSION / EXPRESSION            | -(EXPRESSION)            | abs(EXPRESSION)            | ? EXPRESSION : EXPRESSION , EXPRESSION ?            | INTEGER
-            | sum((EXPRESSION_LIST | CHILDREN_ATTRIBUTE_ID))
-            | mul((EXPRESSION_LIST | CHILDREN_ATTRIBUTE_ID))
-            | min((EXPRESSION_LIST | CHILDREN_ATTRIBUTE_ID))
-            | max((EXPRESSION_LIST | CHILDREN_ATTRIBUTE_ID))
-            | count((EXPRESSION_LIST | CHILDREN_ATTRIBUTE_ID))
-            | avg((EXPRESSION_LIST | CHILDREN_ATTRIBUTE_ID))            | REAL
-                                                
-EXPRESSION_LIST =  EXPRESSION
-		         | EXPRESSION, EXPRESSION_LIST
-			  
-SET_EXPRESSION =  {EXPRESSION_LIST}
-			    | [EXPRESSION..EXPRESSION]
-
-
-					 
-//----- Constraint section ------------------------------------------------------------------------------------------
-     			  
-CONSTRAINTS = (ifIn (EXPRESSION) | ifOut (EXPRESSION))+
-
-NATURAL = 0 | [1-9][0-9]*
-
-INTEGER = 0 | (-)?[1-9][0-9]* 
-
-REAL = INTEGER.([0-9]*[1-9])?
-
-INCLUDE = include(FILE);
-
-FILE = [a-zA-Z0-9:/]+
-
-STRING = [^«</!>»]*
-
-DATA = data{ DATA_PAIR }
-
-DATA_PAIR =  (ID, (STRING))
-           | (ID, (STRING)), DATA_PAIR               
-               
-COMMENT = /** STRING* **/               
-               
-               

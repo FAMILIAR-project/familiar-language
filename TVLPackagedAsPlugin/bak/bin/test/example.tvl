@@ -1,8 +1,0 @@
-root Car {
-	group [1..1] {
-		Ford, 
-		Ferrari,
-		Peugeot,
-		Citroën
-	}
-}

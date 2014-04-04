@@ -1,3 +1,0 @@
-root Computer {
-	ifin: MotherBoard.socket == CPU.socket;
-}
