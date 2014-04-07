@@ -95,7 +95,7 @@
         <groupId>org.eclipse.tycho</groupId>
         <artifactId>target-platform-configuration</artifactId>
         <configuration>
-        	<pomDependencies>consider</pomDependencies>
+<!--         	<pomDependencies>consider</pomDependencies> -->
           <environments>
             <environment>
               <os>linux</os>
