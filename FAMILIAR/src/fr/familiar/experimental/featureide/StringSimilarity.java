@@ -26,8 +26,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import uk.ac.shef.wit.simmetrics.similaritymetrics.Levenshtein;
-
 /**
  * @author mathieuacher
  * 
@@ -40,24 +38,24 @@ public abstract class StringSimilarity {
 		assert (fts2.size() > 0);
 		Map<Float, Set<String>> levScores = new HashMap<Float, Set<String>>();
 
-		Levenshtein lev = new Levenshtein();
+//		Levenshtein lev = new Levenshtein();
 		// based on Levenshtein Distance but we can implement another strategy
 
 		boolean foundAtLeastOneCandidate = false;
 		for (String ft2 : fts2) {
 			if (isSimilar(ft1, ft2)) {
 				foundAtLeastOneCandidate = true;
-				float levScore = lev.getSimilarity(ft1.toLowerCase(),
-						ft2.toLowerCase());
-				if (levScores.containsKey(levScore)) {
-					Set<String> sfts = levScores.get(levScore);
-					sfts.add(ft1);
-					levScores.put(levScore, sfts);
-				} else {
-					Set<String> sft1 = new HashSet<String>();
-					sft1.add(ft1);
-					levScores.put(levScore, sft1);
-				}
+//				float levScore = lev.getSimilarity(ft1.toLowerCase(),
+//						ft2.toLowerCase());
+//				if (levScores.containsKey(levScore)) {
+//					Set<String> sfts = levScores.get(levScore);
+//					sfts.add(ft1);
+//					levScores.put(levScore, sfts);
+//				} else {
+//					Set<String> sft1 = new HashSet<String>();
+//					sft1.add(ft1);
+//					levScores.put(levScore, sft1);
+//				}
 			}
 		}
 

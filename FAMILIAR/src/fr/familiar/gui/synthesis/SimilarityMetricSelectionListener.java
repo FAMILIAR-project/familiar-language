@@ -30,14 +30,14 @@ import net.sf.extjwnl.dictionary.Dictionary;
 import fr.familiar.gui.FamiliarEditor;
 import fr.familiar.gui.Tab2EnvVar;
 import fr.familiar.operations.heuristics.metrics.AlwaysZeroMetric;
-import fr.familiar.operations.heuristics.metrics.LevenshteinMetric;
+//import fr.familiar.operations.heuristics.metrics.LevenshteinMetric;
 import fr.familiar.operations.heuristics.metrics.MetricName;
 import fr.familiar.operations.heuristics.metrics.PathLengthMetric;
 import fr.familiar.operations.heuristics.metrics.RandomMetric;
-import fr.familiar.operations.heuristics.metrics.SimmetricsMetric;
-import fr.familiar.operations.heuristics.metrics.SmithWatermanMetric;
-import fr.familiar.operations.heuristics.metrics.WikipediaMinerDB;
-import fr.familiar.operations.heuristics.metrics.WikipediaMinerMetric;
+//import fr.familiar.operations.heuristics.metrics.SimmetricsMetric;
+//import fr.familiar.operations.heuristics.metrics.SmithWatermanMetric;
+//import fr.familiar.operations.heuristics.metrics.WikipediaMinerDB;
+//import fr.familiar.operations.heuristics.metrics.WikipediaMinerMetric;
 import fr.familiar.operations.heuristics.metrics.WuPalmerMetric;
 
 public class SimilarityMetricSelectionListener implements ActionListener {
@@ -63,11 +63,11 @@ public class SimilarityMetricSelectionListener implements ActionListener {
 				break;
 			case SIMMETRICS_SMITHWATERMAN:
 //				environment.setParentSimilarityMetric(new SimmetricsMetric(metric));
-				environment.setParentSimilarityMetric(new SmithWatermanMetric());
+//				environment.setParentSimilarityMetric(new SmithWatermanMetric());
 				break;
 			case SIMMETRICS_LEVENSHTEIN:
 //				environment.setParentSimilarityMetric(new SimmetricsMetric(metric));
-				environment.setParentSimilarityMetric(new LevenshteinMetric());
+//				environment.setParentSimilarityMetric(new LevenshteinMetric());
 				break;
 			case WORDNET_WUP:
 				File dictionaryWUP = WordNetPropertyFileChooser.getInstance();
@@ -95,18 +95,18 @@ public class SimilarityMetricSelectionListener implements ActionListener {
 //				}
 //				break;
 			case WIKIPEDIA_MINER:
-				JFileChooser fileChooser = new JFileChooser();
-				int choice = fileChooser.showOpenDialog(FamiliarEditor.INSTANCE);
-				if (choice == JFileChooser.APPROVE_OPTION) {
-					File propertiesFile = fileChooser.getSelectedFile();
-					try {
-						WikipediaMinerMetric wikipediaMinerMetric = new WikipediaMinerMetric();
-						wikipediaMinerMetric.init(propertiesFile);
-						environment.setParentSimilarityMetric(wikipediaMinerMetric);
-					} catch (Exception e1) {
-						
-					}
-				}	
+//				JFileChooser fileChooser = new JFileChooser();
+//				int choice = fileChooser.showOpenDialog(FamiliarEditor.INSTANCE);
+//				if (choice == JFileChooser.APPROVE_OPTION) {
+//					File propertiesFile = fileChooser.getSelectedFile();
+//					try {
+//						WikipediaMinerMetric wikipediaMinerMetric = new WikipediaMinerMetric();
+//						wikipediaMinerMetric.init(propertiesFile);
+//						environment.setParentSimilarityMetric(wikipediaMinerMetric);
+//					} catch (Exception e1) {
+//						
+//					}
+//				}	
 				break;
 			default:
 				break;

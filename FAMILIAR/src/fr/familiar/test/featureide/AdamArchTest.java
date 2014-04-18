@@ -45,7 +45,6 @@ import org.xtext.example.mydsl.fML.SliceMode;
 import splar.core.constraints.BooleanVariable;
 import splar.core.constraints.PropositionalFormula;
 import splar.core.fm.FeatureTreeNode;
-import uk.ac.shef.wit.simmetrics.similaritymetrics.Levenshtein;
 
 import com.google.common.collect.Sets;
 
@@ -558,13 +557,13 @@ public class AdamArchTest extends FMLTest {
 	public void testFMMerleRequirements() throws Exception {
 		/*
  			Bonjour Mathieu, tous,
-				Connaissez-vous un moyen automatique de convertir un modèle de features au format S2T2 (fichiers .fmprimitives) vers 
-				le format utilisé par le site SPLOT (http://www.splot-research.org/) ?
-				En fait, je souhaiterais exporter le modèle de FraSCAti sur le site SPLOT pour utiliser leurs outils d'analyse 
+				Connaissez-vous un moyen automatique de convertir un modÔøΩle de features au format S2T2 (fichiers .fmprimitives) vers 
+				le format utilisÔøΩ par le site SPLOT (http://www.splot-research.org/) ?
+				En fait, je souhaiterais exporter le modÔøΩle de FraSCAti sur le site SPLOT pour utiliser leurs outils d'analyse 
 				(nb features, configurations, features mortes, etc) et de visualisation/configuration.
-				Je souhaiterais vérifier que FraSCAti a bien environ 1 million de configurations valides.
-				Peut-être que je pourrais faire les mêmes analyses avec FAMILIAR ?
-				Est-ce que FAMILIAR est téléchargeable quelque part ?
+				Je souhaiterais vÔøΩrifier que FraSCAti a bien environ 1 million de configurations valides.
+				Peut-ÔøΩtre que je pourrais faire les mÔøΩmes analyses avec FAMILIAR ?
+				Est-ce que FAMILIAR est tÔøΩlÔøΩchargeable quelque part ?
 		 */
 		
 		
@@ -1176,71 +1175,6 @@ public class AdamArchTest extends FMLTest {
 		manualMapping.put("FraSCAti", "FraSCAti");
 		manualMapping.put("julia", "julia");
 				
-		
-		// I want to see how automated techniques can help...
-		FMMatcher matcher = new FMMatcher(new StringSimilarity() {
-			
-			@Override
-			public boolean isSimilar(String str1, String str2) {
-				String lStr1 = str1.toLowerCase() ; 
-				String lStr2 = str2.toLowerCase();
-				Levenshtein lev = new Levenshtein();
-				boolean match = lStr1.contains(lStr2) || lStr2.contains(lStr1) || lev.getUnNormalisedSimilarity(lStr1, lStr2) == 1.0;
-				return match ; 
-			}
-		});
-		MappingCorrespondence<String> mappings = matcher.computeOneToOneMappingOrder(fmvMerle, fmArchi);
-		System.err.println("mappings ++\t=" + mappings.getKeys());
-		System.err.println("mappings --\t=" + mappings.getNonMatchingElements());
-		
-		/***** control that the manual mapping is "conformed" to the automatic mapping (and vice-versa) ********/
-		
-		assertEquals(Sets.union(mappings.getKeys(), 
-							mappings.getNonMatchingElements()).size(), fmvMerle.features().size());
-		
-		
-		// automatic key subset of manual keys 
-		Set<String> automaticKeys = mappings.getKeys() ;
-		for (String automaticKey : automaticKeys) {
-			Set<String> manualKeys = manualMapping.keySet() ;
-			boolean found = false ; 
-			String correspondenceKey = mappings.getCorrespondence(automaticKey);
-			
-			// the manual is actually semi-manual (same names do not have to be specified)
-			if (correspondenceKey.equalsIgnoreCase(automaticKey)) {
-				found = true ;
-				continue ; 
-			}
-			for (String manualKey : manualKeys) {
-				if(manualKey.equalsIgnoreCase(automaticKey)) {
-						found = true;
-						continue ; 
-				}
-			
-			}
-			assertTrue("automaticKey=" + automaticKey + " ->" + correspondenceKey, found) ; 
-		}
-		
-		Set<String> missingAut = Sets.difference(manualMapping.keySet(), mappings.getKeys()) ;
-		System.err.println("missing part of the automated mapping:\n");
-		for (String miss : missingAut) {
-			System.err.println("" + miss + " -> " + manualMapping.get(miss));
-		}
-		
-		Set<String> missingMan = Sets.difference(mappings.getKeys(), manualMapping.keySet()) ;
-		System.err.println("missing part of the manual mapping:\n");
-		for (String miss : missingMan) {
-			System.err.println("" + miss + " -> " + mappings.getCorrespondence(miss));
-		}
-		
-		Set<String> nonMatchs = mappings.getNonMatchingElements() ;
-		System.err.println("unable to match the following features:\n");
-		for (String nonMatch : nonMatchs) {
-			System.err.println("## " + nonMatch);
-		}
-		
-		
-		assertEquals(manualMapping.size(), mappings.nbMappings());
 		
 		
 		// difficult part: knowledge is (clearly) needed or automated part can be better

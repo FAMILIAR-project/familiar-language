@@ -43,12 +43,12 @@ import fr.familiar.operations.heuristics.KSynthesisPlugin;
 import fr.familiar.operations.heuristics.metrics.AlwaysZeroMetric;
 import fr.familiar.operations.heuristics.metrics.CommonEdgesMetric;
 import fr.familiar.operations.heuristics.metrics.DirectedPathLengthMetric;
-import fr.familiar.operations.heuristics.metrics.LevenshteinMetric;
+//import fr.familiar.operations.heuristics.metrics.LevenshteinMetric;
 import fr.familiar.operations.heuristics.metrics.PathLengthMetric;
 import fr.familiar.operations.heuristics.metrics.RandomMetric;
-import fr.familiar.operations.heuristics.metrics.SmithWatermanMetric;
+//import fr.familiar.operations.heuristics.metrics.SmithWatermanMetric;
 import fr.familiar.operations.heuristics.metrics.TransitiveReductionMetric;
-import fr.familiar.operations.heuristics.metrics.WikipediaMinerMetric;
+//import fr.familiar.operations.heuristics.metrics.WikipediaMinerMetric;
 import fr.familiar.operations.heuristics.metrics.WuPalmerMetric;
 import fr.familiar.parser.FMBuilder;
 import fr.familiar.parser.FMLCommandInterpreter;
@@ -81,8 +81,8 @@ public abstract class KSynthesisTest extends FMLTest {
 	protected static int RANDOM_ITERATIONS = 100;
 
 	public static List<Heuristic> metrics;
-	protected static WikipediaMinerMetric wikiMetric;
-	protected static WikipediaMinerMetric wiktionaryMetric;
+//	protected static WikipediaMinerMetric wikiMetric;
+//	protected static WikipediaMinerMetric wiktionaryMetric;
 	protected static PathLengthMetric pathLength;
 	protected static Heuristic levenshtein;
 	protected static Heuristic smithWaterman;
@@ -268,12 +268,12 @@ public abstract class KSynthesisTest extends FMLTest {
 	
 	@AfterClass
 	public static void tearDownMetrics() {
-		if (wikiMetric != null) {
-			wikiMetric.stop();	
-		}
-		if (wiktionaryMetric != null) {
-			wiktionaryMetric.stop();
-		}
+//		if (wikiMetric != null) {
+//			wikiMetric.stop();	
+//		}
+//		if (wiktionaryMetric != null) {
+//			wiktionaryMetric.stop();
+//		}
 	}
 	
 	@BeforeClass
@@ -289,11 +289,11 @@ public abstract class KSynthesisTest extends FMLTest {
 		clusteringThresholds.put(random, 0.15);
 
 		// Simmetrics metrics
-		smithWaterman = new SmithWatermanMetric();
+//		smithWaterman = new SmithWatermanMetric();
 		metrics.add(smithWaterman);
 		clusteringThresholds.put(smithWaterman, 0.6);
 
-		levenshtein = new LevenshteinMetric();
+//		levenshtein = new LevenshteinMetric();
 		metrics.add(levenshtein);
 		clusteringThresholds.put(levenshtein, 0.7);
 
@@ -315,15 +315,15 @@ public abstract class KSynthesisTest extends FMLTest {
 		}
 
 		// WikipediaMiner metrics
-			wikiMetric = new WikipediaMinerMetric();
-			wikiMetric.init(new File(WIKIPEDIA_DB));
-			metrics.add(wikiMetric);
-			clusteringThresholds.put(wikiMetric, 0.5);	
-		
-			wiktionaryMetric = new WikipediaMinerMetric();
-			wiktionaryMetric.init(new File(WIKTIONARY_DB));
-			metrics.add(wiktionaryMetric);
-			clusteringThresholds.put(wiktionaryMetric, 0.5);	
+//			wikiMetric = new WikipediaMinerMetric();
+//			wikiMetric.init(new File(WIKIPEDIA_DB));
+//			metrics.add(wikiMetric);
+//			clusteringThresholds.put(wikiMetric, 0.5);	
+//		
+//			wiktionaryMetric = new WikipediaMinerMetric();
+//			wiktionaryMetric.init(new File(WIKTIONARY_DB));
+//			metrics.add(wiktionaryMetric);
+//			clusteringThresholds.put(wiktionaryMetric, 0.5);	
 
 //		// LSA metric
 //		if (wikipediaDB.isLoaded()) {
