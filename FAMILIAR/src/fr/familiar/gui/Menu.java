@@ -43,7 +43,7 @@ import javax.swing.JTextField;
 
 import prefuse.data.Tree;
 import fr.familiar.fm.FMLUtils;
-import fr.familiar.gui.synthesis.FMSynthesisEnvironment;
+//import fr.familiar.gui.synthesis.FMSynthesisEnvironment;
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.variable.FeatureModelVariable;
 
@@ -376,7 +376,7 @@ public class Menu {
         menubar.add(displayMenu);
         menubar.add(consoleMenu);
         menubar.add(reasoningMenu);
-        menubar.add(FMSynthesisEnvironment.createSynthesisMenu()); // KSynthesis menu 
+//        menubar.add(FMSynthesisEnvironment.createSynthesisMenu()); // KSynthesis menu 
         menubar.add(helpMenu);
         return menubar;
 	}

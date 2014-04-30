@@ -16,10 +16,10 @@ import org.xtext.example.mydsl.fML.HierarchySpecification;
 import org.xtext.example.mydsl.fML.KnowledgeSpecification;
 import org.xtext.example.mydsl.fML.Synthesis;
 
-import fr.familiar.gui.synthesis.FMSynthesisEnvironment;
+//import fr.familiar.gui.synthesis.FMSynthesisEnvironment; // FIXME : removed with KSynthesis
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.operations.KnowledgeSynthesis;
-import fr.familiar.operations.heuristics.InteractiveFMSynthesizer;
+//import fr.familiar.operations.heuristics.InteractiveFMSynthesizer; // FIXME : removed with KSynthesis
 import fr.familiar.variable.ConstraintVariable;
 import fr.familiar.variable.FeatureModelVariable;
 import fr.familiar.variable.FeatureVariable;
@@ -121,8 +121,8 @@ public class KSynthesisAnalyzer extends FMLAbstractCommandAnalyzer {
 		if (ksCmd.isInteractive()) {
 			// interactive mode
 			// with or without knowledge
-			InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(fmToSynthesis);
-			FMSynthesisEnvironment environment = new FMSynthesisEnvironment(synthesizer);
+//			InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(fmToSynthesis); // FIXME : removed with KSynthesis
+//			FMSynthesisEnvironment environment = new FMSynthesisEnvironment(synthesizer); // FIXME : removed with KSynthesis
 		}
 		
 		// TODO backend analysis for defining the synthesis strateg
