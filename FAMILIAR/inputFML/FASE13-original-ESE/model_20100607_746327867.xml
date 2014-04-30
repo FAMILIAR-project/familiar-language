@@ -1,0 +1,32 @@
+<feature_model name="Jezyk">
+<feature_tree>
+:r Jezyk (f_Jezyk)
+	:m Zrodla danych (f_Zrodla_danych)
+	:m Format wyjsciowy (f_Format_wyjsciowy)
+	:m Pomiary (f_Pomiary)
+	:m Stacja pogodowa (f_Stacja_pogodowa)
+	:o Alarm (f_Alarm)
+		:g [1, *]
+			: Zamarzniecie (f_Zamarzniecie)
+			: Sztorm (f_Sztorm)
+	:g [1, *]
+		: Wiatr (f_Wiatr)
+		: Temperatura (f_Temperatura)
+		: Cisnienie (f_Cisnienie)
+	:g [1, 1]
+		: Internet (f_Internet)
+		: Sensory (f_Sensory)
+	:g [1, 1]
+		: Plik (f_Plik)
+		: Serwer (f_Serwer)
+			:g [1, 1]
+				: XML (f_XML)
+				: HTML (f_HTML)
+		: Tekst (f_Tekst)
+	:g [1, 1]
+		: Polski (f_Polski)
+		: Angielski (f_Angielski)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,18 @@
+<feature_model name="Analizar una Clase">
+<feature_tree>
+:r Analizar una Clase (f_Analizar_una_Clase)
+	:m Analisis (f_Analisis)
+	:m Crear una Arquitectura Candidata (f_Crear_una_Arquitectura_Candidata)
+	:m Feature-13 (f_Feature_13)
+	:m Feature-14 (f_Feature_14)
+	:m Analizar un Paquete (f_Analizar_un_Paquete)
+	:m Analizar un caso de Uso (f_Analizar_un_caso_de_Uso)
+	:o Crear una Arquitectura de Prueba (f_Crear_una_Arquitectura_de_Prueba)
+	:g [1, 1]
+		: Analisis de Arquitectura y comportamiento (f_Analisis_de_Arquitectura_y_comportamiento)
+		: Analisis de la Arquitectura (f_Analisis_de_la_Arquitectura)
+		: Definir una Arquitectura Candidata (f_Definir_una_Arquitectura_Candidata)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

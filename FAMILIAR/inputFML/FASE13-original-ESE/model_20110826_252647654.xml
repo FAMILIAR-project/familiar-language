@@ -1,0 +1,30 @@
+<feature_model name="Experimento">
+<feature_tree>
+:r Experimento (f_Experimento)
+	:m Planteamineto (f_Planteamineto)
+	:m Factores (f_Factores)
+	:m Tecnicas (f_Tecnicas)
+	:m TecnicaEstatica (f_TecnicaEstatica)
+	:m LecturaCodigo (f_LecturaCodigo)
+	:m AbstraccionesSucesivas (f_AbstraccionesSucesivas)
+	:m TecnicaDinamica (f_TecnicaDinamica)
+	:m PruebasFuncionales (f_PruebasFuncionales)
+	:m ParticionesClasesEquivalencia (f_ParticionesClasesEquivalencia)
+	:m AnalisisValoresLimite (f_AnalisisValoresLimite)
+	:m PruebasEstructurales (f_PruebasEstructurales)
+	:m CoberturaDecision (f_CoberturaDecision)
+	:m CoberturaSentencia (f_CoberturaSentencia)
+	:m Programas (f_Programas)
+	:m ntree (f_ntree)
+	:m cmdline (f_cmdline)
+	:m Disenio (f_Disenio)
+	:m namtbl (f_namtbl)
+	:m Falta (f_Falta)
+	:o 9 Faltas (f_9_Faltas)
+	:o 7 Faltas (f_7_Faltas)
+	:o 6 Faltas (f_6_Faltas)
+	:o Trade (f_Trade)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

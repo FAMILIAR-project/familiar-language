@@ -1,0 +1,21 @@
+<feature_model name="security">
+<feature_tree>
+:r security (f_security)
+	:m eshop (f_eshop)
+	:m catalogue (f_catalogue)
+	:m payment (f_payment)
+	:o search (f_search)
+		:g [1, *]
+			: yahoo (f_yahoo)
+			: bing (f_bing)
+			: google (f_google)
+	:g [1, *]
+		: transfer (f_transfer)
+		: cc (f_cc)
+	:g [1, 1]
+		: standard (f_standard)
+		: high (f_high)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

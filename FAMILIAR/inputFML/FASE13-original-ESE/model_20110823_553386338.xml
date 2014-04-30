@@ -1,0 +1,27 @@
+<feature_model name="Testructurales">
+<feature_tree>
+:r Testructurales (f_Testructurales)
+	:m Ntree (f_Ntree)
+	:m Namtable (f_Namtable)
+	:m Tecnica (f_Tecnica)
+	:m Experimento (f_Experimento)
+	:m Falta (f_Falta)
+	:m Tfuncionales (f_Tfuncionales)
+	:m Programa (f_Programa)
+	:m Cmdline (f_Cmdline)
+	:m TDinamica (f_TDinamica)
+	:m AbSucesivas (f_AbSucesivas)
+	:m ParClaEqui (f_ParClaEqui)
+	:m ReCodigo (f_ReCodigo)
+	:m TEstatica (f_TEstatica)
+	:o 9Faltas (f_9Faltas)
+	:o CobDec (f_CobDec)
+	:o CobSent (f_CobSent)
+	:o 7Faltas (f_7Faltas)
+	:o Trade (f_Trade)
+	:o 6Faltas (f_6Faltas)
+	:o AnaVaLi (f_AnaVaLi)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

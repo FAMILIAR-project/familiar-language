@@ -1,0 +1,30 @@
+<feature_model name="Planteamineto">
+<feature_tree>
+:r Planteamineto (f_Planteamineto)
+	:m Experimento (f_Experimento)
+	:m Factores (f_Factores)
+	:m Tecnicas (f_Tecnicas)
+	:m TecnicaEstatica (f_TecnicaEstatica)
+	:m LecturaCodigo (f_LecturaCodigo)
+	:m PruebasFuncionales (f_PruebasFuncionales)
+	:m ParticionesClasesEquivalencia (f_ParticionesClasesEquivalencia)
+	:m AnalisisValoresLimite (f_AnalisisValoresLimite)
+	:m PruebasEstructurales (f_PruebasEstructurales)
+	:m CoberturaDecision (f_CoberturaDecision)
+	:m CoberturaSentencia (f_CoberturaSentencia)
+	:m Disenio (f_Disenio)
+	:m Programas (f_Programas)
+	:m ntree (f_ntree)
+	:m cmdline (f_cmdline)
+	:m namtbl (f_namtbl)
+	:m Falta (f_Falta)
+	:m AbstraccionesSucesivas (f_AbstraccionesSucesivas)
+	:m TecnicaDinamica (f_TecnicaDinamica)
+	:o Trade (f_Trade)
+	:o 9 Faltas (f_9_Faltas)
+	:o 6 Faltas (f_6_Faltas)
+	:o 7 Faltas (f_7_Faltas)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

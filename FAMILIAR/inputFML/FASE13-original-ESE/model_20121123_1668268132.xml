@@ -1,0 +1,22 @@
+<feature_model name="Mobile Media">
+<feature_tree>
+:r Mobile Media (f_Mobile_Media)
+	:m Media Selection (f_Media_Selection)
+	:m Screen Size (f_Screen_Size)
+	:m Media Management (f_Media_Management)
+	:o Receive Photo (f_Receive_Photo)
+		:m SMS Transfer (f_SMS_Transfer)
+		:m Send Photo (f_Send_Photo)
+		:o Copy Media (f_Copy_Media)
+	:g [1, *]
+		: Screen 1 (f_Screen_1)
+		: Screen 2 (f_Screen_2)
+	:g [1, 1]
+		: Video (f_Video)
+		: Music (f_Music)
+		: Photo (f_Photo)
+</feature_tree>
+<constraints>
+constraint_1:~f_Photo or f_Screen_1
+</constraints>
+</feature_model>

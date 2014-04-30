@@ -1,0 +1,45 @@
+<feature_model name="Funcionarios">
+<feature_tree>
+:r Funcionarios (f_Funcionarios)
+	:m Entrega do Produto (f_Entrega_do_Produto)
+	:m Modulos (f_Modulos)
+	:m Itens (f_Itens)
+	:m Custo (f_Custo)
+	:m Objetivo (f_Objetivo)
+	:m Jogo (f_Jogo)
+	:m Cartas (f_Cartas)
+	:m Turnos (f_Turnos)
+	:o Conceito (f_Conceito)
+	:o Sistema de Bugs (f_Sistema_de_Bugs)
+	:o Problema (f_Problema)
+	:o Textos com Historias (f_Textos_com_Historias)
+	:o Tabuleiro (f_Tabuleiro)
+	:o Dados para compra de cartas (f_Dados_para_compra_de_cartas)
+	:o Ilustracoes (f_Ilustracoes)
+	:o Status (f_Status)
+		:g [1, *]
+			: Habilidade (f_Habilidade)
+			: Maturidade (f_Maturidade)
+	:g [1, *]
+		: Complexidade Especifica por Objetivo (f_Complexidade_Especifica_por_Objetivo)
+		: Complexidade Padrao (f_Complexidade_Padrao)
+	:g [1, 1]
+		: Engenheiro (f_Engenheiro)
+		: Programador (f_Programador)
+	:g [1, 1]
+		: Qualidade Padrao (f_Qualidade_Padrao)
+		: Qualidade Sempre Perfeita (f_Qualidade_Sempre_Perfeita)
+		: Qualidade Variavel (f_Qualidade_Variavel)
+	:g [1, 1]
+		: Custo Especifico do Funcionario (f_Custo_Especifico_do_Funcionario)
+		: Padrao (f_Padrao)
+	:g [1, 1]
+		: Cartas Pequenas (f_Cartas_Pequenas)
+		: Cartas Grandes (f_Cartas_Grandes)
+	:g [1, 1]
+		: Artefatos PnP (f_Artefatos_PnP)
+		: Itens SimulES (f_Itens_SimulES)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

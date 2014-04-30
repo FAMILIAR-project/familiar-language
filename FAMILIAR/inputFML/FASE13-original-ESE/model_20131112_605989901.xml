@@ -1,0 +1,37 @@
+<feature_model name="TipoEvento">
+<feature_tree>
+:r TipoEvento (f_TipoEvento)
+	:m TipoInscripcion (f_TipoInscripcion)
+	:m AccesoMemorias (f_AccesoMemorias)
+	:m Eventos2Moreno (f_Eventos2Moreno)
+	:m Autenticacion (f_Autenticacion)
+	:o Auditoria (f_Auditoria)
+	:o Presupuestos (f_Presupuestos)
+		:g [1, 1]
+			: Asistidos (f_Asistidos)
+			: Manuales (f_Manuales)
+	:o Estadisticas (f_Estadisticas)
+		:g [1, 1]
+			: Mineria (f_Mineria)
+			: BI (f_BI)
+			: Generales (f_Generales)
+	:g [1, *]
+		: Forms (f_Forms)
+		: Facebook (f_Facebook)
+		: Google (f_Google)
+	:g [1, *]
+		: Videos (f_Videos)
+		: Imagenes (f_Imagenes)
+		: Sonidos (f_Sonidos)
+	:g [1, 1]
+		: Ninguna (f_Ninguna)
+		: RedesSociales (f_RedesSociales)
+		: SitiosEspecializados (f_SitiosEspecializados)
+	:g [1, 1]
+		: Religioso (f_Religioso)
+		: Politico (f_Politico)
+		: Deportivo (f_Deportivo)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

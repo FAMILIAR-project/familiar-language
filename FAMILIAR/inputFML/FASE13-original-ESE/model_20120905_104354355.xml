@@ -1,0 +1,19 @@
+<feature_model name="Hero">
+<feature_tree>
+:r Hero (f_Hero)
+	:m RPG (f_RPG)
+	:m Kind (f_Kind)
+	:m WorldMap (f_WorldMap)
+	:m Actions (f_Actions)
+	:m Scene (f_Scene)
+	:m Move (f_Move)
+	:m Cell (f_Cell)
+	:m Agent (f_Agent)
+	:o Hostile (f_Hostile)
+	:o Attack (f_Attack)
+	:o Talk (f_Talk)
+	:o Friendly (f_Friendly)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

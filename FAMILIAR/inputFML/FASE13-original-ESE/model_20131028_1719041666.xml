@@ -1,0 +1,25 @@
+<feature_model name="Conceito">
+<feature_tree>
+:r Conceito (f_Conceito)
+	:m SimulesSPL (f_SimulesSPL)
+	:m Tipos de Carta (f_Tipos_de_Carta)
+	:m Engenheiro de Software (f_Engenheiro_de_Software)
+	:m Problema (f_Problema)
+	:m Artefato (f_Artefato)
+	:m Construir artefato (f_Construir_artefato)
+	:m Inspecionar artefato (f_Inspecionar_artefato)
+	:m Utilizar carta (f_Utilizar_carta)
+	:m Projeto (f_Projeto)
+	:m Escolher projeto (f_Escolher_projeto)
+	:m Visualizar projeto (f_Visualizar_projeto)
+	:m Gerencia de carta (f_Gerencia_de_carta)
+	:m Comprar carta (f_Comprar_carta)
+	:o Ordenar cartas (f_Ordenar_cartas)
+	:o Criar projeto (f_Criar_projeto)
+	:o Consultar carta (f_Consultar_carta)
+		:m Consultar Conceito (f_Consultar_Conceito)
+		:m Consultar Problema (f_Consultar_Problema)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

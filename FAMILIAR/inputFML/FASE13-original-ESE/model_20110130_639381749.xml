@@ -1,0 +1,18 @@
+<feature_model name="Geld en cheques">
+<feature_tree>
+:r Geld en cheques (f_Geld_en_cheques)
+	:m Doorlopende reisverzekering (f_Doorlopende_reisverzekering)
+	:m Aantal (f_Aantal)
+	:m Gebied (f_Gebied)
+	:m Bagage (f_Bagage)
+	:m Dagen (f_Dagen)
+	:o Wintersport (f_Wintersport)
+	:o Automobilistenhulp (f_Automobilistenhulp)
+	:o Annuleringsverzekering (f_Annuleringsverzekering)
+	:o Eigen risico bagage (f_Eigen_risico_bagage)
+	:o Ongevallen (f_Ongevallen)
+	:o Geneeskundige kosten (f_Geneeskundige_kosten)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

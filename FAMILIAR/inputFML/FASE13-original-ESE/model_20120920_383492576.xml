@@ -1,0 +1,18 @@
+<feature_model name="UI">
+<feature_tree>
+:r UI (f_UI)
+	:m SmartHome (f_SmartHome)
+	:m Inhome Screen (f_Inhome_Screen)
+	:m Windows Ctrl (f_Windows_Ctrl)
+	:m Manual Windows (f_Manual_Windows)
+	:m Manual Heating (f_Manual_Heating)
+	:m Heating Ctrl (f_Heating_Ctrl)
+	:o Automated Heating (f_Automated_Heating)
+		:o Remote Heating Ctrl (f_Remote_Heating_Ctrl)
+	:o Internet (f_Internet)
+	:o Automated Windows (f_Automated_Windows)
+</feature_tree>
+<constraints>
+constraint_1:~f_Remote_Heating_Ctrl or f_Internet
+</constraints>
+</feature_model>

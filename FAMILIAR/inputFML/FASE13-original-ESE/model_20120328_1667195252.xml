@@ -1,0 +1,34 @@
+<feature_model name="Mapa">
+<feature_tree>
+:r Mapa (f_Mapa)
+	:m Knife (f_Knife)
+	:m Armas (f_Armas)
+	:m Jogador (f_Jogador)
+	:m Humano (f_Humano)
+	:m CounterStrike (f_CounterStrike)
+	:o Bot (f_Bot)
+	:o Arma Secundaria (f_Arma_Secundaria)
+		:g [1, *]
+			: Glock (f_Glock)
+			: USP (f_USP)
+			: Desert Eagle (f_Desert_Eagle)
+	:o Granadas (f_Granadas)
+		:g [1, *]
+			: Smoke (f_Smoke)
+			: HE (f_HE)
+			: Flashlight (f_Flashlight)
+	:o Arma Primaria (f_Arma_Primaria)
+		:g [1, *]
+			: AK-47 (f_AK_47)
+			: MP5 (f_MP5)
+			: Colt (f_Colt)
+			: AWP (f_AWP)
+	:g [1, *]
+		: Aztec (f_Aztec)
+		: AK-Colt (f_AK_Colt)
+		: Poolday (f_Poolday)
+		: Dust2 (f_Dust2)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

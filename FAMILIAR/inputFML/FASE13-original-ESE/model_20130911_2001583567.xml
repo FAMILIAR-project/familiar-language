@@ -1,0 +1,48 @@
+<feature_model name="Format">
+<feature_tree>
+:r Format (f_Format)
+	:m Processor (f_Processor)
+	:m TouchTechnology (f_TouchTechnology)
+	:m Speed (f_Speed)
+	:m Type (f_Type)
+	:m Internal (f_Internal)
+	:m Memory (f_Memory)
+	:m Size (f_Size)
+	:m tablet (f_tablet)
+	:m Resolution (f_Resolution)
+	:m Screen (f_Screen)
+	:o External (f_External)
+	:o Music (f_Music)
+		:g [1, *]
+			: Wifi (f_Wifi)
+			: Camera (f_Camera)
+				:g [1, *]
+					: Front (f_Front)
+					: Back (f_Back)
+			: HDMI (f_HDMI)
+	:g [1, 1]
+		: 16x9 (f_16x9)
+		: 4x3 (f_4x3)
+	:g [1, 1]
+		: 600MHz (f_600MHz)
+		: 1GHz (f_1GHz)
+		: 12GHz (f_12GHz)
+	:g [1, 1]
+		: 800x480 (f_800x480)
+		: 800x600 (f_800x600)
+		: 1024x768 (f_1024x768)
+	:g [1, 1]
+		: A8 (f_A8)
+		: ARM9 (f_ARM9)
+	:g [1, 1]
+		: Capacitive (f_Capacitive)
+		: Resistive (f_Resistive)
+		: MultiTouchCapacitive (f_MultiTouchCapacitive)
+	:g [1, 1]
+		: 8inches (f_8inches)
+		: 7inches (f_7inches)
+		: 5inches (f_5inches)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

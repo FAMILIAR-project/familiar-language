@@ -1,0 +1,49 @@
+<feature_model name="Interfaz">
+<feature_tree>
+:r Interfaz (f_Interfaz)
+	:m Size Unidad (f_Size_Unidad)
+	:m Cache (f_Cache)
+	:m Velocidad de Giro (f_Velocidad_de_Giro)
+	:m Unidad-Almacenamiento-HDD (f_Unidad_Almacenamiento_HDD)
+	:m Capacidad (f_Capacidad)
+	:o Cifrado (f_Cifrado)
+		:g [1, *]
+			: Estandar (f_Estandar)
+			: FIPS (f_FIPS)
+	:g [1, 1]
+		: 5400 rpm (f_5400_rpm)
+			:m 3 GBs SATA (f_3_GBs_SATA)
+		: 7200 rpm (f_7200_rpm)
+		: 10000 rpm (f_10000_rpm)
+		: 15000 rpm (f_15000_rpm)
+	:g [1, 1]
+		: 16 MB (f_16_MB)
+		: 1 TB (f_1_TB)
+		: 3 TB (f_3_TB)
+		: 8 MB (f_8_MB)
+		: 2 TB (f_2_TB)
+	:g [1, 1]
+		: 2-5 (f_2_5)
+		: 3-5 (f_3_5)
+	:g [1, 1]
+		: 32 MB (f_32_MB)
+		: 64 MB (f_64_MB)
+		: 250 GB (f_250_GB)
+		: 600 GB (f_600_GB)
+</feature_tree>
+<constraints>
+constraint_1:~f_5400_rpm or ~f_6_GBs_SAS
+constraint_2:~f_5400_rpm or ~f_6_GBs_SATA
+constraint_3:~f_6_GBs_SAS or ~f_6_GBs_SATA
+constraint_4:~f_250_GB or ~f_1_TB
+constraint_5:~f_250_GB or ~f_3_TB
+constraint_6:~f_250_GB or ~f_2_TB
+constraint_7:~f_1_TB or ~f_600_GB
+constraint_8:~f_600_GB or ~f_3_TB
+constraint_9:~f_600_GB or ~f_2_TB
+constraint_10:~f_64_MB or ~f_16_MB
+constraint_11:~f_32_MB or ~f_16_MB
+constraint_12:~f_8_MB or ~f_64_MB
+constraint_13:~f_8_MB or ~f_32_MB
+</constraints>
+</feature_model>

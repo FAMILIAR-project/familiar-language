@@ -1,0 +1,22 @@
+<feature_model name="Broj vrata">
+<feature_tree>
+:r Broj vrata (f_Broj_vrata)
+	:m Motor (f_Motor)
+	:m Transmisija (f_Transmisija)
+	:m Automobil (f_Automobil)
+	:m ABS (f_ABS)
+	:m Oprema (f_Oprema)
+	:m Klima (f_Klima)
+	:o Grejaci sedista (f_Grejaci_sedista)
+	:o EPS (f_EPS)
+	:o AirBag (f_AirBag)
+	:g [1, *]
+		: Elektricni (f_Elektricni)
+		: Benzin (f_Benzin)
+	:g [1, 1]
+		: Manuelna (f_Manuelna)
+		: Automatska (f_Automatska)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

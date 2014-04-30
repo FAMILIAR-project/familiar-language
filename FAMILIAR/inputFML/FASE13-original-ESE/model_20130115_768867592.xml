@@ -1,0 +1,20 @@
+<feature_model name="GUI">
+<feature_tree>
+:r GUI (f_GUI)
+	:m Ubuntu (f_Ubuntu)
+	:m Bourne (f_Bourne)
+	:m Texteditor (f_Texteditor)
+	:o Chess (f_Chess)
+		:g [1, 1]
+			: glchess (f_glchess)
+			: gnuchess (f_gnuchess)
+	:g [1, 1]
+		: KDE (f_KDE)
+		: Gnome (f_Gnome)
+	:g [1, 1]
+		: gedit (f_gedit)
+		: vi (f_vi)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

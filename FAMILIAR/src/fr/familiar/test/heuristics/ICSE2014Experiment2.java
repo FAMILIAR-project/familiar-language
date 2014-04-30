@@ -47,7 +47,6 @@ public class ICSE2014Experiment2 extends KSynthesisTest {
 		testStatsFMs(getSPLOTFeatureModelsForFASE());
 	}
 
-	@Ignore
 	@Test
 	public void testTop2SPLOT() {
 		System.out.println("Top SPLOT");
@@ -55,7 +54,6 @@ public class ICSE2014Experiment2 extends KSynthesisTest {
 	}
 
 
-	@Ignore
 	@Test
 	public void testTop2SPLOTReduced() {
 		System.out.println("Top SPLOT (BIG reduced)");

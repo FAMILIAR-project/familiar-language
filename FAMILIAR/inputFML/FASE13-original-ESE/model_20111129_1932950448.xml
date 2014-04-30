@@ -1,0 +1,20 @@
+<feature_model name="r5ydrt">
+<feature_tree>
+:r r5ydrt (f_r5ydrt)
+	:m eee (f_eee)
+	:m rtqewr (f_rtqewr)
+	:m erwerf (f_erwerf)
+	:m werwerf (f_werwerf)
+	:m 3erqw3er (f_3erqw3er)
+	:o szfgawer (f_szfgawer)
+	:o 3r2e (f_3r2e)
+	:o werqwr (f_werqwr)
+	:o ew (f_ew)
+	:o 3r (f_3r)
+	:g [1, *]
+		: 3rqw3r (f_3rqw3r)
+		: 32qr (f_32qr)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

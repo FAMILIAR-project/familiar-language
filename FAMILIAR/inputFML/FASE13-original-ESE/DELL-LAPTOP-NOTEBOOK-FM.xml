@@ -1,0 +1,249 @@
+<feature_model name="Laptop Weight">
+<feature_tree>
+:r Laptop Weight (f_Laptop_Weight)
+	:m Price (f_Price)
+	:m Product Category (f_Product_Category)
+	:m Processor (f_Processor)
+	:m Operating System (f_Operating_System)
+	:m Dell Laptops/Notebooks (f_Dell_Laptops_Notebooks)
+	:m Memory (f_Memory)
+	:m Hard Drive (f_Hard_Drive)
+	:o 120GB (f_120GB)
+	:o 250GB (f_250GB)
+	:o 160GB (f_160GB)
+	:o 500GB (f_500GB)
+	:o 320GB (f_320GB)
+	:o Optical Drive (f_Optical_Drive)
+		:g [1, 1]
+			: CD_DVD +RW (f_CD_DVD__RW)
+			: Blu Ray Disc (f_Blu_Ray_Disc)
+			: DVD-ROM Drive and DVD+-RW (f_DVD_ROM_Drive_and_DVD__RW)
+			: DVD+-RW and CD-RW Combo (f_DVD__RW_and_CD_RW_Combo)
+	:o 80GB (f_80GB)
+	:g [1, 1]
+		: Mini Notebooks (f_Mini_Notebooks)
+			:m Intel Atom (f_Intel_Atom)
+			:g [1, 1]
+				: Windows XP Home (f_Windows_XP_Home)
+				: Ubuntu Linux (f_Ubuntu_Linux)
+		: Intel Celeron (f_Intel_Celeron)
+		: Intel Pentium Dual core (f_Intel_Pentium_Dual_core)
+		: Intel Core 2 Duo (f_Intel_Core_2_Duo)
+	:g [1, 1]
+		: 3GB (f_3GB)
+		: More than 4GB (f_More_than_4GB)
+		: 4GB (f_4GB)
+		: 2GB (f_2GB)
+		: 1GB (f_1GB)
+	:g [1, 1]
+		: Desktop Replacement (f_Desktop_Replacement)
+		: Ultra Light (f_Ultra_Light)
+		: Light (f_Light)
+	:g [1, 1]
+		: $800 - $1200 (f__800____1200)
+		: $400 - $800 (f__400____800)
+		: Less than $400 (f_Less_than__400)
+		: More than $1200 (f_More_than__1200)
+</feature_tree>
+<constraints>
+constraint_1:~f_Desktop_Replacement or f_Windows_Vista_64_bit
+constraint_2:~f_DVD_ROM_Drive_and_DVD__RW or f_Laptop_Weight
+constraint_3:~f_DVD_ROM_Drive_and_DVD__RW or f_Studio_Laptops
+constraint_4:~f_DVD__RW_and_CD_RW_Combo or f_Laptop_Weight
+constraint_5:~f_DVD__RW_and_CD_RW_Combo or f_Studio_Laptops
+constraint_6:~f_Blu_Ray_Disc or f_Laptop_Weight
+constraint_7:~f_Blu_Ray_Disc or f_Windows_Vista_64_bit
+constraint_8:~f_1GB or f_Ultra_Light
+constraint_9:~f_1GB or f_Mini_Notebooks
+constraint_10:~f_More_than_4GB or f_XPS_Laptops
+constraint_11:~f_XPS_Laptops or f_Intel_Core_2_Duo
+constraint_12:~f_Mini_Notebooks or f_Ultra_Light
+constraint_13:~f_Inspiron_Laptops or f_Light
+constraint_14:~f_More_than__1200 or f_Windows_Vista_64_bit
+constraint_15:~f_More_than__1200 or f_Intel_Core_2_Duo
+constraint_16:~f_Studio_XPS_Laptops or f_Laptop_Weight
+constraint_17:~f_Studio_XPS_Laptops or f__800____1200
+constraint_18:~f_Studio_XPS_Laptops or f_Intel_Core_2_Duo
+constraint_19:~f_Studio_XPS_Laptops or f_4GB
+constraint_20:~f_Adamo or f_More_than__1200
+constraint_21:~f_Adamo or f_Ultra_Light
+constraint_22:~f_Intel_Celeron or f_Light
+constraint_23:~f_Intel_Celeron or f_Inspiron_Laptops
+constraint_24:~f_120GB or f_Ultra_Light
+constraint_25:~f_120GB or f_Mini_Notebooks
+constraint_26:~f_80GB or f_Ultra_Light
+constraint_27:~f_80GB or f_Mini_Notebooks
+constraint_28:~f_Light or ~f_Windows_XP_Home
+constraint_29:~f_Light or ~f_Ubuntu_Linux
+constraint_30:~f_Desktop_Replacement or ~f_2GB
+constraint_31:~f_Desktop_Replacement or ~f_Windows_XP_Home
+constraint_32:~f_Desktop_Replacement or ~f_Less_than__400
+constraint_33:~f_Desktop_Replacement or ~f_Ubuntu_Linux
+constraint_34:~f_Desktop_Replacement or ~f_Studio_XPS_Laptops
+constraint_35:~f_Desktop_Replacement or ~f_160GB
+constraint_36:~f_CD_DVD__RW or ~f_Windows_XP_Home
+constraint_37:~f_CD_DVD__RW or ~f_Ubuntu_Linux
+constraint_38:~f_CD_DVD__RW or ~f_Adamo
+constraint_39:~f_CD_DVD__RW or ~f_120GB
+constraint_40:~f_CD_DVD__RW or ~f_1GB
+constraint_41:~f_CD_DVD__RW or ~f_80GB
+constraint_42:~f_CD_DVD__RW or ~f_Mini_Notebooks
+constraint_43:~f_DVD_ROM_Drive_and_DVD__RW or ~f_2GB
+constraint_44:~f_DVD_ROM_Drive_and_DVD__RW or ~f_1GB
+constraint_45:~f_DVD_ROM_Drive_and_DVD__RW or ~f_XPS_Laptops
+constraint_46:~f_DVD_ROM_Drive_and_DVD__RW or ~f_More_than_4GB
+constraint_47:~f_DVD_ROM_Drive_and_DVD__RW or ~f_Mini_Notebooks
+constraint_48:~f_DVD_ROM_Drive_and_DVD__RW or ~f_Inspiron_Laptops
+constraint_49:~f_DVD_ROM_Drive_and_DVD__RW or ~f_More_than__1200
+constraint_50:~f_DVD_ROM_Drive_and_DVD__RW or ~f_Windows_XP_Home
+constraint_51:~f_DVD_ROM_Drive_and_DVD__RW or ~f_Less_than__400
+constraint_52:~f_DVD_ROM_Drive_and_DVD__RW or ~f_Ubuntu_Linux
+constraint_53:~f_DVD_ROM_Drive_and_DVD__RW or ~f_Studio_XPS_Laptops
+constraint_54:~f_DVD_ROM_Drive_and_DVD__RW or ~f_Adamo
+constraint_55:~f_DVD_ROM_Drive_and_DVD__RW or ~f_Intel_Celeron
+constraint_56:~f_DVD_ROM_Drive_and_DVD__RW or ~f_120GB
+constraint_57:~f_DVD_ROM_Drive_and_DVD__RW or ~f_80GB
+constraint_58:~f_DVD_ROM_Drive_and_DVD__RW or ~f_160GB
+constraint_59:~f_DVD__RW_and_CD_RW_Combo or ~f_2GB
+constraint_60:~f_DVD__RW_and_CD_RW_Combo or ~f_1GB
+constraint_61:~f_DVD__RW_and_CD_RW_Combo or ~f_XPS_Laptops
+constraint_62:~f_DVD__RW_and_CD_RW_Combo or ~f_More_than_4GB
+constraint_63:~f_DVD__RW_and_CD_RW_Combo or ~f_Mini_Notebooks
+constraint_64:~f_DVD__RW_and_CD_RW_Combo or ~f_Inspiron_Laptops
+constraint_65:~f_DVD__RW_and_CD_RW_Combo or ~f_More_than__1200
+constraint_66:~f_DVD__RW_and_CD_RW_Combo or ~f_Windows_XP_Home
+constraint_67:~f_DVD__RW_and_CD_RW_Combo or ~f_Less_than__400
+constraint_68:~f_DVD__RW_and_CD_RW_Combo or ~f_Ubuntu_Linux
+constraint_69:~f_DVD__RW_and_CD_RW_Combo or ~f_Studio_XPS_Laptops
+constraint_70:~f_DVD__RW_and_CD_RW_Combo or ~f_Adamo
+constraint_71:~f_DVD__RW_and_CD_RW_Combo or ~f_Intel_Celeron
+constraint_72:~f_DVD__RW_and_CD_RW_Combo or ~f_120GB
+constraint_73:~f_DVD__RW_and_CD_RW_Combo or ~f_80GB
+constraint_74:~f_DVD__RW_and_CD_RW_Combo or ~f_160GB
+constraint_75:~f_Blu_Ray_Disc or ~f_2GB
+constraint_76:~f_Blu_Ray_Disc or ~f_1GB
+constraint_77:~f_Blu_Ray_Disc or ~f_Mini_Notebooks
+constraint_78:~f_Blu_Ray_Disc or ~f_Inspiron_Laptops
+constraint_79:~f_Blu_Ray_Disc or ~f_Windows_XP_Home
+constraint_80:~f_Blu_Ray_Disc or ~f_Less_than__400
+constraint_81:~f_Blu_Ray_Disc or ~f_Ubuntu_Linux
+constraint_82:~f_Blu_Ray_Disc or ~f_Studio_XPS_Laptops
+constraint_83:~f_Blu_Ray_Disc or ~f_Adamo
+constraint_84:~f_Blu_Ray_Disc or ~f_Intel_Celeron
+constraint_85:~f_Blu_Ray_Disc or ~f_120GB
+constraint_86:~f_Blu_Ray_Disc or ~f_80GB
+constraint_87:~f_Blu_Ray_Disc or ~f_160GB
+constraint_88:~f_2GB or ~f_Studio_Laptops
+constraint_89:~f_2GB or ~f_XPS_Laptops
+constraint_90:~f_1GB or ~f_Windows_Vista_64_bit
+constraint_91:~f_1GB or ~f_Adamo
+constraint_92:~f_1GB or ~f_Optical_Drive
+constraint_93:~f_1GB or ~f_320GB
+constraint_94:~f_1GB or ~f_500GB
+constraint_95:~f_1GB or ~f_250GB
+constraint_96:~f_1GB or ~f_Studio_Laptops
+constraint_97:~f_1GB or ~f__800____1200
+constraint_98:~f_More_than_4GB or ~f_Studio_Laptops
+constraint_99:~f_More_than_4GB or ~f_Mini_Notebooks
+constraint_100:~f_More_than_4GB or ~f_Inspiron_Laptops
+constraint_101:~f_More_than_4GB or ~f_Windows_XP_Home
+constraint_102:~f_More_than_4GB or ~f_Less_than__400
+constraint_103:~f_More_than_4GB or ~f_Ubuntu_Linux
+constraint_104:~f_More_than_4GB or ~f_Adamo
+constraint_105:~f_More_than_4GB or ~f_Intel_Celeron
+constraint_106:~f_More_than_4GB or ~f_Intel_Pentium_Dual_core
+constraint_107:~f_More_than_4GB or ~f_120GB
+constraint_108:~f_More_than_4GB or ~f_80GB
+constraint_109:~f_More_than_4GB or ~f_160GB
+constraint_110:~f_4GB or ~f_Windows_XP_Home
+constraint_111:~f_4GB or ~f_Ubuntu_Linux
+constraint_112:~f_4GB or ~f_120GB
+constraint_113:~f_4GB or ~f_80GB
+constraint_114:~f_4GB or ~f_Mini_Notebooks
+constraint_115:~f_3GB or ~f_Windows_XP_Home
+constraint_116:~f_3GB or ~f_Ubuntu_Linux
+constraint_117:~f_3GB or ~f_Adamo
+constraint_118:~f_3GB or ~f_120GB
+constraint_119:~f_3GB or ~f_80GB
+constraint_120:~f_3GB or ~f_Mini_Notebooks
+constraint_121:~f_Windows_XP_Home or ~f_Windows_Vista_64_bit
+constraint_122:~f_Windows_XP_Home or ~f_Adamo
+constraint_123:~f_Windows_XP_Home or ~f_Optical_Drive
+constraint_124:~f_Windows_XP_Home or ~f_320GB
+constraint_125:~f_Windows_XP_Home or ~f_500GB
+constraint_126:~f_Windows_XP_Home or ~f_250GB
+constraint_127:~f_Windows_XP_Home or ~f_Studio_Laptops
+constraint_128:~f_Windows_XP_Home or ~f__800____1200
+constraint_129:~f_Windows_Vista_64_bit or ~f_Less_than__400
+constraint_130:~f_Windows_Vista_64_bit or ~f_Ubuntu_Linux
+constraint_131:~f_Windows_Vista_64_bit or ~f_Intel_Celeron
+constraint_132:~f_Windows_Vista_64_bit or ~f_120GB
+constraint_133:~f_Windows_Vista_64_bit or ~f_80GB
+constraint_134:~f_Windows_Vista_64_bit or ~f_Mini_Notebooks
+constraint_135:~f_Windows_Vista_64_bit or ~f_160GB
+constraint_136:~f_Windows_Vista_64_bit or ~f_Inspiron_Laptops
+constraint_137:~f_Ubuntu_Linux or ~f_Adamo
+constraint_138:~f_Ubuntu_Linux or ~f_Optical_Drive
+constraint_139:~f_Ubuntu_Linux or ~f_320GB
+constraint_140:~f_Ubuntu_Linux or ~f_500GB
+constraint_141:~f_Ubuntu_Linux or ~f_250GB
+constraint_142:~f_Ubuntu_Linux or ~f_Studio_Laptops
+constraint_143:~f_Ubuntu_Linux or ~f__800____1200
+constraint_144:~f_Studio_XPS_Laptops or ~f_160GB
+constraint_145:~f_Studio_XPS_Laptops or ~f_250GB
+constraint_146:~f_Studio_XPS_Laptops or ~f_Studio_Laptops
+constraint_147:~f_Studio_XPS_Laptops or ~f_XPS_Laptops
+constraint_148:~f_Studio_XPS_Laptops or ~f_Inspiron_Laptops
+constraint_149:~f_Adamo or ~f_Optical_Drive
+constraint_150:~f_Adamo or ~f_320GB
+constraint_151:~f_Adamo or ~f_500GB
+constraint_152:~f_Adamo or ~f_160GB
+constraint_153:~f_Adamo or ~f_250GB
+constraint_154:~f_Adamo or ~f_Studio_Laptops
+constraint_155:~f_Adamo or ~f_XPS_Laptops
+constraint_156:~f_120GB or ~f_Adamo
+constraint_157:~f_120GB or ~f_Optical_Drive
+constraint_158:~f_120GB or ~f_80GB
+constraint_159:~f_120GB or ~f_320GB
+constraint_160:~f_120GB or ~f_500GB
+constraint_161:~f_120GB or ~f_160GB
+constraint_162:~f_120GB or ~f_250GB
+constraint_163:~f_120GB or ~f_Studio_Laptops
+constraint_164:~f_120GB or ~f__800____1200
+constraint_165:~f_Optical_Drive or ~f_80GB
+constraint_166:~f_Optical_Drive or ~f_Mini_Notebooks
+constraint_167:~f_80GB or ~f_Adamo
+constraint_168:~f_80GB or ~f_320GB
+constraint_169:~f_80GB or ~f_500GB
+constraint_170:~f_80GB or ~f_160GB
+constraint_171:~f_80GB or ~f_250GB
+constraint_172:~f_80GB or ~f_Studio_Laptops
+constraint_173:~f_80GB or ~f__800____1200
+constraint_174:~f_320GB or ~f_500GB
+constraint_175:~f_320GB or ~f_Mini_Notebooks
+constraint_176:~f_320GB or ~f_160GB
+constraint_177:~f_320GB or ~f_250GB
+constraint_178:~f_500GB or ~f_Mini_Notebooks
+constraint_179:~f_500GB or ~f_160GB
+constraint_180:~f_500GB or ~f_250GB
+constraint_181:~f_160GB or ~f_Studio_Laptops
+constraint_182:~f_160GB or ~f_XPS_Laptops
+constraint_183:~f_160GB or ~f_More_than__1200
+constraint_184:~f_160GB or ~f_250GB
+constraint_185:~f_250GB or ~f_Mini_Notebooks
+constraint_186:~f_Studio_Laptops or ~f_XPS_Laptops
+constraint_187:~f_Studio_Laptops or ~f_Mini_Notebooks
+constraint_188:~f_Studio_Laptops or ~f_Inspiron_Laptops
+constraint_189:~f_Studio_Laptops or ~f_More_than__1200
+constraint_190:~f_Studio_Laptops or ~f_Less_than__400
+constraint_191:~f_Studio_Laptops or ~f_Intel_Celeron
+constraint_192:~f_XPS_Laptops or ~f_Inspiron_Laptops
+constraint_193:~f_XPS_Laptops or ~f_Less_than__400
+constraint_194:~f_Mini_Notebooks or ~f_Adamo
+constraint_195:~f_Mini_Notebooks or ~f__800____1200
+constraint_196:~f_Inspiron_Laptops or ~f_More_than__1200
+constraint_197:~f_Inspiron_Laptops or ~f_Windows_XP_Home
+constraint_198:~f_Inspiron_Laptops or ~f_Ubuntu_Linux
+constraint_199:~f_Intel_Pentium_Dual_core or ~f_Adamo
+</constraints>
+</feature_model>

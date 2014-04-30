@@ -1,0 +1,21 @@
+<feature_model name="entrega">
+<feature_tree>
+:r entrega (f_entrega)
+	:m Loja Virtual (f_Loja_Virtual)
+	:m pagamento (f_pagamento)
+	:m tipo-de-pagamento (f_tipo_de_pagamento)
+	:o deteccao-de-fraude (f_deteccao_de_fraude)
+	:g [1, *]
+		: cartao-de-debito (f_cartao_de_debito)
+		: cartao-de-credito (f_cartao_de_credito)
+		: boleto-bancario (f_boleto_bancario)
+	:g [1, *]
+		: terra (f_terra)
+		: mar (f_mar)
+		: ar (f_ar)
+</feature_tree>
+<constraints>
+constraint_1:~f_cartao_de_credito or f_deteccao_de_fraude
+constraint_2:~f_cartao_de_debito or f_deteccao_de_fraude
+</constraints>
+</feature_model>

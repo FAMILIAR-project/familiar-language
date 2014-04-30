@@ -1,0 +1,26 @@
+<feature_model name="Tarefas de Validacao">
+<feature_tree>
+:r Tarefas de Validacao (f_Tarefas_de_Validacao)
+	:m Agrupamento (f_Agrupamento)
+	:m Catalogo de Aplicacoes (f_Catalogo_de_Aplicacoes)
+	:m Cadastro de Versoes (f_Cadastro_de_Versoes)
+	:m Autenticacao e Autorizacao (f_Autenticacao_e_Autorizacao)
+	:m Relatorio (f_Relatorio)
+	:m Notificacao de Tarefas (f_Notificacao_de_Tarefas)
+	:m Gsist (f_Gsist)
+	:m Log (f_Log)
+	:o Cadastro de Componentes (f_Cadastro_de_Componentes)
+	:g [1, *]
+		: Banco de Dados (f_Banco_de_Dados)
+		: Arquivo (f_Arquivo)
+	:g [1, *]
+		: Email (f_Email)
+		: Desktop (f_Desktop)
+		: Tela Sistema (f_Tela_Sistema)
+	:g [1, 1]
+		: BuiltIn (f_BuiltIn)
+		: LDAP (f_LDAP)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

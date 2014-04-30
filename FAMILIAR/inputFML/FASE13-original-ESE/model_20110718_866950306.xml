@@ -1,0 +1,28 @@
+<feature_model name="Tipo">
+<feature_tree>
+:r Tipo (f_Tipo)
+	:m agenda (f_agenda)
+	:m Nome (f_Nome)
+	:m Endereco (f_Endereco)
+	:m Logradouro (f_Logradouro)
+	:m Numero (f_Numero)
+	:m Bairro (f_Bairro)
+	:m Cidade (f_Cidade)
+	:m Estado (f_Estado)
+	:m CEP (f_CEP)
+	:m Preco (f_Preco)
+	:m Classificacao_etaria (f_Classificacao_etaria)
+	:m Contato (f_Contato)
+	:o Complemento (f_Complemento)
+	:g [1, *]
+		: Website (f_Website)
+		: Twitter (f_Twitter)
+		: Telefone (f_Telefone)
+		: Facebook (f_Facebook)
+	:g [1, 1]
+		: Variavel (f_Variavel)
+		: Fixo (f_Fixo)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

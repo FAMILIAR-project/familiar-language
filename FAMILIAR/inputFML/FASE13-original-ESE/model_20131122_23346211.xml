@@ -1,0 +1,25 @@
+<feature_model name="F1 Application">
+<feature_tree>
+:r F1 Application (f_F1_Application)
+	:m F2 Sensor equipment (f_F2_Sensor_equipment)
+	:m car periphery supervision systems (f_car_periphery_supervision_systems)
+	:g [1, *]
+		: F5 Front (f_F5_Front)
+			:g [1, 1]
+				: F9 Low-end (f_F9_Low_end)
+				: F10 High-end (f_F10_High_end)
+		: F6 Rear (f_F6_Rear)
+			:g [1, 1]
+				: F12 High-end (f_F12_High_end)
+				: F11 Low-end (f_F11_Low_end)
+	:g [1, *]
+		: F3 Parking support (f_F3_Parking_support)
+			:m F8 Steering assistance (f_F8_Steering_assistance)
+			:m F14 Rear (f_F14_Rear)
+			:m F7 Distance indication (f_F7_Distance_indication)
+			:o F13 Front (f_F13_Front)
+		: F4 Precrash detection (f_F4_Precrash_detection)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

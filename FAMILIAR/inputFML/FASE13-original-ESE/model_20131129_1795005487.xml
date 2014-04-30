@@ -1,0 +1,21 @@
+<feature_model name="Display Information">
+<feature_tree>
+:r Display Information (f_Display_Information)
+	:m Mobile Phone (f_Mobile_Phone)
+	:m Calls Support (f_Calls_Support)
+	:o GPS Support (f_GPS_Support)
+	:o Media Devices (f_Media_Devices)
+		:g [1, *]
+			: MP3 Player (f_MP3_Player)
+			: Camera (f_Camera)
+	:g [1, 1]
+		: HighRes Screen (f_HighRes_Screen)
+		: Basic Screen (f_Basic_Screen)
+		: Color Screen (f_Color_Screen)
+</feature_tree>
+<constraints>
+constraint_1:~f_Camera or f_HighRes_Screen
+constraint_2:~f_Camera or f_Display_Information
+constraint_3:~f_GPS_Support or ~f_Basic_Screen
+</constraints>
+</feature_model>

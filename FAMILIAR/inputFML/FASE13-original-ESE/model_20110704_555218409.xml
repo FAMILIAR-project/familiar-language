@@ -1,0 +1,17 @@
+<feature_model name="Feature-5">
+<feature_tree>
+:r Feature-5 (f_Feature_5)
+	:m SmartHome (f_SmartHome)
+	:m Feature-1 (f_Feature_1)
+	:m Feature-2 (f_Feature_2)
+	:m Feature-3 (f_Feature_3)
+	:m Feature-4 (f_Feature_4)
+	:m Feature-6 (f_Feature_6)
+	:m Feature-7 (f_Feature_7)
+	:m Feature-9 (f_Feature_9)
+	:m Feature-10 (f_Feature_10)
+	:o Feature-8 (f_Feature_8)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

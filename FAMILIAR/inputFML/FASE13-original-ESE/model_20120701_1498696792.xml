@@ -1,0 +1,17 @@
+<feature_model name="R">
+<feature_tree>
+:r R (f_R)
+	:o B (f_B)
+		:o B1 (f_B1)
+			:o B2 (f_B2)
+				:o B3 (f_B3)
+					:o B4 (f_B4)
+						:o B5 (f_B5)
+	:o A (f_A)
+		:o A1 (f_A1)
+			:o A2 (f_A2)
+	:o C (f_C)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

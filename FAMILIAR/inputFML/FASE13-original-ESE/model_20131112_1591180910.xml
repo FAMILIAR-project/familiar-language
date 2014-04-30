@@ -1,0 +1,40 @@
+<feature_model name="Autenticacion">
+<feature_tree>
+:r Autenticacion (f_Autenticacion)
+	:m Localizacion de Evento (f_Localizacion_de_Evento)
+	:m Visor multimedia (f_Visor_multimedia)
+	:m Tipo Documento Participante (f_Tipo_Documento_Participante)
+	:m Eventos2 (f_Eventos2)
+	:m Tipo de Evento (f_Tipo_de_Evento)
+	:o Auditoria (f_Auditoria)
+		:m Campos para cada tabla (f_Campos_para_cada_tabla)
+		:o Unica tabla (f_Unica_tabla)
+	:o Tipo Rol (f_Tipo_Rol)
+		:o Administrativo (f_Administrativo)
+		:o Externo (f_Externo)
+	:o Tipo Confirmacion (f_Tipo_Confirmacion)
+		:o Confirmado (f_Confirmado)
+		:o Provisional (f_Provisional)
+		:o Registrado (f_Registrado)
+	:g [1, *]
+		: Google plus (f_Google_plus)
+		: Facebook (f_Facebook)
+	:g [1, *]
+		: Recinto cerrado (f_Recinto_cerrado)
+		: Aire abierto (f_Aire_abierto)
+	:g [1, *]
+		: Imagen (f_Imagen)
+		: Sonido (f_Sonido)
+		: Video (f_Video)
+	:g [1, 1]
+		: Cedula extrangeria (f_Cedula_extrangeria)
+		: Nit (f_Nit)
+		: Cedula ciudadania (f_Cedula_ciudadania)
+	:g [1, 1]
+		: Concierto (f_Concierto)
+		: Fiesta (f_Fiesta)
+		: Conferencia (f_Conferencia)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,39 @@
+<feature_model name="Memory">
+<feature_tree>
+:r Memory (f_Memory)
+	:m Itinerary (f_Itinerary)
+	:m Event (f_Event)
+	:m MyHolidays (f_MyHolidays)
+	:o User (f_User)
+		:o Authetication (f_Authetication)
+			:g [1, *]
+				: LDAP (f_LDAP)
+				: Facebook (f_Facebook)
+				: Google (f_Google)
+		:o Payment (f_Payment)
+	:o Review (f_Review)
+	:o Audit (f_Audit)
+	:o MultimediaFile (f_MultimediaFile)
+		:o Despliegue multimedia (f_Despliegue_multimedia)
+			:g [1, *]
+				: Despliegue audio (f_Despliegue_audio)
+				: Despliegue video (f_Despliegue_video)
+				: Despliegue imagen (f_Despliegue_imagen)
+	:g [1, *]
+		: Crear recuerdo en forma de audio (f_Crear_recuerdo_en_forma_de_audio)
+		: Crear recuerdo en forma de video (f_Crear_recuerdo_en_forma_de_video)
+		: Crear recuerdo en forma de texto (f_Crear_recuerdo_en_forma_de_texto)
+		: Crear recuerdo en forma de imagen (f_Crear_recuerdo_en_forma_de_imagen)
+	:g [1, *]
+		: Despliegue en mapa (f_Despliegue_en_mapa)
+		: Despliegue de ficha del evento (f_Despliegue_de_ficha_del_evento)
+	:g [1, *]
+		: Despliegue mediante mapa (f_Despliegue_mediante_mapa)
+		: Despliegue mediante lista (f_Despliegue_mediante_lista)
+</feature_tree>
+<constraints>
+constraint_1:~f_Crear_recuerdo_en_forma_de_audio or f_Despliegue_audio
+constraint_2:~f_Crear_recuerdo_en_forma_de_video or f_Despliegue_video
+constraint_3:~f_Crear_recuerdo_en_forma_de_imagen or f_Despliegue_imagen
+</constraints>
+</feature_model>

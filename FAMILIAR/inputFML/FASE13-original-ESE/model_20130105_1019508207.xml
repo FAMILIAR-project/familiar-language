@@ -1,0 +1,35 @@
+<feature_model name="Dados Pessoais">
+<feature_tree>
+:r Dados Pessoais (f_Dados_Pessoais)
+	:m Submissao (f_Submissao)
+	:m Curriculo (f_Curriculo)
+	:m FCO (f_FCO)
+	:m Producao (f_Producao)
+	:o Projeto (f_Projeto)
+		:o Plano de Trabalho (f_Plano_de_Trabalho)
+			:g [1, 1]
+				: Upload (f_Upload)
+				: Cadastro (f_Cadastro)
+		:g [1, *]
+			: Extensao (f_Extensao)
+			: Pesquisa (f_Pesquisa)
+			: Ensino (f_Ensino)
+	:o Orientacao (f_Orientacao)
+		:g [1, *]
+			: Graduacao (f_Graduacao)
+			: PosGraduacao (f_PosGraduacao)
+	:o FCA (f_FCA)
+	:o Linha de Pesquisa (f_Linha_de_Pesquisa)
+		:o Programa de Pos (f_Programa_de_Pos)
+		:o Grupo de Pesquisa (f_Grupo_de_Pesquisa)
+	:o Upload de Documentos (f_Upload_de_Documentos)
+	:g [1, *]
+		: Periodico (f_Periodico)
+		: Livro (f_Livro)
+		: Conferencia (f_Conferencia)
+		: Patente (f_Patente)
+</feature_tree>
+<constraints>
+constraint_1:~f_Pesquisa or f_Linha_de_Pesquisa
+</constraints>
+</feature_model>

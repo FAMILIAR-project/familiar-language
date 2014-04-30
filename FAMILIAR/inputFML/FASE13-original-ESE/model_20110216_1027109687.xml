@@ -1,0 +1,26 @@
+<feature_model name="WB2">
+<feature_tree>
+:r WB2 (f_WB2)
+	:o Feature-4 (f_Feature_4)
+	:o Feature-13 (f_Feature_13)
+	:o Feature-1 (f_Feature_1)
+		:g [1, *]
+			: Feature-8 (f_Feature_8)
+			: Feature-6 (f_Feature_6)
+			: Feature-7 (f_Feature_7)
+	:o Feature-2 (f_Feature_2)
+	:o Feature-3 (f_Feature_3)
+		:g [1, *]
+			: Feature-10 (f_Feature_10)
+			: Feature-11 (f_Feature_11)
+			: Feature-12 (f_Feature_12)
+</feature_tree>
+<constraints>
+constraint_1:~f_Feature_10 or f_Feature_4
+constraint_2:~f_Feature_10 or f_WB2
+constraint_3:~f_Feature_11 or f_Feature_4
+constraint_4:~f_Feature_11 or f_WB2
+constraint_5:~f_Feature_6 or f_Feature_2
+constraint_6:~f_Feature_7 or f_Feature_2
+</constraints>
+</feature_model>

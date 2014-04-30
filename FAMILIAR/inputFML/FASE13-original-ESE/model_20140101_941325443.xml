@@ -1,0 +1,16 @@
+<feature_model name="Autenticacao">
+<feature_tree>
+:r Autenticacao (f_Autenticacao)
+	:m PEP (f_PEP)
+	:m Atendimento (f_Atendimento)
+	:m Cadastro (f_Cadastro)
+	:m Ambulatorial (f_Ambulatorial)
+	:m Login_Senha (f_Login_Senha)
+	:o Internado (f_Internado)
+	:o Evolucao (f_Evolucao)
+		:o Medica (f_Medica)
+		:o Enfermagem (f_Enfermagem)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -19,6 +19,7 @@
 	<classpathentry exported="true" kind="lib" path="lib/sspace-2.0.3-jar-with-dependencies.jar"/>
 	<classpathentry kind="lib" path="lib/antlr.jar"/>
 	<classpathentry kind="lib" path="lib/choco-2.1.0-basic+old.jar"/>
+	<classpathentry kind="lib" path="lib/javacsv.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
 	<classpathentry kind="src" path="src"/>

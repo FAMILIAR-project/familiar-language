@@ -1,0 +1,37 @@
+<feature_model name="Gtp">
+<feature_tree>
+:r Gtp (f_Gtp)
+	:m Algorithms (f_Algorithms)
+	:m GPL (f_GPL)
+	:o Weight (f_Weight)
+		:g [1, 1]
+			: unweighted (f_unweighted)
+			: weighted (f_weighted)
+	:o Search (f_Search)
+		:g [1, 1]
+			: BFS (f_BFS)
+			: DFS (f_DFS)
+	:g [1, *]
+		: cycle (f_cycle)
+		: connected (f_connected)
+		: shortest (f_shortest)
+		: stronglyc (f_stronglyc)
+		: mstprim (f_mstprim)
+		: mstkruskal (f_mstkruskal)
+	:g [1, 1]
+		: directed (f_directed)
+		: undirected (f_undirected)
+</feature_tree>
+<constraints>
+constraint_1:~f_shortest or f_directed
+constraint_2:~f_mstprim or f_undirected
+constraint_3:~f_mstprim or f_unweighted
+constraint_4:~f_mstkruskal or f_undirected
+constraint_5:~f_mstkruskal or f_unweighted
+constraint_6:~f_stronglyc or f_undirected
+constraint_7:~f_cycle or f_DFS
+constraint_8:~f_connected or f_Search
+constraint_9:~f_mstprim or ~f_mstkruskal
+constraint_10:~f_stronglyc or ~f_connected
+</constraints>
+</feature_model>

@@ -1,0 +1,23 @@
+<feature_model name="Car">
+<feature_tree>
+:r Car (f_Car)
+	:m Sensors (f_Sensors)
+	:o Tilt Down (f_Tilt_Down)
+	:o Collision Avoidance Braking (f_Collision_Avoidance_Braking)
+		:m Automated Driving Controller (f_Automated_Driving_Controller)
+		:o Parallel Parking (f_Parallel_Parking)
+		:g [1, 1]
+			: Standard Avoidance (f_Standard_Avoidance)
+			: Enhanced Avoidance (f_Enhanced_Avoidance)
+	:o Lateral Range Finder (f_Lateral_Range_Finder)
+	:o CLH (f_CLH)
+		:g [1, 1]
+			: with RLS (f_with_RLS)
+			: with Low Cost Light Sensor (f_with_Low_Cost_Light_Sensor)
+			: No Light Sensor (f_No_Light_Sensor)
+	:o Forward Range Finder (f_Forward_Range_Finder)
+</feature_tree>
+<constraints>
+constraint_1:~f_Enhanced_Avoidance or f_Forward_Range_Finder
+</constraints>
+</feature_model>

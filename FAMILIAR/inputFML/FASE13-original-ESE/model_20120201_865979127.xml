@@ -1,0 +1,52 @@
+<feature_model name="Numero Terminales">
+<feature_tree>
+:r Numero Terminales (f_Numero_Terminales)
+	:m Precio mensual (f_Precio_mensual)
+	:m Mantenimiento (f_Mantenimiento)
+	:m MovilReportes (f_MovilReportes)
+	:m Autenticacion (f_Autenticacion)
+	:m Instalacion (f_Instalacion)
+	:m Terminal (f_Terminal)
+	:o Visualizacion en Mapa (f_Visualizacion_en_Mapa)
+	:o Informes Agregados (f_Informes_Agregados)
+	:g [1, *]
+		: LDAP (f_LDAP)
+		: clave (f_clave)
+		: certificado (f_certificado)
+	:g [1, *]
+		: iPhone (f_iPhone)
+		: Android (f_Android)
+		: BlackBerry (f_BlackBerry)
+	:g [1, 1]
+		: 25 a 50 (f_25_a_50)
+			:m 10 euros (f_10_euros)
+		: 15 euros (f_15_euros)
+			:g [1, 1]
+				: 11 a 25 (f_11_a_25)
+				: 4 a 10 (f_4_a_10)
+		: 1 a 3 (f_1_a_3)
+			:m 25 euros (f_25_euros)
+	:g [1, 1]
+		: Professional (f_Professional)
+		: Enterprise (f_Enterprise)
+		: Basic (f_Basic)
+	:g [1, 1]
+		: In House (f_In_House)
+		: Servidor Dedicado en Cloud (f_Servidor_Dedicado_en_Cloud)
+		: SaaS (f_SaaS)
+</feature_tree>
+<constraints>
+constraint_1:~f_1_a_3 or f_Basic
+constraint_2:~f_In_House or f_Enterprise
+constraint_3:~f_LDAP or f_In_House
+constraint_4:~f_LDAP or f_Enterprise
+constraint_5:~f_25_a_50 or f_Enterprise
+constraint_6:~f_Professional or f_15_euros
+constraint_7:~f_BlackBerry or ~f_Visualizacion_en_Mapa
+constraint_8:~f_4_a_10 or ~f_In_House
+constraint_9:~f_4_a_10 or ~f_LDAP
+constraint_10:~f_4_a_10 or ~f_Enterprise
+constraint_11:~f_1_a_3 or ~f_Informes_Agregados
+constraint_12:~f_1_a_3 or ~f_Visualizacion_en_Mapa
+</constraints>
+</feature_model>

@@ -1,0 +1,36 @@
+<feature_model name="Generar propuesta">
+<feature_tree>
+:r Generar propuesta (f_Generar_propuesta)
+	:m Revisar propuesta con cliente (f_Revisar_propuesta_con_cliente)
+	:m Comercial (f_Comercial)
+	:m Levantar deseos del cliente (f_Levantar_deseos_del_cliente)
+	:m Analisis de factibilidad (f_Analisis_de_factibilidad)
+	:m Capacitacion usuario (f_Capacitacion_usuario)
+	:m Instalacion piloto en produccion (f_Instalacion_piloto_en_produccion)
+	:m Definir hitos (f_Definir_hitos)
+	:m Transicion (f_Transicion)
+	:m Rhiscom Process (f_Rhiscom_Process)
+	:m Finalizar el proyecto (f_Finalizar_el_proyecto)
+	:m Implementacion (f_Implementacion)
+	:o Revision y envio de requisitos (f_Revision_y_envio_de_requisitos)
+		:m PuntoVariacionReqDis (f_PuntoVariacionReqDis)
+		:m Aprobacion del documento de requisitos (f_Aprobacion_del_documento_de_requisitos)
+		:m Establecer linea base de requisitos (f_Establecer_linea_base_de_requisitos)
+		:m Requisitos (f_Requisitos)
+		:m Realizar reunion inicial (f_Realizar_reunion_inicial)
+		:m Analisis de requisitos (f_Analisis_de_requisitos)
+		:m Levantar requisitos en prosa (f_Levantar_requisitos_en_prosa)
+		:m PuntoVariacionLevReq (f_PuntoVariacionLevReq)
+		:m Generacion final de requisitos funcionales (f_Generacion_final_de_requisitos_funcionales)
+		:m Verificacion por desarrolladores (f_Verificacion_por_desarrolladores)
+		:o Disenio (f_Disenio)
+			:m Disenio de la arquitectura (f_Disenio_de_la_arquitectura)
+			:m Validar SAD (f_Validar_SAD)
+			:o Reunion acuerdos de integracion (f_Reunion_acuerdos_de_integracion)
+		:o Levantar requisitos con casos de uso (f_Levantar_requisitos_con_casos_de_uso)
+	:o Asignacion de recursos (f_Asignacion_de_recursos)
+		:m Elaborar orden de trabajo (f_Elaborar_orden_de_trabajo)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

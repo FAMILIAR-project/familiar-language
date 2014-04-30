@@ -1,0 +1,25 @@
+<feature_model name="puertos usb">
+<feature_tree>
+:r puertos usb (f_puertos_usb)
+	:m wifi (f_wifi)
+	:m comunicaciones (f_comunicaciones)
+	:m notebook (f_notebook)
+	:m teclado (f_teclado)
+	:m touchpad (f_touchpad)
+	:m screen (f_screen)
+	:o bluetooth (f_bluetooth)
+	:o infrarrojo (f_infrarrojo)
+	:o multitouch (f_multitouch)
+	:g [1, *]
+		: usb 20 (f_usb_20)
+		: usb 30 (f_usb_30)
+	:g [1, 1]
+		: lcd (f_lcd)
+		: led (f_led)
+	:g [1, 1]
+		: iluminado (f_iluminado)
+		: normal (f_normal)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

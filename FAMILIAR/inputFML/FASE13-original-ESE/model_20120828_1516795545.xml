@@ -1,0 +1,20 @@
+<feature_model name="Cardiovascular Plant">
+<feature_tree>
+:r Cardiovascular Plant (f_Cardiovascular_Plant)
+	:m Connection (f_Connection)
+	:m Model (f_Model)
+	:m NCV (f_NCV)
+	:o Simulation (f_Simulation)
+		:m Total Time (f_Total_Time)
+		:m Time Interval (f_Time_Interval)
+		:m Chart (f_Chart)
+		:o Initial Values (f_Initial_Values)
+	:o Feedback Mechanism (f_Feedback_Mechanism)
+		:m Block (f_Block)
+	:g [1, *]
+		: Pressure Source (f_Pressure_Source)
+		: Resistance (f_Resistance)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,26 @@
+<feature_model name="Collaboration System">
+<feature_tree>
+:r Collaboration System (f_Collaboration_System)
+	:o Access Management (f_Access_Management)
+	:o Security (f_Security)
+		:g [1, *]
+			: encryption (f_encryption)
+			: authentication (f_authentication)
+	:o Asynchronous Conferencing (f_Asynchronous_Conferencing)
+		:g [1, *]
+			: Micro Blogging (f_Micro_Blogging)
+			: Forum (f_Forum)
+	:o Synchronous Conferencing (f_Synchronous_Conferencing)
+		:o video (f_video)
+		:o data (f_data)
+		:g [1, *]
+			: voip (f_voip)
+			: telephone (f_telephone)
+	:o Document Repository (f_Document_Repository)
+		:g [1, 1]
+			: vnc (f_vnc)
+			: x11 (f_x11)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

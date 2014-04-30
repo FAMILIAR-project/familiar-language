@@ -1,0 +1,26 @@
+<feature_model name="Variable Interest Rate">
+<feature_tree>
+:r Variable Interest Rate (f_Variable_Interest_Rate)
+	:m Maximum Credit Limit (f_Maximum_Credit_Limit)
+	:m Minimum Credit Limit (f_Minimum_Credit_Limit)
+	:m Credit (f_Credit)
+	:m Interest Rate (f_Interest_Rate)
+	:m card product (f_card_product)
+	:m Fees and Charges (f_Fees_and_Charges)
+	:m Interest Rates (f_Interest_Rates)
+	:m Payments (f_Payments)
+	:m Rewards (f_Rewards)
+	:o Deferred (f_Deferred)
+	:o GO Business Rewards (f_GO_Business_Rewards)
+	:o Fly-by Points (f_Fly_by_Points)
+	:o Fuel Savings (f_Fuel_Savings)
+	:o Interest Free Days (f_Interest_Free_Days)
+	:o Balance Transfer Rate (f_Balance_Transfer_Rate)
+	:o Card (f_Card)
+		:o Multiple Cards (f_Multiple_Cards)
+		:o Name on Card (f_Name_on_Card)
+	:o Cash Advance Rate (f_Cash_Advance_Rate)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,22 @@
+<feature_model name="itinerary-master">
+<feature_tree>
+:r itinerary-master (f_itinerary_master)
+	:m myholidays-master (f_myholidays_master)
+	:m user (f_user)
+	:m event (f_event)
+	:m event-master (f_event_master)
+	:m product (f_product)
+	:m myholidays (f_myholidays)
+	:m memory (f_memory)
+	:m user-master (f_user_master)
+	:m itinerary (f_itinerary)
+	:o memory-search (f_memory_search)
+	:o memory-master (f_memory_master)
+		:o multimediafile (f_multimediafile)
+			:o multimediafile-visor (f_multimediafile_visor)
+	:o itinerary-report (f_itinerary_report)
+	:o audit (f_audit)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,19 @@
+<feature_model name="Requirements specification">
+<feature_tree>
+:r Requirements specification (f_Requirements_specification)
+	:m RD (f_RD)
+	:m Interface requirements identification (f_Interface_requirements_identification)
+	:m Traceability to user requirements generation (f_Traceability_to_user_requirements_generation)
+	:m Requirements analysis and validation (f_Requirements_analysis_and_validation)
+	:m Product and product component constraints definition (f_Product_and_product_component_constraints_definition)
+	:m KIModel (f_KIModel)
+	:m Product and product component requirements definition (f_Product_and_product_component_requirements_definition)
+	:o Preliminar analysis (f_Preliminar_analysis)
+		:m Problem Analysis (f_Problem_Analysis)
+		:o Problem and project scope definition (f_Problem_and_project_scope_definition)
+	:o Early change management (f_Early_change_management)
+	:o Environment specification (f_Environment_specification)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

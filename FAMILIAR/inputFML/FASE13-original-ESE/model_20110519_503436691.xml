@@ -1,0 +1,20 @@
+<feature_model name="RootFeature">
+<feature_tree>
+:r RootFeature (f_RootFeature)
+	:m Feature-1 (f_Feature_1)
+	:o Feature-2 (f_Feature_2)
+		:g [1, 1]
+			: Feature-9 (f_Feature_9)
+			: Feature-10 (f_Feature_10)
+				:m Feature-8 (f_Feature_8)
+				:g [1, *]
+					: Feature-13 (f_Feature_13)
+					: Feature-12 (f_Feature_12)
+	:g [1, *]
+		: Feature-4 (f_Feature_4)
+		: Feature-5 (f_Feature_5)
+		: Feature-6 (f_Feature_6)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

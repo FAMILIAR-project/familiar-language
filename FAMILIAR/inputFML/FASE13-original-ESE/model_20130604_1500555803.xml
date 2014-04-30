@@ -1,0 +1,19 @@
+<feature_model name="solution_architecture">
+<feature_tree>
+:r solution_architecture (f_solution_architecture)
+	:m Feature-16 (f_Feature_16)
+	:m Feature-18 (f_Feature_18)
+	:m Feature-20 (f_Feature_20)
+	:m Feature-25 (f_Feature_25)
+	:m Feature-19 (f_Feature_19)
+	:m Feature-21 (f_Feature_21)
+	:m Feature-24 (f_Feature_24)
+	:m Feature-22 (f_Feature_22)
+	:m Feature-23 (f_Feature_23)
+	:m Feature-26 (f_Feature_26)
+	:m Feature-27 (f_Feature_27)
+	:o Feature-17 (f_Feature_17)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,21 @@
+<feature_model name="testConfig">
+<feature_tree>
+:r testConfig (f_testConfig)
+	:o C (f_C)
+		:o A (f_A)
+	:o B (f_B)
+	:o S (f_S)
+		:m Q (f_Q)
+		:o T (f_T)
+	:o X (f_X)
+		:m Z (f_Z)
+		:o Y (f_Y)
+	:g [1, 1]
+		: E (f_E)
+		: D (f_D)
+		: F (f_F)
+</feature_tree>
+<constraints>
+constraint_1:~f_A or f_B
+</constraints>
+</feature_model>

@@ -1,0 +1,16 @@
+<feature_model name="Feature-3">
+<feature_tree>
+:r Feature-3 (f_Feature_3)
+	:m Feature-1 (f_Feature_1)
+	:m Feature-4 (f_Feature_4)
+	:m HRM (f_HRM)
+	:m Feature-8 (f_Feature_8)
+	:o Feature-5 (f_Feature_5)
+		:o Feature-6 (f_Feature_6)
+		:o Feature-7 (f_Feature_7)
+	:o Feature-2 (f_Feature_2)
+	:o Feature-9 (f_Feature_9)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

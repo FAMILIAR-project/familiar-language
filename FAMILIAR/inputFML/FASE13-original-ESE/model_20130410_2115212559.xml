@@ -1,0 +1,18 @@
+<feature_model name="Car">
+<feature_tree>
+:r Car (f_Car)
+	:m Engine (f_Engine)
+	:o Feature-11 (f_Feature_11)
+		:m Feature-9 (f_Feature_9)
+		:m Feature-8 (f_Feature_8)
+		:m Feature-10 (f_Feature_10)
+		:m Sun Roof (f_Sun_Roof)
+		:m Feature-6 (f_Feature_6)
+		:m Feature-7 (f_Feature_7)
+	:g [1, 1]
+		: Gas (f_Gas)
+		: Diesel (f_Diesel)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

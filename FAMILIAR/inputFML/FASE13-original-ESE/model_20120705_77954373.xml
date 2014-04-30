@@ -1,0 +1,29 @@
+<feature_model name="MobAppsContents">
+<feature_tree>
+:r MobAppsContents (f_MobAppsContents)
+	:m texto (f_texto)
+	:m servicios (f_servicios)
+	:m internet (f_internet)
+	:m plataforma (f_plataforma)
+	:m contenidos (f_contenidos)
+	:o controlAcceso (f_controlAcceso)
+	:o mapas (f_mapas)
+	:o API (f_API)
+		:o infoDispositivo (f_infoDispositivo)
+		:o eventos (f_eventos)
+		:o camara (f_camara)
+		:o controlMedios (f_controlMedios)
+		:o geoLocalizacion (f_geoLocalizacion)
+	:o imagen (f_imagen)
+	:o googleAnalytics (f_googleAnalytics)
+	:o video (f_video)
+	:g [1, 1]
+		: windowsPhone (f_windowsPhone)
+		: blackBerry (f_blackBerry)
+		: android (f_android)
+		: iOS (f_iOS)
+		: symbian (f_symbian)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

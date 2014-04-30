@@ -1,0 +1,21 @@
+<feature_model name="Chassi">
+<feature_tree>
+:r Chassi (f_Chassi)
+	:m Motor (f_Motor)
+	:m Carro (f_Carro)
+	:o Freios ABS (f_Freios_ABS)
+	:o Teto Solar (f_Teto_Solar)
+	:o Air Bag (f_Air_Bag)
+	:g [1, 1]
+		: 4 portas (f_4_portas)
+		: 2 portas (f_2_portas)
+	:g [1, 1]
+		: 1_0 (f_1_0)
+		: 1_4 (f_1_4)
+		: 1_6 (f_1_6)
+		: 1_8 (f_1_8)
+		: 2_0 (f_2_0)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

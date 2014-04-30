@@ -1,0 +1,67 @@
+<feature_model name="Smestaj">
+<feature_tree>
+:r Smestaj (f_Smestaj)
+	:m Letovanje (f_Letovanje)
+	:m Prevoz (f_Prevoz)
+	:m Placanje (f_Placanje)
+	:o Hrana (f_Hrana)
+		:g [1, 1]
+			: Hrana nije obezbedjena (f_Hrana_nije_obezbedjena)
+			: Svi obroci (f_Svi_obroci)
+			: Dorucak i vecera (f_Dorucak_i_vecera)
+	:o Dodatni program (f_Dodatni_program)
+		:g [1, *]
+			: Sportska takmicenja (f_Sportska_takmicenja)
+				:g [1, *]
+					: Odbojka (f_Odbojka)
+					: Kosarka (f_Kosarka)
+					: Tenis (f_Tenis)
+					: Fudbal (f_Fudbal)
+			: Vodic (f_Vodic)
+	:o Pogled (f_Pogled)
+		:g [1, 1]
+			: Nije bitno (f_Nije_bitno)
+			: More (f_More)
+	:g [1, 1]
+		: Rang (f_Rang)
+			:m Hotel (f_Hotel)
+			:g [1, 1]
+				: 4 zvezdice (f_4_zvezdice)
+				: 3 zvezdice (f_3_zvezdice)
+				: 5 zvezdica (f_5_zvezdica)
+		: Privatni (f_Privatni)
+			:g [1, 1]
+				: Apartman (f_Apartman)
+				: Sobe (f_Sobe)
+					:g [1, 1]
+						: Dvokrevetna (f_Dvokrevetna)
+						: Trokrevetna (f_Trokrevetna)
+						: Jednokrevetna (f_Jednokrevetna)
+	:g [1, 1]
+		: Kartica (f_Kartica)
+			:g [1, 1]
+				: Master (f_Master)
+				: Maestro (f_Maestro)
+				: Visa (f_Visa)
+					:g [1, 1]
+						: Gold (f_Gold)
+						: Elektron (f_Elektron)
+		: Gotovina (f_Gotovina)
+		: Rate (f_Rate)
+			:g [1, 1]
+				: 6 (f_6)
+				: 3 (f_3)
+	:g [1, 1]
+		: Privatni prevoz (f_Privatni_prevoz)
+		: Autobus (f_Autobus)
+		: Avion (f_Avion)
+		: Minibus (f_Minibus)
+</feature_tree>
+<constraints>
+constraint_1:~f_5_zvezdica or f_Smestaj
+constraint_2:~f_5_zvezdica or f_Svi_obroci
+constraint_3:~f_5_zvezdica or ~f_3
+constraint_4:~f_5_zvezdica or ~f_6
+constraint_5:~f_5_zvezdica or ~f_Rate
+</constraints>
+</feature_model>

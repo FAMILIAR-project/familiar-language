@@ -1,0 +1,29 @@
+<feature_model name="Network">
+<feature_tree>
+:r Network (f_Network)
+	:m WebKit (f_WebKit)
+	:m Rendering (f_Rendering)
+	:m Software Mode (f_Software_Mode)
+	:m JavaScript (f_JavaScript)
+	:o Hardware Mode (f_Hardware_Mode)
+		:g [1, 1]
+			: EGL (f_EGL)
+			: GLX (f_GLX)
+			: OpenGLES2 (f_OpenGLES2)
+	:g [1, 1]
+		: Skia (f_Skia)
+		: CoreGraphics (f_CoreGraphics)
+		: QtGui (f_QtGui)
+		: Cairo (f_Cairo)
+	:g [1, 1]
+		: V8 (f_V8)
+		: JavaScriptCore (f_JavaScriptCore)
+	:g [1, 1]
+		: Chromium Stack (f_Chromium_Stack)
+		: Soup (f_Soup)
+		: QtNetwork (f_QtNetwork)
+		: CFNetwork (f_CFNetwork)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

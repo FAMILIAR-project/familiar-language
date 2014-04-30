@@ -1,0 +1,32 @@
+<feature_model name="Tiendas_pos">
+<feature_tree>
+:r Tiendas_pos (f_Tiendas_pos)
+	:m Tpo_Empresa (f_Tpo_Empresa)
+	:m Productos (f_Productos)
+	:o Opcional (f_Opcional)
+	:o Lote (f_Lote)
+	:o Estructura_grupo (f_Estructura_grupo)
+	:o Procedencia (f_Procedencia)
+	:o Unidad_producto (f_Unidad_producto)
+		:g [1, 1]
+			: Volumen (f_Volumen)
+			: Peso (f_Peso)
+			: Logitud (f_Logitud)
+			: Unidad (f_Unidad)
+			: Capacidad (f_Capacidad)
+	:o Clientes (f_Clientes)
+		:g [1, 1]
+			: Detal (f_Detal)
+			: Mayorista (f_Mayorista)
+			: Institucional (f_Institucional)
+	:o Marca (f_Marca)
+	:g [1, 1]
+		: Maneja_listas (f_Maneja_listas)
+		: Digitado (f_Digitado)
+	:g [1, 1]
+		: Simplificada (f_Simplificada)
+		: Comun (f_Comun)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,32 @@
+<feature_model name="Seguridad">
+<feature_tree>
+:r Seguridad (f_Seguridad)
+	:m Herramientas de Config (f_Herramientas_de_Config)
+	:m Sistema Operativo (f_Sistema_Operativo)
+	:m Kernel (f_Kernel)
+	:m Interfaz (f_Interfaz)
+	:m Modo consola (f_Modo_consola)
+	:o Servidores (f_Servidores)
+		:g [1, *]
+			: Gama baja (f_Gama_baja)
+			: Gama alta (f_Gama_alta)
+	:o Aplicaciones (f_Aplicaciones)
+		:g [1, 1]
+			: Basica (f_Basica)
+			: Todas las aplicaciones (f_Todas_las_aplicaciones)
+				:o Modo grafico (f_Modo_grafico)
+	:g [1, 1]
+		: Server (f_Server)
+		: Advanced (f_Advanced)
+		: Home (f_Home)
+	:g [1, 1]
+		: Herramientas avanzadas (f_Herramientas_avanzadas)
+		: Todas las herramientas (f_Todas_las_herramientas)
+		: Herramientas basicas (f_Herramientas_basicas)
+</feature_tree>
+<constraints>
+constraint_1:~f_Gama_alta or f_Todas_las_herramientas
+constraint_2:~f_Herramientas_basicas or f_Home
+constraint_3:~f_Home or ~f_Gama_alta
+</constraints>
+</feature_model>

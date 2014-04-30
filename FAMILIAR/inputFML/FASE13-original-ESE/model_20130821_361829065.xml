@@ -1,0 +1,36 @@
+<feature_model name="SAP Business Suite">
+<feature_tree>
+:r SAP Business Suite (f_SAP_Business_Suite)
+	:m Manejo de stock (f_Manejo_de_stock)
+	:m Prestacion de servicios al usuario final (f_Prestacion_de_servicios_al_usuario_final)
+	:m Capacidades Funcionales (f_Capacidades_Funcionales)
+	:m Contabilidad financiera y de gestion (f_Contabilidad_financiera_y_de_gestion)
+	:m Elaboracion de informes (f_Elaboracion_de_informes)
+	:m Modulos (f_Modulos)
+	:m Control del flujo de caja y capital circulante y ROI (f_Control_del_flujo_de_caja_y_capital_circulante_y_ROI)
+	:m Control sobre el dinero en efectivo-liquidez y el riesgo financiero (f_Control_sobre_el_dinero_en_efectivo_liquidez_y_el_riesgo_financiero)
+	:m Control cuentas de los deudores y los cobros (f_Control_cuentas_de_los_deudores_y_los_cobros)
+	:m Gestion de talento (f_Gestion_de_talento)
+	:m Gestion de contratos-formacion-desarrollo y retencion (f_Gestion_de_contratos_formacion_desarrollo_y_retencion)
+	:m Asignacion de personal (f_Asignacion_de_personal)
+	:m Aprovisonamiento y ejecucion logistica (f_Aprovisonamiento_y_ejecucion_logistica)
+	:m Desarrollo y fabricacion de productos (f_Desarrollo_y_fabricacion_de_productos)
+	:m Ventas y servicio (f_Ventas_y_servicio)
+	:m Calculo de incentivos y comisiones (f_Calculo_de_incentivos_y_comisiones)
+	:m Gestion de la cadena de suministro financiera (f_Gestion_de_la_cadena_de_suministro_financiera)
+	:m Manejo de activos (f_Manejo_de_activos)
+	:m Capacidades No Funcionales (f_Capacidades_No_Funcionales)
+	:m Eficiencia (f_Eficiencia)
+	:m Escalabilidad (f_Escalabilidad)
+	:m Adaptabilidad (f_Adaptabilidad)
+	:m Interoperabilidad (f_Interoperabilidad)
+	:m Portabilidad (f_Portabilidad)
+	:m Analisis de personal (f_Analisis_de_personal)
+	:o Finanzas (f_Finanzas)
+	:o Gestion de capital humano (f_Gestion_de_capital_humano)
+	:o Operaciones (f_Operaciones)
+	:o Servicios corporativos (f_Servicios_corporativos)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

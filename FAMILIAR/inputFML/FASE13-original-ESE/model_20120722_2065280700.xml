@@ -1,0 +1,23 @@
+<feature_model name="toyota">
+<feature_tree>
+:r toyota (f_toyota)
+	:g [1, 1]
+		: Celica (f_Celica)
+			:g [1, 1]
+				: GT (f_GT)
+				: GT-S (f_GT_S)
+		: Tundra (f_Tundra)
+			:g [1, *]
+				: 4x4 (f_4x4)
+					:o Long Bed (f_Long_Bed)
+				: 2x2 (f_2x2)
+				: Short Bed (f_Short_Bed)
+		: Corrola (f_Corrola)
+			:g [1, 1]
+				: LE (f_LE)
+				: XLE (f_XLE)
+				: Sports (f_Sports)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

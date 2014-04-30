@@ -1,0 +1,23 @@
+<feature_model name="Forma de pago">
+<feature_tree>
+:r Forma de pago (f_Forma_de_pago)
+	:m Twitter (f_Twitter)
+	:m Gestion de actividades y transporte (f_Gestion_de_actividades_y_transporte)
+	:m Gestion de recuerdos (f_Gestion_de_recuerdos)
+	:m Busqueda de transporte (f_Busqueda_de_transporte)
+	:m Uniandes (f_Uniandes)
+	:m Linkedin (f_Linkedin)
+	:m Busqueda de lugar (f_Busqueda_de_lugar)
+	:m VacacionesFuertes (f_VacacionesFuertes)
+	:m Facebook (f_Facebook)
+	:m Autenticacion (f_Autenticacion)
+	:o Auditoria (f_Auditoria)
+	:o Busqueda de actividades (f_Busqueda_de_actividades)
+	:o Album de fotografias (f_Album_de_fotografias)
+		:m Album (f_Album)
+		:o Album de audios (f_Album_de_audios)
+		:o Album de videos (f_Album_de_videos)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

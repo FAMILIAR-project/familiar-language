@@ -1,0 +1,26 @@
+<feature_model name="Motivo Consulta">
+<feature_tree>
+:r Motivo Consulta (f_Motivo_Consulta)
+	:m Antecedentes Personales (f_Antecedentes_Personales)
+	:m Antecedentes familiares (f_Antecedentes_familiares)
+	:m historiaclinica (f_historiaclinica)
+	:m Antecedentes Odontologicos (f_Antecedentes_Odontologicos)
+	:m Datos Consulta (f_Datos_Consulta)
+	:m anamnesis (f_anamnesis)
+	:m Signos Vitales (f_Signos_Vitales)
+	:m Diagnostico (f_Diagnostico)
+	:m Datos Antropometricos (f_Datos_Antropometricos)
+	:m Signos (f_Signos)
+	:m Patologia Recien Nacido (f_Patologia_Recien_Nacido)
+	:m Enfermedad Actual (f_Enfermedad_Actual)
+	:m Antesedentes (f_Antesedentes)
+	:o Aspecto Familiar (f_Aspecto_Familiar)
+	:o Evoluvion (f_Evoluvion)
+	:o Antecedentes Perinatales (f_Antecedentes_Perinatales)
+		:o Antecedentes Patologicos (f_Antecedentes_Patologicos)
+	:o Datos Adiciales (f_Datos_Adiciales)
+	:o Aspecto Alimentario (f_Aspecto_Alimentario)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

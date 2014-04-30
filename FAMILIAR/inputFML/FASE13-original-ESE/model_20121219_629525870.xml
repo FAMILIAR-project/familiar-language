@@ -1,0 +1,28 @@
+<feature_model name="Analyst">
+<feature_tree>
+:r Analyst (f_Analyst)
+	:m Roles (f_Roles)
+	:m Requirements Draft (f_Requirements_Draft)
+	:m SRS (f_SRS)
+	:m Define Requirements (f_Define_Requirements)
+	:m Tasks (f_Tasks)
+	:m Requierments (f_Requierments)
+	:m Verify Requirements (f_Verify_Requirements)
+	:m Work Products (f_Work_Products)
+	:o Architect (f_Architect)
+		:o Develop Non Functional Requirements (f_Develop_Non_Functional_Requirements)
+			:o Non Functional Requirements (f_Non_Functional_Requirements)
+	:g [1, 1]
+		: Analyst with Use Case Skills (f_Analyst_with_Use_Case_Skills)
+		: Functional Analyst (f_Functional_Analyst)
+	:g [1, 1]
+		: Use Case Model (f_Use_Case_Model)
+			:m Define Requirements with Use Cases (f_Define_Requirements_with_Use_Cases)
+		: Define Requirements with Scenarios (f_Define_Requirements_with_Scenarios)
+			:m RTF Document (f_RTF_Document)
+</feature_tree>
+<constraints>
+constraint_1:~f_Functional_Analyst or f_Define_Requirements_with_Scenarios
+constraint_2:~f_Use_Case_Model or f_Analyst_with_Use_Case_Skills
+</constraints>
+</feature_model>

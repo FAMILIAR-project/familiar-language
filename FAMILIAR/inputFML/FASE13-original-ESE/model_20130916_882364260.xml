@@ -1,0 +1,21 @@
+<feature_model name="Set Favourites">
+<feature_tree>
+:r Set Favourites (f_Set_Favourites)
+	:m Mdia Selection (f_Mdia_Selection)
+	:m View Favourites (f_View_Favourites)
+	:m Mobile Media (f_Mobile_Media)
+	:m Photo (f_Photo)
+	:m Screen Size (f_Screen_Size)
+	:m Screen 1 (f_Screen_1)
+	:m Media Management (f_Media_Management)
+	:m Favourites (f_Favourites)
+	:o Video (f_Video)
+	:o Copy Media (f_Copy_Media)
+		:o SMS Transfer (f_SMS_Transfer)
+			:o Receive Photo (f_Receive_Photo)
+			:o Send Photo (f_Send_Photo)
+	:o Music (f_Music)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

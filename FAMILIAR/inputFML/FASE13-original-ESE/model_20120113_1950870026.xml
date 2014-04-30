@@ -1,0 +1,19 @@
+<feature_model name="eShop">
+<feature_tree>
+:r eShop (f_eShop)
+	:m security (f_security)
+	:m catalogue (f_catalogue)
+	:m payment (f_payment)
+	:o search (f_search)
+	:g [1, *]
+		: bank trasnsfer (f_bank_trasnsfer)
+		: e-coins (f_e_coins)
+		: credit card (f_credit_card)
+	:g [1, 1]
+		: high (f_high)
+		: standard (f_standard)
+</feature_tree>
+<constraints>
+constraint_1:~f_credit_card or f_high
+</constraints>
+</feature_model>

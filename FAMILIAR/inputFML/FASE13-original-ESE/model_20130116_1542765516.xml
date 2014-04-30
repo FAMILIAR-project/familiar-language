@@ -1,0 +1,17 @@
+<feature_model name="b">
+<feature_tree>
+:r b (f_b)
+	:m atom (f_atom)
+	:m a (f_a)
+	:m atam (f_atam)
+	:m atim (f_atim)
+	:m f (f_f)
+	:o c (f_c)
+		:g [1, 1]
+			: d (f_d)
+			: e (f_e)
+	:o atem (f_atem)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

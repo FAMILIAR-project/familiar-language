@@ -1,0 +1,38 @@
+<feature_model name="User Interface">
+<feature_tree>
+:r User Interface (f_User_Interface)
+	:m Withdrawn money (f_Withdrawn_money)
+	:m Banking functionality (f_Banking_functionality)
+	:m View transaction (f_View_transaction)
+	:m Checking balance (f_Checking_balance)
+	:m Printing balance after withdrawal (f_Printing_balance_after_withdrawal)
+	:m ATM software (f_ATM_software)
+	:m Change account password (f_Change_account_password)
+	:o Local transfer to the same bank (f_Local_transfer_to_the_same_bank)
+	:o Printing statement (f_Printing_statement)
+	:o Deposit money (f_Deposit_money)
+	:o Checking money exchange rate (f_Checking_money_exchange_rate)
+	:o Change maximum limit for withdrawal (f_Change_maximum_limit_for_withdrawal)
+	:o Money exchange (f_Money_exchange)
+	:o Local transfer to other banks (f_Local_transfer_to_other_banks)
+		:g [1, *]
+			: Detusch bank (f_Detusch_bank)
+			: Volksbank (f_Volksbank)
+			: Stadtparkasse (f_Stadtparkasse)
+	:o International transfer (f_International_transfer)
+	:o Additional functionality (f_Additional_functionality)
+		:o Mobile top-up (f_Mobile_top_up)
+		:o Language selection (f_Language_selection)
+			:g [1, 1]
+				: German (f_German)
+				: French (f_French)
+				: English (f_English)
+				: Italian (f_Italian)
+		:o Pay the bills (f_Pay_the_bills)
+	:g [1, 1]
+		: Deluxe 3D view (f_Deluxe_3D_view)
+		: Basic 2D view (f_Basic_2D_view)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

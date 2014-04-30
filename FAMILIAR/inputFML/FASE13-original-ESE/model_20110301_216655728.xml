@@ -1,0 +1,16 @@
+<feature_model name="engine">
+<feature_tree>
+:r engine (f_engine)
+	:m 1 (f_1)
+	:m 2 (f_2)
+	:m 3 (f_3)
+	:m 7 (f_7)
+	:m 4 (f_4)
+	:m car (f_car)
+	:m transition (f_transition)
+	:m 6 (f_6)
+	:o 5 (f_5)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,21 @@
+<feature_model name="acarlos_trab2_mobile">
+<feature_tree>
+:r acarlos_trab2_mobile (f_acarlos_trab2_mobile)
+	:m display (f_display)
+	:m calls (f_calls)
+	:o media (f_media)
+		:g [1, *]
+			: camera (f_camera)
+			: mp3 (f_mp3)
+	:o gps (f_gps)
+	:g [1, 1]
+		: colour (f_colour)
+		: basic (f_basic)
+		: high resolution (f_high_resolution)
+</feature_tree>
+<constraints>
+constraint_1:~f_camera or f_acarlos_trab2_mobile
+constraint_2:~f_camera or f_high_resolution
+constraint_3:~f_basic or ~f_gps
+</constraints>
+</feature_model>

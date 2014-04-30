@@ -1,0 +1,21 @@
+<feature_model name="Multiplicador_N_Matrices">
+<feature_tree>
+:r Multiplicador_N_Matrices (f_Multiplicador_N_Matrices)
+	:m Almacenamiento (f_Almacenamiento)
+	:m Multiplicador_2_Matrices (f_Multiplicador_2_Matrices)
+	:o Parentizacion (f_Parentizacion)
+		:m Recuperacion (f_Recuperacion)
+		:g [1, 1]
+			: Paralela (f_Paralela)
+			: Secuencial (f_Secuencial)
+	:g [1, 1]
+		: Distribuido (f_Distribuido)
+		: Compartido (f_Compartido)
+	:g [1, 1]
+		: Hybrid_Multiplication (f_Hybrid_Multiplication)
+		: Strassen (f_Strassen)
+		: Block_Reduce (f_Block_Reduce)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,24 @@
+<feature_model name="portas">
+<feature_tree>
+:r portas (f_portas)
+	:m Transmissao (f_Transmissao)
+	:m Potencia (f_Potencia)
+	:m Carro (f_Carro)
+	:o ar condicionado (f_ar_condicionado)
+	:g [1, *]
+		: Luzes (f_Luzes)
+		: bola (f_bola)
+	:g [1, 1]
+		: manual (f_manual)
+		: automatica (f_automatica)
+	:g [1, 1]
+		: 90 (f_90)
+		: 100 (f_100)
+		: 120 (f_120)
+	:g [1, 1]
+		: 4 (f_4)
+		: 2 (f_2)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

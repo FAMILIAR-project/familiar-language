@@ -1,0 +1,24 @@
+<feature_model name="Desktop Manager">
+<feature_tree>
+:r Desktop Manager (f_Desktop_Manager)
+	:m Project Portal Suite (f_Project_Portal_Suite)
+	:m Biblioteca documental de ingenieria (f_Biblioteca_documental_de_ingenieria)
+	:m Plantilla de Proyecto (f_Plantilla_de_Proyecto)
+	:o Staffing Management (f_Staffing_Management)
+	:o Program and Control Management (f_Program_and_Control_Management)
+	:o Best Practices and Lessons Learned (f_Best_Practices_and_Lessons_Learned)
+	:o Compliance Management (f_Compliance_Management)
+	:o Indicadores y Reportes (f_Indicadores_y_Reportes)
+	:o Biblioteca documental normativa (f_Biblioteca_documental_normativa)
+	:o Biblioteca documental de contratos (f_Biblioteca_documental_de_contratos)
+	:o Base de conocimiento (f_Base_de_conocimiento)
+	:o Registros financieros (f_Registros_financieros)
+	:o Registro de cargos y personas (f_Registro_de_cargos_y_personas)
+	:o Biblioteca documental de personas (f_Biblioteca_documental_de_personas)
+	:o Executive Dashboard (f_Executive_Dashboard)
+	:o Engineering Document Management (f_Engineering_Document_Management)
+	:o Contract Management (f_Contract_Management)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

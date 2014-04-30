@@ -1,0 +1,26 @@
+<feature_model name="Modelo_de_desenvolvimento">
+<feature_tree>
+:r Modelo_de_desenvolvimento (f_Modelo_de_desenvolvimento)
+	:m Cartas (f_Cartas)
+	:m Idioma (f_Idioma)
+	:m Jogadores (f_Jogadores)
+	:m JogosES (f_JogosES)
+	:o Tabuleiro (f_Tabuleiro)
+	:o Dado (f_Dado)
+	:g [1, 1]
+		: Abstratas-2 (f_Abstratas_2)
+		: Informativas-1 (f_Informativas_1)
+	:g [1, 1]
+		: Entre_quatro_e_oito-1 (f_Entre_quatro_e_oito_1)
+		: Quantidade_aleatoria (f_Quantidade_aleatoria)
+	:g [1, 1]
+		: XP-3 (f_XP_3)
+		: Cascata-1 (f_Cascata_1)
+		: Espiral-2 (f_Espiral_2)
+	:g [1, 1]
+		: Ingles-1 (f_Ingles_1)
+		: Portugues-2 (f_Portugues_2)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

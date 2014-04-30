@@ -1,0 +1,43 @@
+<feature_model name="Bike">
+<feature_tree>
+:r Bike (f_Bike)
+	:m AccessMgmtSys (f_AccessMgmtSys)
+	:m UserRegistration (f_UserRegistration)
+	:m Bikesharing (f_Bikesharing)
+	:m Users (f_Users)
+	:m DockingStation (f_DockingStation)
+	:o Maintenance (f_Maintenance)
+	:o Status (f_Status)
+		:g [1, *]
+			: RTInfoWeb (f_RTInfoWeb)
+			: AllBikesNow (f_AllBikesNow)
+	:o Redistribution (f_Redistribution)
+		:o Reward (f_Reward)
+	:o Localization (f_Localization)
+		:g [1, *]
+			: GPS (f_GPS)
+				:o Antithieves (f_Antithieves)
+			: RFID (f_RFID)
+	:g [1, *]
+		: DockStat (f_DockStat)
+		: WebReg (f_WebReg)
+		: KioskReg (f_KioskReg)
+			:o CreditCards (f_CreditCards)
+			:o KeycardReader (f_KeycardReader)
+			:o TouchScreen (f_TouchScreen)
+	:g [1, *]
+		: Keycard (f_Keycard)
+			:m KeycardDispenser (f_KeycardDispenser)
+		: SmartCard (f_SmartCard)
+		: SmartPhone (f_SmartPhone)
+	:g [1, 1]
+		: Flexible (f_Flexible)
+		: Fixed (f_Fixed)
+		: FixedPortable (f_FixedPortable)
+</feature_tree>
+<constraints>
+constraint_1:~f_AllBikesNow or f_Bike
+constraint_2:~f_AllBikesNow or f_GPS
+constraint_3:~f_Keycard or f_KeycardReader
+</constraints>
+</feature_model>

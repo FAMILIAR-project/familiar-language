@@ -1,0 +1,20 @@
+<feature_model name="MyRoot">
+<feature_tree>
+:r MyRoot (f_MyRoot)
+	:m MyFeature (f_MyFeature)
+	:o opt (f_opt)
+	:o MyFeature2 (f_MyFeature2)
+		:g [1, 1]
+			: Light (f_Light)
+			: Dark (f_Dark)
+			: None (f_None)
+	:g [1, 1]
+		: Green (f_Green)
+		: Blue (f_Blue)
+		: Red (f_Red)
+</feature_tree>
+<constraints>
+constraint_1:~f_Dark or f_MyRoot
+constraint_2:~f_Dark or f_Green
+</constraints>
+</feature_model>

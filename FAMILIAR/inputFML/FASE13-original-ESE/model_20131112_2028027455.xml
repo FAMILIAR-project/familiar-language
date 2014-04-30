@@ -1,0 +1,22 @@
+<feature_model name="multimediaFile">
+<feature_tree>
+:r multimediaFile (f_multimediaFile)
+	:m Myholidays (f_Myholidays)
+	:m authentication (f_authentication)
+	:m user (f_user)
+	:o auditoria (f_auditoria)
+	:o pagos (f_pagos)
+	:g [1, *]
+		: imagen (f_imagen)
+		: sound (f_sound)
+		: video (f_video)
+	:g [1, 1]
+		: basic (f_basic)
+		: premium (f_premium)
+	:g [1, 1]
+		: facebook (f_facebook)
+		: google (f_google)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

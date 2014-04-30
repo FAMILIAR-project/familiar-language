@@ -1,0 +1,24 @@
+<feature_model name="product">
+<feature_tree>
+:r product (f_product)
+	:m myholidays (f_myholidays)
+	:m myholidays-master (f_myholidays_master)
+	:m user (f_user)
+	:m user-master (f_user_master)
+	:m event-master (f_event_master)
+	:m memory (f_memory)
+	:m itinerary-master (f_itinerary_master)
+	:m itinerary (f_itinerary)
+	:m event (f_event)
+	:o audit (f_audit)
+	:o memory-search (f_memory_search)
+	:o itinerary-report (f_itinerary_report)
+	:o itinerary-master-price (f_itinerary_master_price)
+	:o event-rate (f_event_rate)
+	:o memory-master (f_memory_master)
+		:o multimediafile (f_multimediafile)
+			:o multimediafile-visor (f_multimediafile_visor)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

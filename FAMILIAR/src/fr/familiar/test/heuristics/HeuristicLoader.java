@@ -46,42 +46,42 @@ public class HeuristicLoader {
 				metrics.add(smithWaterman);
 				clusteringThresholds.put(smithWaterman, 0.6);
 
-//				levenshtein = new LevenshteinMetric();
-//				metrics.add(levenshtein);
-//				clusteringThresholds.put(levenshtein, 0.7);
+				levenshtein = new LevenshteinMetric();
+				metrics.add(levenshtein);
+				clusteringThresholds.put(levenshtein, 0.7);
 
 				// WordNet metrics
 				if (new File(WORDNET_DB).exists()) {
-//					wup = new WuPalmerMetric();
-//					wup.init(new File(WORDNET_DB));
-//					metrics.add(wup);
-//					clusteringThresholds.put(wup, 0.2);
-//
-//					pathLength = new PathLengthMetric();
-//					pathLength.init(new File(WORDNET_DB));
-//					metrics.add(pathLength);
-//					clusteringThresholds.put(pathLength, 0.5);
+					wup = new WuPalmerMetric();
+					wup.init(new File(WORDNET_DB));
+					metrics.add(wup);
+					clusteringThresholds.put(wup, 0.2);
+
+					pathLength = new PathLengthMetric();
+					pathLength.init(new File(WORDNET_DB));
+					metrics.add(pathLength);
+					clusteringThresholds.put(pathLength, 0.5);
 					
 //					directedPathLength = new DirectedPathLengthMetric(wordNetDictionary);
 //					metrics.add(directedPathLength);
 //					clusteringThresholds.put(directedPathLength, 0.5);
 				}
 
-//				// WikipediaMiner metrics
-//					wikiMetric = new WikipediaMinerMetric();
-//					wikiMetric.init(new File(WIKIPEDIA_DB));
-//					metrics.add(wikiMetric);
-//					clusteringThresholds.put(wikiMetric, 0.5);	
-//				
-//					wiktionaryMetric = new WikipediaMinerMetric();
-//					wiktionaryMetric.init(new File(WIKTIONARY_DB));
-//					metrics.add(wiktionaryMetric);
-//					clusteringThresholds.put(wiktionaryMetric, 0.5);	
-//
-//				// Transitive reduction metric
-//				reductionMetric = new TransitiveReductionMetric();
-//				metrics.add(reductionMetric);
-//				clusteringThresholds.put(reductionMetric, 0.5);
+				// WikipediaMiner metrics
+				wikiMetric = new WikipediaMinerMetric();
+				wikiMetric.init(new File(WIKIPEDIA_DB));
+				metrics.add(wikiMetric);
+				clusteringThresholds.put(wikiMetric, 0.5);	
+
+				wiktionaryMetric = new WikipediaMinerMetric();
+				wiktionaryMetric.init(new File(WIKTIONARY_DB));
+				metrics.add(wiktionaryMetric);
+				clusteringThresholds.put(wiktionaryMetric, 0.5);	
+
+				// Transitive reduction metric
+				reductionMetric = new TransitiveReductionMetric();
+				metrics.add(reductionMetric);
+				clusteringThresholds.put(reductionMetric, 0.5);
 				
 //				HybridMetric hybrid = new HybridMetric(wikiMetric);
 //				metrics.add(hybrid);

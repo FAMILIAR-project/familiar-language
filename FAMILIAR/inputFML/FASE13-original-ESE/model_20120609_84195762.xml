@@ -1,0 +1,38 @@
+<feature_model name="Cinto de seguranca">
+<feature_tree>
+:r Cinto de seguranca (f_Cinto_de_seguranca)
+	:m Freios (f_Freios)
+	:m Rodas (f_Rodas)
+	:m Volante (f_Volante)
+	:m Carro (f_Carro)
+	:m Motor (f_Motor)
+	:m Pneu (f_Pneu)
+	:m Chassi (f_Chassi)
+	:m Bancos (f_Bancos)
+	:m Farol (f_Farol)
+	:m Bateria (f_Bateria)
+	:o Airbag (f_Airbag)
+		:g [1, *]
+			: Frontal (f_Frontal)
+			: Lateral (f_Lateral)
+	:o Alarme (f_Alarme)
+	:o Farol de neblina (f_Farol_de_neblina)
+	:g [1, 1]
+		: Xenon (f_Xenon)
+		: Halogeno (f_Halogeno)
+	:g [1, 1]
+		: Convencional (f_Convencional)
+		: ABS (f_ABS)
+	:g [1, 1]
+		: Couro (f_Couro)
+		: Tecido (f_Tecido)
+	:g [1, 1]
+		: 2 Portas (f_2_Portas)
+		: 4 Portas (f_4_Portas)
+	:g [1, 1]
+		: Liga leve (f_Liga_leve)
+		: Aco (f_Aco)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

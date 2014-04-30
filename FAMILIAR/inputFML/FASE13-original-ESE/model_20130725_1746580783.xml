@@ -1,0 +1,25 @@
+<feature_model name="sisgeo">
+<feature_tree>
+:r sisgeo (f_sisgeo)
+	:m Ubicacion (f_Ubicacion)
+	:m Indicaciones (f_Indicaciones)
+	:o Capas (f_Capas)
+		:m Mapa (f_Mapa)
+		:o Zonas (f_Zonas)
+		:g [1, *]
+			: Relieve (f_Relieve)
+			: Satelite (f_Satelite)
+			: Ruta (f_Ruta)
+			: Mallavial (f_Mallavial)
+			: Aplicaciones (f_Aplicaciones)
+			: Trafico (f_Trafico)
+			: Puntosinteres (f_Puntosinteres)
+	:g [1, *]
+		: Vibratorio (f_Vibratorio)
+		: Visual (f_Visual)
+		: Auditivo (f_Auditivo)
+</feature_tree>
+<constraints>
+constraint_1:~f_Relieve or ~f_Satelite
+</constraints>
+</feature_model>

@@ -1,0 +1,21 @@
+<feature_model name="Mobile media">
+<feature_tree>
+:r Mobile media (f_Mobile_media)
+	:m Album management (f_Album_management)
+	:m Create album (f_Create_album)
+	:m Delete album (f_Delete_album)
+	:m Photo management (f_Photo_management)
+	:m Create photo (f_Create_photo)
+	:m Photo operation (f_Photo_operation)
+	:m Delete photo (f_Delete_photo)
+	:m Edit photo label (f_Edit_photo_label)
+	:m View photo (f_View_photo)
+	:o Favorites (f_Favorites)
+		:m View favorites (f_View_favorites)
+		:m Set favorites (f_Set_favorites)
+	:o Copy photo (f_Copy_photo)
+	:o Sorting (f_Sorting)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,24 @@
+<feature_model name="Escoamento">
+<feature_tree>
+:r Escoamento (f_Escoamento)
+	:m Armazenamento (f_Armazenamento)
+	:m Coff (f_Coff)
+	:o Armazenamento de condimentos (f_Armazenamento_de_condimentos)
+	:o Preparo (f_Preparo)
+		:o Controle de temperatura (f_Controle_de_temperatura)
+	:o User input (f_User_input)
+	:o Persistencia (f_Persistencia)
+	:g [1, *]
+		: Saches (f_Saches)
+		: Po (f_Po)
+		: Graos (f_Graos)
+	:g [1, *]
+		: Interno (f_Interno)
+		: Externo (f_Externo)
+	:g [1, *]
+		: Valor-predefinido (f_Valor_predefinido)
+		: Por input (f_Por_input)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

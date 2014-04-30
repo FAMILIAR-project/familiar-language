@@ -1,0 +1,49 @@
+<feature_model name="Cobrancas">
+<feature_tree>
+:r Cobrancas (f_Cobrancas)
+	:m Repasse (f_Repasse)
+	:m Health Plan Diogo (f_Health_Plan_Diogo)
+	:m Atendimento (f_Atendimento)
+	:o Prestador (f_Prestador)
+		:g [1, *]
+			: Solicitacao de Atendimentos (f_Solicitacao_de_Atendimentos)
+			: Consulta Repasse (f_Consulta_Repasse)
+			: Envio TISS (f_Envio_TISS)
+	:o Portal Web Benefciario (f_Portal_Web_Benefciario)
+		:g [1, *]
+			: Historico Atendimentos (f_Historico_Atendimentos)
+			: Pagamentos (f_Pagamentos)
+			: Imposto de Renda (f_Imposto_de_Renda)
+	:g [1, *]
+		: Odontologico (f_Odontologico)
+		: Medico (f_Medico)
+			:g [1, *]
+				: Internacao (f_Internacao)
+					:g [1, *]
+						: Internacao Eletiva (f_Internacao_Eletiva)
+						: Internacao Urgencia (f_Internacao_Urgencia)
+				: Ambulatorio (f_Ambulatorio)
+					:g [1, *]
+						: Ambulatorio Urgencia (f_Ambulatorio_Urgencia)
+						: Ambulatorio Eletiva (f_Ambulatorio_Eletiva)
+	:g [1, *]
+		: Consignacao (f_Consignacao)
+		: Boletos (f_Boletos)
+		: Cartao de credito (f_Cartao_de_credito)
+		: Debito em conta (f_Debito_em_conta)
+			:g [1, *]
+				: Caixa (f_Caixa)
+				: Bradesco (f_Bradesco)
+				: Banco do Brasil (f_Banco_do_Brasil)
+	:g [1, 1]
+		: Exportacao PDF (f_Exportacao_PDF)
+		: Geracao arquivos bancarios (f_Geracao_arquivos_bancarios)
+</feature_tree>
+<constraints>
+constraint_1:~f_Internacao_Urgencia or f_Ambulatorio_Urgencia
+constraint_2:~f_Consulta_Repasse or f_Geracao_arquivos_bancarios
+constraint_3:~f_Internacao or f_Cobrancas
+constraint_4:~f_Internacao or f_Prestador
+constraint_5:~f_Odontologico or f_Boletos
+</constraints>
+</feature_model>

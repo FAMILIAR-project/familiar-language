@@ -1,0 +1,42 @@
+<feature_model name="Pencatatan Data Pasien">
+<feature_tree>
+:r Pencatatan Data Pasien (f_Pencatatan_Data_Pasien)
+	:m Payment (f_Payment)
+	:m Lab (f_Lab)
+	:m Rawat Inap (f_Rawat_Inap)
+	:m Pemesanan Kamar (f_Pemesanan_Kamar)
+	:m Cek Ketersediaan Kamar (f_Cek_Ketersediaan_Kamar)
+	:m RSMIK (f_RSMIK)
+	:m Klinik (f_Klinik)
+	:m Penyediaan Kamar (f_Penyediaan_Kamar)
+	:m Office (f_Office)
+	:m UGD (f_UGD)
+	:m Biaya Pengeluaran Pasien (f_Biaya_Pengeluaran_Pasien)
+	:o Maintenance (f_Maintenance)
+		:g [1, 1]
+			: Backup (f_Backup)
+			: Recovery (f_Recovery)
+	:o Koneksi Internet (f_Koneksi_Internet)
+		:g [1, *]
+			: WiFi (f_WiFi)
+			: LAN (f_LAN)
+	:o Unit Baru (f_Unit_Baru)
+	:o Penambahan Jumlah Kamar (f_Penambahan_Jumlah_Kamar)
+	:o Kerjasama Regional (f_Kerjasama_Regional)
+	:g [1, *]
+		: Transfer (f_Transfer)
+		: Credit Card (f_Credit_Card)
+		: Asuransi (f_Asuransi)
+		: Tunai (f_Tunai)
+	:g [1, 1]
+		: Unit Lain (f_Unit_Lain)
+		: Kasus Khusus (f_Kasus_Khusus)
+		: Dokter Praktek Umum (f_Dokter_Praktek_Umum)
+		: Rumah Sakit Klinik Lain (f_Rumah_Sakit_Klinik_Lain)
+	:g [1, 1]
+		: Khusus (f_Khusus)
+		: Umum (f_Umum)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

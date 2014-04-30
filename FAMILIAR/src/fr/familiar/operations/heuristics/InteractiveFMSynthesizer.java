@@ -975,13 +975,15 @@ public class InteractiveFMSynthesizer extends Observable{
 	 * Transitively reduce the implication graph
 	 */
 	public void reduceBIG() {
-		ImplicationGraph<Set<String>> reducedGraph = big.reduceCliques();
+		WeightedImplicationGraph<String> implicationGraph = big.clone();
+		ImplicationGraph<Set<String>> reducedGraph = implicationGraph.reduceCliques();
 		TransitiveReduction.INSTANCE.reduce(reducedGraph);
+		
 		
 		WeightedImplicationGraph<String> reducedBIG = new WeightedImplicationGraph<String>();
 		
 		// Create vertices
-		for (String feature : big.vertices()) {
+		for (String feature : implicationGraph.vertices()) {
 			reducedBIG.addVertex(feature);
 		}
 		
@@ -993,12 +995,20 @@ public class InteractiveFMSynthesizer extends Observable{
 			for (String child : source) {
 				for (String parent : target) {
 					SimpleEdge newEdge = reducedBIG.addEdge(child, parent);
-					reducedBIG.setEdgeWeight(newEdge, big.getEdgeWeight(big.findEdge(child, parent)));
+					reducedBIG.setEdgeWeight(newEdge, implicationGraph.getEdgeWeight(implicationGraph.findEdge(child, parent)));
 				}
 			}
 		}
 		
-		this.big = reducedBIG;
+		for (SimpleEdge edge : implicationGraph.edges()) {
+			String child = implicationGraph.getEdgeSource(edge);
+			String parent = implicationGraph.getEdgeTarget(edge);
+			if (!reducedBIG.containsEdge(child, parent)) {
+				this.ignoreParentUnrecorded(child, parent);
+			}
+		}
+		
+//		this.big = reducedBIG;
 	}
 	
 }

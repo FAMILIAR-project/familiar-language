@@ -1,0 +1,30 @@
+<feature_model name="Delete Media">
+<feature_tree>
+:r Delete Media (f_Delete_Media)
+	:m Basic Media Operation (f_Basic_Media_Operation)
+	:m Edit Media Label (f_Edit_Media_Label)
+	:m Media Selection (f_Media_Selection)
+	:m Erase Media (f_Erase_Media)
+	:m Album Management (f_Album_Management)
+	:m Media Management (f_Media_Management)
+	:m Mobile Media (f_Mobile_Media)
+	:m Create Album (f_Create_Album)
+	:m Delete Album (f_Delete_Album)
+	:o Receive Photo (f_Receive_Photo)
+		:m Send Photo (f_Send_Photo)
+		:m SMS Transfer (f_SMS_Transfer)
+	:o Copy Media (f_Copy_Media)
+	:o Sorting (f_Sorting)
+	:o View Favorites (f_View_Favorites)
+		:m Favorites (f_Favorites)
+		:m Set Favorites (f_Set_Favorites)
+	:g [1, *]
+		: Play Music (f_Play_Music)
+			:m Music (f_Music)
+		: View Photo (f_View_Photo)
+			:m Photo (f_Photo)
+			:o Capture Photo (f_Capture_Photo)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -50,7 +50,7 @@ import gsd.synthesis.FeatureNode;
 public abstract class KSynthesisTest extends FMLTest {
 
 	
-	private static final String SPLOT_FOLDER = "inputFML/splot-models-2012-08-07";
+	public static final String SPLOT_FOLDER = "inputFML/splot-models-2012-08-07";
 	
 	private static final String PCM_FOLDER = "inputFML/ICSE2014-PCMs";
 //	private static final String FASE_FOLDER = "inputFML/FASE13-generated-models";
@@ -65,7 +65,7 @@ public abstract class KSynthesisTest extends FMLTest {
 
 	public static final String OUTPUT_FOLDER = "output/generated-with-heuristics/";
 
-	protected static int RANDOM_ITERATIONS = 1;
+	protected static int RANDOM_ITERATIONS = 1000;
 
 	public static List<Heuristic> metrics;
 	protected static WikipediaMinerMetric wikiMetric;
@@ -270,16 +270,16 @@ public abstract class KSynthesisTest extends FMLTest {
 		metrics = new ArrayList<Heuristic>();
 		clusteringThresholds = new HashMap<Heuristic, Double>();
 
-//		// Random metric
-//		Heuristic random = new RandomMetric();
-//		metrics.add(random);
-//		clusteringThresholds.put(random, 0.15);
+		// Random metric
+		Heuristic random = new RandomMetric();
+		metrics.add(random);
+		clusteringThresholds.put(random, 0.15);
 
-		// Simmetrics metrics
-		smithWaterman = new SmithWatermanMetric();
-		metrics.add(smithWaterman);
-		clusteringThresholds.put(smithWaterman, 0.6);
-
+//		// Simmetrics metrics
+//		smithWaterman = new SmithWatermanMetric();
+//		metrics.add(smithWaterman);
+//		clusteringThresholds.put(smithWaterman, 0.6);
+//
 //		levenshtein = new LevenshteinMetric();
 //		metrics.add(levenshtein);
 //		clusteringThresholds.put(levenshtein, 0.7);
@@ -290,7 +290,7 @@ public abstract class KSynthesisTest extends FMLTest {
 //			wup.init(new File(WORDNET_DB));
 //			metrics.add(wup);
 //			clusteringThresholds.put(wup, 0.2);
-//
+
 //			pathLength = new PathLengthMetric();
 //			pathLength.init(new File(WORDNET_DB));
 //			metrics.add(pathLength);
@@ -465,7 +465,7 @@ public abstract class KSynthesisTest extends FMLTest {
 		
 		try {
 			
-			FeatureModelVariable runningExample = FM ("fm1bis", 
+			FeatureModelVariable runningExample = FM ("fm_wiki", 
 					" Wiki: Hosting Licence Storage [\"Programming Language\"] ; \n" + 
 					"Hosting: (\"Hosted Service\"|Local) ; \n" + 
 					"Licence: (\"Proprietary Licence\"|\"Open Source\") ; \n" + 

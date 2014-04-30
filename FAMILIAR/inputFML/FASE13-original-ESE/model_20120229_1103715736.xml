@@ -1,0 +1,22 @@
+<feature_model name="Enunciado">
+<feature_tree>
+:r Enunciado (f_Enunciado)
+	:m Tipo de resposta (f_Tipo_de_resposta)
+	:m ISE (f_ISE)
+	:o Caracteristicas (f_Caracteristicas)
+		:o Feedback (f_Feedback)
+		:o Assunto (f_Assunto)
+		:o Temporizacao (f_Temporizacao)
+		:o Multimidia (f_Multimidia)
+		:o Dificuldade (f_Dificuldade)
+	:g [1, *]
+		: Aberta (f_Aberta)
+		: Objetiva (f_Objetiva)
+		: MultiplaEscolha (f_MultiplaEscolha)
+	:g [1, 1]
+		: TextoPuro (f_TextoPuro)
+		: TextoRico (f_TextoRico)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

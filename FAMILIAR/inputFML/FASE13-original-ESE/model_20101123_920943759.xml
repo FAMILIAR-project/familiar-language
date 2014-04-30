@@ -1,0 +1,22 @@
+<feature_model name="Technical approval">
+<feature_tree>
+:r Technical approval (f_Technical_approval)
+	:m Vendor Management System (f_Vendor_Management_System)
+	:m Vendor details (f_Vendor_details)
+	:m Feature-11 (f_Feature_11)
+	:m Commercial approval (f_Commercial_approval)
+	:m Feature-7 (f_Feature_7)
+	:m Feature-9 (f_Feature_9)
+	:m Feature-13 (f_Feature_13)
+	:o Feature-21 (f_Feature_21)
+	:o Feature-22 (f_Feature_22)
+	:g [1, *]
+		: Feature-20 (f_Feature_20)
+			:m Feature-15 (f_Feature_15)
+			:o Feature-17 (f_Feature_17)
+		: Feature-16 (f_Feature_16)
+		: Feature-18 (f_Feature_18)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

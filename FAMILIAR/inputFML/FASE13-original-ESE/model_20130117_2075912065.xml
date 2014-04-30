@@ -1,0 +1,24 @@
+<feature_model name="Analisis">
+<feature_tree>
+:r Analisis (f_Analisis)
+	:m Analizar un Caso de Uso (f_Analizar_un_Caso_de_Uso)
+	:m Analizar una Clase (f_Analizar_una_Clase)
+	:m Analizar un paquete (f_Analizar_un_paquete)
+	:o Realizar un esquema de la Arquitectura (f_Realizar_un_esquema_de_la_Arquitectura)
+		:g [1, 1]
+			: Realizar un Bosquejo de la Arquitectura (f_Realizar_un_Bosquejo_de_la_Arquitectura)
+			: Crear una Arquitectura de Prueba (f_Crear_una_Arquitectura_de_Prueba)
+	:g [1, 1]
+		: Definir una Arquitectura Candidata (f_Definir_una_Arquitectura_Candidata)
+			:m Analisis del Comportamiento (f_Analisis_del_Comportamiento)
+			:g [1, 1]
+				: Refinar la Arquitectura (f_Refinar_la_Arquitectura)
+				: Refinar la Arquitectura II (f_Refinar_la_Arquitectura_II)
+		: Analizar la Arquitectura (f_Analizar_la_Arquitectura)
+		: Analisis de la Arquitectura (f_Analisis_de_la_Arquitectura)
+</feature_tree>
+<constraints>
+constraint_1:~f_Analisis_de_la_Arquitectura or f_Crear_una_Arquitectura_de_Prueba
+constraint_2:~f_Analizar_la_Arquitectura or f_Realizar_un_Bosquejo_de_la_Arquitectura
+</constraints>
+</feature_model>

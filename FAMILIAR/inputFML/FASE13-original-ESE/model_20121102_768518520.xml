@@ -1,0 +1,22 @@
+<feature_model name="JhotDrawn">
+<feature_tree>
+:r JhotDrawn (f_JhotDrawn)
+	:o Lines (f_Lines)
+		:g [1, *]
+			: CurvedLine (f_CurvedLine)
+			: ElbowLine (f_ElbowLine)
+	:o Figure (f_Figure)
+		:o TextFigure (f_TextFigure)
+		:o TextAreaFigure (f_TextAreaFigure)
+		:o ImageFigure (f_ImageFigure)
+		:o Geometric (f_Geometric)
+			:g [1, *]
+				: ElipseFigure (f_ElipseFigure)
+				: RectangleFigure (f_RectangleFigure)
+				: DiamondFigure (f_DiamondFigure)
+				: TriangleFigure (f_TriangleFigure)
+				: RoundedRectanlgeFigure (f_RoundedRectanlgeFigure)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

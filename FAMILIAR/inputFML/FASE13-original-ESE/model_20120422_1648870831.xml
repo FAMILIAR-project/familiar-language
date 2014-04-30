@@ -1,0 +1,23 @@
+<feature_model name="Artefatos">
+<feature_tree>
+:r Artefatos (f_Artefatos)
+	:m Linha de Produtos (f_Linha_de_Produtos)
+	:m Engenheiro de Software (f_Engenheiro_de_Software)
+	:m Cartao de Projeto (f_Cartao_de_Projeto)
+	:o Sistema de dados (f_Sistema_de_dados)
+	:o Sistema de bugs (f_Sistema_de_bugs)
+		:g [1, 1]
+			: Sistema SimulES (f_Sistema_SimulES)
+			: Sistema PnP (f_Sistema_PnP)
+	:o Cartas (f_Cartas)
+		:g [1, *]
+			: Conceitos (f_Conceitos)
+			: Problemas (f_Problemas)
+	:o Tabuleiro (f_Tabuleiro)
+	:g [1, *]
+		: Brancos (f_Brancos)
+		: Vermelhos (f_Vermelhos)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>
