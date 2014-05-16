@@ -1,0 +1,38 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Nov 22, 2013 - 4:41 PM  -->
+<feature_model name="Cars xpto">
+<meta>
+<data name="description">asdf</data>
+<data name="creator">tomas and jorge</data>
+<data name="address"></data>
+<data name="email">jorge.quintela@hotmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">fdsa</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Car periphery supervison systems(_r)
+	:m Application(_r_1)
+		:g (_r_1_6) [1,*] 
+			: Parking support(_r_1_6_7)
+				:m Distance indication(_r_1_6_7_10)
+					:m Rear(_r_1_6_7_10_13)
+					:o Front(_r_1_6_7_10_14)
+				:o Steering assistance(_r_1_6_7_12)
+			: Precrash detection(_r_1_6_9)
+	:m Sensor equipment(_r_2)
+		:g (_r_2_15) [1,*] 
+			: Front(_r_2_15_16)
+				:g (_r_2_15_16_18) [1,1] 
+					: Low-end(_r_2_15_16_18_19)
+					: High-end(_r_2_15_16_18_20)
+			: Rear(_r_2_15_17)
+				:g (_r_2_15_17_21) [1,1] 
+					: Low-end(_r_2_15_17_21_22)
+					: High-end(_r_2_15_17_21_23)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

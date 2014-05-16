@@ -1,0 +1,61 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Dec 3, 2013 - 6:17 PM  -->
+<feature_model name="Premium1Nemocon">
+<meta>
+<data name="description">modelo de eventos 1</data>
+<data name="creator">camilo nemocon</data>
+<data name="address"></data>
+<data name="email">c-nemoco@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">uniandes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r eventos1(_r)
+	:m multimedia(_r_13)
+		:g (_r_13_14) [1,*] 
+			: imagen(_r_13_14_15)
+			: video(_r_13_14_16)
+			: sonidos(_r_13_14_17)
+	:o Feature-18(_r_18)
+		:g (_r_18_19) [1,1] 
+			: credito(_r_18_19_20)
+				:g (_r_18_19_20_21) [1,*] 
+					: pse(_r_18_19_20_21_22)
+					: paypal(_r_18_19_20_21_23)
+					: registro(_r_18_19_20_21_30)
+	:m autenticacion(_r_17)
+		:g (_r_17_18) [1,*] 
+			: mail(_r_17_18_19)
+			: pasword(_r_17_18_20)
+			: id(_r_17_18_21)
+	:o auditoria(_r_27)
+		:g (_r_27_28) [1,*] 
+			: logs(_r_27_28_29)
+			: guardar(_r_27_28_30)
+	:o Feature-18(__r_18)
+		:g (__r_18_19) [1,1] 
+			: credito(__r_18_19_20)
+				:g (__r_18_19_20_21) [1,*] 
+					: pse(__r_18_19_20_21_22)
+					: paypal(__r_18_19_20_21_23)
+					: registro(__r_18_19_20_21_30)
+	:m business intelligence(_r_19)
+		:g (_r_19_22) [1,*] 
+			: Likes(_r_19_22_23)
+			: Comentarios(_r_19_22_24)
+			: Shares(_r_19_22_25)
+			: Downloads(_r_19_22_26)
+	:m Social Media(_r_20)
+		:g (_r_20_27) [1,*] 
+			: Facebook(_r_20_27_28)
+			: twitter(_r_20_27_29)
+	:o Personalizacion(_r_21)
+		:g (_r_21_30) [1,1] 
+			: Interfaz(_r_21_30_31)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

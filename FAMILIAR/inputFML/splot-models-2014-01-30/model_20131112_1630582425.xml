@@ -1,0 +1,55 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Nov 12, 2013 - 7:41 PM  -->
+<feature_model name="Portafolios1Gomez">
+<meta>
+<data name="description">Portafolios 1</data>
+<data name="creator">Yasmina</data>
+<data name="address"></data>
+<data name="email">yasgopeza@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UNIANDES</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Portafolios1(_r)
+	:m Busqueda(_r_2)
+		:g (_r_2_3) [1,1] 
+			: Coleccion(_r_2_3_4)
+			: Miembro(_r_2_3_5)
+			: Obra(_r_2_3_6)
+	:m TipoObra(_r_8)
+		:g (_r_8_9) [1,1] 
+			: Video(_r_8_9_10)
+			: Texto(_r_8_9_11)
+			: Imagen(_r_8_9_12)
+			: Audio(_r_8_9_14)
+	:o Comentario(_r_15)
+		:g (_r_15_16) [1,*] 
+			: Obra(_r_15_16_17)
+			: Coleccion(_r_15_16_18)
+			: Miembro(_r_15_16_20)
+	:m Membresia(_r_21)
+		:g (_r_21_22) [1,1] 
+			: Basica(_r_21_22_23)
+			: Pagada(_r_21_22_24)
+				:g (_r_21_22_24_25) [1,1] 
+					: Media(_r_21_22_24_25_26)
+					: Premiun(_r_21_22_24_25_27)
+	:o Museo(_r_28)
+	:m LogIn(_r_29)
+		:g (_r_29_30) [1,1] 
+			: google(_r_29_30_31)
+			: facebook(_r_29_30_33)
+	:o Audit(_r_35)
+	:m media(_r_36)
+		:g (_r_36_37) [1,*] 
+			: video(_r_36_37_38)
+			: imagen(_r_36_37_39)
+			: Audio(_r_36_37_40)
+</feature_tree>
+<constraints>
+constraint_1:_r_21_22_24_25_27 or _r_28
+</constraints>
+</feature_model>

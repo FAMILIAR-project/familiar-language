@@ -1,0 +1,53 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Dec 2, 2013 - 8:31 PM  -->
+<feature_model name="MyHolidays">
+<meta>
+<data name="description">MyHolidays</data>
+<data name="creator">HGL||</data>
+<data name="address"></data>
+<data name="email">a@a.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">HGL</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Vacaciones(_r)
+	:m Feature-1(_r_1)
+		:m Feature-16(_r_1_16)
+		:m Feature-17(_r_1_17)
+	:o Feature-4(_r_4)
+		:m Feature-18(_r_4_18)
+		:o Feature-19(_r_4_19)
+	:m Feature-5(_r_5)
+		:m Feature-20(_r_5_20)
+		:o Feature-21(_r_5_21)
+	:m Feature-8(_r_8)
+		:m Feature-22(_r_8_22)
+		:o Feature-23(_r_8_23)
+	:m Feature-9(_r_9)
+		:m Feature-25(_r_9_25)
+		:o Feature-26(_r_9_26)
+	:m Feature-10(_r_10)
+		:m Feature-27(_r_10_27)
+		:o Feature-28(_r_10_28)
+	:m Feature-11(_r_11)
+		:m Feature-29(_r_11_29)
+		:o Feature-30(_r_11_30)
+	:m Feature-12(_r_12)
+		:m Feature-31(_r_12_31)
+		:o Feature-32(_r_12_32)
+	:m Feature-13(_r_13)
+		:m Feature-33(_r_13_33)
+		:o Feature-34(_r_13_34)
+	:m Feature-14(_r_14)
+		:o Feature-35(_r_14_35)
+		:o Feature-36(_r_14_36)
+	:m Feature-15(_r_15)
+		:m Feature-37(_r_15_37)
+		:o Feature-38(_r_15_38)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

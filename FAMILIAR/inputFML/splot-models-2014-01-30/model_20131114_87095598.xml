@@ -1,0 +1,86 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Nov 14, 2013 - 7:24 PM  -->
+<feature_model name="FM ERP-SPL">
+<meta>
+<data name="description">Feature Model ERP-SPL</data>
+<data name="creator">Moisés Pôrto Rodrigues</data>
+<data name="address"></data>
+<data name="email">mrodrigues@mrodrigues.org</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">MRodrigues.ORG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r ERP-SPL(_r)
+	:m Cadastros(_r_9)
+		:m Cadastro de cliente(_r_9_10)
+			:m Editar cadastro de cliente(_r_9_10_13)
+			:m Apagar cadastro de cliente(_r_9_10_14)
+		:m Cadastro de fornecedor(_r_9_11)
+			:m Editar cadastro de fornecedor(_r_9_11_16)
+			:m Apagar cadastro de fornecedor(_r_9_11_17)
+		:o Cadastro de funcionario(_r_9_18)
+			:m Editar cadastro de funcionario(_r_9_18_20)
+			:m Apagar cadastro de funcionario(_r_9_18_21)
+		:m Cadastro de usuario(_r_9_22)
+			:m Editar cadastro de usuario(_r_9_22_24)
+			:m Apagar cadastro de usuario(_r_9_22_25)
+		:o Cadastro de regras de acesso de usuario(_r_9_26)
+			:m Editar regras de acesso de usuario(_r_9_26_28)
+		:g (_r_9_30) [1,*] 
+			: Cadastro de produto(_r_9_30_31)
+				:m Editar cadastro de produto(_r_9_30_31_53)
+				:m Apagar cadastro de produto(_r_9_30_31_54)
+			: Cadastro de servico(_r_9_30_32)
+				:m Editar cadastro de servico(_r_9_30_32_55)
+				:m Apagar cadastro de servico(_r_9_30_32_56)
+	:m Login(_r_33)
+		:o Controle de acesso(_r_33_34)
+	:o Listagens(_r_35)
+		:m Listagem de itens(_r_35_36)
+		:o Listagem de produtos(_r_35_37)
+		:o Listagem de servicos(_r_35_38)
+		:m Listagem de pessoas(_r_35_39)
+		:m Listagem de clientes(_r_35_40)
+		:m Listagem de fornecedores(_r_35_41)
+		:o Listagem de funcionarios(_r_35_42)
+		:m Listagem de usuarios(_r_35_43)
+		:o Listagem de estoque(_r_35_77)
+	:o Controle de estoque(_r_48)
+		:g (_r_48_49) [1,*] 
+			: Entrada de estoque(_r_48_49_50)
+			: Saida de estoque(_r_48_49_51)
+			: Manutencao de estoque(_r_48_49_58)
+	:o Controle financeiro(_r_60)
+		:g (_r_60_63) [1,*] 
+			: Contas a pagar(_r_60_63_64)
+			: Contas a receber(_r_60_63_65)
+			: Manutencao de lancamentos(_r_60_63_66)
+	:m Operacoes(_r_43)
+		:g (_r_43_44) [1,*] 
+			: Entradas(_r_43_44_45)
+				:g (_r_43_44_45_47) [1,*] 
+					: Ordens de compra(_r_43_44_45_47_48)
+						:o OC_Movimentar estoque(_r_43_44_45_47_48_53)
+						:o OC_Gerar lancamentos a pagar(_r_43_44_45_47_48_54)
+					: Entradas de nota fiscal(_r_43_44_45_47_49)
+						:m ENF_Movimentar estoque(_r_43_44_45_47_49_55)
+						:m ENF_Gerar lancamentos a pagar(_r_43_44_45_47_49_56)
+			: Saidas(_r_43_44_46)
+				:g (_r_43_44_46_50) [1,*] 
+					: Orcamento(_r_43_44_46_50_51)
+						:o ORC_Movimentar estoque(_r_43_44_46_50_51_57)
+						:o ORC_Gerar lancamentos a receber(_r_43_44_46_50_51_58)
+					: Venda(_r_43_44_46_50_52)
+						:m VEN_Movimentar estoque(_r_43_44_46_50_52_59)
+						:m VEN_Gerar lancamentos a receber(_r_43_44_46_50_52_60)
+</feature_tree>
+<constraints>
+constraint_6:_r_48 or ~_r_35_77
+constraint_4:_r_9_30_31 or ~_r_35_37
+constraint_5:_r_9_30_32 or ~_r_35_38
+constraint_3:_r_9_18 or ~_r_35_42
+</constraints>
+</feature_model>

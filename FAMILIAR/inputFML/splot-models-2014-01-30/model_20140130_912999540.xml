@@ -1,0 +1,35 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Jan 30, 2014 - 4:13 AM  -->
+<feature_model name="FMConfig">
+<meta>
+<data name="description">FM Test to try configuration tools</data>
+<data name="creator">Simon Urli</data>
+<data name="address"></data>
+<data name="email">urli@i3s.unice.fr</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">I3S</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r testConfig(_r)
+	:o A(_r_1)
+	:o B(_r_2)
+	:o C(_r_3)
+	:g (_r_4) [1,1] 
+		: D(_r_4_5)
+		: E(_r_4_7)
+		: F(_r_4_8)
+	:o X(_r_6)
+		:o Y(_r_6_9)
+		:m Z(_r_6_10)
+	:o Q(_r_11)
+		:m S(_r_11_12)
+		:o T(_r_11_13)
+</feature_tree>
+<constraints>
+constraint_4:~_r_1 or _r_2
+constraint_5:~_r_1 or _r_3
+</constraints>
+</feature_model>

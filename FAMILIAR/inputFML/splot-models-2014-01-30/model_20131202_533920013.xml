@@ -1,0 +1,38 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Dec 2, 2013 - 8:14 AM  -->
+<feature_model name="Software-Product">
+<meta>
+<data name="description">Software-Product-Derivation</data>
+<data name="creator">Jaime Romero</data>
+<data name="address"></data>
+<data name="email">ja.romero940@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Uniandes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Software-Product(_r)
+	:m Event(_r_5)
+		:o Audit(_r_5_9)
+		:o Search(_r_5_16)
+	:m PortafolioEvent(_r_6)
+		:o Audit(_r_6_12)
+	:m Participant(_r_7)
+		:o Audit(_r_7_14)
+		:o Report(_r_7_19)
+	:m User(_r_8)
+		:o Audit(_r_8_15)
+		:o Change Password(_r_8_18)
+	:m Audit(_r_16)
+	:m ConfirmationInfo(_r_21)
+		:o Audit(_r_21_22)
+	:m Event-Master(_r_17)
+		:o NumberParticipants(_r_17_20)
+	:m ConfirmationInfo-Master(_r_18)
+	:m PortafolioEvent-Master(_r_19)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

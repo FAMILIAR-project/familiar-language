@@ -1,0 +1,31 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Thu, Jan 9, 2014 - 7:01 PM  -->
+<feature_model name="Analisis">
+<meta>
+<data name="description">Disciplina de Analisis</data>
+<data name="creator">Phruiz</data>
+<data name="address"></data>
+<data name="email">phruiz@unicauca.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">unicauca</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Analisis(_r)
+	:o Crear una Arquitectura de Prueba(_r_1)
+	:m Crear una Arquitectura Candidata(_r_4)
+		:g (_r_4_5) [1,1] 
+			: Analisis de la Arquitectura(_r_4_5_6)
+			: Definir una Arquitectura Candidata(_r_4_5_7)
+			: Analisis de Arquitectura y comportamiento(_r_4_5_8)
+	:m Analizar un caso de Uso(_r_9)
+	:m Analizar una Clase(_r_10)
+	:m Analizar un Paquete(_r_11)
+	:m Feature-13(_r_13)
+	:m Feature-14(_r_14)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

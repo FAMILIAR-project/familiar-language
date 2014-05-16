@@ -1,0 +1,39 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Sep 16, 2013 - 3:11 PM  -->
+<feature_model name="MobileMedia_Cleice">
+<meta>
+<data name="description">Exercício</data>
+<data name="creator">Cleice</data>
+<data name="address"></data>
+<data name="email">keti_talitha@hotmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Cleice</data>
+<data name="department"></data>
+<data name="date">16/09</data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Mobile Media(_r)
+	:m Media Selection(_r_1)
+		:m Photo(_r_1_25)
+		:o Music(_r_1_26)
+		:o Video(_r_1_27)
+	:m Media Management(_r_2)
+		:m Favourites(_r_2_4)
+			:m Set Favourites(_r_2_4_9)
+			:m View Favourites(_r_2_4_23)
+		:o Copy Media(_r_2_5)
+		:o SMS Transfer(_r_2_6)
+			:o Receive Photo(_r_2_6_7)
+			:o Send Photo(_r_2_6_8)
+	:m Screen Size(_r_3)
+		:g (_r_3_17) [1,1] 
+			: Screen1(_r_3_17_18)
+		:g (_r_3_19) [1,1] 
+			: Screen2(_r_3_19_20)
+</feature_tree>
+<constraints>
+constraint_8:_r_2_5 or ~_r_2_6
+constraint_9:_r_3_17_18 or ~_r_1_25
+</constraints>
+</feature_model>

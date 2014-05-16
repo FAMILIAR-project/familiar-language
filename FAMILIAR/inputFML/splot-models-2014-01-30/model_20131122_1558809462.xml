@@ -1,0 +1,46 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Nov 22, 2013 - 7:47 PM  -->
+<feature_model name="Mobile Media v8">
+<meta>
+<data name="description">Mobile Media</data>
+<data name="creator">Cleber</data>
+<data name="address"></data>
+<data name="email">cleber.es.ufc@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFC</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Mobile Media(_r)
+	:m Album management(_r_1)
+		:m Create Album(_r_1_4)
+		:m Delete Album(_r_1_5)
+	:m Media management(_r_2)
+		:o Favorites(_r_2_6)
+			:m Set favorites(_r_2_6_11)
+			:m View favorites(_r_2_6_12)
+		:o Sorting(_r_2_7)
+		:m Basic media operation(_r_2_8)
+			:m Create media(_r_2_8_13)
+			:m Delete media(_r_2_8_14)
+			:m Edit media label(_r_2_8_15)
+		:o Copy media(_r_2_9)
+		:o SMS transfer(_r_2_10)
+			:m Receive photo(_r_2_10_16)
+			:m Send photo(_r_2_10_17)
+	:m Media selection(_r_3)
+		:g (_r_3_18) [1,*] 
+			: Photo(_r_3_18_19)
+				:m View photo(_r_3_18_19_22)
+				:o Capture photo(_r_3_18_19_23)
+			: Music(_r_3_18_20)
+				:m Play music(_r_3_18_20_24)
+			: Video(_r_3_18_21)
+				:m Play video(_r_3_18_21_25)
+				:o Capture video(_r_3_18_21_26)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,43 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Sep 16, 2013 - 3:08 PM  -->
+<feature_model name="Mobile_Media_Gabriela">
+<meta>
+<data name="description">Modelo de caracterização</data>
+<data name="creator">Gabriela da Silva</data>
+<data name="address"></data>
+<data name="email">gabisilva.cc@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Mobile Media(_r)
+	:m Media Selection(_r_1)
+		:g (_r_1_25) [1,*] 
+			: Photo(_r_1_25_26)
+		:g (_r_1_27) [1,*] 
+			: Music(_r_1_27_28)
+		:g (_r_1_29) [1,*] 
+			: Video(_r_1_29_30)
+	:m Media Management(_r_7)
+		:o Favourites(_r_7_9)
+			:m Set Favourites(_r_7_9_15)
+			:m View Favourites(_r_7_9_16)
+		:o Copy Media(_r_7_10)
+		:o SMS Transfer(_r_7_11)
+			:o Receive Photo(_r_7_11_17)
+			:o Send Photo(_r_7_11_18)
+	:m Screen Size(_r_8)
+		:g (_r_8_19) [1,1] 
+			: Screen1(_r_8_19_20)
+		:g (_r_8_21) [1,1] 
+			: Screen2(_r_8_21_22)
+		:g (_r_8_23) [1,1] 
+			: Screen3(_r_8_23_24)
+</feature_tree>
+<constraints>
+constraint_5:_r_7_10 or ~_r_7_11
+</constraints>
+</feature_model>

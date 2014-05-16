@@ -1,0 +1,74 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Dec 2, 2013 - 6:04 AM  -->
+<feature_model name="EngAGe">
+<meta>
+<data name="description">EngAGe - assessment configuration</data>
+<data name="creator">Yaelle Chaudy</data>
+<data name="address"></data>
+<data name="email">yaelle.chaudy@uws.ac.uk</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UWS</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Config File(_r)
+	:m Serious Game(_r_1)
+		:m SGname(_r_1_2)
+		:o SGdesc(_r_1_3)
+		:o SGageRange(_r_1_4)
+		:o SGlanguage(_r_1_5)
+		:o SGcountry(_r_1_6)
+	:o Player(_r_7)
+		:m Characteristic(_r_7_8)
+			:m name(_r_7_8_9)
+			:m type(_r_7_8_10)
+	:m Learning Outcomes(_r_11)
+		:m Learning Outcome(_r_11_12)
+			:m name(_r_11_12_13)
+			:o description(_r_11_12_14)
+			:o starting value(_r_11_12_15)
+	:o Feedback Messages(_r_16)
+		:m Feedback(_r_16_17)
+			:m name(_r_16_17_18)
+			:m message(_r_16_17_19)
+			:o Type(_r_16_17_20)
+				:g (_r_16_17_20_22) [1,*] 
+					: positive(_r_16_17_20_22_23)
+					: negative(_r_16_17_20_22_24)
+					: neutral(_r_16_17_20_22_25)
+			:o final(_r_16_17_21)
+	:m Evidence Model(_r_26)
+		:m Action(_r_26_27)
+			:m name(_r_26_27_28)
+			:o parameters(_r_26_27_29)
+			:m Evidence(_r_26_27_30)
+				:o outcome name(_r_26_27_30_31)
+				:m points(_r_26_27_30_32)
+				:m options parameters(_r_26_27_30_33)
+					:m param(_r_26_27_30_33_35)
+						:g (_r_26_27_30_33_35_36) [1,*] 
+							: values(_r_26_27_30_33_35_36_37)
+							: others(_r_26_27_30_33_35_36_38)
+			:o Reactions(_r_26_27_39)
+				:m If(_r_26_27_39_40)
+					:g (_r_26_27_39_40_42) [1,*] 
+						: param condition(_r_26_27_39_40_42_43)
+						: Points condition(_r_26_27_39_40_42_44)
+							:m Key word(_r_26_27_39_40_42_44_45)
+								:g (_r_26_27_39_40_42_44_45_47) [1,*] 
+									: any(_r_26_27_39_40_42_44_45_47_48)
+									: all(_r_26_27_39_40_42_44_45_47_49)
+							:m point(_r_26_27_39_40_42_44_46)
+				:m feedback to trigger(_r_26_27_39_41)
+	:m Feedback Model(_r_50)
+		:m Condition(_r_50_51)
+			:g (_r_50_51_53) [1,*] 
+				: outcome score limit(_r_50_51_53_54)
+				: inactivity limit(_r_50_51_53_55)
+		:m feedback to trigger(_r_50_52)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

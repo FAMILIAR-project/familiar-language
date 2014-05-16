@@ -1,0 +1,33 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Nov 29, 2013 - 3:45 PM  -->
+<feature_model name="acarlos_trab2_mobile">
+<meta>
+<data name="description"> acarlos_trab2_mobile</data>
+<data name="creator"> acarlos_trab2_mobile</data>
+<data name="address"></data>
+<data name="email"> acarlos_trab2_mobile</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization"> acarlos_trab2_mobile</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r acarlos_trab2_mobile(_r)
+	:m display(_r_2)
+		:g (_r_2_9) [1,1] 
+			: colour(_r_2_9_10)
+			: basic(_r_2_9_11)
+			: high resolution(_r_2_9_12)
+	:m calls(_r_3)
+	:o gps(_r_4)
+	:o media(_r_5)
+		:g (_r_5_6) [1,*] 
+			: camera(_r_5_6_7)
+			: mp3(_r_5_6_8)
+</feature_tree>
+<constraints>
+constraint_1:~_r_4 or ~_r_2_9_11
+constraint_2:~_r_5_6_7 or _r_2_9_12
+</constraints>
+</feature_model>

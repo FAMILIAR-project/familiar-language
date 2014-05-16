@@ -1,0 +1,46 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Nov 12, 2013 - 7:54 PM  -->
+<feature_model name="Eventos1Sandoval">
+<meta>
+<data name="description">Parcial2 Fabricas</data>
+<data name="creator">Edgar Sandoval</data>
+<data name="address"></data>
+<data name="email">thrusthope@hotmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Universidad de los Andes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Eventos(_r)
+	:m Proveedor Ubicacion(_r_2)
+		:g (_r_2_40) [1,1] 
+			: Google Maps(_r_2_40_41)
+			: Garmin(_r_2_40_42)
+	:m Gestor de Multimedia(_r_3)
+		:g (_r_3_9) [1,*] 
+			: Video(_r_3_9_10)
+			: Audio(_r_3_9_11)
+			: Imagen(_r_3_9_16)
+	:o BI(_r_4)
+		:g (_r_4_17) [1,*] 
+			: DataWarehouse Local(_r_4_17_18)
+			: Socialmedia(_r_4_17_19)
+	:m Autenticacion(_r_5)
+		:g (_r_5_22) [1,1] 
+			: Google(_r_5_22_23)
+			: Yahoo(_r_5_22_24)
+			: Facebook(_r_5_22_25)
+	:o Gestor Socialmedia(_r_6)
+		:g (_r_6_28) [1,1] 
+			: Facebook API(_r_6_28_29)
+			: Twiter API(_r_6_28_30)
+	:o Auditoria(_r_32)
+		:g (_r_32_35) [1,1] 
+			: Aspect J(_r_32_35_36)
+			: Manual(_r_32_35_37)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,53 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Nov 12, 2013 - 8:37 PM  -->
+<feature_model name="PortafolioEddie">
+<meta>
+<data name="description">El portafolio es la forma de darse a conocer del artista, permitiendo entrar en contacto con su trabajo creativo</data>
+<data name="creator">ej.castro10</data>
+<data name="address"></data>
+<data name="email">ej.castro10@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">uniandes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r PortafolioArtistico(_r)
+	:m Membresia(_r_1)
+		:m Autenticacion(_r_1_10)
+			:o Proveedor externo(_r_1_10_17)
+				:g (_r_1_10_17_18) [1,*] 
+					: Google(_r_1_10_17_18_19)
+					: Facebook(_r_1_10_17_18_20)
+					: Twitter(_r_1_10_17_18_21)
+			:m Login local(_r_1_10_22)
+		:m Administrar perfil(_r_1_29)
+		:m Administrar CV(_r_1_30)
+	:m Galeria(_r_6)
+		:m Publicar obra(_r_6_28)
+		:o Configurar privacidad obra(_r_6_31)
+		:m Configurar plantilla(_r_6_32)
+			:g (_r_6_32_33) [1,1] 
+				: Plantillas predefinidas(_r_6_32_33_34)
+				: Editor HTML(_r_6_32_33_35)
+		:o Exportar galeria(_r_6_36)
+			:g (_r_6_36_37) [1,1] 
+				: PDF(_r_6_36_37_38)
+				: HTML(_r_6_36_37_39)
+				: Wiki(_r_6_36_37_40)
+				: Word(_r_6_36_37_41)
+	:m Art marketplace(_r_7)
+		:o Subastar obra(_r_7_42)
+		:o Venta inmediata(_r_7_43)
+	:o Social(_r_8)
+	:o Mercadeo(_r_9)
+	:m Comun(_r_23)
+		:m Tipo de pago(_r_23_24)
+			:g (_r_23_24_25) [1,1] 
+				: TerjetaCredito(_r_23_24_25_26)
+				: CuentaBancaria(_r_23_24_25_27)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

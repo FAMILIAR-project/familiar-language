@@ -1,0 +1,54 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Nov 12, 2013 - 7:55 PM  -->
+<feature_model name="EventosHernandez">
+<meta>
+<data name="description">Eventos2</data>
+<data name="creator">Eliana Hernandez</data>
+<data name="address"></data>
+<data name="email">he.hernandez@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Uniandes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Eventos2(_r)
+	:m Tipo de Evento(_r_1)
+		:g (_r_1_2) [1,1] 
+			: Fiesta(_r_1_2_3)
+			: Conferencia(_r_1_2_4)
+			: Concierto(_r_1_2_5)
+	:m Tipo Documento Participante(_r_10)
+		:g (_r_10_13) [1,1] 
+			: Cedula ciudadania(_r_10_13_14)
+			: Cedula extrangeria(_r_10_13_15)
+			: Nit(_r_10_13_16)
+	:o Tipo Confirmacion(_r_17)
+		:o Registrado(_r_17_18)
+		:o Confirmado(_r_17_20)
+		:o Provisional(_r_17_21)
+	:o Tipo Rol(_r_23)
+		:o Administrativo(_r_23_24)
+		:o Externo(_r_23_25)
+	:m Localizacion de Evento(_r_26)
+		:g (_r_26_27) [1,*] 
+			: Aire abierto(_r_26_27_28)
+			: Recinto cerrado(_r_26_27_29)
+	:m Autenticacion(_r_30)
+		:g (_r_30_31) [1,*] 
+			: Facebook(_r_30_31_32)
+			: Google plus(_r_30_31_33)
+	:o Auditoria(_r_34)
+		:g (_r_34_35) [1,*] 
+			: Campos para cada tabla(_r_34_35_36)
+				:o Unica tabla(_r_34_35_36_37)
+	:m Visor multimedia(_r_38)
+		:g (_r_38_39) [1,*] 
+			: Imagen(_r_38_39_40)
+			: Video(_r_38_39_42)
+			: Sonido(_r_38_39_43)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

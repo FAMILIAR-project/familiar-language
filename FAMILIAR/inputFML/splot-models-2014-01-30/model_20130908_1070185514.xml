@@ -1,0 +1,596 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Dec 9, 2013 - 11:45 AM  -->
+<feature_model name="A Model for Decision-making for Investments on Enterprise Information Systems">
+<meta>
+<data name="description">Implications on EIS investment decisions</data>
+<data name="creator">Oscar González</data>
+<data name="address"></data>
+<data name="email">o-gonza1@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Uniandes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Estructura Decisiones(_r)
+	:m Motivadores de Negocio(_r_1)
+		:g (_r_1_153) [1,*] 
+			: Segmentar y depurar clientes(_r_1_153_154)
+			: Planificacion y presupuestos de mercadeo(_r_1_153_155)
+			: Gestion de datos y listas(_r_1_153_156)
+			: Analisis de marketing(_r_1_153_157)
+			: Gestion de Campanias(_r_1_153_158)
+			: Facilitar tareas de mercadeo y publicidad(_r_1_153_159)
+			: Gestion de respuestas y clientes potenciales(_r_1_153_160)
+			: Reducir ciclos de ventas(_r_1_153_161)
+			: Aumentar tasas de cierre de ventas(_r_1_153_162)
+			: Mejorar retencion de clientes(_r_1_153_163)
+			: Implementar nuevo proceso de ventas(_r_1_153_164)
+			: Gestionar informacion de clientes(_r_1_153_165)
+			: Gestion de casos de clientes(_r_1_153_166)
+			: Historial de servicios de clientes(_r_1_153_167)
+			: Aumentar base de clientes(_r_1_153_168)
+			: Implementar nuevo proceso de atencion al cliente(_r_1_153_169)
+			: Mejorar conocimiento del cliente(_r_1_153_170)
+			: Medir satisfaccion del consumidor(_r_1_153_171)
+			: Control sobre recursos humanos(_r_1_153_172)
+			: Nuevos procesos de recursos humanos(_r_1_153_173)
+			: Reclutamiento(_r_1_153_174)
+			: Biodata - hojas de vida(_r_1_153_175)
+			: Analisis de cargos - estructura organizacional(_r_1_153_176)
+			: Nomina y administracion de salarios(_r_1_153_177)
+			: Educacion y capacitacion(_r_1_153_180)
+			: Salud ocupacional(_r_1_153_182)
+			: Modelamiento de procesos y organigramas(_r_1_153_183)
+			: Nuevos procesos financieros(_r_1_153_184)
+			: Implementar controles sobre procesos financieros(_r_1_153_185)
+			: Gestion contable(_r_1_153_186)
+			: Manejo de cuentas por pagar - Proveedores(_r_1_153_187)
+			: Sistemas de costeo(_r_1_153_188)
+			: Administracion de activos fijos(_r_1_153_189)
+			: Manejo de conciliaciones bancarias(_r_1_153_190)
+			: Control de inversiones(_r_1_153_191)
+			: Manejo de obligaciones financieras(_r_1_153_192)
+			: Tesoreria(_r_1_153_193)
+			: Contabilidad analitica(_r_1_153_194)
+			: Control y administracion del presupuesto(_r_1_153_195)
+			: Manejo de activos de capital(_r_1_153_196)
+			: Manejo de inventarios(_r_1_153_197)
+			: Manejo de almacen(_r_1_153_198)
+			: Gestion de compras(_r_1_153_199)
+			: Gestion de activos fijos(_r_1_153_200)
+			: Comercio exterior(_r_1_153_201)
+			: Seguros(_r_1_153_202)
+			: Manejo de ordenes de produccion(_r_1_153_203)
+			: Manejo de ordenes de compra(_r_1_153_204)
+			: Planificacion de necesidades de capacidad(_r_1_153_205)
+			: Planificacion de suministros(_r_1_153_207)
+			: Disminuir tiempos de entrega(_r_1_153_208)
+			: Integracion con proveedores(_r_1_153_209)
+			: Gestion de proveedores(_r_1_153_210)
+			: Administracion de materias primas(_r_1_153_211)
+			: Gestion de bodega(_r_1_153_212)
+			: Realizar control de costos(_r_1_153_213)
+			: Administracion de pedidos y despachos(_r_1_153_214)
+			: Gestion de contactos(_r_1_153_215)
+			: Ajustar procesos de flujo de trabajo(_r_1_153_216)
+			: Mejorar capacidad de respuesta(_r_1_153_217)
+			: Gestionar presupuestos(_r_1_153_218)
+			: Crear y consolidar informes(_r_1_153_219)
+			: Buscar tendencias y relaciones(_r_1_153_220)
+			: Compartir conocimiento(_r_1_153_221)
+			: Organizar recursos de servicio(_r_1_153_222)
+			: Facturacion y devolucion(_r_1_153_223)
+			: Cartera(_r_1_153_225)
+			: Administracion de precios y descuentos(_r_1_153_226)
+			: Administracion de promociones(_r_1_153_227)
+			: Administracion de cuotas e incentivos(_r_1_153_228)
+			: Administracion de visita comercial(_r_1_153_229)
+			: Importaciones y exportaciones(_r_1_153_230)
+			: Gestionar contratos de servicio(_r_1_153_231)
+			: Presupuestar costos y tiempos(_r_1_153_232)
+			: Automatizar la facturacion(_r_1_153_233)
+			: Predecir disponibilidades(_r_1_153_234)
+			: Seguimiento de costos y consumos(_r_1_153_235)
+			: Planificar capacidades(_r_1_153_236)
+			: Planear y gestionar capacidad de bodegaje y almacenamiento(_r_1_153_237)
+			: Gestion de transporte de mercancia(_r_1_153_238)
+			: Logistica de transporte internacional(_r_1_153_239)
+			: Gestion de relacion con proveedores(_r_1_153_240)
+			: Gestion de la demanda(_r_1_153_241)
+	:m Sistemas Empresariales(_r_2)
+		:m CRM- Customer Relationship Management(_r_2_106)
+			:g (_r_2_106_244) [1,*] 
+				: CRM - Modulo marketing(_r_2_106_244_245)
+				: CRM - Modulo Ventas(_r_2_106_244_246)
+				: CRM - Modulo de clientes(_r_2_106_244_247)
+		:m ERP - Enterprise resource planning(_r_2_110)
+			:g (_r_2_110_248) [1,*] 
+				: ERP - Modulo recursos humanos(_r_2_110_248_249)
+				: ERP - Modulo financiero(_r_2_110_248_250)
+				: ERP - Modulo administrativo(_r_2_110_248_251)
+				: ERP - Modulo de produccion(_r_2_110_248_252)
+				: ERP - Modulo de clientes(_r_2_110_248_253)
+				: ERP - Modulo de gestion de abastecimiento(_r_2_110_248_254)
+				: ERP - Modulo de inteligencia de negocio(_r_2_110_248_255)
+				: ERP - Marketing y ventas(_r_2_110_248_256)
+				: ERP - Modulo de gestion de proyectos(_r_2_110_248_257)
+		:m SCM - Sistema de gestion de abastecimiento(_r_2_117)
+	:m Nuevo vs Existente(_r_3)
+		:g (_r_3_150) [1,1] 
+			: Adquirir sistema nuevo(_r_3_150_151)
+			: Adaptar sistema existente(_r_3_150_152)
+	:m Tercerizacion(_r_4)
+		:g (_r_4_153) [1,1] 
+			: Subcontratar personalizacion(_r_4_153_154)
+			: Subcontratar parte del desarrollo e integracion(_r_4_153_155)
+			: Subcontratar la administracion de un proceso de negocio completo(_r_4_153_156)
+			: Subcontratar gerencia del proyecto de implementacion(_r_4_153_157)
+	:m Tipo de Solucion(_r_5)
+		:g (_r_5_158) [1,1] 
+			: Comercial(_r_5_158_159)
+			: Open Source(_r_5_158_160)
+	:m Modelo de Despliegue(_r_6)
+		:g (_r_6_288) [1,1] 
+			: On Premise(_r_6_288_289)
+			: Software como servicio SaaS(_r_6_288_290)
+			: Infraestructura como servicio IaaS(_r_6_288_291)
+	:m Modelo de Implementacion(_r_7)
+		:g (_r_7_316) [1,1] 
+			: Big Bang(_r_7_316_317)
+			: Implementacion por fases(_r_7_316_318)
+			: Implementacion por procesos(_r_7_316_319)
+	:m Mantenimiento(_r_8)
+		:g (_r_8_331) [1,1] 
+			: Contrato con el proveedor(_r_8_331_332)
+			: Contrato con un proveedor especializado(_r_8_331_333)
+			: Mantenimiento por cuenta propia(_r_8_331_334)
+			: Sin contrato de mantenimiento(_r_8_331_335)
+	:m Modelo de Seleccion(_r_9)
+		:g (_r_9_347) [1,1] 
+			: RFP - Request for proposal(_r_9_347_348)
+			: Consultoria externa(_r_9_347_349)
+			: Evaluacion interna(_r_9_347_350)
+	:m Plataforma(_r_10)
+		:g (_r_10_368) [1,1] 
+			: Sistema empresarial basado en la misma plataforma tecnologica(_r_10_368_369)
+			: Sistema empresarial basado en una plataforma diferente(_r_10_368_370)
+	:m Integracion(_r_11)
+		:g (_r_11_377) [1,1] 
+			: Middleware(_r_11_377_378)
+			: Desarrollo propio(_r_11_377_379)
+			: Proveedor(_r_11_377_380)
+	:m Financiacion(_r_12)
+		:g (_r_12_389) [1,1] 
+			: Recursos Propios(_r_12_389_390)
+			: Credito(_r_12_389_391)
+			: Leasing(_r_12_389_392)
+	:m Implicaciones(_r_143)
+		:m Variable de impacto(_r_143_144)
+			:g (_r_143_144_150) [1,*] 
+				: Campanias de mercadeo(_r_143_144_150_151)
+				: Costo total de promociones(_r_143_144_150_152)
+				: Costo total de manejo por canal(_r_143_144_150_153)
+				: Tiempo de respuesta al cliente(_r_143_144_150_154)
+				: Eficiencia por canal(_r_143_144_150_155)
+				: Tiempo de entrega despues de la venta(_r_143_144_150_156)
+				: Tiempo de negociacion antes de la venta(_r_143_144_150_157)
+				: Tasa de retencion de clientes(_r_143_144_150_158)
+				: Ventas netas(_r_143_144_150_159)
+				: Ventas por empleado(_r_143_144_150_160)
+				: Ganacias por empleado(_r_143_144_150_161)
+				: Clientes nuevos por dia(_r_143_144_150_162)
+				: Prospectos nuevos por dia(_r_143_144_150_163)
+				: Visitas a clientes por dia(_r_143_144_150_165)
+				: Nuevos segmentos creados(_r_143_144_150_166)
+				: Imagen de marca(_r_143_144_150_167)
+				: Nivel de servicio(_r_143_144_150_168)
+				: Tasa de retencion de empleados(_r_143_144_150_169)
+				: Productividad por empleado(_r_143_144_150_170)
+				: Costos por empleado(_r_143_144_150_171)
+				: Horas de entrenamiento por empleado(_r_143_144_150_172)
+				: Costos de entrenamiento por empleado(_r_143_144_150_173)
+				: Aumento en ingresos operativos(_r_143_144_150_174)
+				: Retorno de inversion(_r_143_144_150_175)
+				: Rentabilidad de activos(_r_143_144_150_177)
+				: Rentabilidad del patrimonio(_r_143_144_150_178)
+				: Utilidades por accion(_r_143_144_150_180)
+				: Rotacion de inventarios(_r_143_144_150_181)
+				: Rotacion de cartera(_r_143_144_150_182)
+				: Tiempo de compras(_r_143_144_150_183)
+				: Tiempo de respuesta ordenes(_r_143_144_150_184)
+				: Precision de inventarios(_r_143_144_150_185)
+				: Efectividad proceso de facturacion(_r_143_144_150_186)
+				: Tiempo de respuesta en procesamiento de ordenes(_r_143_144_150_187)
+				: Tiempo promedio de espera en entrega de pedidos(_r_143_144_150_188)
+				: Retencion de clientes(_r_143_144_150_190)
+				: Satisfaccion del cliente(_r_143_144_150_191)
+				: Imagen corporativa(_r_143_144_150_192)
+				: Tiempo total cadena de abastecimiento(_r_143_144_150_193)
+				: Tiempo de entrega(_r_143_144_150_194)
+				: Calidad de entrega(_r_143_144_150_195)
+				: Nivel de entregas libres de defectos(_r_143_144_150_196)
+				: Tiempo enrutamiento de ordenes(_r_143_144_150_197)
+				: Efectividad plan maestro de produccion(_r_143_144_150_198)
+				: Frecuencia de entrega(_r_143_144_150_199)
+				: Costo total de inventario(_r_143_144_150_200)
+				: Disponibilidad de informacion por demanda(_r_143_144_150_201)
+				: Tasa de crecimiento de ventas(_r_143_144_150_202)
+				: Capacitacion(_r_143_144_150_211)
+				: Implementacion(_r_143_144_150_212)
+				: Integracion(_r_143_144_150_213)
+				: Consultor(_r_143_144_150_214)
+				: Tecnico(_r_143_144_150_215)
+				: Migracion(_r_143_144_150_216)
+				: Configuracion(_r_143_144_150_217)
+				: Adquisicion(_r_143_144_150_250)
+				: Licenciamiento(_r_143_144_150_251)
+				: Soporte(_r_143_144_150_252)
+				: Personalizacion(_r_143_144_150_253)
+				: Flujo de Caja(_r_143_144_150_254)
+				: Escalamiento(_r_143_144_150_255)
+				: Documentacion(_r_143_144_150_256)
+				: Proveedores(_r_143_144_150_257)
+				: Flexibilidad(_r_143_144_150_258)
+				: Mantenimiento y actualizaciones(_r_143_144_150_259)
+				: Costo inicial(_r_143_144_150_292)
+				: Infraestructura(_r_143_144_150_293)
+				: Seguridad(_r_143_144_150_294)
+				: Arrendamiento(_r_143_144_150_295)
+				: Disponibilidad(_r_143_144_150_296)
+				: Mantenimiento(_r_143_144_150_336)
+		:m Dimension(_r_143_145)
+			:g (_r_143_145_203) [1,*] 
+				: Indicadores(_r_143_145_203_204)
+				: Costos(_r_143_145_203_221)
+				: Tiempo(_r_143_145_203_222)
+				: Recursos Humanos(_r_143_145_203_223)
+				: Consideracion(_r_143_145_203_229)
+				: Ventaja(_r_143_145_203_261)
+				: Desventaja(_r_143_145_203_262)
+		:m Unidad de Medida(_r_143_146)
+			:g (_r_143_146_205) [1,*] 
+				: Numero(_r_143_146_205_206)
+				: Dolares(_r_143_146_205_207)
+				: Dias(_r_143_146_205_208)
+				: Porcentaje(_r_143_146_205_209)
+				: Horas(_r_143_146_205_210)
+				: Meses(_r_143_146_205_224)
+				: Personas(_r_143_146_205_225)
+				: Personal(_r_143_146_205_231)
+				: Semanas(_r_143_146_205_297)
+		:m Magnitud(_r_143_147)
+			:g (_r_143_147_226) [1,*] 
+				: 1 persona(_r_143_147_226_227)
+				: 2 personas(_r_143_147_226_228)
+				: 25000 - 200000(_r_143_147_226_230)
+				: 1 en adelante(_r_143_147_226_232)
+				: 25000 - 300000(_r_143_147_226_233)
+				: 500 en adelante(_r_143_147_226_234)
+				: 25000 - 500000(_r_143_147_226_263)
+				: 25 porciento del costo inicial(_r_143_147_226_264)
+				: 500 - 5000(_r_143_147_226_265)
+				: 5000 - 50000(_r_143_147_226_266)
+				: 5000 - 75000(_r_143_147_226_267)
+				: 10000 - 80000(_r_143_147_226_268)
+				: Entre 6 y 36(_r_143_147_226_269)
+				: 3000 - 20000(_r_143_147_226_270)
+				: 0 - 500(_r_143_147_226_271)
+				: 5000 - 10000(_r_143_147_226_272)
+				: 30000 - 100000(_r_143_147_226_273)
+				: 25000 - 75000(_r_143_147_226_274)
+				: 100 - 200000(_r_143_147_226_298)
+				: 10000 - 500000(_r_143_147_226_299)
+				: 200 - 2000(_r_143_147_226_300)
+				: 400 en adelante(_r_143_147_226_301)
+				: Entre 1 y 2(_r_143_147_226_302)
+				: 18 porciento - 25 porciento sobre el licenciamiento(_r_143_147_226_337)
+				: 15 porciento - 30 porciento sobre el licenciamiento(_r_143_147_226_338)
+				: 5000 en adelante(_r_143_147_226_339)
+				: 300 en adelante(_r_143_147_226_351)
+				: 20000 - 100000(_r_143_147_226_352)
+				: 0 - 100000(_r_143_147_226_371)
+				: Entre 15000 y 100000(_r_143_147_226_381)
+				: 15 porciento de licenciamiento(_r_143_147_226_382)
+		:o Periodicidad(_r_143_148)
+			:g (_r_143_148_235) [1,*] 
+				: Una vez(_r_143_148_235_236)
+				: Mensual(_r_143_148_235_237)
+				: Anual(_r_143_148_235_275)
+		:o Observaciones(_r_143_149)
+			:g (_r_143_149_238) [1,*] 
+				: Requiere personal que forme parte del equipo interdisciplinario que trabajara con el proveedor en el levantamiento de requerimientos funcionales(_r_143_149_238_239)
+				: Libera a la empresa de las tareas funcionales y tecnicas y permite liberar recursos para destinarlos a las actividades core del negocio(_r_143_149_238_240)
+				: Requiere personal calificado para seleccionar el proveedor y establecer los terminos y condiciones de los contratos(_r_143_149_238_242)
+				: Requiere un proveedor con alto nivel de conocimiento del sector y del negocio(_r_143_149_238_243)
+				: Perdida de control sobre los procesos de negocio(_r_143_149_238_244)
+				: Posibilidad de tomar ventaja de la incorporacion de mejores practicas de la industria y know how que deriven en una ventaja competitiva(_r_143_149_238_245)
+				: Los resultados de la empresa quedan sujetos al cumplimiento de los acuerdos de niveles de servicio con el proveedor(_r_143_149_238_246)
+				: Requiere un proveedor con experiencia amplia y demostrable en implementaciones exitosas de sistemas empresariales en la misma industria(_r_143_149_238_247)
+				: Implica que la responsabilidad por el cumplimiento de los objetivos y fechas queda en manos de un tercero y su incumplimiento repercute en los objetivos de negocio(_r_143_149_238_248)
+				: Libera los recursos gerenciales de la compania para que sean usados en actividades propias del core del negocio(_r_143_149_238_249)
+				: Existe un desembolso inicial importante que afecta el FCL y desembolsos anuales en licenciamiento(_r_143_149_238_276)
+				: El fabricante por lo general entregara manuales documentacion  y tendra planes personalizados de capacitacion y eventualmente podra ofrecer un plan de implementacion gradual(_r_143_149_238_277)
+				: Los costos de escalamiento estan sujetos al modelo de licenciamiento acordado con el proveedor(_r_143_149_238_278)
+				: El proveedor ofrecera suficiente garantia y soporte por el producto entregado(_r_143_149_238_279)
+				: El proveedor ofrecera suficiente documentacion y manuales sobre el uso del producto(_r_143_149_238_280)
+				: La oferta de companias capaces de brindar soporte a soluciones comerciales es amplia(_r_143_149_238_281)
+				: La oferta de proveedores de soluciones comerciales es mayor a la de proveedores open source(_r_143_149_238_282)
+				: Al escoger una solucion la empresa queda sujeta a los cambios que la empresa creadora quiera hacer en el producto actualizaciones continuidad y terminos de servicio(_r_143_149_238_283)
+				: El tiempo de implementacion es mayor al de una solucion open source(_r_143_149_238_284)
+				: La solucion implementada tiene un limite de personalizacion y flexibilizacion que va atada a las caracteristicas de cada producto en ocasiones la empresa debe cambiar sus esquemas de trabajo para adaptarse a la herramienta seleccionada(_r_143_149_238_285)
+				: No existe desembolso inicial representativo por lo que no se afecta el capital de trabajo y al invertir este dinero al TC se tiene un aumento en el VPN incremental frente a la solucion comercial(_r_143_149_238_286)
+				: El fabricante o proveedor de la distribucion del software open source no necesariamente contara con programas de capacitacion o entregara documentacion detallada(_r_143_149_238_287)
+				: Los costos de escalamiento vendran del costo marginal de implementar un nuevo servidor o de habiitar nuevos clientes(_r_143_149_238_288)
+				: La empresa no queda sujeta a un solo proveedor(_r_143_149_238_289)
+				: Mayor facilidad para innovar y experimentar(_r_143_149_238_290)
+				: Mayor agilidad durante la implementacion(_r_143_149_238_291)
+				: Facilidad para trabajar con una comunidad de expertos calificados y reutlizar el codigo fuente(_r_143_149_238_292)
+				: Acceso al codigo fuente(_r_143_149_238_293)
+				: Posibilidad de modificar el codigo fuente y la funcionalidad(_r_143_149_238_294)
+				: Mayor valor - precio(_r_143_149_238_295)
+				: No existe un contrato de soporte ni garantia del fabricante(_r_143_149_238_296)
+				: Las actualizaciones estan sujetas al desarrollo de la comunidad open source(_r_143_149_238_297)
+				: La posibilidad de disponer de documentacion centralizada facil de usar y personalizada es minima(_r_143_149_238_298)
+				: Por lo general se presentan costos ocultos de integracion con otros sistemas(_r_143_149_238_299)
+				: Dependiendo del sistema y proveedor seleccionados se debe incurrir en un costo de adquisicion(_r_143_149_238_303)
+				: Dependiendo del proveedor y del tipo de solucion anualmente se generaran costos de licenciamiento(_r_143_149_238_304)
+				: Los costos por soporte mensual estaran a cargo de la empresa(_r_143_149_238_305)
+				: La empresa necesariamente tendra que incurrir en costos de adquisicion o mantenimiento de infraestructura(_r_143_149_238_306)
+				: Posiblidad de tener mejor control sobre la infraestructura y niveles de servicio(_r_143_149_238_307)
+				: Posibilidad de tener mejor control sobre las actualizaciones al sofware y las implicaciones de negocio para la empresa(_r_143_149_238_308)
+				: La empresa puede controlar 100 porciento el acceso a la informacion y seguridad de la misma(_r_143_149_238_309)
+				: No existen costos de licenciamiento soporte configuracion mantenimiento ni actualizacion(_r_143_149_238_310)
+				: La responsabilidad por la operacion y disponibilidad  del sistema es del proveedor(_r_143_149_238_311)
+				: Permite a la empresa destinar recursos a la operacion del core del negocio(_r_143_149_238_312)
+				: Sujeto a disponibilidad de conexion a internet(_r_143_149_238_313)
+				: No existe control sobre la seguridad de la informacion(_r_143_149_238_314)
+				: Sujeta a los acuerdos de niveles de servicio que se establezcan con el proveedor(_r_143_149_238_315)
+				: Este modelo representa la alternativa de menor costo(_r_143_149_238_320)
+				: La planeacion debe ser rigurosa y cumplirse de forma estricta(_r_143_149_238_321)
+				: Debe existir un mecanismo contingente bien planeado y documentado(_r_143_149_238_322)
+				: Todos los sistemas implementados deben empezar a operar en la misma fecha establecida(_r_143_149_238_323)
+				: Todas las tareas de configuracion personalizacion integracion y capacitacion deben estar terminadas para la fecha del lanzamiento(_r_143_149_238_324)
+				: Este modelo representa la alternativa de mayor complejidad(_r_143_149_238_325)
+				: El tiempo de implementacion aumenta(_r_143_149_238_326)
+				: Existe la oportunidad de corregir errores y hacer ajustes(_r_143_149_238_327)
+				: Presenta el mejor balance entre costo tiempo y beneficio(_r_143_149_238_328)
+				: Se debe tener un muy bien nivel de entendimiento de los procesos de negocio a implementar y las dependencias entre los mismos(_r_143_149_238_329)
+				: Se requiere alto conocimiento del negocio y podria necesitarse una consultoria adicional para validar o replantear algunos procesos de negocio(_r_143_149_238_330)
+				: Un contrato de mantenimiento con el proveedor mejora la disponibilidad del sistema implementado y asi la continuidad del negocio y de los procesos afectados(_r_143_149_238_340)
+				: Los costos del contrato pueden llegar a ser tan altos que un porcetanje importante de los ingresos de la empresa tienen que dirigirse a cubrir este rubro(_r_143_149_238_341)
+				: Un contrato con el proveedor asegura el conocimiento de la implementacion y reduce los tiempos necesarios para dar respuesta a inconvenientes actualizaciones o requirimientos de mantenimiento(_r_143_149_238_342)
+				: Un contrato de mantenimiento con un proveedor especializado puede ofrecer mejores condiciones de cobertura garantia y mantenimiento especializado adicionales a las brindadas por el fabricante(_r_143_149_238_343)
+				: El tiempo de respuesta ante un requerimiento puede ser superior por desconocimiento de la implementacion(_r_143_149_238_344)
+				: La decision implica la busqueda de un equipo calificado y dimensionado de acuerdo con el tamanio y complejidad de la implementacion(_r_143_149_238_345)
+				: La decision suprime un costo en el corto plazo pero implica un riesgo que puede impactar la operacion del proceso de negocio implementado y asi los ingresos de la empresa(_r_143_149_238_346)
+				: Representa la opcion de menor costo(_r_143_149_238_353)
+				: Requiere personal calificado para entender el contexto de la necesidad los requerimientos exactos del negocio y plasmarlos en el documento RFP(_r_143_149_238_354)
+				: Es una forma efectiva para que varios proveedores se aproximen a la solucion requerida desde diferentes angulos(_r_143_149_238_355)
+				: Posibilidad de recibir ofertas variadas y lograr poder de negociacion frente a proveedores(_r_143_149_238_356)
+				: Requiere personal calificado para realizar la seleccion de la firma de consultoria encargada de realizar el proceso de seleccion de la solucion(_r_143_149_238_357)
+				: Requiere conocimiento de la industria por parte de la firma de consultoria(_r_143_149_238_358)
+				: Requiere experiencia previa en implementaciones similares y casos de exito que soporten la experiencia(_r_143_149_238_359)
+				: Requiere reclutar personal con conocimiento especializado sobre implementacion de sistemas empresariales(_r_143_149_238_360)
+				: La empresa no requiere un centro de computo(_r_143_149_238_362)
+				: Se evitan costos tiempo y recursos humanos adicionales para integrar la nueva plataforma a los sistemas y procesos de negocio existentes(_r_143_149_238_372)
+				: Se requiere tiempo adicional para integrar el nuevo sistema a los sistemas existentes(_r_143_149_238_373)
+				: Se requiere capacitacion al personal de TI y a los usuarios en la nueva plataforma(_r_143_149_238_374)
+				: La decision puede implicar mantenimiento adicional especializado(_r_143_149_238_375)
+				: La decision puede implicar soporte adicional especializado(_r_143_149_238_376)
+				: El middleware reduce los tiempos de integracion y hace uso de mejores practicas y estandares de la industria(_r_143_149_238_384)
+				: Aumenta los costos anuales de toda la implementacion y aumenta el costo total de propiedad(_r_143_149_238_385)
+				: Requiere personal tecnicamente capacitado y con conocimiento suficiente de los sistemas a integrar(_r_143_149_238_386)
+				: Permite el mayor grado de flexibilidad y control(_r_143_149_238_387)
+				: Requiere la adecuada seleccion de un proveedor con alto conocimiento de las herramientas y procesos de negocio involucrados(_r_143_149_238_388)
+				: Al financiar la implementacion con recursos propios se afecta el flujo de caja de la empresa y asi el capital de trabajo(_r_143_149_238_393)
+				: Se evitan los costos asociados a diferentes tipos de financiacion(_r_143_149_238_394)
+				: Los costos asociados al proyecto aumentan por cuenta de los intereses de financiacion(_r_143_149_238_395)
+				: Los gastos financieros pueden ser contabilizados como gastos operativos generando un efecto -valor- por cuenta de la reduccion de pago de impuestos en el PyG(_r_143_149_238_396)
+				: Los recursos propios liberados por cuenta de la financiacion pueden destinarse a inversiones a una tasa mayor que la tasa de financiacion(_r_143_149_238_397)
+				: Los activos no representan gastos por impuestos para la compania(_r_143_149_238_398)
+				: Sujeto a las condiciones del contrato de leasing operativo establecido por la entidad financiera(_r_143_149_238_399)
+				: No existen costos de licenciamiento soporte configuracion mantenimiento ni actualizacion en cuanto a infraestructura ni sistemas operativos(__r_143_149_238_361)
+				: La empresa no requiere un centro de computo(__r_143_149_238_362)
+				: Interoperabilidad entre diferentes sistemas(_r_143_149_238_363)
+				: Maximo nivel de escalabilidad el costo y tiempo marginal de incrementar la capacidad de procesamiento es el minimo posible(_r_143_149_238_364)
+				: No existe control sobre el acceso a los servidores ni sobre la seguridad de los mismos(_r_143_149_238_365)
+				: Requiere un departamento de TI capaz de evaluar la capacidad tecnologica y los retos que supone la implentacion del sistema(_r_143_149_238_366)
+				: Requiere una generencia de TI responsable de evaluar las alternativas e integrarlas dentro de la vision estrategica de la empresa(__r_143_149_238_366)
+</feature_tree>
+<constraints>
+constraint_86:~_r_3_150_151 or _r_143_144_150_216 or _r_143_145_203_221
+constraint_87:~_r_3_150_152 or _r_143_144_150_217 or _r_143_145_203_221 or _r_143_146_205_207
+constraint_88:~_r_3_150_152 or _r_143_144_150_217 or _r_143_145_203_222 or _r_143_146_205_224
+constraint_89:~_r_3_150_152 or _r_143_144_150_214 or _r_143_145_203_223 or _r_143_146_205_225 or _r_143_147_226_227
+constraint_109:~_r_5_158_159 or _r_143_144_150_252 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_265 or _r_143_148_235_237
+constraint_108:~_r_5_158_159 or _r_143_144_150_251 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_264 or _r_143_148_235_275
+constraint_107:~_r_5_158_159 or _r_143_144_150_250 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_263 or _r_143_148_235_236
+constraint_106:~_r_4_153_157 or _r_143_144_150_212 or _r_143_145_203_229 or _r_143_149_238_249
+constraint_105:~_r_4_153_157 or _r_143_144_150_212 or _r_143_145_203_229 or _r_143_149_238_248
+constraint_104:~_r_4_153_157 or _r_143_144_150_212 or _r_143_145_203_229 or _r_143_149_238_247
+constraint_103:~_r_4_153_157 or _r_143_144_150_212 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_339 or _r_143_148_235_237
+constraint_102:~_r_4_153_156 or _r_143_144_150_212 or _r_143_145_203_229 or _r_143_149_238_246
+constraint_101:~_r_4_153_156 or _r_143_144_150_212 or _r_143_145_203_229 or _r_143_149_238_245
+constraint_100:~_r_4_153_156 or _r_143_144_150_212 or _r_143_145_203_229 or _r_143_149_238_244
+constraint_90:~_r_3_150_152 or _r_143_144_150_215 or _r_143_145_203_223 or _r_143_146_205_225 or _r_143_147_226_227
+constraint_91:~_r_4_153_154 or _r_143_144_150_212 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_230 or _r_143_148_235_236
+constraint_94:~_r_4_153_154 or _r_143_144_150_212 or _r_143_145_203_229 or _r_143_149_238_240
+constraint_93:~_r_4_153_154 or _r_143_144_150_212 or _r_143_145_203_223 or _r_143_146_205_231 or _r_143_147_226_232 or _r_143_149_238_239
+constraint_96:~_r_4_153_155 or _r_143_144_150_212 or _r_143_145_203_229 or _r_143_149_238_240
+constraint_95:~_r_4_153_155 or _r_143_144_150_212 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_233 or _r_143_148_235_236
+constraint_77:~_r_2_110_248_256 or _r_143_144_150_160 or _r_143_145_203_204 or _r_143_146_205_207
+constraint_78:~_r_3_150_151 or _r_143_144_150_211 or _r_143_145_203_221 or _r_143_146_205_207
+constraint_75:~_r_2_110_248_256 or _r_143_144_150_158 or _r_143_145_203_204 or _r_143_146_205_209
+constraint_76:~_r_2_110_248_256 or _r_143_144_150_159 or _r_143_145_203_204 or _r_143_146_205_207
+constraint_79:~_r_3_150_151 or _r_143_144_150_212 or _r_143_145_203_221 or _r_143_146_205_207
+constraint_117:~_r_5_158_159 or _r_143_144_150_252 or _r_143_145_203_229 or _r_143_149_238_279
+constraint_116:~_r_5_158_159 or _r_143_144_150_255 or _r_143_145_203_229 or _r_143_149_238_278
+constraint_119:~_r_5_158_159 or _r_143_144_150_252 or _r_143_145_203_229 or _r_143_149_238_281
+constraint_118:~_r_5_158_159 or _r_143_144_150_256 or _r_143_145_203_229 or _r_143_149_238_280
+constraint_113:~_r_5_158_159 or _r_143_144_150_212 or _r_143_145_203_222 or _r_143_146_205_224 or _r_143_147_226_269
+constraint_112:~_r_5_158_159 or _r_11 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_268 or _r_143_148_235_236
+constraint_115:~_r_5_158_159 or _r_143_144_150_211 or _r_143_145_203_229 or _r_143_146_205_207 or _r_143_147_226_270 or _r_143_149_238_277
+constraint_114:~_r_5_158_159 or _r_143_144_150_254 or _r_143_145_203_221 or _r_143_149_238_276
+constraint_110:~_r_5_158_159 or _r_143_144_150_217 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_266 or _r_143_148_235_237
+constraint_111:~_r_5_158_159 or _r_143_144_150_253 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_267 or _r_143_148_235_236
+constraint_81:~_r_3_150_151 or _r_143_144_150_211 or _r_143_145_203_222 or _r_143_146_205_224
+constraint_80:~_r_3_150_151 or _r_11 or _r_143_145_203_221 or _r_143_146_205_207
+constraint_85:~_r_3_150_151 or _r_143_144_150_215 or _r_143_145_203_223 or _r_143_146_205_225 or _r_143_147_226_228
+constraint_84:~_r_3_150_151 or _r_143_144_150_214 or _r_143_145_203_223 or _r_143_146_205_225 or _r_143_147_226_227
+constraint_83:~_r_3_150_151 or _r_11 or _r_143_145_203_222 or _r_143_146_205_224
+constraint_82:~_r_3_150_151 or _r_143_144_150_212 or _r_143_145_203_222 or _r_143_146_205_224
+constraint_126:~_r_5_158_160 or _r_143_144_150_252 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_272 or _r_143_148_235_237
+constraint_125:~_r_5_158_160 or _r_143_144_150_251 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_271 or _r_143_148_235_275
+constraint_124:~_r_5_158_160 or _r_143_144_150_250 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_271 or _r_143_148_235_236
+constraint_123:~_r_5_158_159 or _r_143_144_150_258 or _r_143_145_203_229 or _r_143_149_238_285
+constraint_129:~_r_5_158_160 or _r_143_144_150_253 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_274 or _r_143_148_235_236
+constraint_128:~_r_5_158_160 or _r_143_144_150_217 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_273 or _r_143_148_235_236
+constraint_127:~_r_5_158_160 or _r_143_144_150_259 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_265 or _r_143_148_235_275
+constraint_121:~_r_5_158_159 or _r_143_144_150_257 or _r_143_145_203_229 or _r_143_149_238_283
+constraint_122:~_r_5_158_159 or _r_143_144_150_212 or _r_143_145_203_229 or _r_143_149_238_284
+constraint_120:~_r_5_158_159 or _r_143_144_150_257 or _r_143_145_203_229 or _r_143_149_238_282
+constraint_99:~_r_4_153_156 or _r_143_144_150_212 or _r_143_145_203_229 or _r_143_149_238_243
+constraint_97:~_r_4_153_155 or _r_143_144_150_212 or _r_143_145_203_229 or _r_143_149_238_242
+constraint_98:~_r_4_153_156 or _r_143_144_150_212 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_339 or _r_143_148_235_237
+constraint_135:~_r_5_158_160 or _r_143_144_150_257 or _r_143_145_203_261 or _r_143_149_238_289
+constraint_134:~_r_5_158_160 or _r_143_144_150_255 or _r_143_145_203_221 or _r_143_149_238_278
+constraint_137:~_r_5_158_160 or _r_143_144_150_252 or _r_143_145_203_262 or _r_143_149_238_296
+constraint_136:~_r_5_158_160 or _r_143_144_150_212 or _r_143_145_203_261 or _r_143_149_238_290 or _r_143_149_238_291 or _r_143_149_238_292 or _r_143_149_238_293 or _r_143_149_238_294 or _r_143_149_238_295
+constraint_139:~_r_5_158_160 or _r_143_144_150_256 or _r_143_145_203_262 or _r_143_149_238_298
+constraint_138:~_r_5_158_160 or _r_143_144_150_259 or _r_143_145_203_262 or _r_143_149_238_297
+constraint_130:~_r_5_158_160 or _r_11 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_274 or _r_143_148_235_236
+constraint_131:~_r_5_158_160 or _r_143_144_150_212 or _r_143_145_203_222 or _r_143_146_205_224 or _r_143_147_226_269
+constraint_132:~_r_5_158_160 or _r_143_144_150_254 or _r_143_145_203_221 or _r_143_149_238_286
+constraint_133:~_r_5_158_160 or _r_143_144_150_211 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_270 or _r_143_149_238_287
+constraint_43:~_r_2_110_248_249 or _r_143_144_150_171 or _r_143_145_203_204 or _r_143_146_205_207
+constraint_42:~_r_2_110_248_249 or _r_143_144_150_170 or _r_143_145_203_204 or _r_143_146_205_207
+constraint_45:~_r_2_110_248_249 or _r_143_144_150_173 or _r_143_145_203_204 or _r_143_146_205_207
+constraint_44:~_r_2_110_248_249 or _r_143_144_150_172 or _r_143_145_203_204 or _r_143_146_205_210
+constraint_47:~_r_2_110_248_250 or _r_143_144_150_175 or _r_143_145_203_204 or _r_143_146_205_209
+constraint_46:~_r_2_110_248_250 or _r_143_144_150_174 or _r_143_145_203_204 or _r_143_146_205_209
+constraint_49:~_r_2_110_248_250 or _r_143_144_150_178 or _r_143_145_203_204 or _r_143_146_205_209
+constraint_48:~_r_2_110_248_250 or _r_143_144_150_177 or _r_143_145_203_204 or _r_143_146_205_209
+constraint_50:~_r_2_110_248_250 or _r_143_144_150_180 or _r_143_145_203_204 or _r_143_146_205_207
+constraint_51:~_r_2_110_248_251 or _r_143_144_150_181 or _r_143_145_203_204 or _r_143_146_205_208
+constraint_52:~_r_2_110_248_251 or _r_143_144_150_182 or _r_143_145_203_204 or _r_143_146_205_208
+constraint_39:~_r_2_106_244_247 or _r_143_144_150_167 or _r_143_145_203_204 or _r_143_146_205_209
+constraint_34:~_r_2_106_244_246 or _r_143_144_150_161 or _r_143_145_203_204 or _r_143_146_205_207
+constraint_33:~_r_2_106_244_246 or _r_143_144_150_160 or _r_143_145_203_204 or _r_143_146_205_207
+constraint_32:~_r_2_106_244_246 or _r_143_144_150_159 or _r_143_145_203_204 or _r_143_146_205_207
+constraint_31:~_r_2_106_244_246 or _r_143_144_150_158 or _r_143_145_203_204 or _r_143_146_205_209
+constraint_38:~_r_2_106_244_247 or _r_143_144_150_165 or _r_143_145_203_204 or _r_143_146_205_206
+constraint_37:~_r_2_106_244_247 or _r_143_144_150_166 or _r_143_145_203_204 or _r_143_146_205_206
+constraint_36:~_r_2_106_244_247 or _r_143_144_150_163 or _r_143_145_203_204 or _r_143_146_205_206
+constraint_35:~_r_2_106_244_247 or _r_143_144_150_162 or _r_143_145_203_204 or _r_143_146_205_206
+constraint_40:~_r_2_106_244_247 or _r_143_144_150_168 or _r_143_145_203_204 or _r_143_146_205_209
+constraint_41:~_r_2_110_248_249 or _r_143_144_150_169 or _r_143_145_203_204 or _r_143_146_205_209
+constraint_69:~_r_2_117 or _r_143_144_150_199 or _r_143_145_203_204 or _r_143_146_205_206
+constraint_68:~_r_2_117 or _r_143_144_150_198 or _r_143_145_203_204 or _r_143_146_205_209
+constraint_65:~_r_2_117 or _r_143_144_150_195 or _r_143_145_203_204 or _r_143_146_205_209
+constraint_64:~_r_2_117 or _r_143_144_150_194 or _r_143_145_203_204 or _r_143_146_205_208
+constraint_67:~_r_2_117 or _r_143_144_150_197 or _r_143_145_203_204 or _r_143_146_205_208
+constraint_66:~_r_2_117 or _r_143_144_150_196 or _r_143_145_203_204 or _r_143_146_205_209
+constraint_71:~_r_2_110_248_255 or _r_143_144_150_201 or _r_143_145_203_204 or _r_143_146_205_209
+constraint_72:~_r_2_110_248_256 or _r_143_144_150_202 or _r_143_145_203_204 or _r_143_146_205_209
+constraint_73:~_r_2_110_248_256 or _r_143_144_150_156 or _r_143_145_203_204 or _r_143_146_205_208
+constraint_74:~_r_2_110_248_256 or _r_143_144_150_157 or _r_143_145_203_204 or _r_143_146_205_208
+constraint_70:~_r_2_117 or _r_143_144_150_200 or _r_143_145_203_204 or _r_143_146_205_207
+constraint_59:~_r_2_110_248_253 or _r_143_144_150_162 or _r_143_145_203_204 or _r_143_146_205_206
+constraint_58:~_r_2_110_248_252 or _r_143_144_150_188 or _r_143_145_203_204 or _r_143_146_205_208
+constraint_57:~_r_2_110_248_252 or _r_143_144_150_187 or _r_143_145_203_204 or _r_143_146_205_208
+constraint_56:~_r_2_110_248_252 or _r_143_144_150_186 or _r_143_145_203_204 or _r_143_146_205_209
+constraint_55:~_r_2_110_248_251 or _r_143_144_150_185 or _r_143_145_203_204 or _r_143_146_205_209
+constraint_54:~_r_2_110_248_251 or _r_143_144_150_184 or _r_143_145_203_204 or _r_143_146_205_208
+constraint_53:~_r_2_110_248_251 or _r_143_144_150_183 or _r_143_145_203_204 or _r_143_146_205_208
+constraint_62:~_r_2_110_248_253 or _r_143_144_150_192 or _r_143_145_203_204 or _r_143_146_205_209
+constraint_63:~_r_2_110_248_254 or _r_143_144_150_193 or _r_143_145_203_204 or _r_143_146_205_208
+constraint_60:~_r_2_110_248_253 or _r_143_144_150_190 or _r_143_145_203_204 or _r_143_146_205_209
+constraint_61:~_r_2_110_248_253 or _r_143_144_150_191 or _r_143_145_203_204 or _r_143_146_205_209
+constraint_185:~_r_10_368_370 or _r_143_145_203_222 or _r_143_149_238_373
+constraint_186:~_r_10_368_370 or _r_143_144_150_211 or _r_143_145_203_221 or _r_143_149_238_374
+constraint_187:~_r_10_368_370 or _r_143_144_150_211 or _r_143_145_203_222 or _r_143_149_238_374
+constraint_188:~_r_10_368_370 or _r_143_144_150_336 or _r_143_145_203_221 or _r_143_149_238_375
+constraint_181:~_r_9_347_350 or _r_143_145_203_229 or _r_143_149_238_360 or _r_143_149_238_366 or __r_143_149_238_366
+constraint_182:~_r_10_368_369 or _r_143_144_150_212 or _r_143_145_203_229 or _r_143_149_238_372
+constraint_183:~_r_10_368_370 or _r_143_144_150_250 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_371 or _r_143_148_235_236
+constraint_184:~_r_10_368_370 or _r_143_144_150_213 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_339
+constraint_180:~_r_9_347_350 or _r_143_144_150_292 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_339 or _r_143_148_235_237
+constraint_17:~_r_1_153_215 or _r_2_110_248_253
+constraint_18:~_r_1_153_216 or ~_r_1_153_217 or _r_2_110_248_254
+constraint_19:~_r_1_153_218 or ~_r_1_153_219 or ~_r_1_153_220 or ~_r_1_153_221 or _r_2_110_248_255
+constraint_10:~_r_1_153_154 or ~_r_1_153_155 or ~_r_1_153_156 or ~_r_1_153_157 or ~_r_1_153_158 or ~_r_1_153_159 or ~_r_1_153_160 or _r_2_106_244_245
+constraint_11:~_r_1_153_161 or ~_r_1_153_162 or ~_r_1_153_163 or ~_r_1_153_164 or _r_2_106_244_246
+constraint_12:~_r_1_153_165 or ~_r_1_153_166 or ~_r_1_153_167 or ~_r_1_153_168 or ~_r_1_153_169 or ~_r_1_153_170 or ~_r_1_153_171 or _r_2_106_244_247
+constraint_13:~_r_1_153_172 or ~_r_1_153_173 or ~_r_1_153_174 or ~_r_1_153_175 or ~_r_1_153_176 or ~_r_1_153_177 or ~_r_1_153_180 or ~_r_1_153_182 or ~_r_1_153_183 or _r_2_110_248_249
+constraint_14:~_r_1_153_184 or ~_r_1_153_185 or ~_r_1_153_186 or ~_r_1_153_187 or ~_r_1_153_188 or ~_r_1_153_189 or ~_r_1_153_190 or ~_r_1_153_191 or ~_r_1_153_192 or ~_r_1_153_193 or ~_r_1_153_194 or ~_r_1_153_195 or ~_r_1_153_196 or _r_2_110_248_250
+constraint_189:~_r_10_368_370 or _r_143_144_150_252 or _r_143_145_203_221 or _r_143_149_238_376
+constraint_15:_r_1_153_197 or ~_r_1_153_198 or ~_r_1_153_199 or ~_r_1_153_200 or ~_r_1_153_201 or ~_r_1_153_202 or _r_2_110_248_251
+constraint_16:~_r_1_153_203 or ~_r_1_153_204 or ~_r_1_153_205 or ~_r_1_153_207 or ~_r_1_153_208 or ~_r_1_153_209 or ~_r_1_153_210 or ~_r_1_153_211 or ~_r_1_153_212 or ~_r_1_153_213 or ~_r_1_153_214 or _r_2_110_248_252
+constraint_198:~_r_11_377_379 or _r_143_144_150_212 or _r_143_145_203_229 or _r_143_149_238_386 or _r_143_149_238_387
+constraint_199:~_r_11_377_380 or _r_143_144_150_212 or _r_143_145_203_221 or _r_143_147_226_339
+constraint_196:~_r_11_377_379 or _r_143_144_150_212 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_339 or _r_143_148_235_237
+constraint_197:~_r_11_377_379 or _r_143_144_150_212 or _r_143_145_203_223 or _r_143_146_205_231 or _r_143_147_226_232
+constraint_30:~_r_2_106_244_246 or _r_143_144_150_157 or _r_143_145_203_204 or _r_143_146_205_208
+constraint_194:~_r_11_377_378 or _r_143_144_150_212 or _r_143_145_203_229 or _r_143_149_238_384
+constraint_195:~_r_11_377_378 or _r_143_144_150_254 or _r_143_145_203_229 or _r_143_149_238_385
+constraint_192:~_r_11_377_378 or _r_143_144_150_259 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_382 or _r_143_148_235_275
+constraint_193:~_r_11_377_378 or _r_143_144_150_217 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_339
+constraint_190:~_r_11_377_378 or _r_143_144_150_250 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_381 or _r_143_148_235_236
+constraint_191:~_r_11_377_378 or _r_143_144_150_251 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_264 or _r_143_148_235_275
+constraint_28:~_r_2_106_244_245 or _r_143_144_150_153 or _r_143_145_203_204 or _r_143_146_205_207
+constraint_29:~_r_2_106_244_245 or _r_143_144_150_154 or _r_143_145_203_204 or _r_143_146_205_208
+constraint_22:~_r_1_153_216 or ~_r_1_153_217 or ~_r_1_153_237 or ~_r_1_153_238 or ~_r_1_153_239 or ~_r_1_153_240 or ~_r_1_153_241 or _r_2_117
+constraint_203:~_r_12_389_392 or _r_143_144_150_254 or _r_143_145_203_229 or _r_143_149_238_398 or _r_143_149_238_399
+constraint_202:~_r_12_389_391 or _r_143_144_150_254 or _r_143_145_203_229 or _r_143_149_238_395 or _r_143_149_238_396 or _r_143_149_238_397
+constraint_20:~_r_1_153_158 or ~_r_1_153_165 or ~_r_1_153_167 or ~_r_1_153_222 or ~_r_1_153_223 or ~_r_1_153_225 or ~_r_1_153_226 or ~_r_1_153_227 or ~_r_1_153_228 or ~_r_1_153_229 or ~_r_1_153_230 or ~_r_1_153_231 or _r_2_110_248_256
+constraint_201:~_r_12_389_390 or _r_143_144_150_254 or _r_143_145_203_229 or _r_143_149_238_393 or _r_143_149_238_394
+constraint_21:~_r_1_153_232 or ~_r_1_153_233 or ~_r_1_153_234 or ~_r_1_153_235 or ~_r_1_153_236 or _r_2_110_248_257
+constraint_200:~_r_11_377_380 or _r_143_144_150_212 or _r_143_145_203_229 or _r_143_149_238_240 or _r_143_149_238_388
+constraint_26:~_r_2_106_244_245 or _r_143_144_150_152 or _r_143_145_203_204 or _r_143_146_205_207
+constraint_27:~_r_2_106_244_246 or _r_143_144_150_156 or _r_143_145_203_204 or _r_143_146_205_208
+constraint_24:~_r_2_106_244_245 or _r_143_144_150_151 or _r_143_145_203_204 or _r_143_146_205_206
+constraint_25:~_r_2_106_244_245 or _r_143_144_150_155 or _r_143_145_203_204 or _r_143_146_205_209
+constraint_142:~_r_6_288_289 or _r_143_144_150_251 or _r_143_145_203_221 or _r_143_147_226_298 or _r_143_149_238_304
+constraint_141:~_r_6_288_289 or _r_143_144_150_292 or _r_143_145_203_221 or _r_143_147_226_298 or _r_143_149_238_303
+constraint_144:~_r_6_288_289 or _r_143_144_150_259 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_266 or _r_143_148_235_275
+constraint_143:~_r_6_288_289 or _r_143_144_150_252 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_265 or _r_143_148_235_237 or _r_143_149_238_305
+constraint_140:~_r_5_158_160 or _r_11 or _r_143_145_203_262 or _r_143_149_238_299
+constraint_149:~_r_6_288_291 or _r_143_144_150_212 or _r_143_145_203_229 or __r_143_149_238_361 or __r_143_149_238_362 or _r_143_149_238_363 or _r_143_149_238_364
+constraint_145:~_r_6_288_289 or _r_143_144_150_217 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_266 or _r_143_148_235_236
+constraint_146:~_r_6_288_289 or _r_143_144_150_253 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_267 or _r_143_148_235_236
+constraint_147:~_r_6_288_289 or _r_11 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_268 or _r_143_148_235_236
+constraint_148:~_r_6_288_289 or _r_143_144_150_293 or _r_143_145_203_229 or _r_143_146_205_207 or _r_143_147_226_299 or _r_143_148_235_236 or _r_143_149_238_306
+constraint_155:~_r_6_288_290 or _r_143_144_150_212 or _r_143_145_203_261 or _r_143_149_238_311 or _r_143_149_238_312 or _r_143_149_238_313
+constraint_154:~_r_6_288_290 or _r_143_144_150_212 or _r_143_145_203_229 or _r_143_149_238_310
+constraint_153:~_r_6_288_290 or _r_143_144_150_295 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_300 or _r_143_148_235_237
+constraint_152:~_r_6_288_289 or _r_143_144_150_294 or _r_143_145_203_229 or _r_143_149_238_309
+constraint_151:~_r_6_288_289 or _r_143_144_150_252 or _r_143_145_203_229 or _r_143_149_238_308
+constraint_150:~_r_6_288_289 or _r_143_144_150_259 or _r_143_145_203_229 or _r_143_149_238_307
+constraint_158:~_r_6_288_291 or _r_143_144_150_295 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_301 or _r_143_148_235_237
+constraint_159:~_r_6_288_291 or _r_143_144_150_212 or _r_143_145_203_222 or _r_143_146_205_297 or _r_143_147_226_302
+constraint_156:~_r_6_288_290 or _r_143_144_150_294 or _r_143_145_203_261 or _r_143_149_238_314
+constraint_157:~_r_6_288_290 or _r_143_144_150_296 or _r_143_145_203_261 or _r_143_149_238_315
+constraint_160:~_r_6_288_291 or _r_143_144_150_294 or _r_143_145_203_229 or _r_143_149_238_365
+constraint_162:~_r_7_316_317 or _r_143_144_150_212 or _r_143_145_203_221 or _r_143_149_238_320
+constraint_161:~_r_6_288_291 or _r_143_144_150_257 or _r_143_145_203_229 or _r_143_149_238_366
+constraint_164:~_r_7_316_318 or _r_143_144_150_212 or _r_143_145_203_229 or _r_143_149_238_325 or _r_143_149_238_326
+constraint_163:~_r_7_316_317 or _r_143_144_150_212 or _r_143_145_203_229 or _r_143_149_238_321 or _r_143_149_238_322 or _r_143_149_238_323 or _r_143_149_238_324
+constraint_166:~_r_7_316_319 or _r_143_144_150_212 or _r_143_145_203_221 or _r_143_149_238_328
+constraint_165:~_r_7_316_318 or _r_143_144_150_212 or _r_143_149_238_327
+constraint_167:~_r_7_316_319 or _r_143_144_150_212 or _r_143_145_203_229 or _r_143_149_238_329 or _r_143_149_238_330
+constraint_168:~_r_8_331_332 or _r_143_144_150_336 or _r_143_145_203_221 or _r_143_146_205_209 or _r_143_147_226_337 or _r_143_148_235_275
+constraint_169:~_r_8_331_332 or _r_143_144_150_336 or _r_143_145_203_229 or _r_143_149_238_340 or _r_143_149_238_341 or _r_143_149_238_342
+constraint_173:~_r_8_331_334 or _r_143_144_150_336 or _r_143_145_203_223 or _r_143_146_205_231 or _r_143_147_226_232
+constraint_172:~_r_8_331_334 or _r_143_144_150_336 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_339 or _r_143_148_235_275
+constraint_171:~_r_8_331_333 or _r_143_144_150_336 or _r_143_145_203_229 or _r_143_149_238_343 or _r_143_149_238_344
+constraint_170:~_r_8_331_333 or _r_143_144_150_336 or _r_143_145_203_221 or _r_143_146_205_209 or _r_143_147_226_338 or _r_143_148_235_275
+constraint_177:~_r_9_347_348 or _r_143_144_150_212 or _r_143_145_203_223 or _r_143_149_238_354 or _r_143_149_238_355 or _r_143_149_238_356
+constraint_176:~_r_9_347_348 or _r_143_144_150_212 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_351 or _r_143_148_235_236 or _r_143_149_238_353
+constraint_175:~_r_8_331_335 or _r_143_144_150_336 or _r_143_145_203_229 or _r_143_149_238_346
+constraint_174:~_r_8_331_334 or _r_143_144_150_336 or _r_143_145_203_229 or _r_143_149_238_345
+constraint_178:~_r_9_347_349 or _r_143_144_150_292 or _r_143_145_203_221 or _r_143_146_205_207 or _r_143_147_226_352 or _r_143_148_235_236
+constraint_179:~_r_9_347_349 or _r_143_144_150_212 or _r_143_145_203_229 or _r_143_149_238_357 or _r_143_149_238_358 or _r_143_149_238_359
+</constraints>
+</feature_model>

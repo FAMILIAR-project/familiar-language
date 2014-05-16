@@ -1,0 +1,40 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Wed, Nov 20, 2013 - 11:59 AM  -->
+<feature_model name="matrices">
+<meta>
+<data name="description">modelo de variabilidad de las matrices</data>
+<data name="creator">Angela Villota</data>
+<data name="address"></data>
+<data name="email">angievig@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Driso</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r multiplicadorNMatrices(_r)
+	:m almacenamiento(_r_2)
+		:g (_r_2_3) [1,1] 
+			: compartido(_r_2_3_5)
+			: distribuido(_r_2_3_6)
+	:m multiplicadorDosMatrices(_r_9)
+		:g (_r_9_10) [1,1] 
+			: mixto(_r_9_10_11)
+				:g (_r_9_10_11_14) [1,*] 
+					: bloques(_r_9_10_11_14_15)
+					: strassen(_r_9_10_11_14_16)
+			: simple(_r_9_10_12)
+				:g (_r_9_10_12_13) [1,1] 
+					: strassen(_r_9_10_12_13_14)
+					: filasYColumnas(_r_9_10_12_13_17)
+			: bloques(_r_9_10_13)
+	:o parentizacion(_r_14)
+	:o recuperacion(_r_15)
+</feature_tree>
+<constraints>
+constraint_7:_r_9_10_11_14_15 or ~_r_9_10_11_14_16
+constraint_4:_r_14 or ~_r_15
+constraint_3:~_r_14 or _r_15
+</constraints>
+</feature_model>

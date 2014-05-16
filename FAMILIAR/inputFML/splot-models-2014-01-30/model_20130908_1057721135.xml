@@ -1,0 +1,33 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Sep 8, 2013 - 3:20 PM  -->
+<feature_model name="RE Process">
+<meta>
+<data name="description">RE Process</data>
+<data name="creator">RE Process</data>
+<data name="address"></data>
+<data name="email">boromicsy@gmil.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">RE Process</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r RE Process(_r)
+	:m Area(_r_1)
+		:m Elicitation(_r_1_2)
+		:o Analysis(_r_1_3)
+		:o Specification(_r_1_4)
+		:m Validation(_r_1_5)
+	:m Method(_r_6)
+		:m Elicitation(_r_6_12)
+			:m Interviews(_r_6_12_15)
+			:m Workshop(_r_6_12_16)
+			:m Observation(_r_6_12_17)
+		:m Analysis(_r_6_13)
+		:m Specification(_r_6_14)
+	:o Feature-7(_r_7)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

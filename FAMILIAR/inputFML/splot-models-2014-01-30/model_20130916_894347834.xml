@@ -1,0 +1,37 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Sep 16, 2013 - 2:54 PM  -->
+<feature_model name="MobileMedia_CarlosEduardoPaulinoSilva">
+<meta>
+<data name="description">MobileMedia</data>
+<data name="creator">Carlos Eduardo Paulino Silva</data>
+<data name="address"></data>
+<data name="email">kdunet@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Mobile Media(_r)
+	:m Media Selection(_r_1)
+		:m Photo(_r_1_21)
+		:o Music(_r_1_22)
+		:o Video(_r_1_23)
+	:m Media Management(_r_2)
+		:m Favourites(_r_2_10)
+			:m Set Favourites(_r_2_10_17)
+			:m View Favourites(_r_2_10_18)
+		:o Copy Media(_r_2_11)
+		:o SMS Transfer(_r_2_12)
+			:o Receive Photo(_r_2_12_19)
+			:o Send Photo(_r_2_12_20)
+	:m Screen Size(_r_3)
+		:g (_r_3_13) [1,1] 
+			: Screen1(_r_3_13_14)
+</feature_tree>
+<constraints>
+constraint_10:_r_3_13_14 or ~_r_1_21
+constraint_7:_r_2_11 or ~_r_2_12
+</constraints>
+</feature_model>
