@@ -26,6 +26,7 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.HashSet;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 
 import net.sf.javabdd.BDD;
@@ -503,6 +504,30 @@ public abstract class FMLTest {
 	protected FeatureModelVariable FM(String fmID, String fmSpecification)
 			throws Exception {
 
+		String actualFmSpecification = "";
+		if (!fmSpecification.startsWith("FM (")) {
+			actualFmSpecification = "FM (" + fmSpecification + " )";
+		} else
+			actualFmSpecification = fmSpecification;
+
+		_shell.parse(fmID + " = " + actualFmSpecification + "\n");
+		return getFMVariable(fmID);
+
+	}
+	
+	/**
+	 * facility to write tests
+	 * 
+	 * @param fmID
+	 * @param fmSpecification
+	 * @return a feature model variable whose identifier is fmID and whose value
+	 *         is fmSpecification (FML syntax)
+	 * @throws Exception
+	 */
+	protected FeatureModelVariable FM(String fmSpecification)
+			throws Exception {
+
+		String fmID = "fm" + new Random().nextInt(100000);
 		String actualFmSpecification = "";
 		if (!fmSpecification.startsWith("FM (")) {
 			actualFmSpecification = "FM (" + fmSpecification + " )";
