@@ -95,7 +95,8 @@ Require-Bundle: de.ovgu.featureide.core,
  S2T2toFML,
  SPLAR-plugin,
  com.google.inject,
- org.sat4j.core
+ org.sat4j.core,
+ org.eclipse.xtext
 Bundle-ActivationPolicy: lazy
 Export-Package: fr.familiar.attributedfm;
   uses:="es.us.isa.FAMA.errors,
