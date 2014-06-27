@@ -7,17 +7,17 @@ Bundle-Activator: fr.familiar.views.featureide.Activator
 Bundle-Vendor: %Bundle-Vendor.3
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ClassPath: .,
- lib/antlr,
- lib/choco-2.1.0-basic+old,
+ lib/antlr.jar,
+ lib/choco-2.1.0-basic+old.jar,
+ lib/commons-io-1.4.jar,
  lib/concurrentlinkedhashmap-lru-1.3.2.jar,
- lib/gagawa-1.0.1,
+ lib/gagawa-1.0.1.jar,
  lib/jgraph-5.5.1.jar,
  lib/jgrapht-jdk1.6.jar,
  lib/jgraphx.jar,
  lib/org.sat4j.core.jar,
  lib/pacogenIntern.jar,
- lib/semanticvectors-3.8.jar,
- lib/simmetrics_jar_v1_6_2_d07_02_07.jar,
+ lib/semanticvectors-3.8.jar
 Import-Package: com.google.common.collect,
  fr.inria.familiar.fmlero,
  fr.inria.familiar.fmlero.fmprimitives,
