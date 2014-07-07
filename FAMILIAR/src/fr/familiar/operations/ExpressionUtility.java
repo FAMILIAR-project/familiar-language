@@ -328,7 +328,7 @@ public class ExpressionUtility {
 				FeatureNode<String> v2 = arr[j];
 				mtxs.add(new Expression<String>(ExpressionType.IMPLIES, 
 						new Expression<String> (v1.getFeature()),
-						new Expression<String> (ExpressionType.NOT, v2.getFeature(), null)));
+						(new Expression<String> (v2.getFeature()).not())));
 			}
 		}
 		return mkConjunction (mtxs) ; 
