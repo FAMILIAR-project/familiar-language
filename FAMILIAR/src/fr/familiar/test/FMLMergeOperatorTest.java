@@ -30,6 +30,7 @@ import net.sf.javabdd.BDD;
 
 import org.junit.Test;
 import org.xtext.example.mydsl.fML.FMFormat;
+import org.xtext.example.mydsl.fML.MergeMode;
 
 import com.google.common.collect.Sets;
 
@@ -116,6 +117,72 @@ public class FMLMergeOperatorTest extends FMLTest {
 		lfms2.add(fmep3);
 		assertMerge(lfms2, fmep3bis, "intersection");
 
+	}
+	
+	@Test
+	public void testMergeThreeSteps() throws Exception {
+		String f1 = "FM(widget:Name Comparison Proportion Value Discrete Dimension; Name:\"Pie Chart\"; Dimension:OneD;)";
+		String f2 = "FM(widget:Name Comparison Proportion Value Discrete Dimension; Name:\"Funnel Chart\"; Dimension:OneD;)";
+		String f3 = "FM(widget:Name Comparison Relationship Patterns DataOverTime Value Variations Extremum Dimension; Name:\"Line Chart\"; Dimension:TwoD;)";
+		String f4 = "FM(widget:Name Comparison Relationship Patterns DataOverTime Value Variations Extremum Dimension; Name:\"Smoothed Line Chart\"; Dimension:TwoD;)";
+		String f5 = "FM(widget:Name Proportion Relationship Patterns DataOverTime Value Variations Dimension; Name:\"Area Chart\"; Dimension:TwoD;)";
+		String f6 = "FM(widget:Name Relationship Distribution Patterns Range DataOverTime Value Discrete Dimension; Name:\"Ohlc Chart\"; Dimension:TwoD;)";
+		
+		List<String> lf = new ArrayList<String>();
+		lf.add(f1);
+		lf.add(f2);
+		lf.add(f3);
+		lf.add(f4);
+		lf.add(f5);
+		lf.add(f6);
+		
+		List<FeatureModelVariable> lfm = new ArrayList<FeatureModelVariable>();
+		
+		for (String s : lf) {
+			int i = 0;
+			_shell.parse("f"+i+" = "+s);
+			lfm.add(getFMVariable("f"+i));
+			i++;
+		}
+		
+		FeatureModelVariable fmvMergedF = new FMLMergerBDD(lfm, FDOverApproximationStrategy.SYNCHRONIZED_FLA).mergeFMs(Mode.StrictUnion);
+		
+		assertEquals(6.0, fmvMergedF.counting(), 0.001);
+		
+		String r7 = "FM(widget:Name Comparison Relationship Patterns DataOverTime Value Discrete Variations Dimension; Name:\"Step Chart\"; Dimension:TwoD;)";
+		String r8 = "FM(widget:Name Comparison Relationship Patterns DataOverTime Value Discrete Extremum Dimension; Name:\"Bar Chart\"; Dimension:TwoD;)";
+		String r9 = "FM(widget:Name Comparison Relationship Probability Distribution Patterns Range DataOverTime Value Discrete Variations Extremum Dimension; Name:\"Column Chart\"; Dimension:TwoD;)";
+		String r10 = "FM(widget:Name Proportion Relationship Probability Distribution Patterns DataOverTime Value Discrete Variations Extremum Dimension; Name:\"XY/Bubble Chart\"; Dimension:ThreeD;)";
+		String r11 = "FM(widget:Name Patterns Range Value Dimension; Name:\"Angular Gauge\"; Dimension:OneD;)";
+		String r12 = "FM(widget:Name Comparison Relationship Distribution Patterns Value Discrete Extremum Dimension; Name:\"Radar Chart\"; Dimension:OneD;)";
+		
+		List<String> lr = new ArrayList<String>();
+		lr.add(r7);
+		lr.add(r8);
+		lr.add(r9);
+		lr.add(r10);
+		lr.add(r11);
+		lr.add(r12);
+		
+		List<FeatureModelVariable> lrm = new ArrayList<FeatureModelVariable>();
+		
+		for (String s : lr) {
+			int i = 0;
+			_shell.parse("r"+i+" = "+s);
+			lrm.add(getFMVariable("r"+i));
+			i++;
+		}
+		
+		FeatureModelVariable fmvMergedR = new FMLMergerBDD(lrm, FDOverApproximationStrategy.SYNCHRONIZED_FLA).mergeFMs(Mode.StrictUnion);
+		
+		assertEquals(6.0, fmvMergedR.counting(), 0.001);
+		
+		List<FeatureModelVariable> lfinal = new ArrayList<FeatureModelVariable>();
+		lfinal.add(fmvMergedF);
+		lfinal.add(fmvMergedR);
+		
+		FeatureModelVariable fmvMergedFinal = new FMLMergerBDD(lfinal, FDOverApproximationStrategy.SYNCHRONIZED_FLA).mergeFMs(Mode.StrictUnion);
+		assertEquals(12.0, fmvMergedFinal.counting(), 0.001);
 	}
 
 	@Test

@@ -165,7 +165,7 @@ public class FMLConfigurationBDDTest extends FMLTest {
 		double dMerge = fmMerge.counting();
 		double dMergeByHand = fmMergeByHand.counting();
 		assertTrue(dMerge == dMergeByHand);
-		assertTrue(dMerge == 5);
+		assertEquals(5, dMerge,0.001);
 		
 		assertEquals(fmMerge, fmMergeByHand); 
 	}
@@ -252,5 +252,15 @@ public class FMLConfigurationBDDTest extends FMLTest {
 		assertTrue(c1.getSelected().contains("B"));
 		assertEquals(c1.getSelected().size(), 2);
 	}
-
+	
+	@Test
+	public void testXorDeselectFeature() throws Exception {
+		FeatureModelVariable fm1 = FM("fm1","T: (A|B);");
+		ConfigurationVariable c1 = ConfigurationVariableFactory.INSTANCE.mkBDD(fm1, "fm1");
+		c1.applySelection("A", OpSelection.SELECT);
+		boolean result = c1.applySelection("B", OpSelection.SELECT);
+		assertFalse(result);
+		assertTrue(c1.getSelected().contains("A"));
+		assertTrue(c1.getSelected().contains("B"));
+	}
 }
