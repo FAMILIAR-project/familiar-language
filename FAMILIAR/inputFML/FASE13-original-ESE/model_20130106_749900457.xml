@@ -1,0 +1,31 @@
+<feature_model name="Monitor">
+<feature_tree>
+:r Monitor (f_Monitor)
+	:m Screen Aspect Ratio (f_Screen_Aspect_Ratio)
+	:m Type (f_Type)
+	:m Port (f_Port)
+	:o EmbeddedDevice (f_EmbeddedDevice)
+		:g [1, *]
+			: Microphone (f_Microphone)
+			: Webcam (f_Webcam)
+			: Speaker (f_Speaker)
+	:g [1, *]
+		: VGA (f_VGA)
+		: HDMI (f_HDMI)
+		: S-Video (f_S_Video)
+		: DVI (f_DVI)
+		: USB (f_USB)
+	:g [1, 1]
+		: Full HD (f_Full_HD)
+		: 3D (f_3D)
+		: Touchscreen (f_Touchscreen)
+		: Dual (f_Dual)
+		: LED (f_LED)
+		: TV (f_TV)
+	:g [1, 1]
+		: 4 to 3 (f_4_to_3)
+		: 16 to 9 (f_16_to_9)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -55,7 +55,7 @@ public class ASE2013KSynthesisTest extends KSynthesisTest {
 			minOutDegrees.add(minOutdegree);
 			int maxOutdegree = graphMetrics.maxOutdegree(implicationGraph);
 			maxOutDegrees.add(maxOutdegree);
-			double meanOutdegree = graphMetrics.meanOutdegree(implicationGraph);
+			double meanOutdegree = graphMetrics.averageOutdegree(implicationGraph);
 			meanOutDegrees.add(meanOutdegree);
 		} 
 

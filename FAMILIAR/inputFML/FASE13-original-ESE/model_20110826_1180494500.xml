@@ -1,0 +1,30 @@
+<feature_model name="namtbl">
+<feature_tree>
+:r namtbl (f_namtbl)
+	:m Experimento (f_Experimento)
+	:m LecturaCodigo (f_LecturaCodigo)
+	:m TecnicaEstatica (f_TecnicaEstatica)
+	:m Tecnicas (f_Tecnicas)
+	:m Disenio (f_Disenio)
+	:m Planteamineto (f_Planteamineto)
+	:m CoberturaSentencia (f_CoberturaSentencia)
+	:m AbstraccionesSucesivas (f_AbstraccionesSucesivas)
+	:m TecnicaDinamica (f_TecnicaDinamica)
+	:m PruebasFuncionales (f_PruebasFuncionales)
+	:m Factores (f_Factores)
+	:m AnalisisValoresLimite (f_AnalisisValoresLimite)
+	:m PruebasEstructurales (f_PruebasEstructurales)
+	:m CoberturaDecision (f_CoberturaDecision)
+	:m ntree (f_ntree)
+	:m Programas (f_Programas)
+	:m Falta (f_Falta)
+	:m ParticionesClasesEquivalencia (f_ParticionesClasesEquivalencia)
+	:m cmdline (f_cmdline)
+	:o 9 Faltas (f_9_Faltas)
+	:o 7 Faltas (f_7_Faltas)
+	:o Trade (f_Trade)
+	:o 6 Faltas (f_6_Faltas)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

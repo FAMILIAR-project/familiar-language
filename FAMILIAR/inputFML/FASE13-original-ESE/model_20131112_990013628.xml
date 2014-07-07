@@ -1,0 +1,18 @@
+<feature_model name="Prueba">
+<feature_tree>
+:r Prueba (f_Prueba)
+	:m Escenario de prueba (f_Escenario_de_prueba)
+	:m Prueba unitaria (f_Prueba_unitaria)
+	:m Prueba de escritorio de funcionalidad (f_Prueba_de_escritorio_de_funcionalidad)
+	:o Prueba De Carga (f_Prueba_De_Carga)
+		:g [1, *]
+			: Prueba con otra herramienta (f_Prueba_con_otra_herramienta)
+			: Prueba JMeter (f_Prueba_JMeter)
+	:o Prueba de navegacion browser (f_Prueba_de_navegacion_browser)
+		:g [1, *]
+			: Prueba mediante uso de selenium (f_Prueba_mediante_uso_de_selenium)
+			: Prueba mediante otra herramienta (f_Prueba_mediante_otra_herramienta)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,27 @@
+<feature_model name="Tipo de Contrato">
+<feature_tree>
+:r Tipo de Contrato (f_Tipo_de_Contrato)
+	:m Contrutora (f_Contrutora)
+	:m Cliente (f_Cliente)
+	:m Fornecedor (f_Fornecedor)
+	:m Dados (f_Dados)
+	:m Obras (f_Obras)
+	:m Status (f_Status)
+	:m Exibicao (f_Exibicao)
+	:o Endereco (f_Endereco)
+	:o Novidades (f_Novidades)
+	:o Mensagem (f_Mensagem)
+		:m Contato (f_Contato)
+		:o Gerenciar (f_Gerenciar)
+			:m Assuntos (f_Assuntos)
+			:m Setores (f_Setores)
+	:g [1, *]
+		: Assistido (f_Assistido)
+		: Juridico (f_Juridico)
+	:g [1, 1]
+		: Pessoa Fisica (f_Pessoa_Fisica)
+		: Pessoa Juridica (f_Pessoa_Juridica)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -18,4 +18,9 @@ public class LevenshteinMetric extends SimpleHeuristic implements KSynthesisPlug
 		return metric.getSimilarity(child, parent);
 	}
 
+	@Override
+	public String toString() {
+		return getName();
+	}
+	
 }

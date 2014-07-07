@@ -1,0 +1,16 @@
+<feature_model name="exibir numero">
+<feature_tree>
+:r exibir numero (f_exibir_numero)
+	:m sim (f_sim)
+	:o salvar (f_salvar)
+		:o ajuda (f_ajuda)
+			:o editar (f_editar)
+				:o apagar (f_apagar)
+					:o selecionar (f_selecionar)
+						:m renomear (f_renomear)
+						:o recuperar numero (f_recuperar_numero)
+							:o identificar numero (f_identificar_numero)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

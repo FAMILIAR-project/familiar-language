@@ -1,0 +1,37 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sat, Dec 14, 2013 - 7:45 AM  -->
+<feature_model name="Car PL">
+<meta>
+<data name="description">A feature model of a simple automobile product line</data>
+<data name="creator">Jules White et. al</data>
+<data name="address"></data>
+<data name="email">filg.s@ig.com.br</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Vanderbilt University, Nashville, TN, USA and University of Seville, Seville, Spain</data>
+<data name="department"></data>
+<data name="date">Aug 2009</data>
+<data name="reference">Jules White, Brian Dougherty, Doulas C. Schmidt, Automated Reasoning for Multi-step Feature Model Configuration Problems, SPLC 2009, San Francisco, USA.</data>
+</meta>
+<feature_tree>
+:r Car(_id_0)
+	:o Automated Driving Controller(_id_1)
+		:m Collision Avoidance Braking(_id_2)
+			:g (_id_3) [1,1] 
+				: Standard Avoidance(_id_4)
+				: Enhanced Avoidance(enhanced_avoidance)
+		:o Parallel Parking(parallel_parking)
+	:m Sensors(_id_5)
+		:o Lateral Range Finder(lateral_range_finder)
+		:o Forward Range Finder(forward_range_finder)
+	:o Tilt Down(_id_0_10)
+	:o CLH(_id_0_11)
+		:g (_id_0_11_12) [1,1] 
+			: with RLS(_id_0_11_12_13)
+			: with Low Cost Light Sensor(_id_0_11_12_14)
+			: No Light Sensor(_id_0_11_12_15)
+</feature_tree>
+<constraints>
+c1:~enhanced_avoidance or forward_range_finder
+c2:parallel_parking or lateral_range_finder
+</constraints>
+</feature_model>

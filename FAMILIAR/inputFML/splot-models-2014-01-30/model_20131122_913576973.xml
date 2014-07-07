@@ -1,0 +1,43 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Nov 22, 2013 - 7:39 PM  -->
+<feature_model name="Mobile Media v7">
+<meta>
+<data name="description">Mobile Media</data>
+<data name="creator">Cleber</data>
+<data name="address"></data>
+<data name="email">cleber.es.ufc@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFC</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Mobile Media(_r)
+	:m Album Management(_r_1)
+		:m Create Album(_r_1_4)
+		:m Delete Album(_r_1_5)
+	:m Media Management(_r_2)
+		:o Favorites(_r_2_6)
+			:m Set Favorites(_r_2_6_26)
+			:m View Favorites(_r_2_6_27)
+		:o Sorting(_r_2_7)
+		:o Copy Media(_r_2_8)
+		:o SMS Transfer(_r_2_9)
+			:m Receive Photo(_r_2_9_14)
+			:m Send Photo(_r_2_9_15)
+		:m Basic Media Operation(_r_2_10)
+			:m Erase Media(_r_2_10_11)
+			:m Delete Media(_r_2_10_12)
+			:m Edit Media Label(_r_2_10_13)
+	:m Media Selection(_r_3)
+		:g (_r_3_17) [1,*] 
+			: Photo(_r_3_17_18)
+				:m View Photo(_r_3_17_18_21)
+				:o Capture Photo(_r_3_17_18_22)
+			: Music(_r_3_17_19)
+				:m Play Music(_r_3_17_19_23)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

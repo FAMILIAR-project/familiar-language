@@ -1,0 +1,67 @@
+<feature_model name="Trim">
+<feature_tree>
+:r Trim (f_Trim)
+	:m Antenna (f_Antenna)
+	:m InteriorColor (f_InteriorColor)
+	:m Sienna (f_Sienna)
+	:m PsgrCount (f_PsgrCount)
+	:m Engine (f_Engine)
+	:m Drive (f_Drive)
+	:m Grade (f_Grade)
+	:m Derived (f_Derived)
+	:m ExteriorColor (f_ExteriorColor)
+	:m Color (f_Color)
+	:m ModelCode (f_ModelCode)
+	:o Accessories (f_Accessories)
+		:o Mud Flaps (f_Mud_Flaps)
+		:o Floor Mats (f_Floor_Mats)
+	:g [1, 1]
+		: V6 (f_V6)
+		: L4 (f_L4)
+	:g [1, 1]
+		: SE (f_SE)
+		: LE (f_LE)
+		: Base (f_Base)
+		: XLE (f_XLE)
+		: LTD (f_LTD)
+	:g [1, 1]
+		: Charcoal (f_Charcoal)
+		: Bisc (f_Bisc)
+		: Gray (f_Gray)
+	:g [1, 1]
+		: 5312 (f_5312)
+		: 5328 (f_5328)
+	:g [1, 1]
+		: 2Wd (f_2Wd)
+		: AWD (f_AWD)
+	:g [1, 1]
+		: 7PSGR (f_7PSGR)
+		: 8PSGR (f_8PSGR)
+	:g [1, 1]
+		: Super White (f_Super_White)
+		: Blizzard Pearl (f_Blizzard_Pearl)
+		: Silver Sky Metallic (f_Silver_Sky_Metallic)
+	:g [1, 1]
+		: Pole (f_Pole)
+		: In Glass (f_In_Glass)
+			:o XLE Premium Package (f_XLE_Premium_Package)
+			:o XLE Navigation Package (f_XLE_Navigation_Package)
+</feature_tree>
+<constraints>
+constraint_1:~f_In_Glass or f_5328
+constraint_2:~f_SE or f_Pole
+constraint_3:~f_SE or f_5328
+constraint_4:~f_5312 or f_Pole
+constraint_5:~f_5312 or f_Base
+constraint_6:~f_LE or f_Pole
+constraint_7:~f_LE or f_5328
+constraint_8:~f_Base or f_Pole
+constraint_9:~f_Charcoal or f_Pole
+constraint_10:~f_Charcoal or f_SE
+constraint_11:~f_LTD or f_In_Glass
+constraint_12:~f_LTD or f_5328
+constraint_13:~f_XLE_Premium_Package or f_XLE
+constraint_14:~f_XLE_Navigation_Package or f_XLE
+constraint_15:~f_XLE or f_5328
+</constraints>
+</feature_model>

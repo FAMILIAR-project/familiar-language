@@ -1,0 +1,22 @@
+<feature_model name="ABS">
+<feature_tree>
+:r ABS (f_ABS)
+	:m Automobil (f_Automobil)
+	:m Transmisija (f_Transmisija)
+	:m Motor (f_Motor)
+	:m Broj vrata (f_Broj_vrata)
+	:m Klima (f_Klima)
+	:g [1, *]
+		: Grejaci sedista (f_Grejaci_sedista)
+		: AirBag (f_AirBag)
+		: EPS (f_EPS)
+	:g [1, *]
+		: Elektricni (f_Elektricni)
+		: Benzin (f_Benzin)
+	:g [1, 1]
+		: Automatska (f_Automatska)
+		: Manuelna (f_Manuelna)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

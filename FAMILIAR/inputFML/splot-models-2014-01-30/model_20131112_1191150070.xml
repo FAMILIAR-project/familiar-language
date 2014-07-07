@@ -1,0 +1,84 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Nov 12, 2013 - 10:01 AM  -->
+<feature_model name="MayaModel">
+<meta>
+<data name="description">Variabilidad de Maya</data>
+<data name="creator">Christian Cabrera</data>
+<data name="address"></data>
+<data name="email">ch.cabrera38@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Universidad de los Andes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Maya(_r)
+	:m User Manager(_r_1)
+		:g (_r_1_9) [1,1] 
+			: Social Network User(_r_1_9_10)
+				:m Single Sign On(_r_1_9_10_16)
+			: System User(_r_1_9_11)
+				:m Create User(_r_1_9_11_12)
+				:m Update User(_r_1_9_11_13)
+				:m Delete User(_r_1_9_11_14)
+				:m Login User(_r_1_9_11_15)
+	:m Holiday Manager(_r_2)
+		:m Create Holiday(_r_2_20)
+		:m Update Holiday(_r_2_21)
+		:m Delete Holiday(_r_2_22)
+		:m Show Holiday(_r_2_23)
+			:m System Holiday Show(_r_2_23_56)
+			:o Social Network Holiday Share(_r_2_23_57)
+	:m Intinerary Manager(_r_3)
+		:m Create Intinerary(_r_3_25)
+		:m Update Intinerary(_r_3_26)
+		:m Delete Intinerary(_r_3_27)
+		:m Show Intinerary(_r_3_28)
+			:m System Intinerary Show(_r_3_28_50)
+				:g (_r_3_28_50_51) [1,*] 
+					: Tree View(_r_3_28_50_51_52)
+					: Calendar View(_r_3_28_50_51_53)
+					: Map View(_r_3_28_50_51_54)
+			:o Facebook Intinerary Share(_r_3_28_55)
+	:m ActivityManager(_r_4)
+		:m Create Activity(_r_4_29)
+		:m Update Activity(_r_4_30)
+		:m Delete Activity(_r_4_31)
+		:m Show Activity(_r_4_32)
+			:m System Activity Show(_r_4_32_48)
+			:o Social Network Activity Share(_r_4_32_49)
+	:m Memory Manager(_r_5)
+		:m Create Memory(_r_5_35)
+		:m Update Memory(_r_5_36)
+		:m Delete Memory(_r_5_37)
+		:m Show Memory(_r_5_38)
+			:m System Memory Show(_r_5_38_58)
+				:g (_r_5_38_58_64) [1,*] 
+					: File System View(_r_5_38_58_64_65)
+					: Slides View(_r_5_38_58_64_66)
+					: Album View(_r_5_38_58_64_67)
+			:o Social Network Memory Share(_r_5_38_59)
+	:o Online Payment(_r_6)
+		:g (_r_6_17) [1,*] 
+			: Credit Card(_r_6_17_18)
+			: Paypal(_r_6_17_19)
+	:o Suggestions and Recommendations(_r_34)
+		:m User Profile(_r_34_55)
+		:g (_r_34_56) [1,1] 
+			: Trip Advisor(_r_34_56_57)
+			: Trip Recommendation(_r_34_56_58)
+	:o Social Network Manager(_r_60)
+		:o Users and Share(_r_60_68)
+			:g (_r_60_68_70) [1,*] 
+				: Twitter Plugin(_r_60_68_70_71)
+				: Facebook Plugin(_r_60_68_70_72)
+		:o Recommendations(_r_60_69)
+			:g (_r_60_69_75) [1,1] 
+				: Trip Advisor Plugin(_r_60_69_75_76)
+				: Trip Recommendation Plugin(_r_60_69_75_54)
+</feature_tree>
+<constraints>
+constraint_1:~_r_1_9_10 or _r_60_68
+</constraints>
+</feature_model>

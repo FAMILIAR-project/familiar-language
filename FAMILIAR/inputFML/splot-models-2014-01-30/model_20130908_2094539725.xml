@@ -1,0 +1,107 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Sep 23, 2013 - 7:34 PM  -->
+<feature_model name="Webmail">
+<meta>
+<data name="description">Feature model of a webmail application</data>
+<data name="creator">Gustavo Schmid de Jesus</data>
+<data name="address"></data>
+<data name="email">gutors@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">ufrgs</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Webmail(_r)
+	:m Webmail Mail Engine(_r_1)
+		:o Send Mail(_r_1_3)
+			:o Mail Attachment(_r_1_3_5)
+		:o Receive Mail(_r_1_4)
+		:o Archive Mail(_r_1_18)
+		:o Delete Mail(_r_1_19)
+		:o Move Mail(_r_1_20)
+			:g (_r_1_20_21) [1,*] 
+				: Spam Box(_r_1_20_21_22)
+				: Trash Box(_r_1_20_21_23)
+		:m Options(_r_1_26)
+			:m General(_r_1_26_27)
+				:m Sort Mail By(_r_1_26_27_29)
+					:g (_r_1_26_27_29_30) [1,*] 
+						: Date order(_r_1_26_27_29_30_31)
+						: Size order(_r_1_26_27_29_30_32)
+				:m Mails to View(_r_1_26_27_33)
+					:m Number of Mails to View(_r_1_26_27_33_34)
+			:o Compose Mail(_r_1_26_28)
+				:m Signature(_r_1_26_28_29)
+				:o Enable Text Editor(_r_1_26_28_30)
+		:o Compose Mail(_r_1_84)
+			:o Spell Check(_r_1_84_85)
+	:o Webmail Document Management(_r_7)
+		:m New Folder(_r_7_78)
+		:o Edit Folder(_r_7_79)
+		:o Delete Folder(_r_7_80)
+		:m New Document(_r_7_88)
+		:o Edit Document(_r_7_89)
+		:o Delete Document(_r_7_90)
+	:m Webmail Options(_r_13)
+		:m General Information(_r_13_14)
+			:m Name(_r_13_14_15)
+			:o Address(_r_13_14_17)
+	:o Webmail Calendar(_r_31)
+		:m New Event(_r_31_36)
+		:m Calendar View - Range by(_r_31_37)
+			:g (_r_31_37_74) [1,*] 
+				: Today(_r_31_37_74_75)
+				: Week(_r_31_37_74_76)
+				: Month(_r_31_37_74_77)
+		:m Calendar View - View mode(_r_31_41)
+			:g (_r_31_41_71) [1,*] 
+				: Grid(_r_31_41_71_72)
+				: List(_r_31_41_71_73)
+		:m Options(_r_31_44)
+			:m Calendar - Week start day(_r_31_44_45)
+			:o Calendar - Work start hour(_r_31_44_46)
+			:o Calendar - Work end hour(_r_31_44_47)
+			:m Calendar - default range by(_r_31_44_48)
+			:m Calendar - default view mode(_r_31_44_64)
+	:o Webmail Tasks(_r_32)
+		:m New Task(_r_32_49)
+		:o Delete Task(_r_32_50)
+		:m Tasks View - Order by(_r_32_51)
+			:g (_r_32_51_52) [1,*] 
+				: Title(_r_32_51_52_53)
+				: Status(_r_32_51_52_54)
+				: Assigned to(_r_32_51_52_55)
+				: Category(_r_32_51_52_56)
+				: Due date(_r_32_51_52_57)
+		:m Options(_r_32_65)
+			:m Tasks - default order by(_r_32_65_66)
+			:m Tasks - tasks per page(_r_32_65_100)
+	:o Webmail Notes(_r_33)
+		:m New Note(_r_33_58)
+		:o Edit Note(_r_33_59)
+		:o Delete Note(_r_33_60)
+		:o Send Note(_r_33_61)
+		:m Options(_r_33_96)
+			:m Notes - Add Category(_r_33_96_98)
+			:o Notes - Delete Category(_r_33_96_99)
+	:o Webmail Links(_r_34)
+		:m New Link(_r_34_62)
+		:o Delete Link(_r_34_63)
+		:m Options(_r_34_91)
+			:m Links - show Favorite Links in(_r_34_91_92)
+				:g (_r_34_91_92_93) [1,*] 
+					: Speed bar(_r_34_91_92_93_94)
+					: Desktop(_r_34_91_92_93_95)
+	:o Webmail Advertising(_r_35)
+		:m Number of advertises(_r_35_62)
+		:m Size of advertises(_r_35_63)
+		:g (_r_35_67) [1,*] 
+			: Large(_r_35_67_68)
+			: Medium(_r_35_67_69)
+			: Small(_r_35_67_70)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

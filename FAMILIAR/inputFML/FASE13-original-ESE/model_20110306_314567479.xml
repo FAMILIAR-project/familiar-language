@@ -1,0 +1,21 @@
+<feature_model name="Configuration">
+<feature_tree>
+:r Configuration (f_Configuration)
+	:m Stations (f_Stations)
+	:m Windows 7 (f_Windows_7)
+	:m OS (f_OS)
+	:m Windows Vista (f_Windows_Vista)
+	:m MiniTV (f_MiniTV)
+	:o Windows XP (f_Windows_XP)
+	:o External (f_External)
+	:o Internal (f_Internal)
+	:g [1, *]
+		: Show original Layout (f_Show_original_Layout)
+		: Time for stop playing (f_Time_for_stop_playing)
+		: Sort external Stations (f_Sort_external_Stations)
+		: Mini Modus (f_Mini_Modus)
+		: Adjust picturesize to screen (f_Adjust_picturesize_to_screen)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

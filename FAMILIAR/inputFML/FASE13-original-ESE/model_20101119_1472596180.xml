@@ -1,0 +1,36 @@
+<feature_model name="Mobile Phone">
+<feature_tree>
+:r Mobile Phone (f_Mobile_Phone)
+	:m Utilit Functions (f_Utilit_Functions)
+	:m Calls (f_Calls)
+	:m Messaging (f_Messaging)
+	:m Alarm clock (f_Alarm_clock)
+	:m Ringing Tones (f_Ringing_Tones)
+	:m Setting (f_Setting)
+	:m OS (f_OS)
+	:o Connectivity (f_Connectivity)
+		:g [1, *]
+			: Bluetooth (f_Bluetooth)
+			: USB (f_USB)
+			: WifI (f_WifI)
+	:o Java Support (f_Java_Support)
+		:o Games (f_Games)
+	:o Media (f_Media)
+		:o Camera (f_Camera)
+		:o MP3 (f_MP3)
+		:o MP4 (f_MP4)
+	:g [1, *]
+		: Voice (f_Voice)
+		: Data (f_Data)
+	:g [1, *]
+		: SMS (f_SMS)
+		: EMS (f_EMS)
+		: MMS (f_MMS)
+	:g [1, 1]
+		: Symbian (f_Symbian)
+		: WinCE (f_WinCE)
+</feature_tree>
+<constraints>
+constraint_1:~f_MP3 or ~f_MP4
+</constraints>
+</feature_model>

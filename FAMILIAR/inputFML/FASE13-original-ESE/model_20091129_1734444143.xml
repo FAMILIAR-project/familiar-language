@@ -1,0 +1,20 @@
+<feature_model name="Tutoring">
+<feature_tree>
+:r Tutoring (f_Tutoring)
+	:m IntelligentTutoring (f_IntelligentTutoring)
+	:m Feedback (f_Feedback)
+	:m Advice (f_Advice)
+	:o Tutoring lecture (f_Tutoring_lecture)
+	:o Grading (f_Grading)
+	:o User Authentication (f_User_Authentication)
+		:o Result Monitoring (f_Result_Monitoring)
+		:g [1, *]
+			: Student (f_Student)
+			: Instructor (f_Instructor)
+	:g [1, *]
+		: Tutoring exercise (f_Tutoring_exercise)
+		: tutoring simulation (f_tutoring_simulation)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,33 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Nov 22, 2013 - 8:29 PM  -->
+<feature_model name="Mobile media v4">
+<meta>
+<data name="description">Mobile media</data>
+<data name="creator">cleber</data>
+<data name="address"></data>
+<data name="email">cleber.es.ufc@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">ufc</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Mobile media(_r)
+	:m Album management(_r_1)
+		:m Create album(_r_1_3)
+		:m Delete album(_r_1_4)
+	:m Photo management(_r_2)
+		:o Favorites(_r_2_5)
+			:m Set favorites(_r_2_5_6)
+			:m View favorites(_r_2_5_7)
+		:m Photo operation(_r_2_8)
+			:m Create photo(_r_2_8_9)
+			:m Delete photo(_r_2_8_10)
+			:m Edit photo label(_r_2_8_11)
+			:m View photo(_r_2_8_12)
+		:o Sorting(_r_2_13)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

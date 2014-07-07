@@ -2,6 +2,10 @@ package fr.familiar.operations.heuristics.metrics;
 
 import gsd.graph.ImplicationGraph;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class ImplicationGraphMetrics {
 
 	
@@ -73,7 +77,7 @@ public class ImplicationGraphMetrics {
 	}
 	
 	
-	public <V> double meanDegree(ImplicationGraph<V> big) {
+	public <V> double averageDegree(ImplicationGraph<V> big) {
 		double sumDegree = 0;
 		for (V vertice : big.vertices()) {
 			sumDegree += big.edgesOf(vertice).size();
@@ -81,7 +85,7 @@ public class ImplicationGraphMetrics {
 		return sumDegree / big.vertices().size();
 	}
 	
-	public <V> double meanIndegree(ImplicationGraph<V> big) {
+	public <V> double averageIndegree(ImplicationGraph<V> big) {
 		double sumIndegree = 0;
 		for (V vertice : big.vertices()) {
 			sumIndegree += big.inDegreeOf(vertice);
@@ -89,12 +93,22 @@ public class ImplicationGraphMetrics {
 		return sumIndegree / big.vertices().size();
 	}
 	
-	public <V> double meanOutdegree(ImplicationGraph<V> big) {
+	public <V> double averageOutdegree(ImplicationGraph<V> big) {
 		double sumOutdegree = 0;
 		for (V vertice : big.vertices()) {
 			sumOutdegree += big.outDegreeOf(vertice);
 		}
 		return sumOutdegree / big.vertices().size();
+	}
+	
+	
+	public <V> int medianDegree(ImplicationGraph<V> big) {
+		List<Integer> degrees = new ArrayList<Integer>();
+		for (V vertice : big.vertices()) {
+			degrees.add(big.edgesOf(vertice).size());
+		}
+		Collections.sort(degrees);
+		return degrees.get(degrees.size()/2);
 	}
 	
 	

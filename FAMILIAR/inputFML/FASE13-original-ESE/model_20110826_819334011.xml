@@ -1,0 +1,30 @@
+<feature_model name="Programas">
+<feature_tree>
+:r Programas (f_Programas)
+	:m LecturaCodigo (f_LecturaCodigo)
+	:m PruebasFuncionales (f_PruebasFuncionales)
+	:m Tecnicas (f_Tecnicas)
+	:m AbstraccionesSucesivas (f_AbstraccionesSucesivas)
+	:m Falta (f_Falta)
+	:m namtbl (f_namtbl)
+	:m TecnicaDinamica (f_TecnicaDinamica)
+	:m Experimento (f_Experimento)
+	:m Planteamineto (f_Planteamineto)
+	:m TecnicaEstatica (f_TecnicaEstatica)
+	:m Factores (f_Factores)
+	:m PruebasEstructurales (f_PruebasEstructurales)
+	:m Disenio (f_Disenio)
+	:m ParticionesClasesEquivalencia (f_ParticionesClasesEquivalencia)
+	:m CoberturaDecision (f_CoberturaDecision)
+	:m ntree (f_ntree)
+	:m AnalisisValoresLimite (f_AnalisisValoresLimite)
+	:m CoberturaSentencia (f_CoberturaSentencia)
+	:m cmdline (f_cmdline)
+	:o Trade (f_Trade)
+	:o 7 Faltas (f_7_Faltas)
+	:o 9 Faltas (f_9_Faltas)
+	:o 6 Faltas (f_6_Faltas)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

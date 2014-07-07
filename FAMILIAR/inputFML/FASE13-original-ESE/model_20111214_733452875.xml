@@ -1,0 +1,21 @@
+<feature_model name="iNavBasic">
+<feature_tree>
+:r iNavBasic (f_iNavBasic)
+	:m TouchScreen (f_TouchScreen)
+	:m ComputeRoute (f_ComputeRoute)
+	:m GPS (f_GPS)
+	:m LocateCurrentPos (f_LocateCurrentPos)
+	:m NetworkConnection (f_NetworkConnection)
+	:m DisplayRoute (f_DisplayRoute)
+	:m EnterDestination (f_EnterDestination)
+	:m LCD (f_LCD)
+	:m Wired (f_Wired)
+	:m USB (f_USB)
+	:m ManageMaps (f_ManageMaps)
+	:m Via_USB (f_Via_USB)
+	:o Shortest (f_Shortest)
+	:o Fastest (f_Fastest)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

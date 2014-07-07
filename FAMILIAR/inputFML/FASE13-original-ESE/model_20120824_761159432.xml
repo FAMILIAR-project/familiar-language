@@ -1,0 +1,34 @@
+<feature_model name="Camera">
+<feature_tree>
+:r Camera (f_Camera)
+	:m sftcam (f_sftcam)
+	:m Display (f_Display)
+	:m Lens (f_Lens)
+	:m SBC (f_SBC)
+	:m Trigger (f_Trigger)
+	:m PSU (f_PSU)
+	:o Firewire Interface card (f_Firewire_Interface_card)
+	:o Ethernet switch (f_Ethernet_switch)
+	:o Flasher unit (f_Flasher_unit)
+		:g [1, 1]
+			: Wired (f_Wired)
+			: Wireless (f_Wireless)
+	:o 3G (f_3G)
+	:g [1, 1]
+		: Tablet (f_Tablet)
+		: VGA (f_VGA)
+	:g [1, 1]
+		: 35mm (f_35mm)
+			:m Radar (f_Radar)
+		: 16mm (f_16mm)
+			:m Piezzo (f_Piezzo)
+		: 75mm (f_75mm)
+			:m Laser (f_Laser)
+	:g [1, 1]
+		: Firewire (f_Firewire)
+		: GigE (f_GigE)
+</feature_tree>
+<constraints>
+constraint_1:~f_Firewire or f_Firewire_Interface_card
+</constraints>
+</feature_model>

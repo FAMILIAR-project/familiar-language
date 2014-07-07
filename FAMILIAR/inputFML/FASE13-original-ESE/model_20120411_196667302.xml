@@ -1,0 +1,37 @@
+<feature_model name="Utility Functions">
+<feature_tree>
+:r Utility Functions (f_Utility_Functions)
+	:m Mobile Phone (f_Mobile_Phone)
+	:m Messaging (f_Messaging)
+	:m Alarm (f_Alarm)
+	:m Calls (f_Calls)
+	:m Settings (f_Settings)
+	:m Ringing Tones (f_Ringing_Tones)
+	:m Screen (f_Screen)
+	:m OS (f_OS)
+	:o Java Support (f_Java_Support)
+		:o Games (f_Games)
+	:o Media (f_Media)
+		:o MP3 (f_MP3)
+	:o Connectivity (f_Connectivity)
+		:m USB (f_USB)
+		:o Bluetooth (f_Bluetooth)
+	:g [1, 1]
+		: Colour (f_Colour)
+		: Basic (f_Basic)
+		: High Resolution (f_High_Resolution)
+			:o Camera (f_Camera)
+	:g [1, 1]
+		: EMS (f_EMS)
+		: AUX (f_AUX)
+		: SMS (f_SMS)
+		: MMS (f_MMS)
+	:g [1, 1]
+		: Symbian (f_Symbian)
+		: WinCE (f_WinCE)
+</feature_tree>
+<constraints>
+constraint_1:~f_Camera or f_Media
+constraint_2:~f_Games or ~f_Basic
+</constraints>
+</feature_model>

@@ -1,0 +1,23 @@
+<feature_model name="i18n">
+<feature_tree>
+:r i18n (f_i18n)
+	:m Agile Simules (f_Agile_Simules)
+	:m Regras (f_Regras)
+	:m Selecao de Projetos (f_Selecao_de_Projetos)
+	:m Selecao de Desenvolvedores (f_Selecao_de_Desenvolvedores)
+	:m Geracao de Codigo (f_Geracao_de_Codigo)
+	:m Geracao de Bugs (f_Geracao_de_Bugs)
+	:m Conserto de Bugs (f_Conserto_de_Bugs)
+	:o Modo Caos (f_Modo_Caos)
+	:o Compartilhamento (f_Compartilhamento)
+		:g [1, *]
+			: Twitter (f_Twitter)
+			: Facebook (f_Facebook)
+	:g [1, 1]
+		: English (f_English)
+			:o Propaganda (f_Propaganda)
+		: Portugues (f_Portugues)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,18 @@
+<feature_model name="E-Portal">
+<feature_tree>
+:r E-Portal (f_E_Portal)
+	:m Site (f_Site)
+	:m Elementos (f_Elementos)
+	:m Menu (f_Menu)
+	:m Box (f_Box)
+	:m Texto (f_Texto)
+	:o Foto (f_Foto)
+	:o Destaque Wide (f_Destaque_Wide)
+		:g [1, *]
+			: Com Foto (f_Com_Foto)
+			: Sem Foto (f_Sem_Foto)
+	:o Destaque Duplo (f_Destaque_Duplo)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

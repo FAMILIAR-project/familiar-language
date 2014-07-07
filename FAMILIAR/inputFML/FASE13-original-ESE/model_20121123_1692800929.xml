@@ -1,0 +1,23 @@
+<feature_model name="Screen Size">
+<feature_tree>
+:r Screen Size (f_Screen_Size)
+	:m MobileMedia (f_MobileMedia)
+	:m Media Management (f_Media_Management)
+	:m Favourites (f_Favourites)
+	:m Set Favourities (f_Set_Favourities)
+	:m View Favourities (f_View_Favourities)
+	:o Copy Media (f_Copy_Media)
+		:o SMS Transfer (f_SMS_Transfer)
+			:m Send Photo (f_Send_Photo)
+			:m Receive Photo (f_Receive_Photo)
+	:o Media Selection (f_Media_Selection)
+		:m Photo (f_Photo)
+		:m Music (f_Music)
+		:o Video (f_Video)
+	:g [1, 1]
+		: Screen2 (f_Screen2)
+		: Screen1 (f_Screen1)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

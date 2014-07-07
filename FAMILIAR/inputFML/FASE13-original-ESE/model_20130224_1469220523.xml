@@ -1,0 +1,17 @@
+<feature_model name="Type rootname for root feature">
+<feature_tree>
+:r Type rootname for root feature (f_Type_rootname_for_root_feature)
+	:m Feature-6 (f_Feature_6)
+	:o Feature-11 (f_Feature_11)
+	:o Feature-7 (f_Feature_7)
+	:g [1, *]
+		: Feature-2 (f_Feature_2)
+			:m Feature-5 (f_Feature_5)
+			:m Feature-9 (f_Feature_9)
+			:m Feature-4 (f_Feature_4)
+			:o Feature-10 (f_Feature_10)
+		: Feature-12 (f_Feature_12)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

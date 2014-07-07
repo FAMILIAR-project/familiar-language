@@ -1,0 +1,18 @@
+<feature_model name="Running a Normal Section">
+<feature_tree>
+:r Running a Normal Section (f_Running_a_Normal_Section)
+	:m Running a Course (f_Running_a_Course)
+	:m Running a Section (f_Running_a_Section)
+	:m Line Trace Car (f_Line_Trace_Car)
+	:o Running a Slope Section (f_Running_a_Slope_Section)
+	:o Running a Twin Loop Section (f_Running_a_Twin_Loop_Section)
+	:o Running a Seesaw Section (f_Running_a_Seesaw_Section)
+	:g [1, *]
+		: 2009 Outer Course (f_2009_Outer_Course)
+		: 2010 Inner Course (f_2010_Inner_Course)
+		: 2010 Outer Course (f_2010_Outer_Course)
+		: 2009 Inner Course (f_2009_Inner_Course)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,25 @@
+<feature_model name="Message">
+<feature_tree>
+:r Message (f_Message)
+	:m Cell phone (f_Cell_phone)
+	:m Basis Functions (f_Basis_Functions)
+	:m SMS (f_SMS)
+	:m Voice Call (f_Voice_Call)
+	:m Extras (f_Extras)
+	:o Communication (f_Communication)
+		:o WLAN (f_WLAN)
+		:o Bluetooth (f_Bluetooth)
+		:o UMTS (f_UMTS)
+	:g [1, *]
+		: MP3 (f_MP3)
+		: Camera (f_Camera)
+			:o MMS (f_MMS)
+			:g [1, 1]
+				: 8MP (f_8MP)
+				: 3MP (f_3MP)
+</feature_tree>
+<constraints>
+constraint_1:~f_Bluetooth or f_Camera
+constraint_2:~f_Bluetooth or ~f_MP3
+</constraints>
+</feature_model>

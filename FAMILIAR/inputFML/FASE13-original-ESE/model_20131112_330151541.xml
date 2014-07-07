@@ -1,0 +1,33 @@
+<feature_model name="Autenticacion">
+<feature_tree>
+:r Autenticacion (f_Autenticacion)
+	:m Eventos (f_Eventos)
+	:m Proveedor Ubicacion (f_Proveedor_Ubicacion)
+	:m Gestor de Multimedia (f_Gestor_de_Multimedia)
+	:o BI (f_BI)
+		:g [1, *]
+			: DataWarehouse Local (f_DataWarehouse_Local)
+			: Socialmedia (f_Socialmedia)
+	:o Gestor Socialmedia (f_Gestor_Socialmedia)
+		:g [1, 1]
+			: Twiter API (f_Twiter_API)
+			: Facebook API (f_Facebook_API)
+	:o Auditoria (f_Auditoria)
+		:g [1, 1]
+			: Aspect J (f_Aspect_J)
+			: Manual (f_Manual)
+	:g [1, *]
+		: Video (f_Video)
+		: Audio (f_Audio)
+		: Imagen (f_Imagen)
+	:g [1, 1]
+		: Garmin (f_Garmin)
+		: Google Maps (f_Google_Maps)
+	:g [1, 1]
+		: Google (f_Google)
+		: Yahoo (f_Yahoo)
+		: Facebook (f_Facebook)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

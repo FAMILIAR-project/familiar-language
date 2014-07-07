@@ -1,0 +1,24 @@
+<feature_model name="Multimedia">
+<feature_tree>
+:r Multimedia (f_Multimedia)
+	:m EventosPerez (f_EventosPerez)
+	:m Invitacion (f_Invitacion)
+	:m Autenticacion (f_Autenticacion)
+	:m TipoEvento (f_TipoEvento)
+	:m Inscripcion (f_Inscripcion)
+	:o GenerarCertificado (f_GenerarCertificado)
+	:o ControlAsistencia (f_ControlAsistencia)
+	:o Videos (f_Videos)
+	:o Google (f_Google)
+	:o Facebook (f_Facebook)
+	:o Auditoria (f_Auditoria)
+	:o Fotos (f_Fotos)
+	:o Musica (f_Musica)
+	:g [1, *]
+		: Concierto (f_Concierto)
+		: Congreso (f_Congreso)
+		: ReunionFamiliar (f_ReunionFamiliar)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

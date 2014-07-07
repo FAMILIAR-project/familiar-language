@@ -1,0 +1,39 @@
+<feature_model name="Lens">
+<feature_tree>
+:r Lens (f_Lens)
+	:m PSU (f_PSU)
+	:m SBC (f_SBC)
+	:m stcam (f_stcam)
+	:m Trigger (f_Trigger)
+	:m Camera (f_Camera)
+	:m Display (f_Display)
+	:o Firewire interface card (f_Firewire_interface_card)
+	:o 3G (f_3G)
+		:g [1, 1]
+			: 3G via Ethernet (f_3G_via_Ethernet)
+			: 3G via PCI104 (f_3G_via_PCI104)
+	:o Ethernet switch (f_Ethernet_switch)
+	:o Flasher (f_Flasher)
+		:g [1, 1]
+			: Wireless (f_Wireless)
+			: Wired (f_Wired)
+	:g [1, 1]
+		: Tablet (f_Tablet)
+		: VGA (f_VGA)
+	:g [1, 1]
+		: Piezzo (f_Piezzo)
+			:m 25mm (f_25mm)
+		: Laser (f_Laser)
+			:m 75mm (f_75mm)
+		: Radar (f_Radar)
+			:m 50mm (f_50mm)
+	:g [1, 1]
+		: Firewire (f_Firewire)
+		: GigE (f_GigE)
+</feature_tree>
+<constraints>
+constraint_1:~f_Firewire or f_Firewire_interface_card
+constraint_2:~f_3G_via_Ethernet or f_Ethernet_switch
+constraint_3:~f_Tablet or f_Ethernet_switch
+</constraints>
+</feature_model>

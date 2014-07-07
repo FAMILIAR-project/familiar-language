@@ -1,0 +1,38 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Nov 22, 2013 - 4:40 PM  -->
+<feature_model name="UPT TAM">
+<meta>
+<data name="description">UPT TAM</data>
+<data name="creator">UPT TAM</data>
+<data name="address"></data>
+<data name="email">ruimachado@outlook.pt</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UPT TAM</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r car periphery supervision systems(_r)
+	:m F1 Application(_r_1)
+		:g (_r_1_12) [1,*] 
+			: F3 Parking support(_r_1_12_13)
+				:m F7 Distance indication(_r_1_12_13_26)
+					:o F13 Front(_r_1_12_13_26_28)
+					:m F14 Rear(_r_1_12_13_26_29)
+				:m F8 Steering assistance(_r_1_12_13_27)
+			: F4 Precrash detection(_r_1_12_14)
+	:m F2 Sensor equipment(_r_2)
+		:g (_r_2_15) [1,*] 
+			: F5 Front(_r_2_15_16)
+				:g (_r_2_15_16_18) [1,1] 
+					: F9 Low-end(_r_2_15_16_18_19)
+					: F10 High-end(_r_2_15_16_18_20)
+			: F6 Rear(_r_2_15_17)
+				:g (_r_2_15_17_23) [1,1] 
+					: F11 Low-end(_r_2_15_17_23_24)
+					: F12 High-end(_r_2_15_17_23_25)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

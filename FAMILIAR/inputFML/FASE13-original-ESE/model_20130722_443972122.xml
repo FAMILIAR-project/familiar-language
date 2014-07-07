@@ -1,0 +1,18 @@
+<feature_model name="Authentification">
+<feature_tree>
+:r Authentification (f_Authentification)
+	:m Address Book (f_Address_Book)
+	:m Contact Access (f_Contact_Access)
+	:m Contact Characteristics (f_Contact_Characteristics)
+	:m Name (f_Name)
+	:o E-mail address (f_E_mail_address)
+	:o Telephone number (f_Telephone_number)
+	:o Contact Management (f_Contact_Management)
+		:o Edict Contact (f_Edict_Contact)
+		:o Delete contact (f_Delete_contact)
+		:o Add Contact (f_Add_Contact)
+	:o Interoperability (f_Interoperability)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

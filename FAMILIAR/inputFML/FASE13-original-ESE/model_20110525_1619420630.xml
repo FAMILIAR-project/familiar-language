@@ -1,0 +1,61 @@
+<feature_model name="alarm">
+<feature_tree>
+:r alarm (f_alarm)
+	:m simple operations (f_simple_operations)
+	:m parentheses (f_parentheses)
+	:m calculator (f_calculator)
+	:m accuracy (f_accuracy)
+	:m chronotools (f_chronotools)
+	:m countdown (f_countdown)
+	:m stopwatch (f_stopwatch)
+	:m display (f_display)
+	:m layout (f_layout)
+	:m text display (f_text_display)
+	:m simple (f_simple)
+	:m AndroidSPL (f_AndroidSPL)
+	:m user interface (f_user_interface)
+	:m operations (f_operations)
+	:o laps (f_laps)
+		:o show multiple laps (f_show_multiple_laps)
+			:o show_date_and_time (f_show_date_and_time)
+	:o clock (f_clock)
+		:m time (f_time)
+		:o date (f_date)
+			:o day setting (f_day_setting)
+				:g [1, 1]
+					: seven days (f_seven_days)
+					: weekdays or weekend (f_weekdays_or_weekend)
+		:o alarm_clock (f_alarm_clock)
+			:g [1, 1]
+				: one_alarm_time (f_one_alarm_time)
+				: four_alarm_times (f_four_alarm_times)
+		:o time_zones (f_time_zones)
+		:g [1, 1]
+			: 12h mode (f_12h_mode)
+			: 24h mode (f_24h_mode)
+	:g [1, *]
+		: vibration (f_vibration)
+		: sound (f_sound)
+			:g [1, *]
+				: sound_3 (f_sound_3)
+				: sound_1 (f_sound_1)
+				: sound_2 (f_sound_2)
+	:g [1, 1]
+		: std layout (f_std_layout)
+		: dark layout (f_dark_layout)
+		: blue layout (f_blue_layout)
+		: light layout (f_light_layout)
+	:g [1, 1]
+		: double-row (f_double_row)
+			:m accuracy 24 (f_accuracy_24)
+		: accuracy 12 (f_accuracy_12)
+			:m single-row (f_single_row)
+	:g [1, 1]
+		: minute precision (f_minute_precision)
+		: second precision (f_second_precision)
+</feature_tree>
+<constraints>
+constraint_1:~f_day_setting or f_alarm_clock
+constraint_2:~f_show_date_and_time or f_date
+</constraints>
+</feature_model>

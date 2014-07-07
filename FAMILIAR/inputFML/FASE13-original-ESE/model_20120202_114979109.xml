@@ -1,0 +1,39 @@
+<feature_model name="NChannels">
+<feature_tree>
+:r NChannels (f_NChannels)
+	:m Technology (f_Technology)
+	:m OperationLimits (f_OperationLimits)
+	:m Resolution (f_Resolution)
+	:m Pipeline ADC (f_Pipeline_ADC)
+	:m CoreADC (f_CoreADC)
+	:m SamplingRate (f_SamplingRate)
+	:m DigitalCalibration (f_DigitalCalibration)
+	:o InputStage (f_InputStage)
+		:g [1, 1]
+			: IntermediateInterface (f_IntermediateInterface)
+			: SampleHold (f_SampleHold)
+			: PingPong (f_PingPong)
+	:g [1, 1]
+		: Res10b (f_Res10b)
+		: Res12b (f_Res12b)
+	:g [1, 1]
+		: SampRate125Msps (f_SampRate125Msps)
+		: SampRate250Msps (f_SampRate250Msps)
+		: SampRate100Msps (f_SampRate100Msps)
+	:g [1, 1]
+		: SingleChannel (f_SingleChannel)
+		: DualChannel (f_DualChannel)
+	:g [1, 1]
+		: SMIC40LL (f_SMIC40LL)
+		: TSMC65LP (f_TSMC65LP)
+		: TSMC40LP (f_TSMC40LP)
+</feature_tree>
+<constraints>
+constraint_1:~f_IntermediateInterface or f_NChannels
+constraint_2:~f_IntermediateInterface or f_SampRate250Msps
+constraint_3:~f_PingPong or f_DualChannel
+constraint_4:~f_SampRate100Msps or f_Res12b
+constraint_5:~f_SampleHold or ~f_SampRate125Msps
+constraint_6:~f_PingPong or ~f_SampRate250Msps
+</constraints>
+</feature_model>

@@ -1,0 +1,19 @@
+<feature_model name="Transmission">
+<feature_tree>
+:r Transmission (f_Transmission)
+	:m Drive Train (f_Drive_Train)
+	:m JDFM (f_JDFM)
+	:o Mechanical Front Wheel Drive (f_Mechanical_Front_Wheel_Drive)
+		:o Brake Assist Mode (f_Brake_Assist_Mode)
+		:g [1, 1]
+			: Permanent Front Wheel Drive Mode (f_Permanent_Front_Wheel_Drive_Mode)
+			: Automatic Front Wheel Drive Mode (f_Automatic_Front_Wheel_Drive_Mode)
+	:g [1, 1]
+		: DPT (f_DPT)
+		: IVT (f_IVT)
+		: EPQT (f_EPQT)
+		: CQT (f_CQT)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

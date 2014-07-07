@@ -1,0 +1,17 @@
+<feature_model name="Analisis II">
+<feature_tree>
+:r Analisis II (f_Analisis_II)
+	:o Realizar un Bosquejo de la Arquitectura (f_Realizar_un_Bosquejo_de_la_Arquitectura)
+	:o Ilustrar la Arquitectura (f_Ilustrar_la_Arquitectura)
+		:g [1, 1]
+			: Definir una Arquitectura Candidata (f_Definir_una_Arquitectura_Candidata)
+			: Analizar la Arquitectura (f_Analizar_la_Arquitectura)
+			: Analisis de la Arquitectura (f_Analisis_de_la_Arquitectura)
+				:o Analizar un Caso de Uso (f_Analizar_un_Caso_de_Uso)
+					:o Analizar una Clase (f_Analizar_una_Clase)
+						:o Analizar un Paquete (f_Analizar_un_Paquete)
+	:o Final (f_Final)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

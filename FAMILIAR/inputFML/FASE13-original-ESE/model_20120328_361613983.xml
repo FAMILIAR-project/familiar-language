@@ -1,0 +1,24 @@
+<feature_model name="Input">
+<feature_tree>
+:r Input (f_Input)
+	:m Web Game (f_Web_Game)
+	:m Output (f_Output)
+	:m Screen HTML (f_Screen_HTML)
+	:m Network Support (f_Network_Support)
+	:m Online Multiplayer (f_Online_Multiplayer)
+	:o Pay and Bill Support (f_Pay_and_Bill_Support)
+		:g [1, *]
+			: Pay pal (f_Pay_pal)
+			: Pag seguro (f_Pag_seguro)
+	:o Community (f_Community)
+		:o Language support (f_Language_support)
+			:m Internationalization (f_Internationalization)
+		:o Facebook (f_Facebook)
+		:o Forum (f_Forum)
+	:g [1, *]
+		: Keypad (f_Keypad)
+		: Touch Screen (f_Touch_Screen)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

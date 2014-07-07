@@ -1,0 +1,31 @@
+<feature_model name="Descuento">
+<feature_tree>
+:r Descuento (f_Descuento)
+	:m Envio (f_Envio)
+	:m Correos (f_Correos)
+	:m Compras (f_Compras)
+	:m Entrega (f_Entrega)
+	:m Comprador (f_Comprador)
+	:m Forma de pago (f_Forma_de_pago)
+	:m PayPal (f_PayPal)
+	:m Contrarembolso (f_Contrarembolso)
+	:m Carrito (f_Carrito)
+	:o RecogidaTienda (f_RecogidaTienda)
+	:o Registro (f_Registro)
+	:o Tarjeta (f_Tarjeta)
+		:m Visa (f_Visa)
+		:m MasterCard (f_MasterCard)
+		:m PasarelaPago (f_PasarelaPago)
+		:m AmericanExpres (f_AmericanExpres)
+	:o IngresoCuenta (f_IngresoCuenta)
+	:g [1, *]
+		: Fedex (f_Fedex)
+		: MRW (f_MRW)
+		: UPS (f_UPS)
+	:g [1, *]
+		: Codigo (f_Codigo)
+		: Promocion (f_Promocion)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

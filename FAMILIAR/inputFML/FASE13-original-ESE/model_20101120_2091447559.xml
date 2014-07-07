@@ -1,0 +1,26 @@
+<feature_model name="Monitor Engine performance">
+<feature_tree>
+:r Monitor Engine performance (f_Monitor_Engine_performance)
+	:m gallon per mile (f_gallon_per_mile)
+	:m Methods (f_Methods)
+	:m Monitor Engine (f_Monitor_Engine)
+	:m engine (f_engine)
+	:m Monitor temperatures (f_Monitor_temperatures)
+	:m Based on distance (f_Based_on_distance)
+	:m oil (f_oil)
+	:m Based on type of driving (f_Based_on_type_of_driving)
+	:m Based on driving (f_Based_on_driving)
+	:m transmission (f_transmission)
+	:m Monitor RPM (f_Monitor_RPM)
+	:m Monitor exhaust levels and temperature (f_Monitor_exhaust_levels_and_temperature)
+	:m Monitor Fuel Consumption (f_Monitor_Fuel_Consumption)
+	:m Measures (f_Measures)
+	:m 1 per km (f_1_per_km)
+	:o temperature (f_temperature)
+		:m F1 (f_F1)
+		:m F2 (f_F2)
+	:o coolant (f_coolant)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

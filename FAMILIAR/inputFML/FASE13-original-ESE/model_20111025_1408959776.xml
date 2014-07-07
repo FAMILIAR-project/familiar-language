@@ -1,0 +1,20 @@
+<feature_model name="Music player">
+<feature_tree>
+:r Music player (f_Music_player)
+	:m Player controls (f_Player_controls)
+	:m Play (f_Play)
+	:m Pause (f_Pause)
+	:m Stop (f_Stop)
+	:m Next song (f_Next_song)
+	:m Previous song (f_Previous_song)
+	:g [1, *]
+		: Mp3 (f_Mp3)
+		: Ogg (f_Ogg)
+		: FLAC (f_FLAC)
+		: wav (f_wav)
+		: midi (f_midi)
+		: acc (f_acc)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

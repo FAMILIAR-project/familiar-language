@@ -1,0 +1,30 @@
+<feature_model name="Regras">
+<feature_tree>
+:r Regras (f_Regras)
+	:m Engine de jogadores (f_Engine_de_jogadores)
+	:m Engine de maquina de estados (f_Engine_de_maquina_de_estados)
+	:m Jogo (f_Jogo)
+	:m Engine de sorteio de dado (f_Engine_de_sorteio_de_dado)
+	:m Desenvolvimento de codigo (f_Desenvolvimento_de_codigo)
+	:o Anuncios promocionais (f_Anuncios_promocionais)
+	:o Bugs (f_Bugs)
+		:g [1, *]
+			: Nasty (f_Nasty)
+			: Simple (f_Simple)
+			: Normal (f_Normal)
+	:o Requisitos (f_Requisitos)
+	:o Integracao (f_Integracao)
+	:o Carta problema (f_Carta_problema)
+	:o Design (f_Design)
+	:o Conceitos (f_Conceitos)
+	:g [1, 1]
+		: Interface grafica (f_Interface_grafica)
+			:g [1, 1]
+				: Flash (f_Flash)
+				: HTML 5 (f_HTML_5)
+		: Interface modo texto (f_Interface_modo_texto)
+</feature_tree>
+<constraints>
+constraint_1:~f_Interface_grafica or f_Anuncios_promocionais
+</constraints>
+</feature_model>

@@ -1,0 +1,16 @@
+<feature_model name="Inventory">
+<feature_tree>
+:r Inventory (f_Inventory)
+	:m CIMS Product Line (f_CIMS_Product_Line)
+	:m Client (f_Client)
+	:m Client_Assesment (f_Client_Assesment)
+	:m Client_Transport (f_Client_Transport)
+	:m Client_Payment (f_Client_Payment)
+	:m Client_Training (f_Client_Training)
+	:m Reports (f_Reports)
+	:m Database (f_Database)
+	:m UserProfile (f_UserProfile)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

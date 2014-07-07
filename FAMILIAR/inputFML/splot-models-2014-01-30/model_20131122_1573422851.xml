@@ -1,0 +1,38 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Nov 22, 2013 - 4:40 PM  -->
+<feature_model name="ACARLOS_car">
+<meta>
+<data name="description">ACARLOS_car</data>
+<data name="creator">ACARLOS_car</data>
+<data name="address"></data>
+<data name="email">acarlosrib@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">ACARLOS_car</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r car(_r)
+	:m app(_r_1)
+		:g (_r_1_4) [1,*] 
+			: park(_r_1_4_5)
+				:m distance(_r_1_4_5_7)
+					:o front(_r_1_4_5_7_9)
+					:m rear(_r_1_4_5_7_10)
+				:o steering(_r_1_4_5_8)
+			: precash(_r_1_4_6)
+	:m sensor(_r_11)
+		:g (_r_11_12) [1,*] 
+			: front(_r_11_12_13)
+				:g (_r_11_12_13_16) [1,1] 
+					: low(_r_11_12_13_16_17)
+					: high(_r_11_12_13_16_18)
+			: rear(_r_11_12_15)
+				:g (_r_11_12_15_19) [1,1] 
+					: low(_r_11_12_15_19_20)
+					: high(_r_11_12_15_19_21)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

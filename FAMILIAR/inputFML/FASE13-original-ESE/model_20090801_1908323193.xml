@@ -1,0 +1,20 @@
+<feature_model name="CFDP Library">
+<feature_tree>
+:r CFDP Library (f_CFDP_Library)
+	:g [1, *]
+		: Send (f_Send)
+			:o Send Acknowledged Mode (f_Send_Acknowledged_Mode)
+			:o Send File System Operations (f_Send_File_System_Operations)
+		: Receive (f_Receive)
+			:o Receive Acknowledged Mode (f_Receive_Acknowledged_Mode)
+			:o Receive File System Operations (f_Receive_File_System_Operations)
+		: PUS_ (f_PUS_)
+			:o PUS Rename (f_PUS_Rename)
+			:o PUS Copy (f_PUS_Copy)
+		: Reboot_ (f_Reboot_)
+			:o Reboot Entity (f_Reboot_Entity)
+			:o Reboot PUS (f_Reboot_PUS)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

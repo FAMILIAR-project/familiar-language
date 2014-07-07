@@ -1,0 +1,17 @@
+<feature_model name="TD">
+<feature_tree>
+:r TD (f_TD)
+	:m Opcion (f_Opcion)
+	:m Implicacion (f_Implicacion)
+	:m MOdelo (f_MOdelo)
+	:o Costo (f_Costo)
+		:o 25 (f_25)
+		:o 60 (f_60)
+	:o OP 1 (f_OP_1)
+		:o TD1 (f_TD1)
+	:o Op 2 (f_Op_2)
+	:o TD2 (f_TD2)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

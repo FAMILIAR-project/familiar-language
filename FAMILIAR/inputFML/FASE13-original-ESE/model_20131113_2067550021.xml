@@ -1,0 +1,52 @@
+<feature_model name="Listagem de usuarios">
+<feature_tree>
+:r Listagem de usuarios (f_Listagem_de_usuarios)
+	:m Cadastro de fornecedor (f_Cadastro_de_fornecedor)
+	:m Editar cadastro de fornecedor (f_Editar_cadastro_de_fornecedor)
+	:m Cadastro de cliente (f_Cadastro_de_cliente)
+	:m Apagar cadastro de fornecedor (f_Apagar_cadastro_de_fornecedor)
+	:m Listagem de clientes (f_Listagem_de_clientes)
+	:m Listagem de fornecedores (f_Listagem_de_fornecedores)
+	:m Listagem de itens (f_Listagem_de_itens)
+	:m Listagem de pessoas (f_Listagem_de_pessoas)
+	:m Editar cadastro de usuario (f_Editar_cadastro_de_usuario)
+	:m Login (f_Login)
+	:m Listagens (f_Listagens)
+	:m Apagar cadastro de usuario (f_Apagar_cadastro_de_usuario)
+	:m Cadastro de usuario (f_Cadastro_de_usuario)
+	:m Cadastros (f_Cadastros)
+	:m Apagar cadastro de cliente (f_Apagar_cadastro_de_cliente)
+	:m Editar cadastro de cliente (f_Editar_cadastro_de_cliente)
+	:m ERP-SPL (f_ERP_SPL)
+	:o Listagem de estoque (f_Listagem_de_estoque)
+		:o Controle de estoque (f_Controle_de_estoque)
+			:g [1, *]
+				: Entrada de estoque (f_Entrada_de_estoque)
+				: Saida de estoque (f_Saida_de_estoque)
+				: Manutencao de estoque (f_Manutencao_de_estoque)
+	:o Controle de acesso (f_Controle_de_acesso)
+	:o Editar cadastro de produto (f_Editar_cadastro_de_produto)
+		:m Cadastro de produto (f_Cadastro_de_produto)
+		:m Apagar cadastro de produto (f_Apagar_cadastro_de_produto)
+	:o Controle financeiro (f_Controle_financeiro)
+		:g [1, *]
+			: Contas a pagar (f_Contas_a_pagar)
+			: Manutencao de lancamentos (f_Manutencao_de_lancamentos)
+			: Contas a receber (f_Contas_a_receber)
+	:o Listagem de produtos (f_Listagem_de_produtos)
+	:o Apagar cadastro de servico (f_Apagar_cadastro_de_servico)
+		:m Editar cadastro de servico (f_Editar_cadastro_de_servico)
+		:m Cadastro de servico (f_Cadastro_de_servico)
+	:o Listagem de servicos (f_Listagem_de_servicos)
+	:o Listagem de funcionarios (f_Listagem_de_funcionarios)
+		:o Cadastro de funcionario (f_Cadastro_de_funcionario)
+			:m Apagar cadastro de funcionario (f_Apagar_cadastro_de_funcionario)
+			:m Editar cadastro de funcionario (f_Editar_cadastro_de_funcionario)
+	:o Cadastro de regras de acesso de usuario (f_Cadastro_de_regras_de_acesso_de_usuario)
+		:m Editar regras de acesso de usuario (f_Editar_regras_de_acesso_de_usuario)
+</feature_tree>
+<constraints>
+constraint_1:~f_Apagar_cadastro_de_servico or f_Listagem_de_servicos
+constraint_2:~f_Editar_cadastro_de_produto or f_Listagem_de_produtos
+</constraints>
+</feature_model>

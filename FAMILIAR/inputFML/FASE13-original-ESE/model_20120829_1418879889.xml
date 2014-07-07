@@ -1,0 +1,17 @@
+<feature_model name="increment and decrement">
+<feature_tree>
+:r increment and decrement (f_increment_and_decrement)
+	:m Isolation (f_Isolation)
+	:m Integral (f_Integral)
+	:m QoS (f_QoS)
+	:m termination integral (f_termination_integral)
+	:m range problem (f_range_problem)
+	:m reference workload (f_reference_workload)
+	:m general termination (f_general_termination)
+	:g [1, *]
+		: always take lower value (f_always_take_lower_value)
+		: take closer one (f_take_closer_one)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

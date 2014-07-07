@@ -1,0 +1,37 @@
+<feature_model name="Rodas">
+<feature_tree>
+:r Rodas (f_Rodas)
+	:m Carro (f_Carro)
+	:m Motor (f_Motor)
+	:m Retrovisores (f_Retrovisores)
+	:o Vidros eletricos (f_Vidros_eletricos)
+		:g [1, 1]
+			: dianteiros (f_dianteiros)
+			: dianteiros e traseiros (f_dianteiros_e_traseiros)
+	:o Som (f_Som)
+		:g [1, 1]
+			: Bravox (f_Bravox)
+			: Sony (f_Sony)
+			: Pioneer (f_Pioneer)
+	:o Ar-Condicionado (f_Ar_Condicionado)
+		:g [1, 1]
+			: digital (f_digital)
+			: analogico (f_analogico)
+	:g [1, 1]
+		: manuais (f_manuais)
+		: eletricos (f_eletricos)
+		: eletricos rebatimento automatico (f_eletricos_rebatimento_automatico)
+	:g [1, 1]
+		: 1_6 (f_1_6)
+		: 2_0 (f_2_0)
+		: 1_4 (f_1_4)
+		: 1_8 (f_1_8)
+		: 1_0 (f_1_0)
+	:g [1, 1]
+		: aro 14 (f_aro_14)
+		: aro 16 (f_aro_16)
+		: aro 15 (f_aro_15)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,22 @@
+<feature_model name="cellphone">
+<feature_tree>
+:r cellphone (f_cellphone)
+	:m accu_cell (f_accu_cell)
+	:m display (f_display)
+	:o wireless (f_wireless)
+		:g [1, *]
+			: infrared (f_infrared)
+			: bluetooth (f_bluetooth)
+	:g [1, 1]
+		: ni_ca (f_ni_ca)
+		: li_ion (f_li_ion)
+		: ni_mh (f_ni_mh)
+	:g [1, 1]
+		: color (f_color)
+		: monochrome (f_monochrome)
+</feature_tree>
+<constraints>
+constraint_1:~f_bluetooth or f_li_ion
+constraint_2:~f_ni_ca or f_monochrome
+</constraints>
+</feature_model>

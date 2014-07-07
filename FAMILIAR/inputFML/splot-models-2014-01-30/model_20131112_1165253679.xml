@@ -1,0 +1,52 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Nov 12, 2013 - 7:56 PM  -->
+<feature_model name="EventosFeijoo">
+<meta>
+<data name="description">Modelo Parcial No 2</data>
+<data name="creator">Pedro Feijoo</data>
+<data name="address"></data>
+<data name="email">pg.feijoo113@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Universidad de los Andes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r EventosFeijoo(_r)
+	:m Subsistema de Gestion Multimedia(_r_1)
+		:g (_r_1_6) [1,*] 
+			: Componente de Administracion de Sonido(_r_1_6_7)
+			: Componente de Administracion de Imagenes(_r_1_6_9)
+			: Componente de Administracion de Video(_r_1_6_10)
+		:o Componente de Visualizacion Multimedia(_r_1_19)
+			:g (_r_1_19_40) [1,1] 
+				: Visualizacion sin conexion a sitios ajenos(_r_1_19_40_41)
+				: Visualizacion con conexion a sitios ajenos(_r_1_19_40_42)
+					:g (_r_1_19_40_42_43) [1,*] 
+						: Conexion a Grooveshark(_r_1_19_40_42_43_44)
+						: Conexion a Youtube(_r_1_19_40_42_43_45)
+						: Conexion a Instagram(_r_1_19_40_42_43_46)
+	:m Subsistema de Inteligencia de Negocios(_r_2)
+		:g (_r_2_11) [1,*] 
+			: Componente de Administracion Social(_r_2_11_12)
+				:g (_r_2_11_12_23) [1,*] 
+					: Reportar No de Likes en Facebook(_r_2_11_12_23_26)
+					: Reportar No de Retweets en Twitter(_r_2_11_12_23_27)
+					: Reportar No de Shares en Facebook(_r_2_11_12_23_28)
+					: Reportar Ranking en Youtube(_r_2_11_12_23_29)
+					: Reportar Nivel de Satisfaccion en Comentarios (_r_2_11_12_23_30)
+			: Componente Generador de Estadisticas(_r_2_11_15)
+	:m Subsistema de Administracion de Participantes(_r_5)
+		:m Componente Administrador de Tareas y Notificaciones(_r_5_16)
+		:o Componente de Login(_r_5_18)
+		:m Componente de Pagos(_r_5_20)
+		:o Componente Autenticador(_r_5_31)
+			:g (_r_5_31_32) [1,1] 
+				: Autenticar con Facebook(_r_5_31_32_33)
+				: Autenticar con LDAP (_r_5_31_32_34)
+				: Autenticar con Gmail(_r_5_31_32_35)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

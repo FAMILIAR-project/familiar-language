@@ -1,0 +1,20 @@
+<feature_model name="Prueba">
+<feature_tree>
+:r Prueba (f_Prueba)
+	:g [1, 1]
+		: Planificar Prueba (f_Planificar_Prueba)
+			:o Evaluar la Prueba (f_Evaluar_la_Prueba)
+			:o Diseniar Prueba (f_Diseniar_Prueba)
+				:g [1, 1]
+					: Implementar prueba II (f_Implementar_prueba_II)
+						:m Ejecutar Pruebas de Sistema (f_Ejecutar_Pruebas_de_Sistema)
+						:m Ejecutar Pruebas de Integracion (f_Ejecutar_Pruebas_de_Integracion)
+					: Alcanzar la aceptacion de la Mision (f_Alcanzar_la_aceptacion_de_la_Mision)
+						:m Mejorar los activos de Prueba (f_Mejorar_los_activos_de_Prueba)
+						:m Probar y Evaluar (f_Probar_y_Evaluar)
+						:m Implementar prueba (f_Implementar_prueba)
+		: Definir Mision de Evaluacion (f_Definir_Mision_de_Evaluacion)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

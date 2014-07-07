@@ -1,0 +1,39 @@
+<feature_model name="Subsistema de Inteligencia de Negocios">
+<feature_tree>
+:r Subsistema de Inteligencia de Negocios (f_Subsistema_de_Inteligencia_de_Negocios)
+	:m EventosFeijoo (f_EventosFeijoo)
+	:m Subsistema de Gestion Multimedia (f_Subsistema_de_Gestion_Multimedia)
+	:m Componente de Pagos (f_Componente_de_Pagos)
+	:m Componente Administrador de Tareas y Notificaciones (f_Componente_Administrador_de_Tareas_y_Notificaciones)
+	:m Subsistema de Administracion de Participantes (f_Subsistema_de_Administracion_de_Participantes)
+	:o Componente de Visualizacion Multimedia (f_Componente_de_Visualizacion_Multimedia)
+		:g [1, 1]
+			: Visualizacion sin conexion a sitios ajenos (f_Visualizacion_sin_conexion_a_sitios_ajenos)
+			: Visualizacion con conexion a sitios ajenos (f_Visualizacion_con_conexion_a_sitios_ajenos)
+				:g [1, *]
+					: Conexion a Grooveshark (f_Conexion_a_Grooveshark)
+					: Conexion a Youtube (f_Conexion_a_Youtube)
+					: Conexion a Instagram (f_Conexion_a_Instagram)
+	:o Componente de Login (f_Componente_de_Login)
+	:o Componente Autenticador (f_Componente_Autenticador)
+		:g [1, 1]
+			: Autenticar con Facebook (f_Autenticar_con_Facebook)
+			: Autenticar con LDAP (f_Autenticar_con_LDAP)
+			: Autenticar con Gmail (f_Autenticar_con_Gmail)
+	:g [1, *]
+		: Componente de Administracion de Sonido (f_Componente_de_Administracion_de_Sonido)
+		: Componente de Administracion de Imagenes (f_Componente_de_Administracion_de_Imagenes)
+		: Componente de Administracion de Video (f_Componente_de_Administracion_de_Video)
+	:g [1, *]
+		: Componente Generador de Estadisticas (f_Componente_Generador_de_Estadisticas)
+		: Componente de Administracion Social (f_Componente_de_Administracion_Social)
+			:g [1, *]
+				: Reportar No de Retweets en Twitter (f_Reportar_No_de_Retweets_en_Twitter)
+				: Reportar No de Shares en Facebook (f_Reportar_No_de_Shares_en_Facebook)
+				: Reportar Ranking en Youtube (f_Reportar_Ranking_en_Youtube)
+				: Reportar Nivel de Satisfaccion en Comentarios (f_Reportar_Nivel_de_Satisfaccion_en_Comentarios)
+				: Reportar No de Likes en Facebook (f_Reportar_No_de_Likes_en_Facebook)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

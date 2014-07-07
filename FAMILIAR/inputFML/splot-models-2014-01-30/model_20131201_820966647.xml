@@ -1,0 +1,38 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Sun, Dec 1, 2013 - 8:29 AM  -->
+<feature_model name="myHolidays">
+<meta>
+<data name="description">myHolidays</data>
+<data name="creator">myHolidays</data>
+<data name="address"></data>
+<data name="email">jesm00@hotmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">uniandes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r product(_r)
+	:m myholidays(_r_1)
+	:m myholidays-master(_r_2)
+	:m user(_r_5)
+	:m user-master(_r_7)
+	:m itinerary(_r_9)
+		:o itinerary-report(_r_9_16)
+	:m itinerary-master(_r_11)
+		:o itinerary-master-price(_r_11_17)
+	:m event(_r_13)
+		:o event-rate(_r_13_18)
+	:m event-master(_r_17)
+	:m memory(_r_19)
+		:o memory-search(_r_19_21)
+	:o memory-master(_r_22)
+	:o multimediafile(_r_24)
+		:o multimediafile-visor(_r_24_26)
+	:o audit(_r_28)
+</feature_tree>
+<constraints>
+constraint_32:_r_22 or ~_r_24
+</constraints>
+</feature_model>

@@ -1,0 +1,16 @@
+<feature_model name="WEB1">
+<feature_tree>
+:r WEB1 (f_WEB1)
+	:m Communication (f_Communication)
+	:o Chat (f_Chat)
+		:o Private (f_Private)
+		:o Public (f_Public)
+	:o Audio (f_Audio)
+	:o Video (f_Video)
+	:o Presentation (f_Presentation)
+	:o Whiteboard (f_Whiteboard)
+	:o Participants List (f_Participants_List)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

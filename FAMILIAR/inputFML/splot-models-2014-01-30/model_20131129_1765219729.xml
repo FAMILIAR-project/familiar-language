@@ -1,0 +1,33 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Fri, Nov 29, 2013 - 3:48 PM  -->
+<feature_model name="Mobile Phone Software">
+<meta>
+<data name="description">MP Software</data>
+<data name="creator">Tomás Martins</data>
+<data name="address"></data>
+<data name="email">thomasmartins@live.com.pt</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UPT</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r MP Software(_r)
+	:m Calls(_r_1)
+	:m Screen(_r_2)
+		:g (_r_2_5) [1,1] 
+			: Basic(_r_2_5_6)
+			: Colour(_r_2_5_7)
+			: High Res(_r_2_5_8)
+	:o Media(_r_3)
+		:g (_r_3_9) [1,*] 
+			: Camera(_r_3_9_10)
+			: MP3(_r_3_9_11)
+	:o GPS(_r_4)
+</feature_tree>
+<constraints>
+constraint_2:_r_2_5_8 or ~_r_3_9_10
+constraint_3:~_r_4 or ~_r_2_5_6
+</constraints>
+</feature_model>

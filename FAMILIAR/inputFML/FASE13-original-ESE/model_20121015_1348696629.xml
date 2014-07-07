@@ -1,0 +1,21 @@
+<feature_model name="Material_cuadro">
+<feature_tree>
+:r Material_cuadro (f_Material_cuadro)
+	:m Color (f_Color)
+	:m Bicicletas (f_Bicicletas)
+	:m Grupo (f_Grupo)
+	:g [1, 1]
+		: Shimano (f_Shimano)
+		: Campagnolo (f_Campagnolo)
+	:g [1, 1]
+		: Carbono (f_Carbono)
+		: Aluminio (f_Aluminio)
+	:g [1, 1]
+		: Negro (f_Negro)
+		: Blanco (f_Blanco)
+</feature_tree>
+<constraints>
+constraint_1:~f_Aluminio or f_Campagnolo
+constraint_2:~f_Shimano or f_Carbono
+</constraints>
+</feature_model>

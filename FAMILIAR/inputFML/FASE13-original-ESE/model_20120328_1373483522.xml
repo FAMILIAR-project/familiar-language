@@ -1,0 +1,21 @@
+<feature_model name="Parking lot register">
+<feature_tree>
+:r Parking lot register (f_Parking_lot_register)
+	:m Parking lot Manager (f_Parking_lot_Manager)
+	:m Transfer controller (f_Transfer_controller)
+	:m Car manager (f_Car_manager)
+	:m Car Finder (f_Car_Finder)
+	:m Car register (f_Car_register)
+	:o User Manager (f_User_Manager)
+		:m Register user (f_Register_user)
+	:o Statistics (f_Statistics)
+		:o Dashboard (f_Dashboard)
+	:g [1, 1]
+		: Manual Mapping (f_Manual_Mapping)
+		: GPS (f_GPS)
+			:o Car Location statistics (f_Car_Location_statistics)
+</feature_tree>
+<constraints>
+constraint_1:~f_Car_Location_statistics or f_Statistics
+</constraints>
+</feature_model>

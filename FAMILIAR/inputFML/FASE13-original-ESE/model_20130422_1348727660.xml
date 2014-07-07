@@ -1,0 +1,30 @@
+<feature_model name="Game Play">
+<feature_tree>
+:r Game Play (f_Game_Play)
+	:m Strategy (f_Strategy)
+	:m Real Time Strategy Game (f_Real_Time_Strategy_Game)
+	:m Maps (f_Maps)
+	:o Configuration (f_Configuration)
+		:g [1, *]
+			: Internet Connection (f_Internet_Connection)
+			: AI (f_AI)
+			: Authentication (f_Authentication)
+	:o Openning (f_Openning)
+		:g [1, 1]
+			: CG (f_CG)
+			: MP4 (f_MP4)
+	:g [1, *]
+		: Paris (f_Paris)
+		: New York (f_New_York)
+		: Toquio (f_Toquio)
+		: Rio de Janeiro (f_Rio_de_Janeiro)
+	:g [1, 1]
+		: Multiplayer (f_Multiplayer)
+		: Solo (f_Solo)
+	:g [1, 1]
+		: GQ based (f_GQ_based)
+		: Tower Defense (f_Tower_Defense)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,30 @@
+<feature_model name="Disenio">
+<feature_tree>
+:r Disenio (f_Disenio)
+	:m CoberturaSentencia (f_CoberturaSentencia)
+	:m AnalisisValoresLimite (f_AnalisisValoresLimite)
+	:m ntree (f_ntree)
+	:m CoberturaDecision (f_CoberturaDecision)
+	:m namtbl (f_namtbl)
+	:m Programas (f_Programas)
+	:m cmdline (f_cmdline)
+	:m Planteamineto (f_Planteamineto)
+	:m Falta (f_Falta)
+	:m Experimento (f_Experimento)
+	:m Factores (f_Factores)
+	:m TecnicaDinamica (f_TecnicaDinamica)
+	:m Tecnicas (f_Tecnicas)
+	:m TecnicaEstatica (f_TecnicaEstatica)
+	:m ParticionesClasesEquivalencia (f_ParticionesClasesEquivalencia)
+	:m LecturaCodigo (f_LecturaCodigo)
+	:m AbstraccionesSucesivas (f_AbstraccionesSucesivas)
+	:m PruebasEstructurales (f_PruebasEstructurales)
+	:m PruebasFuncionales (f_PruebasFuncionales)
+	:o 9 Faltas (f_9_Faltas)
+	:o 7 Faltas (f_7_Faltas)
+	:o Trade (f_Trade)
+	:o 6 Faltas (f_6_Faltas)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

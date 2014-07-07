@@ -1,0 +1,18 @@
+<feature_model name="Lizenz">
+<feature_tree>
+:r Lizenz (f_Lizenz)
+	:m Oekonomische_Merkmale (f_Oekonomische_Merkmale)
+	:m Bereitstellung (f_Bereitstellung)
+	:m Finanzierungsgegenstand (f_Finanzierungsgegenstand)
+	:o Dienstleistung (f_Dienstleistung)
+		:g [1, *]
+			: Installation (f_Installation)
+			: Konfiguration (f_Konfiguration)
+			: Wartung (f_Wartung)
+	:g [1, *]
+		: SaaS (f_SaaS)
+		: Installationspaket (f_Installationspaket)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -64,7 +64,7 @@ public class ICSE2014Experiment4 extends KSynthesisTest {
 			System.out.println("Optimum branching for " + percentageOfMax + "% of maximum constraints");
 			
 			String inputFolder = "inputFML/ICSE2014-constraint-generator/" + (percentageOfMax / 10) + "/";
-			List<FeatureModelVariable> fms = loadFeatureModelFolder(inputFolder, ".xml", null, "");
+			List<FeatureModelVariable> fms = loadFeatureModelFolder(inputFolder, ".xml", null, null, "");
 			testOptimumBranching(fms, false);
 			System.out.println("---------------------------------------------------------");
 		}

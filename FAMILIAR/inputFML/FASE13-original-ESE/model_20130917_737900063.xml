@@ -1,0 +1,26 @@
+<feature_model name="Display">
+<feature_tree>
+:r Display (f_Display)
+	:m Cell_Phone (f_Cell_Phone)
+	:m Accu_Cell (f_Accu_Cell)
+	:m Games (f_Games)
+	:o Wireless (f_Wireless)
+		:g [1, *]
+			: Infrared (f_Infrared)
+			: Bluetooth (f_Bluetooth)
+	:g [1, *]
+		: Multi_Player (f_Multi_Player)
+		: Single_Player (f_Single_Player)
+			:m Artificial_Opponent (f_Artificial_Opponent)
+	:g [1, 1]
+		: Weak (f_Weak)
+		: Strong (f_Strong)
+		: Medium (f_Medium)
+</feature_tree>
+<constraints>
+constraint_1:~f_Bluetooth or f_Strong
+constraint_2:~f_Multi_Player or f_Wireless
+constraint_3:~f_Weak or f_Single_Player
+constraint_4:~f_Multi_Player or ~f_Weak
+</constraints>
+</feature_model>

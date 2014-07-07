@@ -1,0 +1,26 @@
+<feature_model name="james">
+<feature_tree>
+:r james (f_james)
+	:m user_mngt (f_user_mngt)
+	:m gui (f_gui)
+	:m modules (f_modules)
+	:m core (f_core)
+	:o ws_interface (f_ws_interface)
+	:g [1, *]
+		: calendar (f_calendar)
+		: forum (f_forum)
+		: repository (f_repository)
+			:o congress_mngt (f_congress_mngt)
+	:g [1, *]
+		: pc (f_pc)
+		: pda (f_pda)
+	:g [1, 1]
+		: db (f_db)
+		: ldap (f_ldap)
+</feature_tree>
+<constraints>
+constraint_1:~f_repository or f_pc
+constraint_2:~f_repository or ~f_pda
+constraint_3:~f_congress_mngt or ~f_pda
+</constraints>
+</feature_model>

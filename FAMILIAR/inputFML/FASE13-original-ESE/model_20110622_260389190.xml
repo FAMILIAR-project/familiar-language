@@ -1,0 +1,21 @@
+<feature_model name="Size">
+<feature_tree>
+:r Size (f_Size)
+	:m Engine (f_Engine)
+	:m Fuel (f_Fuel)
+	:m Car (f_Car)
+	:m Wheels (f_Wheels)
+	:g [1, *]
+		: Electric (f_Electric)
+		: Gas (f_Gas)
+		: Diesel (f_Diesel)
+	:g [1, 1]
+		: Four (f_Four)
+		: Three (f_Three)
+	:g [1, 1]
+		: 1000CC (f_1000CC)
+		: 1500CC (f_1500CC)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

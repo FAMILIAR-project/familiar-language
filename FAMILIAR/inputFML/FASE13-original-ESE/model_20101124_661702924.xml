@@ -1,0 +1,27 @@
+<feature_model name="H">
+<feature_tree>
+:r H (f_H)
+	:m Y (f_Y)
+	:m G (f_G)
+	:m Test (f_Test)
+	:m X (f_X)
+	:o Z (f_Z)
+		:g [1, *]
+			: I (f_I)
+			: J (f_J)
+			: K (f_K)
+			: L (f_L)
+	:g [1, 1]
+		: F (f_F)
+		: E (f_E)
+	:g [1, 1]
+		: B (f_B)
+		: C (f_C)
+		: A (f_A)
+</feature_tree>
+<constraints>
+constraint_1:~f_I or f_H
+constraint_2:~f_I or f_E
+constraint_3:~f_F or f_K
+</constraints>
+</feature_model>

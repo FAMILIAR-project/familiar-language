@@ -1,0 +1,29 @@
+<feature_model name="Software">
+<feature_tree>
+:r Software (f_Software)
+	:g [1, 1]
+		: Anwendungssoftware (f_Anwendungssoftware)
+			:g [1, 1]
+				: Individualsoftware (f_Individualsoftware)
+				: Standardsoftware (f_Standardsoftware)
+					:g [1, 1]
+						: Basissoftware (f_Basissoftware)
+						: Funktionsorientierte Software (f_Funktionsorientierte_Software)
+							:g [1, *]
+								: Service-orientierte Architektur (f_Service_orientierte_Architektur)
+								: Client-Server-Architektur (f_Client_Server_Architektur)
+							:g [1, 1]
+								: Operative Software (f_Operative_Software)
+								: Managementsoftware (f_Managementsoftware)
+							:g [1, 1]
+								: Branchenspezifische Software (f_Branchenspezifische_Software)
+								: Branchenunabhaengige Software (f_Branchenunabhaengige_Software)
+							:g [1, 1]
+								: Funktionsuebergreifende Software (f_Funktionsuebergreifende_Software)
+								: Funktionsabhaengige Software (f_Funktionsabhaengige_Software)
+						: Officesoftware (f_Officesoftware)
+		: Systemsoftware (f_Systemsoftware)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

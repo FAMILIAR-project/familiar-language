@@ -1,0 +1,17 @@
+<feature_model name="View photo">
+<feature_tree>
+:r View photo (f_View_photo)
+	:m Delete photo (f_Delete_photo)
+	:m Edit photo label (f_Edit_photo_label)
+	:m Mobile Media (f_Mobile_Media)
+	:m Album Management (f_Album_Management)
+	:m Create Album (f_Create_Album)
+	:m Delete album (f_Delete_album)
+	:m Photo Management (f_Photo_Management)
+	:m Photo Operation (f_Photo_Operation)
+	:m Create photo (f_Create_photo)
+	:o Sorting (f_Sorting)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

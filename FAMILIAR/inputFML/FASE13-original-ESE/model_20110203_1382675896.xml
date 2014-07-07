@@ -1,0 +1,20 @@
+<feature_model name="syntax highlighting">
+<feature_tree>
+:r syntax highlighting (f_syntax_highlighting)
+	:m OCL compliance (f_OCL_compliance)
+	:m IDE4OCL (f_IDE4OCL)
+	:m autocompletion (f_autocompletion)
+	:m basic editing (f_basic_editing)
+	:m debbuging (f_debbuging)
+	:m language and model support (f_language_and_model_support)
+	:m architetural support (f_architetural_support)
+	:o syntax and sementics extensions (f_syntax_and_sementics_extensions)
+	:o modularisation (f_modularisation)
+	:o OCL and model perspective (f_OCL_and_model_perspective)
+	:o variability (f_variability)
+	:o hybrid OCL - MOF view (f_hybrid_OCL___MOF_view)
+	:o user friendly support (f_user_friendly_support)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,23 @@
+<feature_model name="Pantalla">
+<feature_tree>
+:r Pantalla (f_Pantalla)
+	:m Movil (f_Movil)
+	:m Tactil (f_Tactil)
+	:m Llamadas (f_Llamadas)
+	:o Media (f_Media)
+		:g [1, *]
+			: MP3 (f_MP3)
+			: Camara (f_Camara)
+	:o GPS (f_GPS)
+	:o Teclado (f_Teclado)
+	:g [1, 1]
+		: Basica (f_Basica)
+		: Alta resolucion (f_Alta_resolucion)
+		: Color (f_Color)
+</feature_tree>
+<constraints>
+constraint_1:~f_Camara or f_Pantalla
+constraint_2:~f_Camara or f_Alta_resolucion
+constraint_3:~f_GPS or ~f_Basica
+</constraints>
+</feature_model>

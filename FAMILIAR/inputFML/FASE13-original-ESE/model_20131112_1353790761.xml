@@ -1,0 +1,33 @@
+<feature_model name="tarjeta de credito">
+<feature_tree>
+:r tarjeta de credito (f_tarjeta_de_credito)
+	:m Visor multimedia (f_Visor_multimedia)
+	:m autenticacion (f_autenticacion)
+	:m Paypal (f_Paypal)
+	:m image viewer (f_image_viewer)
+	:m portafolio (f_portafolio)
+	:m pasarela de pagos (f_pasarela_de_pagos)
+	:o tarjeta debito (f_tarjeta_debito)
+	:o Social (f_Social)
+		:g [1, *]
+			: WordPress (f_WordPress)
+			: Facebook (f_Facebook)
+			: Twitter (f_Twitter)
+	:o Auditoria (f_Auditoria)
+		:g [1, *]
+			: Google Analytics (f_Google_Analytics)
+			: Local DB (f_Local_DB)
+	:o tunes player (f_tunes_player)
+	:o Video player (f_Video_player)
+	:o Feature-20 (f_Feature_20)
+	:g [1, 1]
+		: Visa (f_Visa)
+		: American Express (f_American_Express)
+	:g [1, 1]
+		: Github OAuth (f_Github_OAuth)
+		: Google OAuth (f_Google_OAuth)
+		: Twitter OAuth (f_Twitter_OAuth)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

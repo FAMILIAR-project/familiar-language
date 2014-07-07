@@ -1,0 +1,31 @@
+<feature_model name="MediaSelection">
+<feature_tree>
+:r MediaSelection (f_MediaSelection)
+	:m AlbumManagement (f_AlbumManagement)
+	:m DeleteAlbum (f_DeleteAlbum)
+	:m MobileMedia (f_MobileMedia)
+	:m MediaManagement (f_MediaManagement)
+	:m CreateAlbum (f_CreateAlbum)
+	:m CreateMedia (f_CreateMedia)
+	:m ViewAlbum (f_ViewAlbum)
+	:m DeleteMedia (f_DeleteMedia)
+	:m BasicMediaOperations (f_BasicMediaOperations)
+	:o Sorting (f_Sorting)
+	:o EditMediaLabel (f_EditMediaLabel)
+	:o SetFavourites (f_SetFavourites)
+		:m ViewFavourites (f_ViewFavourites)
+		:m Favourites (f_Favourites)
+	:o PlayVideo (f_PlayVideo)
+		:m Video (f_Video)
+	:o CopyMedia (f_CopyMedia)
+	:o ReceivePhoto (f_ReceivePhoto)
+		:m SendPhoto (f_SendPhoto)
+		:m SMSTransfer (f_SMSTransfer)
+	:o Music (f_Music)
+		:m PlayMusic (f_PlayMusic)
+	:o ViewPhoto (f_ViewPhoto)
+		:m Photo (f_Photo)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

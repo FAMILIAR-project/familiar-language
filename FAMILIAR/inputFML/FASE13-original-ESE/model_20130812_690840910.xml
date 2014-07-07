@@ -1,0 +1,53 @@
+<feature_model name="Sastm">
+<feature_tree>
+:r Sastm (f_Sastm)
+	:m Recorrido (f_Recorrido)
+	:m Planeacion (f_Planeacion)
+	:m ServiciosApoyo (f_ServiciosApoyo)
+	:m Infraestructura (f_Infraestructura)
+	:m Interfaz (f_Interfaz)
+	:o InformacionUnidadMovil (f_InformacionUnidadMovil)
+		:g [1, *]
+			: Ocupacion (f_Ocupacion)
+			: Ubicacion (f_Ubicacion)
+			: Velocidad (f_Velocidad)
+	:o PuntoRecarga (f_PuntoRecarga)
+	:o SitiosInteres (f_SitiosInteres)
+	:o Despacho (f_Despacho)
+	:g [1, *]
+		: Movil (f_Movil)
+			:g [1, *]
+				: Ios (f_Ios)
+				: Windows (f_Windows)
+				: Android (f_Android)
+		: Web (f_Web)
+	:g [1, *]
+		: ConsultarEstadoRuta (f_ConsultarEstadoRuta)
+			:g [1, *]
+				: ConsultarDistancia (f_ConsultarDistancia)
+				: ConsultarTiempo (f_ConsultarTiempo)
+				: ConsultarOcupacion (f_ConsultarOcupacion)
+		: ConsultarPuntoRecarga (f_ConsultarPuntoRecarga)
+			:g [1, *]
+				: ConsultarTodos (f_ConsultarTodos)
+				: ConsultarCercanos (f_ConsultarCercanos)
+		: PlaneadorRuta (f_PlaneadorRuta)
+			:o Contexto (f_Contexto)
+			:g [1, *]
+				: ConsultarRutaMultipleDestino (f_ConsultarRutaMultipleDestino)
+				: ConsultarPlaneacion (f_ConsultarPlaneacion)
+				: ConsultarRutaDeAaB (f_ConsultarRutaDeAaB)
+</feature_tree>
+<constraints>
+constraint_1:~f_ConsultarPlaneacion or f_Despacho
+constraint_2:~f_ConsultarPuntoRecarga or f_PuntoRecarga
+constraint_3:~f_ConsultarEstadoRuta or f_InformacionUnidadMovil
+constraint_4:~f_ConsultarTiempo or f_Velocidad
+constraint_5:~f_ConsultarTiempo or f_Ubicacion
+constraint_6:~f_ConsultarTiempo or f_InformacionUnidadMovil
+constraint_7:~f_ConsultarDistancia or f_Ubicacion
+constraint_8:~f_ConsultarDistancia or f_InformacionUnidadMovil
+constraint_9:~f_ConsultarOcupacion or f_Ocupacion
+constraint_10:~f_ConsultarOcupacion or f_InformacionUnidadMovil
+</constraints>
+</feature_model>

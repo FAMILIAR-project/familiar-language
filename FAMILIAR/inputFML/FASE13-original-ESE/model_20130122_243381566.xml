@@ -1,0 +1,23 @@
+<feature_model name="Znx operating system">
+<feature_tree>
+:r Znx operating system (f_Znx_operating_system)
+	:m VULOS waveform (f_VULOS_waveform)
+	:m Car (f_Car)
+	:m Buzzard Radios (f_Buzzard_Radios)
+	:o HQ waveform (f_HQ_waveform)
+	:o QL waveform (f_QL_waveform)
+	:o Satcom waveform (f_Satcom_waveform)
+	:g [1, *]
+		: MediumFormfactor (f_MediumFormfactor)
+		: HugeFormfactor (f_HugeFormfactor)
+	:g [1, *]
+		: Green paint (f_Green_paint)
+		: Grey paint (f_Grey_paint)
+		: Black paint (f_Black_paint)
+	:g [1, *]
+		: LCA Framework (f_LCA_Framework)
+		: SCA Framework (f_SCA_Framework)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

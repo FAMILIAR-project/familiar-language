@@ -1,0 +1,55 @@
+<feature_model name="Engine">
+<feature_tree>
+:r Engine (f_Engine)
+	:m automotive system (f_automotive_system)
+	:m Chassis (f_Chassis)
+	:m wiper (f_wiper)
+	:m Front Wiper (f_Front_Wiper)
+	:m Energy Reservoir (f_Energy_Reservoir)
+	:m GearBox (f_GearBox)
+	:o Rear Wiper (f_Rear_Wiper)
+	:o 4x4 Drive GearBox (f_4x4_Drive_GearBox)
+	:o AC (f_AC)
+		:g [1, 1]
+			: Climate Control (f_Climate_Control)
+			: Manual Control (f_Manual_Control)
+	:g [1, *]
+		: Accumulator (f_Accumulator)
+		: Gasoline Tank (f_Gasoline_Tank)
+	:g [1, 1]
+		: 8-Cylinder Engine (f_8_Cylinder_Engine)
+		: 4-Cylinder Engine (f_4_Cylinder_Engine)
+		: 6-Cylinder Engine (f_6_Cylinder_Engine)
+	:g [1, 1]
+		: Front Interval Wipe (f_Front_Interval_Wipe)
+		: Rain Sensor (f_Rain_Sensor)
+			:m Front Rain Sensor Wipe (f_Front_Rain_Sensor_Wipe)
+	:g [1, 1]
+		: Automatic GearBox (f_Automatic_GearBox)
+		: Manual Gearbox (f_Manual_Gearbox)
+	:g [1, 1]
+		: Roof Control (f_Roof_Control)
+			:m Cabrio Chassis (f_Cabrio_Chassis)
+			:g [1, 1]
+				: Roof Control with Rain Sensor (f_Roof_Control_with_Rain_Sensor)
+				: Manual Roof Control (f_Manual_Roof_Control)
+		: Station Wagon Chassis (f_Station_Wagon_Chassis)
+	:g [1, 1]
+		: Electiric Engine (f_Electiric_Engine)
+		: Diesel Engine (f_Diesel_Engine)
+		: Hybrid Engine (f_Hybrid_Engine)
+		: Gasoline Engine (f_Gasoline_Engine)
+</feature_tree>
+<constraints>
+constraint_1:~f_8_Cylinder_Engine or f_Automatic_GearBox
+constraint_2:~f_Gasoline_Engine or f_Gasoline_Tank
+constraint_3:~f_Diesel_Engine or f_Gasoline_Tank
+constraint_4:~f_Station_Wagon_Chassis or f_Rear_Wiper
+constraint_5:~f_Electiric_Engine or f_Accumulator
+constraint_6:~f_4_Cylinder_Engine or f_Manual_Gearbox
+constraint_7:~f_Roof_Control_with_Rain_Sensor or f_Rain_Sensor
+constraint_8:~f_Roof_Control_with_Rain_Sensor or f_Engine
+constraint_9:~f_Hybrid_Engine or f_Gasoline_Tank
+constraint_10:~f_Hybrid_Engine or f_Accumulator
+</constraints>
+</feature_model>

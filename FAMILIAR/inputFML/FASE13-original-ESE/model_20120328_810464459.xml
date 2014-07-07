@@ -1,0 +1,23 @@
+<feature_model name="Print Text">
+<feature_tree>
+:r Print Text (f_Print_Text)
+	:m Open TXT file (f_Open_TXT_file)
+	:m Print to Printer (f_Print_to_Printer)
+	:m Save Text (f_Save_Text)
+	:m Open Text (f_Open_Text)
+	:m Edit Text (f_Edit_Text)
+	:m Write and Delete (f_Write_and_Delete)
+	:o Open Microsoft Word file (f_Open_Microsoft_Word_file)
+	:o Open Open Office format (f_Open_Open_Office_format)
+	:o Open SMS Text (f_Open_SMS_Text)
+	:o Change Italic or Bold (f_Change_Italic_or_Bold)
+		:m Format Text (f_Format_Text)
+		:m Change Font (f_Change_Font)
+		:m Change Text Size (f_Change_Text_Size)
+		:o Paragraph Identation (f_Paragraph_Identation)
+	:o Send E-mail (f_Send_E_mail)
+	:o Print to PDF (f_Print_to_PDF)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

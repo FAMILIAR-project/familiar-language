@@ -1,0 +1,18 @@
+<feature_model name="DATOS PERSONALES">
+<feature_tree>
+:r DATOS PERSONALES (f_DATOS_PERSONALES)
+	:m Feature-7 (f_Feature_7)
+	:m Feature-8 (f_Feature_8)
+	:m HITORIA CLINICA (f_HITORIA_CLINICA)
+	:m Feature-14 (f_Feature_14)
+	:m Feature-12 (f_Feature_12)
+	:m Feature-11 (f_Feature_11)
+	:o Feature-5 (f_Feature_5)
+	:o Feature-4 (f_Feature_4)
+	:o Feature-10 (f_Feature_10)
+	:o Feature-9 (f_Feature_9)
+	:o Feature-13 (f_Feature_13)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

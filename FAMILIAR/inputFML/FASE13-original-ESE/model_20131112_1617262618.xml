@@ -1,0 +1,40 @@
+<feature_model name="Comun">
+<feature_tree>
+:r Comun (f_Comun)
+	:m Tipo de pago (f_Tipo_de_pago)
+	:m Art marketplace (f_Art_marketplace)
+	:m Configurar plantilla (f_Configurar_plantilla)
+	:m Autenticacion (f_Autenticacion)
+	:m Membresia (f_Membresia)
+	:m PortafolioArtistico (f_PortafolioArtistico)
+	:m Login local (f_Login_local)
+	:m Administrar perfil (f_Administrar_perfil)
+	:m Administrar CV (f_Administrar_CV)
+	:m Galeria (f_Galeria)
+	:m Publicar obra (f_Publicar_obra)
+	:o Subastar obra (f_Subastar_obra)
+	:o Venta inmediata (f_Venta_inmediata)
+	:o Exportar galeria (f_Exportar_galeria)
+		:g [1, 1]
+			: Word (f_Word)
+			: PDF (f_PDF)
+			: HTML (f_HTML)
+			: Wiki (f_Wiki)
+	:o Social (f_Social)
+	:o Mercadeo (f_Mercadeo)
+	:o Configurar privacidad obra (f_Configurar_privacidad_obra)
+	:o Proveedor externo (f_Proveedor_externo)
+		:g [1, *]
+			: Facebook (f_Facebook)
+			: Google (f_Google)
+			: Twitter (f_Twitter)
+	:g [1, 1]
+		: Plantillas predefinidas (f_Plantillas_predefinidas)
+		: Editor HTML (f_Editor_HTML)
+	:g [1, 1]
+		: TerjetaCredito (f_TerjetaCredito)
+		: CuentaBancaria (f_CuentaBancaria)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

@@ -1,0 +1,21 @@
+<feature_model name="visor multimedia">
+<feature_tree>
+:r visor multimedia (f_visor_multimedia)
+	:m artistas (f_artistas)
+	:m colecciones (f_colecciones)
+	:m ventas (f_ventas)
+	:m portafolios (f_portafolios)
+	:o curriculo (f_curriculo)
+	:o autenticacion (f_autenticacion)
+		:g [1, 1]
+			: google (f_google)
+			: facebook (f_facebook)
+	:o museos (f_museos)
+	:g [1, *]
+		: audio (f_audio)
+		: imagen (f_imagen)
+		: video (f_video)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

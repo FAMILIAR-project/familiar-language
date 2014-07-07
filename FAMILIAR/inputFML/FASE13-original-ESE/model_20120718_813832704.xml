@@ -1,0 +1,18 @@
+<feature_model name="ui">
+<feature_tree>
+:r ui (f_ui)
+	:m is (f_is)
+	:m Type name fp1or root feature (f_Type_name_fp1or_root_feature)
+	:m wc (f_wc)
+	:m mw (f_mw)
+	:m hc (f_hc)
+	:m mh (f_mh)
+	:o ah (f_ah)
+		:o rhc (f_rhc)
+	:o aw (f_aw)
+	:o i (f_i)
+</feature_tree>
+<constraints>
+constraint_1:~f_rhc or f_i
+</constraints>
+</feature_model>

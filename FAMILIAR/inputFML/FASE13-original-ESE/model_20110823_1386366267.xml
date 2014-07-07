@@ -1,0 +1,23 @@
+<feature_model name="Technical Solution">
+<feature_tree>
+:r Technical Solution (f_Technical_Solution)
+	:m Database Implementation (f_Database_Implementation)
+	:m Implementation (f_Implementation)
+	:m Component Implementation (f_Component_Implementation)
+	:o Architecture Design (f_Architecture_Design)
+	:o Analysis and Design (f_Analysis_and_Design)
+		:m Component Design (f_Component_Design)
+		:m Database Design (f_Database_Design)
+		:o Analysis and Design Realization (f_Analysis_and_Design_Realization)
+			:g [1, 1]
+				: Analysis Document (f_Analysis_Document)
+				: Design Document (f_Design_Document)
+				: Analysis and Design Document (f_Analysis_and_Design_Document)
+		:o Reuse Analysis (f_Reuse_Analysis)
+		:o Interfaces and Communications Design (f_Interfaces_and_Communications_Design)
+	:o Interfaces and Comunications Implementation (f_Interfaces_and_Comunications_Implementation)
+</feature_tree>
+<constraints>
+constraint_1:~f_Interfaces_and_Communications_Design or f_Interfaces_and_Comunications_Implementation
+</constraints>
+</feature_model>

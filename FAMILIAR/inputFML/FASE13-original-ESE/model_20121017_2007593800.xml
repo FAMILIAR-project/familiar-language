@@ -1,0 +1,17 @@
+<feature_model name="Album">
+<feature_tree>
+:r Album (f_Album)
+	:m Screen (f_Screen)
+	:m MobileMedia-Eduardo (f_MobileMedia_Eduardo)
+	:o Sorting (f_Sorting)
+	:o Favorites (f_Favorites)
+		:o SetFavorites (f_SetFavorites)
+		:o ViewFavorites (f_ViewFavorites)
+	:g [1, 1]
+		: Screen2 (f_Screen2)
+		: Screen3 (f_Screen3)
+		: Screen1 (f_Screen1)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

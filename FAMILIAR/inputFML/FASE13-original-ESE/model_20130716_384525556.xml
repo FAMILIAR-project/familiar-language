@@ -1,0 +1,27 @@
+<feature_model name="SamrtPhone">
+<feature_tree>
+:r SamrtPhone (f_SamrtPhone)
+	:m Screen (f_Screen)
+	:m OS (f_OS)
+	:m Body Frame (f_Body_Frame)
+	:m Network (f_Network)
+	:o DMB (f_DMB)
+	:o Motion Sensor (f_Motion_Sensor)
+	:o GPS (f_GPS)
+	:g [1, 1]
+		: LCD (f_LCD)
+		: OLED (f_OLED)
+	:g [1, 1]
+		: Android (f_Android)
+		: iOS (f_iOS)
+	:g [1, 1]
+		: 3G (f_3G)
+		: LET-A (f_LET_A)
+		: LTE (f_LTE)
+	:g [1, 1]
+		: Alloy Frame (f_Alloy_Frame)
+		: PDPP (f_PDPP)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

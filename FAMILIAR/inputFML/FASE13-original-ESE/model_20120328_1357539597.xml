@@ -1,0 +1,26 @@
+<feature_model name="Sistema operacional">
+<feature_tree>
+:r Sistema operacional (f_Sistema_operacional)
+	:m Editor de imagens (f_Editor_de_imagens)
+	:m Editor basico (f_Editor_basico)
+	:m Editor de imagem (f_Editor_de_imagem)
+	:m Outros (f_Outros)
+	:o Gerenciador de imagens (f_Gerenciador_de_imagens)
+		:m Gerencia no computador local (f_Gerencia_no_computador_local)
+		:o Pastas em rede (f_Pastas_em_rede)
+		:o Caracteristicas (f_Caracteristicas)
+		:g [1, *]
+			: Marcadores (f_Marcadores)
+			: Indice por nome (f_Indice_por_nome)
+			: Descricao (f_Descricao)
+	:o Filtros (f_Filtros)
+	:o Estatisticas de cores e pixeis (f_Estatisticas_de_cores_e_pixeis)
+	:g [1, 1]
+		: Windows (f_Windows)
+			:o Integracao com Windows Explorer (f_Integracao_com_Windows_Explorer)
+		: Linux (f_Linux)
+		: Mac (f_Mac)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

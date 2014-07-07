@@ -1,0 +1,22 @@
+<feature_model name="Color">
+<feature_tree>
+:r Color (f_Color)
+	:m Drawing Tools (f_Drawing_Tools)
+	:m Shapes (f_Shapes)
+	:g [1, *]
+		: Triangle (f_Triangle)
+		: Line (f_Line)
+		: Clip Rectangle (f_Clip_Rectangle)
+		: Arc (f_Arc)
+		: Oval (f_Oval)
+		: Polygone (f_Polygone)
+		: Rectangle (f_Rectangle)
+	:g [1, *]
+		: Red (f_Red)
+		: Blue (f_Blue)
+		: Green (f_Green)
+		: Black (f_Black)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

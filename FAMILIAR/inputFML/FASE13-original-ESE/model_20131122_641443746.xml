@@ -1,0 +1,20 @@
+<feature_model name="Photo operation">
+<feature_tree>
+:r Photo operation (f_Photo_operation)
+	:m Album management (f_Album_management)
+	:m Edit photo label (f_Edit_photo_label)
+	:m Delete photo (f_Delete_photo)
+	:m View photo (f_View_photo)
+	:m Create album (f_Create_album)
+	:m Delete album (f_Delete_album)
+	:m Photo management (f_Photo_management)
+	:m Mobile media (f_Mobile_media)
+	:m Create photo (f_Create_photo)
+	:o Sorting (f_Sorting)
+	:o Set favorites (f_Set_favorites)
+		:m Favorites (f_Favorites)
+		:m View favorites (f_View_favorites)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

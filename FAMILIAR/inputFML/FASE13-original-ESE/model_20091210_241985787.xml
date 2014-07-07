@@ -1,0 +1,23 @@
+<feature_model name="Mobile Games">
+<feature_tree>
+:r Mobile Games (f_Mobile_Games)
+	:m Input (f_Input)
+	:o Output (f_Output)
+		:o Force Feedback (f_Force_Feedback)
+	:o Network Support (f_Network_Support)
+		:o Online Multiplayer (f_Online_Multiplayer)
+	:o Pay and bill support (f_Pay_and_bill_support)
+		:o Pay and bill system (f_Pay_and_bill_system)
+	:o Internationalization (f_Internationalization)
+		:o International languanges support (f_International_languanges_support)
+	:o Platform Independence (f_Platform_Independence)
+		:o Platform independence support (f_Platform_independence_support)
+	:g [1, *]
+		: Speech (f_Speech)
+		: Movement detection (f_Movement_detection)
+		: Touch Screen (f_Touch_Screen)
+		: Keypad (f_Keypad)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

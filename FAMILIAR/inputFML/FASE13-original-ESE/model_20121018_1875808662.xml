@@ -1,0 +1,24 @@
+<feature_model name="MobileMediaEricaOliveira">
+<feature_tree>
+:r MobileMediaEricaOliveira (f_MobileMediaEricaOliveira)
+	:m Media Management (f_Media_Management)
+	:m Media Selection (f_Media_Selection)
+	:m Screen Size (f_Screen_Size)
+	:m Copy Media (f_Copy_Media)
+	:o Set Favourites (f_Set_Favourites)
+		:m Favourites (f_Favourites)
+		:m View Favourites (f_View_Favourites)
+	:o SMS Transfer (f_SMS_Transfer)
+		:o Receive Photo (f_Receive_Photo)
+		:o Send Photo (f_Send_Photo)
+	:g [1, *]
+		: Photo (f_Photo)
+		: Music (f_Music)
+		: Video (f_Video)
+	:g [1, 1]
+		: Screen 2 (f_Screen_2)
+		: Screen 1 (f_Screen_1)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

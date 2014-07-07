@@ -1,0 +1,45 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Nov 12, 2013 - 8:40 PM  -->
+<feature_model name="variabilidad">
+<meta>
+<data name="description">variabilidad</data>
+<data name="creator">Paola Fuertes </data>
+<data name="address"></data>
+<data name="email">lp.fuertes10@uniandes.edu.co</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">Uniandes</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r VacacionesFuertes(_r)
+	:m Autenticacion(_r_1)
+		:g (_r_1_15) [1,*] 
+			: Facebook(_r_1_15_16)
+		:g (_r_1_18) [1,*] 
+			: Uniandes(_r_1_18_19)
+		:g (_r_1_20) [1,*] 
+			: Twitter(_r_1_20_21)
+		:g (_r_1_26) [1,*] 
+			: Linkedin(_r_1_26_27)
+	:m Gestion de recuerdos(_r_3)
+	:m Gestion de actividades y transporte(_r_4)
+		:o Busqueda de actividades(_r_4_10)
+		:g (_r_4_11) [1,*] 
+			: Busqueda de transporte(_r_4_11_12)
+		:g (_r_4_13) [1,*] 
+			: Busqueda de lugar(_r_4_13_14)
+	:o Album(_r_6)
+		:m Album de fotografias(_r_6_31)
+		:o Album de videos(_r_6_35)
+		:o Album de audios(_r_6_36)
+	:m Forma de pago(_r_7)
+	:o Auditoria(_r_28)
+</feature_tree>
+<constraints>
+constraint_14:_r_1_15_16 or _r_1_18_19 or _r_1_20_21
+constraint_15:_r_4_10 or _r_4_11_12 or _r_4_13_14
+constraint_16:_r_6_31 or _r_6_35 or _r_6_36
+</constraints>
+</feature_model>

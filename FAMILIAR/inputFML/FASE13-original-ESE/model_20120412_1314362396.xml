@@ -1,0 +1,20 @@
+<feature_model name="F1">
+<feature_tree>
+:r F1 (f_F1)
+	:m F7 (f_F7)
+	:m F8 (f_F8)
+	:m FMS (f_FMS)
+	:o F2 (f_F2)
+	:o F10 (f_F10)
+		:m F9 (f_F9)
+		:m F11 (f_F11)
+	:g [1, *]
+		: F3 (f_F3)
+		: F4 (f_F4)
+	:g [1, 1]
+		: F5 (f_F5)
+		: F6 (f_F6)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

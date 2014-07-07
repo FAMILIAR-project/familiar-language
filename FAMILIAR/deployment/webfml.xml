@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project FAMILIAR">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="/Users/macher1/git/webfml/FMLApp/lib/FML-1.2.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="fr.familiar.standalone.FML"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/wikipedia-miner/commons-cli-1.2.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/wikipedia-miner/commons-io-1.4.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/wikipedia-miner/commons-lang-2.4.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/wikipedia-miner/commons-logging.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/wikipedia-miner/hadoop-0.20.2-core.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/wikipedia-miner/je-4.0.103.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/wikipedia-miner/jsc.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/wikipedia-miner/log4j-1.2.16.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/wikipedia-miner/maxent-3.0.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/wikipedia-miner/opennlp-tools-1.5.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/wikipedia-miner/servlet-api.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/wikipedia-miner/trove-2.1.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/wikipedia-miner/weka-wrapper-1.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/wikipedia-miner/weka.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/wikipedia-miner/xercesImpl.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/semanticvectors-3.8.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/sspace-2.0.3-jar-with-dependencies.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/antlr.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/choco-2.1.0-basic+old.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.core.runtime_3.9.0.v20130326-1255.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.osgi_3.9.0.v20130529-1710.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.equinox.weaving.hook_1.0.200.v20120524-1707.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.equinox.common_3.6.200.v20130402-1505.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.core.jobs_3.5.300.v20130429-1813.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.core.runtime.compatibility.registry_3.5.200.v20130514-1256/runtime_registry_compatibility.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.equinox.registry_3.5.300.v20130327-1442.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.equinox.preferences_3.5.100.v20130422-1538.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.core.contenttype_3.4.200.v20130326-1255.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.equinox.app_1.3.100.v20130327-1442.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.debug.core_3.8.0.v20130514-0954.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.core.resources_3.8.100.v20130521-2026.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.jdt.launching_3.7.0.v20130515-1451.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.swt_3.102.0.v20130605-1539.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.swt.cocoa.macosx.x86_64_3.102.0.v20130605-1544.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.ui_3.105.0.v20130522-1122.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.jface_3.9.0.v20130521-1714.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.core.commands_3.6.100.v20130515-1857.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.ui.workbench_3.105.0.v20130529-1406.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.e4.ui.workbench3_0.12.0.v20130515-1857.jar"/>
+            <fileset dir="/Users/macher1/git/FeatureIDE/plugins/de.ovgu.featureide.fm.core/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/FeatureIDE/plugins/de.ovgu.featureide.fm.core/lib/guidsl.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/FeatureIDE/plugins/de.ovgu.featureide.fm.core/lib/jakarta.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/FeatureIDE/plugins/de.ovgu.featureide.fm.core/lib/org.sat4j.core.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/FeatureIDE/plugins/de.ovgu.featureide.fm.core/lib/annotations.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/FeatureIDE/plugins/de.ovgu.featureide.fm.core/lib/guava-r09.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/FeatureIDE/plugins/de.ovgu.featureide.fm.core/lib/org.sat4j.pb.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/FeatureIDE/plugins/de.ovgu.featureide.fm.core/lib/antlr-3.4.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.jdt.core_3.9.0.v20130604-1421.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.jdt.compiler.apt_1.0.600.v20130530-1010.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.jdt.compiler.tool_1.0.200.v20130530-1010.jar"/>
+            <fileset dir="/Users/macher1/git/FeatureIDE/plugins/de.ovgu.featureide.core/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.jface.text_3.8.100.v20130515-1957.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.text_3.5.300.v20130515-1451.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.ui.editors_3.8.100.v20130513-1637.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.core.filebuffers_3.5.300.v20130225-1821.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.ui.workbench.texteditor_3.8.100.v20130514-1533.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.ui.ide_3.9.0.v20130517-0139.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.jdt.ui_3.9.0.v20130605-1748.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.debug.ui_3.9.0.v20130516-1713.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.jdt.debug.ui_3.6.200.v20130514-0841.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.ui.views_3.6.100.v20130326-1250.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.gef_3.9.0.201305060205.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.draw2d_3.9.0.201305060205.jar"/>
+            <fileset dir="/Users/macher1/git/FeatureIDE/plugins/de.ovgu.featureide.fm.ui/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.platform_4.3.0.v20130605-2000/platform.jar"/>
+            <fileset dir="/Users/macher1/git/FeatureIDE/plugins/de.ovgu.featureide.ui/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/FeatureIDE/plugins/de.ovgu.featureide.ui/lib/SPLACAT.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/FeatureIDE/plugins/de.ovgu.featureide.ui/lib/commons-math-2.2.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.ui.console_3.5.200.v20130514-0954.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/TVLPackagedAsPlugin/lib/TVLParser.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/TVLPackagedAsPlugin/lib/deps.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/TVLPackagedAsPlugin/lib/yices.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.junit_4.11.0.v201303080030/junit.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.hamcrest.core_1.3.0.v201303031735.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.sat4j.core_2.3.5.v20130525.jar"/>
+            <fileset dir="/Users/macher1/git/familiar-language/TVLPackagedAsPlugin"/>
+            <fileset dir="/Users/macher1/git/familiar-language/org.xtext.example.fmlero.ui/bin"/>
+            <fileset dir="/Users/macher1/git/familiar-language/org.xtext.example.fmlero/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.xtext_2.4.3.v201309030823.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.emf.ecore.xmi_2.9.1.v20130827-0309.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.emf.ecore_2.9.1.v20130827-0309.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.emf.common_2.9.1.v20130827-0309.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.antlr.runtime_3.2.0.v201101311130.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/com.google.inject_3.0.0.v201203062045.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/com.google.inject.assistedinject_3.0.0.201306110846.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/com.google.inject.multibindings_3.0.0.201306110846.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.emf.mwe.core_1.2.1.v201309030422.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.apache.commons.cli_1.2.0.v201105210650.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.emf.mwe2.runtime_2.4.1.v201309030422.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.emf.mwe.utils_1.3.1.v201309030422.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.xtext.util_2.4.3.v201309030823.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/com.google.guava_10.0.1.v201203051515.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/javax.inject_1.0.0.v20091030.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.xtext.xbase_2.4.3.v201309030823.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.xtext.common.types_2.4.3.v201309030823.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.jdt.annotation_1.1.0.v20130513-1648.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.xtend.lib_2.4.3.v201309030823.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.xtext.xbase.lib_2.4.3.v201309030823.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.xtext.generator_2.4.3.v201309030823.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.xtend_1.4.0.v201306110406.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/com.ibm.icu_50.1.1.v201304230130.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.xpand_1.4.0.v201306110406.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.xtend.typesystem.emf_1.4.0.v201306110406.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.emf.codegen.ecore_2.9.1.v20130902-0605.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.emf.codegen_2.9.0.v20130902-0605.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.emf.mwe2.lib_2.4.1.v201309030422.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.apache.commons.logging_1.1.1.v201101211721.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.emf.mwe2.launch_2.4.1.v201309030840.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.emf.mwe2.language_2.4.1.v201309030840.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.apache.log4j_1.2.15.v201012070815.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.xtext.ui_2.4.3.v201309030823.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.emf.edit.ui_2.9.0.v20130902-0605.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.emf.edit_2.9.0.v20130902-0605.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.emf.ecore.change_2.9.0.v20130827-0309.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.emf.common.ui_2.8.0.v20130902-0605.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.ltk.core.refactoring_3.6.100.v20130605-1748.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.xtext.ui.shared_2.4.3.v201309030823.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.xtext.builder_2.4.3.v201309030823.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.xtext.common.types.ui_2.4.3.v201309030823.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.xtext.common.types.edit_2.4.3.v201309030823.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.xtext.ui.codetemplates.ui_2.4.3.v201309030823.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.xtext.ui.codetemplates_2.4.3.v201309030823.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.compare_3.5.400.v20130514-1224.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.compare.core_3.5.300.v20130514-1224.jar"/>
+            <fileset dir="/Users/macher1/git/familiar-language/FML3rdPartiesForSynthesis"/>
+            <fileset dir="/Users/macher1/git/familiar-language/FML3rdPartiesMisc"/>
+            <fileset dir="/Users/macher1/git/familiar-language/org.xtext.example.fml/bin"/>
+            <fileset dir="/Users/macher1/git/familiar-language/org.xtext.example.fml.ui/bin"/>
+            <fileset dir="/Users/macher1/git/familiar-language/S2T2toFML/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/S2T2toFML/lib/ie.lero.spl.emf.config_1.0.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/S2T2toFML/lib/ie.lero.spl.emf.config.edit_1.0.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/S2T2toFML/lib/ie.lero.spl.emf.config.editor_1.0.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/S2T2toFML/lib/ie.lero.spl.fmprimitives_1.0.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/S2T2toFML/lib/ie.lero.spl.fmprimitives.edit_1.0.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/S2T2toFML/lib/ie.lero.spl.fmprimitives.editor_1.0.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.xtext.junit_2.4.3.v201309030823.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.junit_3.8.2.v3_8_2_v20100427-1100/junit.jar"/>
+            <fileset dir="/Users/macher1/git/familiar-language/SPLAR-plugin"/>
+            <fileset dir="/Users/macher1/git/VM/fr.inria.lang.vm/bin"/>
+            <fileset dir="/Users/macher1/git/familiar-language/org.xtext.example.fmlero.tests/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.xtext.junit4_2.4.3.v201309030823.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Downloads/eclipseProperFML/plugins/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/maven-core-3.0.4.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/maven-model-3.0.4.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/maven-settings-3.0.4.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/maven-settings-builder-3.0.4.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/maven-repository-metadata-3.0.4.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/maven-artifact-3.0.4.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/maven-plugin-api-3.0.4.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/maven-model-builder-3.0.4.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/maven-aether-provider-3.0.4.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/aether-api-1.13.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/aether-util-1.13.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/plexus-interpolation-1.14.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/plexus-utils-2.0.6.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/plexus-classworlds-2.4.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/plexus-component-annotations-1.5.5.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/plexus-sec-dispatcher-1.3.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/maven-embedder-3.0.4.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/plexus-cipher-1.7.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/commons-cli-1.2.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/maven-compat-3.0.4.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/wagon-provider-api-2.2.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/guice-plexus-shim-2.3.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/javax.inject-1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/guice-bean-reflect-2.3.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/guice-bean-locators-2.3.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/guice-bean-binders-2.3.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/guice-bean-scanners-2.3.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/guice-bean-converters-2.3.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/guice-plexus-metadata-2.3.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/guice-plexus-converters-2.3.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/guice-plexus-locators-2.3.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/guice-plexus-binders-2.3.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/guice-bean-inject-2.3.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/guice-plexus-scanners-2.3.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/guice-plexus-lifecycles-2.3.0.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/sisu-guice-3.1.0-no_aop.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/guava-10.0.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/plexus-build-api-0.0.7.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/aether-connector-wagon-1.13.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/aether-spi-1.13.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/aether-impl-1.13.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/aether-connector-asynchttpclient-1.13.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/wagon-ahc-1.2.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/Documents/workspaceFML/.metadata/.plugins/org.eclipse.pde.core/.external_libraries/org.eclipse.m2e.maven.runtime_1.4.0.20130531-2315/jars/wagon-file-2.2.jar"/>
+            <fileset dir="/Users/macher1/Documents/workspaceFML/org.xtext.example.varicell/bin"/>
+            <fileset dir="/Users/macher1/git/familiar-language/FAMILIAR/target/classes"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/pacogenIntern.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/concurrentlinkedhashmap-lru-1.3.2.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/extjwnl-1.6.9.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/hac.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/jgraph-5.5.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/jgrapht-jdk1.6.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/jgraphx.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/org.sat4j.core.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/simmetrics_jar_v1_6_2_d07_02_07.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/git/familiar-language/FAMILIAR/lib/wikipedia-miner/wikipedia-miner-1.6.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/.m2/repository/com/martiansoftware/jsap/2.1/jsap-2.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/.m2/repository/net/sourceforge/collections/collections-generic/4.01/collections-generic-4.01.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="/Users/macher1/.m2/repository/log4j/log4j/1.2.17/log4j-1.2.17.jar"/>
+        </jar>
+    </target>
+</project>

@@ -1,0 +1,26 @@
+<feature_model name="Feature-9">
+<feature_tree>
+:r Feature-9 (f_Feature_9)
+	:m 1 (f_1)
+	:o Feature-10 (f_Feature_10)
+	:o Feature-6 (f_Feature_6)
+		:g [1, *]
+			: Feature-12 (f_Feature_12)
+			: Feature-14 (f_Feature_14)
+			: Feature-13 (f_Feature_13)
+	:o Feature-5 (f_Feature_5)
+	:o Feature-8 (f_Feature_8)
+	:o Feature-7 (f_Feature_7)
+	:o Feature-15 (f_Feature_15)
+	:g [1, *]
+		: Feature-4 (f_Feature_4)
+		: Feature-3 (f_Feature_3)
+		: Feature-2 (f_Feature_2)
+</feature_tree>
+<constraints>
+constraint_1:~f_Feature_13 or f_Feature_15
+constraint_2:~f_Feature_12 or f_Feature_15
+constraint_3:~f_Feature_2 or f_Feature_5
+constraint_4:~f_Feature_3 or f_Feature_5
+</constraints>
+</feature_model>

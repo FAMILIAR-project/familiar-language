@@ -1,0 +1,38 @@
+<feature_model name="Format">
+<feature_tree>
+:r Format (f_Format)
+	:m Language (f_Language)
+	:m Weather Station (f_Weather_Station)
+	:m Measurements (f_Measurements)
+	:m Output Format (f_Output_Format)
+	:m Data Source (f_Data_Source)
+	:o Alarm (f_Alarm)
+		:g [1, *]
+			: Freeze Point (f_Freeze_Point)
+			: Storm Alert (f_Storm_Alert)
+	:g [1, *]
+		: Temperature (f_Temperature)
+		: Pressure (f_Pressure)
+		: Wind Speed (f_Wind_Speed)
+	:g [1, 1]
+		: Text (f_Text)
+		: Web Server (f_Web_Server)
+		: File (f_File)
+	:g [1, 1]
+		: English (f_English)
+		: German (f_German)
+	:g [1, 1]
+		: Plain Text (f_Plain_Text)
+		: XML (f_XML)
+		: HTML (f_HTML)
+	:g [1, 1]
+		: External Services (f_External_Services)
+		: Internet (f_Internet)
+		: Demo (f_Demo)
+</feature_tree>
+<constraints>
+constraint_1:~f_Freeze_Point or f_Format
+constraint_2:~f_Freeze_Point or f_Temperature
+constraint_3:~f_XML or ~f_Text
+</constraints>
+</feature_model>

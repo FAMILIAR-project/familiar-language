@@ -33,6 +33,7 @@ import fr.familiar.variable.FeatureModelVariableWithSynchronizedFormula;
 import gsd.graph.DirectedCliqueFinder;
 import gsd.graph.ImplicationGraph;
 import gsd.graph.SimpleEdge;
+import gsd.graph.TransitiveReduction;
 import gsd.synthesis.FeatureEdge;
 import gsd.synthesis.FeatureGraph;
 import gsd.synthesis.FeatureGraphFactory;
@@ -332,10 +333,11 @@ public class InteractiveFMSynthesizer extends Observable{
 				if (parentSimilarityMetric != null) {
 					Collections.sort(parentList, new ParentComparator(feature, big));	
 				}
-
-				KeyValue<String, List<String>> parentEntry = new KeyValue<String, List<String>>(feature, parentList);
-				parents.add(parentEntry);				
 			}
+			
+			KeyValue<String, List<String>> parentEntry = new KeyValue<String, List<String>>(feature, parentList);
+			parents.add(parentEntry);				
+			
 
 		}
 		
@@ -966,6 +968,47 @@ public class InteractiveFMSynthesizer extends Observable{
 			action.execute();
 			actionUndoHistory.push(action);	
 		}
+	}
+	
+	
+	/**
+	 * Transitively reduce the implication graph
+	 */
+	public void reduceBIG() {
+		WeightedImplicationGraph<String> implicationGraph = big.clone();
+		ImplicationGraph<Set<String>> reducedGraph = implicationGraph.reduceCliques();
+		TransitiveReduction.INSTANCE.reduce(reducedGraph);
+		
+		
+		WeightedImplicationGraph<String> reducedBIG = new WeightedImplicationGraph<String>();
+		
+		// Create vertices
+		for (String feature : implicationGraph.vertices()) {
+			reducedBIG.addVertex(feature);
+		}
+		
+		// Create edges
+		for (SimpleEdge edge : reducedGraph.edges()) {
+			Set<String> source = reducedGraph.getSource(edge);
+			Set<String> target = reducedGraph.getTarget(edge);
+			
+			for (String child : source) {
+				for (String parent : target) {
+					SimpleEdge newEdge = reducedBIG.addEdge(child, parent);
+					reducedBIG.setEdgeWeight(newEdge, implicationGraph.getEdgeWeight(implicationGraph.findEdge(child, parent)));
+				}
+			}
+		}
+		
+		for (SimpleEdge edge : implicationGraph.edges()) {
+			String child = implicationGraph.getEdgeSource(edge);
+			String parent = implicationGraph.getEdgeTarget(edge);
+			if (!reducedBIG.containsEdge(child, parent)) {
+				this.ignoreParentUnrecorded(child, parent);
+			}
+		}
+		
+//		this.big = reducedBIG;
 	}
 	
 }

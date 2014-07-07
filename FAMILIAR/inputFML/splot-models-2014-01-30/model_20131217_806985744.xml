@@ -1,0 +1,32 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Tue, Dec 17, 2013 - 8:17 AM  -->
+<feature_model name="JDFM">
+<meta>
+<data name="description">Description</data>
+<data name="creator">Me</data>
+<data name="address"></data>
+<data name="email">ab@cde.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">VII</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r JDFM(_r)
+	:m Drive Train(_r_6)
+		:o Mechanical Front Wheel Drive(_r_6_7)
+			:g (_r_6_7_8) [1,1] 
+				: Automatic Front Wheel Drive Mode(_r_6_7_8_9)
+				: Permanent Front Wheel Drive Mode(_r_6_7_8_10)
+			:o Brake Assist Mode(_r_6_7_12)
+		:m Transmission(_r_6_13)
+			:g (_r_6_13_14) [1,1] 
+				: CQT(_r_6_13_14_15)
+				: EPQT(_r_6_13_14_16)
+				: DPT(_r_6_13_14_17)
+				: IVT(_r_6_13_14_18)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

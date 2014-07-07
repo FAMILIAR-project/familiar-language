@@ -1,0 +1,33 @@
+<feature_model name="Mobile Media">
+<feature_tree>
+:r Mobile Media (f_Mobile_Media)
+	:m Basic media operation (f_Basic_media_operation)
+	:m Create media (f_Create_media)
+	:m Delete media (f_Delete_media)
+	:m Edit media label (f_Edit_media_label)
+	:m Media selection (f_Media_selection)
+	:m Album management (f_Album_management)
+	:m Create Album (f_Create_Album)
+	:m Delete Album (f_Delete_Album)
+	:m Media management (f_Media_management)
+	:o Send photo (f_Send_photo)
+		:m SMS transfer (f_SMS_transfer)
+		:m Receive photo (f_Receive_photo)
+	:o View favorites (f_View_favorites)
+		:m Favorites (f_Favorites)
+		:m Set favorites (f_Set_favorites)
+	:o Sorting (f_Sorting)
+	:o Copy media (f_Copy_media)
+	:g [1, *]
+		: View photo (f_View_photo)
+			:m Photo (f_Photo)
+			:o Capture photo (f_Capture_photo)
+		: Play music (f_Play_music)
+			:m Music (f_Music)
+		: Play video (f_Play_video)
+			:m Video (f_Video)
+			:o Capture video (f_Capture_video)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

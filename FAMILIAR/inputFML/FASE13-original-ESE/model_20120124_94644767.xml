@@ -1,0 +1,19 @@
+<feature_model name="External Resources">
+<feature_tree>
+:r External Resources (f_External_Resources)
+	:m CCCMS (f_CCCMS)
+	:m Internal Resources (f_Internal_Resources)
+	:m Mission (f_Mission)
+	:o Authentication (f_Authentication)
+	:o Medical Services (f_Medical_Services)
+	:o LOG (f_LOG)
+	:o Witness (f_Witness)
+	:g [1, *]
+		: Observe (f_Observe)
+		: Helicopter Transport (f_Helicopter_Transport)
+		: Rescue (f_Rescue)
+		: Remove Obstacle (f_Remove_Obstacle)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

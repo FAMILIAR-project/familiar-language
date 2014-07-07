@@ -1,0 +1,18 @@
+<feature_model name="Transmission">
+<feature_tree>
+:r Transmission (f_Transmission)
+	:m BasicCar (f_BasicCar)
+	:m Engine (f_Engine)
+	:m Car body (f_Car_body)
+	:o Air conditioning (f_Air_conditioning)
+	:o GPS (f_GPS)
+	:g [1, *]
+		: Electric (f_Electric)
+		: Gasoline (f_Gasoline)
+	:g [1, 1]
+		: Manual (f_Manual)
+		: Automatic (f_Automatic)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

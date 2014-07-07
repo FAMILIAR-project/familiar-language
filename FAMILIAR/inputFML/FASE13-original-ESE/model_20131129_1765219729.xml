@@ -1,0 +1,21 @@
+<feature_model name="MP Software">
+<feature_tree>
+:r MP Software (f_MP_Software)
+	:m Calls (f_Calls)
+	:m Screen (f_Screen)
+	:o Media (f_Media)
+		:g [1, *]
+			: Camera (f_Camera)
+			: MP3 (f_MP3)
+	:o GPS (f_GPS)
+	:g [1, 1]
+		: High Res (f_High_Res)
+		: Colour (f_Colour)
+		: Basic (f_Basic)
+</feature_tree>
+<constraints>
+constraint_1:~f_Camera or f_High_Res
+constraint_2:~f_Camera or f_MP_Software
+constraint_3:~f_Basic or ~f_GPS
+</constraints>
+</feature_model>

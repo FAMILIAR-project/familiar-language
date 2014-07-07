@@ -1,0 +1,31 @@
+<feature_model name="HELP">
+<feature_tree>
+:r HELP (f_HELP)
+	:m JCalc (f_JCalc)
+	:m FILE (f_FILE)
+	:m DEVICE (f_DEVICE)
+	:m LANG (f_LANG)
+	:m MENU (f_MENU)
+	:o SAVE (f_SAVE)
+	:o LOOKANDFEEL (f_LOOKANDFEEL)
+		:g [1, 1]
+			: Windows (f_Windows)
+			: System (f_System)
+			: GTK (f_GTK)
+			: Motif (f_Motif)
+			: Metal (f_Metal)
+	:o COMMA (f_COMMA)
+	:o PERFORMANCE (f_PERFORMANCE)
+	:o ANALYZER (f_ANALYZER)
+	:o EDIT (f_EDIT)
+	:g [1, 1]
+		: PC (f_PC)
+		: Milestone (f_Milestone)
+		: Z6 (f_Z6)
+	:g [1, 1]
+		: EN (f_EN)
+		: PT_BR (f_PT_BR)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

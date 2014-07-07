@@ -1,0 +1,33 @@
+<feature_model name="Technology">
+<feature_tree>
+:r Technology (f_Technology)
+	:m Paradigm (f_Paradigm)
+	:m Connector (f_Connector)
+	:g [1, 1]
+		: Client/Server (f_Client_Server)
+			:g [1, 1]
+				: Synchronous (f_Synchronous)
+					:o Timeout (f_Timeout)
+				: Asynchronous (f_Asynchronous)
+					:g [1, 1]
+						: Callback (f_Callback)
+						: Polling (f_Polling)
+							:g [1, 1]
+								: Non-blocking (f_Non_blocking)
+								: Blocking (f_Blocking)
+		: Receiver (f_Receiver)
+			:m Message-Based (f_Message_Based)
+			:m Sender (f_Sender)
+			:g [1, 1]
+				: Push (f_Push)
+				: Pull (f_Pull)
+					:g [1, *]
+						: Non-Queued (f_Non_Queued)
+						: Queued (f_Queued)
+	:g [1, 1]
+		: Local (f_Local)
+		: CAN (f_CAN)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

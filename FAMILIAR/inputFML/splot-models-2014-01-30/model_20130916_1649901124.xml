@@ -1,0 +1,38 @@
+<!-- This model was created online using SPLOT's Feature Model Editor (http://www.splot-research.org) on Mon, Sep 16, 2013 - 2:41 PM  -->
+<feature_model name="MobileMedia_Thanis">
+<meta>
+<data name="description">exercicio LPS</data>
+<data name="creator">Thanis</data>
+<data name="address"></data>
+<data name="email">thanis.paiva@gmail.com</data>
+<data name="phone"></data>
+<data name="website"></data>
+<data name="organization">UFMG</data>
+<data name="department"></data>
+<data name="date"></data>
+<data name="reference"></data>
+</meta>
+<feature_tree>
+:r Mobile Media(_r)
+	:m Media Selection(_r_1)
+		:m Photo(_r_1_21)
+		:o Music(_r_1_22)
+		:o Video(_r_1_23)
+	:m Media Management(_r_6)
+		:m Favorites(_r_6_8)
+			:m Set Favourites(_r_6_8_12)
+			:m View Favourites(_r_6_8_13)
+		:o Copy Media(_r_6_9)
+		:o SMS Transfer(_r_6_10)
+			:o Receive Photo(_r_6_10_14)
+			:o Send Photo(_r_6_10_15)
+	:m Screen Size(_r_16)
+		:g (_r_16_17) [1,1] 
+			: Screen1(_r_16_17_18)
+			: Screen2(_r_16_17_19)
+</feature_tree>
+<constraints>
+constraint_4:_r_6_9 or _r_6_10
+constraint_5:_r_16_17_18 or _r_1_21
+</constraints>
+</feature_model>

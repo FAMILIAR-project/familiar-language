@@ -1,0 +1,23 @@
+<feature_model name="music">
+<feature_tree>
+:r music (f_music)
+	:m MobileMedia (f_MobileMedia)
+	:m Media Selection (f_Media_Selection)
+	:m Photo (f_Photo)
+	:m screen size (f_screen_size)
+	:m media management (f_media_management)
+	:m Favourites (f_Favourites)
+	:m Set Favourites (f_Set_Favourites)
+	:m View Favourites (f_View_Favourites)
+	:o Receive Photo (f_Receive_Photo)
+		:m SMS Transfer (f_SMS_Transfer)
+		:m Send Photo (f_Send_Photo)
+	:o Copy media (f_Copy_media)
+	:o Video (f_Video)
+	:g [1, 1]
+		: Screen1 (f_Screen1)
+		: Screen2 (f_Screen2)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

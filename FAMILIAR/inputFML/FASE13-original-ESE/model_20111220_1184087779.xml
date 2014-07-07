@@ -1,0 +1,25 @@
+<feature_model name="TransmissionType">
+<feature_tree>
+:r TransmissionType (f_TransmissionType)
+	:m Transmission (f_Transmission)
+	:m StartingElement (f_StartingElement)
+	:o Hybrid (f_Hybrid)
+		:g [1, 1]
+			: MildHybrid (f_MildHybrid)
+			: FullHybrid (f_FullHybrid)
+			: Micro (f_Micro)
+	:g [1, 1]
+		: Clutch (f_Clutch)
+			:g [1, 1]
+				: Wet (f_Wet)
+				: Dry (f_Dry)
+		: TQ (f_TQ)
+	:g [1, 1]
+		: DCT (f_DCT)
+		: ATM (f_ATM)
+		: CVT (f_CVT)
+		: MT (f_MT)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>
