@@ -1,6 +1,22 @@
-/**
- * 
+/*
+ * This file is part of the FAMILIAR (for FeAture Model scrIpt Language for 
+ * manIpulation and Automatic Reasoning) project.
+ * http://familiar-project.github.com/
+ *
+ * FAMILIAR is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * FAMILIAR is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with FAMILIAR.  If not, see <http://www.gnu.org/licenses/>.
  */
+
 package fr.familiar.parser;
 
 import java.util.HashSet;
@@ -16,10 +32,10 @@ import org.xtext.example.mydsl.fML.HierarchySpecification;
 import org.xtext.example.mydsl.fML.KnowledgeSpecification;
 import org.xtext.example.mydsl.fML.Synthesis;
 
-import fr.familiar.gui.synthesis.FMSynthesisEnvironment;
+//import fr.familiar.gui.synthesis.FMSynthesisEnvironment; // FIXME : removed with KSynthesis
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.operations.KnowledgeSynthesis;
-import fr.familiar.operations.heuristics.InteractiveFMSynthesizer;
+//import fr.familiar.operations.heuristics.InteractiveFMSynthesizer; // FIXME : removed with KSynthesis
 import fr.familiar.variable.ConstraintVariable;
 import fr.familiar.variable.FeatureModelVariable;
 import fr.familiar.variable.FeatureVariable;
@@ -121,8 +137,8 @@ public class KSynthesisAnalyzer extends FMLAbstractCommandAnalyzer {
 		if (ksCmd.isInteractive()) {
 			// interactive mode
 			// with or without knowledge
-			InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(fmToSynthesis);
-			FMSynthesisEnvironment environment = new FMSynthesisEnvironment(synthesizer);
+//			InteractiveFMSynthesizer synthesizer = new InteractiveFMSynthesizer(fmToSynthesis); // FIXME : removed with KSynthesis
+//			FMSynthesisEnvironment environment = new FMSynthesisEnvironment(synthesizer); // FIXME : removed with KSynthesis
 		}
 		
 		// TODO backend analysis for defining the synthesis strateg

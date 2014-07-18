@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: TVLPackagedAsMock
+Bundle-SymbolicName: TVLPackagedAsMock
+Bundle-Version: 1.0.10
+Export-Package: fr.familiar.fm.converter.tvl
+Import-Package: org.xtext.example.mydsl.fML

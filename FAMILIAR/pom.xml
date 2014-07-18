@@ -1,160 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <modelVersion>4.0.0</modelVersion>
-  <parent>
-    <relativePath>../../kCVL/familiar.root/pom.xml</relativePath>
-    <groupId>fr.inria.familiar</groupId>
-    <artifactId>parent</artifactId>
-    <version>1.0.10</version>
-  </parent>
-  <artifactId>FAMILIAR</artifactId>
-  <packaging>eclipse-plugin</packaging>
-  <name>FAMILIAR</name>
-  <description> FAMILIAR (for FeAture Model scrIpt Language for manIpulation and Automatic Reasoning) is an executable language that supports manipulating and reasoning about feature models.</description>
-  <pluginRepositories>
-  <pluginRepository>
-    <releases>
-        <enabled>true</enabled>
-    </releases>
-    <snapshots>
-        <enabled>true</enabled>
-    </snapshots>
-    <id>central</id>
-    <url>http://repo1.maven.org/maven2</url>
-</pluginRepository>
- </pluginRepositories>
-  <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.8.1</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
-        	<groupId>com.martiansoftware</groupId>
-        	<artifactId>jsap</artifactId>
-        	<version>2.1</version>
-        </dependency>
-        <dependency>
-        	<groupId>net.sourceforge.collections</groupId>
-        	<artifactId>collections-generic</artifactId>
-        	<version>4.01</version>
-        </dependency>
-        <dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.17</version>
-		</dependency>
-  </dependencies>
-  
-  
-   <build>
-        <plugins>
-        <plugin>
-  			<groupId>org.apache.maven.plugins</groupId>
- 			 <artifactId>maven-resources-plugin</artifactId>
- 			 <version>2.4.3</version>
-		</plugin>
-        
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.3.2</version>
-                <configuration>
-                    <source>1.6</source>
-                    <target>1.6</target>
-                </configuration>
-            </plugin>
-          
-            
-              <plugin>
-                <artifactId>maven-assembly-plugin</artifactId>
-                <configuration>
-                    <descriptors>
-                        <descriptor>assembly/bin-assembly.xml</descriptor>
-                    </descriptors>
-                    <archive>
-                        <manifest>
-                            <mainClass>fr.unice.polytech.modalis.familiar.standalone.FML</mainClass>
-                        </manifest>
-                    </archive>
-                </configuration>
-                <executions>
-                    <execution>
-                        <id>bin</id>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>single</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-         </plugins>
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>fr.inria.familiar</groupId>
+	<artifactId>FAMILIAR</artifactId>
+	<packaging>eclipse-plugin</packaging>
+	<name>FAMILIAR</name>
+	<description> FAMILIAR (for FeAture Model scrIpt Language for manIpulation and Automatic Reasoning) is an executable language that supports manipulating and reasoning about feature models.</description>
+	
+	<parent>
+		<relativePath>../familiar.root/pom.xml</relativePath>
+		<groupId>fr.inria.familiar</groupId>
+		<artifactId>parent</artifactId>
+		<version>1.0.10</version>
+	</parent>
 
-        <pluginManagement>
-        	<plugins>
-        		<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
-        		<plugin>
-        			<groupId>org.eclipse.m2e</groupId>
-        			<artifactId>lifecycle-mapping</artifactId>
-        			<version>1.0.0</version>
-        			<configuration>
-        				<lifecycleMappingMetadata>
-        					<pluginExecutions>
-        						<pluginExecution>
-        							<pluginExecutionFilter>
-        								<groupId>
-        									org.eclipse.tycho
-        								</groupId>
-        								<artifactId>
-        									tycho-packaging-plugin
-        								</artifactId>
-        								<versionRange>
-        									[0.18.0,)
-        								</versionRange>
-        								<goals>
-        									<goal>validate-id</goal>
-        									<goal>
-        										validate-version
-        									</goal>
-        									<goal>build-qualifier</goal>
-        								</goals>
-        							</pluginExecutionFilter>
-        							<action>
-        								<ignore></ignore>
-        							</action>
-        						</pluginExecution>
-        						<pluginExecution>
-        							<pluginExecutionFilter>
-        								<groupId>
-        									org.eclipse.tycho
-        								</groupId>
-        								<artifactId>
-        									tycho-compiler-plugin
-        								</artifactId>
-        								<versionRange>
-        									[0.18.0,)
-        								</versionRange>
-        								<goals>
-        									<goal>compile</goal>
-        								</goals>
-        							</pluginExecutionFilter>
-        							<action>
-        								<ignore></ignore>
-        							</action>
-        						</pluginExecution>
-        					</pluginExecutions>
-        				</lifecycleMappingMetadata>
-        			</configuration>
-        		</plugin>
-        	</plugins>
-        </pluginManagement>
-   </build>   
-   <dependencyManagement>
-   	<dependencies>
-   	</dependencies>
-   </dependencyManagement>
-  
-  
-   <version>1.0.10</version>
+	<version>1.0.10</version>
 </project>

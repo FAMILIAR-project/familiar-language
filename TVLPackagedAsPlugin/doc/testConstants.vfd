@@ -1,7 +1,0 @@
-const int tata 6;
-const int polo 56;
-const int hjkl -89;
-const real test -23.23;
-const bool test2 true;
-root MotherBoard {
-}

@@ -1,8 +1,0 @@
-root MyTest {
-	group allof {
-		FeatureA,
-		FeatureB,
-		FeatureC
-	}
-	
-}
