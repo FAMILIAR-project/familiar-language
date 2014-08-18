@@ -34,7 +34,7 @@ public class FeatureIDEOperations {
 	}
 
 	public boolean valid(FeatureModel featureModel) {
-		return new Configuration(featureModel).valid();
+		return new Configuration(featureModel).isValid();
 	}
 
 }

@@ -427,7 +427,7 @@ public class ConfigurationVariableFeatureIDEImpl extends ConfigurationVariable {
 
 	@Override
 	public boolean isValid() {
-		return _configuration.valid() ; 
+		return _configuration.isValid() ; 
 	}
 
 	@Override
