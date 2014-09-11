@@ -1,0 +1,28 @@
+graph G {
+  Restore;
+  Buffer;
+  LogMethod;
+  0;
+  1;
+  Logging;
+  PrintInstVars;
+  MultiRes;
+  InvokeLog;
+  Restore -- Buffer;
+  Logging -- Buffer;
+  PrintInstVars -- Logging;
+  LogMethod -- Logging;
+  InvokeLog -- Logging;
+  Buffer -- 1;
+  MultiRes -- Restore;
+  Restore -- 1;
+  LogMethod -- Buffer;
+  Logging -- 1;
+  PrintInstVars -- Buffer;
+  PrintInstVars -- 1;
+  MultiRes -- Buffer;
+  MultiRes -- 1;
+  InvokeLog -- Buffer;
+  InvokeLog -- 1;
+  LogMethod -- 1;
+}

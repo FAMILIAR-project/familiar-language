@@ -1,0 +1,12 @@
+graph G {
+  WindowsXPHome;
+  HardDrive;
+  StudioXPSLaptops;
+  0;
+  1;
+  TwoGB;
+  HardDrive -- 1;
+  TwoGB -- 1;
+  WindowsXPHome -- 1;
+  StudioXPSLaptops -- 1;
+}

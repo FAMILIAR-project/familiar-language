@@ -1,0 +1,32 @@
+graph G {
+  transmission;
+  distance;
+  engine;
+  colant;
+  methods;
+  engine_performance;
+  oil;
+  0;
+  monitor_engine_system;
+  1;
+  monitor_engine_system -- 1;
+  distance -- methods;
+  engine_performance -- monitor_engine_system;
+  transmission -- engine_performance;
+  engine -- engine_performance;
+  engine -- monitor_engine_system;
+  colant -- engine_performance;
+  colant -- monitor_engine_system;
+  methods -- monitor_engine_system;
+  methods -- 1;
+  engine_performance -- 1;
+  oil -- engine_performance;
+  oil -- monitor_engine_system;
+  transmission -- monitor_engine_system;
+  transmission -- 1;
+  distance -- monitor_engine_system;
+  distance -- 1;
+  engine -- 1;
+  colant -- 1;
+  oil -- 1;
+}

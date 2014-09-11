@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ASCII"?>
+<fmprimitives:FeatureModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:fmprimitives="http://lero.ie/spl/fmprimitives.ecore" id="foo" name="Foooo">
+  <features id="Ft1" name="Ft1"/>
+</fmprimitives:FeatureModel>

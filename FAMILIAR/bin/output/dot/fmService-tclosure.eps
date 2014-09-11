@@ -1,0 +1,5009 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Creator: Graphviz version 2.20.2 (Tue Jul 29 16:40:41 UTC 2008)
+%%For: (mathieuacher) Mathieu Acher
+%%Title: G
+%%Pages: 1
+%%BoundingBox: 36 36 5546 440
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 36 36 5546 440
+%%PageOrientation: Portrait
+0 0 1 beginpage
+gsave
+36 36 5510 404 boxprim clip newpath
+1 1 set_scale 0 rotate 40 40 translate
+% Nifti
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5318 306 28.78 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5304.78 301.8 moveto 26.44 (Nifti) alignedtext
+grestore
+% Format
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5225 162 38.93 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5204.78 157.8 moveto 40.44 (Format) alignedtext
+grestore
+% Nifti->Format
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5307 289 moveto
+5292 265 5261 217 5242 188 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5244.8 185.9 moveto
+5236 180 lineto
+5239.2 190.1 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5244.8 185.9 moveto
+5236 180 lineto
+5239.2 190.1 lineto
+closepath stroke
+grestore
+% MedicalImage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4825 90 66.81 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4784.58 85.8 moveto 80.85 (MedicalImage) alignedtext
+grestore
+% Nifti->MedicalImage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5294 295 moveto
+5236 270 5079 200 4949 144 curveto
+4923 133 4893 120 4870 109 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4871.56 105.86 moveto
+4861 105 lineto
+4868.72 112.26 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4871.56 105.86 moveto
+4861 105 lineto
+4868.72 112.26 lineto
+closepath stroke
+grestore
+% MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3034 18 51.79 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3004.46 13.8 moveto 59.08 (MIService) alignedtext
+grestore
+% Nifti->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5345 300 moveto
+5384 290 5451 272 5466 252 curveto
+5475 238 5473 230 5466 216 curveto
+5411 114 5360 106 5250 72 curveto
+5144 38 3446 21 3096 18 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3096 14.5 moveto
+3086 18 lineto
+3096 21.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3096 14.5 moveto
+3086 18 lineto
+3096 21.5 lineto
+closepath stroke
+grestore
+% FormatName
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5395 234 61.99 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5358.07 229.8 moveto 73.87 (FormatName) alignedtext
+grestore
+% Nifti->FormatName
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5334 291 moveto
+5345 282 5358 270 5370 258 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5372.4 260.55 moveto
+5377 251 lineto
+5367.45 255.6 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5372.4 260.55 moveto
+5377 251 lineto
+5367.45 255.6 lineto
+closepath stroke
+grestore
+% Windows
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+570 306 48.05 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+543.17 301.8 moveto 53.66 (Windows) alignedtext
+grestore
+% Windows->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 562 288 moveto
+548 256 526 187 558 144 curveto
+607 76 649 89 731 72 curveto
+955 23 2626 18 2972 18 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2972 21.5 moveto
+2982 18 lineto
+2972 14.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2972 21.5 moveto
+2982 18 lineto
+2972 14.5 lineto
+closepath stroke
+grestore
+% GridDeployment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+988 90 75.97 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+940.57 85.8 moveto 94.87 (GridDeployment) alignedtext
+grestore
+% Windows->GridDeployment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 565 288 moveto
+557 255 547 183 585 144 curveto
+606 121 793 104 905 96 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 905.4 99.48 moveto
+915 95 lineto
+904.7 92.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 905.4 99.48 moveto
+915 95 lineto
+904.7 92.51 lineto
+closepath stroke
+grestore
+% OperatingSystem
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+866 234 78.08 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+817.4 229.8 moveto 97.2 (OperatingSystem) alignedtext
+grestore
+% Windows->OperatingSystem
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 611 296 moveto
+660 284 744 263 802 249 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 802.88 252.39 moveto
+812 247 lineto
+801.51 245.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 802.88 252.39 moveto
+812 247 lineto
+801.51 245.53 lineto
+closepath stroke
+grestore
+% GridComputingNode
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+687 162 93.11 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+627.51 157.8 moveto 118.99 (GridComputingNode) alignedtext
+grestore
+% Windows->GridComputingNode
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 581 288 moveto
+592 270 612 240 632 216 curveto
+641 206 650 196 660 187 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 662.4 189.55 moveto
+667 180 lineto
+657.45 184.6 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 662.4 189.55 moveto
+667 180 lineto
+657.45 184.6 lineto
+closepath stroke
+grestore
+% Crypto
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2316 234 37.86 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2296.56 229.8 moveto 38.89 (Crypto) alignedtext
+grestore
+% NetworkProtocol
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2521 90 77.04 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2472.79 85.8 moveto 96.42 (NetworkProtocol) alignedtext
+grestore
+% Crypto->NetworkProtocol
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2338 219 moveto
+2374 194 2446 143 2489 113 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2491.1 115.8 moveto
+2497 107 lineto
+2486.9 110.2 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2491.1 115.8 moveto
+2497 107 lineto
+2486.9 110.2 lineto
+closepath stroke
+grestore
+% Crypto->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2321 216 moveto
+2331 181 2359 105 2414 72 curveto
+2460 43 2823 26 2972 20 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2972 23.5 moveto
+2982 20 lineto
+2972 16.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2972 23.5 moveto
+2982 20 lineto
+2972 16.5 lineto
+closepath stroke
+grestore
+% NetworkSecurity
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2245 162 77 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2197.18 157.8 moveto 95.63 (NetworkSecurity) alignedtext
+grestore
+% Crypto->NetworkSecurity
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2300 218 moveto
+2291 208 2280 197 2270 187 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2272.55 184.6 moveto
+2263 180 lineto
+2267.6 189.55 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2272.55 184.6 moveto
+2263 180 lineto
+2267.6 189.55 lineto
+closepath stroke
+grestore
+% EMS
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3416 306 30.89 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3401.61 301.8 moveto 28.78 (EMS) alignedtext
+grestore
+% Atlas
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3532 234 30.92 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3517.23 229.8 moveto 29.55 (Atlas) alignedtext
+grestore
+% EMS->Atlas
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3437 293 moveto
+3455 282 3482 265 3502 252 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3503.96 254.92 moveto
+3511 247 lineto
+3500.56 248.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3503.96 254.92 moveto
+3511 247 lineto
+3500.56 248.8 lineto
+closepath stroke
+grestore
+% EMS->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3388 298 moveto
+3376 295 3363 291 3351 288 curveto
+3289 271 3257 296 3212 252 curveto
+3153 193 3218 134 3164 72 curveto
+3144 50 3116 37 3090 29 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3090.58 25.52 moveto
+3080 26 lineto
+3088.57 32.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3090.58 25.52 moveto
+3080 26 lineto
+3088.57 32.23 lineto
+closepath stroke
+grestore
+% Method
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3598 162 41.08 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3576.23 157.8 moveto 43.55 (Method) alignedtext
+grestore
+% EMS->Method
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3447 304 moveto
+3482 299 3539 287 3572 252 curveto
+3587 235 3594 210 3596 190 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3599.49 190.3 moveto
+3597 180 lineto
+3592.52 189.6 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3599.49 190.3 moveto
+3597 180 lineto
+3592.52 189.6 lineto
+closepath stroke
+grestore
+% MIAlgorithm
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3655 90 63.07 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3617.28 85.8 moveto 75.43 (MIAlgorithm) alignedtext
+grestore
+% EMS->MIAlgorithm
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3424 288 moveto
+3439 256 3476 185 3527 144 curveto
+3547 126 3574 114 3598 105 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3599.43 108.23 moveto
+3608 102 lineto
+3597.42 101.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3599.43 108.23 moveto
+3608 102 lineto
+3597.42 101.52 lineto
+closepath stroke
+grestore
+% Linux
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+948 306 34.11 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+931.28 301.8 moveto 33.44 (Linux) alignedtext
+grestore
+% Linux->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 981 302 moveto
+1039 293 1156 274 1190 252 curveto
+1271 197 1230 118 1316 72 curveto
+1389 31 2671 20 2972 18 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2972 21.5 moveto
+2982 18 lineto
+2972 14.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2972 21.5 moveto
+2982 18 lineto
+2972 14.5 lineto
+closepath stroke
+grestore
+% Linux->GridDeployment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 982 303 moveto
+1039 297 1151 282 1175 252 curveto
+1184 239 1183 229 1175 216 curveto
+1157 186 1136 198 1108 180 curveto
+1075 159 1041 132 1017 114 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1019.1 111.2 moveto
+1009 108 lineto
+1014.9 116.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1019.1 111.2 moveto
+1009 108 lineto
+1014.9 116.8 lineto
+closepath stroke
+grestore
+% Linux->OperatingSystem
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 930 290 moveto
+919 281 906 269 894 259 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 895.83 255.95 moveto
+886 252 lineto
+891.22 261.22 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 895.83 255.95 moveto
+886 252 lineto
+891.22 261.22 lineto
+closepath stroke
+grestore
+% Linux->GridComputingNode
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 955 288 moveto
+962 268 969 236 953 216 curveto
+931 190 851 176 785 169 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 785.3 165.51 moveto
+775 168 lineto
+784.6 172.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 785.3 165.51 moveto
+775 168 lineto
+784.6 172.48 lineto
+closepath stroke
+grestore
+% T2
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4520 306 27 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4512.22 301.8 moveto 15.55 (T2) alignedtext
+grestore
+% T2->MedicalImage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4547 302 moveto
+4582 296 4646 282 4692 252 curveto
+4745 215 4788 152 4810 117 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4813.2 118.44 moveto
+4815 108 lineto
+4807.08 115.04 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4813.2 118.44 moveto
+4815 108 lineto
+4807.08 115.04 lineto
+closepath stroke
+grestore
+% T2->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4493 303 moveto
+4435 296 4301 277 4264 252 curveto
+4185 198 4230 119 4148 72 curveto
+4102 45 3324 25 3096 19 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath stroke
+grestore
+% MRI
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4568 234 28.78 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4554.78 229.8 moveto 26.44 (MRI) alignedtext
+grestore
+% T2->MRI
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4531 289 moveto
+4537 281 4544 270 4551 260 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4554.2 261.44 moveto
+4556 251 lineto
+4548.08 258.04 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4554.2 261.44 moveto
+4556 251 lineto
+4548.08 258.04 lineto
+closepath stroke
+grestore
+% ModalityAcquisition
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4478 162 91.01 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4419.67 157.8 moveto 116.66 (ModalityAcquisition) alignedtext
+grestore
+% T2->ModalityAcquisition
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4511 288 moveto
+4506 278 4501 264 4497 252 curveto
+4490 232 4485 208 4482 190 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4485.48 189.6 moveto
+4481 180 lineto
+4478.51 190.3 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4485.48 189.6 moveto
+4481 180 lineto
+4478.51 190.3 lineto
+closepath stroke
+grestore
+% ProcessorBits
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+206 306 64.14 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+167.51 301.8 moveto 76.98 (ProcessorBits) alignedtext
+grestore
+% ProcessorBits->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 200 288 moveto
+194 269 188 239 197 216 curveto
+227 135 247 107 325 72 curveto
+386 43 2572 22 2972 18 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2972 21.5 moveto
+2982 18 lineto
+2972 14.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2972 21.5 moveto
+2982 18 lineto
+2972 14.5 lineto
+closepath stroke
+grestore
+% ProcessorBits->GridDeployment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 203 288 moveto
+200 268 199 237 214 216 curveto
+261 149 303 163 383 144 curveto
+479 120 760 102 903 95 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 903.4 98.48 moveto
+913 94 lineto
+902.7 91.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 903.4 98.48 moveto
+913 94 lineto
+902.7 91.51 lineto
+closepath stroke
+grestore
+% ProcessorBits->GridComputingNode
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 209 288 moveto
+213 267 223 233 247 216 curveto
+273 196 468 178 589 169 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 589.4 172.48 moveto
+599 168 lineto
+588.7 165.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 589.4 172.48 moveto
+599 168 lineto
+588.7 165.51 lineto
+closepath stroke
+grestore
+% Processor
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+304 234 48.08 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+276.79 229.8 moveto 54.42 (Processor) alignedtext
+grestore
+% ProcessorBits->Processor
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 229 289 moveto
+242 279 259 267 274 256 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 276.1 258.8 moveto
+282 250 lineto
+271.9 253.2 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 276.1 258.8 moveto
+282 250 lineto
+271.9 253.2 lineto
+closepath stroke
+grestore
+% Symetric
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2128 306 45.9 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2102.73 301.8 moveto 50.54 (Symetric) alignedtext
+grestore
+% Symetric->Crypto
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2161 293 moveto
+2193 281 2242 263 2276 249 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2278.02 251.96 moveto
+2286 245 lineto
+2275.42 245.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2278.02 251.96 moveto
+2286 245 lineto
+2275.42 245.46 lineto
+closepath stroke
+grestore
+% Symetric->NetworkProtocol
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2125 288 moveto
+2122 254 2119 182 2159 144 curveto
+2178 125 2338 106 2438 97 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2438.4 100.48 moveto
+2448 96 lineto
+2437.7 93.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2438.4 100.48 moveto
+2448 96 lineto
+2437.7 93.51 lineto
+closepath stroke
+grestore
+% Symetric->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2089 297 moveto
+2065 289 2037 275 2022 252 curveto
+1977 182 1992 114 2063 72 curveto
+2101 48 2764 27 2972 20 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2972 23.5 moveto
+2982 20 lineto
+2972 16.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2972 23.5 moveto
+2982 20 lineto
+2972 16.5 lineto
+closepath stroke
+grestore
+% Symetric->NetworkSecurity
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2148 290 moveto
+2161 279 2176 266 2188 252 curveto
+2204 232 2220 208 2230 189 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2233.2 190.44 moveto
+2235 180 lineto
+2227.08 187.04 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2233.2 190.44 moveto
+2235 180 lineto
+2227.08 187.04 lineto
+closepath stroke
+grestore
+% NetworkProtocol->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2585 80 moveto
+2603 77 2622 74 2640 72 curveto
+2759 55 2898 36 2975 25 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2975.4 28.48 moveto
+2985 24 lineto
+2974.7 21.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2975.4 28.48 moveto
+2985 24 lineto
+2974.7 21.51 lineto
+closepath stroke
+grestore
+% x64
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+114 378 27 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+103.5 373.8 moveto 21 (x64) alignedtext
+grestore
+% x64->ProcessorBits
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 132 364 moveto
+145 354 162 341 176 329 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 178.1 331.8 moveto
+184 323 lineto
+173.9 326.2 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 178.1 331.8 moveto
+184 323 lineto
+173.9 326.2 lineto
+closepath stroke
+grestore
+% x64->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 94 366 moveto
+61 343 0 293 0 234 curveto
+0 234 0 234 0 162 curveto
+0 104 40 94 93 72 curveto
+162 43 2553 22 2972 18 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2972 21.5 moveto
+2982 18 lineto
+2972 14.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2972 21.5 moveto
+2982 18 lineto
+2972 14.5 lineto
+closepath stroke
+grestore
+% x64->GridDeployment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 112 360 moveto
+111 341 111 312 117 288 curveto
+139 206 162 175 240 144 curveto
+300 119 719 101 903 93 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 903 96.5 moveto
+913 93 lineto
+903 89.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 903 96.5 moveto
+913 93 lineto
+903 89.5 lineto
+closepath stroke
+grestore
+% x64->GridComputingNode
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 115 360 moveto
+116 341 120 310 133 288 curveto
+158 246 171 235 214 216 curveto
+278 187 467 173 586 167 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 586.4 170.48 moveto
+596 166 lineto
+585.7 163.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 586.4 170.48 moveto
+596 166 lineto
+585.7 163.51 lineto
+closepath stroke
+grestore
+% x64->Processor
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 140 372 moveto
+181 363 259 344 279 324 curveto
+294 307 300 282 303 262 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 306.49 262.3 moveto
+304 252 lineto
+299.52 261.6 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 306.49 262.3 moveto
+304 252 lineto
+299.52 261.6 lineto
+closepath stroke
+grestore
+% Asymetric
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2243 306 50.76 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2213.84 301.8 moveto 58.31 (Asymetric) alignedtext
+grestore
+% Asymetric->Crypto
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2260 289 moveto
+2270 280 2282 268 2292 258 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2294.4 260.55 moveto
+2299 251 lineto
+2289.45 255.6 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2294.4 260.55 moveto
+2299 251 lineto
+2289.45 255.6 lineto
+closepath stroke
+grestore
+% Asymetric->NetworkProtocol
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2293 303 moveto
+2363 298 2485 284 2513 252 curveto
+2521 242 2522 162 2521 118 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2524.5 118 moveto
+2521 108 lineto
+2517.5 118 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2524.5 118 moveto
+2521 108 lineto
+2517.5 118 lineto
+closepath stroke
+grestore
+% Asymetric->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2205 294 moveto
+2197 292 2190 290 2183 288 curveto
+2121 270 2083 302 2045 252 curveto
+1991 183 2045 115 2121 72 curveto
+2195 30 2778 20 2972 18 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2972 21.5 moveto
+2982 18 lineto
+2972 14.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2972 21.5 moveto
+2982 18 lineto
+2972 14.5 lineto
+closepath stroke
+grestore
+% Asymetric->NetworkSecurity
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2243 288 moveto
+2244 263 2244 219 2245 190 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2248.5 190 moveto
+2245 180 lineto
+2241.5 190 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2248.5 190 moveto
+2245 180 lineto
+2241.5 190 lineto
+closepath stroke
+grestore
+% HTTP
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2671 234 35.18 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2653.5 229.8 moveto 34.99 (HTTP) alignedtext
+grestore
+% HTTP->NetworkProtocol
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2658 217 moveto
+2643 198 2617 167 2592 144 curveto
+2581 133 2567 122 2555 113 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2557.1 110.2 moveto
+2547 107 lineto
+2552.9 115.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2557.1 110.2 moveto
+2547 107 lineto
+2552.9 115.8 lineto
+closepath stroke
+grestore
+% HTTP->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2666 216 moveto
+2662 196 2658 165 2673 144 curveto
+2709 93 2886 48 2979 29 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2979.88 32.39 moveto
+2989 27 lineto
+2978.51 25.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2979.88 32.39 moveto
+2989 27 lineto
+2978.51 25.53 lineto
+closepath stroke
+grestore
+% TransferProtocol
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2758 162 75.96 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2710.58 157.8 moveto 94.85 (TransferProtocol) alignedtext
+grestore
+% HTTP->TransferProtocol
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2690 218 moveto
+2701 209 2716 196 2729 186 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2731.1 188.8 moveto
+2737 180 lineto
+2726.9 183.2 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2731.1 188.8 moveto
+2737 180 lineto
+2726.9 183.2 lineto
+closepath stroke
+grestore
+% PasswordBased
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1629 234 71.14 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+1585.07 229.8 moveto 87.86 (PasswordBased) alignedtext
+grestore
+% PasswordBased->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1620 216 moveto
+1604 183 1578 111 1616 72 curveto
+1640 46 2702 25 2972 19 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2972 22.5 moveto
+2982 19 lineto
+2972 15.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2972 22.5 moveto
+2982 19 lineto
+2972 15.5 lineto
+closepath stroke
+grestore
+% Authentification
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1376 162 73.83 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+1330.12 157.8 moveto 91.75 (Authentification) alignedtext
+grestore
+% PasswordBased->Authentification
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1582 221 moveto
+1539 209 1478 192 1434 179 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1434.58 175.52 moveto
+1424 176 lineto
+1432.57 182.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1434.58 175.52 moveto
+1424 176 lineto
+1432.57 182.23 lineto
+closepath stroke
+grestore
+% PasswordBased->GridDeployment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1601 217 moveto
+1560 194 1487 152 1459 144 curveto
+1388 122 1186 104 1071 96 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1071.3 92.51 moveto
+1061 95 lineto
+1070.6 99.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1071.3 92.51 moveto
+1061 95 lineto
+1070.6 99.48 lineto
+closepath stroke
+grestore
+% Atlas->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3530 216 moveto
+3527 182 3513 107 3467 72 curveto
+3438 50 3208 30 3095 22 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3095.3 18.51 moveto
+3085 21 lineto
+3094.6 25.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3095.3 18.51 moveto
+3085 21 lineto
+3094.6 25.48 lineto
+closepath stroke
+grestore
+% Atlas->Method
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3547 218 moveto
+3555 208 3566 197 3576 186 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3578.4 188.55 moveto
+3583 179 lineto
+3573.45 183.6 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3578.4 188.55 moveto
+3583 179 lineto
+3573.45 183.6 lineto
+closepath stroke
+grestore
+% Atlas->MIAlgorithm
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3531 216 moveto
+3530 196 3532 165 3548 144 curveto
+3561 127 3580 115 3600 106 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3601.28 109.26 moveto
+3609 102 lineto
+3598.44 102.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3601.28 109.26 moveto
+3609 102 lineto
+3598.44 102.86 lineto
+closepath stroke
+grestore
+% Format->MedicalImage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5188 155 moveto
+5121 143 4976 117 4891 102 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4891.49 98.53 moveto
+4881 100 lineto
+4890.12 105.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4891.49 98.53 moveto
+4881 100 lineto
+4890.12 105.39 lineto
+closepath stroke
+grestore
+% Format->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5219 144 moveto
+5211 122 5194 87 5167 72 curveto
+5120 45 3442 23 3096 19 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath stroke
+grestore
+% 1
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2586 378 27 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2582.5 373.8 moveto 7 (1) alignedtext
+grestore
+% PET
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4373 234 28.2 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4360.56 229.8 moveto 24.89 (PET) alignedtext
+grestore
+% PET->MedicalImage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4368 216 moveto
+4363 196 4360 163 4378 144 curveto
+4402 117 4628 101 4749 94 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4749.4 97.48 moveto
+4759 93 lineto
+4748.7 90.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4749.4 97.48 moveto
+4759 93 lineto
+4748.7 90.51 lineto
+closepath stroke
+grestore
+% PET->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4366 217 moveto
+4351 182 4312 104 4252 72 curveto
+4201 44 3338 25 3096 19 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath stroke
+grestore
+% PET->ModalityAcquisition
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4392 221 moveto
+4407 211 4427 197 4445 185 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4447.1 187.8 moveto
+4453 179 lineto
+4442.9 182.2 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4447.1 187.8 moveto
+4453 179 lineto
+4442.9 182.2 lineto
+closepath stroke
+grestore
+% Affine
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3571 306 36.24 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3552.73 301.8 moveto 36.53 (Affine) alignedtext
+grestore
+% Affine->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3549 292 moveto
+3533 281 3511 266 3492 252 curveto
+3386 175 3377 128 3259 72 curveto
+3206 46 3141 32 3094 25 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3094.3 21.51 moveto
+3084 24 lineto
+3093.6 28.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3094.3 21.51 moveto
+3084 24 lineto
+3093.6 28.48 lineto
+closepath stroke
+grestore
+% Affine->Method
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3585 289 moveto
+3593 279 3601 266 3605 252 curveto
+3611 232 3608 208 3605 190 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3608.39 189.12 moveto
+3603 180 lineto
+3601.53 190.49 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3608.39 189.12 moveto
+3603 180 lineto
+3601.53 190.49 lineto
+closepath stroke
+grestore
+% Linear
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3257 234 36.24 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3238.73 229.8 moveto 36.53 (Linear) alignedtext
+grestore
+% Affine->Linear
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3538 298 moveto
+3480 286 3363 258 3300 244 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3300.49 240.53 moveto
+3290 242 lineto
+3299.12 247.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3300.49 240.53 moveto
+3290 242 lineto
+3299.12 247.39 lineto
+closepath stroke
+grestore
+% Affine->MIAlgorithm
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3588 290 moveto
+3598 279 3610 266 3619 252 curveto
+3637 222 3640 213 3648 180 curveto
+3653 159 3655 136 3655 118 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3658.5 118 moveto
+3655 108 lineto
+3651.5 118 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3658.5 118 moveto
+3655 108 lineto
+3651.5 118 lineto
+closepath stroke
+grestore
+% T1
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4658 306 27 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4650.22 301.8 moveto 15.55 (T1) alignedtext
+grestore
+% T1->MedicalImage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4683 298 moveto
+4705 289 4740 274 4763 252 curveto
+4799 215 4815 154 4821 118 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4824.47 118.49 moveto
+4823 108 lineto
+4817.61 117.12 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4824.47 118.49 moveto
+4823 108 lineto
+4817.61 117.12 lineto
+closepath stroke
+grestore
+% T1->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4671 290 moveto
+4685 272 4702 241 4692 216 curveto
+4656 127 4621 105 4532 72 curveto
+4463 46 3371 25 3096 19 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath stroke
+grestore
+% T1->MRI
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4641 292 moveto
+4628 281 4609 267 4594 254 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4596.1 251.2 moveto
+4586 248 lineto
+4591.9 256.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4596.1 251.2 moveto
+4586 248 lineto
+4591.9 256.8 lineto
+closepath stroke
+grestore
+% T1->ModalityAcquisition
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4632 300 moveto
+4604 293 4560 278 4530 252 curveto
+4510 235 4497 209 4488 189 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4491.26 187.72 moveto
+4484 180 lineto
+4484.86 190.56 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4491.26 187.72 moveto
+4484 180 lineto
+4484.86 190.56 lineto
+closepath stroke
+grestore
+% Ubuntu
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+760 378 40.01 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+739 373.8 moveto 42 (Ubuntu) alignedtext
+grestore
+% Ubuntu->Linux
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 791 366 moveto
+824 354 876 334 910 321 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 912.02 323.96 moveto
+920 317 lineto
+909.42 317.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 912.02 323.96 moveto
+920 317 lineto
+909.42 317.46 lineto
+closepath stroke
+grestore
+% Ubuntu->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 755 360 moveto
+747 329 735 264 757 216 curveto
+765 196 775 196 789 180 curveto
+826 133 816 99 870 72 curveto
+918 47 2621 23 2972 19 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2972 22.5 moveto
+2982 19 lineto
+2972 15.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2972 22.5 moveto
+2982 19 lineto
+2972 15.5 lineto
+closepath stroke
+grestore
+% Ubuntu->GridDeployment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 757 360 moveto
+753 328 749 260 779 216 curveto
+788 200 890 143 948 112 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 949.96 114.92 moveto
+957 107 lineto
+946.56 108.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 949.96 114.92 moveto
+957 107 lineto
+946.56 108.8 lineto
+closepath stroke
+grestore
+% Ubuntu->OperatingSystem
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 773 361 moveto
+791 336 825 289 847 260 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 849.8 262.1 moveto
+853 252 lineto
+844.2 257.9 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 849.8 262.1 moveto
+853 252 lineto
+844.2 257.9 lineto
+closepath stroke
+grestore
+% Ubuntu->GridComputingNode
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 740 362 moveto
+728 353 715 339 708 324 curveto
+687 281 684 224 686 190 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 689.5 190 moveto
+686 180 lineto
+682.5 190 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 689.5 190 moveto
+686 180 lineto
+682.5 190 lineto
+closepath stroke
+grestore
+% MetaDataSupport
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5008 234 79.19 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4958.24 229.8 moveto 99.52 (MetaDataSupport) alignedtext
+grestore
+% MetaDataSupport->Format
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5053 219 moveto
+5092 206 5146 188 5183 176 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5184.43 179.23 moveto
+5193 173 lineto
+5182.42 172.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5184.43 179.23 moveto
+5193 173 lineto
+5182.42 172.52 lineto
+closepath stroke
+grestore
+% MetaDataSupport->MedicalImage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4992 216 moveto
+4974 197 4944 166 4915 144 curveto
+4899 132 4881 120 4865 111 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4866.44 107.8 moveto
+4856 106 lineto
+4863.04 113.92 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4866.44 107.8 moveto
+4856 106 lineto
+4863.04 113.92 lineto
+closepath stroke
+grestore
+% MetaDataSupport->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5018 216 moveto
+5036 183 5067 111 5029 72 curveto
+4994 36 3431 21 3096 18 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3096 14.5 moveto
+3086 18 lineto
+3096 21.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3096 14.5 moveto
+3086 18 lineto
+3096 21.5 lineto
+closepath stroke
+grestore
+% MedicalImage->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4772 79 moveto
+4757 76 4740 73 4725 72 curveto
+4400 37 3362 22 3096 19 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath stroke
+grestore
+% PAM
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4000 306 31.96 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3984.83 301.8 moveto 30.33 (PAM) alignedtext
+grestore
+% PAM->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4031 300 moveto
+4057 294 4094 280 4112 252 curveto
+4139 208 4170 144 4091 72 curveto
+4054 38 3318 22 3096 19 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath stroke
+grestore
+% PAM->Method
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3970 299 moveto
+3931 290 3862 272 3805 252 curveto
+3744 230 3676 199 3635 179 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3636.56 175.86 moveto
+3626 175 lineto
+3633.72 182.26 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3636.56 175.86 moveto
+3626 175 lineto
+3633.72 182.26 lineto
+closepath stroke
+grestore
+% Model
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4067 234 36.25 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4048.73 229.8 moveto 36.55 (Model) alignedtext
+grestore
+% PAM->Model
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4015 290 moveto
+4024 280 4035 268 4045 257 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4047.4 259.55 moveto
+4052 250 lineto
+4042.45 254.6 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4047.4 259.55 moveto
+4052 250 lineto
+4042.45 254.6 lineto
+closepath stroke
+grestore
+% PAM->MIAlgorithm
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3994 288 moveto
+3986 267 3970 234 3946 216 curveto
+3890 175 3855 213 3795 180 curveto
+3775 168 3777 157 3759 144 curveto
+3740 130 3718 119 3699 109 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3700.56 105.86 moveto
+3690 105 lineto
+3697.72 112.26 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3700.56 105.86 moveto
+3690 105 lineto
+3697.72 112.26 lineto
+closepath stroke
+grestore
+% NonGrid
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3892 234 44.86 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3867.12 229.8 moveto 49.76 (NonGrid) alignedtext
+grestore
+% NonGrid->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3931 225 moveto
+3955 217 3983 204 3998 180 curveto
+4006 166 4007 157 3998 144 curveto
+3942 65 3887 91 3793 72 curveto
+3660 44 3253 26 3096 20 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3096 16.5 moveto
+3086 20 lineto
+3096 23.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3096 16.5 moveto
+3086 20 lineto
+3096 23.5 lineto
+closepath stroke
+grestore
+% NonGrid->Method
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3857 223 moveto
+3849 220 3841 218 3833 216 curveto
+3768 198 3693 181 3645 172 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3645.49 168.53 moveto
+3635 170 lineto
+3644.12 175.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3645.49 168.53 moveto
+3635 170 lineto
+3644.12 175.39 lineto
+closepath stroke
+grestore
+% NonGrid->MIAlgorithm
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3858 222 moveto
+3832 212 3796 197 3767 180 curveto
+3750 169 3710 137 3683 114 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3684.83 110.95 moveto
+3675 107 lineto
+3680.22 116.22 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3684.83 110.95 moveto
+3675 107 lineto
+3680.22 116.22 lineto
+closepath stroke
+grestore
+% Interactive
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3937 162 51.82 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3907.07 157.8 moveto 59.85 (Interactive) alignedtext
+grestore
+% Interactive->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3909 147 moveto
+3870 126 3795 89 3727 72 curveto
+3608 43 3243 26 3096 20 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3096 16.5 moveto
+3086 20 lineto
+3096 23.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3096 16.5 moveto
+3086 20 lineto
+3096 23.5 lineto
+closepath stroke
+grestore
+% Interactive->MIAlgorithm
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3897 151 moveto
+3888 148 3879 146 3871 144 curveto
+3817 129 3756 114 3713 104 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3713.49 100.53 moveto
+3703 102 lineto
+3712.12 107.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3713.49 100.53 moveto
+3703 102 lineto
+3712.12 107.39 lineto
+closepath stroke
+grestore
+% TripleDES
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2360 378 52.87 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2329.67 373.8 moveto 60.65 (TripleDES) alignedtext
+grestore
+% TripleDES->Crypto
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2356 360 moveto
+2351 341 2344 312 2336 288 curveto
+2333 279 2330 270 2327 262 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2329.96 259.98 moveto
+2323 252 lineto
+2323.46 262.58 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2329.96 259.98 moveto
+2323 252 lineto
+2323.46 262.58 lineto
+closepath stroke
+grestore
+% TripleDES->Symetric
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2320 366 moveto
+2284 355 2230 338 2183 324 curveto
+2180 323 2176 322 2173 321 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2173.58 317.52 moveto
+2163 318 lineto
+2171.57 324.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2173.58 317.52 moveto
+2163 318 lineto
+2171.57 324.23 lineto
+closepath stroke
+grestore
+% TripleDES->NetworkProtocol
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2394 364 moveto
+2434 345 2500 308 2528 252 curveto
+2550 209 2539 151 2530 118 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2533.23 116.57 moveto
+2527 108 lineto
+2526.52 118.58 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2533.23 116.57 moveto
+2527 108 lineto
+2526.52 118.58 lineto
+closepath stroke
+grestore
+% TripleDES->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2309 373 moveto
+2192 358 1912 316 1912 234 curveto
+1912 234 1912 234 1912 162 curveto
+1912 101 1958 94 2014 72 curveto
+2103 36 2764 22 2972 19 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2972 22.5 moveto
+2982 19 lineto
+2972 15.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2972 22.5 moveto
+2982 19 lineto
+2972 15.5 lineto
+closepath stroke
+grestore
+% TripleDES->NetworkSecurity
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2366 360 moveto
+2376 328 2391 260 2363 216 curveto
+2351 198 2332 186 2312 178 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2313.56 174.86 moveto
+2303 174 lineto
+2310.72 181.26 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2313.56 174.86 moveto
+2303 174 lineto
+2310.72 181.26 lineto
+closepath stroke
+grestore
+% Authentification->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1393 144 moveto
+1416 123 1457 87 1502 72 curveto
+1572 47 2692 25 2972 19 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2972 22.5 moveto
+2982 19 lineto
+2972 15.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2972 22.5 moveto
+2982 19 lineto
+2972 15.5 lineto
+closepath stroke
+grestore
+% Authentification->GridDeployment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1317 151 moveto
+1248 139 1132 117 1058 103 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1058.49 99.53 moveto
+1048 101 lineto
+1057.12 106.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1058.49 99.53 moveto
+1048 101 lineto
+1057.12 106.39 lineto
+closepath stroke
+grestore
+% GridDeployment->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1042 77 moveto
+1054 75 1066 73 1078 72 curveto
+1457 29 2681 20 2972 18 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2972 21.5 moveto
+2982 18 lineto
+2972 14.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2972 21.5 moveto
+2982 18 lineto
+2972 14.5 lineto
+closepath stroke
+grestore
+% KDC
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2054 378 30.92 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2039.23 373.8 moveto 29.55 (KDC) alignedtext
+grestore
+% KDC->Crypto
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2085 376 moveto
+2145 370 2273 355 2303 324 curveto
+2318 307 2321 282 2320 262 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2323.48 261.6 moveto
+2319 252 lineto
+2316.51 262.3 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2323.48 261.6 moveto
+2319 252 lineto
+2316.51 262.3 lineto
+closepath stroke
+grestore
+% KDC->Symetric
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2070 362 moveto
+2080 352 2092 341 2103 330 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2105.78 332.22 moveto
+2111 323 lineto
+2101.17 326.95 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2105.78 332.22 moveto
+2111 323 lineto
+2101.17 326.95 lineto
+closepath stroke
+grestore
+% KDC->NetworkProtocol
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2049 360 moveto
+2042 330 2030 266 2045 216 curveto
+2055 179 2059 164 2092 144 curveto
+2147 109 2325 97 2434 92 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2434 95.5 moveto
+2444 92 lineto
+2434 88.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2434 95.5 moveto
+2444 92 lineto
+2434 88.5 lineto
+closepath stroke
+grestore
+% KDC->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2026 370 moveto
+1975 353 1874 311 1874 234 curveto
+1874 234 1874 234 1874 162 curveto
+1874 115 1887 95 1928 72 curveto
+1972 44 2745 25 2972 19 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2972 22.5 moveto
+2982 19 lineto
+2972 15.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2972 22.5 moveto
+2982 19 lineto
+2972 15.5 lineto
+closepath stroke
+grestore
+% KDC->NetworkSecurity
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2054 360 moveto
+2055 341 2058 310 2073 288 curveto
+2078 280 2163 220 2212 185 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2214.1 187.8 moveto
+2220 179 lineto
+2209.9 182.2 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2214.1 187.8 moveto
+2220 179 lineto
+2209.9 182.2 lineto
+closepath stroke
+grestore
+% NetworkSecurity->NetworkProtocol
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2297 149 moveto
+2343 137 2411 119 2460 106 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2461.43 109.23 moveto
+2470 103 lineto
+2459.42 102.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2461.43 109.23 moveto
+2470 103 lineto
+2459.42 102.52 lineto
+closepath stroke
+grestore
+% NetworkSecurity->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2257 144 moveto
+2272 122 2301 87 2336 72 curveto
+2393 46 2811 27 2972 20 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2972 23.5 moveto
+2982 20 lineto
+2972 16.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2972 23.5 moveto
+2982 20 lineto
+2972 16.5 lineto
+closepath stroke
+grestore
+% Method->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3586 144 moveto
+3570 123 3540 88 3505 72 curveto
+3433 38 3207 25 3096 20 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3096 16.5 moveto
+3086 20 lineto
+3096 23.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3096 16.5 moveto
+3086 20 lineto
+3096 23.5 lineto
+closepath stroke
+grestore
+% Method->MIAlgorithm
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3612 145 moveto
+3619 136 3627 126 3635 116 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3637.8 118.1 moveto
+3641 108 lineto
+3632.2 113.9 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3637.8 118.1 moveto
+3641 108 lineto
+3632.2 113.9 lineto
+closepath stroke
+grestore
+% FormatName->Format
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5360 219 moveto
+5332 207 5292 191 5263 178 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5264.56 174.86 moveto
+5254 174 lineto
+5261.72 181.26 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5264.56 174.86 moveto
+5254 174 lineto
+5261.72 181.26 lineto
+closepath stroke
+grestore
+% FormatName->MedicalImage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5378 216 moveto
+5355 195 5315 160 5273 144 curveto
+5206 118 5010 102 4901 95 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4901.3 91.51 moveto
+4891 94 lineto
+4900.6 98.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4901.3 91.51 moveto
+4891 94 lineto
+4900.6 98.48 lineto
+closepath stroke
+grestore
+% FormatName->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5383 216 moveto
+5368 197 5344 165 5318 144 curveto
+5270 103 5257 89 5198 72 curveto
+5094 41 3440 22 3096 19 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath stroke
+grestore
+% MRI->MedicalImage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4588 220 moveto
+4615 202 4666 169 4711 144 curveto
+4734 132 4759 120 4781 109 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4782.28 112.26 moveto
+4790 105 lineto
+4779.44 105.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4782.28 112.26 moveto
+4790 105 lineto
+4779.44 105.86 lineto
+closepath stroke
+grestore
+% MRI->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4576 216 moveto
+4584 197 4592 165 4578 144 curveto
+4525 68 4474 90 4385 72 curveto
+4258 46 3344 25 3096 19 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath stroke
+grestore
+% MRI->ModalityAcquisition
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4550 220 moveto
+4538 210 4522 197 4508 187 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4509.83 183.95 moveto
+4500 180 lineto
+4505.22 189.22 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4509.83 183.95 moveto
+4500 180 lineto
+4505.22 189.22 lineto
+closepath stroke
+grestore
+% HTTPS
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2862 234 40.04 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2840.61 229.8 moveto 42.78 (HTTPS) alignedtext
+grestore
+% HTTPS->NetworkProtocol
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2864 216 moveto
+2864 195 2862 162 2843 144 curveto
+2809 112 2691 99 2607 94 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2607.3 90.51 moveto
+2597 93 lineto
+2606.6 97.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2607.3 90.51 moveto
+2597 93 lineto
+2606.6 97.48 lineto
+closepath stroke
+grestore
+% HTTPS->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2900 228 moveto
+2950 220 3032 203 3051 180 curveto
+3080 141 3062 80 3047 45 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3050.26 43.72 moveto
+3043 36 lineto
+3043.86 46.56 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3050.26 43.72 moveto
+3043 36 lineto
+3043.86 46.56 lineto
+closepath stroke
+grestore
+% HTTPS->TransferProtocol
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2840 219 moveto
+2826 209 2807 196 2791 185 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2793.1 182.2 moveto
+2783 179 lineto
+2788.9 187.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2793.1 182.2 moveto
+2783 179 lineto
+2788.9 187.8 lineto
+closepath stroke
+grestore
+% x32
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+336 378 27 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+325.5 373.8 moveto 21 (x32) alignedtext
+grestore
+% x32->ProcessorBits
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 315 366 moveto
+295 355 267 340 244 327 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 245.44 323.8 moveto
+235 322 lineto
+242.04 329.92 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 245.44 323.8 moveto
+235 322 lineto
+242.04 329.92 lineto
+closepath stroke
+grestore
+% x32->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 310 373 moveto
+261 365 161 344 133 324 curveto
+95 295 76 281 76 234 curveto
+76 234 76 234 76 162 curveto
+76 72 169 93 255 72 curveto
+391 37 2573 21 2972 18 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2972 21.5 moveto
+2982 18 lineto
+2972 14.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2972 21.5 moveto
+2982 18 lineto
+2972 14.5 lineto
+closepath stroke
+grestore
+% x32->GridDeployment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 359 369 moveto
+380 359 411 344 433 324 curveto
+505 258 474 194 558 144 curveto
+614 110 793 97 902 92 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 902 95.5 moveto
+912 92 lineto
+902 88.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 902 95.5 moveto
+912 92 lineto
+902 88.5 lineto
+closepath stroke
+grestore
+% x32->GridComputingNode
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 363 376 moveto
+427 372 587 357 627 324 curveto
+647 306 669 231 680 190 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 683.48 190.58 moveto
+683 180 lineto
+676.77 188.57 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 683.48 190.58 moveto
+683 180 lineto
+676.77 188.57 lineto
+closepath stroke
+grestore
+% x32->Processor
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 332 360 moveto
+327 335 317 291 310 262 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 313.39 261.12 moveto
+308 252 lineto
+306.53 262.49 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 313.39 261.12 moveto
+308 252 lineto
+306.53 262.49 lineto
+closepath stroke
+grestore
+% OperatingSystem->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 864 216 moveto
+860 182 859 107 903 72 curveto
+944 38 2625 21 2972 18 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2972 21.5 moveto
+2982 18 lineto
+2972 14.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2972 21.5 moveto
+2982 18 lineto
+2972 14.5 lineto
+closepath stroke
+grestore
+% OperatingSystem->GridDeployment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 881 216 moveto
+903 190 942 145 966 116 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 969.05 117.83 moveto
+973 108 lineto
+963.78 113.22 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 969.05 117.83 moveto
+973 108 lineto
+963.78 113.22 lineto
+closepath stroke
+grestore
+% OperatingSystem->GridComputingNode
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 827 218 moveto
+801 207 766 193 737 182 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 738.56 178.86 moveto
+728 178 lineto
+735.72 185.26 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 738.56 178.86 moveto
+728 178 lineto
+735.72 185.26 lineto
+closepath stroke
+grestore
+% HeaderEncoding
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2966 162 75.92 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2918.97 157.8 moveto 94.07 (HeaderEncoding) alignedtext
+grestore
+% HeaderEncoding->NetworkProtocol
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2908 150 moveto
+2898 148 2886 146 2876 144 curveto
+2780 127 2670 111 2598 100 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2598.3 96.51 moveto
+2588 99 lineto
+2597.6 103.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2598.3 96.51 moveto
+2588 99 lineto
+2597.6 103.48 lineto
+closepath stroke
+grestore
+% HeaderEncoding->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2974 144 moveto
+2987 119 3007 74 3021 45 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3024.14 46.56 moveto
+3025 36 lineto
+3017.74 43.72 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3024.14 46.56 moveto
+3025 36 lineto
+3017.74 43.72 lineto
+closepath stroke
+grestore
+% SSL
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2081 234 27.17 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2068.94 229.8 moveto 24.12 (SSL) alignedtext
+grestore
+% SSL->NetworkProtocol
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2085 216 moveto
+2090 195 2102 161 2126 144 curveto
+2174 109 2333 97 2434 92 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2434 95.5 moveto
+2444 92 lineto
+2434 88.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2434 95.5 moveto
+2444 92 lineto
+2434 88.5 lineto
+closepath stroke
+grestore
+% SSL->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2078 216 moveto
+2076 196 2076 164 2092 144 curveto
+2147 73 2192 91 2280 72 curveto
+2411 43 2815 26 2972 20 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2972 23.5 moveto
+2982 20 lineto
+2972 16.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2972 23.5 moveto
+2982 20 lineto
+2972 16.5 lineto
+closepath stroke
+grestore
+% SSL->NetworkSecurity
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2104 224 moveto
+2128 213 2169 196 2200 182 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2201.28 185.26 moveto
+2209 178 lineto
+2198.44 178.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2201.28 185.26 moveto
+2209 178 lineto
+2198.44 178.86 lineto
+closepath stroke
+grestore
+% 0
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2658 378 27 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2654.5 373.8 moveto 7 (0) alignedtext
+grestore
+% CT
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4300 234 27 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4291.06 229.8 moveto 17.89 (CT) alignedtext
+grestore
+% CT->MedicalImage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4306 216 moveto
+4314 195 4332 161 4359 144 curveto
+4391 124 4627 104 4750 95 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4750.4 98.48 moveto
+4760 94 lineto
+4749.7 91.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4750.4 98.48 moveto
+4760 94 lineto
+4749.7 91.51 lineto
+closepath stroke
+grestore
+% CT->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4297 216 moveto
+4291 181 4271 105 4221 72 curveto
+4173 40 3334 24 3096 19 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath stroke
+grestore
+% CT->ModalityAcquisition
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4321 223 moveto
+4326 220 4331 218 4336 216 curveto
+4364 204 4396 191 4423 181 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4423.62 184.48 moveto
+4432 178 lineto
+4421.41 177.84 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4423.62 184.48 moveto
+4432 178 lineto
+4421.41 177.84 lineto
+closepath stroke
+grestore
+% KerberosAuth
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1363 234 65.23 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+1323.35 229.8 moveto 79.3 (KerberosAuth) alignedtext
+grestore
+% KerberosAuth->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1331 218 moveto
+1317 209 1301 196 1293 180 curveto
+1285 165 1284 157 1293 144 curveto
+1328 85 1363 89 1430 72 curveto
+1580 32 2694 20 2972 18 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2972 21.5 moveto
+2982 18 lineto
+2972 14.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2972 21.5 moveto
+2982 18 lineto
+2972 14.5 lineto
+closepath stroke
+grestore
+% KerberosAuth->Authentification
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1366 216 moveto
+1367 208 1369 199 1371 190 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1374.47 190.49 moveto
+1373 180 lineto
+1367.61 189.12 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1374.47 190.49 moveto
+1373 180 lineto
+1367.61 189.12 lineto
+closepath stroke
+grestore
+% KerberosAuth->GridDeployment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1316 222 moveto
+1271 209 1207 191 1184 180 curveto
+1160 167 1159 156 1136 144 curveto
+1108 129 1075 116 1047 107 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1047.58 103.52 moveto
+1037 104 lineto
+1045.57 110.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1047.58 103.52 moveto
+1037 104 lineto
+1045.57 110.23 lineto
+closepath stroke
+grestore
+% Linear->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3260 216 moveto
+3265 183 3271 112 3236 72 curveto
+3217 50 3145 35 3092 27 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3092.49 23.53 moveto
+3082 25 lineto
+3091.12 30.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3092.49 23.53 moveto
+3082 25 lineto
+3091.12 30.39 lineto
+closepath stroke
+grestore
+% Linear->Method
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3290 227 moveto
+3351 215 3481 187 3551 172 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3551.88 175.39 moveto
+3561 170 lineto
+3550.51 168.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3551.88 175.39 moveto
+3561 170 lineto
+3550.51 168.53 lineto
+closepath stroke
+grestore
+% Linear->MIAlgorithm
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3273 218 moveto
+3297 194 3340 153 3360 144 curveto
+3399 125 3512 108 3587 98 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3587.4 101.48 moveto
+3597 97 lineto
+3586.7 94.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3587.4 101.48 moveto
+3597 97 lineto
+3586.7 94.51 lineto
+closepath stroke
+grestore
+% Rotation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3177 306 43.8 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3152.89 301.8 moveto 48.22 (Rotation) alignedtext
+grestore
+% Rotation->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3147 293 moveto
+3131 284 3112 270 3103 252 curveto
+3095 237 3099 231 3103 216 curveto
+3107 198 3117 197 3122 180 curveto
+3133 133 3145 113 3122 72 curveto
+3113 55 3097 43 3081 35 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3082.56 31.86 moveto
+3072 31 lineto
+3079.72 38.26 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3082.56 31.86 moveto
+3072 31 lineto
+3079.72 38.26 lineto
+closepath stroke
+grestore
+% Rotation->Method
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3208 293 moveto
+3252 275 3336 240 3410 216 curveto
+3458 199 3514 184 3552 174 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3553.43 177.23 moveto
+3562 171 lineto
+3551.42 170.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3553.43 177.23 moveto
+3562 171 lineto
+3551.42 170.52 lineto
+closepath stroke
+grestore
+% Rotation->Linear
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3196 289 moveto
+3207 279 3220 267 3231 257 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3233.78 259.22 moveto
+3239 250 lineto
+3229.17 253.95 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3233.78 259.22 moveto
+3239 250 lineto
+3229.17 253.95 lineto
+closepath stroke
+grestore
+% Rotation->MIAlgorithm
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3181 288 moveto
+3185 269 3195 237 3212 216 curveto
+3245 172 3261 164 3312 144 curveto
+3360 124 3500 106 3585 97 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3585.4 100.48 moveto
+3595 96 lineto
+3584.7 93.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3585.4 100.48 moveto
+3595 96 lineto
+3584.7 93.51 lineto
+closepath stroke
+grestore
+% PGP
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2476 234 28.24 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2463.16 229.8 moveto 25.67 (PGP) alignedtext
+grestore
+% PGP->NetworkProtocol
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2476 216 moveto
+2477 197 2479 168 2488 144 curveto
+2491 134 2496 125 2501 117 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2504.37 118.26 moveto
+2507 108 lineto
+2498.54 114.38 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2504.37 118.26 moveto
+2507 108 lineto
+2498.54 114.38 lineto
+closepath stroke
+grestore
+% PGP->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2464 218 moveto
+2440 186 2396 113 2435 72 curveto
+2470 32 2826 21 2972 19 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2972 22.5 moveto
+2982 19 lineto
+2972 15.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2972 22.5 moveto
+2982 19 lineto
+2972 15.5 lineto
+closepath stroke
+grestore
+% PGP->NetworkSecurity
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2453 223 moveto
+2447 221 2440 218 2434 216 curveto
+2393 201 2345 188 2308 178 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2308.58 174.52 moveto
+2298 175 lineto
+2306.57 181.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2308.58 174.52 moveto
+2298 175 lineto
+2306.57 181.23 lineto
+closepath stroke
+grestore
+% DICOM
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5190 306 43.22 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5166.67 301.8 moveto 46.66 (DICOM) alignedtext
+grestore
+% DICOM->Format
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5194 288 moveto
+5200 263 5211 219 5219 190 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5222.47 190.49 moveto
+5221 180 lineto
+5215.61 189.12 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5222.47 190.49 moveto
+5221 180 lineto
+5215.61 189.12 lineto
+closepath stroke
+grestore
+% DICOM->MedicalImage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5148 302 moveto
+5082 294 4956 277 4920 252 curveto
+4908 243 4863 160 4840 117 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4842.92 115.04 moveto
+4835 108 lineto
+4836.8 118.44 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4842.92 115.04 moveto
+4835 108 lineto
+4836.8 118.44 lineto
+closepath stroke
+grestore
+% DICOM->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5186 288 moveto
+5174 242 5134 121 5051 72 curveto
+5007 46 3431 23 3096 19 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath stroke
+grestore
+% DICOM->FormatName
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5223 294 moveto
+5256 283 5308 264 5345 251 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5346.43 254.23 moveto
+5355 248 lineto
+5344.42 247.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5346.43 254.23 moveto
+5355 248 lineto
+5344.42 247.52 lineto
+closepath stroke
+grestore
+% SSLAuth
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1493 234 46.98 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+1466.94 229.8 moveto 52.11 (SSLAuth) alignedtext
+grestore
+% SSLAuth->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1498 216 moveto
+1508 181 1537 104 1592 72 curveto
+1652 36 2702 21 2972 19 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2972 22.5 moveto
+2982 19 lineto
+2972 15.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2972 22.5 moveto
+2982 19 lineto
+2972 15.5 lineto
+closepath stroke
+grestore
+% SSLAuth->Authentification
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1468 219 moveto
+1452 209 1431 196 1413 185 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1414.26 181.63 moveto
+1404 179 lineto
+1410.38 187.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1414.26 181.63 moveto
+1404 179 lineto
+1410.38 187.46 lineto
+closepath stroke
+grestore
+% SSLAuth->GridDeployment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1457 222 moveto
+1451 220 1444 218 1437 216 curveto
+1373 197 1356 197 1293 180 curveto
+1240 165 1227 159 1175 144 curveto
+1132 131 1084 117 1047 107 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1047.58 103.52 moveto
+1037 104 lineto
+1045.57 110.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1047.58 103.52 moveto
+1037 104 lineto
+1045.57 110.23 lineto
+closepath stroke
+grestore
+% DES
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2512 378 28.78 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2498.78 373.8 moveto 26.44 (DES) alignedtext
+grestore
+% DES->Crypto
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2493 364 moveto
+2458 339 2386 285 2345 255 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2347.1 252.2 moveto
+2337 249 lineto
+2342.9 257.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2347.1 252.2 moveto
+2337 249 lineto
+2342.9 257.8 lineto
+closepath stroke
+grestore
+% DES->Symetric
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2484 372 moveto
+2467 368 2443 364 2422 360 curveto
+2316 341 2287 348 2183 324 curveto
+2179 323 2176 322 2172 321 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2172.58 317.52 moveto
+2162 318 lineto
+2170.57 324.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2172.58 317.52 moveto
+2162 318 lineto
+2170.57 324.23 lineto
+closepath stroke
+grestore
+% DES->NetworkProtocol
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2525 362 moveto
+2542 339 2572 295 2584 252 curveto
+2597 203 2565 147 2542 116 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2544.8 113.9 moveto
+2536 108 lineto
+2539.2 118.1 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2544.8 113.9 moveto
+2536 108 lineto
+2539.2 118.1 lineto
+closepath stroke
+grestore
+% DES->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2534 366 moveto
+2539 364 2545 362 2550 360 curveto
+2778 272 2931 381 3070 180 curveto
+3097 140 3089 117 3074 72 curveto
+3070 61 3064 51 3057 43 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3059.8 40.9 moveto
+3051 35 lineto
+3054.2 45.1 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3059.8 40.9 moveto
+3051 35 lineto
+3054.2 45.1 lineto
+closepath stroke
+grestore
+% DES->NetworkSecurity
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2503 361 moveto
+2484 328 2439 257 2383 216 curveto
+2361 199 2333 187 2308 178 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2308.58 174.52 moveto
+2298 175 lineto
+2306.57 181.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2308.58 174.52 moveto
+2298 175 lineto
+2306.57 181.23 lineto
+closepath stroke
+grestore
+% Model->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4074 216 moveto
+4086 183 4106 111 4069 72 curveto
+4036 37 3315 22 3096 19 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath stroke
+grestore
+% Model->Method
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4033 229 moveto
+3950 216 3742 184 3647 170 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3647.49 166.53 moveto
+3637 168 lineto
+3646.12 173.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3647.49 166.53 moveto
+3637 168 lineto
+3646.12 173.39 lineto
+closepath stroke
+grestore
+% Model->MIAlgorithm
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4034 227 moveto
+3976 214 3860 187 3843 180 curveto
+3818 168 3818 156 3795 144 curveto
+3767 129 3735 116 3708 106 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3708.58 102.52 moveto
+3698 103 lineto
+3706.57 109.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3708.58 102.52 moveto
+3698 103 lineto
+3706.57 109.23 lineto
+closepath stroke
+grestore
+% Scaling
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3302 306 40 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3281 301.8 moveto 41.99 (Scaling) alignedtext
+grestore
+% Scaling->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3265 299 moveto
+3237 292 3200 278 3179 252 curveto
+3127 188 3191 136 3142 72 curveto
+3128 54 3106 41 3086 33 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3086.58 29.46 moveto
+3076 29 lineto
+3083.98 35.96 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3086.58 29.46 moveto
+3076 29 lineto
+3083.98 35.96 lineto
+closepath stroke
+grestore
+% Scaling->Method
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3329 293 moveto
+3383 266 3501 209 3561 180 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3562.96 182.92 moveto
+3570 175 lineto
+3559.56 176.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3562.96 182.92 moveto
+3570 175 lineto
+3559.56 176.8 lineto
+closepath stroke
+grestore
+% Scaling->Linear
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3291 289 moveto
+3286 280 3279 269 3273 260 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3275.92 258.04 moveto
+3268 251 lineto
+3269.8 261.44 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3275.92 258.04 moveto
+3268 251 lineto
+3269.8 261.44 lineto
+closepath stroke
+grestore
+% Scaling->MIAlgorithm
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3316 289 moveto
+3346 256 3414 184 3487 144 curveto
+3521 125 3561 112 3594 103 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3594.88 106.39 moveto
+3604 101 lineto
+3593.51 99.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3594.88 106.39 moveto
+3604 101 lineto
+3593.51 99.53 lineto
+closepath stroke
+grestore
+% GPU
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+394 306 29.85 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+380 301.8 moveto 28 (GPU) alignedtext
+grestore
+% GPU->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 402 288 moveto
+423 242 486 119 584 72 curveto
+639 45 2595 22 2972 19 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2972 22.5 moveto
+2982 19 lineto
+2972 15.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2972 22.5 moveto
+2982 19 lineto
+2972 15.5 lineto
+closepath stroke
+grestore
+% GPU->GridDeployment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 405 289 moveto
+428 255 487 178 558 144 curveto
+617 115 795 100 903 94 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 903.4 97.48 moveto
+913 93 lineto
+902.7 90.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 903.4 97.48 moveto
+913 93 lineto
+902.7 90.51 lineto
+closepath stroke
+grestore
+% GPU->GridComputingNode
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 417 294 moveto
+466 270 581 214 644 183 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 645.28 186.26 moveto
+653 179 lineto
+642.44 179.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 645.28 186.26 moveto
+653 179 lineto
+642.44 179.86 lineto
+closepath stroke
+grestore
+% GPU->Processor
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 376 291 moveto
+363 281 347 268 333 257 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 334.83 253.95 moveto
+325 250 lineto
+330.22 259.22 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 334.83 253.95 moveto
+325 250 lineto
+330.22 259.22 lineto
+closepath stroke
+grestore
+% LibraryRequired
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1733 162 74.89 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+1686.35 157.8 moveto 93.3 (LibraryRequired) alignedtext
+grestore
+% LibraryRequired->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1744 144 moveto
+1759 122 1787 87 1822 72 curveto
+1874 48 2730 26 2972 19 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2972 22.5 moveto
+2982 19 lineto
+2972 15.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2972 22.5 moveto
+2982 19 lineto
+2972 15.5 lineto
+closepath stroke
+grestore
+% LibraryRequired->GridDeployment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1665 154 moveto
+1635 151 1600 147 1568 144 curveto
+1391 126 1182 107 1070 97 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1070.3 93.51 moveto
+1060 96 lineto
+1069.6 100.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1070.3 93.51 moveto
+1060 96 lineto
+1069.6 100.48 lineto
+closepath stroke
+grestore
+% MatLab
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1797 234 41.1 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+1774.84 229.8 moveto 44.32 (MatLab) alignedtext
+grestore
+% MatLab->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1804 216 moveto
+1819 174 1857 74 1860 72 curveto
+1905 38 2735 22 2972 19 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2972 22.5 moveto
+2982 19 lineto
+2972 15.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2972 22.5 moveto
+2982 19 lineto
+2972 15.5 lineto
+closepath stroke
+grestore
+% MatLab->GridDeployment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1766 222 moveto
+1714 202 1606 163 1511 144 curveto
+1359 112 1177 99 1073 94 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1073.3 90.51 moveto
+1063 93 lineto
+1072.6 97.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1073.3 90.51 moveto
+1063 93 lineto
+1072.6 97.48 lineto
+closepath stroke
+grestore
+% MatLab->LibraryRequired
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1782 217 moveto
+1774 208 1765 197 1756 188 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1758.22 185.22 moveto
+1749 180 lineto
+1752.95 189.83 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1758.22 185.22 moveto
+1749 180 lineto
+1752.95 189.83 lineto
+closepath stroke
+grestore
+% SPEC
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4649 234 34.11 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4632.27 229.8 moveto 33.45 (SPEC) alignedtext
+grestore
+% SPEC->MedicalImage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4668 219 moveto
+4699 194 4760 144 4796 113 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4798.1 115.8 moveto
+4804 107 lineto
+4793.9 110.2 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4798.1 115.8 moveto
+4804 107 lineto
+4793.9 110.2 lineto
+closepath stroke
+grestore
+% SPEC->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4641 216 moveto
+4632 197 4616 165 4595 144 curveto
+4552 100 4537 89 4479 72 curveto
+4346 32 3356 20 3096 18 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3096 14.5 moveto
+3086 18 lineto
+3096 21.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3096 14.5 moveto
+3086 18 lineto
+3096 21.5 lineto
+closepath stroke
+grestore
+% SPEC->ModalityAcquisition
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4622 223 moveto
+4597 212 4557 196 4526 182 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4527.56 178.86 moveto
+4517 178 lineto
+4524.72 185.26 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4527.56 178.86 moveto
+4517 178 lineto
+4524.72 185.26 lineto
+closepath stroke
+grestore
+% FileSizeLimit
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1102 234 64.15 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+1063.5 229.8 moveto 77 (FileSizeLimit) alignedtext
+grestore
+% FileSizeLimit->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1109 216 moveto
+1124 180 1161 103 1222 72 curveto
+1301 30 2662 20 2972 18 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2972 21.5 moveto
+2982 18 lineto
+2972 14.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2972 21.5 moveto
+2982 18 lineto
+2972 14.5 lineto
+closepath stroke
+grestore
+% FileSizeLimit->GridDeployment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1075 218 moveto
+1061 208 1044 195 1032 180 curveto
+1017 161 1005 136 998 117 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1001.26 115.72 moveto
+994 108 lineto
+994.86 118.56 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1001.26 115.72 moveto
+994 108 lineto
+994.86 118.56 lineto
+closepath stroke
+grestore
+% FileSizeLimit->GridComputingNode
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1054 222 moveto
+1044 220 1034 218 1024 216 curveto
+939 199 842 184 773 173 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 773.3 169.51 moveto
+763 172 lineto
+772.6 176.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 773.3 169.51 moveto
+763 172 lineto
+772.6 176.48 lineto
+closepath stroke
+grestore
+% MIAlgorithm->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3605 79 moveto
+3592 76 3578 74 3566 72 curveto
+3396 46 3194 29 3095 22 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3095.3 18.51 moveto
+3085 21 lineto
+3094.6 25.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3095.3 18.51 moveto
+3085 21 lineto
+3094.6 25.48 lineto
+closepath stroke
+grestore
+% GridComputingNode->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 701 144 moveto
+720 122 754 86 794 72 curveto
+898 31 2620 20 2972 18 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2972 21.5 moveto
+2982 18 lineto
+2972 14.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2972 21.5 moveto
+2982 18 lineto
+2972 14.5 lineto
+closepath stroke
+grestore
+% GridComputingNode->GridDeployment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 746 148 moveto
+797 136 871 118 924 105 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 924.88 108.39 moveto
+934 103 lineto
+923.51 101.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 924.88 108.39 moveto
+934 103 lineto
+923.51 101.53 lineto
+closepath stroke
+grestore
+% AnonymizedSupport
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4935 306 91 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4876.67 301.8 moveto 116.65 (AnonymizedSupport) alignedtext
+grestore
+% AnonymizedSupport->Format
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4990 291 moveto
+5021 282 5062 269 5096 252 curveto
+5134 233 5173 204 5198 184 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5200.1 186.8 moveto
+5206 178 lineto
+5195.9 181.2 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5200.1 186.8 moveto
+5206 178 lineto
+5195.9 181.2 lineto
+closepath stroke
+grestore
+% AnonymizedSupport->MetaDataSupport
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4953 288 moveto
+4962 279 4973 269 4983 259 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4985.4 261.55 moveto
+4990 252 lineto
+4980.45 256.6 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4985.4 261.55 moveto
+4990 252 lineto
+4980.45 256.6 lineto
+closepath stroke
+grestore
+% AnonymizedSupport->MedicalImage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4894 290 moveto
+4877 281 4859 269 4849 252 curveto
+4823 210 4847 191 4839 144 curveto
+4838 136 4835 126 4833 118 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4836.23 116.57 moveto
+4830 108 lineto
+4829.52 118.58 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4836.23 116.57 moveto
+4830 108 lineto
+4829.52 118.58 lineto
+closepath stroke
+grestore
+% AnonymizedSupport->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4929 288 moveto
+4926 278 4922 264 4920 252 curveto
+4904 172 4960 126 4901 72 curveto
+4866 40 3417 22 3096 19 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath stroke
+grestore
+% ModalityAcquisition->MedicalImage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4541 149 moveto
+4604 136 4699 116 4762 103 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4762.88 106.39 moveto
+4772 101 lineto
+4761.51 99.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4762.88 106.39 moveto
+4772 101 lineto
+4761.51 99.53 lineto
+closepath stroke
+grestore
+% ModalityAcquisition->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4458 144 moveto
+4431 123 4383 87 4335 72 curveto
+4216 35 3339 21 3096 19 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath stroke
+grestore
+% CFL
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3724 306 28.24 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3711.16 301.8 moveto 25.67 (CFL) alignedtext
+grestore
+% CFL->Atlas
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3700 297 moveto
+3667 285 3606 262 3567 247 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3568.59 243.84 moveto
+3558 244 lineto
+3566.38 250.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3568.59 243.84 moveto
+3558 244 lineto
+3566.38 250.48 lineto
+closepath stroke
+grestore
+% CFL->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3752 303 moveto
+3835 292 4073 250 4013 144 curveto
+3982 89 3952 90 3893 72 curveto
+3817 48 3280 27 3096 20 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3096 16.5 moveto
+3086 20 lineto
+3096 23.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3096 16.5 moveto
+3086 20 lineto
+3096 23.5 lineto
+closepath stroke
+grestore
+% CFL->Method
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3710 290 moveto
+3688 265 3645 216 3620 187 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3622.22 184.22 moveto
+3613 179 lineto
+3616.95 188.83 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3622.22 184.22 moveto
+3613 179 lineto
+3616.95 188.83 lineto
+closepath stroke
+grestore
+% CFL->MIAlgorithm
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3720 288 moveto
+3714 258 3699 194 3681 144 curveto
+3677 135 3673 126 3669 117 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3671.92 115.04 moveto
+3664 108 lineto
+3665.8 118.44 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3671.92 115.04 moveto
+3664 108 lineto
+3665.8 118.44 lineto
+closepath stroke
+grestore
+% ScientificLinux
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1010 378 71.11 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+966.45 373.8 moveto 87.09 (ScientificLinux) alignedtext
+grestore
+% ScientificLinux->Linux
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 995 360 moveto
+987 351 978 340 969 331 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 971.22 328.22 moveto
+962 323 lineto
+965.95 332.83 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 971.22 328.22 moveto
+962 323 lineto
+965.95 332.83 lineto
+closepath stroke
+grestore
+% ScientificLinux->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1081 376 moveto
+1242 371 1629 347 1709 252 curveto
+1719 239 1716 229 1709 216 curveto
+1693 188 1664 207 1649 180 curveto
+1641 166 1641 157 1649 144 curveto
+1679 90 1708 89 1767 72 curveto
+1882 37 2733 22 2972 19 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2972 22.5 moveto
+2982 19 lineto
+2972 15.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2972 22.5 moveto
+2982 19 lineto
+2972 15.5 lineto
+closepath stroke
+grestore
+% ScientificLinux->GridDeployment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1052 363 moveto
+1115 339 1226 284 1190 216 curveto
+1176 190 1158 197 1136 180 curveto
+1117 165 1117 157 1098 144 curveto
+1079 130 1056 119 1036 109 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1037.56 105.86 moveto
+1027 105 lineto
+1034.72 112.26 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1037.56 105.86 moveto
+1027 105 lineto
+1034.72 112.26 lineto
+closepath stroke
+grestore
+% ScientificLinux->OperatingSystem
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 967 364 moveto
+946 355 921 342 905 324 curveto
+889 306 879 281 873 262 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 876.23 260.57 moveto
+870 252 lineto
+869.52 262.58 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 876.23 260.57 moveto
+870 252 lineto
+869.52 262.58 lineto
+closepath stroke
+grestore
+% ScientificLinux->GridComputingNode
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1011 360 moveto
+1013 326 1012 254 971 216 curveto
+943 191 855 177 784 169 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 784.3 165.51 moveto
+774 168 lineto
+783.6 172.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 784.3 165.51 moveto
+774 168 lineto
+783.6 172.48 lineto
+closepath stroke
+grestore
+% Analyze
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5459 306 43.21 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5435.68 301.8 moveto 46.64 (Analyze) alignedtext
+grestore
+% Analyze->Format
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5424 296 moveto
+5395 287 5355 272 5324 252 curveto
+5321 251 5278 212 5250 185 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5252.55 182.6 moveto
+5243 178 lineto
+5247.6 187.55 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5252.55 182.6 moveto
+5243 178 lineto
+5247.6 187.55 lineto
+closepath stroke
+grestore
+% Analyze->MedicalImage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5466 288 moveto
+5473 269 5479 238 5466 216 curveto
+5427 153 5388 164 5318 144 curveto
+5241 122 5018 103 4900 95 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4900.3 91.51 moveto
+4890 94 lineto
+4899.6 98.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4900.3 91.51 moveto
+4890 94 lineto
+4899.6 98.48 lineto
+closepath stroke
+grestore
+% Analyze->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5470 288 moveto
+5481 270 5494 240 5483 216 curveto
+5442 127 5408 107 5318 72 curveto
+5211 30 3451 20 3096 18 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3096 14.5 moveto
+3086 18 lineto
+3096 21.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3096 14.5 moveto
+3086 18 lineto
+3096 21.5 lineto
+closepath stroke
+grestore
+% Analyze->FormatName
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5444 289 moveto
+5436 280 5427 269 5418 260 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5420.22 257.22 moveto
+5411 252 lineto
+5414.95 261.83 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5420.22 257.22 moveto
+5411 252 lineto
+5414.95 261.83 lineto
+closepath stroke
+grestore
+% Processor->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 304 216 moveto
+306 181 314 105 362 72 curveto
+417 32 2575 20 2972 18 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2972 21.5 moveto
+2982 18 lineto
+2972 14.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2972 21.5 moveto
+2982 18 lineto
+2972 14.5 lineto
+closepath stroke
+grestore
+% Processor->GridDeployment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 327 218 moveto
+359 197 419 161 476 144 curveto
+554 120 779 103 904 95 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 904.4 98.48 moveto
+914 94 lineto
+903.7 91.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 904.4 98.48 moveto
+914 94 lineto
+903.7 91.51 lineto
+closepath stroke
+grestore
+% Processor->GridComputingNode
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 347 226 moveto
+410 214 532 191 610 177 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 610.88 180.39 moveto
+620 175 lineto
+609.51 173.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 610.88 180.39 moveto
+620 175 lineto
+609.51 173.53 lineto
+closepath stroke
+grestore
+% BAM
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4118 306 33.03 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4102.06 301.8 moveto 31.89 (BAM) alignedtext
+grestore
+% BAM->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4126 288 moveto
+4145 242 4189 119 4120 72 curveto
+4078 42 3321 24 3096 19 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3096 15.5 moveto
+3086 19 lineto
+3096 22.5 lineto
+closepath stroke
+grestore
+% BAM->Method
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4088 299 moveto
+4074 295 4056 291 4041 288 curveto
+3951 269 3924 283 3838 252 curveto
+3808 241 3805 228 3776 216 curveto
+3733 197 3681 182 3644 172 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3644.49 168.53 moveto
+3634 170 lineto
+3643.12 175.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3644.49 168.53 moveto
+3634 170 lineto
+3643.12 175.39 lineto
+closepath stroke
+grestore
+% BAM->Model
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4106 289 moveto
+4100 280 4092 270 4085 260 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4087.46 257.38 moveto
+4079 251 lineto
+4081.63 261.26 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4087.46 257.38 moveto
+4079 251 lineto
+4081.63 261.26 lineto
+closepath stroke
+grestore
+% BAM->MIAlgorithm
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4123 288 moveto
+4127 268 4130 235 4112 216 curveto
+4040 137 3972 224 3876 180 curveto
+3854 169 3856 155 3835 144 curveto
+3824 137 3759 119 3711 105 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3711.58 101.52 moveto
+3701 102 lineto
+3709.57 108.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3711.58 101.52 moveto
+3701 102 lineto
+3709.57 108.23 lineto
+closepath stroke
+grestore
+% TransferProtocol->NetworkProtocol
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2711 148 moveto
+2673 136 2619 120 2578 107 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2578.58 103.52 moveto
+2568 104 lineto
+2576.57 110.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2578.58 103.52 moveto
+2568 104 lineto
+2576.57 110.23 lineto
+closepath stroke
+grestore
+% TransferProtocol->MIService
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2790 145 moveto
+2841 119 2941 66 2996 38 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2997.96 40.92 moveto
+3005 33 lineto
+2994.56 34.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2997.96 40.92 moveto
+3005 33 lineto
+2994.56 34.8 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+end
+restore
+%%EOF

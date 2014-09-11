@@ -1,0 +1,24 @@
+digraph G {
+  ForceFeedback;
+  Input;
+  MobileGame;
+  Touchscreen;
+  SpeechInput;
+  0;
+  MovementDetection;
+  OnlineMultiplayer;
+  Output;
+  Keypad;
+  1;
+  NetworkSupport;
+  MobileGame -> 1;
+  SpeechInput -> Input;
+  Input -> MobileGame;
+  Keypad -> Input;
+  Output -> MobileGame;
+  MovementDetection -> Input;
+  OnlineMultiplayer -> NetworkSupport;
+  Touchscreen -> Input;
+  ForceFeedback -> Output;
+  NetworkSupport -> MobileGame;
+}

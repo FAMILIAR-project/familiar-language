@@ -1,0 +1,38 @@
+digraph G {
+  BoundsCheck;
+  Fixed;
+  ThreadSafety;
+  Dynamic;
+  Stack;
+  Size;
+  ElementType;
+  Speed;
+  String;
+  Optimization;
+  MemoryUsage;
+  TypeCheck;
+  Integer;
+  Float;
+  Value;
+  Counter;
+  0;
+  AdditionalFeatures;
+  1;
+  ElementType -> Stack;
+  Optimization -> Stack;
+  Fixed -> Size;
+  Integer -> ElementType;
+  Dynamic -> Size;
+  ThreadSafety -> AdditionalFeatures;
+  Counter -> Stack;
+  BoundsCheck -> AdditionalFeatures;
+  Speed -> Optimization;
+  MemoryUsage -> Optimization;
+  TypeCheck -> AdditionalFeatures;
+  Float -> ElementType;
+  Value -> Fixed;
+  Stack -> 1;
+  Size -> Stack;
+  String -> ElementType;
+  AdditionalFeatures -> Stack;
+}

@@ -1,0 +1,13 @@
+graph G {
+  0;
+  1;
+  single;
+  location;
+  dispatching;
+  thread_fcfs;
+  single -- 1;
+  location -- 1;
+  dispatching -- 1;
+  thread_fcfs -- dispatching;
+  thread_fcfs -- 1;
+}

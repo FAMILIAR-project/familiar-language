@@ -1,0 +1,38 @@
+digraph G {
+  ForwardRangeFinder;
+  ParallelParking;
+  EnhancedAvoidance;
+  CollisionAvoidanceBraking;
+  StandardAvoidance;
+  Sensors;
+  0;
+  Car;
+  LateralRangeFinder;
+  1;
+  AutomatedDrivingController;
+  StandardAvoidance -> CollisionAvoidanceBraking;
+  AutomatedDrivingController -> Car;
+  ForwardRangeFinder -> Sensors;
+  EnhancedAvoidance -> CollisionAvoidanceBraking;
+  Car -> 1;
+  ParallelParking -> AutomatedDrivingController;
+  LateralRangeFinder -> Sensors;
+  Sensors -> Car;
+  CollisionAvoidanceBraking -> AutomatedDrivingController;
+  ForwardRangeFinder -> Car;
+  ParallelParking -> Car;
+  EnhancedAvoidance -> AutomatedDrivingController;
+  CollisionAvoidanceBraking -> Car;
+  StandardAvoidance -> Car;
+  StandardAvoidance -> AutomatedDrivingController;
+  Sensors -> 1;
+  LateralRangeFinder -> Car;
+  LateralRangeFinder -> 1;
+  AutomatedDrivingController -> 1;
+  ForwardRangeFinder -> 1;
+  ParallelParking -> 1;
+  EnhancedAvoidance -> Car;
+  EnhancedAvoidance -> 1;
+  CollisionAvoidanceBraking -> 1;
+  StandardAvoidance -> 1;
+}

@@ -1,0 +1,26 @@
+<feature_model name="fm1">
+<meta>
+<data name="description"/>
+<data name="creator"/>
+<data name="address"/>
+<data name="email"/>
+<data name="phone"/>
+<data name="website"/>
+<data name="organization"/>
+<data name="department"/>
+<data name="date"/>
+<data name="reference"/>
+</meta>
+<feature_tree>
+:r A(_r0)
+	:m B(_r1)
+	:m C(_r2)
+	:o D(_r3)
+		:g [1,1]
+			: J(_r4)
+			: I(_r5)
+			: H(_r6)
+</feature_tree>
+<constraints>
+</constraints>
+</feature_model>

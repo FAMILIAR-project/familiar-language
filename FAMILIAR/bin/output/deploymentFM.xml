@@ -1,0 +1,217 @@
+<feature_model name="deploymentFM">
+<meta>
+<data name="description"/>
+<data name="creator"/>
+<data name="address"/>
+<data name="email"/>
+<data name="phone"/>
+<data name="website"/>
+<data name="organization"/>
+<data name="department"/>
+<data name="date"/>
+<data name="reference"/>
+</meta>
+<feature_tree>
+:r deploymentFM(_r0)
+	:m VSApplicationRequirement(_r1)
+		:m ObjectOfInterest(_r2)
+			:m Sort(_r3)
+			:g [1,*]
+					: Natural(_r4)
+						:m Person(_r5)
+					: Manufactured(_r6)
+						:m Vehicle(_r7)
+			:m Cardinality(_r8)
+			:g [1,1]
+					: SingleObject(_r9)
+					: GroupOfObjects(_r10)
+			:m Mobility(_r11)
+				:g [1,1]
+					: Movable(_r12)
+					:g [1,1]
+							: ExternallyPropelled(_r13)
+							: SelfPropelled(_r14)
+					: Immovable(_r15)
+		:m Scene(_r16)
+			:m Environment(_r17)
+				:o Noise(_r18)
+					:o LightingVariation(_r19)
+					:g [1,*]
+							: Flashes(_r20)
+							: HeadLight(_r21)
+							: Shadows(_r22)
+					:o BackgroundMovement(_r23)
+						:g [1,*]
+							: SandOrDust(_r24)
+							: SeaOceanWaves(_r25)
+							: VegetationMovement(_r26)
+				:m LightingType(_r27)
+				:g [1,*]
+						: ArtificialLight(_r28)
+						: NaturalLight(_r29)
+				:m LightingConditions(_r30)
+					:g [1,*]
+						: Indoors(_r31)
+						: Outdoors(_r32)
+							:m TimeOfDay(_r33)
+								:g [1,*]
+									: Day(_r34)
+									: Night(_r35)
+			:m APrioriKnowledge(_r36)
+				:o DeploymentArchitecture(_r37)
+					:o ProgrammerDefined(_r38)
+					:m Server(_r39)
+					:m Sensor(_r40)
+						:m SensorView(_r41)
+							:g [1,1]
+								: SideView(_r42)
+								: TopView(_r43)
+								: NormalView(_r44)
+						:m Camera(_r45)
+							:m FramesPerSecond(_r46)
+								:g [1,1]
+									: HighFrameRate(_r47)
+										:m VingtCinqFrSec(_r48)
+									: LowFrameRate(_r49)
+									: IntermediateFrameRate(_r50)
+							:m FieldOfView(_r51)
+								:g [1,1]
+									: Large(_r52)
+									: Narrow(_r53)
+							:m Resolution(_r54)
+							:m CameraType(_r55)
+								:g [1,1]
+									: BlackAndWhite(_r56)
+									: Color(_r57)
+									: Infrared(_r58)
+							:m DepthOfField(_r59)
+						:m SensorProperty(_r60)
+							:g [1,1]
+								: MonoSensor(_r61)
+								: MultiSensor(_r62)
+					:o ClientDefined(_r63)
+				:o BehaviourLibrary(_r64)
+				:m Scenery3DModel(_r65)
+		:m QualityOfService(_r66)
+			:g [1,*]
+				: ComputerLoad(_r67)
+				: ResponseTime(_r68)
+				: Quality(_r69)
+					:g [1,*]
+						: Sensitivity(_r70)
+						: Precision(_r71)
+							:o LessPrecision(_r72)
+		:m Task(_r73)
+			:g [1,*]
+				: Counting(_r74)
+				: Tracking(_r75)
+				: BehaviourRecognition(_r76)
+					:o IntrusionDetection(_r77)
+	:m VSPlatform(_r78)
+		:o ReferenceImageUpdating(_r79)
+		:o ScenarioRecognition(_r80)
+		:o LongTermTracking(_r81)
+		:m FrameToFrameTracking(_r82)
+		:o TrackingDataFusion(_r83)
+		:m Clustering(_r84)
+			:g [1,1]
+				: DistanceRGBAnd3DClustering(_r85)
+				: FastClustering(_r86)
+				: KMeansClustering(_r87)
+		:m ClassificationModule(_r88)
+			:m ClassificationStandard(_r89)
+				:o Density(_r90)
+			:o Merge(_r91)
+				:g [1,1]
+					: FusionGravityCenter(_r92)
+					: FusionStandard(_r93)
+			:o Contour(_r94)
+			:m Model(_r95)
+				:g [1,1]
+					: ModelType(_r96)
+						:g [1,*]
+							: OmegaModel(_r97)
+							: ThreeDModel(_r98)
+					: Ellipse(_r99)
+					: Shape(_r100)
+					: Parallelepiped(_r101)
+					: GravityCenter(_r102)
+			:o Split(_r103)
+				:g [1,1]
+					: SplitStandard(_r104)
+					: SplitGravityCenter(_r105)
+		:m SegmentationModule(_r106)
+			:o SegmFineTune(_r107)
+			:m TraversalAlgorithm(_r108)
+				:m TraversalParameters(_r109)
+				:g [1,*]
+						: WithWindow(_r110)
+						: WithMask(_r111)
+						: Fast(_r112)
+				:m GridStep(_r113)
+					:g [1,1]
+						: HighGridStep(_r114)
+						: LowGridStep(_r115)
+			:m Threshold(_r116)
+				:g [1,1]
+					: LowThreshold(_r117)
+					: MidThreshold(_r118)
+					: HighThreshold(_r119)
+			:m KernelFunction(_r120)
+				:m ObjectAspect(_r121)
+					:g [1,1]
+						: Edge(_r122)
+						: Region(_r123)
+				:o ShadowElimination(_r124)
+				:m ColorType(_r125)
+					:g [1,1]
+						: GreyLevel(_r126)
+						: SystemColor(_r127)
+		:m ImageAcquisition(_r128)
+</feature_tree>
+<constraints>
+C0:_r102 or _r93
+C1:_r113 or ~_r72
+C2:~_r7 or _r12
+C3:~_r71 or _r48
+C4:_r107 or _r72
+C5:~_r22 or _r124
+C6:_r20 or ~_r21 or _r94
+C7:~_r10 or _r111
+C8:~_r74 or _r115
+C9:~_r122 or ~_r90
+C10:~_r74 or _r79
+C11:~_r58 or ~_r52
+C12:_r110 or ~_r72
+C13:~_r110 or ~_r99
+C14:~_r77 or _r49
+C15:~_r28 or _r79
+C16:~_r5 or _r14
+C17:~_r5 or _r12
+C18:~_r74 or _r52
+C19:~_r74 or _r71
+C20:~_r110 or ~_r122
+C21:~_r68 or _r81
+C22:~_r70 or _r117
+C23:~_r80 or _r28
+C24:~_r114 or ~_r99
+C25:~_r83 or _r62
+C26:~_r32 or _r122
+C27:~_r107 or ~_r100
+C28:~_r75 or _r47
+C29:~_r5 or _r97
+C30:~_r28 or _r80
+C31:~_r31 or _r123
+C32:~_r62 or _r83
+C33:~_r68 or _r75
+C34:_r44 or ~_r42 or _r81
+C35:~_r57 or _r127
+C36:~_r62 or _r81
+C37:~_r43 or ~_r98
+C38:~_r19 or _r122
+C39:~_r72 or ~_r107
+C40:_r102 or _r104
+C41:~_r114 or ~_r122
+C42:~_r74 or _r48
+</constraints>
+</feature_model>

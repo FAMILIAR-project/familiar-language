@@ -1,0 +1,1 @@
+FM (VODPlayer: (StartMovie|PlayImm) VCRInterf SelectMovie StartPlayer [Quit] [Pause] ; StartMovie: [Pause_Zero] ; SelectMovie: [Detail] [ChangeServer] ; )

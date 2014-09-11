@@ -1,0 +1,10 @@
+graph G {
+  SerialTracking;
+  0;
+  1;
+  RFID;
+  BarCode;
+  SerialTracking -- 1;
+  RFID -- 1;
+  BarCode -- 1;
+}

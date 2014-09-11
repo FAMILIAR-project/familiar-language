@@ -1,0 +1,36 @@
+digraph G {
+  Payandbillsystem;
+  OnlineMultiplayer;
+  Movementdetection;
+  NetworkSupport;
+  Platformindependencesupport;
+  Internationallanguangessupport;
+  ForceFeedback;
+  Input;
+  Payandbillsupport;
+  Internationalization;
+  PlatformIndependence;
+  0;
+  Speech;
+  Output;
+  Keypad;
+  1;
+  MobileGames;
+  TouchScreen;
+  Platformindependencesupport -> PlatformIndependence;
+  MobileGames -> 1;
+  Speech -> Input;
+  Internationallanguangessupport -> Internationalization;
+  Payandbillsupport -> MobileGames;
+  ForceFeedback -> Output;
+  Internationalization -> MobileGames;
+  Output -> MobileGames;
+  Payandbillsystem -> Payandbillsupport;
+  Input -> MobileGames;
+  OnlineMultiplayer -> NetworkSupport;
+  Movementdetection -> Input;
+  PlatformIndependence -> MobileGames;
+  TouchScreen -> Input;
+  NetworkSupport -> MobileGames;
+  Keypad -> Input;
+}

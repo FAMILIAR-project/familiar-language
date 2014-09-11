@@ -1,0 +1,20 @@
+graph G {
+  software;
+  sizes;
+  swpackTwo;
+  ipvoice;
+  rack;
+  messaging;
+  0;
+  1;
+  sizes -- rack;
+  software -- ipvoice;
+  swpackTwo -- software;
+  swpackTwo -- ipvoice;
+  ipvoice -- 1;
+  rack -- 1;
+  messaging -- 1;
+  software -- 1;
+  sizes -- 1;
+  swpackTwo -- 1;
+}

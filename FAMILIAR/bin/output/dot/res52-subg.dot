@@ -1,0 +1,8 @@
+graph G {
+  Evaluator;
+  Shortcircuit;
+  0;
+  1;
+  Evaluator -- 1;
+  Shortcircuit -- 1;
+}

@@ -1,0 +1,8 @@
+graph G {
+  li_ion;
+  bluetooth;
+  0;
+  1;
+  bluetooth -- 1;
+  li_ion -- 1;
+}

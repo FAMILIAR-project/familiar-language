@@ -1,0 +1,8 @@
+graph G {
+  Red_Zero;
+  0;
+  1;
+  Front;
+  Red_Zero -- 1;
+  Front -- 1;
+}

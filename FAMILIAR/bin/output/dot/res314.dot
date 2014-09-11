@@ -1,0 +1,32 @@
+digraph G {
+  pc;
+  ldap;
+  modules;
+  congress_mngt;
+  james;
+  calendar;
+  core;
+  forum;
+  user_mngt;
+  gui;
+  ws_interface;
+  0;
+  repository;
+  pda;
+  db;
+  1;
+  calendar -> modules;
+  user_mngt -> james;
+  pda -> gui;
+  congress_mngt -> modules;
+  ldap -> user_mngt;
+  james -> 1;
+  core -> james;
+  repository -> modules;
+  db -> user_mngt;
+  ws_interface -> james;
+  gui -> james;
+  modules -> james;
+  forum -> modules;
+  pc -> gui;
+}

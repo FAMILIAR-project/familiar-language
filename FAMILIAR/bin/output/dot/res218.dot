@@ -1,0 +1,32 @@
+digraph G {
+  portuguese;
+  page_translation;
+  doc_type;
+  spanish;
+  gif;
+  page_preview;
+  search_engine_PL;
+  search_by_language;
+  image;
+  video;
+  0;
+  html;
+  jpg;
+  svg;
+  1;
+  english;
+  video -> doc_type;
+  html -> doc_type;
+  page_translation -> search_engine_PL;
+  english -> search_by_language;
+  spanish -> search_by_language;
+  svg -> image;
+  image -> doc_type;
+  jpg -> image;
+  page_preview -> search_engine_PL;
+  search_engine_PL -> 1;
+  gif -> image;
+  portuguese -> search_by_language;
+  search_by_language -> search_engine_PL;
+  doc_type -> search_engine_PL;
+}

@@ -1,0 +1,29 @@
+graph G {
+  page_translation;
+  doc_type;
+  spanish;
+  search_engine_PL;
+  image;
+  0;
+  jpg;
+  svg;
+  1;
+  svg -- image;
+  doc_type -- search_engine_PL;
+  jpg -- image;
+  page_translation -- search_engine_PL;
+  image -- doc_type;
+  search_engine_PL -- 1;
+  page_translation -- 1;
+  doc_type -- 1;
+  spanish -- search_engine_PL;
+  image -- 1;
+  image -- search_engine_PL;
+  jpg -- doc_type;
+  jpg -- search_engine_PL;
+  jpg -- 1;
+  svg -- doc_type;
+  svg -- search_engine_PL;
+  svg -- 1;
+  spanish -- 1;
+}

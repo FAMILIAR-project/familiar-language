@@ -1,0 +1,1 @@
+FM (Stacjapogodowa: Pomiary Zrodladanych Formatwyjsciowy [Alarm] ; Pomiary: (Temperatura|Cisnienie|Wiatr)+ ; Zrodladanych: (Internet|Sensory) ; Formatwyjsciowy: (Serwer|Tekst|Plik) Jezyk ; Alarm: (Sztorm|Zamarzniecie)+ ; Serwer: (XML|HTML) ; Jezyk: (Angielski|Polski) ; )

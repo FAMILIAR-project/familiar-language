@@ -1,0 +1,23 @@
+graph G {
+  ForwardRangeFinder;
+  ParallelParking;
+  StandardAvoidance;
+  Sensors;
+  0;
+  Car;
+  LateralRangeFinder;
+  1;
+  ForwardRangeFinder -- Sensors;
+  Car -- 1;
+  LateralRangeFinder -- Sensors;
+  Sensors -- Car;
+  ForwardRangeFinder -- Car;
+  ParallelParking -- Car;
+  StandardAvoidance -- Car;
+  Sensors -- 1;
+  LateralRangeFinder -- Car;
+  LateralRangeFinder -- 1;
+  ForwardRangeFinder -- 1;
+  ParallelParking -- 1;
+  StandardAvoidance -- 1;
+}

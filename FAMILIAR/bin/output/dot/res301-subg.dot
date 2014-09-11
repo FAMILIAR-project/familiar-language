@@ -1,0 +1,21 @@
+graph G {
+  wireless;
+  li_ion;
+  bluetooth;
+  color;
+  accu_cell;
+  ni_mh;
+  0;
+  1;
+  monochrome;
+  li_ion -- accu_cell;
+  bluetooth -- wireless;
+  ni_mh -- accu_cell;
+  wireless -- 1;
+  bluetooth -- 1;
+  accu_cell -- 1;
+  ni_mh -- 1;
+  monochrome -- 1;
+  li_ion -- 1;
+  color -- 1;
+}

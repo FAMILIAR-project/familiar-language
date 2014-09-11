@@ -1,0 +1,38 @@
+graph G {
+  BoundsCheck;
+  ThreadSafety;
+  Stack;
+  ElementType;
+  Speed;
+  String;
+  MemoryUsage;
+  TypeCheck;
+  Float;
+  Value;
+  Counter;
+  0;
+  1;
+  ElementType -- Stack;
+  Stack -- 1;
+  String -- ElementType;
+  Float -- ElementType;
+  Counter -- Stack;
+  BoundsCheck -- Stack;
+  ThreadSafety -- Stack;
+  ElementType -- 1;
+  Speed -- Stack;
+  String -- Stack;
+  String -- 1;
+  MemoryUsage -- Stack;
+  MemoryUsage -- 1;
+  TypeCheck -- Stack;
+  Float -- Stack;
+  Float -- 1;
+  Value -- Stack;
+  Counter -- 1;
+  BoundsCheck -- 1;
+  ThreadSafety -- 1;
+  Speed -- 1;
+  TypeCheck -- 1;
+  Value -- 1;
+}

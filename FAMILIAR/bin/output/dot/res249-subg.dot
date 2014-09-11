@@ -1,0 +1,8 @@
+graph G {
+  diagram_builder;
+  0;
+  javac;
+  1;
+  diagram_builder -- 1;
+  javac -- 1;
+}

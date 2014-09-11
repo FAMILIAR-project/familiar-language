@@ -1,0 +1,30 @@
+graph G {
+  life;
+  person;
+  corporation;
+  illness;
+  insured_object;
+  periodical;
+  movable_property;
+  realty;
+  0;
+  1;
+  exception;
+  acceptance;
+  loss;
+  unemployment;
+  realty -- insured_object;
+  movable_property -- insured_object;
+  person -- 1;
+  corporation -- 1;
+  illness -- 1;
+  insured_object -- 1;
+  movable_property -- 1;
+  realty -- 1;
+  exception -- 1;
+  acceptance -- 1;
+  loss -- 1;
+  unemployment -- 1;
+  life -- 1;
+  periodical -- 1;
+}

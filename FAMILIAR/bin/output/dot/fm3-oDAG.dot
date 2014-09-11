@@ -1,0 +1,18 @@
+digraph G {
+  fm3;
+  A;
+  D;
+  B;
+  E;
+  0;
+  C;
+  1;
+  F;
+  D -> fm3;
+  A -> fm3;
+  E -> D;
+  F -> D;
+  fm3 -> 1;
+  C -> A;
+  B -> A;
+}

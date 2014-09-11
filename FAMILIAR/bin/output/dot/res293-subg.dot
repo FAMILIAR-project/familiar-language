@@ -1,0 +1,24 @@
+graph G {
+  CardReader;
+  FireControl;
+  Siren;
+  PredefinedValues;
+  FireAlarm;
+  FirstAidGroup;
+  0;
+  Bell;
+  1;
+  FireAlarm -- FireControl;
+  Bell -- FireAlarm;
+  FirstAidGroup -- FireControl;
+  Siren -- FireAlarm;
+  FireControl -- 1;
+  Siren -- FireControl;
+  FireAlarm -- 1;
+  FirstAidGroup -- 1;
+  Bell -- FireControl;
+  Bell -- 1;
+  CardReader -- 1;
+  Siren -- 1;
+  PredefinedValues -- 1;
+}

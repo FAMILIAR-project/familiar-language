@@ -1,0 +1,30 @@
+digraph G {
+  CFDPLibrary;
+  SendFileSystemOperations;
+  RebootPUS;
+  PUSCopy;
+  PUSRename;
+  Receive;
+  ReceiveAcknowledgedMode;
+  ReceiveFileSystemOperations;
+  RebootEntity;
+  Reboot_;
+  0;
+  PUS;
+  SendAcknowledgedMode;
+  Send;
+  1;
+  Send -> CFDPLibrary;
+  ReceiveFileSystemOperations -> Receive;
+  Receive -> CFDPLibrary;
+  SendAcknowledgedMode -> Send;
+  RebootPUS -> Reboot_;
+  ReceiveAcknowledgedMode -> Receive;
+  PUS -> CFDPLibrary;
+  PUSRename -> PUS;
+  CFDPLibrary -> 1;
+  Reboot_ -> CFDPLibrary;
+  SendFileSystemOperations -> Send;
+  PUSCopy -> PUS;
+  RebootEntity -> Reboot_;
+}

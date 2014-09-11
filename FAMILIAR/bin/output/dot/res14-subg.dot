@@ -1,0 +1,9 @@
+graph G {
+  StandardAvoidance;
+  0;
+  Car;
+  1;
+  Car -- 1;
+  StandardAvoidance -- Car;
+  StandardAvoidance -- 1;
+}

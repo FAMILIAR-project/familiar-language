@@ -1,0 +1,8 @@
+graph G {
+  Demo;
+  0;
+  1;
+  Format;
+  Format -- 1;
+  Demo -- 1;
+}

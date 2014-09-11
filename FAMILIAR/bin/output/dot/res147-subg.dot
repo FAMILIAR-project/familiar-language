@@ -1,0 +1,9 @@
+graph G {
+  Basissoftware;
+  Software;
+  0;
+  1;
+  Software -- 1;
+  Basissoftware -- Software;
+  Basissoftware -- 1;
+}

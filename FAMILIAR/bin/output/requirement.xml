@@ -1,0 +1,123 @@
+<feature_model name="requirement">
+<meta>
+<data name="description"/>
+<data name="creator"/>
+<data name="address"/>
+<data name="email"/>
+<data name="phone"/>
+<data name="website"/>
+<data name="organization"/>
+<data name="department"/>
+<data name="date"/>
+<data name="reference"/>
+</meta>
+<feature_tree>
+:r VSApplicationRequirement(_r0)
+	:m Scene(_r1)
+		:m Environment(_r2)
+			:o Noise(_r3)
+				:o BackgroundMovement(_r4)
+					:g [1,*]
+						: SandOrDust(_r5)
+						: SeaOceanWaves(_r6)
+						: VegetationMovement(_r7)
+				:o LightingVariation(_r8)
+					:g [1,*]
+						: Flashes(_r9)
+						: HeadLight(_r10)
+						: Shadows(_r11)
+			:m LightingConditions(_r12)
+				:g [1,*]
+					: Indoors(_r13)
+					: Outdoors(_r14)
+						:m TimeOfDay(_r15)
+							:g [1,*]
+								: Day(_r16)
+								: Night(_r17)
+			:m LightingType(_r18)
+				:g [1,*]
+					: ArtificialLight(_r19)
+					: NaturalLight(_r20)
+		:m APrioriKnowledge(_r21)
+			:o DeploymentArchitecture(_r22)
+				:m Server(_r23)
+				:o ProgrammerDefined(_r24)
+				:m Sensor(_r25)
+					:m SensorView(_r26)
+						:g [1,1]
+							: SideView(_r27)
+							: TopView(_r28)
+							: NormalView(_r29)
+					:m Camera(_r30)
+						:m FieldOfView(_r31)
+							:g [1,1]
+								: Large(_r32)
+								: Narrow(_r33)
+						:m Resolution(_r34)
+						:m CameraType(_r35)
+							:g [1,1]
+								: BlackAndWhite(_r36)
+								: Color(_r37)
+								: Infrared(_r38)
+						:m DepthOfField(_r39)
+						:m FramesPerSecond(_r40)
+							:g [1,1]
+								: HighFrameRate(_r41)
+									:m VingtCinqFrSec(_r42)
+								: LowFrameRate(_r43)
+								: IntermediateFrameRate(_r44)
+					:m SensorProperty(_r45)
+						:g [1,1]
+							: MonoSensor(_r46)
+							: MultiSensor(_r47)
+				:o ClientDefined(_r48)
+			:o BehaviourLibrary(_r49)
+			:m Scenery3DModel(_r50)
+	:m QualityOfService(_r51)
+		:g [1,*]
+			: ComputerLoad(_r52)
+			: ResponseTime(_r53)
+			: Quality(_r54)
+				:g [1,*]
+					: Sensitivity(_r55)
+					: Precision(_r56)
+						:o LessPrecision(_r57)
+	:m ObjectOfInterest(_r58)
+		:m Mobility(_r59)
+			:g [1,1]
+				: Movable(_r60)
+					:g [1,1]
+						: ExternallyPropelled(_r61)
+						: SelfPropelled(_r62)
+				: Immovable(_r63)
+		:m Cardinality(_r64)
+			:g [1,1]
+				: SingleObject(_r65)
+				: GroupOfObjects(_r66)
+		:m Sort(_r67)
+			:g [1,*]
+				: Natural(_r68)
+					:m Person(_r69)
+				: Manufactured(_r70)
+					:m Vehicle(_r71)
+	:m Task(_r72)
+		:g [1,*]
+			: Counting(_r73)
+			: Tracking(_r74)
+			: BehaviourRecognition(_r75)
+				:o IntrusionDetection(_r76)
+</feature_tree>
+<constraints>
+C0:~_r74 or _r41
+C1:~_r73 or _r32
+C2:~_r69 or _r60
+C3:~_r76 or _r43
+C4:~_r73 or _r56
+C5:~_r73 or _r42
+C6:~_r53 or _r74
+C7:~_r56 or _r42
+C8:~_r71 or _r60
+C9:~_r38 or ~_r32
+C10:~_r69 or _r62
+</constraints>
+</feature_model>

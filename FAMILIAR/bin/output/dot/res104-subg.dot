@@ -1,0 +1,9 @@
+graph G {
+  YM_Test;
+  DATAINTERFACES;
+  0;
+  1;
+  DATAINTERFACES -- YM_Test;
+  YM_Test -- 1;
+  DATAINTERFACES -- 1;
+}

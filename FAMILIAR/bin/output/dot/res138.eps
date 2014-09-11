@@ -1,0 +1,8543 @@
+%!PS-Adobe-3.0 EPSF-3.0
+%%Creator: Graphviz version 2.20.2 (Tue Jul 29 16:40:41 UTC 2008)
+%%For: (mathieuacher) Mathieu Acher
+%%Title: G
+%%Pages: 1
+%%BoundingBox: 36 36 15037 1088
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+1 setmiterlimit
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 36 36 15037 1088
+%%PageOrientation: Portrait
+0 0 1 beginpage
+gsave
+36 36 15001 1052 boxprim clip newpath
+1 1 set_scale 0 rotate 40 40 translate
+% Taxcodes
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5001 666 48.04 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4974.18 661.8 moveto 53.64 (Taxcodes) alignedtext
+grestore
+% Rulebasedtaxation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5120 594 81.87 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5068.29 589.8 moveto 103.42 (Rulebasedtaxation) alignedtext
+grestore
+% Taxcodes->Rulebasedtaxation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5027 651 moveto
+5043 641 5064 628 5082 617 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5084.62 619.46 moveto
+5091 611 lineto
+5080.74 613.63 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5084.62 619.46 moveto
+5091 611 lineto
+5080.74 613.63 lineto
+closepath stroke
+grestore
+% Internaltracking
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+8089 378 72.2 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+8044.3 373.8 moveto 89.4 (Internaltracking) alignedtext
+grestore
+% Shipmentstatustracking
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+7979 306 101.19 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+7913.29 301.8 moveto 131.43 (Shipmentstatustracking) alignedtext
+grestore
+% Internaltracking->Shipmentstatustracking
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 8063 361 moveto
+8049 352 8030 340 8015 330 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 8016.26 326.63 moveto
+8006 324 lineto
+8012.38 332.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 8016.26 326.63 moveto
+8006 324 lineto
+8012.38 332.46 lineto
+closepath stroke
+grestore
+% Creditcard
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2478 522 51.79 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2448.46 517.8 moveto 59.08 (Creditcard) alignedtext
+grestore
+% Paymenttypes
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3091 450 65.21 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3051.73 445.8 moveto 78.54 (Paymenttypes) alignedtext
+grestore
+% Creditcard->Paymenttypes
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2516 510 moveto
+2523 507 2532 505 2539 504 curveto
+2707 470 2910 458 3016 453 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3016.4 456.48 moveto
+3026 452 lineto
+3015.7 449.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3016.4 456.48 moveto
+3026 452 lineto
+3015.7 449.51 lineto
+closepath stroke
+grestore
+% Checkouttype
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5435 378 64.17 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5396.12 373.8 moveto 77.76 (Checkouttype) alignedtext
+grestore
+% Checkout
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4500 306 48.05 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4473.17 301.8 moveto 53.66 (Checkout) alignedtext
+grestore
+% Checkouttype->Checkout
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5377 370 moveto
+5350 367 5316 363 5287 360 curveto
+5014 334 4689 316 4558 309 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4558.3 305.51 moveto
+4548 308 lineto
+4557.6 312.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4558.3 305.51 moveto
+4548 308 lineto
+4557.6 312.48 lineto
+closepath stroke
+grestore
+% Image
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+651 522 35.17 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+633.51 517.8 moveto 34.98 (Image) alignedtext
+grestore
+% Mediafiles
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+739 450 51.83 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+709.07 445.8 moveto 59.87 (Mediafiles) alignedtext
+grestore
+% Image->Mediafiles
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 670 507 moveto
+682 497 697 484 711 474 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 713.78 476.22 moveto
+719 467 lineto
+709.17 470.95 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 713.78 476.22 moveto
+719 467 lineto
+709.17 470.95 lineto
+closepath stroke
+grestore
+% Orderstatusreview
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+8334 306 81.82 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+8282.69 301.8 moveto 102.61 (Orderstatusreview) alignedtext
+grestore
+% Customerservice
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+8166 234 75.93 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+8118.96 229.8 moveto 94.08 (Customerservice) alignedtext
+grestore
+% Orderstatusreview->Customerservice
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 8296 290 moveto
+8271 279 8238 265 8212 254 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 8213.56 250.86 moveto
+8203 250 lineto
+8210.72 257.26 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 8213.56 250.86 moveto
+8203 250 lineto
+8210.72 257.26 lineto
+closepath stroke
+grestore
+% Appointmentscheduling
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+14543 450 103.84 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+14475.73 445.8 moveto 134.54 (Appointmentscheduling) alignedtext
+grestore
+% Servicesfulfillment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+14348 378 85.05 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+14294.35 373.8 moveto 107.3 (Servicesfulfillment) alignedtext
+grestore
+% Appointmentscheduling->Servicesfulfillment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 14499 434 moveto
+14469 423 14431 408 14401 397 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 14401.58 393.52 moveto
+14391 394 lineto
+14399.57 400.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 14401.58 393.52 moveto
+14391 394 lineto
+14399.57 400.23 lineto
+closepath stroke
+grestore
+% Storefront
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+6359 162 50.19 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+6330.62 157.8 moveto 56.76 (Storefront) alignedtext
+grestore
+% eShop
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+9555 90 35.18 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+9537.5 85.8 moveto 35 (eShop) alignedtext
+grestore
+% Storefront->eShop
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 6409 161 moveto
+6785 153 9152 99 9510 91 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 9510 94.5 moveto
+9520 91 lineto
+9510 87.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 9510 94.5 moveto
+9520 91 lineto
+9510 87.5 lineto
+closepath stroke
+grestore
+% Productflagging
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+10078 378 72.76 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+10032.9 373.8 moveto 90.2 (Productflagging) alignedtext
+grestore
+% Displayandnotification
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+9962 306 99.04 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+9897.85 301.8 moveto 128.3 (Displayandnotification) alignedtext
+grestore
+% Productflagging->Displayandnotification
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 10051 361 moveto
+10036 352 10016 339 9999 329 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 10000.26 325.63 moveto
+9990 323 lineto
+9996.38 331.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 10000.26 325.63 moveto
+9990 323 lineto
+9996.38 331.46 lineto
+closepath stroke
+grestore
+% Paymentoptions
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4294 378 72.77 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4248.89 373.8 moveto 90.22 (Paymentoptions) alignedtext
+grestore
+% Paymenttypes->Paymentoptions
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3156 448 moveto
+3363 442 4005 423 4212 396 curveto
+4219 395 4225 394 4232 393 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4232.88 396.39 moveto
+4242 391 lineto
+4231.51 389.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4232.88 396.39 moveto
+4242 391 lineto
+4231.51 389.53 lineto
+closepath stroke
+grestore
+% Quickcheckout
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5833 522 68.99 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5790.63 517.8 moveto 84.75 (Quickcheckout) alignedtext
+grestore
+% Registeredcheckout
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5833 450 87.19 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5777.8 445.8 moveto 110.4 (Registeredcheckout) alignedtext
+grestore
+% Quickcheckout->Registeredcheckout
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5833 504 moveto
+5833 496 5833 487 5833 478 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5836.5 478 moveto
+5833 468 lineto
+5829.5 478 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5836.5 478 moveto
+5833 468 lineto
+5829.5 478 lineto
+closepath stroke
+grestore
+% Registration
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+6526 234 58.24 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+6491.78 229.8 moveto 68.43 (Registration) alignedtext
+grestore
+% Registration->Storefront
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 6492 219 moveto
+6465 207 6429 192 6401 180 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 6401.58 176.46 moveto
+6391 176 lineto
+6398.98 182.96 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 6401.58 176.46 moveto
+6391 176 lineto
+6398.98 182.96 lineto
+closepath stroke
+grestore
+% Customerpreferences
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+11038 378 93.08 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+10978.53 373.8 moveto 118.94 (Customerpreferences) alignedtext
+grestore
+% Targetingcriteria
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+10732 306 75.92 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+10684.97 301.8 moveto 94.06 (Targetingcriteria) alignedtext
+grestore
+% Customerpreferences->Targetingcriteria
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 10979 364 moveto
+10926 352 10850 333 10796 321 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 10796.49 317.53 moveto
+10786 319 lineto
+10795.12 324.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 10796.49 317.53 moveto
+10786 319 lineto
+10795.12 324.39 lineto
+closepath stroke
+grestore
+% Award
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+11876 450 36.81 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+11856.96 445.8 moveto 38.09 (Award) alignedtext
+grestore
+% Discounts
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+11694 378 49.16 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+11666 373.8 moveto 55.99 (Discounts) alignedtext
+grestore
+% Award->Discounts
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 11847 439 moveto
+11818 427 11771 409 11738 395 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 11738.58 391.46 moveto
+11728 391 lineto
+11735.98 397.96 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 11738.58 391.46 moveto
+11728 391 lineto
+11735.98 397.96 lineto
+closepath stroke
+grestore
+% Shoppingcart
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3955 306 62.03 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3917.67 301.8 moveto 74.65 (Shoppingcart) alignedtext
+grestore
+% Buypaths
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4228 234 47.02 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4201.56 229.8 moveto 52.89 (Buypaths) alignedtext
+grestore
+% Shoppingcart->Buypaths
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4001 294 moveto
+4051 281 4129 260 4179 247 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4180.43 250.23 moveto
+4189 244 lineto
+4178.42 243.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4180.43 250.23 moveto
+4189 244 lineto
+4178.42 243.52 lineto
+closepath stroke
+grestore
+% Dateandtime
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+11209 378 59.88 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+11173.24 373.8 moveto 71.53 (Dateandtime) alignedtext
+grestore
+% Dateandtime->Targetingcriteria
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 11165 366 moveto
+11157 364 11148 362 11140 360 curveto
+11028 338 10896 322 10813 314 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 10813.3 310.51 moveto
+10803 313 lineto
+10812.6 317.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 10813.3 310.51 moveto
+10803 313 lineto
+10812.6 317.48 lineto
+closepath stroke
+grestore
+% Userbehaviourtrackinginformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+6661 306 145.11 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+6563.81 301.8 moveto 194.38 (Userbehaviourtrackinginformation) alignedtext
+grestore
+% Userbehaviourtrackinginformation->Registration
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 6628 288 moveto
+6609 278 6585 265 6564 255 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 6565.44 251.8 moveto
+6555 250 lineto
+6562.04 257.92 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 6565.44 251.8 moveto
+6555 250 lineto
+6562.04 257.92 lineto
+closepath stroke
+grestore
+% Levelofdetail
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+12276 306 62.02 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+12238.68 301.8 moveto 74.63 (Levelofdetail) alignedtext
+grestore
+% Reportingandanalysis
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+12341 234 94.21 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+12280.35 229.8 moveto 121.31 (Reportingandanalysis) alignedtext
+grestore
+% Levelofdetail->Reportingandanalysis
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 12292 289 moveto
+12300 280 12309 269 12318 260 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12321.05 261.83 moveto
+12325 252 lineto
+12315.78 257.22 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12321.05 261.83 moveto
+12325 252 lineto
+12315.78 257.22 lineto
+closepath stroke
+grestore
+% Guestcheckout
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5660 450 67.92 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5618.4 445.8 moveto 83.19 (Guestcheckout) alignedtext
+grestore
+% Guestcheckout->Checkouttype
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5617 436 moveto
+5580 424 5526 407 5487 395 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5487.58 391.52 moveto
+5477 392 lineto
+5485.57 398.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5487.58 391.52 moveto
+5477 392 lineto
+5485.57 398.23 lineto
+closepath stroke
+grestore
+% Sortingfilters
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1974 450 62 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+1937.06 445.8 moveto 73.88 (Sortingfilters) alignedtext
+grestore
+% Indexpage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1803 378 50.76 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+1773.85 373.8 moveto 58.3 (Indexpage) alignedtext
+grestore
+% Sortingfilters->Indexpage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1939 435 moveto
+1911 423 1874 408 1845 396 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1846.56 392.86 moveto
+1836 392 lineto
+1843.72 399.26 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1846.56 392.86 moveto
+1836 392 lineto
+1843.72 399.26 lineto
+closepath stroke
+grestore
+% Welcomemessage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+6018 450 80.25 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5967.47 445.8 moveto 101.06 (Welcomemessage) alignedtext
+grestore
+% Contenttype
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5985 378 58.24 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5950.78 373.8 moveto 68.44 (Contenttype) alignedtext
+grestore
+% Welcomemessage->Contenttype
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 6010 432 moveto
+6006 424 6002 414 5997 405 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 6000.26 403.72 moveto
+5993 396 lineto
+5993.86 406.56 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 6000.26 403.72 moveto
+5993 396 lineto
+5993.86 406.56 lineto
+closepath stroke
+grestore
+% Externalsystemsintegration
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+13355 234 116.16 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+13278.8 229.8 moveto 152.41 (Externalsystemsintegration) alignedtext
+grestore
+% Businessmanagement
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+12586 162 94.21 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+12525.35 157.8 moveto 121.31 (Businessmanagement) alignedtext
+grestore
+% Externalsystemsintegration->Businessmanagement
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 13256 225 moveto
+13107 210 12827 184 12681 171 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12681.3 167.51 moveto
+12671 170 lineto
+12680.6 174.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12681.3 167.51 moveto
+12671 170 lineto
+12680.6 174.48 lineto
+closepath stroke
+grestore
+% Targetingmechanisms
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+11556 306 95.81 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+11494.19 301.8 moveto 123.63 (Targetingmechanisms) alignedtext
+grestore
+% Discounts->Targetingmechanisms
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 11666 363 moveto
+11646 353 11620 339 11598 328 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 11599.44 324.8 moveto
+11589 323 lineto
+11596.04 330.92 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 11599.44 324.8 moveto
+11589 323 lineto
+11596.04 330.92 lineto
+closepath stroke
+grestore
+% Procurement
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+13783 234 59.88 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+13747.24 229.8 moveto 71.53 (Procurement) alignedtext
+grestore
+% Procurement->Businessmanagement
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 13724 230 moveto
+13533 219 12927 182 12686 168 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12686.3 164.51 moveto
+12676 167 lineto
+12685.6 171.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12686.3 164.51 moveto
+12676 167 lineto
+12685.6 171.48 lineto
+closepath stroke
+grestore
+% Allowbackorders
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+12957 306 77.03 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+12908.8 301.8 moveto 96.4 (Allowbackorders) alignedtext
+grestore
+% Inventorytracking
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+12852 234 80.22 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+12801.85 229.8 moveto 100.3 (Inventorytracking) alignedtext
+grestore
+% Allowbackorders->Inventorytracking
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 12932 289 moveto
+12918 280 12900 268 12885 257 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12887.1 254.2 moveto
+12877 251 lineto
+12882.9 259.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12887.1 254.2 moveto
+12877 251 lineto
+12882.9 259.8 lineto
+closepath stroke
+grestore
+% Campaigns
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+10584 306 53.99 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+10552.5 301.8 moveto 62.99 (Campaigns) alignedtext
+grestore
+% Targeting
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+10732 234 48.08 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+10704.79 229.8 moveto 54.42 (Targeting) alignedtext
+grestore
+% Campaigns->Targeting
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 10615 291 moveto
+10638 280 10669 265 10693 253 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 10694.96 255.92 moveto
+10702 248 lineto
+10691.56 249.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 10694.96 255.92 moveto
+10702 248 lineto
+10691.56 249.8 lineto
+closepath stroke
+grestore
+% Language
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+7365 450 49.11 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+7337.4 445.8 moveto 55.2 (Language) alignedtext
+grestore
+% Preferences
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+7633 378 56.07 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+7600.36 373.8 moveto 65.28 (Preferences) alignedtext
+grestore
+% Language->Preferences
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 7402 438 moveto
+7409 436 7416 434 7423 432 curveto
+7486 414 7503 412 7568 396 curveto
+7572 395 7576 394 7580 393 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 7581.43 396.23 moveto
+7590 390 lineto
+7579.42 389.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 7581.43 396.23 moveto
+7590 390 lineto
+7579.42 389.52 lineto
+closepath stroke
+grestore
+% Personalinformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+11377 378 89.88 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+11319.85 373.8 moveto 114.31 (Personalinformation) alignedtext
+grestore
+% Personalinformation->Targetingcriteria
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 11312 365 moveto
+11301 363 11289 362 11278 360 curveto
+11114 337 10922 320 10815 312 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 10815.3 308.51 moveto
+10805 311 lineto
+10814.6 315.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 10815.3 308.51 moveto
+10805 311 lineto
+10814.6 315.48 lineto
+closepath stroke
+grestore
+% Reporttypes
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+12413 306 57.2 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+12379.17 301.8 moveto 67.65 (Reporttypes) alignedtext
+grestore
+% Reporttypes->Reportingandanalysis
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 12396 289 moveto
+12387 280 12376 269 12366 259 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12368.55 256.6 moveto
+12359 252 lineto
+12363.6 261.55 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12368.55 256.6 moveto
+12359 252 lineto
+12363.6 261.55 lineto
+closepath stroke
+grestore
+% Pricing
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3454 882 38.93 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3433.78 877.8 moveto 40.44 (Pricing) alignedtext
+grestore
+% Customshippingmethod
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5006 810 102.82 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4939.11 805.8 moveto 133.78 (Customshippingmethod) alignedtext
+grestore
+% Pricing->Customshippingmethod
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3493 880 moveto
+3691 871 4583 830 4896 815 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4896 818.5 moveto
+4906 815 lineto
+4896 811.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4896 818.5 moveto
+4906 815 lineto
+4896 811.5 lineto
+closepath stroke
+grestore
+% Giftoptions
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4895 450 55.03 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4863.11 445.8 moveto 63.77 (Giftoptions) alignedtext
+grestore
+% Shippingoptions
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4986 378 73.85 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4940.11 373.8 moveto 91.79 (Shippingoptions) alignedtext
+grestore
+% Giftoptions->Shippingoptions
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4916 433 moveto
+4928 424 4943 412 4956 401 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4958.1 403.8 moveto
+4964 395 lineto
+4953.9 398.2 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4958.1 403.8 moveto
+4964 395 lineto
+4953.9 398.2 lineto
+closepath stroke
+grestore
+% Ordermanagement
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+14117 234 82.89 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+14064.91 229.8 moveto 104.17 (Ordermanagement) alignedtext
+grestore
+% Ordermanagement->Businessmanagement
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 14038 228 moveto
+13986 224 13914 219 13852 216 curveto
+13420 191 12904 173 12689 165 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12689 161.5 moveto
+12679 165 lineto
+12689 168.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12689 161.5 moveto
+12679 165 lineto
+12689 168.5 lineto
+closepath stroke
+grestore
+% Basicinformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1342 378 78.08 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+1293.4 373.8 moveto 97.2 (Basicinformation) alignedtext
+grestore
+% ProductInformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1342 306 87.2 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+1286.79 301.8 moveto 110.42 (ProductInformation) alignedtext
+grestore
+% Basicinformation->ProductInformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1342 360 moveto
+1342 352 1342 343 1342 334 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1345.5 334 moveto
+1342 324 lineto
+1338.5 334 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1345.5 334 moveto
+1342 324 lineto
+1338.5 334 lineto
+closepath stroke
+grestore
+% Price
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2019 522 30.88 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2004.62 517.8 moveto 28.76 (Price) alignedtext
+grestore
+% Price->Sortingfilters
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2008 505 moveto
+2003 497 1996 486 1990 477 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1992.92 475.04 moveto
+1985 468 lineto
+1986.8 478.44 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1992.92 475.04 moveto
+1985 468 lineto
+1986.8 478.44 lineto
+closepath stroke
+grestore
+% Cartcontentpage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4129 378 73.82 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4083.13 373.8 moveto 91.74 (Cartcontentpage) alignedtext
+grestore
+% Cartcontentpage->Shoppingcart
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4091 362 moveto
+4064 351 4029 337 4001 325 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4001.58 321.46 moveto
+3991 321 lineto
+3998.98 327.96 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4001.58 321.46 moveto
+3991 321 lineto
+3998.98 327.96 lineto
+closepath stroke
+grestore
+% Affiliates
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+11957 234 47 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+11930.57 229.8 moveto 52.86 (Affiliates) alignedtext
+grestore
+% Affiliates->Businessmanagement
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 12002 229 moveto
+12104 217 12358 188 12495 172 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12495.4 175.48 moveto
+12505 171 lineto
+12494.7 168.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12495.4 175.48 moveto
+12505 171 lineto
+12494.7 168.51 lineto
+closepath stroke
+grestore
+% Timedependent
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+6953 450 71.1 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+6909.46 445.8 moveto 87.08 (Timedependent) alignedtext
+grestore
+% Variationsource
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+6749 378 72.2 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+6704.3 373.8 moveto 89.4 (Variationsource) alignedtext
+grestore
+% Timedependent->Variationsource
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 6911 435 moveto
+6879 424 6835 408 6801 396 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 6801.58 392.52 moveto
+6791 393 lineto
+6799.57 399.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 6801.58 392.52 moveto
+6791 393 lineto
+6799.57 399.23 lineto
+closepath stroke
+grestore
+% Quickcheckoutprofile
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+7132 378 95.23 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+7070.97 373.8 moveto 122.06 (Quickcheckoutprofile) alignedtext
+grestore
+% Registrationinformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+7255 306 103.83 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+7187.73 301.8 moveto 134.53 (Registrationinformation) alignedtext
+grestore
+% Quickcheckoutprofile->Registrationinformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 7161 361 moveto
+7178 351 7199 339 7216 328 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 7217.96 330.92 moveto
+7225 323 lineto
+7214.56 324.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 7217.96 330.92 moveto
+7225 323 lineto
+7214.56 324.8 lineto
+closepath stroke
+grestore
+% Warrantyinformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1531 378 93.09 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+1471.52 373.8 moveto 118.95 (Warrantyinformation) alignedtext
+grestore
+% Warrantyinformation->ProductInformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1489 362 moveto
+1460 351 1423 337 1393 326 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1393.58 322.46 moveto
+1383 322 lineto
+1390.98 328.96 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1393.58 322.46 moveto
+1383 322 lineto
+1390.98 328.96 lineto
+closepath stroke
+grestore
+% Advertisementresponsetracking
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+10580 450 132.81 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+10491.37 445.8 moveto 177.27 (Advertisementresponsetracking) alignedtext
+grestore
+% Advertisements
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+11556 378 71.14 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+11512.07 373.8 moveto 87.86 (Advertisements) alignedtext
+grestore
+% Advertisementresponsetracking->Advertisements
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 10672 437 moveto
+10689 435 10706 433 10722 432 curveto
+11056 402 11143 440 11476 396 curveto
+11482 395 11489 394 11495 393 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 11495.88 396.39 moveto
+11505 391 lineto
+11494.51 389.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 11495.88 396.39 moveto
+11505 391 lineto
+11494.51 389.53 lineto
+closepath stroke
+grestore
+% Fulfillment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+14291 306 53.99 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+14259.5 301.8 moveto 63 (Fulfillment) alignedtext
+grestore
+% Servicesfulfillment->Fulfillment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 14334 360 moveto
+14327 351 14319 341 14311 332 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 14313.8 329.9 moveto
+14305 324 lineto
+14308.2 334.1 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 14313.8 329.9 moveto
+14305 324 lineto
+14308.2 334.1 lineto
+closepath stroke
+grestore
+% Qualityofserviceselection
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5077 450 109.21 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5005.47 445.8 moveto 143.05 (Qualityofserviceselection) alignedtext
+grestore
+% Qualityofserviceselection->Shippingoptions
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5055 432 moveto
+5044 423 5029 412 5016 402 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5017.83 398.95 moveto
+5008 395 lineto
+5013.22 404.22 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5017.83 398.95 moveto
+5008 395 lineto
+5013.22 404.22 lineto
+closepath stroke
+grestore
+% Customtargetcriteria
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+10259 378 89.91 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+10201.46 373.8 moveto 115.07 (Customtargetcriteria) alignedtext
+grestore
+% Customtargetcriteria->Targetingcriteria
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 10323 365 moveto
+10335 363 10347 362 10358 360 curveto
+10485 340 10519 345 10647 324 curveto
+10653 323 10660 321 10666 320 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 10666.88 323.39 moveto
+10676 318 lineto
+10665.51 316.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 10666.88 323.39 moveto
+10676 318 lineto
+10665.51 316.53 lineto
+closepath stroke
+grestore
+% Requestorderhardcopy
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+8621 378 97.95 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+8557.64 373.8 moveto 126.73 (Requestorderhardcopy) alignedtext
+grestore
+% Requestorderhardcopy->Orderstatusreview
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 8563 363 moveto
+8515 351 8447 334 8399 322 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 8399.49 318.53 moveto
+8389 320 lineto
+8398.12 325.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 8399.49 318.53 moveto
+8389 320 lineto
+8398.12 325.39 lineto
+closepath stroke
+grestore
+% Personalizedviews
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2449 378 82.9 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2396.91 373.8 moveto 104.18 (Personalizedviews) alignedtext
+grestore
+% Customviews
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2251 306 63.11 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2212.89 301.8 moveto 76.22 (Customviews) alignedtext
+grestore
+% Personalizedviews->Customviews
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2406 362 moveto
+2375 351 2333 335 2299 323 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2300.59 319.84 moveto
+2290 320 lineto
+2298.38 326.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2300.59 319.84 moveto
+2290 320 lineto
+2298.38 326.48 lineto
+closepath stroke
+grestore
+% Orderdate
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+8372 450 49.14 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+8344.02 445.8 moveto 55.96 (Orderdate) alignedtext
+grestore
+% Filteringcriteria
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+8250 378 71.14 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+8206.07 373.8 moveto 87.86 (Filteringcriteria) alignedtext
+grestore
+% Orderdate->Filteringcriteria
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 8346 435 moveto
+8329 425 8306 411 8287 400 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 8288.44 396.8 moveto
+8278 395 lineto
+8285.04 402.92 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 8288.44 396.8 moveto
+8278 395 lineto
+8285.04 402.92 lineto
+closepath stroke
+grestore
+% Productkitting
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+12513 450 65.8 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+12472.94 445.8 moveto 80.11 (Productkitting) alignedtext
+grestore
+% Sellstrategies
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+12016 378 62.02 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+11978.68 373.8 moveto 74.64 (Sellstrategies) alignedtext
+grestore
+% Productkitting->Sellstrategies
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 12466 437 moveto
+12456 435 12447 433 12438 432 curveto
+12283 405 12241 423 12087 396 curveto
+12081 395 12076 394 12071 393 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12071.58 389.52 moveto
+12061 390 lineto
+12069.57 396.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12071.58 389.52 moveto
+12061 390 lineto
+12069.57 396.23 lineto
+closepath stroke
+grestore
+% Fulfillment->Ordermanagement
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 14257 292 moveto
+14231 281 14194 266 14165 254 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 14166.56 250.86 moveto
+14156 250 lineto
+14163.72 257.26 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 14166.56 250.86 moveto
+14156 250 lineto
+14163.72 257.26 lineto
+closepath stroke
+grestore
+% Multiplewishlists
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+8991 306 78.1 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+8942.39 301.8 moveto 97.22 (Multiplewishlists) alignedtext
+grestore
+% Wishlist
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+9144 234 43.23 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+9120.67 229.8 moveto 46.67 (Wishlist) alignedtext
+grestore
+% Multiplewishlists->Wishlist
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 9026 290 moveto
+9050 279 9081 263 9106 252 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 9107.28 255.26 moveto
+9115 248 lineto
+9104.44 248.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 9107.28 255.26 moveto
+9115 248 lineto
+9104.44 248.86 lineto
+closepath stroke
+grestore
+% Eletronicgoodsfulfillment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+14755 378 110.81 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+14682.68 373.8 moveto 144.64 (Eletronicgoodsfulfillment) alignedtext
+grestore
+% Eletronicgoodsfulfillment->Fulfillment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 14675 366 moveto
+14582 352 14433 328 14350 316 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 14350.49 312.53 moveto
+14340 314 lineto
+14349.12 319.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 14350.49 312.53 moveto
+14340 314 lineto
+14349.12 319.39 lineto
+closepath stroke
+grestore
+% Preferences->Registrationinformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 7592 366 moveto
+7584 364 7576 362 7568 360 curveto
+7493 343 7408 329 7345 319 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 7345.3 315.51 moveto
+7335 318 lineto
+7344.6 322.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 7345.3 315.51 moveto
+7335 318 lineto
+7344.6 322.48 lineto
+closepath stroke
+grestore
+% Generallayoutmanagement
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+12835 378 115.07 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+12759.59 373.8 moveto 150.83 (Generallayoutmanagement) alignedtext
+grestore
+% Contentmanagement
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+12579 306 90.96 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+12521.07 301.8 moveto 115.86 (Contentmanagement) alignedtext
+grestore
+% Generallayoutmanagement->Contentmanagement
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 12779 362 moveto
+12738 351 12683 335 12641 324 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12641.58 320.52 moveto
+12631 321 lineto
+12639.57 327.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12641.58 320.52 moveto
+12631 321 lineto
+12639.57 327.23 lineto
+closepath stroke
+grestore
+% Custompaymentgateway
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3896 522 106.01 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3826.79 517.8 moveto 138.41 (Custompaymentgateway) alignedtext
+grestore
+% Paymentgateways
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4253 450 80.76 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4202.46 445.8 moveto 101.08 (Paymentgateways) alignedtext
+grestore
+% Custompaymentgateway->Paymentgateways
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3964 508 moveto
+4027 496 4120 477 4183 464 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4183.88 467.39 moveto
+4193 462 lineto
+4182.51 460.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4183.88 467.39 moveto
+4193 462 lineto
+4182.51 460.53 lineto
+closepath stroke
+grestore
+% Paradata
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4064 522 43.78 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4039.9 517.8 moveto 48.19 (Paradata) alignedtext
+grestore
+% Paradata->Paymentgateways
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4096 510 moveto
+4126 499 4169 482 4202 470 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4204.02 472.96 moveto
+4212 466 lineto
+4201.42 466.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4204.02 472.96 moveto
+4212 466 lineto
+4201.42 466.46 lineto
+closepath stroke
+grestore
+% Differentperspectives
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+884 594 94.15 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+823.76 589.8 moveto 120.49 (Differentperspectives) alignedtext
+grestore
+% Differentperspectives->Image
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 828 579 moveto
+790 569 739 555 695 540 curveto
+693 539 690 538 687 537 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 688.56 533.86 moveto
+678 533 lineto
+685.72 540.26 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 688.56 533.86 moveto
+678 533 lineto
+685.72 540.26 lineto
+closepath stroke
+grestore
+% Sound
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+739 522 35.22 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+721.11 517.8 moveto 35.78 (Sound) alignedtext
+grestore
+% Sound->Mediafiles
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 739 504 moveto
+739 496 739 487 739 478 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 742.5 478 moveto
+739 468 lineto
+735.5 478 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 742.5 478 moveto
+739 468 lineto
+735.5 478 lineto
+closepath stroke
+grestore
+% Reportingandanalysis->Businessmanagement
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 12392 219 moveto
+12431 208 12484 192 12525 180 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12526.43 183.23 moveto
+12535 177 lineto
+12524.42 176.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12526.43 183.23 moveto
+12535 177 lineto
+12524.42 176.52 lineto
+closepath stroke
+grestore
+% Associatedassets
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+864 378 75.93 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+816.96 373.8 moveto 94.07 (Associatedassets) alignedtext
+grestore
+% Associatedassets->ProductInformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 919 365 moveto
+929 363 939 362 949 360 curveto
+1081 338 1115 344 1246 324 curveto
+1253 323 1261 321 1268 320 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1268.88 323.39 moveto
+1278 318 lineto
+1267.51 316.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1268.88 323.39 moveto
+1278 318 lineto
+1267.51 316.53 lineto
+closepath stroke
+grestore
+% Nonrepudiationservice
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+13878 450 98.99 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+13814.25 445.8 moveto 127.51 (Nonrepudiationservice) alignedtext
+grestore
+% Automatic
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+13959 378 51.8 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+13929.45 373.8 moveto 59.1 (Automatic) alignedtext
+grestore
+% Nonrepudiationservice->Automatic
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 13898 432 moveto
+13909 423 13921 411 13932 402 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 13934.78 404.22 moveto
+13940 395 lineto
+13930.17 398.95 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 13934.78 404.22 moveto
+13940 395 lineto
+13930.17 398.95 lineto
+closepath stroke
+grestore
+% Enableprofileupdateoncheckout
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5833 594 133.85 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5743.98 589.8 moveto 178.04 (Enableprofileupdateoncheckout) alignedtext
+grestore
+% Enableprofileupdateoncheckout->Quickcheckout
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5833 576 moveto
+5833 568 5833 559 5833 550 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5836.5 550 moveto
+5833 540 lineto
+5829.5 550 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5836.5 550 moveto
+5833 540 lineto
+5829.5 550 lineto
+closepath stroke
+grestore
+% CyberSource
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4901 522 60.95 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4864.46 517.8 moveto 73.08 (CyberSource) alignedtext
+grestore
+% Taxgateways
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4576 450 61.98 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4539.07 445.8 moveto 73.85 (Taxgateways) alignedtext
+grestore
+% CyberSource->Taxgateways
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4855 510 moveto
+4847 508 4839 506 4831 504 curveto
+4749 485 4728 486 4647 468 curveto
+4642 467 4638 466 4633 464 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4633.49 460.53 moveto
+4623 462 lineto
+4632.12 467.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4633.49 460.53 moveto
+4623 462 lineto
+4632.12 467.39 lineto
+closepath stroke
+grestore
+% CyberSource->Paymentgateways
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4857 509 moveto
+4848 507 4839 505 4831 504 curveto
+4616 468 4558 497 4343 468 curveto
+4336 467 4329 466 4321 465 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4321.49 461.53 moveto
+4311 463 lineto
+4320.12 468.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4321.49 461.53 moveto
+4311 463 lineto
+4320.12 468.39 lineto
+closepath stroke
+grestore
+% Personalized
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+7610 450 59.88 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+7574.24 445.8 moveto 71.53 (Personalized) alignedtext
+grestore
+% Emails
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+9495 378 37.86 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+9475.56 373.8 moveto 38.88 (Emails) alignedtext
+grestore
+% Personalized->Emails
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 7652 437 moveto
+7661 435 7670 433 7679 432 curveto
+8068 378 9062 471 9448 396 curveto
+9451 396 9454 395 9458 393 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 9458.62 396.48 moveto
+9467 390 lineto
+9456.41 389.84 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 9458.62 396.48 moveto
+9467 390 lineto
+9456.41 389.84 lineto
+closepath stroke
+grestore
+% Personalized->Variationsource
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 7567 437 moveto
+7559 435 7550 433 7541 432 curveto
+7228 383 7143 438 6830 396 curveto
+6823 395 6817 394 6810 393 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 6810.49 389.53 moveto
+6800 391 lineto
+6809.12 396.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 6810.49 389.53 moveto
+6800 391 lineto
+6809.12 396.39 lineto
+closepath stroke
+grestore
+% Privateaccess
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+9376 378 63.05 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+9338.3 373.8 moveto 75.4 (Privateaccess) alignedtext
+grestore
+% Permissions
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+9144 306 57.21 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+9110.17 301.8 moveto 67.66 (Permissions) alignedtext
+grestore
+% Privateaccess->Permissions
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 9333 365 moveto
+9294 353 9236 335 9195 322 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 9195.58 318.52 moveto
+9185 319 lineto
+9193.57 325.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 9195.58 318.52 moveto
+9185 319 lineto
+9193.57 325.23 lineto
+closepath stroke
+grestore
+% Procurementsystem
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+13139 306 87.2 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+13083.79 301.8 moveto 110.41 (Procurementsystem) alignedtext
+grestore
+% Procurementsystem->Externalsystemsintegration
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 13185 291 moveto
+13218 280 13262 265 13296 253 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 13297.43 256.23 moveto
+13306 250 lineto
+13295.42 249.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 13297.43 256.23 moveto
+13306 250 lineto
+13295.42 249.52 lineto
+closepath stroke
+grestore
+% Manual
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+13849 378 40.03 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+13827.62 373.8 moveto 42.76 (Manual) alignedtext
+grestore
+% Stockreplenishment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+14017 306 87.24 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+13961.4 301.8 moveto 111.2 (Stockreplenishment) alignedtext
+grestore
+% Manual->Stockreplenishment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 13878 365 moveto
+13903 354 13940 338 13970 326 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 13971.28 329.26 moveto
+13979 322 lineto
+13968.44 322.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 13971.28 329.26 moveto
+13979 322 lineto
+13968.44 322.86 lineto
+closepath stroke
+grestore
+% Securityinformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+6347 450 88.81 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+6290.62 445.8 moveto 112.75 (Securityinformation) alignedtext
+grestore
+% Creditcardinformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+6562 378 96.88 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+6499.41 373.8 moveto 125.18 (Creditcardinformation) alignedtext
+grestore
+% Securityinformation->Creditcardinformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 6393 435 moveto
+6426 424 6470 409 6504 397 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 6505.43 400.23 moveto
+6514 394 lineto
+6503.42 393.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 6505.43 400.23 moveto
+6514 394 lineto
+6503.42 393.52 lineto
+closepath stroke
+grestore
+% Shippinggateways
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5368 810 81.84 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5316.68 805.8 moveto 102.65 (Shippinggateways) alignedtext
+grestore
+% Shipping
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5368 738 45.91 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5342.72 733.8 moveto 50.56 (Shipping) alignedtext
+grestore
+% Shippinggateways->Shipping
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5368 792 moveto
+5368 784 5368 775 5368 766 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5371.5 766 moveto
+5368 756 lineto
+5364.5 766 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5371.5 766 moveto
+5368 756 lineto
+5364.5 766 lineto
+closepath stroke
+grestore
+% Resourceplanning
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+14340 450 80.76 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+14289.46 445.8 moveto 101.08 (Resourceplanning) alignedtext
+grestore
+% Resourceplanning->Servicesfulfillment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 14342 432 moveto
+14343 424 14344 415 14345 406 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 14348.49 406.3 moveto
+14346 396 lineto
+14341.52 405.6 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 14348.49 406.3 moveto
+14346 396 lineto
+14341.52 405.6 lineto
+closepath stroke
+grestore
+% Displayandnotification->Targeting
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 10050 298 moveto
+10210 283 10542 252 10675 239 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 10675.4 242.48 moveto
+10685 238 lineto
+10674.7 235.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 10675.4 242.48 moveto
+10685 238 lineto
+10674.7 235.51 lineto
+closepath stroke
+grestore
+% LinkPoint
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4175 522 49.17 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4147 517.8 moveto 56.01 (LinkPoint) alignedtext
+grestore
+% LinkPoint->Paymentgateways
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4193 505 moveto
+4203 496 4216 485 4227 475 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4229.4 477.55 moveto
+4234 468 lineto
+4224.45 472.6 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4229.4 477.55 moveto
+4234 468 lineto
+4224.45 472.6 lineto
+closepath stroke
+grestore
+% CanadaPost
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5180 882 56.13 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5146.95 877.8 moveto 66.1 (CanadaPost) alignedtext
+grestore
+% CanadaPost->Shippinggateways
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5216 868 moveto
+5245 857 5285 841 5317 830 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5319.02 832.96 moveto
+5327 826 lineto
+5316.42 826.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5319.02 832.96 moveto
+5327 826 lineto
+5316.42 826.46 lineto
+closepath stroke
+grestore
+% Multiplebillingaddresses
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+7894 450 106.02 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+7824.79 445.8 moveto 138.42 (Multiplebillingaddresses) alignedtext
+grestore
+% Billingaddress
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+7774 378 66.82 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+7733.56 373.8 moveto 80.88 (Billingaddress) alignedtext
+grestore
+% Multiplebillingaddresses->Billingaddress
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 7865 433 moveto
+7848 423 7827 410 7810 400 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 7811.26 396.63 moveto
+7801 394 lineto
+7807.38 402.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 7811.26 396.63 moveto
+7801 394 lineto
+7807.38 402.46 lineto
+closepath stroke
+grestore
+% Giftcertificate
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2693 522 65.19 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2653.75 517.8 moveto 78.51 (Giftcertificate) alignedtext
+grestore
+% Giftcertificate->Paymenttypes
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2740 510 moveto
+2749 508 2758 506 2767 504 curveto
+2855 486 2957 470 3023 460 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3023.88 463.39 moveto
+3033 458 lineto
+3022.51 456.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3023.88 463.39 moveto
+3033 458 lineto
+3022.51 456.53 lineto
+closepath stroke
+grestore
+% Taxationoptions
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4500 378 73.8 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4454.51 373.8 moveto 90.99 (Taxationoptions) alignedtext
+grestore
+% Taxationoptions->Checkout
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4500 360 moveto
+4500 352 4500 343 4500 334 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4503.5 334 moveto
+4500 324 lineto
+4496.5 334 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4503.5 334 moveto
+4500 324 lineto
+4496.5 334 lineto
+closepath stroke
+grestore
+% Registrationinformation->Registration
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 7165 297 moveto
+7015 282 6722 254 6591 241 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 6591.3 237.51 moveto
+6581 240 lineto
+6590.6 244.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 6591.3 237.51 moveto
+6581 240 lineto
+6590.6 244.48 lineto
+closepath stroke
+grestore
+% Administration
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+12586 234 69.01 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+12543.62 229.8 moveto 84.77 (Administration) alignedtext
+grestore
+% Administration->Businessmanagement
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 12586 216 moveto
+12586 208 12586 199 12586 190 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12589.5 190 moveto
+12586 180 lineto
+12582.5 190 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12589.5 190 moveto
+12586 180 lineto
+12582.5 190 lineto
+closepath stroke
+grestore
+% City
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5087 738 27.17 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5074.94 733.8 moveto 24.12 (City) alignedtext
+grestore
+% Resolution
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5120 666 52.88 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5089.67 661.8 moveto 60.67 (Resolution) alignedtext
+grestore
+% City->Resolution
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5095 721 moveto
+5099 713 5104 702 5108 693 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5111.14 694.56 moveto
+5112 684 lineto
+5104.74 691.72 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5111.14 694.56 moveto
+5112 684 lineto
+5104.74 691.72 lineto
+closepath stroke
+grestore
+% Houseadvertisements
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+10430 522 93.13 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+10370.13 517.8 moveto 119.74 (Houseadvertisements) alignedtext
+grestore
+% Advertisementsources
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+10332 450 96.84 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+10269.8 445.8 moveto 124.4 (Advertisementsources) alignedtext
+grestore
+% Houseadvertisements->Advertisementsources
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 10406 505 moveto
+10394 495 10378 484 10364 473 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 10366.1 470.2 moveto
+10356 467 lineto
+10361.9 475.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 10366.1 470.2 moveto
+10356 467 lineto
+10361.9 475.8 lineto
+closepath stroke
+grestore
+% Type
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5011 522 30.88 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4996.62 517.8 moveto 28.77 (Type) alignedtext
+grestore
+% Rulebasedtaxation->Type
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5094 577 moveto
+5078 566 5058 552 5041 542 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5042.26 538.63 moveto
+5032 536 lineto
+5038.38 544.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5042.26 538.63 moveto
+5032 536 lineto
+5038.38 544.46 lineto
+closepath stroke
+grestore
+% Checkout->Buypaths
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4461 296 moveto
+4412 283 4329 261 4277 247 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4277.58 243.52 moveto
+4267 244 lineto
+4275.57 250.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4277.58 243.52 moveto
+4267 244 lineto
+4275.57 250.23 lineto
+closepath stroke
+grestore
+% Emails->Displayandnotification
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 9523 366 moveto
+9529 364 9536 361 9542 360 curveto
+9648 333 9772 319 9858 313 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 9858.4 316.48 moveto
+9868 312 lineto
+9857.7 309.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 9858.4 316.48 moveto
+9868 312 lineto
+9857.7 309.51 lineto
+closepath stroke
+grestore
+% Productpage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2077 378 58.81 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2042.01 373.8 moveto 69.98 (Productpage) alignedtext
+grestore
+% Browsing
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1870 306 48.09 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+1842.78 301.8 moveto 54.44 (Browsing) alignedtext
+grestore
+% Productpage->Browsing
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2038 364 moveto
+2003 352 1951 334 1915 321 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1915.58 317.52 moveto
+1905 318 lineto
+1913.57 324.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1915.58 317.52 moveto
+1905 318 lineto
+1913.57 324.23 lineto
+closepath stroke
+grestore
+% Catalog
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1606 234 41.07 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+1584.23 229.8 moveto 43.55 (Catalog) alignedtext
+grestore
+% Browsing->Catalog
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1831 295 moveto
+1783 282 1701 260 1651 246 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1651.58 242.52 moveto
+1641 243 lineto
+1649.57 249.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1651.58 242.52 moveto
+1641 243 lineto
+1649.57 249.23 lineto
+closepath stroke
+grestore
+% Region
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5171 738 38.93 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5150.78 733.8 moveto 40.44 (Region) alignedtext
+grestore
+% Region->Resolution
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5159 721 moveto
+5153 712 5146 701 5139 692 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5141.8 689.9 moveto
+5133 684 lineto
+5136.2 694.1 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5141.8 689.9 moveto
+5133 684 lineto
+5136.2 694.1 lineto
+closepath stroke
+grestore
+% VerisignPayflowPro
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4332 522 89.88 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4274.85 517.8 moveto 114.31 (VerisignPayflowPro) alignedtext
+grestore
+% VerisignPayflowPro->Paymentgateways
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4312 504 moveto
+4302 495 4290 484 4279 475 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4281.55 472.6 moveto
+4272 468 lineto
+4276.6 477.55 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4281.55 472.6 moveto
+4272 468 lineto
+4276.6 477.55 lineto
+closepath stroke
+grestore
+% Advertisementtypes
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+11231 450 87.77 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+11175.02 445.8 moveto 111.97 (Advertisementtypes) alignedtext
+grestore
+% Advertisementtypes->Advertisements
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 11291 437 moveto
+11340 426 11413 410 11476 396 curveto
+11481 395 11486 394 11492 392 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 11492.88 395.39 moveto
+11502 390 lineto
+11491.51 388.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 11492.88 395.39 moveto
+11502 390 lineto
+11491.51 388.53 lineto
+closepath stroke
+grestore
+% Sitelayout
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+7482 450 50.2 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+7453.61 445.8 moveto 56.77 (Sitelayout) alignedtext
+grestore
+% Sitelayout->Preferences
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 7512 436 moveto
+7535 425 7567 410 7593 397 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 7594.28 400.26 moveto
+7602 393 lineto
+7591.44 393.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 7594.28 400.26 moveto
+7602 393 lineto
+7591.44 393.86 lineto
+closepath stroke
+grestore
+% PriceQualityratio
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2145 522 77.04 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2096.79 517.8 moveto 96.41 (PriceQualityratio) alignedtext
+grestore
+% PriceQualityratio->Sortingfilters
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2107 506 moveto
+2081 495 2046 481 2019 469 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2019.58 465.46 moveto
+2009 465 lineto
+2016.98 471.96 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2019.58 465.46 moveto
+2009 465 lineto
+2016.98 471.96 lineto
+closepath stroke
+grestore
+% Cartsaveaftersession
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3503 378 89.9 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3445.47 373.8 moveto 115.06 (Cartsaveaftersession) alignedtext
+grestore
+% Cartsaveaftersession->Shoppingcart
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3569 366 moveto
+3580 364 3591 362 3602 360 curveto
+3702 343 3819 326 3889 315 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3889.4 318.48 moveto
+3899 314 lineto
+3888.7 311.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3889.4 318.48 moveto
+3899 314 lineto
+3888.7 311.51 lineto
+closepath stroke
+grestore
+% Buypaths->Storefront
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4275 232 moveto
+4554 223 5986 175 6299 164 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 6299 167.5 moveto
+6309 164 lineto
+6299 160.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 6299 167.5 moveto
+6309 164 lineto
+6299 160.5 lineto
+closepath stroke
+grestore
+% Dynamiccontent
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+6193 306 74.86 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+6146.74 301.8 moveto 92.53 (Dynamiccontent) alignedtext
+grestore
+% Variationsource->Dynamiccontent
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 6698 365 moveto
+6688 363 6678 361 6668 360 curveto
+6495 333 6449 350 6277 324 curveto
+6270 323 6264 322 6257 321 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 6257.49 317.53 moveto
+6247 319 lineto
+6256.12 324.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 6257.49 317.53 moveto
+6247 319 lineto
+6256.12 324.39 lineto
+closepath stroke
+grestore
+% Listsize
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+7729 450 41.07 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+7707.23 445.8 moveto 43.54 (Listsize) alignedtext
+grestore
+% Listsize->Preferences
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 7708 434 moveto
+7695 424 7678 412 7663 401 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 7665.1 398.2 moveto
+7655 395 lineto
+7660.9 403.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 7665.1 398.2 moveto
+7655 395 lineto
+7660.9 403.8 lineto
+closepath stroke
+grestore
+% Customshippingmethod->Shipping
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5087 799 moveto
+5149 789 5237 775 5313 756 curveto
+5316 755 5320 754 5323 753 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5324.43 756.23 moveto
+5333 750 lineto
+5322.42 749.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5324.43 756.23 moveto
+5333 750 lineto
+5322.42 749.52 lineto
+closepath stroke
+grestore
+% Shippingaddress
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+8571 522 74.87 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+8524.73 517.8 moveto 92.54 (Shippingaddress) alignedtext
+grestore
+% Shippingaddress->Registrationinformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 8496 521 moveto
+8231 517 7356 501 7307 468 curveto
+7263 438 7255 372 7254 334 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 7257.5 334 moveto
+7254 324 lineto
+7250.5 334 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 7257.5 334 moveto
+7254 324 lineto
+7250.5 334 lineto
+closepath stroke
+grestore
+% Eligibilityrequirements
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+11025 450 100.12 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+10960.07 445.8 moveto 129.87 (Eligibilityrequirements) alignedtext
+grestore
+% Shippingaddress->Eligibilityrequirements
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 8646 522 moveto
+8995 520 10460 510 10916 468 curveto
+10925 467 10935 466 10945 464 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 10945.4 467.48 moveto
+10955 463 lineto
+10944.7 460.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 10945.4 467.48 moveto
+10955 463 lineto
+10944.7 460.51 lineto
+closepath stroke
+grestore
+% Catalog->Storefront
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1647 233 moveto
+2079 226 5780 171 6299 163 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 6299 166.5 moveto
+6309 163 lineto
+6299 159.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 6299 166.5 moveto
+6309 163 lineto
+6299 159.5 lineto
+closepath stroke
+grestore
+% Categories
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1551 162 51.83 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+1521.07 157.8 moveto 59.87 (Categories) alignedtext
+grestore
+% Catalog->Categories
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1588 218 moveto
+1580 209 1572 198 1565 188 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1567.8 185.9 moveto
+1559 180 lineto
+1562.2 190.1 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1567.8 185.9 moveto
+1559 180 lineto
+1562.2 190.1 lineto
+closepath stroke
+grestore
+% Assignmenttopagetypesfordisplay
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+9845 378 141.95 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+9749.74 373.8 moveto 190.51 (Assignmenttopagetypesfordisplay) alignedtext
+grestore
+% Assignmenttopagetypesfordisplay->Displayandnotification
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 9874 360 moveto
+9889 351 9909 339 9925 329 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 9927.62 331.46 moveto
+9934 323 lineto
+9923.74 325.63 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 9927.62 331.46 moveto
+9934 323 lineto
+9923.74 325.63 lineto
+closepath stroke
+grestore
+% Ordernumber
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+8114 450 63.05 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+8076.3 445.8 moveto 75.41 (Ordernumber) alignedtext
+grestore
+% Ordernumber->Filteringcriteria
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 8144 434 moveto
+8163 424 8189 410 8210 399 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 8211.96 401.92 moveto
+8219 394 lineto
+8208.56 395.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 8211.96 401.92 moveto
+8219 394 lineto
+8208.56 395.8 lineto
+closepath stroke
+grestore
+% Timescope
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+12093 522 52.91 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+12062.29 517.8 moveto 61.42 (Timescope) alignedtext
+grestore
+% Discountconditions
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+12093 450 86.14 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+12038.56 445.8 moveto 108.88 (Discountconditions) alignedtext
+grestore
+% Timescope->Discountconditions
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 12093 504 moveto
+12093 496 12093 487 12093 478 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12096.5 478 moveto
+12093 468 lineto
+12089.5 478 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12096.5 478 moveto
+12093 468 lineto
+12089.5 478 lineto
+closepath stroke
+grestore
+% Ordertotal
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2413 1026 50.22 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2384.24 1021.8 moveto 57.53 (Ordertotal) alignedtext
+grestore
+% Ratefactors
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2565 954 55 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2533.13 949.8 moveto 63.74 (Ratefactors) alignedtext
+grestore
+% Ordertotal->Ratefactors
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2443 1012 moveto
+2467 1001 2499 986 2525 973 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2526.28 976.26 moveto
+2534 969 lineto
+2523.44 969.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2526.28 976.26 moveto
+2534 969 lineto
+2523.44 969.86 lineto
+closepath stroke
+grestore
+% Carrierselection
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5276 450 72.2 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5231.3 445.8 moveto 89.4 (Carrierselection) alignedtext
+grestore
+% Carrierselection->Shippingoptions
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5225 437 moveto
+5175 425 5101 406 5048 393 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5048.49 389.53 moveto
+5038 391 lineto
+5047.12 396.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5048.49 389.53 moveto
+5038 391 lineto
+5047.12 396.39 lineto
+closepath stroke
+grestore
+% Phone
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3198 378 35.18 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3180.5 373.8 moveto 35 (Phone) alignedtext
+grestore
+% Orderconfirmation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3280 306 82.93 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3227.52 301.8 moveto 104.96 (Orderconfirmation) alignedtext
+grestore
+% Phone->Orderconfirmation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3216 362 moveto
+3227 353 3240 341 3252 331 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3254.78 333.22 moveto
+3260 324 lineto
+3250.17 327.95 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3254.78 333.22 moveto
+3260 324 lineto
+3250.17 327.95 lineto
+closepath stroke
+grestore
+% Multilevel
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1496 234 50.77 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+1466.84 229.8 moveto 58.33 (Multilevel) alignedtext
+grestore
+% Multilevel->Categories
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1509 217 moveto
+1516 208 1524 197 1532 187 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1534.8 189.1 moveto
+1538 179 lineto
+1529.2 184.9 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1534.8 189.1 moveto
+1538 179 lineto
+1529.2 184.9 lineto
+closepath stroke
+grestore
+% Contextsensitiveads
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+10819 450 87.78 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+10763.01 445.8 moveto 111.98 (Contextsensitiveads) alignedtext
+grestore
+% Contextsensitiveads->Advertisements
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 10881 437 moveto
+10893 435 10905 433 10916 432 curveto
+11163 401 11229 431 11476 396 curveto
+11482 395 11489 394 11495 392 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 11495.88 395.39 moveto
+11505 390 lineto
+11494.51 388.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 11495.88 395.39 moveto
+11505 390 lineto
+11494.51 388.53 lineto
+closepath stroke
+grestore
+% Questionandfeedbackforms
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+8602 306 117.22 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+8525.03 301.8 moveto 153.94 (Questionandfeedbackforms) alignedtext
+grestore
+% Questionandfeedbackforms->Customerservice
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 8522 293 moveto
+8441 280 8317 259 8238 246 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 8238.49 242.53 moveto
+8228 244 lineto
+8237.12 249.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 8238.49 242.53 moveto
+8228 244 lineto
+8237.12 249.39 lineto
+closepath stroke
+grestore
+% Discountconditions->Discounts
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 12028 438 moveto
+11950 425 11820 401 11748 388 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 11748.49 384.53 moveto
+11738 386 lineto
+11747.12 391.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 11748.49 384.53 moveto
+11738 386 lineto
+11747.12 391.39 lineto
+closepath stroke
+grestore
+% Eletroniccheque
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2850 522 73.78 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2804.52 517.8 moveto 90.96 (Eletroniccheque) alignedtext
+grestore
+% Eletroniccheque->Paymenttypes
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2897 508 moveto
+2937 496 2995 479 3036 466 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3037.43 469.23 moveto
+3046 463 lineto
+3035.42 462.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3037.43 469.23 moveto
+3046 463 lineto
+3035.42 462.52 lineto
+closepath stroke
+grestore
+% Filerepository
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+14928 450 65.21 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+14888.73 445.8 moveto 78.54 (Filerepository) alignedtext
+grestore
+% Filerepository->Eletronicgoodsfulfillment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 14892 435 moveto
+14867 424 14832 410 14805 399 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 14805.58 395.46 moveto
+14795 395 lineto
+14802.98 401.96 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 14805.58 395.46 moveto
+14795 395 lineto
+14802.98 401.96 lineto
+closepath stroke
+grestore
+% Sitesearch
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+13202 378 50.22 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+13173.24 373.8 moveto 57.53 (Sitesearch) alignedtext
+grestore
+% Storeadministration
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+12775 306 87.21 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+12719.79 301.8 moveto 110.43 (Storeadministration) alignedtext
+grestore
+% Sitesearch->Storeadministration
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 13165 366 moveto
+13158 363 13150 361 13143 360 curveto
+13023 334 12991 343 12871 324 curveto
+12864 323 12856 321 12849 320 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12849.49 316.53 moveto
+12839 318 lineto
+12848.12 323.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12849.49 316.53 moveto
+12839 318 lineto
+12848.12 323.39 lineto
+closepath stroke
+grestore
+% Quantitypurchased
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2565 1026 83.98 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2512.13 1021.8 moveto 105.74 (Quantitypurchased) alignedtext
+grestore
+% Quantitypurchased->Ratefactors
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2565 1008 moveto
+2565 1000 2565 991 2565 982 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2568.5 982 moveto
+2565 972 lineto
+2561.5 982 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2568.5 982 moveto
+2565 972 lineto
+2561.5 982 lineto
+closepath stroke
+grestore
+% Customviews->Catalog
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2192 299 moveto
+2067 285 1774 253 1656 239 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1656.3 235.51 moveto
+1646 238 lineto
+1655.6 242.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1656.3 235.51 moveto
+1646 238 lineto
+1655.6 242.48 lineto
+closepath stroke
+grestore
+% Multipleclassification
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1332 234 95.25 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+1270.96 229.8 moveto 122.08 (Multipleclassification) alignedtext
+grestore
+% Multipleclassification->Categories
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1380 218 moveto
+1417 206 1467 190 1504 177 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1504.62 180.48 moveto
+1513 174 lineto
+1502.41 173.84 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1504.62 180.48 moveto
+1513 174 lineto
+1502.41 173.84 lineto
+closepath stroke
+grestore
+% Warehousemanagement
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+14137 450 103.81 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+14069.75 445.8 moveto 134.49 (Warehousemanagement) alignedtext
+grestore
+% Physicalgoodsfulfillment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+14137 378 108.13 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+14066.62 373.8 moveto 140.76 (Physicalgoodsfulfillment) alignedtext
+grestore
+% Warehousemanagement->Physicalgoodsfulfillment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 14137 432 moveto
+14137 424 14137 415 14137 406 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 14140.5 406 moveto
+14137 396 lineto
+14133.5 406 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 14140.5 406 moveto
+14137 396 lineto
+14133.5 406 lineto
+closepath stroke
+grestore
+% Upselling
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+12245 450 48.09 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+12217.78 445.8 moveto 54.44 (Upselling) alignedtext
+grestore
+% Upselling->Sellstrategies
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 12209 438 moveto
+12202 436 12195 434 12188 432 curveto
+12148 419 12102 405 12069 394 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12069.58 390.52 moveto
+12059 391 lineto
+12067.57 397.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12069.58 390.52 moveto
+12059 391 lineto
+12067.57 397.23 lineto
+closepath stroke
+grestore
+% Previouspurchases
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+8422 378 82.9 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+8369.91 373.8 moveto 104.19 (Previouspurchases) alignedtext
+grestore
+% Behaviourtracked
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5834 306 79.18 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5784.24 301.8 moveto 99.51 (Behaviourtracked) alignedtext
+grestore
+% Previouspurchases->Behaviourtracked
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 8364 365 moveto
+8353 363 8341 361 8330 360 curveto
+7808 305 6492 362 5969 324 curveto
+5949 322 5928 320 5909 317 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5909.3 313.51 moveto
+5899 316 lineto
+5908.6 320.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5909.3 313.51 moveto
+5899 316 lineto
+5908.6 320.48 lineto
+closepath stroke
+grestore
+% Previouspurchases->Targetingcriteria
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 8479 365 moveto
+8491 363 8503 361 8514 360 curveto
+8985 310 10175 377 10647 324 curveto
+10654 323 10661 322 10668 321 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 10668.88 324.39 moveto
+10678 319 lineto
+10667.51 317.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 10668.88 324.39 moveto
+10678 319 lineto
+10667.51 317.53 lineto
+closepath stroke
+grestore
+% AuthorizeDOTNet
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4523 522 82.93 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4470.52 517.8 moveto 104.96 (AuthorizeDOTNet) alignedtext
+grestore
+% AuthorizeDOTNet->Paymentgateways
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4471 508 moveto
+4426 496 4362 479 4315 467 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4315.58 463.52 moveto
+4305 464 lineto
+4313.57 470.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4315.58 463.52 moveto
+4305 464 lineto
+4313.57 470.23 lineto
+closepath stroke
+grestore
+% Locallyvisitedpages
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5605 378 87.77 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5549.02 373.8 moveto 111.97 (Locallyvisitedpages) alignedtext
+grestore
+% Locallyvisitedpages->Behaviourtracked
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5653 363 moveto
+5690 352 5739 336 5778 324 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5779.43 327.23 moveto
+5788 321 lineto
+5777.42 320.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5779.43 327.23 moveto
+5788 321 lineto
+5777.42 320.52 lineto
+closepath stroke
+grestore
+% Documents
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+864 450 55.02 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+832.12 445.8 moveto 63.76 (Documents) alignedtext
+grestore
+% Documents->Associatedassets
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 864 432 moveto
+864 424 864 415 864 406 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 867.5 406 moveto
+864 396 lineto
+860.5 406 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 867.5 406 moveto
+864 396 lineto
+860.5 406 lineto
+closepath stroke
+grestore
+% Logincredentials
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+7359 378 75.93 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+7311.96 373.8 moveto 94.08 (Logincredentials) alignedtext
+grestore
+% Logincredentials->Registrationinformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 7334 361 moveto
+7321 352 7304 340 7289 330 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 7290.26 326.63 moveto
+7280 324 lineto
+7286.38 332.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 7290.26 326.63 moveto
+7280 324 lineto
+7286.38 332.46 lineto
+closepath stroke
+grestore
+% Mail
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3280 378 28.78 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3266.78 373.8 moveto 26.44 (Mail) alignedtext
+grestore
+% Mail->Orderconfirmation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3280 360 moveto
+3280 352 3280 343 3280 334 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3283.5 334 moveto
+3280 324 lineto
+3276.5 334 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3283.5 334 moveto
+3280 324 lineto
+3276.5 334 lineto
+closepath stroke
+grestore
+% Crossselling
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+12370 450 58.78 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+12335.39 445.8 moveto 69.22 (Crossselling) alignedtext
+grestore
+% Crossselling->Sellstrategies
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 12327 438 moveto
+12319 436 12310 434 12302 432 curveto
+12207 411 12181 415 12087 396 curveto
+12082 395 12077 394 12072 392 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12072.49 388.53 moveto
+12062 390 lineto
+12071.12 395.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12072.49 388.53 moveto
+12062 390 lineto
+12071.12 395.39 lineto
+closepath stroke
+grestore
+% Filteringcriteria->Orderstatusreview
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 8270 361 moveto
+8281 351 8294 340 8305 330 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 8307.78 332.22 moveto
+8313 323 lineto
+8303.17 326.95 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 8307.78 332.22 moveto
+8313 323 lineto
+8303.17 326.95 lineto
+closepath stroke
+grestore
+% Flatrate
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3454 954 40.03 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3432.62 949.8 moveto 42.76 (Flatrate) alignedtext
+grestore
+% Flatrate->Pricing
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3454 936 moveto
+3454 928 3454 919 3454 910 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3457.5 910 moveto
+3454 900 lineto
+3450.5 910 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3457.5 910 moveto
+3454 900 lineto
+3450.5 910 lineto
+closepath stroke
+grestore
+% Externaldistributorsystem
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+13355 306 110.8 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+13282.68 301.8 moveto 144.64 (Externaldistributorsystem) alignedtext
+grestore
+% Externaldistributorsystem->Externalsystemsintegration
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 13355 288 moveto
+13355 280 13355 271 13355 262 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 13358.5 262 moveto
+13355 252 lineto
+13351.5 262 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 13358.5 262 moveto
+13355 252 lineto
+13351.5 262 lineto
+closepath stroke
+grestore
+% Video
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+826 522 34.13 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+808.89 517.8 moveto 34.21 (Video) alignedtext
+grestore
+% Video->Mediafiles
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 808 507 moveto
+796 497 780 484 767 474 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 768.83 470.95 moveto
+759 467 lineto
+764.22 476.22 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 768.83 470.95 moveto
+759 467 lineto
+764.22 476.22 lineto
+closepath stroke
+grestore
+% Advertisementsources->Advertisements
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 10399 437 moveto
+10412 435 10425 433 10438 432 curveto
+10897 385 11018 454 11476 396 curveto
+11482 395 11489 394 11495 393 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 11495.88 396.39 moveto
+11505 391 lineto
+11494.51 389.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 11495.88 396.39 moveto
+11505 391 lineto
+11494.51 389.53 lineto
+closepath stroke
+grestore
+% Shoppingcartcontent
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+10458 378 90.96 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+10400.07 373.8 moveto 115.86 (Shoppingcartcontent) alignedtext
+grestore
+% Shoppingcartcontent->Targetingcriteria
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 10513 364 moveto
+10559 352 10624 334 10671 322 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 10671.88 325.39 moveto
+10681 320 lineto
+10670.51 318.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 10671.88 325.39 moveto
+10681 320 lineto
+10670.51 318.53 lineto
+closepath stroke
+grestore
+% Faxmailorder
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3005 522 63.06 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2967.29 517.8 moveto 75.42 (Faxmailorder) alignedtext
+grestore
+% Faxmailorder->Paymenttypes
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3025 505 moveto
+3036 496 3051 484 3063 474 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3065.4 476.55 moveto
+3070 467 lineto
+3060.45 471.6 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3065.4 476.55 moveto
+3070 467 lineto
+3060.45 471.6 lineto
+closepath stroke
+grestore
+% Orderconfirmation->Buypaths
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3358 300 moveto
+3545 286 4010 251 4172 239 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4172.4 242.48 moveto
+4182 238 lineto
+4171.7 235.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4172.4 242.48 moveto
+4182 238 lineto
+4171.7 235.51 lineto
+closepath stroke
+grestore
+% Ammountspecification
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4723 522 99.04 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4658.85 517.8 moveto 128.3 (Ammountspecification) alignedtext
+grestore
+% Customtaxation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4424 450 72.19 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4379.67 445.8 moveto 88.66 (Customtaxation) alignedtext
+grestore
+% Ammountspecification->Customtaxation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4663 508 moveto
+4611 496 4538 477 4486 465 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4486.49 461.53 moveto
+4476 463 lineto
+4485.12 468.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4486.49 461.53 moveto
+4476 463 lineto
+4485.12 468.39 lineto
+closepath stroke
+grestore
+% Reportformats
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+12129 306 66.82 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+12088.57 301.8 moveto 80.86 (Reportformats) alignedtext
+grestore
+% Reportformats->Reportingandanalysis
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 12171 292 moveto
+12203 281 12249 265 12285 253 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12286.43 256.23 moveto
+12295 250 lineto
+12284.42 249.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12286.43 256.23 moveto
+12295 250 lineto
+12284.42 249.52 lineto
+closepath stroke
+grestore
+% Multipleshippingaddresses
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+8571 594 114.06 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+8495.96 589.8 moveto 150.09 (Multipleshippingaddresses) alignedtext
+grestore
+% Multipleshippingaddresses->Shippingaddress
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 8571 576 moveto
+8571 568 8571 559 8571 550 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 8574.5 550 moveto
+8571 540 lineto
+8567.5 550 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 8574.5 550 moveto
+8571 540 lineto
+8567.5 550 lineto
+closepath stroke
+grestore
+% Paidadvertisements
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+10233 522 86.13 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+10178.57 517.8 moveto 108.86 (Paidadvertisements) alignedtext
+grestore
+% Paidadvertisements->Advertisementsources
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 10257 505 moveto
+10270 495 10286 484 10300 473 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 10302.1 475.8 moveto
+10308 467 lineto
+10297.9 470.2 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 10302.1 475.8 moveto
+10308 467 lineto
+10297.9 470.2 lineto
+closepath stroke
+grestore
+% Freeitem
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+11977 522 44.86 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+11952.12 517.8 moveto 49.76 (Freeitem) alignedtext
+grestore
+% Freeitem->Award
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 11955 506 moveto
+11941 496 11921 482 11905 471 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 11907.1 468.2 moveto
+11897 465 lineto
+11902.9 473.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 11907.1 468.2 moveto
+11897 465 lineto
+11902.9 473.8 lineto
+closepath stroke
+grestore
+% Gallery
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1036 594 39.99 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+1015.01 589.8 moveto 41.98 (Gallery) alignedtext
+grestore
+% Gallery->Image
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1006 582 moveto
+1000 579 993 577 987 576 curveto
+860 545 822 573 695 540 curveto
+692 539 690 538 687 537 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 688.59 533.84 moveto
+678 534 lineto
+686.38 540.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 688.59 533.84 moveto
+678 534 lineto
+686.38 540.48 lineto
+closepath stroke
+grestore
+% Customfields
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5216 378 62.04 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5178.67 373.8 moveto 74.66 (Customfields) alignedtext
+grestore
+% Customfields->Registrationinformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5271 370 moveto
+5298 366 5332 362 5362 360 curveto
+6006 312 6169 345 6815 324 curveto
+6927 320 7055 314 7144 310 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 7144 313.5 moveto
+7154 310 lineto
+7144 306.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 7144 313.5 moveto
+7154 310 lineto
+7144 306.5 lineto
+closepath stroke
+grestore
+% Customfields->ProductInformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5161 370 moveto
+5133 366 5099 362 5069 360 curveto
+4346 311 2537 341 1813 324 curveto
+1683 320 1533 314 1437 310 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1437 306.5 moveto
+1427 310 lineto
+1437 313.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1437 306.5 moveto
+1427 310 lineto
+1437 313.5 lineto
+closepath stroke
+grestore
+% Custompaymenttype
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3177 522 90.97 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3119.06 517.8 moveto 115.88 (Custompaymenttype) alignedtext
+grestore
+% Custompaymenttype->Paymenttypes
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3156 504 moveto
+3145 495 3131 483 3119 473 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3121.1 470.2 moveto
+3111 467 lineto
+3116.9 475.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3121.1 470.2 moveto
+3111 467 lineto
+3116.9 475.8 lineto
+closepath stroke
+grestore
+% Email
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3361 378 34.1 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3344.28 373.8 moveto 33.44 (Email) alignedtext
+grestore
+% Email->Orderconfirmation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3343 362 moveto
+3333 353 3320 341 3308 331 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3309.83 327.95 moveto
+3300 324 lineto
+3305.22 333.22 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3309.83 327.95 moveto
+3300 324 lineto
+3305.22 333.22 lineto
+closepath stroke
+grestore
+% Shippingcostcalculation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5470 450 103.84 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5402.73 445.8 moveto 134.53 (Shippingcostcalculation) alignedtext
+grestore
+% Shippingcostcalculation->Shippingoptions
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5395 438 moveto
+5382 436 5369 434 5357 432 curveto
+5255 416 5136 399 5061 388 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5061.3 384.51 moveto
+5051 387 lineto
+5060.6 391.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5061.3 384.51 moveto
+5051 387 lineto
+5060.6 391.48 lineto
+closepath stroke
+grestore
+% Advertisements->Targetingmechanisms
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 11556 360 moveto
+11556 352 11556 343 11556 334 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 11559.5 334 moveto
+11556 324 lineto
+11552.5 334 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 11559.5 334 moveto
+11556 324 lineto
+11552.5 334 lineto
+closepath stroke
+grestore
+% Categorypage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1936 378 64.16 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+1897.13 373.8 moveto 77.75 (Categorypage) alignedtext
+grestore
+% Categorypage->Browsing
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1920 360 moveto
+1911 351 1902 340 1893 331 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1895.22 328.22 moveto
+1886 323 lineto
+1889.95 332.83 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1895.22 328.22 moveto
+1886 323 lineto
+1889.95 332.83 lineto
+closepath stroke
+grestore
+% Automatic->Stockreplenishment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 13973 361 moveto
+13980 352 13988 342 13996 332 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 13998.8 334.1 moveto
+14002 324 lineto
+13993.2 329.9 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 13998.8 334.1 moveto
+14002 324 lineto
+13993.2 329.9 lineto
+closepath stroke
+grestore
+% Basicsearch
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+225 378 57.15 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+191.58 373.8 moveto 66.85 (Basicsearch) alignedtext
+grestore
+% Searching
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+225 306 49.15 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+197.01 301.8 moveto 55.98 (Searching) alignedtext
+grestore
+% Basicsearch->Searching
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 225 360 moveto
+225 352 225 343 225 334 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 228.5 334 moveto
+225 324 lineto
+221.5 334 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 228.5 334 moveto
+225 324 lineto
+221.5 334 lineto
+closepath stroke
+grestore
+% Manufacturername
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2324 522 83.99 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2270.75 517.8 moveto 106.5 (Manufacturername) alignedtext
+grestore
+% Manufacturername->Sortingfilters
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2263 509 moveto
+2199 497 2099 475 2035 462 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2035.49 458.53 moveto
+2025 460 lineto
+2034.12 465.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2035.49 458.53 moveto
+2025 460 lineto
+2034.12 465.39 lineto
+closepath stroke
+grestore
+% 1
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+9555 18 27 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+9551.5 13.8 moveto 7 (1) alignedtext
+grestore
+% eShop->1
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 9555 72 moveto
+9555 64 9555 55 9555 46 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 9558.5 46 moveto
+9555 36 lineto
+9551.5 46 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 9558.5 46 moveto
+9555 36 lineto
+9551.5 46 lineto
+closepath stroke
+grestore
+% Reminders
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+7506 378 52.87 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+7475.67 373.8 moveto 60.65 (Reminders) alignedtext
+grestore
+% Reminders->Registrationinformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 7466 366 moveto
+7459 364 7451 362 7444 360 curveto
+7403 348 7357 335 7320 324 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 7320.58 320.52 moveto
+7310 321 lineto
+7318.57 327.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 7320.58 320.52 moveto
+7310 321 lineto
+7318.57 327.23 lineto
+closepath stroke
+grestore
+% Billing
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5266 738 37.87 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5246.55 733.8 moveto 38.9 (Billing) alignedtext
+grestore
+% Address
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5266 666 42.18 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5243.06 661.8 moveto 45.87 (Address) alignedtext
+grestore
+% Billing->Address
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5266 720 moveto
+5266 712 5266 703 5266 694 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5269.5 694 moveto
+5266 684 lineto
+5262.5 694 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5269.5 694 moveto
+5266 684 lineto
+5262.5 694 lineto
+closepath stroke
+grestore
+% Homepage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+6193 234 52.87 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+6162.68 229.8 moveto 60.64 (Homepage) alignedtext
+grestore
+% Homepage->Storefront
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 6226 220 moveto
+6252 208 6289 193 6318 180 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 6319.28 183.26 moveto
+6327 176 lineto
+6316.44 176.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 6319.28 183.26 moveto
+6327 176 lineto
+6316.44 176.86 lineto
+closepath stroke
+grestore
+% PersonalInformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+6929 378 89.91 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+6871.46 373.8 moveto 115.08 (PersonalInformation) alignedtext
+grestore
+% PersonalInformation->Registrationinformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 6990 365 moveto
+7044 353 7123 335 7181 322 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 7181.88 325.39 moveto
+7191 320 lineto
+7180.51 318.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 7181.88 325.39 moveto
+7191 320 lineto
+7180.51 318.53 lineto
+closepath stroke
+grestore
+% Productandquantityscope
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+12272 522 108.16 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+12201.24 517.8 moveto 141.52 (Productandquantityscope) alignedtext
+grestore
+% Productandquantityscope->Discountconditions
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 12230 505 moveto
+12204 494 12170 481 12142 470 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12143.56 466.86 moveto
+12133 466 lineto
+12140.72 473.26 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12143.56 466.86 moveto
+12133 466 lineto
+12140.72 473.26 lineto
+closepath stroke
+grestore
+% Creditcardinformation->Registrationinformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 6631 365 moveto
+6643 363 6656 362 6668 360 curveto
+6835 338 7031 322 7148 314 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 7148.4 317.48 moveto
+7158 313 lineto
+7147.7 310.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 7148.4 317.48 moveto
+7158 313 lineto
+7147.7 310.51 lineto
+closepath stroke
+grestore
+% Pastcustomersalsobought
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+12886 522 108.16 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+12815.23 517.8 moveto 141.53 (Pastcustomersalsobought) alignedtext
+grestore
+% Pastcustomersalsobought->Crossselling
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 12809 509 moveto
+12796 507 12782 505 12769 504 curveto
+12622 484 12583 495 12438 468 curveto
+12433 467 12428 466 12423 464 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12423.49 460.53 moveto
+12413 462 lineto
+12422.12 467.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12423.49 460.53 moveto
+12413 462 lineto
+12422.12 467.39 lineto
+closepath stroke
+grestore
+% Graduationby
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+11757 450 64.13 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+11718.51 445.8 moveto 76.98 (Graduationby) alignedtext
+grestore
+% Graduationby->Discounts
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 11741 432 moveto
+11734 423 11724 413 11716 404 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 11718.22 401.22 moveto
+11709 396 lineto
+11712.95 405.83 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 11718.22 401.22 moveto
+11709 396 lineto
+11712.95 405.83 lineto
+closepath stroke
+grestore
+% Taxgateways->Taxationoptions
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4558 433 moveto
+4548 423 4536 412 4525 402 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4527.55 399.6 moveto
+4518 395 lineto
+4522.6 404.55 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4527.55 399.6 moveto
+4518 395 lineto
+4522.6 404.55 lineto
+closepath stroke
+grestore
+% Wishlistcontent
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+10638 378 71.15 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+10594.06 373.8 moveto 87.88 (Wishlistcontent) alignedtext
+grestore
+% Wishlistcontent->Targetingcriteria
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 10661 361 moveto
+10673 351 10689 340 10702 329 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 10704.1 331.8 moveto
+10710 323 lineto
+10699.9 326.2 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 10704.1 331.8 moveto
+10710 323 lineto
+10699.9 326.2 lineto
+closepath stroke
+grestore
+% Multipleshipments
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4739 450 82.96 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4686.5 445.8 moveto 105 (Multipleshipments) alignedtext
+grestore
+% Multipleshipments->Shippingoptions
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4789 436 moveto
+4829 424 4886 407 4928 395 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4929.43 398.23 moveto
+4938 392 lineto
+4927.42 391.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4929.43 398.23 moveto
+4938 392 lineto
+4927.42 391.52 lineto
+closepath stroke
+grestore
+% USPS
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5288 882 34.11 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5271.27 877.8 moveto 33.45 (USPS) alignedtext
+grestore
+% USPS->Shippinggateways
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5305 866 moveto
+5316 857 5329 845 5340 835 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5342.78 837.22 moveto
+5348 828 lineto
+5338.17 831.95 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5342.78 837.22 moveto
+5348 828 lineto
+5338.17 831.95 lineto
+closepath stroke
+grestore
+% Substituteproducts
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+12677 522 82.92 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+12624.89 517.8 moveto 104.21 (Substituteproducts) alignedtext
+grestore
+% Substituteproducts->Upselling
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 12617 509 moveto
+12606 507 12595 506 12585 504 curveto
+12459 483 12425 495 12302 468 curveto
+12298 467 12295 466 12291 465 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12291.58 461.52 moveto
+12281 462 lineto
+12289.57 468.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12291.58 461.52 moveto
+12281 462 lineto
+12289.57 468.23 lineto
+closepath stroke
+grestore
+% Billingaddress->Registrationinformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 7725 366 moveto
+7716 363 7707 362 7698 360 curveto
+7581 339 7448 324 7358 315 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 7358.3 311.51 moveto
+7348 314 lineto
+7357.6 318.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 7358.3 311.51 moveto
+7348 314 lineto
+7357.6 318.48 lineto
+closepath stroke
+grestore
+% Shippingoptions->Checkout
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4922 369 moveto
+4827 355 4646 327 4555 314 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4555.3 310.51 moveto
+4545 313 lineto
+4554.6 317.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4555.3 310.51 moveto
+4545 313 lineto
+4554.6 317.48 lineto
+closepath stroke
+grestore
+% Fixeddiscount
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+11658 522 65.76 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+11618.34 517.8 moveto 79.33 (Fixeddiscount) alignedtext
+grestore
+% Fixeddiscount->Award
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 11703 509 moveto
+11737 498 11787 483 11830 468 curveto
+11832 467 11835 466 11838 465 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 11839.28 468.26 moveto
+11847 461 lineto
+11836.44 461.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 11839.28 468.26 moveto
+11847 461 lineto
+11836.44 461.86 lineto
+closepath stroke
+grestore
+% Emailwishlist
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+9513 306 64.15 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+9474.5 301.8 moveto 77 (Emailwishlist) alignedtext
+grestore
+% Emailwishlist->Wishlist
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 9465 294 moveto
+9457 292 9448 290 9440 288 curveto
+9354 269 9253 252 9194 242 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 9194.49 238.53 moveto
+9184 240 lineto
+9193.12 245.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 9194.49 238.53 moveto
+9184 240 lineto
+9193.12 245.39 lineto
+closepath stroke
+grestore
+% Seasonalproductviews
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2251 378 96.89 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2188.41 373.8 moveto 125.18 (Seasonalproductviews) alignedtext
+grestore
+% Seasonalproductviews->Customviews
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2251 360 moveto
+2251 352 2251 343 2251 334 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2254.5 334 moveto
+2251 324 lineto
+2247.5 334 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2254.5 334 moveto
+2251 324 lineto
+2247.5 334 lineto
+closepath stroke
+grestore
+% Registertobrowse
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+6139 378 78.11 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+6090.02 373.8 moveto 97.97 (Registertobrowse) alignedtext
+grestore
+% Registrationenforcement
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+6392 306 106 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+6322.8 301.8 moveto 138.39 (Registrationenforcement) alignedtext
+grestore
+% Registertobrowse->Registrationenforcement
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 6188 364 moveto
+6228 353 6284 337 6327 325 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 6328.43 328.23 moveto
+6337 322 lineto
+6326.42 321.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 6328.43 328.23 moveto
+6337 322 lineto
+6326.42 321.52 lineto
+closepath stroke
+grestore
+% Fulfillmentsystem
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+13565 306 80.82 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+13514.06 301.8 moveto 101.89 (Fulfillmentsystem) alignedtext
+grestore
+% Fulfillmentsystem->Externalsystemsintegration
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 13521 291 moveto
+13489 280 13447 266 13413 254 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 13413.58 250.52 moveto
+13403 251 lineto
+13411.57 257.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 13413.58 250.52 moveto
+13403 251 lineto
+13411.57 257.23 lineto
+closepath stroke
+grestore
+% Eletronicgoods
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1110 450 69 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+1067.62 445.8 moveto 84.76 (Eletronicgoods) alignedtext
+grestore
+% Producttype
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1015 378 57.2 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+981.17 373.8 moveto 67.65 (Producttype) alignedtext
+grestore
+% Eletronicgoods->Producttype
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1087 433 moveto
+1075 424 1059 411 1045 401 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1047.1 398.2 moveto
+1037 395 lineto
+1042.9 403.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1047.1 398.2 moveto
+1037 395 lineto
+1042.9 403.8 lineto
+closepath stroke
+grestore
+% UPS
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5368 882 28.24 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5355.16 877.8 moveto 25.67 (UPS) alignedtext
+grestore
+% UPS->Shippinggateways
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5368 864 moveto
+5368 856 5368 847 5368 838 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5371.5 838 moveto
+5368 828 lineto
+5364.5 838 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5371.5 838 moveto
+5368 828 lineto
+5364.5 838 lineto
+closepath stroke
+grestore
+% Inventorymanagementpolicy
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3733 378 122.06 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3652.52 373.8 moveto 160.95 (Inventorymanagementpolicy) alignedtext
+grestore
+% Inventorymanagementpolicy->Shoppingcart
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3784 362 moveto
+3820 350 3868 334 3903 322 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3904.43 325.23 moveto
+3913 319 lineto
+3902.42 318.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3904.43 325.23 moveto
+3913 319 lineto
+3902.42 318.52 lineto
+closepath stroke
+grestore
+% Shipmentstatustracking->Customerservice
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 8021 290 moveto
+8050 279 8087 264 8117 253 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 8118.28 256.26 moveto
+8126 249 lineto
+8115.44 249.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 8118.28 256.26 moveto
+8126 249 lineto
+8115.44 249.86 lineto
+closepath stroke
+grestore
+% Publicaccess
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+9067 378 59.87 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+9031.24 373.8 moveto 71.53 (Publicaccess) alignedtext
+grestore
+% Publicaccess->Permissions
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 9086 361 moveto
+9096 351 9107 340 9118 330 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 9120.4 332.55 moveto
+9125 323 lineto
+9115.45 327.6 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 9120.4 332.55 moveto
+9125 323 lineto
+9115.45 327.6 lineto
+closepath stroke
+grestore
+% Size
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1669 378 27.16 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+1656.95 373.8 moveto 24.1 (Size) alignedtext
+grestore
+% Size->ProductInformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1649 366 moveto
+1644 364 1638 362 1633 360 curveto
+1567 337 1488 324 1429 315 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1429.3 311.51 moveto
+1419 314 lineto
+1428.6 318.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1429.3 311.51 moveto
+1419 314 lineto
+1428.6 318.48 lineto
+closepath stroke
+grestore
+% Customersegments
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+10994 522 84.02 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+10940.73 517.8 moveto 106.54 (Customersegments) alignedtext
+grestore
+% Customersegments->Eligibilityrequirements
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 11002 504 moveto
+11006 496 11010 486 11013 478 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 11016.54 478.58 moveto
+11017 468 lineto
+11010.04 475.98 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 11016.54 478.58 moveto
+11017 468 lineto
+11010.04 475.98 lineto
+closepath stroke
+grestore
+% Income
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+9449 450 39.99 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+9428.01 445.8 moveto 41.98 (Income) alignedtext
+grestore
+% Demographics
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+9618 378 66.85 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+9577.18 373.8 moveto 81.64 (Demographics) alignedtext
+grestore
+% Income->Demographics
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 9478 438 moveto
+9504 426 9543 410 9573 397 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 9574.28 400.26 moveto
+9582 393 lineto
+9571.44 393.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 9574.28 400.26 moveto
+9582 393 lineto
+9571.44 393.86 lineto
+closepath stroke
+grestore
+% Physicalgoods
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1264 450 66.83 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+1223.56 445.8 moveto 80.88 (Physicalgoods) alignedtext
+grestore
+% Physicalgoods->Producttype
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1218 437 moveto
+1175 425 1112 406 1067 393 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1067.58 389.52 moveto
+1057 390 lineto
+1065.57 396.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1067.58 389.52 moveto
+1057 390 lineto
+1065.57 396.23 lineto
+closepath stroke
+grestore
+% Customfilter
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1812 522 59.85 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+1776.62 517.8 moveto 70.77 (Customfilter) alignedtext
+grestore
+% Customfilter->Sortingfilters
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1846 507 moveto
+1870 496 1904 481 1931 469 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1932.28 472.26 moveto
+1940 465 lineto
+1929.44 465.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1932.28 472.26 moveto
+1940 465 lineto
+1929.44 465.86 lineto
+closepath stroke
+grestore
+% Country
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5000 738 42.19 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4977.06 733.8 moveto 45.89 (Country) alignedtext
+grestore
+% Country->Resolution
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5025 723 moveto
+5042 713 5066 698 5085 687 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5086.96 689.92 moveto
+5094 682 lineto
+5083.56 683.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5086.96 689.92 moveto
+5094 682 lineto
+5083.56 683.8 lineto
+closepath stroke
+grestore
+% Userbehaviourtracking
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5929 234 99.02 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5864.86 229.8 moveto 128.28 (Userbehaviourtracking) alignedtext
+grestore
+% Behaviourtracked->Userbehaviourtracking
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5857 289 moveto
+5869 279 5884 268 5898 258 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5900.1 260.8 moveto
+5906 252 lineto
+5895.9 255.2 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5900.1 260.8 moveto
+5906 252 lineto
+5895.9 255.2 lineto
+closepath stroke
+grestore
+% Specialoffers
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+6178 450 61.98 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+6141.08 445.8 moveto 73.85 (Specialoffers) alignedtext
+grestore
+% Specialoffers->Contenttype
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 6140 436 moveto
+6109 424 6065 408 6032 396 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 6032.58 392.46 moveto
+6022 392 lineto
+6029.98 398.96 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 6032.58 392.46 moveto
+6022 392 lineto
+6029.98 398.96 lineto
+closepath stroke
+grestore
+% Cardholdername
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+6529 450 74.89 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+6482.35 445.8 moveto 93.3 (Cardholdername) alignedtext
+grestore
+% Cardholdername->Creditcardinformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 6537 432 moveto
+6541 424 6545 414 6550 405 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 6553.14 406.56 moveto
+6554 396 lineto
+6546.74 403.72 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 6553.14 406.56 moveto
+6554 396 lineto
+6546.74 403.72 lineto
+closepath stroke
+grestore
+% Permissions->Wishlist
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 9144 288 moveto
+9144 280 9144 271 9144 262 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 9147.5 262 moveto
+9144 252 lineto
+9140.5 262 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 9147.5 262 moveto
+9144 252 lineto
+9140.5 262 lineto
+closepath stroke
+grestore
+% 0
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2896 1026 27 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2892.5 1021.8 moveto 7 (0) alignedtext
+grestore
+% Quantity
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+11377 522 44.83 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+11352.5 517.8 moveto 48.99 (Quantity) alignedtext
+grestore
+% Quantity->Graduationby
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 11410 510 moveto
+11417 507 11424 505 11431 504 curveto
+11541 477 11572 489 11684 468 curveto
+11689 467 11694 466 11699 464 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 11699.88 467.39 moveto
+11709 462 lineto
+11698.51 460.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 11699.88 467.39 moveto
+11709 462 lineto
+11698.51 460.53 lineto
+closepath stroke
+grestore
+% Productclassification
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2759 1026 92.02 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2700.3 1021.8 moveto 117.41 (Productclassification) alignedtext
+grestore
+% Productclassification->Ratefactors
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2716 1010 moveto
+2685 998 2643 983 2611 971 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2611.58 967.52 moveto
+2601 968 lineto
+2609.57 974.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2611.58 967.52 moveto
+2601 968 lineto
+2609.57 974.23 lineto
+closepath stroke
+grestore
+% Cardnumber
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+6681 450 58.81 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+6646.01 445.8 moveto 69.98 (Cardnumber) alignedtext
+grestore
+% Cardnumber->Creditcardinformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 6654 434 moveto
+6638 425 6617 411 6599 400 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 6600.44 396.8 moveto
+6590 395 lineto
+6597.04 402.92 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 6600.44 396.8 moveto
+6590 395 lineto
+6597.04 402.92 lineto
+closepath stroke
+grestore
+% TwoDimage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+191 594 58.81 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+156.01 589.8 moveto 69.98 (TwoDimage) alignedtext
+grestore
+% TwoDimage->Image
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 234 582 moveto
+242 580 251 578 259 576 curveto
+384 550 533 534 606 526 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 606.4 529.48 moveto
+616 525 lineto
+605.7 522.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 606.4 529.48 moveto
+616 525 lineto
+605.7 522.51 lineto
+closepath stroke
+grestore
+% ProductInformation->Catalog
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1401 293 moveto
+1444 282 1504 268 1556 252 curveto
+1559 251 1562 250 1565 249 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1566.43 252.23 moveto
+1575 246 lineto
+1564.42 245.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1566.43 252.23 moveto
+1575 246 lineto
+1564.42 245.52 lineto
+closepath stroke
+grestore
+% Productvariants
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+371 378 71.14 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+327.07 373.8 moveto 87.86 (Productvariants) alignedtext
+grestore
+% Productvariants->ProductInformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 421 365 moveto
+431 363 441 361 451 360 curveto
+802 312 895 364 1246 324 curveto
+1254 323 1262 322 1271 321 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1271.88 324.39 moveto
+1281 319 lineto
+1270.51 317.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1271.88 324.39 moveto
+1281 319 lineto
+1270.51 317.53 lineto
+closepath stroke
+grestore
+% Inventorymanagementsystem
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+13788 306 124.24 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+13705.58 301.8 moveto 164.84 (Inventorymanagementsystem) alignedtext
+grestore
+% Inventorymanagementsystem->Externalsystemsintegration
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 13706 292 moveto
+13631 281 13521 262 13444 249 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 13444.49 245.53 moveto
+13434 247 lineto
+13443.12 252.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 13444.49 245.53 moveto
+13434 247 lineto
+13443.12 252.39 lineto
+closepath stroke
+grestore
+% Dynamiccontent->Homepage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 6193 288 moveto
+6193 280 6193 271 6193 262 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 6196.5 262 moveto
+6193 252 lineto
+6189.5 262 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 6196.5 262 moveto
+6193 252 lineto
+6189.5 262 lineto
+closepath stroke
+grestore
+% Shipping->Address
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5346 722 moveto
+5332 712 5312 698 5296 687 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5298.1 684.2 moveto
+5288 681 lineto
+5293.9 689.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5298.1 684.2 moveto
+5288 681 lineto
+5293.9 689.8 lineto
+closepath stroke
+grestore
+% Shipping->Physicalgoodsfulfillment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5414 738 moveto
+6092 736 14005 708 14005 594 curveto
+14005 594 14005 594 14005 522 curveto
+14005 481 13998 464 14024 432 curveto
+14036 417 14053 406 14071 397 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 14072.28 400.26 moveto
+14080 393 lineto
+14069.44 393.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 14072.28 400.26 moveto
+14080 393 lineto
+14069.44 393.86 lineto
+closepath stroke
+grestore
+% Wishlistsaveaftersession
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+9325 306 105.96 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+9256.19 301.8 moveto 137.62 (Wishlistsaveaftersession) alignedtext
+grestore
+% Wishlistsaveaftersession->Wishlist
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 9283 289 moveto
+9253 277 9214 262 9185 250 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 9185.58 246.46 moveto
+9175 246 lineto
+9182.98 252.96 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 9185.58 246.46 moveto
+9175 246 lineto
+9182.98 252.96 lineto
+closepath stroke
+grestore
+% Popupads
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+11144 522 48.09 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+11116.78 517.8 moveto 54.44 (Popupads) alignedtext
+grestore
+% Popupads->Advertisementtypes
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 11164 505 moveto
+11175 496 11190 484 11202 474 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 11204.1 476.8 moveto
+11210 468 lineto
+11199.9 471.2 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 11204.1 476.8 moveto
+11210 468 lineto
+11199.9 471.2 lineto
+closepath stroke
+grestore
+% Licensemanagement
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+14755 450 89.9 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+14697.47 445.8 moveto 115.06 (Licensemanagement) alignedtext
+grestore
+% Licensemanagement->Eletronicgoodsfulfillment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 14755 432 moveto
+14755 424 14755 415 14755 406 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 14758.5 406 moveto
+14755 396 lineto
+14751.5 406 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 14758.5 406 moveto
+14755 396 lineto
+14751.5 406 lineto
+closepath stroke
+grestore
+% Customshippinggateway
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5520 882 106.02 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5450.79 877.8 moveto 138.43 (Customshippinggateway) alignedtext
+grestore
+% Customshippinggateway->Shippinggateways
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5484 865 moveto
+5462 854 5434 841 5411 830 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5412.56 826.86 moveto
+5402 826 lineto
+5409.72 833.26 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5412.56 826.86 moveto
+5402 826 lineto
+5409.72 833.26 lineto
+closepath stroke
+grestore
+% Registertobuy
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+6300 378 65.21 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+6260.73 373.8 moveto 78.54 (Registertobuy) alignedtext
+grestore
+% Registertobuy->Registrationenforcement
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 6322 361 moveto
+6333 352 6348 340 6361 330 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 6363.1 332.8 moveto
+6369 324 lineto
+6358.9 327.2 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 6363.1 332.8 moveto
+6369 324 lineto
+6358.9 327.2 lineto
+closepath stroke
+grestore
+% Targeting->Businessmanagement
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 10780 232 moveto
+11026 223 12138 180 12484 166 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12484 169.5 moveto
+12494 166 lineto
+12484 162.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12484 169.5 moveto
+12494 166 lineto
+12484 162.5 lineto
+closepath stroke
+grestore
+% Indexpage->Browsing
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1819 361 moveto
+1828 351 1838 341 1847 331 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1850.05 332.83 moveto
+1854 323 lineto
+1844.78 328.22 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1850.05 332.83 moveto
+1854 323 lineto
+1844.78 328.22 lineto
+closepath stroke
+grestore
+% ThreeSixZerodegreesimage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+385 594 117.25 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+307.65 589.8 moveto 154.7 (ThreeSixZerodegreesimage) alignedtext
+grestore
+% ThreeSixZerodegreesimage->Image
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 443 578 moveto
+493 564 566 545 610 533 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 611.43 536.23 moveto
+620 530 lineto
+609.42 529.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 611.43 536.23 moveto
+620 530 lineto
+609.42 529.52 lineto
+closepath stroke
+grestore
+% Phoneorder
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3341 522 55.05 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3308.73 517.8 moveto 64.53 (Phoneorder) alignedtext
+grestore
+% Phoneorder->Paymenttypes
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3299 510 moveto
+3257 498 3192 480 3146 466 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3146.58 462.52 moveto
+3136 463 lineto
+3144.57 469.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3146.58 462.52 moveto
+3136 463 lineto
+3144.57 469.23 lineto
+closepath stroke
+grestore
+% Purchaseorder
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3480 522 65.77 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3439.97 517.8 moveto 80.07 (Purchaseorder) alignedtext
+grestore
+% Purchaseorder->Paymenttypes
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3432 510 moveto
+3423 507 3414 506 3405 504 curveto
+3321 486 3223 470 3158 460 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3158.3 456.51 moveto
+3148 459 lineto
+3157.6 463.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3158.3 456.51 moveto
+3148 459 lineto
+3157.6 463.48 lineto
+closepath stroke
+grestore
+% Eligibilityrequirements->Discounts
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 11095 437 moveto
+11108 435 11121 433 11134 432 curveto
+11356 405 11416 437 11636 396 curveto
+11640 395 11644 395 11648 393 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 11649.43 396.23 moveto
+11658 390 lineto
+11647.42 389.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 11649.43 396.23 moveto
+11658 390 lineto
+11647.42 389.52 lineto
+closepath stroke
+grestore
+% Address->Rulebasedtaxation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5238 652 moveto
+5217 641 5187 627 5163 615 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5164.44 611.8 moveto
+5154 610 lineto
+5161.04 617.92 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5164.44 611.8 moveto
+5154 610 lineto
+5161.04 617.92 lineto
+closepath stroke
+grestore
+% Contentapproval
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+12171 378 74.9 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+12124.34 373.8 moveto 93.31 (Contentapproval) alignedtext
+grestore
+% Contentapproval->Contentmanagement
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 12226 366 moveto
+12236 364 12246 362 12255 360 curveto
+12354 341 12379 340 12479 324 curveto
+12486 323 12494 321 12502 320 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12502.88 323.39 moveto
+12512 318 lineto
+12501.51 316.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12502.88 323.39 moveto
+12512 318 lineto
+12501.51 316.53 lineto
+closepath stroke
+grestore
+% Physicalgoodsfulfillment->Fulfillment
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 14173 361 moveto
+14197 350 14227 336 14251 325 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 14252.28 328.26 moveto
+14260 321 lineto
+14249.44 321.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 14252.28 328.26 moveto
+14260 321 lineto
+14249.44 321.86 lineto
+closepath stroke
+grestore
+% Expirydate
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+6811 450 52.91 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+6780.29 445.8 moveto 61.42 (Expirydate) alignedtext
+grestore
+% Expirydate->Creditcardinformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 6771 438 moveto
+6764 436 6756 434 6749 432 curveto
+6708 419 6662 406 6625 396 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 6625.58 392.52 moveto
+6615 393 lineto
+6623.57 399.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 6625.58 392.52 moveto
+6615 393 lineto
+6623.57 399.23 lineto
+closepath stroke
+grestore
+% Customerservice->Storefront
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 8091 231 moveto
+7792 219 6690 175 6419 164 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 6419 160.5 moveto
+6409 164 lineto
+6419 167.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 6419 160.5 moveto
+6409 164 lineto
+6419 167.5 lineto
+closepath stroke
+grestore
+% Presentationoptions
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+12351 378 87.21 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+12295.79 373.8 moveto 110.43 (Presentationoptions) alignedtext
+grestore
+% Presentationoptions->Contentmanagement
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 12399 363 moveto
+12435 352 12483 337 12521 324 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12522.43 327.23 moveto
+12531 321 lineto
+12520.42 320.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12522.43 327.23 moveto
+12531 321 lineto
+12520.42 320.52 lineto
+closepath stroke
+grestore
+% Searchengineregistration
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+13377 378 107.03 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+13307.42 373.8 moveto 139.16 (Searchengineregistration) alignedtext
+grestore
+% Searchengineregistration->Storeadministration
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 13301 365 moveto
+13287 363 13274 362 13261 360 curveto
+13088 338 13043 348 12871 324 curveto
+12864 323 12856 321 12849 320 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12849.49 316.53 moveto
+12839 318 lineto
+12848.12 323.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12849.49 316.53 moveto
+12839 318 lineto
+12848.12 323.39 lineto
+closepath stroke
+grestore
+% Customtaxgateway
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5145 522 85.06 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5091.35 517.8 moveto 107.31 (Customtaxgateway) alignedtext
+grestore
+% Customtaxgateway->Taxgateways
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5085 509 moveto
+5074 507 5062 505 5051 504 curveto
+4872 479 4824 498 4647 468 curveto
+4641 467 4636 466 4631 465 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4631.58 461.52 moveto
+4621 462 lineto
+4629.57 468.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4631.58 461.52 moveto
+4621 462 lineto
+4629.57 468.23 lineto
+closepath stroke
+grestore
+% Debitcard
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3613 522 49.11 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3585.4 517.8 moveto 55.19 (Debitcard) alignedtext
+grestore
+% Debitcard->Paymenttypes
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3577 509 moveto
+3570 507 3562 505 3555 504 curveto
+3419 475 3257 461 3165 455 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3165.3 451.51 moveto
+3155 454 lineto
+3164.6 458.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3165.3 451.51 moveto
+3155 454 lineto
+3164.6 458.48 lineto
+closepath stroke
+grestore
+% Handlingmultiplediscounts
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+11452 450 115.14 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+11376.17 445.8 moveto 151.65 (Handlingmultiplediscounts) alignedtext
+grestore
+% Handlingmultiplediscounts->Discounts
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 11506 434 moveto
+11543 423 11592 409 11636 396 curveto
+11639 395 11643 394 11646 393 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 11647.43 396.23 moveto
+11656 390 lineto
+11645.42 389.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 11647.43 396.23 moveto
+11656 390 lineto
+11645.42 389.52 lineto
+closepath stroke
+grestore
+% Inventorytracking->Businessmanagement
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 12801 220 moveto
+12758 209 12697 192 12651 180 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12651.58 176.52 moveto
+12641 177 lineto
+12649.57 183.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12651.58 176.52 moveto
+12641 177 lineto
+12649.57 183.23 lineto
+closepath stroke
+grestore
+% Services
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+980 450 43.24 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+956.29 445.8 moveto 47.42 (Services) alignedtext
+grestore
+% Services->Producttype
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 989 432 moveto
+993 424 997 414 1002 405 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1005.14 406.56 moveto
+1006 396 lineto
+998.74 403.72 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1005.14 406.56 moveto
+1006 396 lineto
+998.74 403.72 lineto
+closepath stroke
+grestore
+% Stockreplenishment->Procurement
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 13968 291 moveto
+13929 279 13874 262 13835 250 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 13835.58 246.52 moveto
+13825 247 lineto
+13833.57 253.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 13835.58 246.52 moveto
+13825 247 lineto
+13833.57 253.23 lineto
+closepath stroke
+grestore
+% Complexproductconfiguration
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+371 450 127.97 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+286.24 445.8 moveto 169.52 (Complexproductconfiguration) alignedtext
+grestore
+% Complexproductconfiguration->Productvariants
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 371 432 moveto
+371 424 371 415 371 406 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 374.5 406 moveto
+371 396 lineto
+367.5 406 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 374.5 406 moveto
+371 396 lineto
+367.5 406 lineto
+closepath stroke
+grestore
+% Targetingcriteria->Targeting
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 10732 288 moveto
+10732 280 10732 271 10732 262 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 10735.5 262 moveto
+10732 252 lineto
+10728.5 262 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 10735.5 262 moveto
+10732 252 lineto
+10728.5 262 lineto
+closepath stroke
+grestore
+% Questionandfeedbacktracking
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+8863 378 125.84 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+8779.42 373.8 moveto 167.15 (Questionandfeedbacktracking) alignedtext
+grestore
+% Questionandfeedbacktracking->Questionandfeedbackforms
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 8805 362 moveto
+8764 351 8711 336 8669 325 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 8669.58 321.52 moveto
+8659 322 lineto
+8667.57 328.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 8669.58 321.52 moveto
+8659 322 lineto
+8667.57 328.23 lineto
+closepath stroke
+grestore
+% Eletronicpage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3081 378 64.16 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3042.13 373.8 moveto 77.74 (Eletronicpage) alignedtext
+grestore
+% Eletronicpage->Orderconfirmation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3120 364 moveto
+3151 353 3193 337 3227 325 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3228.43 328.23 moveto
+3237 322 lineto
+3226.42 321.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3228.43 328.23 moveto
+3237 322 lineto
+3226.42 321.52 lineto
+closepath stroke
+grestore
+% CustomDemographicfield
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+9618 450 110.84 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+9545.29 445.8 moveto 145.41 (CustomDemographicfield) alignedtext
+grestore
+% CustomDemographicfield->Demographics
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 9618 432 moveto
+9618 424 9618 415 9618 406 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 9621.5 406 moveto
+9618 396 lineto
+9614.5 406 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 9621.5 406 moveto
+9618 396 lineto
+9614.5 406 lineto
+closepath stroke
+grestore
+% SkipJack
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3726 522 45.9 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3700.73 517.8 moveto 50.55 (SkipJack) alignedtext
+grestore
+% SkipJack->Paymentgateways
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3759 510 moveto
+3767 507 3774 505 3781 504 curveto
+3947 469 3994 492 4163 468 curveto
+4170 467 4177 466 4184 465 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4184.88 468.39 moveto
+4194 463 lineto
+4183.51 461.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4184.88 468.39 moveto
+4194 463 lineto
+4183.51 461.53 lineto
+closepath stroke
+grestore
+% Surcharge
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4637 594 50.18 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4608.63 589.8 moveto 56.75 (Surcharge) alignedtext
+grestore
+% Surcharge->Ammountspecification
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4657 577 moveto
+4668 568 4682 556 4694 546 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4696.1 548.8 moveto
+4702 540 lineto
+4691.9 543.2 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4696.1 548.8 moveto
+4702 540 lineto
+4691.9 543.2 lineto
+closepath stroke
+grestore
+% Cartsummarypage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+3955 378 81.83 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+3903.68 373.8 moveto 102.63 (Cartsummarypage) alignedtext
+grestore
+% Cartsummarypage->Shoppingcart
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 3955 360 moveto
+3955 352 3955 343 3955 334 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3958.5 334 moveto
+3955 324 lineto
+3951.5 334 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3958.5 334 moveto
+3955 324 lineto
+3951.5 334 lineto
+closepath stroke
+grestore
+% Registeredcheckout->Checkouttype
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5769 438 moveto
+5758 436 5747 434 5737 432 curveto
+5635 414 5608 416 5508 396 curveto
+5503 395 5498 394 5492 392 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5492.49 388.53 moveto
+5482 390 lineto
+5491.12 395.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5492.49 388.53 moveto
+5482 390 lineto
+5491.12 395.39 lineto
+closepath stroke
+grestore
+% Producttype->ProductInformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1058 366 moveto
+1066 364 1074 362 1081 360 curveto
+1144 345 1215 330 1267 320 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1267.88 323.39 moveto
+1277 318 lineto
+1266.51 316.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1267.88 323.39 moveto
+1277 318 lineto
+1266.51 316.53 lineto
+closepath stroke
+grestore
+% Paymentoptions->Checkout
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4336 363 moveto
+4371 351 4420 334 4455 321 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4456.43 324.23 moveto
+4465 318 lineto
+4454.42 317.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4456.43 324.23 moveto
+4465 318 lineto
+4454.42 317.52 lineto
+closepath stroke
+grestore
+% Percentage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4758 594 52.89 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4727.3 589.8 moveto 61.41 (Percentage) alignedtext
+grestore
+% Percentage->Ammountspecification
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4749 576 moveto
+4745 568 4741 558 4736 549 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4739.26 547.72 moveto
+4732 540 lineto
+4732.86 550.56 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4739.26 547.72 moveto
+4732 540 lineto
+4732.86 550.56 lineto
+closepath stroke
+grestore
+% Partnertracking
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+7929 378 70.06 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+7885.85 373.8 moveto 86.29 (Partnertracking) alignedtext
+grestore
+% Partnertracking->Shipmentstatustracking
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 7941 360 moveto
+7947 352 7954 342 7960 332 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 7962.8 334.1 moveto
+7966 324 lineto
+7957.2 329.9 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 7962.8 334.1 moveto
+7966 324 lineto
+7957.2 329.9 lineto
+closepath stroke
+grestore
+% Businessmanagement->eShop
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 12492 160 moveto
+12023 149 9937 99 9600 91 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 9600 87.5 moveto
+9590 91 lineto
+9600 94.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 9600 87.5 moveto
+9590 91 lineto
+9600 94.5 lineto
+closepath stroke
+grestore
+% Advertisementmanagementinterface
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+10233 594 151 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+10131.55 589.8 moveto 202.91 (Advertisementmanagementinterface) alignedtext
+grestore
+% Advertisementmanagementinterface->Paidadvertisements
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 10233 576 moveto
+10233 568 10233 559 10233 550 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 10236.5 550 moveto
+10233 540 lineto
+10229.5 550 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 10236.5 550 moveto
+10233 540 lineto
+10229.5 550 lineto
+closepath stroke
+grestore
+% ThreeDimage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+584 594 64.12 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+545.52 589.8 moveto 76.96 (ThreeDimage) alignedtext
+grestore
+% ThreeDimage->Image
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 600 577 moveto
+609 567 619 556 629 546 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 632.05 547.83 moveto
+636 538 lineto
+626.78 543.22 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 632.05 547.83 moveto
+636 538 lineto
+626.78 543.22 lineto
+closepath stroke
+grestore
+% Responsetracking
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+9312 450 79.19 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+9262.24 445.8 moveto 99.53 (Responsetracking) alignedtext
+grestore
+% Responsetracking->Emails
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 9352 434 moveto
+9383 422 9426 406 9456 394 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 9458.02 396.96 moveto
+9466 390 lineto
+9455.42 390.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 9458.02 396.96 moveto
+9466 390 lineto
+9455.42 390.46 lineto
+closepath stroke
+grestore
+% None
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+6415 378 31.95 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+6399.84 373.8 moveto 30.32 (None) alignedtext
+grestore
+% None->Registrationenforcement
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 6409 360 moveto
+6407 352 6404 343 6401 334 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 6404.23 332.57 moveto
+6398 324 lineto
+6397.52 334.58 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 6404.23 332.57 moveto
+6398 324 lineto
+6397.52 334.58 lineto
+closepath stroke
+grestore
+% Contenttype->Dynamiccontent
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 6024 364 moveto
+6057 353 6104 337 6140 324 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 6141.43 327.23 moveto
+6150 321 lineto
+6139.42 320.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 6141.43 327.23 moveto
+6150 321 lineto
+6139.42 320.52 lineto
+closepath stroke
+grestore
+% Resolution->Rulebasedtaxation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5120 648 moveto
+5120 640 5120 631 5120 622 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5123.5 622 moveto
+5120 612 lineto
+5116.5 622 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5123.5 622 moveto
+5120 612 lineto
+5116.5 622 lineto
+closepath stroke
+grestore
+% Advancedsearch
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+75 378 74.84 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+28.75 373.8 moveto 92.5 (Advancedsearch) alignedtext
+grestore
+% Advancedsearch->Searching
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 109 362 moveto
+132 351 162 337 186 325 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 187.28 328.26 moveto
+195 321 lineto
+184.44 321.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 187.28 328.26 moveto
+195 321 lineto
+184.44 321.86 lineto
+closepath stroke
+grestore
+% Availability
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+713 378 57.17 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+679.56 373.8 moveto 66.88 (Availability) alignedtext
+grestore
+% Availability->ProductInformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 754 365 moveto
+763 363 771 361 779 360 curveto
+985 324 1040 351 1246 324 curveto
+1254 323 1262 322 1270 321 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1270.88 324.39 moveto
+1280 319 lineto
+1269.51 317.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1270.88 324.39 moveto
+1280 319 lineto
+1269.51 317.53 lineto
+closepath stroke
+grestore
+% Quality
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1930 522 40 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+1909 517.8 moveto 41.99 (Quality) alignedtext
+grestore
+% Quality->Sortingfilters
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1941 505 moveto
+1946 497 1952 486 1958 477 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1961.2 478.44 moveto
+1963 468 lineto
+1955.08 475.04 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1961.2 478.44 moveto
+1963 468 lineto
+1955.08 475.04 lineto
+closepath stroke
+grestore
+% Ratefactors->Pricing
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2619 950 moveto
+2779 936 3252 899 3406 886 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3406.4 889.48 moveto
+3416 885 lineto
+3405.7 882.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3406.4 889.48 moveto
+3416 885 lineto
+3405.7 882.51 lineto
+closepath stroke
+grestore
+% Multiplecatalogs
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1161 306 75.94 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+1113.95 301.8 moveto 94.09 (Multiplecatalogs) alignedtext
+grestore
+% Multiplecatalogs->Catalog
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1216 293 moveto
+1226 291 1236 290 1246 288 curveto
+1383 265 1421 283 1556 252 curveto
+1559 251 1562 250 1565 249 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1566.43 252.23 moveto
+1575 246 lineto
+1564.42 245.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1566.43 252.23 moveto
+1575 246 lineto
+1564.42 245.52 lineto
+closepath stroke
+grestore
+% Coupons
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+11630 450 44.88 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+11605.11 445.8 moveto 49.78 (Coupons) alignedtext
+grestore
+% Coupons->Discounts
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 11645 433 moveto
+11653 424 11662 413 11671 404 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 11674.05 405.83 moveto
+11678 396 lineto
+11668.78 401.22 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 11674.05 405.83 moveto
+11678 396 lineto
+11668.78 401.22 lineto
+closepath stroke
+grestore
+% Searching->Catalog
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 274 305 moveto
+499 300 1429 277 1556 252 curveto
+1560 251 1563 251 1567 250 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1568.28 253.26 moveto
+1576 246 lineto
+1565.44 246.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1568.28 253.26 moveto
+1576 246 lineto
+1565.44 246.86 lineto
+closepath stroke
+grestore
+% Frauddetection
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4085 450 68.96 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4043.01 445.8 moveto 83.97 (Frauddetection) alignedtext
+grestore
+% Frauddetection->Paymentoptions
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4127 436 moveto
+4160 425 4206 408 4242 396 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4243.43 399.23 moveto
+4252 393 lineto
+4241.42 392.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4243.43 399.23 moveto
+4252 393 lineto
+4241.42 392.52 lineto
+closepath stroke
+grestore
+% FedEX
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5682 882 37.89 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5662.17 877.8 moveto 39.66 (FedEX) alignedtext
+grestore
+% FedEX->Shippinggateways
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5653 870 moveto
+5647 868 5641 866 5635 864 curveto
+5572 845 5499 832 5445 822 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5445.49 818.53 moveto
+5435 820 lineto
+5444.12 825.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5445.49 818.53 moveto
+5435 820 lineto
+5444.12 825.39 lineto
+closepath stroke
+grestore
+% CertiTAX
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5298 522 50.19 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5269.62 517.8 moveto 56.76 (CertiTAX) alignedtext
+grestore
+% CertiTAX->Taxgateways
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5262 509 moveto
+5254 507 5246 505 5239 504 curveto
+4979 457 4907 508 4647 468 curveto
+4641 467 4636 466 4631 465 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4631.58 461.52 moveto
+4621 462 lineto
+4629.57 468.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4631.58 461.52 moveto
+4621 462 lineto
+4629.57 468.23 lineto
+closepath stroke
+grestore
+% Demographics->Registrationinformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 9571 365 moveto
+9561 363 9551 361 9542 360 curveto
+9173 312 8240 333 7869 324 curveto
+7694 319 7490 313 7367 309 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 7367 305.5 moveto
+7357 309 lineto
+7367 312.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 7367 305.5 moveto
+7357 309 lineto
+7367 312.5 lineto
+closepath stroke
+grestore
+% Demographics->Targetingcriteria
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 9665 365 moveto
+9674 363 9684 361 9694 360 curveto
+10113 302 10226 376 10647 324 curveto
+10654 323 10661 322 10668 321 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 10668.88 324.39 moveto
+10678 319 lineto
+10667.51 317.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 10668.88 324.39 moveto
+10678 319 lineto
+10667.51 317.53 lineto
+closepath stroke
+grestore
+% Categories->Catalog
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1570 179 moveto
+1577 187 1586 198 1592 208 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1589.2 210.1 moveto
+1598 216 lineto
+1594.8 205.9 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1589.2 210.1 moveto
+1598 216 lineto
+1594.8 205.9 lineto
+closepath stroke
+grestore
+% Mediafiles->Associatedassets
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 766 435 moveto
+783 425 807 411 826 400 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 827.96 402.92 moveto
+835 395 lineto
+824.56 396.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 827.96 402.92 moveto
+835 395 lineto
+824.56 396.8 lineto
+closepath stroke
+grestore
+% Userbehaviourtracking->Storefront
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 6002 222 moveto
+6087 208 6226 184 6304 172 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 6304.88 175.39 moveto
+6314 170 lineto
+6303.51 168.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 6304.88 175.39 moveto
+6314 170 lineto
+6303.51 168.53 lineto
+closepath stroke
+grestore
+% Domainnamesetup
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+13051 378 82.94 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+12998.51 373.8 moveto 104.97 (Domainnamesetup) alignedtext
+grestore
+% Domainnamesetup->Storeadministration
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 12998 364 moveto
+12953 352 12887 335 12840 323 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12840.58 319.52 moveto
+12830 320 lineto
+12838.57 326.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12840.58 319.52 moveto
+12830 320 lineto
+12838.57 326.23 lineto
+closepath stroke
+grestore
+% Purchasevalue
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+11507 522 66.81 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+11466.57 517.8 moveto 80.85 (Purchasevalue) alignedtext
+grestore
+% Purchasevalue->Graduationby
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 11553 509 moveto
+11595 497 11657 479 11702 466 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 11703.43 469.23 moveto
+11712 463 lineto
+11701.42 462.52 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 11703.43 469.23 moveto
+11712 463 lineto
+11701.42 462.52 lineto
+closepath stroke
+grestore
+% Externalreferringpages
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+5810 378 99.01 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+5745.87 373.8 moveto 128.26 (Externalreferringpages) alignedtext
+grestore
+% Externalreferringpages->Behaviourtracked
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 5816 360 moveto
+5819 352 5822 342 5825 334 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 5828.48 334.58 moveto
+5828 324 lineto
+5821.77 332.57 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 5828.48 334.58 moveto
+5828 324 lineto
+5821.77 332.57 lineto
+closepath stroke
+grestore
+% Previouslyvisitedpages
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+10827 378 100.08 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+10762.46 373.8 moveto 129.09 (Previouslyvisitedpages) alignedtext
+grestore
+% Previouslyvisitedpages->Targetingcriteria
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 10804 360 moveto
+10792 351 10776 340 10763 329 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 10765.1 326.2 moveto
+10755 323 lineto
+10760.9 331.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 10765.1 326.2 moveto
+10755 323 lineto
+10760.9 331.8 lineto
+closepath stroke
+grestore
+% Staticcontent
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+6039 306 60.96 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+6002.45 301.8 moveto 73.09 (Staticcontent) alignedtext
+grestore
+% Staticcontent->Homepage
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 6072 291 moveto
+6096 280 6128 265 6153 253 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 6154.28 256.26 moveto
+6162 249 lineto
+6151.44 249.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 6154.28 256.26 moveto
+6162 249 lineto
+6151.44 249.86 lineto
+closepath stroke
+grestore
+% Productreturns
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+8166 306 67.89 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+8124.79 301.8 moveto 82.42 (Productreturns) alignedtext
+grestore
+% Productreturns->Customerservice
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 8166 288 moveto
+8166 280 8166 271 8166 262 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 8169.5 262 moveto
+8166 252 lineto
+8162.5 262 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 8169.5 262 moveto
+8166 252 lineto
+8162.5 262 lineto
+closepath stroke
+grestore
+% Weight
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2112 1026 38.96 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2091.39 1021.8 moveto 41.21 (Weight) alignedtext
+grestore
+% Weight->ProductInformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2075 1020 moveto
+1978 1004 1724 956 1724 882 curveto
+1724 882 1724 882 1724 450 curveto
+1724 409 1735 388 1705 360 curveto
+1686 342 1534 324 1432 314 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1432.3 310.51 moveto
+1422 313 lineto
+1431.6 317.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1432.3 310.51 moveto
+1422 313 lineto
+1431.6 317.48 lineto
+closepath stroke
+grestore
+% Weight->Ratefactors
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2149 1020 moveto
+2227 1007 2410 979 2505 964 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 2505.88 967.39 moveto
+2515 962 lineto
+2504.51 960.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 2505.88 967.39 moveto
+2515 962 lineto
+2504.51 960.53 lineto
+closepath stroke
+grestore
+% Percentagediscount
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+11828 522 86.12 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+11773.58 517.8 moveto 108.85 (Percentagediscount) alignedtext
+grestore
+% Percentagediscount->Award
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 11840 504 moveto
+11845 496 11852 486 11858 476 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 11860.8 478.1 moveto
+11864 468 lineto
+11855.2 473.9 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 11860.8 478.1 moveto
+11864 468 lineto
+11855.2 473.9 lineto
+closepath stroke
+grestore
+% Paymentgateways->Paymentoptions
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4263 432 moveto
+4268 424 4273 414 4279 405 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4282.2 406.44 moveto
+4284 396 lineto
+4276.08 403.04 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4282.2 406.44 moveto
+4284 396 lineto
+4276.08 403.04 lineto
+closepath stroke
+grestore
+% Commissiontracking
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+11761 306 91.01 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+11702.67 301.8 moveto 116.66 (Commissiontracking) alignedtext
+grestore
+% Commissiontracking->Affiliates
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 11804 290 moveto
+11837 278 11881 262 11913 251 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 11915.02 253.96 moveto
+11923 247 lineto
+11912.42 247.46 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 11915.02 253.96 moveto
+11923 247 lineto
+11912.42 247.46 lineto
+closepath stroke
+grestore
+% Age
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+9774 450 27.12 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+9762.34 445.8 moveto 23.32 (Age) alignedtext
+grestore
+% Age->Demographics
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 9753 439 moveto
+9748 437 9743 434 9738 432 curveto
+9714 420 9686 408 9663 397 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 9664.56 393.86 moveto
+9654 393 lineto
+9661.72 400.26 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 9664.56 393.86 moveto
+9654 393 lineto
+9661.72 400.26 lineto
+closepath stroke
+grestore
+% Productdatabasemanagement
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+12579 378 123.16 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+12497.36 373.8 moveto 163.27 (Productdatabasemanagement) alignedtext
+grestore
+% Productdatabasemanagement->Contentmanagement
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 12579 360 moveto
+12579 352 12579 343 12579 334 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12582.5 334 moveto
+12579 324 lineto
+12575.5 334 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12582.5 334 moveto
+12579 324 lineto
+12575.5 334 lineto
+closepath stroke
+grestore
+% Detailedinformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+549 378 88.84 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+492.24 373.8 moveto 113.52 (Detailedinformation) alignedtext
+grestore
+% Detailedinformation->ProductInformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 612 365 moveto
+624 363 636 361 647 360 curveto
+912 327 982 356 1246 324 curveto
+1254 323 1262 322 1270 321 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1270.88 324.39 moveto
+1280 319 lineto
+1269.51 317.53 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1270.88 324.39 moveto
+1280 319 lineto
+1269.51 317.53 lineto
+closepath stroke
+grestore
+% Contentmanagement->Administration
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 12581 288 moveto
+12582 280 12582 271 12583 262 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12586.49 262.3 moveto
+12584 252 lineto
+12579.52 261.6 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12586.49 262.3 moveto
+12584 252 lineto
+12579.52 261.6 lineto
+closepath stroke
+grestore
+% Sellstrategies->Targetingmechanisms
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 11960 370 moveto
+11890 359 11766 341 11661 324 curveto
+11653 323 11645 321 11637 320 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 11637.49 316.53 moveto
+11627 318 lineto
+11636.12 323.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 11637.49 316.53 moveto
+11627 318 lineto
+11636.12 323.39 lineto
+closepath stroke
+grestore
+% Restrictedaccess
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+9220 378 74.84 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+9173.75 373.8 moveto 92.51 (Restrictedaccess) alignedtext
+grestore
+% Restrictedaccess->Permissions
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 9201 360 moveto
+9191 351 9180 340 9169 330 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 9171.55 327.6 moveto
+9162 323 lineto
+9166.6 332.55 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 9171.55 327.6 moveto
+9162 323 lineto
+9166.6 332.55 lineto
+closepath stroke
+grestore
+% Thumbnail
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+719 594 52.92 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+688.28 589.8 moveto 61.44 (Thumbnail) alignedtext
+grestore
+% Thumbnail->Image
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 703 577 moveto
+694 567 683 556 673 545 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 675.55 542.6 moveto
+666 538 lineto
+670.6 547.55 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 675.55 542.6 moveto
+666 538 lineto
+670.6 547.55 lineto
+closepath stroke
+grestore
+% Bannerads
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+11262 522 51.79 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+11232.46 517.8 moveto 59.09 (Bannerads) alignedtext
+grestore
+% Bannerads->Advertisementtypes
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 11254 504 moveto
+11250 496 11246 486 11243 478 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 11245.96 475.98 moveto
+11239 468 lineto
+11239.46 478.58 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 11245.96 475.98 moveto
+11239 468 lineto
+11239.46 478.58 lineto
+closepath stroke
+grestore
+% Customerreviews
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+1168 378 78.11 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+1119.02 373.8 moveto 97.97 (Customerreviews) alignedtext
+grestore
+% Customerreviews->ProductInformation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 1206 362 moveto
+1232 351 1266 337 1294 326 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 1295.28 329.26 moveto
+1303 322 lineto
+1292.44 322.86 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 1295.28 329.26 moveto
+1303 322 lineto
+1292.44 322.86 lineto
+closepath stroke
+grestore
+% Customtaxation->Taxationoptions
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4442 433 moveto
+4452 423 4464 412 4475 402 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4477.4 404.55 moveto
+4482 395 lineto
+4472.45 399.6 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4477.4 404.55 moveto
+4482 395 lineto
+4472.45 399.6 lineto
+closepath stroke
+grestore
+% Wishlist->Storefront
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 9101 233 moveto
+8781 225 6792 173 6419 163 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 6419 159.5 moveto
+6409 163 lineto
+6419 166.5 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 6419 159.5 moveto
+6409 163 lineto
+6419 166.5 lineto
+closepath stroke
+grestore
+% Targetingmechanisms->Targeting
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 11469 298 moveto
+11300 283 10931 252 10789 239 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 10789.3 235.51 moveto
+10779 238 lineto
+10788.6 242.48 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 10789.3 235.51 moveto
+10779 238 lineto
+10788.6 242.48 lineto
+closepath stroke
+grestore
+% Fixedratetaxation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+4942 594 78.11 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+4893.02 589.8 moveto 97.97 (Fixedratetaxation) alignedtext
+grestore
+% Fixedratetaxation->Type
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4959 576 moveto
+4968 567 4978 555 4988 545 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4990.4 547.55 moveto
+4995 538 lineto
+4985.45 542.6 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4990.4 547.55 moveto
+4995 538 lineto
+4985.45 542.6 lineto
+closepath stroke
+grestore
+% Purchasevaluescope
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+12487 522 88.79 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+12430.64 517.8 moveto 112.73 (Purchasevaluescope) alignedtext
+grestore
+% Purchasevaluescope->Discountconditions
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 12422 510 moveto
+12411 508 12400 506 12389 504 curveto
+12299 487 12277 484 12188 468 curveto
+12181 467 12174 465 12167 464 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12167.49 460.53 moveto
+12157 462 lineto
+12166.12 467.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12167.49 460.53 moveto
+12157 462 lineto
+12166.12 467.39 lineto
+closepath stroke
+grestore
+% Education
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+9869 450 50.19 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+9840.62 445.8 moveto 56.76 (Education) alignedtext
+grestore
+% Education->Demographics
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 9831 438 moveto
+9824 436 9817 434 9810 432 curveto
+9764 418 9712 404 9675 394 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 9675.58 390.52 moveto
+9665 391 lineto
+9673.57 397.23 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 9675.58 390.52 moveto
+9665 391 lineto
+9673.57 397.23 lineto
+closepath stroke
+grestore
+% Type->Customtaxation
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 4988 510 moveto
+4982 507 4976 505 4971 504 curveto
+4769 452 4710 498 4505 468 curveto
+4499 467 4493 466 4486 465 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 4486.49 461.53 moveto
+4476 463 lineto
+4485.12 468.39 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 4486.49 461.53 moveto
+4476 463 lineto
+4485.12 468.39 lineto
+closepath stroke
+grestore
+% COD
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+2579 522 30.92 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+2564.23 517.8 moveto 29.55 (COD) alignedtext
+grestore
+% COD->Paymenttypes
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 2603 510 moveto
+2608 508 2614 505 2619 504 curveto
+2693 484 2905 465 3018 456 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 3018.4 459.48 moveto
+3028 455 lineto
+3017.7 452.51 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 3018.4 459.48 moveto
+3028 455 lineto
+3017.7 452.51 lineto
+closepath stroke
+grestore
+% Orderstatus
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+8250 450 55.05 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+8217.74 445.8 moveto 64.53 (Orderstatus) alignedtext
+grestore
+% Orderstatus->Filteringcriteria
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 8250 432 moveto
+8250 424 8250 415 8250 406 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 8253.5 406 moveto
+8250 396 lineto
+8246.5 406 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 8253.5 406 moveto
+8250 396 lineto
+8246.5 406 lineto
+closepath stroke
+grestore
+% Storeadministration->Administration
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 12733 290 moveto
+12704 279 12665 264 12634 253 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 12635.56 249.86 moveto
+12625 249 lineto
+12632.72 256.26 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 12635.56 249.86 moveto
+12625 249 lineto
+12632.72 256.26 lineto
+closepath stroke
+grestore
+% Registrationenforcement->Registration
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 6424 289 moveto
+6443 279 6467 265 6488 255 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 6489.96 257.92 moveto
+6497 250 lineto
+6486.56 251.8 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 6489.96 257.92 moveto
+6497 250 lineto
+6486.56 251.8 lineto
+closepath stroke
+grestore
+% Affiliateregistration
+gsave
+1 setlinewidth
+0.000 0.000 0.000 nodecolor
+11957 306 87.22 18 ellipse_path stroke
+0.000 0.000 0.000 nodecolor
+14 /Times-Roman set_font
+11901.41 301.8 moveto 111.18 (Affiliateregistration) alignedtext
+grestore
+% Affiliateregistration->Affiliates
+gsave
+1 setlinewidth
+0.000 0.000 0.000 edgecolor
+newpath 11957 288 moveto
+11957 280 11957 271 11957 262 curveto
+stroke
+0.000 0.000 0.000 edgecolor
+newpath 11960.5 262 moveto
+11957 252 lineto
+11953.5 262 lineto
+closepath fill
+1 setlinewidth
+solid
+0.000 0.000 0.000 edgecolor
+newpath 11960.5 262 moveto
+11957 252 lineto
+11953.5 262 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+end
+restore
+%%EOF

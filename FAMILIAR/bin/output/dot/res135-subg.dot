@@ -1,0 +1,10 @@
+graph G {
+  Search;
+  0;
+  1;
+  Categorization;
+  UsersInteraction;
+  Search -- 1;
+  Categorization -- 1;
+  UsersInteraction -- 1;
+}

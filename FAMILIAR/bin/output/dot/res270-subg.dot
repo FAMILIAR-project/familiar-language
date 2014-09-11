@@ -1,0 +1,9 @@
+graph G {
+  Stack;
+  Float;
+  0;
+  1;
+  Stack -- 1;
+  Float -- Stack;
+  Float -- 1;
+}

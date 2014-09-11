@@ -1,0 +1,72 @@
+<feature_model name="laptop">
+<meta>
+<data name="description"/>
+<data name="creator"/>
+<data name="address"/>
+<data name="email"/>
+<data name="phone"/>
+<data name="website"/>
+<data name="organization"/>
+<data name="department"/>
+<data name="date"/>
+<data name="reference"/>
+</meta>
+<feature_tree>
+:r Laptop(_r)
+	:m Screen(_Screen)
+		:g [1,1]
+			: s15(_s15)
+			: s12(_s12)
+			: s17(_s17)
+	:o Warranty(_Warranty)
+		:g [1,1]
+			: year3theft(_year3theft)
+			: year2theft(_year2theft)
+	:m CG(_CG)
+		:g [1,1]
+			: Integrated(_Integrated)
+				:m GMA(_GMA)
+			: Standalone(_Standalone)
+				:g [1,1]
+					: Nvidia9400M(_Nvidia9400M)
+					: Nvidia8400M(_Nvidia8400M)
+					: Nvdia8600M(_Nvdia8600M)
+					: Nvidia3670(_Nvidia3670)
+	:m Battery(_Battery)
+		:g [1,1]
+			: cells6(_cells6)
+			: cells9(_cells9)
+	:m HDD(_HDD)
+		:g [1,1]
+			: WD160Go5400tr(_WD160Go5400tr)
+			: WD500Go(_WD500Go)
+				:g [1,1]
+					: S7200tr(_S7200tr)
+					: S5400tr(_S5400tr)
+	:m RAM(_RAM)
+		:g [1,1]
+			: Corsair4Go1030(_Corsair4Go1030)
+			: Kingstom4Go666(_Kingstom4Go666)
+			: Kingstom2Go666(_Kingstom2Go666)
+	:m CPU(_CPU)
+		:g [1,1]
+			: LowTDP(_LowTDP)
+				:g [1,1]
+					: Atom270(_Atom270)
+					: AtomZ320(_AtomZ320)
+			: HighTDP(_HighTDP)
+				:g [1,1]
+					: Core2T6600(_Core2T6600)
+					: Core2P7350(_Core2P7350)
+	:m Connectivity(_Connectivity)
+		:o Bluetooth(_Bluetooth)
+		:m Wifi(_Wifi)
+			:g [1,1]
+				: N(_N)
+				: ABG(_ABG)
+</feature_tree>
+<constraints>
+C1: ~_LowTDP or ~_Standalone 
+C2: ~_Standalone or _HighTDP 
+</constraints>
+</feature_model>

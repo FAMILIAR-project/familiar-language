@@ -1,0 +1,1 @@
+FM (FAMEDBMS: OS [DebugLogging] Storage BufferManager ; OS: (Win|Nut_OS) ; Storage: (BPLUSTree|Unindexed) API ; BufferManager: (InMemory|Persistent) ; API: [Put] [Get] [Delete] ; Persistent: PageReplication MemoryAllocation ; PageReplication: (LFU|LRU) ; MemoryAllocation: (Dynamic|Static) ; )

@@ -1,0 +1,8 @@
+graph G {
+  Camera;
+  UMTS;
+  0;
+  1;
+  Camera -- 1;
+  UMTS -- 1;
+}

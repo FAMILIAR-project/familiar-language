@@ -1,0 +1,18 @@
+graph G {
+  Rich;
+  Bluetooth;
+  Thin;
+  CachePolicy;
+  Local;
+  DB;
+  0;
+  1;
+  Local -- DB;
+  CachePolicy -- DB;
+  DB -- 1;
+  Rich -- 1;
+  Bluetooth -- 1;
+  Thin -- 1;
+  CachePolicy -- 1;
+  Local -- 1;
+}

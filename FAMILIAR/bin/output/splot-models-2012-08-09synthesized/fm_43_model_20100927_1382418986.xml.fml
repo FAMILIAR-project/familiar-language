@@ -1,0 +1,1 @@
+FM (Phone: (FeaturePhone|SmartPhone)+ ; FeaturePhone: OS ; SmartPhone: OS_Zero ; OS: (Android|WindowMobile|Mac)+ (WIPI|Brew)+ ; )

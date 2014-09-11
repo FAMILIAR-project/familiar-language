@@ -1,0 +1,10 @@
+digraph G {
+  Anonymized;
+  Nifti;
+  HeaderCapability;
+  ScanDate;
+  Format;
+  ScanDate -> HeaderCapability;
+  HeaderCapability -> Format;
+  Anonymized -> HeaderCapability;
+}

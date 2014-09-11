@@ -1,0 +1,8 @@
+graph G {
+  JavaSupport;
+  Messaging;
+  0;
+  1;
+  JavaSupport -- 1;
+  Messaging -- 1;
+}
