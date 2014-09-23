@@ -1,13 +1,2 @@
 eclipse.preferences.version=1
-encoding//src/fr/familiar/attributedfm/Dependency.java=UTF-8
-encoding//src/fr/familiar/attributedfm/ExcludesDependency.java=UTF-8
-encoding//src/fr/familiar/attributedfm/Relation.java=UTF-8
-encoding//src/fr/familiar/attributedfm/RequiresDependency.java=UTF-8
-encoding//src/fr/familiar/fm/converter/SPLOTtoFML.java=UTF-8
-encoding//src/fr/familiar/interpreter/VariableNotExistingException.java=ISO-8859-1
-encoding//src/fr/familiar/operations/BDDMerger.java=UTF-8
-encoding//src/fr/familiar/parser/FMBuilder.java=UTF-8
-encoding//src/fr/familiar/test/FMLMergeOperationsTest.java=UTF-8
-encoding//src/fr/familiar/test/FMLModelTypesSurveyTest.java=UTF-8
-encoding//src/fr/familiar/variable/FeatureName.java=UTF-8
 encoding/<project>=ISO-8859-1
