@@ -16,6 +16,7 @@
     <module>../SPLAR-plugin</module>
     <module>../TVLPackagedAsMock</module>
     <module>../FAMILIAR</module>
+    <module>../familiar.test</module>
   </modules>
 
   <properties>
