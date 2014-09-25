@@ -17,7 +17,7 @@
  * along with FAMILIAR.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package fr.familiar.regression;
+package fr.familiar.variable;
 
 import splar.core.heuristics.FTPreOrderSortedECTraversalHeuristic;
 import splar.core.heuristics.VariableOrderingHeuristic;

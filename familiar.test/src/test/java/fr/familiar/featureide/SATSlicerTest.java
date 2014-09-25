@@ -48,6 +48,7 @@ import fr.familiar.operations.featureide.SlicerSATFormula;
 import fr.familiar.operations.featureide.SlicerSATFormulaWithFeatureIDE;
 import fr.familiar.variable.Comparison;
 import fr.familiar.variable.FeatureModelVariable;
+import fr.familiar.fm.featureide.SATFeatureIDEFormula;
 
 public class SATSlicerTest extends FMLSlicerUtilityTest {
 

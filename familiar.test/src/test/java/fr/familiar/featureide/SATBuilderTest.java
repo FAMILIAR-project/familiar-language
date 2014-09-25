@@ -33,6 +33,7 @@ import fr.familiar.operations.CountingStrategy;
 import fr.familiar.operations.featureide.SATBuilder;
 import fr.familiar.operations.featureide.SATFMLFormula;
 import fr.familiar.variable.FeatureModelVariable;
+import fr.familiar.fm.featureide.SATFeatureIDEFormula;
 
 /**
  * @author mathieuacher

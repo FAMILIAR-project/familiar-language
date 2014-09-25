@@ -21,7 +21,6 @@ package fr.familiar.fm.featureide;
 
 import de.ovgu.featureide.fm.core.FeatureModel;
 import de.ovgu.featureide.fm.core.configuration.Configuration;
-import fr.familiar.featureide.SATFeatureIDEFormula;
 
 public class FeatureIDEOperations {
 

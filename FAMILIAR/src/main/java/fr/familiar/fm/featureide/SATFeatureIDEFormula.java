@@ -17,35 +17,35 @@
  * along with FAMILIAR.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package fr.familiar;
+package fr.familiar.fm.featureide;
 
-import static org.junit.Assert.assertEquals;
-import net.sf.javabdd.BDD;
+import org.prop4j.Node;
 
-import org.junit.Test;
-
+import de.ovgu.featureide.fm.core.editing.NodeCreator;
+import fr.familiar.fm.featureide.FMLtoFeatureIDE;
+import fr.familiar.operations.featureide.SATFormula;
 import fr.familiar.variable.FeatureModelVariable;
+import gsd.synthesis.Expression;
 
-public class BDDPropertyTest extends FMLTest {
+public class SATFeatureIDEFormula extends SATFormula {
 
-	@Test
-	public void testOrBDD() throws Exception {
+	public SATFeatureIDEFormula(FeatureModelVariable fmv) {
+		super(fmv);
+	}
 
-		FeatureModelVariable fm1 = FM("fm1",
-				"FM (A : B [C] [D] ; D : E F G ; E : (I|J|K); J : (M|N|O)+ ; )");
+	public SATFeatureIDEFormula(Node n) {
+		super(n);
+	}
 
-		BDD b1 = fm1.getFormula().getBDD();
-		BDD b2 = b1.and(b1);
-		assertEquals(b1, b2);
+	@Override
+	public Node mkNode(FeatureModelVariable fmv) {
+		return NodeCreator.createNodes(new FMLtoFeatureIDE(fmv).convert());
+	}
 
-		BDD b3 = fm1.getSPLOTFormulaAligned(_builder).getBDD();
-		BDD b4 = b3.and(b3);
-		assertEquals(b3, b4);
-
-		BDD b5 = fm1.getSPLOTFormula().getBDD();
-		BDD b6 = b5.and(b5);
-		assertEquals(b5, b6);
-
+	@Override
+	public Node mkNode(Expression<String> expr) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

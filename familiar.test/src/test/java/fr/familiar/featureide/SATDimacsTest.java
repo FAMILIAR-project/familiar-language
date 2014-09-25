@@ -39,6 +39,7 @@ import fr.familiar.fm.basic.FMLFeatureModel;
 import fr.familiar.operations.FMSlicer;
 import fr.familiar.parser.FMBuilder;
 import fr.familiar.variable.FeatureModelVariable;
+import fr.familiar.fm.featureide.SATFeatureIDEFormula;
 
 /**
  * @author mathieuacher
