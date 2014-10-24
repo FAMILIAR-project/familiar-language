@@ -20,8 +20,8 @@
   </modules>
 
   <properties>
-    <tycho.version>0.18.0</tycho.version>
-    <tycho-extras.version>0.18.0</tycho-extras.version>
+    <tycho.version>0.21.0</tycho.version>
+    <tycho-extras.version>0.21.0</tycho-extras.version>
 	<obeodesigner-repo.url>http://www.obeo.fr/download/release/designer/6.1/latest/juno3/update/</obeodesigner-repo.url>
     <featureide-repo.url>http://wwwiti.cs.uni-magdeburg.de/iti_db/research/featureide/deploy/</featureide-repo.url>
     <kepler-repo.url>http://download.eclipse.org/releases/kepler/</kepler-repo.url>
