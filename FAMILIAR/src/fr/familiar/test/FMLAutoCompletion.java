@@ -14,6 +14,7 @@ import org.xtext.example.mydsl.ui.contentassist.FMLProposalProvider;
 
 import fr.familiar.parser.FMLParsingHelper;
 /**
+ * Failiure (not that easy to reuse Xtext facilities in a non Eclipse setting wrt discussions with Xtext guys)
  * @author macher1
  *
  */
@@ -38,7 +39,7 @@ public class FMLAutoCompletion {
 		
 		ContentAssistContext context = null ;
 		ICompletionProposalAcceptor acceptor = null ; 
-		new AbstractContentProposalProvider.DefaultContentAssistProcessorSwitch(context, acceptor);
+		//new AbstractContentProposalProvider.DefaultContentAssistProcessorSwitch(context, acceptor);
 		
 	}
 
