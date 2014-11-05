@@ -35,5 +35,7 @@ They are loacted in the 'target' folder in each project:
  * Apache Maven
  
 ### Build
- * Build the familiar.root project with ```mvn install```
- * Build the familiar.standalone project with ```mvn package```
+ * For building the plugins, in ``familiar.root``, launch ```mvn install``` (```mvn install -DskipTests``` is even preferable since tests may not pass): the command builds all jars of each project in the respective "target" folders. Note that the jars are not executable, but are Eclipse plugins
+ * For building an executable jar, in ``familiar.standalone``, launch ```mvn package```: the command aggregates all previous jars into one executable jar (in the folder "target", ends up with "-jar-with-dependencies.jar")
+ * For executing the tests, in ``familiar.test``, launch ```mvn integration-test``` 
+  
