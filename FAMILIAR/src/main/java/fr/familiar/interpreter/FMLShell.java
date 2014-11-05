@@ -32,6 +32,7 @@ import java.util.List;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
@@ -876,7 +877,7 @@ public class FMLShell {
 	@SuppressWarnings("unchecked")
 	public void setVerbose(boolean verbose) {
 		_verbose = verbose;
-		//PropertyConfigurator.configure("log4j.properties");
+		//PropertyConfigurator.configure("configuration/log4j.properties");
 		if (_verbose) {			
 			Logger.getRootLogger().setLevel(Level.DEBUG);
 		}

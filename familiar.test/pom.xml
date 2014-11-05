@@ -7,7 +7,7 @@
   <artifactId>FAMILIAR-Test</artifactId>
   <version>1.0.10</version>
   <packaging>eclipse-test-plugin</packaging>
-
+  
 	<parent>
 		<relativePath>../familiar.root/pom.xml</relativePath>
 		<groupId>fr.inria.familiar</groupId>

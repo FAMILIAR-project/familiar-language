@@ -3,9 +3,6 @@ Bundle-ManifestVersion: 2
 Bundle-Name: %Bundle-Name.3
 Bundle-SymbolicName: FAMILIAR-Test;singleton:=true
 Bundle-Version: 1.0.10
-Bundle-Activator: fr.familiar.views.featureide.Activator
-Bundle-Vendor: %Bundle-Vendor.3
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ClassPath: .,
  lib/antlr.jar,
  lib/choco-2.1.0-basic+old.jar,
@@ -18,11 +15,38 @@ Bundle-ClassPath: .,
  lib/org.sat4j.core.jar,
  lib/pacogenIntern.jar,
  lib/semanticvectors-3.8.jar
+Bundle-Activator: fr.familiar.views.featureide.Activator
+Bundle-Vendor: %Bundle-Vendor.3
+Require-Bundle: de.ovgu.featureide.core,
+ de.ovgu.featureide.fm.core,
+ de.ovgu.featureide.fm.ui,
+ de.ovgu.featureide.ui,
+ org.eclipse.core.filebuffers,
+ org.eclipse.core.runtime,
+ org.eclipse.debug.ui,
+ org.eclipse.jface,
+ org.eclipse.ui.console,
+ org.eclipse.ui.ide,
+ org.eclipse.ui.workbench,
+ org.xtext.example.fmlero.ui,
+ FML3rdPartiesForSynthesis,
+ FML3rdPartiesMisc,
+ org.xtext.example.fml,
+ org.xtext.example.fml.ui,
+ org.eclipse.core.resources,
+ org.eclipse.ui,
+ S2T2toFML,
+ SPLAR-plugin,
+ com.google.inject,
+ org.sat4j.core,
+ org.eclipse.xtext,
+ FAMILIAR
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Import-Package: com.google.common.collect,
+ fr.familiar.fm.converter.tvl,
  fr.inria.familiar.fmlero,
  fr.inria.familiar.fmlero.fmprimitives,
  fr.inria.familiar.fmlero.fmprimitives.impl,
- fr.familiar.fm.converter.tvl,
  javax.naming,
  javax.xml.parsers,
  javax.xml.transform,
@@ -74,29 +98,4 @@ Import-Package: com.google.common.collect,
  splar.core.fm,
  splar.core.heuristics,
  splar.plugins.reasoners.bdd.javabdd
-Require-Bundle: de.ovgu.featureide.core,
- de.ovgu.featureide.fm.core,
- de.ovgu.featureide.fm.ui,
- de.ovgu.featureide.ui,
- org.eclipse.core.filebuffers,
- org.eclipse.core.runtime,
- org.eclipse.debug.ui,
- org.eclipse.jface,
- org.eclipse.ui.console,
- org.eclipse.ui.ide,
- org.eclipse.ui.workbench,
- org.xtext.example.fmlero.ui,
- FML3rdPartiesForSynthesis,
- FML3rdPartiesMisc,
- org.xtext.example.fml,
- org.xtext.example.fml.ui,
- org.eclipse.core.resources,
- org.eclipse.ui,
- S2T2toFML,
- SPLAR-plugin,
- com.google.inject,
- org.sat4j.core,
- org.eclipse.xtext,
- FAMILIAR
 Bundle-ActivationPolicy: lazy
-
