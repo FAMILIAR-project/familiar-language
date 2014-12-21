@@ -1,5 +1,9 @@
 package gsd.synthesis;
 
+import gsd.synthesis.FeatureEdge;
+import gsd.synthesis.FeatureGraph;
+import gsd.synthesis.FeatureNode;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -26,10 +30,10 @@ public class FeatureModelTree<T> {
 		this.buildTreeFromGraph(graph);
 	}
 	
-	public void buildTreeFromGraph(FeatureGraph<T> graph)
+	public void buildTreeFromGraph(FeatureGraph<? extends T> graph)
 	{
 		//Set the graph
-		this.graph = graph;
+		this.graph = (FeatureGraph<T>) graph;
 		
 		//Set the root
 		this.root = new Node(this.graph.getTopVertex());
