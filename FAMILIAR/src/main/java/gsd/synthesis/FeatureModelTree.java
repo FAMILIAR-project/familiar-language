@@ -100,18 +100,16 @@ public class FeatureModelTree<T> {
 				
 				//Get the corresponding node we already created in our nodes array
 				Node<T> nodeSource = this.nodes.get(source.getFeature());
+				
+				//If this edge precise that this is not optionnal, set it
+				if(edge.getType() == FeatureEdge.MANDATORY)
+					nodeSource.setNotOptionnal();
 
+				//Add the logic children - parent only if it's not already done
 				if(!nodeTarget.getChildren().contains(nodeSource))
 				{
-					//Add the relation logic between these nodes
+					//Add the parent to the node source
 					nodeSource.setParent(nodeTarget);
-					
-					if(edge.getType() == FeatureEdge.MANDATORY)
-					{
-						//System.out.println(source.getFeature()+" is not optionnal");
-						nodeSource.setNotOptionnal();
-						
-					}
 					
 					//Add the child to the parent
 					nodeTarget.addChildren(nodeSource);
