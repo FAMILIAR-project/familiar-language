@@ -105,7 +105,13 @@ public class FeatureModelTree<T> {
 				{
 					//Add the relation logic between these nodes
 					nodeSource.setParent(nodeTarget);
-					nodeSource.setOptionnal(edge.getType() != FeatureEdge.MANDATORY);
+					
+					if(edge.getType() == FeatureEdge.MANDATORY)
+					{
+						//System.out.println(source.getFeature()+" is not optionnal");
+						nodeSource.setNotOptionnal();
+						
+					}
 					
 					//Add the child to the parent
 					nodeTarget.addChildren(nodeSource);
@@ -225,7 +231,7 @@ public class FeatureModelTree<T> {
 	{
 		private T val;
 		
-		private boolean optionnal = false;
+		private boolean optionnal = true;
 		
 		private int relationType = -1;
 		
@@ -262,9 +268,9 @@ public class FeatureModelTree<T> {
 			return this.optionnal;
 		}
 		
-		public void setOptionnal(boolean o)
+		public void setNotOptionnal()
 		{
-			this.optionnal = o;
+			this.optionnal = false;
 		}
 		
 		public T getValue()
