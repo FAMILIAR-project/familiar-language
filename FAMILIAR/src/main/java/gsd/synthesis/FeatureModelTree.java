@@ -55,6 +55,8 @@ public class FeatureModelTree<T> {
 			//Make it a node in the tree
 			Node<T> node = new Node(fn.getFeature());
 			
+			//System.out.println("Discovered node : "+fn.getFeature());
+			
 			//Put it in the nodeList
 			this.nodes.put(fn.getFeature(), node);
 		}
@@ -68,32 +70,46 @@ public class FeatureModelTree<T> {
 		//For each edge, add the relation between the nodes
 		while(it2.hasNext())
 		{
+			
 			//Next edge
 			FeatureEdge edge = it2.next();
+			
+			//System.out.println("Discover new edge "+edge.toString());
 			
 			//Get the target for this edge
 			FeatureNode<T> target = this.graph.getTarget(edge);
 			
-			//Get the corresponding node we already created in our nodes array
-			Node<T> nodeTarget = this.nodes.get(target.getFeature());
+			//System.out.println("Target : "+target.getFeature());
+			//System.out.println("Type :"+edge.getType());
 			
+			Node<T> nodeTarget = null;
+			
+			//Get the corresponding node we already created in our nodes array
+			if(target.isTop())
+				nodeTarget = this.root;
+			else
+				nodeTarget = this.nodes.get(target.getFeature());
+				
 			//If it's binary (i.e MANDATORY or HIERARCHY)
 			if(edge.isBinary())
 			{
 				//Get the source for this edge
 				FeatureNode<T> source = this.graph.getSource(edge);
 				
+				//System.out.println("Source : "+source.getFeature());
 				
 				//Get the corresponding node we already created in our nodes array
 				Node<T> nodeSource = this.nodes.get(source.getFeature());
 
-				
-				//Add the relation logic between these nodes
-				nodeSource.setParent(nodeTarget);
-				nodeSource.setOptionnal(edge.getType() != FeatureEdge.MANDATORY);
-				
-				//Add the child to the parent
-				nodeTarget.addChildren(nodeSource);
+				if(!nodeTarget.getChildren().contains(nodeSource))
+				{
+					//Add the relation logic between these nodes
+					nodeSource.setParent(nodeTarget);
+					nodeSource.setOptionnal(edge.getType() != FeatureEdge.MANDATORY);
+					
+					//Add the child to the parent
+					nodeTarget.addChildren(nodeSource);
+				}
 				
 			}else{
 				//If it's a logical operation between several nodes
@@ -121,12 +137,14 @@ public class FeatureModelTree<T> {
 					nodeSource.setRelationType(edge.getType());
 					nodeSource.setRelationTargets(sourcesFeature);
 					
-					//Set his parent
-					nodeSource.setParent(nodeTarget);
-					
-					//Add the child to the parent
-					nodeTarget.addChildren(nodeSource);
-					
+					if(!nodeTarget.getChildren().contains(nodeSource))
+					{
+						//Set his parent
+						nodeSource.setParent(nodeTarget);
+						
+						//Add the child to the parent
+						nodeTarget.addChildren(nodeSource);
+					}
 				}
 			}
 		}
@@ -156,13 +174,17 @@ public class FeatureModelTree<T> {
 		//Set the target ids for the relation
 		sb.append("\"relationTargetIds\": [");
 			
-		Iterator<T> it = node.getRelationTargets().iterator();
-		while(it.hasNext())
-			sb.append("\""+ it.next()+"\", ");
-		
-		//Remove the last comma
-		sb.deleteCharAt(sb.length() -1);
-		sb.deleteCharAt(sb.length() -1);
+		if(node.getRelationTargets().size()>0)
+		{
+			Iterator<T> it = node.getRelationTargets().iterator();
+			while(it.hasNext())
+				sb.append("\""+ it.next()+"\", ");
+			
+			
+			//Remove the last comma
+			sb.deleteCharAt(sb.length() -1);
+			sb.deleteCharAt(sb.length() -1);
+		}	
 		
 		//Close this array
 		sb.append("], ");
@@ -173,21 +195,24 @@ public class FeatureModelTree<T> {
 		//SET THE CHILDREN ARRAY
 		sb.append("\"children\": [");
 		
-		//Iterate on the children
-		Iterator<Node<T>> it2 = node.getChildren().iterator();
+		if(node.getChildren().size() > 0){
 		
-		//Call recursive for each child
-		while(it2.hasNext()){
-			this.nodeToString(it2.next(), sb);
-			sb.append(", ");
+			//Iterate on the children
+			Iterator<Node<T>> it2 = node.getChildren().iterator();
+			
+			//Call recursive for each child
+			while(it2.hasNext()){
+				this.nodeToString(it2.next(), sb);
+				sb.append(", ");
+			}
+			
+			//Remove last comma (cause end of array)
+			sb.deleteCharAt(sb.length() -1);
+			sb.deleteCharAt(sb.length() -1);
 		}
 		
-		//Remove last comma (cause end of array)
-		sb.deleteCharAt(sb.length() -1);
-		sb.deleteCharAt(sb.length() -1);
-		
 		//Close the children array
-		sb.append("] ");
+		sb.append("]");
 		
 		
 		
