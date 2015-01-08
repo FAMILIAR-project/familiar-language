@@ -195,9 +195,7 @@ public class FMtoConfigure {
 		rest.add(g.getTopVertex());
 		while (!rest.isEmpty())
 			processNode.execute(rest.poll());
-		
-		
-		System.out.println(sb.toString());
+
 		return sb.toString();
 	}
 }
