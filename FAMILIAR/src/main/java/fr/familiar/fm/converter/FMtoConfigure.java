@@ -99,6 +99,9 @@ public class FMtoConfigure {
 						case FeatureEdge.OR:
 							spec = PLUS + OR;
 							break;
+						default:
+							spec = OR;
+							break;
 					}
 					ok =true;
 				}
@@ -195,7 +198,7 @@ public class FMtoConfigure {
 		rest.add(g.getTopVertex());
 		while (!rest.isEmpty())
 			processNode.execute(rest.poll());
-
+		System.out.println(sb.toString());
 		return sb.toString();
 	}
 }
