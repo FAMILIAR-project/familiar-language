@@ -23,6 +23,8 @@ import org.apache.commons.collections15.map.LazyMap;
 import fr.familiar.variable.FeatureModelVariable;
 import fr.familiar.variable.FeatureName;
 import fr.familiar.variable.Variable;
+import gsd.synthesis.Expression;
+import gsd.synthesis.ExpressionType;
 import gsd.synthesis.FeatureEdge;
 import gsd.synthesis.FeatureGraph;
 import gsd.synthesis.FeatureGraphFactory;
@@ -53,7 +55,7 @@ public class FMtoConfigure {
 		 * Initialisation des variables utilisées
 		 */
 		_FM = FM;
-		return this.treatDiagram(_FM.getFm());
+		return "{\"tree\":[" + this.treatDiagram(_FM.getFm()) +"],\"constraint\":[" + this.treatConstraint(_FM.getAllConstraints()) + "]}";
 	}
 	
 	private String treatDiagram(FeatureModel<String> featureModel) {
@@ -112,7 +114,7 @@ public class FMtoConfigure {
 					sb.append("{"
 							+NAME
 							+"\""
-							+(v.getType() == FeatureType.AND_GROUP ? groupToId.get(v) : FeatureName.unquote(v.getFeature().toString()))
+							+(v.getType() == FeatureType.AND_GROUP ? "TOTOTOTOT"/*groupToId.get(v)*/ : FeatureName.unquote(v.getFeature().toString()))
 							+"\""
 							+","
 							+SPECIF
@@ -198,7 +200,47 @@ public class FMtoConfigure {
 		rest.add(g.getTopVertex());
 		while (!rest.isEmpty())
 			processNode.execute(rest.poll());
-		System.out.println(sb.toString());
+		
 		return sb.toString();
+	}
+
+	private String treatConstraint(Set<Expression<String>> cons){
+		Iterator<Expression<String>> it = cons.iterator();
+		Expression<String> exp;
+		String resul="";
+		while(it.hasNext()){
+			exp = it.next();
+			resul += "{\"cons\":\""+exp.getType().toString() +"\",\"param1\":["+ goLeft(exp) + "],\"param2\":[" + goRight(exp) + "]}";
+			if(it.hasNext())
+				resul+=",";
+		}
+		return resul;
+		
+	}
+	private String goLeft(Expression<String> exp){
+		exp = exp.getLeft();
+		if(exp.getRight() == null){
+			//LEAF
+			if(exp.getType() == ExpressionType.FEATURE)
+				return "{\"name\":\""+exp.getFeature()+"\",\"specif\":\""+ exp.getType() +"\"}";
+			else
+				return "{\"name\":\""+exp.getLeft().getFeature()+"\",\"specif\":\""+ exp.getType() +"\"}";
+		}
+		else{
+			return "{\"cons\":\""+exp.getType() + "\",\"param1\":[" + goLeft(exp) + "],\"param2\":[" + goRight(exp) + "]}";
+		}
+	}
+	private String goRight(Expression<String> exp){
+		exp = exp.getRight();
+		if(exp.getRight() == null){
+			//LEAF
+			if(exp.getType() == ExpressionType.FEATURE)
+				return "{\"name\":\""+exp.getFeature()+"\",\"specif\":\""+ exp.getType() +"\"}";
+			else
+				return "{\"name\":\""+exp.getLeft().getFeature()+"\",\"specif\":\""+ exp.getType() +"\"}";
+		}
+		else{
+			return "{\"cons\":"+exp.getType() + "\",\"param1\":[" + goLeft(exp) + "],\"param2\":[" + goRight(exp) + "]}";
+		}
 	}
 }
