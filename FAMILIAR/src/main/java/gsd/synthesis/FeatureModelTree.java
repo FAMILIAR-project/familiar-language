@@ -1,59 +1,63 @@
 package gsd.synthesis;
 
-import gsd.synthesis.FeatureEdge;
-import gsd.synthesis.FeatureGraph;
-import gsd.synthesis.FeatureNode;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
-public class FeatureModelTree<T> {
+import fr.familiar.variable.FeatureModelVariable;
 
-	private FeatureGraph<T> graph;
+public class FeatureModelTree {
+
+	private FeatureGraph<String> graph;
 	
-	private Node<T> root;
+	private Node root;
 	
-	private HashMap<T, Node<T>> nodes;
+	private HashMap<String, Node> nodes;
+	
+	private Set<Expression<String>> constraints;
 	
 	public FeatureModelTree()
 	{
-		this.nodes = new HashMap<T, Node<T>>();
+		this.nodes = new HashMap<String, Node>();
 	}
 	
-	public FeatureModelTree(FeatureGraph<T> graph)
+	/*
+	public FeatureModelTree(FeatureGraph<String> graph)
 	{
-		this.nodes = new HashMap<T, Node<T>>();
+		this.nodes = new HashMap<String, Node<String>>();
 		this.graph = graph;
 		this.buildTreeFromGraph(graph);
-	}
+	}*/
 	
-	public void buildTreeFromGraph(FeatureGraph<? extends T> graph)
+	public void buildTreeFromFMV(FeatureModelVariable fm)
 	{
 		//Set the graph
-		this.graph = (FeatureGraph<T>) graph;
+		this.graph =fm.getFm().getDiagram();
+		
+		//Set the contraints
+		this.constraints = fm.getFm().getConstraints();
 		
 		//Set the root
-		this.root = new Node(this.graph.getTopVertex());
+		this.root = new Node(this.graph.getTopVertex().getFeature());
 		
 		//Save the root in the node list
 		this.nodes.put(graph.getTopVertex().getFeature(), this.root);
 		
 		//Get the nodes
-		Set<FeatureNode<T>> verticesList = this.graph.vertices();
+		Set<FeatureNode<String>> verticesList = this.graph.vertices();
 		
 		//Iterator on each featureNode
-		Iterator<FeatureNode<T>> it = verticesList.iterator();
+		Iterator<FeatureNode<String>> it = verticesList.iterator();
 		
 		while(it.hasNext())
 		{
 			//Saves the feature node
-			FeatureNode<T> fn = it.next();
+			FeatureNode<String> fn = it.next();
 			
 			//Make it a node in the tree
-			Node<T> node = new Node(fn.getFeature());
+			Node node = new Node(fn.getFeature());
 			
 			//System.out.println("Discovered node : "+fn.getFeature());
 			
@@ -77,12 +81,12 @@ public class FeatureModelTree<T> {
 			//System.out.println("Discover new edge "+edge.toString());
 			
 			//Get the target for this edge
-			FeatureNode<T> target = this.graph.getTarget(edge);
+			FeatureNode<String> target = this.graph.getTarget(edge);
 			
 			//System.out.println("Target : "+target.getFeature());
 			//System.out.println("Type :"+edge.getType());
 			
-			Node<T> nodeTarget = null;
+			Node nodeTarget = null;
 			
 			//Get the corresponding node we already created in our nodes array
 			if(target.isTop())
@@ -94,12 +98,12 @@ public class FeatureModelTree<T> {
 			if(edge.isBinary())
 			{
 				//Get the source for this edge
-				FeatureNode<T> source = this.graph.getSource(edge);
+				FeatureNode<String> source = this.graph.getSource(edge);
 				
 				//System.out.println("Source : "+source.getFeature());
 				
 				//Get the corresponding node we already created in our nodes array
-				Node<T> nodeSource = this.nodes.get(source.getFeature());
+				Node nodeSource = this.nodes.get(source.getFeature());
 				
 				//If this edge precise that this is not optionnal, set it
 				if(edge.getType() == FeatureEdge.MANDATORY)
@@ -119,11 +123,11 @@ public class FeatureModelTree<T> {
 				//If it's a logical operation between several nodes
 				
 				//Then we have several sources
-				Set<FeatureNode<T>> sources = this.graph.getSources(edge);
-				Iterator<FeatureNode<T>> it3 = sources.iterator();
+				Set<FeatureNode<String>> sources = this.graph.getSources(edge);
+				Iterator<FeatureNode<String>> it3 = sources.iterator();
 				
 				//Save all the features in a local array
-				ArrayList<T> sourcesFeature = new ArrayList<T>();
+				ArrayList<String> sourcesFeature = new ArrayList<String>();
 				while(it3.hasNext())
 					sourcesFeature.add(it3.next().getFeature());
 				
@@ -134,8 +138,8 @@ public class FeatureModelTree<T> {
 				while(it3.hasNext())
 				{
 					//Set the source and get the corresponding source node
-					FeatureNode<T> source = it3.next();
-					Node<T> nodeSource = this.nodes.get(source.getFeature());
+					FeatureNode<String> source = it3.next();
+					Node nodeSource = this.nodes.get(source.getFeature());
 					
 					//Set his relation
 					nodeSource.setRelationType(edge.getType());
@@ -159,12 +163,39 @@ public class FeatureModelTree<T> {
 	{
 		StringBuilder sb = new StringBuilder();
 		
+		sb.append("{\"tree\": ");
 		this.nodeToString(root, sb);
+		
+		if(this.constraints.size() > 0){
+			sb.append(", ");
+			this.constraintsToString(this.constraints, sb);
+		}
+		
+		sb.append("}");
 		
 		return sb.toString();
 	}
 	
-	public void nodeToString(Node<T> node, StringBuilder sb)
+	private void constraintsToString(Set<Expression<String>> constraints,  StringBuilder sb)
+	{
+		sb.append("\"constraints\": [");
+		Iterator<Expression<String>> it = constraints.iterator();
+		while(it.hasNext())
+		{
+			Expression<String> e = it.next();
+			sb.append("{\"left\": \""+e.getLeft().toString()+"\", ");
+			sb.append("\"right\": \""+e.getRight().toString()+"\", ");
+			sb.append("\"type\": \""+e.getType()+"\"}, ");
+			
+		}
+		
+		sb.deleteCharAt(sb.length() -1);
+		sb.deleteCharAt(sb.length() -1);
+		
+		sb.append("]");
+	}
+	
+	private void nodeToString(Node node, StringBuilder sb)
 	{
 		//Set global informations
 		sb.append("{");
@@ -180,7 +211,7 @@ public class FeatureModelTree<T> {
 			
 		if(node.getRelationTargets().size()>0)
 		{
-			Iterator<T> it = node.getRelationTargets().iterator();
+			Iterator<String> it = node.getRelationTargets().iterator();
 			while(it.hasNext())
 				sb.append("\""+ it.next()+"\", ");
 			
@@ -202,7 +233,7 @@ public class FeatureModelTree<T> {
 		if(node.getChildren().size() > 0){
 		
 			//Iterate on the children
-			Iterator<Node<T>> it2 = node.getChildren().iterator();
+			Iterator<Node> it2 = node.getChildren().iterator();
 			
 			//Call recursive for each child
 			while(it2.hasNext()){
@@ -225,38 +256,38 @@ public class FeatureModelTree<T> {
 	}
 	
 	
-	public class Node<T>
+	public class Node
 	{
-		private T val;
+		private String val;
 		
 		private boolean optionnal = true;
 		
 		private int relationType = -1;
 		
-		private ArrayList<T> relationTargets;
+		private ArrayList<String> relationTargets;
 		
-		private List<Node<T>> children;
+		private List<Node> children;
 	
-		private Node<T> parent = null;
+		private Node parent = null;
 		
-		public Node(T value)
+		public Node(String value)
 		{
 			this.val = value;
-			this.relationTargets = new ArrayList<T>();
-			this.children = new ArrayList<Node<T>>();
+			this.relationTargets = new ArrayList<String>();
+			this.children = new ArrayList<Node>();
 		}
 		
-		public void addChildren(Node<T> child)
+		public void addChildren(Node child)
 		{
 			this.children.add(child);
 		}
 		
-		public void setParent(Node<T> parent)
+		public void setParent(Node parent)
 		{
 			this.parent = parent;
 		}
 		
-		public Node<T> getParent()
+		public Node getParent()
 		{
 			return this.parent;
 		}
@@ -271,7 +302,7 @@ public class FeatureModelTree<T> {
 			this.optionnal = false;
 		}
 		
-		public T getValue()
+		public String getValue()
 		{
 			return this.val;
 		}
@@ -284,16 +315,16 @@ public class FeatureModelTree<T> {
 			this.relationType = relationType;
 		}
 		
-		public void setRelationTargets(ArrayList<T> relationTargets){
+		public void setRelationTargets(ArrayList<String> relationTargets){
 			this.relationTargets = relationTargets;
 		}
 		
-		public ArrayList<T> getRelationTargets()
+		public ArrayList<String> getRelationTargets()
 		{
 			return this.relationTargets;
 		}
 		
-		public List<Node<T>> getChildren()
+		public List<Node> getChildren()
 		{
 			return this.children;
 		}

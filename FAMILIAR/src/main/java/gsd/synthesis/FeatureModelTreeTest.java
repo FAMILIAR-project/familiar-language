@@ -14,7 +14,7 @@ import fr.familiar.variable.FeatureModelVariable;
 public class FeatureModelTreeTest extends FMLTest{
 
 	protected String _fm;
-	protected FeatureModelTree<String> tree;
+	protected FeatureModelTree tree;
 
 	public FeatureModelTreeTest(String fm) {
 		_fm = fm;
@@ -32,11 +32,11 @@ public class FeatureModelTreeTest extends FMLTest{
 	{
 		System.out.println("hello");
 		
-		this.tree = new FeatureModelTree<String>();
+		this.tree = new FeatureModelTree();
 		_shell.parse("fm1 =" + _fm);
 		FeatureModelVariable fm1 = getFMVariable("fm1");
 		
-		this.tree.buildTreeFromGraph(fm1.getFm().getDiagram());
+		this.tree.buildTreeFromFMV(fm1);
 		
 		System.out.println(this.tree.toJson());
 		
