@@ -1,7 +1,0 @@
-varset = gc1.* // it can be also written: varset = features gc1
-
-foreach (f in varset) do
-  newName = strConcat "new_" f
-  renameFeature f as newName // side effect on gc1
-  
-end

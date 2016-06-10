@@ -1,5 +1,0 @@
-parameter b1 : Boolean
-
-tr = false
-assert (b1 eq tr)
-hide tr 

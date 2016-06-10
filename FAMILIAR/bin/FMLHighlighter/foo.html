@@ -1,8 +1,0 @@
-<div class="code"><pre><span class="n">fm1</span> <span class="o">=</span> <span class="kd">FM</span> <span class="o">(</span><span class="n">H</span> <span class="o">:</span> <span class="n">E</span> <span class="n">L</span> <span class="o">[</span><span class="n">O</span><span class="o">];</span> <span class="n">O</span> <span class="o">:</span> <span class="o">(</span><span class="n">W</span><span class="o">|</span><span class="n">R</span><span class="o">|</span><span class="n">D</span><span class="o">)</span> <span class="o">;</span> <span class="o">)</span> <span class="c1">// a feature model</span>
-<span class="n">n</span> <span class="o">=</span> <span class="kd">counting</span> <span class="n">fm1</span> <span class="c1">// number of valid configurations</span>
-
-<span class="n">fm2</span> <span class="o">=</span> <span class="kd">FM</span> <span class="o">(</span><span class="n">A</span> <span class="o">:</span> <span class="n">B</span> <span class="n">C</span> <span class="o">[</span><span class="n">D</span><span class="o">];</span> <span class="n">B</span> <span class="o">-&gt;</span> <span class="o">!</span><span class="n">C</span> <span class="o">;)</span> <span class="c1">// non valid</span>
-<span class="n">b</span> <span class="o">=</span> <span class="kd">isValid</span> <span class="n">fm2</span>
-
-<span class="k">assert</span> <span class="o">(</span><span class="kd">not</span> <span class="n">b</span><span class="o">)</span>
-</pre></div>

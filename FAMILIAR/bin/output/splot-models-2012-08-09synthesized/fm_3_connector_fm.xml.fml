@@ -1,1 +1,0 @@
-FM (Connector: Paradigm Technology ; Paradigm: (MessageBased|Client_Server) ; Technology: (CAN|Local) ; MessageBased: Sender Receiver ; Client_Server: (Asynchronous|Synchronous) ; Receiver: (Push|Pull) ; Asynchronous: (Polling|Callback) ; Synchronous: [Timeout] ; Pull: (NonQueued|Queued)+ ; Polling: (Blocking|Nonblocking) ; )

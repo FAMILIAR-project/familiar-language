@@ -1,4 +1,0 @@
-// program example to run "features" script
-fm1 = FM (A : B [C] [D]; D: (E|F); )
-run "features.fmm" fm1 into strange
-print_var strange.desc.result

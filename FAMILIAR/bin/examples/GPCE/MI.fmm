@@ -1,6 +1,0 @@
-MI = FM (MedicalImage: Modality Format [Anonymized] ; 
-					Format : (DICOM|Analyze|Nifti); 
-					Modality : (CT|PET|SPECT|MRI);
-					MRI : (T1|T2)+; )
-n = counting MI
-println "#features: " n

@@ -1,8 +1,0 @@
-graph G {
-  minutes;
-  backup_extension;
-  0;
-  1;
-  backup_extension -- 1;
-  minutes -- 1;
-}

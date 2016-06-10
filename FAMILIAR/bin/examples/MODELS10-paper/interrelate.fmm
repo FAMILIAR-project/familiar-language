@@ -1,9 +1,0 @@
-fm1 = FM ( A : B H [C] ; H: (E|F) ; )
-fm2 = FM ( R : S T [U] ; T : (W|Y)+ ; )
-C implies W // inter-relate feature C of fm1 with feature W of fm2
-
-U implies W // internal constraint in fm2
-
-U excludes (E or C) // inter-relate feature U of fm2 with features E and C of fm1
-
-...

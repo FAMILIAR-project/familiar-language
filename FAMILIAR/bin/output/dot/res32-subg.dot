@@ -1,8 +1,0 @@
-graph G {
-  Put;
-  LFU;
-  0;
-  1;
-  Put -- 1;
-  LFU -- 1;
-}

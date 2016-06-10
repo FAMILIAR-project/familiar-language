@@ -1,1 +1,0 @@
-ooiFM = FM (ObjectOfInterest: Sort Mobility Cardinality ; Sort : (Natural|Manufactured) ; Natural : Person ; Manufactured : Vehicle ; Mobility : (Immovable|Movable) ; Movable : (SelfPropelled | ExternallyPropelled); Cardinality : (SingleObject|GroupOfObjects) ;)

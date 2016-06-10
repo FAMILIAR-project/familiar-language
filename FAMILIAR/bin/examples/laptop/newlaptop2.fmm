@@ -1,9 +1,0 @@
-// newlaptop.fmm: a new laptop family 
-
-laptop = FM ( Laptop: Motherboard Processor Chipset [Wifi] [GraphicCard] ;
-			Motherboard: Slot BIOS ... ; ... ;
-			Chipset : Bridge Interface ... ;  ... ;
-			GraphicCard: Bus [Multi] ... ; Bus: (128|64) ; ... ;
-			Processor : Mhz [Dual] ... ; ... ;
-			... ; )
-export laptop

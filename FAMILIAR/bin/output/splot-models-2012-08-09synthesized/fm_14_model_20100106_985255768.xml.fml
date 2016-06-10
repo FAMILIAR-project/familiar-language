@@ -1,1 +1,0 @@
-FM (ECTwo: Country O_S InstanceCategory ; Country: (US|EU) ; O_S: (Windows|Linux) ; InstanceCategory: (Ondemand|Reserve) ; Ondemand: (Standard|HighMemory|HighCPU) ; Standard: (S|XL|L_Zero) ; HighMemory: (Qua|Duo) ; HighCPU: (L|M) ; )

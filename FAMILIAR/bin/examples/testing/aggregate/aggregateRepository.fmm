@@ -1,5 +1,0 @@
-// FMs to aggregate
-fm1 = FM ( A : B [C]; B : (E|F)+; )
-fm2 = FM ( I : (J|K|L); )
-fm3 = FM ( M : N [O] [P]; P : (Q|R|S); )
-fm4 = FM ( W : (X|Y|Z)+; )

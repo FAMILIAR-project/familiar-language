@@ -1,9 +1,0 @@
-graph G {
-  Input;
-  0;
-  MovementDetection;
-  1;
-  MovementDetection -- Input;
-  Input -- 1;
-  MovementDetection -- 1;
-}

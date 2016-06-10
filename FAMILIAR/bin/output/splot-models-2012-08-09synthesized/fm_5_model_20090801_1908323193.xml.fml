@@ -1,1 +1,0 @@
-FM (CFDPLibrary: (Receive|Reboot_|PUS_|Send)+ ; Receive: [ReceiveFileSystemOperations] [ReceiveAcknowledgedMode] ; Reboot_: [RebootEntity] [RebootPUS] ; PUS_: [PUSCopy] [PUSRename] ; Send: [SendFileSystemOperations] [SendAcknowledgedMode] ; )

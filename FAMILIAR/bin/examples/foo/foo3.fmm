@@ -1,5 +1,0 @@
-run "./examples/foo/fm1.fmm"
-valid? fm1
-plop = card fm1 
-plip = FM ( A: B? C; )
-plup = FM ( A: B C?; )

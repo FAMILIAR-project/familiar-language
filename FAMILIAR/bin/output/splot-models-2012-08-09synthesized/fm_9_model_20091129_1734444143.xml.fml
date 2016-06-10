@@ -1,1 +1,0 @@
-FM (IntelligentTutoring: Feedback Tutoring [UserAuthentication] [ResultMonitoring] ; Feedback: [Grading] Advice ; Tutoring: (Tutoringexercise|tutoringsimulation)+ [Tutoringlecture] ; UserAuthentication: (Student|Instructor)+ ; (ResultMonitoring -> UserAuthentication); )

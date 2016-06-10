@@ -1,1 +1,0 @@
-FM (MobileGame: Input [Output] [NetworkSupport] ; Input: (Touchscreen|SpeechInput|MovementDetection|Keypad)+ ; Output: [ForceFeedback] ; NetworkSupport: [OnlineMultiplayer] ; )

@@ -1,7 +1,0 @@
-run "msplHartmann.fmm"
-commonProducts = merge intersection { supplierTwo supplierThree supplierOne }
-commonSupp12 = merge intersection { supplierOne supplierTwo }
-commonEq = merge intersection { commonSupp12 supplierThree }
-compare commonEq commonProducts
-valid? commonEq
-card commonProducts

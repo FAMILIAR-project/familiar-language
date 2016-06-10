@@ -1,9 +1,0 @@
-graph G {
-  0;
-  SendAcknowledgedMode;
-  Send;
-  1;
-  SendAcknowledgedMode -- Send;
-  Send -- 1;
-  SendAcknowledgedMode -- 1;
-}

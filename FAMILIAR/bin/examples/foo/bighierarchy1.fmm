@@ -1,2 +1,0 @@
-bigfmOne = FM ( A: B [C] D [E] Z [Y]; E: F? G; D: (I|K)+; K: L? N M; I: (P|Q); Q: (R|S|T)+; )
-bigfmTwo = FM ( A: B C? D E; E: F G?; D: (I|J|K); K: L? N M; I: (P|Q)+; Q: (R|S|T); )

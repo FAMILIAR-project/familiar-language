@@ -1,3 +1,0 @@
-context::Vehicle implies context::NaturalLight
-context::Resolution implies context::Person
-context::Density implies context::Ellipse

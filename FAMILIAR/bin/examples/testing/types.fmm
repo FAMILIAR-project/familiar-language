@@ -1,7 +1,0 @@
-// assignments 
-foofm1 = FM (A: B C ; C: (D|E) ; E: F? ; )
-validfm1 = valid? foofm1
-cardfm1 = card foofm1
-convert foofm1 in featureide
-//s = set foofm1
-fm2 = FM (A: B C? D E; E: (G|H); )

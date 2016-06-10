@@ -1,9 +1,0 @@
-oldFeature = parent n256 // oldFeature refers to 'Bus' feature of gc3
-
-nameOldFeature = name oldFeature
-newName = strConcat "Memory" nameOldFeature
-b1 = renameFeature oldFeature as newName // aligning terms of gc3 with gc1 and gc2
-
-TRUE = "true" 
-assert (b1 eq TRUE)
-

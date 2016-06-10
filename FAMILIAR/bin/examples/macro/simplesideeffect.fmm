@@ -1,5 +1,0 @@
-parameter p1 : FeatureModel
-hide rfm1
-rfm1 = root p1
-p1 = rename p1::rfm1 ROOT
-ls

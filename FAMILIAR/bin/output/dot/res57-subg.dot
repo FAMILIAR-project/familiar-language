@@ -1,8 +1,0 @@
-graph G {
-  Student;
-  Tutoringexercise;
-  0;
-  1;
-  Tutoringexercise -- 1;
-  Student -- 1;
-}

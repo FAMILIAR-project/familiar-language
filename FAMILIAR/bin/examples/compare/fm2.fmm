@@ -1,6 +1,0 @@
-//export all
-//hide all
-//fm1 = {A: B C? ; }
-//fm3 = {A : D? E; }
-fm2 = FM (A: B C? D E; E: (G|H)+; )
-//merge sunion fm1 fm3 //{A: B C? D E; E: (G|H)+; }

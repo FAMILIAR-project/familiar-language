@@ -1,7 +1,0 @@
-run "Hartmann.fmm" into hartmann 
-sHart = hartmann.* // {supplierOne, supplierTwo, supplierThree}
-sHart2 = hartmann.supplier* // {supplierOne, supplierTwo, supplierThree}
-assert (sHart eq sHart2)
-sHartOnlyOne = hartmann.supplierO* // {supplierOne}
-sHart3 = supplier* // {supplierOne, supplierTwo, supplierThree}
-sHartSuppOneTwo = supplierT* // {supplierTwo, supplierThree}

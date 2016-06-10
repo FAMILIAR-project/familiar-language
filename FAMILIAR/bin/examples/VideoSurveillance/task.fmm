@@ -1,2 +1,0 @@
-taskFM = FM (Task : (Counting|BehaviourRecognition|Tracking) ; BehaviourRecognition : IntrusionDetection ; )
-	

@@ -1,1 +1,0 @@
-system = { Software: Acquisition Segmentation Classification; Segmentation: TraversalAlgorithm KernelFunction; Classification: Density Contour Model?; Model: (Ellipse|Parallelepiped)+; KernelFunction: (Color|Grey); }

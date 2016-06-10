@@ -1,1 +1,0 @@
-medicalimage = FM (MedicalImage: Format Header?; Header: ReadOnly? Anonymized ; Format: (DICOM|Nifti|Analyze); )

@@ -1,1 +1,0 @@
-FM (SAL: Language Evaluator [Optimizer] ; Language: SimpleArithmetic [Conditional] ; Evaluator: (Machinesemantics|Evaluationsemantics) ; Optimizer: (Shortcircuit|Constantfolding)+ ; (Shortcircuit -> Conditional); )

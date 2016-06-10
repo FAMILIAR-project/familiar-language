@@ -1,3 +1,0 @@
-// fooA.fmm
-
-fm4 = FM (A: [B] [C]; B : (D|E)+; C : (G|H|Z|Y) ; )

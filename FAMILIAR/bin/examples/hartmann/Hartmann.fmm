@@ -1,3 +1,0 @@
-supplierOne = FM ( S : [F1] F2 [F4] ; F2 : (F5|F6); )
-supplierTwo = FM (S : F1 F2 [F3] ; F2 : [F5] [F6]; )
-supplierThree = FM (S : [F1] F2 [F4] ; F2 : [F5] [F6]; F5 -> F1; )

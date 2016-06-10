@@ -1,8 +1,0 @@
-fm0 = FM (A : B [C] ; )
-fm1 = FM (A : B C ; )
-fm2 = merge sunion { fm0 fm1 fm1 }
-fm2bis = merge intersection { fm0 fm1 fm1 }
-
-//fm3 = FM (A : B [C] ; )
-//fm4 = FM (A : [B] C ; )
-//fm5 = merge sunion { fm3 fm4 }

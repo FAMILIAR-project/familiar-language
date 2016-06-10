@@ -1,8 +1,0 @@
-graph G {
-  Site;
-  Menu;
-  0;
-  1;
-  Site -- 1;
-  Menu -- 1;
-}

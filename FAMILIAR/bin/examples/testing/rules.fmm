@@ -1,9 +1,0 @@
-fm1 = FM ( A : B H C? ; H: (E|F) ; )
-fm2 = FM ( R : S T U? ; T : (W|Y)+ ; )
-%% rule_foo1: C implies E
-%% rule_foo2: U implies W
-%% U excludes Y
-ls
-//%% rule_fail_Z_does_not_exist: U implies Z 
-fm3 = FM ( L : M N O? ; N : (W|P)+ ; )
-%% rule_ambigous: W implies O

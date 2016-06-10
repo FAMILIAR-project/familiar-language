@@ -120,10 +120,6 @@ Export-Package:
  fr.familiar.variable.featureide,
  fr.familiar.views.featureide,
  fr.familiar.wizard,
- fr.pacogen.adapter,
- fr.pacogen.model,
- fr.pacogen.model.OperatorPck,
- fr.pacogen.model.treeStructure,
  gsd.graph,
  gsd.synthesis,
  lib
