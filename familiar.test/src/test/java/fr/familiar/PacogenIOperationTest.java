@@ -23,7 +23,6 @@ import java.util.Set;
 
 import org.junit.Test;
 
-import fr.familiar.operations.PacogenLauncher;
 import fr.familiar.variable.FeatureModelVariable;
 import fr.familiar.variable.Variable;
 
@@ -35,7 +34,7 @@ import fr.familiar.variable.Variable;
 public class PacogenIOperationTest extends FMLTest {
 	
 	
-
+/*
 	@Test
 	public void testPaco1() throws Exception {
 		_shell.parse("fm1 = FM (A : B C [D]; D : (E|F|G); C : (H|I|J|K)+; D -> I ;)");
@@ -79,7 +78,7 @@ public class PacogenIOperationTest extends FMLTest {
 	
 	
 	
-	/*
+	
 	@Test
 	public void testPaco2() throws Exception {
 		_shell.parse("fm1 = FM (A : B C [D]; D : (E|F|G); C : (H|I|J|K)+; D -> I ;)");
@@ -91,7 +90,7 @@ public class PacogenIOperationTest extends FMLTest {
 		
 
 	}
-	*/
+	
 	@Test
 	public void testPaco3() throws Exception {
 		_shell.parse("fm1 = FM (A : B C [D]; D : (E|F|G); C : (H|I|J|K)+; D -> I ;)");
@@ -102,7 +101,7 @@ public class PacogenIOperationTest extends FMLTest {
 		pacop.launchPacogen() ;
 		
 
-	}
+	}*/
 /*	
 	@Test
 	public void testPaco4() throws Exception {

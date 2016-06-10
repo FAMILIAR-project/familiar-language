@@ -246,7 +246,9 @@ public class FMLConfigurationBDDTest extends FMLTest {
 		ConfigurationVariable c1 = ConfigurationVariableFactory.INSTANCE.mkBDD(fm1, "fm1");
 				
 		c1.applySelection("C", OpSelection.SELECT);		
+		System.err.println("c1=" + c1.getSpecificValue());
 		c1.applySelection("B", OpSelection.SELECT);
+		System.err.println("c1=" + c1.getSpecificValue());
 		c1.applySelection("D", OpSelection.SELECT);
 		
 		System.err.println("c1=" + c1.getSpecificValue());
