@@ -14,8 +14,6 @@
 	<classpathentry exported="true" kind="lib" path="lib/org.sat4j.core.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/pacogenIntern.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/semanticvectors-3.8.jar"/>
-	<classpathentry kind="lib" path="../FML3rdPartiesMisc/target/FML3rdPartiesMisc-1.0.10.jar"/>
-	<classpathentry kind="lib" path="../FML3rdPartiesForSynthesis/target/FML3rdPartiesForSynthesis-1.0.10.jar"/>
-	<classpathentry kind="lib" path="../SPLAR-plugin/target/SPLAR-plugin-1.0.10.jar"/>
+	<classpathentry kind="lib" path="/FAMILIAR-Standalone/target/FAMILIAR-Standalone-1.0.10-jar-with-dependencies.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

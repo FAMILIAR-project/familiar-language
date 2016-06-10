@@ -17,11 +17,7 @@ Bundle-ClassPath: .,
  lib/semanticvectors-3.8.jar
 Bundle-Activator: fr.familiar.views.featureide.Activator
 Bundle-Vendor: %Bundle-Vendor.3
-Require-Bundle: de.ovgu.featureide.core,
- de.ovgu.featureide.fm.core,
- de.ovgu.featureide.fm.ui,
- de.ovgu.featureide.ui,
- org.eclipse.core.filebuffers,
+Require-Bundle: org.eclipse.core.filebuffers,
  org.eclipse.core.runtime,
  org.eclipse.debug.ui,
  org.eclipse.jface,
