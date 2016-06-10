@@ -42,9 +42,10 @@ import de.ovgu.featureide.fm.core.configuration.Configuration;
 import de.ovgu.featureide.fm.core.configuration.ConfigurationReader;
 import de.ovgu.featureide.fm.core.configuration.SelectableFeature;
 import de.ovgu.featureide.fm.core.configuration.Selection;
-import de.ovgu.featureide.fm.ui.editors.configuration.ConfigurationContentProvider;
+//import de.ovgu.featureide.fm.ui.editors.configuration.ConfigurationContentProvider;
 import fr.familiar.gui.featureide.MyConfigurationWriter;
 
+@Deprecated 
 public class ConfigurationMyEditor extends ApplicationWindow implements
 		PropertyChangeListener {
 
@@ -109,7 +110,7 @@ public class ConfigurationMyEditor extends ApplicationWindow implements
 
 			}
 		});
-		viewer.setContentProvider(new ConfigurationContentProvider());
+		//viewer.setContentProvider(new ConfigurationContentProvider());
 		// should work normally
 		// viewer.setLabelProvider(new ConfigurationLabelProvider());
 		viewer.setInput(configuration);
@@ -146,7 +147,7 @@ public class ConfigurationMyEditor extends ApplicationWindow implements
 			InvocationTargetException {
 		// call it: TODO
 		setConfiguration();
-		viewer.setContentProvider(new ConfigurationContentProvider());
+		//viewer.setContentProvider(new ConfigurationContentProvider());
 		// should work normally
 		// viewer.setLabelProvider(new ConfigurationLabelProvider());
 		viewer.setInput(configuration);

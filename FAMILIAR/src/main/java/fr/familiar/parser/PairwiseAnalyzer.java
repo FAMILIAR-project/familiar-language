@@ -22,7 +22,7 @@ package fr.familiar.parser;
 import org.xtext.example.mydsl.fML.Command;
 import org.xtext.example.mydsl.fML.PairwiseCommand;
 
-import fr.familiar.operations.PacogenLauncher;
+//import fr.familiar.operations.PacogenLauncher;
 import fr.familiar.variable.FeatureModelVariable;
 import fr.familiar.variable.IntegerVariable;
 import fr.familiar.variable.RType;
@@ -64,11 +64,11 @@ public class PairwiseAnalyzer extends FMLAbstractCommandAnalyzer {
 		_partial = partial.getV();
 	}
 		
-	PacogenLauncher pc = new PacogenLauncher(currmodel,_min, _partial) ;
-	pc.launchPacogen() ;
+	//PacogenLauncher pc = new PacogenLauncher(currmodel,_min, _partial) ;
+	//pc.launchPacogen() ;
 	
 	//FMLShell.getInstance().prin
-	setVariable(pc.getTestConfig());
+	//setVariable(pc.getTestConfig());
 	}
 
 	@Override

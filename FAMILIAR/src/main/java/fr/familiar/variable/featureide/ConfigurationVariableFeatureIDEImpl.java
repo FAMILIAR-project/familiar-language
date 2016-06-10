@@ -412,10 +412,11 @@ public class ConfigurationVariableFeatureIDEImpl extends ConfigurationVariable {
 
 	
 
+	// FIXME 
 	private void invokeUpdateManualUndefinedValues(Configuration configuration) {
 		try {
 			Class c = configuration.getClass();
-			Method update = c.getDeclaredMethod("updateManualUndefinedValues");
+			Method update = c.getDeclaredMethod("updateManualUndefinedValues"); // DEPRECATED?
 			update.setAccessible(true);
 			update.invoke(configuration);
 		}

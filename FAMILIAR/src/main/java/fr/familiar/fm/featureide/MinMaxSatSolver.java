@@ -39,6 +39,7 @@ import fr.familiar.interpreter.FMLShell;
 /*
  * TODO rewrite completly this part!
  */
+@Deprecated
 public class MinMaxSatSolver extends SatSolver {
 
 	private AutoConfMode mode;
@@ -53,7 +54,8 @@ public class MinMaxSatSolver extends SatSolver {
 
 	}
 
-	@Override
+	//@Override
+    // problem with SatSolver interface/contract coming from FeatureIDE 
 	public List<Literal> knownValues() {
 		LinkedList<Literal> list = new LinkedList<Literal>();
 
