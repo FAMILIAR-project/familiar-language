@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 FAMILIAR language
 =================
 
@@ -15,6 +14,7 @@ This is the repository for hosting the source code of FAMILIAR.
    - de.ovgu.featureide.fm.core
    - de.ovgu.featureide.fm.ui
    - de.ovgu.featureide.ui
+(there is a way to mavenize FeatureIDE dependencies) 
 
 ### Build
  * Build the familiar.root project with ```mvn install```
@@ -40,18 +40,4 @@ They are loacted in the 'target' folder in each project:
  * For building an executable jar, in ``familiar.standalone``, launch ```mvn package```: the command aggregates all previous jars into one executable jar (in the folder "target", ends up with "-jar-with-dependencies.jar")
  * For executing the tests, in ``familiar.test``, launch ```mvn integration-test``` 
   
-=======
-# Ad-hoc, external dependencies 
 
-FeatureIDE jars + SAT4J core
-We are a bit disconnected from FeatureIDE, so we need to save the JARs (legacy).
-A way to include these jars is through a Maven plugin (but I failed with existing solutions) 
-I chose a script to locally include JARS into the local repo. 
-Pros: best practices
-Cons: hard to share the process   
-
-2.3.5.v20130525
-
-Mostly to build the standalone FAMILIAR; also useful for WebFML
-
->>>>>>> refs/remotes/origin/master
