@@ -1,0 +1,9 @@
+grammar org.xtext.example.mydsl.Fml2 with org.eclipse.xtext.common.Terminals
+
+generate fml2 "http://www.xtext.org/example/mydsl/Fml2"
+
+Model:
+	greetings+=Greeting*;
+	
+Greeting:
+	'Hello' name=ID '!';
