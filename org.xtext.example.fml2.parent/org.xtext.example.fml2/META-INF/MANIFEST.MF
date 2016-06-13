@@ -7,5 +7,23 @@ Bundle-SymbolicName: org.xtext.example.fml2; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext,
  org.eclipse.xtext.xbase,
- org.eclipse.equinox.common;bundle-version="3.5.0"
+ org.eclipse.equinox.common;bundle-version="3.5.0",
+ org.eclipse.emf.ecore,
+ org.eclipse.xtext.xbase.lib,
+ org.antlr.runtime,
+ org.eclipse.xtext.util,
+ org.eclipse.xtend.lib,
+ org.eclipse.emf.common
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Export-Package: org.xtext.example.mydsl.parser.antlr.internal,
+ org.xtext.example.mydsl.scoping,
+ org.xtext.example.mydsl.services,
+ org.xtext.example.mydsl.fml2,
+ org.xtext.example.mydsl.generator,
+ org.xtext.example.mydsl.validation,
+ org.xtext.example.mydsl.fml2.util,
+ org.xtext.example.mydsl,
+ org.xtext.example.mydsl.fml2.impl,
+ org.xtext.example.mydsl.serializer,
+ org.xtext.example.mydsl.parser.antlr
+Import-Package: org.apache.log4j
