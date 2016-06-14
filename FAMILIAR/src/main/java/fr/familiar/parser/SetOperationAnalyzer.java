@@ -23,16 +23,16 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.apache.log4j.Logger;
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.IsEmptySet;
-import org.xtext.example.mydsl.fML.SetAddOrRemove;
-import org.xtext.example.mydsl.fML.SetBelongs;
-import org.xtext.example.mydsl.fML.SetCard;
-import org.xtext.example.mydsl.fML.SetCommand;
-import org.xtext.example.mydsl.fML.SetEmpty;
-import org.xtext.example.mydsl.fML.SetOperations;
-import org.xtext.example.mydsl.fML.SetToNames;
-import org.xtext.example.mydsl.fML.SetUnionOrIntersection;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.IsEmptySet;
+import org.xtext.example.mydsl.fml.SetAddOrRemove;
+import org.xtext.example.mydsl.fml.SetBelongs;
+import org.xtext.example.mydsl.fml.SetCard;
+import org.xtext.example.mydsl.fml.SetCommand;
+import org.xtext.example.mydsl.fml.SetEmpty;
+import org.xtext.example.mydsl.fml.SetOperations;
+import org.xtext.example.mydsl.fml.SetToNames;
+import org.xtext.example.mydsl.fml.SetUnionOrIntersection;
 
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.interpreter.VariableNotExistingException;

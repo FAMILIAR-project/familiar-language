@@ -22,14 +22,14 @@ package fr.familiar.parser;
 import java.util.List;
 
 import org.eclipse.emf.ecore.EObject;
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.Exist;
-import org.xtext.example.mydsl.fML.IsConflicting;
-import org.xtext.example.mydsl.fML.OPT_LISTING;
-import org.xtext.example.mydsl.fML.impl.ExistImpl;
-import org.xtext.example.mydsl.fML.impl.ExitImpl;
-import org.xtext.example.mydsl.fML.impl.ListingImpl;
-import org.xtext.example.mydsl.fML.impl.ShellImpl;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.Exist;
+import org.xtext.example.mydsl.fml.IsConflicting;
+import org.xtext.example.mydsl.fml.OPT_LISTING;
+import org.xtext.example.mydsl.fml.impl.ExistImpl;
+import org.xtext.example.mydsl.fml.impl.ExitImpl;
+import org.xtext.example.mydsl.fml.impl.ListingImpl;
+import org.xtext.example.mydsl.fml.impl.ShellImpl;
 
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.interpreter.VariableNotExistingException;

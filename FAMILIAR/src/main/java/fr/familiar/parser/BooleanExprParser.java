@@ -19,8 +19,8 @@
  */
 package fr.familiar.parser;
 
-import org.xtext.example.mydsl.fML.BooleanExpr;
-import org.xtext.example.mydsl.fML.Command;
+import org.xtext.example.mydsl.fml.BooleanExpr;
+import org.xtext.example.mydsl.fml.Command;
 
 import fr.familiar.variable.BooleanVariable;
 import fr.familiar.variable.RType;

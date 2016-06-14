@@ -22,7 +22,7 @@ package fr.familiar.fm.basic;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.xtext.example.mydsl.fML.FeatureEdgeKind;
+import org.xtext.example.mydsl.fml.FeatureEdgeKind;
 
 /**
  * @author mathieuacher

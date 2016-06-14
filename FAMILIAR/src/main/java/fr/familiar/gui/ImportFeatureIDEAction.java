@@ -26,7 +26,7 @@ package fr.familiar.gui;
 
 import java.io.File;
 
-import org.xtext.example.mydsl.fML.FMFormat;
+import org.xtext.example.mydsl.fml.FMFormat;
 
 import de.ovgu.featureide.fm.core.io.guidsl.GuidslReader;
 import fr.familiar.fm.featureide.FeatureIDEtoFML;

@@ -19,8 +19,8 @@
 
 package fr.familiar.parser;
 
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.PairwiseCommand;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.PairwiseCommand;
 
 //import fr.familiar.operations.PacogenLauncher;
 import fr.familiar.variable.FeatureModelVariable;

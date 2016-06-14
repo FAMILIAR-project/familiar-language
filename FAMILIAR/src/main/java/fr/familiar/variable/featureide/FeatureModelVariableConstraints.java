@@ -29,7 +29,7 @@ import net.sf.javabdd.BDD;
 
 import org.prop4j.And;
 import org.prop4j.Node;
-import org.xtext.example.mydsl.fML.SliceMode;
+import org.xtext.example.mydsl.fml.SliceMode;
 
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.operations.BDDFormula;

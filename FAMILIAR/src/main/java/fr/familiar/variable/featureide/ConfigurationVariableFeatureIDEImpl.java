@@ -33,8 +33,8 @@ import org.eclipse.ui.IWorkbenchPage;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.PlatformUI;
 import org.eclipse.ui.part.FileEditorInput;
-import org.xtext.example.mydsl.fML.AutoConfMode;
-import org.xtext.example.mydsl.fML.OpSelection;
+import org.xtext.example.mydsl.fml.AutoConfMode;
+import org.xtext.example.mydsl.fml.OpSelection;
 
 import de.ovgu.featureide.fm.core.Feature;
 import de.ovgu.featureide.fm.core.configuration.Configuration;

@@ -31,8 +31,8 @@ import org.eclipse.emf.ecore.xmi.XMIResource;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.xtext.parsetree.reconstr.Serializer;
 import org.eclipse.xtext.resource.XtextResource;
-import org.xtext.example.mydsl.FMLStandaloneSetup;
-import org.xtext.example.mydsl.fML.FeatureModel;
+import org.xtext.example.mydsl.FmlStandaloneSetup;
+import org.xtext.example.mydsl.fml.FeatureModel;
 
 import com.google.inject.Injector;
 
@@ -59,7 +59,7 @@ public class FMLFeatureModelWriter {
 
 	public XMIResource toXMI(String output) {
 
-		new FMLStandaloneSetup().createInjectorAndDoEMFRegistration();
+		new FmlStandaloneSetup().createInjectorAndDoEMFRegistration();
 		URI domainModelURI = URI.createURI(output);
 		if (domainModelURI.fileExtension() == null)
 			domainModelURI = domainModelURI.appendFileExtension("xmi");
@@ -90,7 +90,7 @@ public class FMLFeatureModelWriter {
 	@Deprecated
 	public Resource toFile(String output, EObject eo) {
 
-		Injector injector = new FMLStandaloneSetup()
+		Injector injector = new FmlStandaloneSetup()
 				.createInjectorAndDoEMFRegistration();
 
 		ResourceSet rs = injector.getInstance(ResourceSet.class); // new
@@ -144,7 +144,7 @@ public class FMLFeatureModelWriter {
 
 	public String toStringXMI() {
 
-		new FMLStandaloneSetup().createInjectorAndDoEMFRegistration();
+		new FmlStandaloneSetup().createInjectorAndDoEMFRegistration();
 		URI domainModelURI = URI.createURI("dummy:/foo.xmi");
 		if (domainModelURI.fileExtension() == null)
 			domainModelURI = domainModelURI.appendFileExtension("xmi");

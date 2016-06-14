@@ -22,7 +22,7 @@ package fr.familiar.operations.featureide;
 import java.util.Collection;
 
 import org.prop4j.Node;
-import org.xtext.example.mydsl.fML.SliceMode;
+import org.xtext.example.mydsl.fml.SliceMode;
 
 import de.ovgu.featureide.fm.core.FeatureModel;
 import de.ovgu.featureide.fm.core.editing.NodeCreator;

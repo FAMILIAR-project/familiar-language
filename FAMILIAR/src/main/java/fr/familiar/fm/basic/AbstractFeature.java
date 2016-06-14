@@ -21,7 +21,7 @@ package fr.familiar.fm.basic;
 
 import java.util.Set;
 
-import org.xtext.example.mydsl.fML.FeatureEdgeKind;
+import org.xtext.example.mydsl.fml.FeatureEdgeKind;
 
 public abstract class AbstractFeature {
 

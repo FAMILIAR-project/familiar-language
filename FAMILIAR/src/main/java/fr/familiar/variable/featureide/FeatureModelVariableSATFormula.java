@@ -22,7 +22,7 @@ package fr.familiar.variable.featureide;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.xtext.example.mydsl.fML.SliceMode;
+import org.xtext.example.mydsl.fml.SliceMode;
 
 import fr.familiar.fm.converter.ExclusionGraph;
 import fr.familiar.operations.KnowledgeSynthesis;

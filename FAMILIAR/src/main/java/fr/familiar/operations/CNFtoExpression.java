@@ -23,14 +23,14 @@ import fr.familiar.variable.FeatureName;
 import gsd.synthesis.Expression;
 import gsd.synthesis.ExpressionType;
 
-import org.xtext.example.mydsl.fML.And_expr;
-import org.xtext.example.mydsl.fML.Biimpl_expr;
-import org.xtext.example.mydsl.fML.CNF;
-import org.xtext.example.mydsl.fML.CNFExpression;
-import org.xtext.example.mydsl.fML.Impl_expr;
-import org.xtext.example.mydsl.fML.Neg_expr;
-import org.xtext.example.mydsl.fML.Or_expr;
-import org.xtext.example.mydsl.fML.impl.CNFExpressionImpl;
+import org.xtext.example.mydsl.fml.And_expr;
+import org.xtext.example.mydsl.fml.Biimpl_expr;
+import org.xtext.example.mydsl.fml.CNF;
+import org.xtext.example.mydsl.fml.CNFExpression;
+import org.xtext.example.mydsl.fml.Impl_expr;
+import org.xtext.example.mydsl.fml.Neg_expr;
+import org.xtext.example.mydsl.fml.Or_expr;
+import org.xtext.example.mydsl.fml.impl.CNFExpressionImpl;
 
 
 public class CNFtoExpression {

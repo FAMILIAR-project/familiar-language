@@ -24,7 +24,7 @@
  */
 package fr.familiar.gui;
 
-import org.xtext.example.mydsl.fML.OpSelection;
+import org.xtext.example.mydsl.fml.OpSelection;
 
 import fr.familiar.variable.ConfigurationVariable;
 

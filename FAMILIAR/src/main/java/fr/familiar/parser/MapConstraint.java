@@ -23,9 +23,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.Map;
-import org.xtext.example.mydsl.fML.SetCommand;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.Map;
+import org.xtext.example.mydsl.fml.SetCommand;
 
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.variable.BooleanVariable;

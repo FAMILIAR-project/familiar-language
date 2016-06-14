@@ -26,8 +26,8 @@ import java.util.List;
 import java.util.Set;
 
 import org.apache.log4j.Logger;
-import org.xtext.example.mydsl.fML.AutoConfMode;
-import org.xtext.example.mydsl.fML.OpSelection;
+import org.xtext.example.mydsl.fml.AutoConfMode;
+import org.xtext.example.mydsl.fml.OpSelection;
 
 import splar.core.fm.FeatureGroup;
 import splar.core.fm.FeatureModel;

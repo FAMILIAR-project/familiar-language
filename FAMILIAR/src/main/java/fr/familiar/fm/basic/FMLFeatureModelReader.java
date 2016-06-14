@@ -32,12 +32,12 @@ import org.eclipse.emf.ecore.resource.Resource.Diagnostic;
 import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.XMIResource;
-import org.xtext.example.mydsl.FMLStandaloneSetup;
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.FeatureModel;
-import org.xtext.example.mydsl.fML.ScriptCommand;
-import org.xtext.example.mydsl.fML.impl.ComplexCommandImpl;
-import org.xtext.example.mydsl.fML.impl.FamiliarScriptImpl;
+import org.xtext.example.mydsl.FmlStandaloneSetup;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.FeatureModel;
+import org.xtext.example.mydsl.fml.ScriptCommand;
+import org.xtext.example.mydsl.fml.impl.ComplexCommandImpl;
+import org.xtext.example.mydsl.fml.impl.FamiliarScriptImpl;
 
 /**
  * @author mathieuacher
@@ -55,7 +55,7 @@ public class FMLFeatureModelReader {
 	}
 
 	private void initStandalone() {
-		new FMLStandaloneSetup().createInjectorAndDoEMFRegistration();
+		new FmlStandaloneSetup().createInjectorAndDoEMFRegistration();
 
 	}
 

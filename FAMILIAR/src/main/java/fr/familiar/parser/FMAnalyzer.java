@@ -19,17 +19,17 @@
 
 package fr.familiar.parser;
 
-import org.xtext.example.mydsl.fML.Aggregate;
-import org.xtext.example.mydsl.fML.AggregateMerge;
-import org.xtext.example.mydsl.fML.AsFM;
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.CopyVariable;
-import org.xtext.example.mydsl.fML.Extract;
-import org.xtext.example.mydsl.fML.Hierarchy;
-import org.xtext.example.mydsl.fML.IdentifierExpr;
-import org.xtext.example.mydsl.fML.Merge;
-import org.xtext.example.mydsl.fML.Slice;
-import org.xtext.example.mydsl.fML.Synthesis;
+import org.xtext.example.mydsl.fml.Aggregate;
+import org.xtext.example.mydsl.fml.AggregateMerge;
+import org.xtext.example.mydsl.fml.AsFM;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.CopyVariable;
+import org.xtext.example.mydsl.fml.Extract;
+import org.xtext.example.mydsl.fml.Hierarchy;
+import org.xtext.example.mydsl.fml.IdentifierExpr;
+import org.xtext.example.mydsl.fml.Merge;
+import org.xtext.example.mydsl.fml.Slice;
+import org.xtext.example.mydsl.fml.Synthesis;
 
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.variable.FeatureModelVariable;
@@ -99,7 +99,7 @@ public class FMAnalyzer extends FMLAbstractCommandAnalyzer {
 			return ; 
 		}
 
-		else if (cmd instanceof org.xtext.example.mydsl.fML.FeatureModel) {
+		else if (cmd instanceof org.xtext.example.mydsl.fml.FeatureModel) {
 
 			pars = new FMBuilder((Command) cmd, varID, ns, _environment);
 			pars.parse();

@@ -21,10 +21,10 @@ package fr.familiar.parser;
 
 import java.lang.reflect.InvocationTargetException;
 
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.ComparisonOperation;
-import org.xtext.example.mydsl.fML.ComparisonOperator;
-import org.xtext.example.mydsl.fML.ComplexCommand;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.ComparisonOperation;
+import org.xtext.example.mydsl.fml.ComparisonOperator;
+import org.xtext.example.mydsl.fml.ComplexCommand;
 
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.variable.BooleanVariable;

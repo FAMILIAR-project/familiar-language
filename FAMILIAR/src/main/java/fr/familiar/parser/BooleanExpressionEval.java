@@ -19,7 +19,7 @@
  */
 package fr.familiar.parser;
 
-import org.xtext.example.mydsl.fML.BooleanExpr;
+import org.xtext.example.mydsl.fml.BooleanExpr;
 
 public class BooleanExpressionEval {
 

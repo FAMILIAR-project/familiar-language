@@ -21,7 +21,7 @@ package fr.familiar.fm.basic;
 
 import java.util.Set;
 
-import org.xtext.example.mydsl.fML.SliceMode;
+import org.xtext.example.mydsl.fml.SliceMode;
 
 import fr.familiar.operations.KnowledgeSynthesis;
 import fr.familiar.variable.FeatureModelVariable;

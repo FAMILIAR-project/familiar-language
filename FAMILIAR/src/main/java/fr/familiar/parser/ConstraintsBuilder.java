@@ -26,7 +26,7 @@ import java.util.List;
 import java.util.Set;
 
 import org.eclipse.emf.common.util.EList;
-import org.xtext.example.mydsl.fML.CNF;
+import org.xtext.example.mydsl.fml.CNF;
 
 import fr.familiar.operations.CNFtoExpression;
 import fr.familiar.variable.ConstraintVariable;

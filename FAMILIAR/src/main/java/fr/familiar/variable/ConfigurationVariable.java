@@ -21,8 +21,8 @@ package fr.familiar.variable;
 
 import java.util.Set;
 
-import org.xtext.example.mydsl.fML.AutoConfMode;
-import org.xtext.example.mydsl.fML.OpSelection;
+import org.xtext.example.mydsl.fml.AutoConfMode;
+import org.xtext.example.mydsl.fml.OpSelection;
 
 import fr.familiar.interpreter.FMLShell;
 import gsd.synthesis.Expression;

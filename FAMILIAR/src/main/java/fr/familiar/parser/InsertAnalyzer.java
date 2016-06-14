@@ -19,12 +19,12 @@
  */
 package fr.familiar.parser;
 
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.FMCommand;
-import org.xtext.example.mydsl.fML.FTCommand;
-import org.xtext.example.mydsl.fML.FeatureEdgeKind;
-import org.xtext.example.mydsl.fML.Insert;
-import org.xtext.example.mydsl.fML.VariabilityOpCommand;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.FMCommand;
+import org.xtext.example.mydsl.fml.FTCommand;
+import org.xtext.example.mydsl.fml.FeatureEdgeKind;
+import org.xtext.example.mydsl.fml.Insert;
+import org.xtext.example.mydsl.fml.VariabilityOpCommand;
 
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.variable.BooleanVariable;

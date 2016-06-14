@@ -19,9 +19,9 @@
  */
 package fr.familiar.parser;
 
-import org.xtext.example.mydsl.fML.AsFM;
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.ConfigurationCommand;
+import org.xtext.example.mydsl.fml.AsFM;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.ConfigurationCommand;
 
 import fr.familiar.variable.ConfigurationVariable;
 import fr.familiar.variable.FeatureModelVariable;

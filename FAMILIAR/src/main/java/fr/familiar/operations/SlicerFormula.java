@@ -21,7 +21,7 @@ package fr.familiar.operations;
 
 import java.util.Collection;
 
-import org.xtext.example.mydsl.fML.SliceMode;
+import org.xtext.example.mydsl.fml.SliceMode;
 
 import fr.familiar.fm.FMLFormula;
 import fr.familiar.variable.FeatureModelVariable;

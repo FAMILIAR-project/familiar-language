@@ -23,9 +23,9 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.eclipse.emf.ecore.EObject;
-import org.xtext.example.mydsl.fML.AnalysisOperation;
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.impl.AnalysisOperationImpl;
+import org.xtext.example.mydsl.fml.AnalysisOperation;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.impl.AnalysisOperationImpl;
 
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.interpreter.NSFactory;

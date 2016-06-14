@@ -27,7 +27,7 @@ import java.util.Vector;
 import org.sat4j.core.VecInt;
 import org.sat4j.specs.ISolver;
 import org.sat4j.specs.IVecInt;
-import org.xtext.example.mydsl.fML.SliceMode;
+import org.xtext.example.mydsl.fml.SliceMode;
 
 import splar.core.constraints.CNFClause;
 import splar.core.constraints.CNFLiteral;

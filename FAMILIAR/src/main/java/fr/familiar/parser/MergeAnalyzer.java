@@ -25,12 +25,12 @@ import java.util.Set;
 
 import org.apache.log4j.Logger;
 import org.eclipse.emf.common.util.EList;
-import org.xtext.example.mydsl.fML.BDDBackend;
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.FMCommand;
-import org.xtext.example.mydsl.fML.LFMArgs;
-import org.xtext.example.mydsl.fML.Merge;
-import org.xtext.example.mydsl.fML.MergeMode;
+import org.xtext.example.mydsl.fml.BDDBackend;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.FMCommand;
+import org.xtext.example.mydsl.fml.LFMArgs;
+import org.xtext.example.mydsl.fml.Merge;
+import org.xtext.example.mydsl.fml.MergeMode;
 
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.operations.FDOverApproximationStrategy;

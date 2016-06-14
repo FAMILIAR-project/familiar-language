@@ -35,16 +35,16 @@ import net.sf.javabdd.BDD;
 
 import org.apache.log4j.Logger;
 import org.eclipse.emf.common.util.EList;
-import org.xtext.example.mydsl.fML.CNF;
-import org.xtext.example.mydsl.fML.Child;
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.FeatureModel;
-import org.xtext.example.mydsl.fML.Mandatory;
-import org.xtext.example.mydsl.fML.Mutexgroup;
-import org.xtext.example.mydsl.fML.Optional;
-import org.xtext.example.mydsl.fML.Orgroup;
-import org.xtext.example.mydsl.fML.Production;
-import org.xtext.example.mydsl.fML.Xorgroup;
+import org.xtext.example.mydsl.fml.CNF;
+import org.xtext.example.mydsl.fml.Child;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.FeatureModel;
+import org.xtext.example.mydsl.fml.Mandatory;
+import org.xtext.example.mydsl.fml.Mutexgroup;
+import org.xtext.example.mydsl.fml.Optional;
+import org.xtext.example.mydsl.fml.Orgroup;
+import org.xtext.example.mydsl.fml.Production;
+import org.xtext.example.mydsl.fml.Xorgroup;
 
 import splar.core.fm.FeatureModelException;
 import splar.core.fm.XMLFeatureModel;
@@ -126,8 +126,8 @@ public class FMBuilder extends FMLAbstractCommandAnalyzer {
 	@Override
 	public void eval() {
 
-		assert (_command instanceof org.xtext.example.mydsl.fML.FeatureModel);
-		org.xtext.example.mydsl.fML.FeatureModel fm = (org.xtext.example.mydsl.fML.FeatureModel) _command;
+		assert (_command instanceof org.xtext.example.mydsl.fml.FeatureModel);
+		org.xtext.example.mydsl.fml.FeatureModel fm = (org.xtext.example.mydsl.fml.FeatureModel) _command;
 
 		// fm to String
 		String strfm = "";

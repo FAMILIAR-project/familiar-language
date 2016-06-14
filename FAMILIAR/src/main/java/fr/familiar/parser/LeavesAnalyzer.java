@@ -19,9 +19,9 @@
 
 package fr.familiar.parser;
 
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.FMCommand;
-import org.xtext.example.mydsl.fML.Leaves;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.FMCommand;
+import org.xtext.example.mydsl.fml.Leaves;
 
 import fr.familiar.variable.FeatureModelVariable;
 import fr.familiar.variable.RType;

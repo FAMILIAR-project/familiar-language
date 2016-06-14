@@ -22,7 +22,7 @@ package fr.familiar.fm.basic;
 import java.io.File;
 
 import org.eclipse.emf.ecore.xmi.XMIResource;
-import org.xtext.example.mydsl.fML.FeatureModel;
+import org.xtext.example.mydsl.fml.FeatureModel;
 
 /**
  * @author mathieuacher Examples on how to use FML feature model reader/writer

@@ -19,9 +19,9 @@
 
 package fr.familiar.parser;
 
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.FMCommand;
-import org.xtext.example.mydsl.fML.RemoveConstraint;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.FMCommand;
+import org.xtext.example.mydsl.fml.RemoveConstraint;
 
 import fr.familiar.variable.BooleanVariable;
 import fr.familiar.variable.ConstraintVariable;

@@ -19,9 +19,9 @@
  */
 package fr.familiar.parser;
 
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.IntegerCommand;
-import org.xtext.example.mydsl.fML.IntegerOperation;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.IntegerCommand;
+import org.xtext.example.mydsl.fml.IntegerOperation;
 
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.variable.IntegerVariable;

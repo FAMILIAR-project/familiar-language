@@ -19,9 +19,9 @@
  */
 package fr.familiar.parser;
 
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.FeatureEdgeKind;
-import org.xtext.example.mydsl.fML.FeatureVariabilityOperator;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.FeatureEdgeKind;
+import org.xtext.example.mydsl.fml.FeatureVariabilityOperator;
 
 import fr.familiar.variable.RType;
 import fr.familiar.variable.VariabilityOperatorVariable;

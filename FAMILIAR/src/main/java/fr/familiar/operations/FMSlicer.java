@@ -26,7 +26,7 @@ import java.util.Set;
 import java.util.SortedSet;
 
 import org.apache.log4j.Logger;
-import org.xtext.example.mydsl.fML.SliceMode;
+import org.xtext.example.mydsl.fml.SliceMode;
 
 import com.google.common.collect.Sets;
 import com.google.common.collect.TreeMultimap;

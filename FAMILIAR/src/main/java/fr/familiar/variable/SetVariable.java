@@ -22,7 +22,7 @@ package fr.familiar.variable;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.xtext.example.mydsl.fML.ComparisonOperator;
+import org.xtext.example.mydsl.fml.ComparisonOperator;
 
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.interpreter.NSFactory;

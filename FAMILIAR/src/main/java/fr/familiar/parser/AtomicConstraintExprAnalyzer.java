@@ -19,9 +19,9 @@
 
 package fr.familiar.parser;
 
-import org.xtext.example.mydsl.fML.AtomicConstraintExpr;
-import org.xtext.example.mydsl.fML.CNF;
-import org.xtext.example.mydsl.fML.Command;
+import org.xtext.example.mydsl.fml.AtomicConstraintExpr;
+import org.xtext.example.mydsl.fml.CNF;
+import org.xtext.example.mydsl.fml.Command;
 
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.operations.CNFtoExpression;

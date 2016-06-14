@@ -22,10 +22,10 @@ package fr.familiar.parser;
 import java.util.Set;
 
 import org.eclipse.swt.widgets.Display;
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.FTCommand;
-import org.xtext.example.mydsl.fML.RenameFeature;
-import org.xtext.example.mydsl.fML.StrCommand;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.FTCommand;
+import org.xtext.example.mydsl.fml.RenameFeature;
+import org.xtext.example.mydsl.fml.StrCommand;
 
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.operations.ExpressionUtility;

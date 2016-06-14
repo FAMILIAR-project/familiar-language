@@ -22,7 +22,7 @@ package fr.familiar.parser;
 import java.lang.reflect.InvocationTargetException;
 
 import org.apache.log4j.Logger;
-import org.xtext.example.mydsl.fML.ComparisonOperator;
+import org.xtext.example.mydsl.fml.ComparisonOperator;
 
 import fr.familiar.experimental.FGroup;
 import fr.familiar.fm.FeatureModelPrinter;

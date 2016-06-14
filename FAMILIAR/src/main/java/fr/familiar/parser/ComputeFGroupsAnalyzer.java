@@ -22,11 +22,11 @@ package fr.familiar.parser;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.ComputeFGroups;
-import org.xtext.example.mydsl.fML.FMCommand;
-import org.xtext.example.mydsl.fML.GetFGroups;
-import org.xtext.example.mydsl.fML.KindOfComputeGroups;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.ComputeFGroups;
+import org.xtext.example.mydsl.fml.FMCommand;
+import org.xtext.example.mydsl.fml.GetFGroups;
+import org.xtext.example.mydsl.fml.KindOfComputeGroups;
 
 import fr.familiar.experimental.FGroup;
 import fr.familiar.interpreter.FMLShell;

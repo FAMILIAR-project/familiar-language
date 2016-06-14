@@ -28,7 +28,7 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractAction;
 
-import org.xtext.example.mydsl.fML.FMFormat;
+import org.xtext.example.mydsl.fml.FMFormat;
 
 import fr.familiar.parser.FMLSaveAnalyzer;
 

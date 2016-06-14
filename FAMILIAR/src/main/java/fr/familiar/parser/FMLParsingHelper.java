@@ -11,8 +11,8 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.eclipse.xtext.resource.IResourceFactory;
 import org.eclipse.xtext.resource.XtextResourceSet;
 import org.eclipse.xtext.util.StringInputStream;
-import org.xtext.example.mydsl.FMLStandaloneSetup;
-import org.xtext.example.mydsl.fML.FamiliarScript;
+import org.xtext.example.mydsl.FmlStandaloneSetup;
+import org.xtext.example.mydsl.fml.FamiliarScript;
 
 import com.google.inject.Injector;
 
@@ -24,7 +24,7 @@ import com.google.inject.Injector;
 public class FMLParsingHelper {
 
 	// TODO fix it and use dependency injection
-	private static Injector injector = new FMLStandaloneSetup().createInjectorAndDoEMFRegistration();
+	private static Injector injector = new FmlStandaloneSetup().createInjectorAndDoEMFRegistration();
 	
 	private IResourceFactory resourceFactory ;
 	private XtextResourceSet resourceSet ;

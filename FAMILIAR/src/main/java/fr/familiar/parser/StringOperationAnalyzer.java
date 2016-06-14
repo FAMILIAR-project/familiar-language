@@ -20,15 +20,15 @@
 package fr.familiar.parser;
 
 import org.apache.log4j.Logger;
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.IntegerCommand;
-import org.xtext.example.mydsl.fML.StrCommand;
-import org.xtext.example.mydsl.fML.StringConcat;
-import org.xtext.example.mydsl.fML.StringIndexOf;
-import org.xtext.example.mydsl.fML.StringInit;
-import org.xtext.example.mydsl.fML.StringLength;
-import org.xtext.example.mydsl.fML.StringOperation;
-import org.xtext.example.mydsl.fML.StringSubstring;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.IntegerCommand;
+import org.xtext.example.mydsl.fml.StrCommand;
+import org.xtext.example.mydsl.fml.StringConcat;
+import org.xtext.example.mydsl.fml.StringIndexOf;
+import org.xtext.example.mydsl.fml.StringInit;
+import org.xtext.example.mydsl.fml.StringLength;
+import org.xtext.example.mydsl.fml.StringOperation;
+import org.xtext.example.mydsl.fml.StringSubstring;
 
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.variable.IntegerVariable;

@@ -31,7 +31,7 @@ import javax.swing.AbstractAction;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 
-import org.xtext.example.mydsl.fML.FMFormat;
+import org.xtext.example.mydsl.fml.FMFormat;
 
 import prefuse.util.io.SimpleFileFilter;
 import fr.familiar.variable.FeatureModelVariable;

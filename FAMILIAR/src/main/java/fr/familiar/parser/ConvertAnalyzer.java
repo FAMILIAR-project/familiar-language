@@ -22,12 +22,12 @@ package fr.familiar.parser;
 import java.util.Collection;
 
 import org.eclipse.emf.ecore.EObject;
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.ConfigurationCommand;
-import org.xtext.example.mydsl.fML.Convert;
-import org.xtext.example.mydsl.fML.FMCommand;
-import org.xtext.example.mydsl.fML.FMFormat;
-import org.xtext.example.mydsl.fML.FeatureModel;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.ConfigurationCommand;
+import org.xtext.example.mydsl.fml.Convert;
+import org.xtext.example.mydsl.fml.FMCommand;
+import org.xtext.example.mydsl.fml.FMFormat;
+import org.xtext.example.mydsl.fml.FeatureModel;
 
 import fr.familiar.fm.FMLBDDWriter;
 import fr.familiar.fm.FeatureModelPrinter;

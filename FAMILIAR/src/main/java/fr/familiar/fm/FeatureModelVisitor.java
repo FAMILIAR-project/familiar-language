@@ -19,10 +19,10 @@
  */
 package fr.familiar.fm;
 
-import org.xtext.example.mydsl.fML.CNF;
-import org.xtext.example.mydsl.fML.Child;
-import org.xtext.example.mydsl.fML.FeatureModel;
-import org.xtext.example.mydsl.fML.Production;
+import org.xtext.example.mydsl.fml.CNF;
+import org.xtext.example.mydsl.fml.Child;
+import org.xtext.example.mydsl.fml.FeatureModel;
+import org.xtext.example.mydsl.fml.Production;
 
 /**
  * @author mathieuacher

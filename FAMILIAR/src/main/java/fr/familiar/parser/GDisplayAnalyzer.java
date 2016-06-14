@@ -20,11 +20,11 @@
 package fr.familiar.parser;
 
 import org.eclipse.emf.ecore.EObject;
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.ConfigurationCommand;
-import org.xtext.example.mydsl.fML.FMCommand;
-import org.xtext.example.mydsl.fML.GDisplay;
-import org.xtext.example.mydsl.fML.IdentifierExpr;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.ConfigurationCommand;
+import org.xtext.example.mydsl.fml.FMCommand;
+import org.xtext.example.mydsl.fml.GDisplay;
+import org.xtext.example.mydsl.fml.IdentifierExpr;
 
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.variable.ConfigurationVariable;

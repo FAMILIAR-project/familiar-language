@@ -19,7 +19,7 @@
  */
 package fr.familiar.variable;
 
-import org.xtext.example.mydsl.fML.FeatureEdgeKind;
+import org.xtext.example.mydsl.fml.FeatureEdgeKind;
 
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.interpreter.NSFactory;

@@ -42,9 +42,9 @@ import javax.naming.OperationNotSupportedException;
 import net.sf.javabdd.BDD;
 
 import org.apache.log4j.Logger;
-import org.xtext.example.mydsl.fML.FMFormat;
-import org.xtext.example.mydsl.fML.FeatureEdgeKind;
-import org.xtext.example.mydsl.fML.SliceMode;
+import org.xtext.example.mydsl.fml.FMFormat;
+import org.xtext.example.mydsl.fml.FeatureEdgeKind;
+import org.xtext.example.mydsl.fml.SliceMode;
 
 import splar.core.fm.FeatureGroup;
 import splar.core.fm.FeatureModelException;

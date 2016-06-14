@@ -23,9 +23,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.eclipse.emf.common.util.EList;
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.ComplexCommand;
-import org.xtext.example.mydsl.fML.SetExpr;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.ComplexCommand;
+import org.xtext.example.mydsl.fml.SetExpr;
 
 import fr.familiar.variable.RType;
 import fr.familiar.variable.SetVariable;

@@ -19,8 +19,8 @@
  */
 package fr.familiar.parser;
 
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.CopyVariable;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.CopyVariable;
 
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.interpreter.VariableNotExistingException;

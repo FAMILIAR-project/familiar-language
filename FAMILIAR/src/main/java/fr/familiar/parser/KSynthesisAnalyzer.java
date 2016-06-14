@@ -23,14 +23,14 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.eclipse.emf.common.util.EList;
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.ConstraintExpr;
-import org.xtext.example.mydsl.fML.ConstraintsSpecification;
-import org.xtext.example.mydsl.fML.FMCommand;
-import org.xtext.example.mydsl.fML.HProduction;
-import org.xtext.example.mydsl.fML.HierarchySpecification;
-import org.xtext.example.mydsl.fML.KnowledgeSpecification;
-import org.xtext.example.mydsl.fML.Synthesis;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.ConstraintExpr;
+import org.xtext.example.mydsl.fml.ConstraintsSpecification;
+import org.xtext.example.mydsl.fml.FMCommand;
+import org.xtext.example.mydsl.fml.HProduction;
+import org.xtext.example.mydsl.fml.HierarchySpecification;
+import org.xtext.example.mydsl.fml.KnowledgeSpecification;
+import org.xtext.example.mydsl.fml.Synthesis;
 
 //import fr.familiar.gui.synthesis.FMSynthesisEnvironment; // FIXME : removed with KSynthesis
 import fr.familiar.interpreter.FMLShell;

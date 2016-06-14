@@ -25,8 +25,8 @@ import java.util.Set;
 import net.sf.javabdd.BDD;
 
 import org.apache.log4j.Logger;
-import org.xtext.example.mydsl.fML.AutoConfMode;
-import org.xtext.example.mydsl.fML.OpSelection;
+import org.xtext.example.mydsl.fml.AutoConfMode;
+import org.xtext.example.mydsl.fml.OpSelection;
 
 import com.google.common.collect.Sets;
 

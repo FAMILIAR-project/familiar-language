@@ -41,7 +41,7 @@ import javax.swing.plaf.ColorUIResource;
 import javax.swing.tree.TreeCellRenderer;
 import javax.swing.tree.TreePath;
 
-import org.xtext.example.mydsl.fML.OpSelection;
+import org.xtext.example.mydsl.fml.OpSelection;
 
 import prefuse.data.Node;
 import prefuse.data.tuple.TableNode;

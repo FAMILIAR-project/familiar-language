@@ -28,8 +28,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.LoadGeneric;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.LoadGeneric;
 
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.interpreter.NSFactory;

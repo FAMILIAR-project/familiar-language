@@ -35,7 +35,7 @@ import org.prop4j.Literal;
 import org.prop4j.Node;
 import org.prop4j.Not;
 import org.prop4j.Or;
-import org.xtext.example.mydsl.fML.SliceMode;
+import org.xtext.example.mydsl.fml.SliceMode;
 
 import com.google.common.collect.Sets;
 

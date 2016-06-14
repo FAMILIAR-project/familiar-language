@@ -25,7 +25,7 @@ import gsd.synthesis.Formula;
 
 import java.util.Collection;
 
-import org.xtext.example.mydsl.fML.SliceMode;
+import org.xtext.example.mydsl.fml.SliceMode;
 
 /**
  * @author macher1

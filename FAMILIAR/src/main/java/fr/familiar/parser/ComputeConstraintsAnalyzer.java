@@ -22,10 +22,10 @@ package fr.familiar.parser;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.ComputeConstraints;
-import org.xtext.example.mydsl.fML.FMCommand;
-import org.xtext.example.mydsl.fML.KindOfCompute;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.ComputeConstraints;
+import org.xtext.example.mydsl.fml.FMCommand;
+import org.xtext.example.mydsl.fml.KindOfCompute;
 
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.operations.ImplicationGraphUtil;

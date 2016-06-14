@@ -20,10 +20,10 @@
 package fr.familiar.parser;
 
 import org.eclipse.emf.common.util.EList;
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.ComplexCommand;
-import org.xtext.example.mydsl.fML.IfCondition;
-import org.xtext.example.mydsl.fML.ScriptCommand;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.ComplexCommand;
+import org.xtext.example.mydsl.fml.IfCondition;
+import org.xtext.example.mydsl.fml.ScriptCommand;
 
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.variable.BooleanVariable;

@@ -21,8 +21,8 @@ package fr.familiar.parser;
 
 import java.util.List;
 
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.GListing;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.GListing;
 
 import fr.familiar.variable.FeatureModelVariable;
 import fr.familiar.variable.RType;

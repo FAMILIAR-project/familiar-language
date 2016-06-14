@@ -23,15 +23,15 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
-import org.xtext.example.mydsl.fML.CNF;
-import org.xtext.example.mydsl.fML.Child;
-import org.xtext.example.mydsl.fML.FeatureModel;
-import org.xtext.example.mydsl.fML.Mandatory;
-import org.xtext.example.mydsl.fML.Mutexgroup;
-import org.xtext.example.mydsl.fML.Optional;
-import org.xtext.example.mydsl.fML.Orgroup;
-import org.xtext.example.mydsl.fML.Production;
-import org.xtext.example.mydsl.fML.Xorgroup;
+import org.xtext.example.mydsl.fml.CNF;
+import org.xtext.example.mydsl.fml.Child;
+import org.xtext.example.mydsl.fml.FeatureModel;
+import org.xtext.example.mydsl.fml.Mandatory;
+import org.xtext.example.mydsl.fml.Mutexgroup;
+import org.xtext.example.mydsl.fml.Optional;
+import org.xtext.example.mydsl.fml.Orgroup;
+import org.xtext.example.mydsl.fml.Production;
+import org.xtext.example.mydsl.fml.Xorgroup;
 
 import fr.familiar.fm.FeatureModelVisitor;
 import fr.familiar.interpreter.FMLShell;

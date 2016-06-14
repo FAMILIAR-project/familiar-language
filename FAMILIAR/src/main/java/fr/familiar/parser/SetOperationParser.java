@@ -23,11 +23,11 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.ComparisonOperator;
-import org.xtext.example.mydsl.fML.ComplexCommand;
-import org.xtext.example.mydsl.fML.SetOperation;
-import org.xtext.example.mydsl.fML.SetOperator;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.ComparisonOperator;
+import org.xtext.example.mydsl.fml.ComplexCommand;
+import org.xtext.example.mydsl.fml.SetOperation;
+import org.xtext.example.mydsl.fml.SetOperator;
 
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.variable.RType;

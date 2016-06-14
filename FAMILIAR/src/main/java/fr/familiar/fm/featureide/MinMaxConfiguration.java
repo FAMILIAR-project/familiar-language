@@ -30,7 +30,7 @@ import org.prop4j.And;
 import org.prop4j.Literal;
 import org.prop4j.Node;
 import org.prop4j.SatSolver;
-import org.xtext.example.mydsl.fML.AutoConfMode;
+import org.xtext.example.mydsl.fml.AutoConfMode;
 
 import de.ovgu.featureide.fm.core.Feature;
 import de.ovgu.featureide.fm.core.configuration.Configuration;

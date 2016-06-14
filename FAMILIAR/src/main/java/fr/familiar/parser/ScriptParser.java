@@ -19,8 +19,8 @@
  */
 package fr.familiar.parser;
 
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.ScriptDefinition;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.ScriptDefinition;
 
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.variable.RType;

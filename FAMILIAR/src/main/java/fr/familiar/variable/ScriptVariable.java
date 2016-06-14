@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.eclipse.emf.common.util.EList;
-import org.xtext.example.mydsl.fML.ScriptCommand;
+import org.xtext.example.mydsl.fml.ScriptCommand;
 
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.interpreter.NSFactory;

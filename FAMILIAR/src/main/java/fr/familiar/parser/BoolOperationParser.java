@@ -19,10 +19,10 @@
  */
 package fr.familiar.parser;
 
-import org.xtext.example.mydsl.fML.BOOL_Operator;
-import org.xtext.example.mydsl.fML.BoolOperation;
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.ComplexCommand;
+import org.xtext.example.mydsl.fml.BOOL_Operator;
+import org.xtext.example.mydsl.fml.BoolOperation;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.ComplexCommand;
 
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.variable.BooleanVariable;

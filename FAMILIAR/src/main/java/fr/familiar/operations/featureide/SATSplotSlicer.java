@@ -21,7 +21,7 @@ package fr.familiar.operations.featureide;
 
 import java.util.Collection;
 
-import org.xtext.example.mydsl.fML.SliceMode;
+import org.xtext.example.mydsl.fml.SliceMode;
 
 import splar.plugins.reasoners.sat.sat4j.FMReasoningWithSAT;
 import fr.familiar.interpreter.FMLShell;

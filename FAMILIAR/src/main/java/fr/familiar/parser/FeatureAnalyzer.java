@@ -19,10 +19,10 @@
 
 package fr.familiar.parser;
 
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.CopyVariable;
-import org.xtext.example.mydsl.fML.FeatureOperation;
-import org.xtext.example.mydsl.fML.IdentifierExpr;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.CopyVariable;
+import org.xtext.example.mydsl.fml.FeatureOperation;
+import org.xtext.example.mydsl.fml.IdentifierExpr;
 
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.variable.FeatureVariable;

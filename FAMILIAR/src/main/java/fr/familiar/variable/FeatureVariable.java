@@ -26,7 +26,7 @@ import java.util.Map;
 import java.util.Set;
 
 import org.apache.log4j.Logger;
-import org.xtext.example.mydsl.fML.FeatureEdgeKind;
+import org.xtext.example.mydsl.fml.FeatureEdgeKind;
 
 import fr.familiar.fm.basic.FMLFeature;
 import fr.familiar.fm.basic.VEdge;

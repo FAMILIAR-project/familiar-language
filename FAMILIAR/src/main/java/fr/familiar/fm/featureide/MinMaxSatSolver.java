@@ -32,7 +32,7 @@ import org.sat4j.specs.IOptimizationProblem;
 import org.sat4j.specs.IProblem;
 import org.sat4j.specs.TimeoutException;
 import org.sat4j.tools.ModelIterator;
-import org.xtext.example.mydsl.fML.AutoConfMode;
+import org.xtext.example.mydsl.fml.AutoConfMode;
 
 import fr.familiar.interpreter.FMLShell;
 

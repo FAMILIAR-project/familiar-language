@@ -34,7 +34,7 @@ import gsd.synthesis.IGBuilder;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.xtext.example.mydsl.fML.SliceMode;
+import org.xtext.example.mydsl.fml.SliceMode;
 
 public class FeatureModelVariableBDDFormula extends FeatureModelVariable  {
 

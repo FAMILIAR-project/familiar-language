@@ -20,9 +20,9 @@
 package fr.familiar.parser;
 
 import org.eclipse.emf.ecore.EObject;
-import org.xtext.example.mydsl.fML.IntegerExpr;
-import org.xtext.example.mydsl.fML.impl.IntLiteralImpl;
-import org.xtext.example.mydsl.fML.impl.IntegerOperationImpl;
+import org.xtext.example.mydsl.fml.IntegerExpr;
+import org.xtext.example.mydsl.fml.impl.IntLiteralImpl;
+import org.xtext.example.mydsl.fml.impl.IntegerOperationImpl;
 
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.interpreter.VariableNotExistingException;

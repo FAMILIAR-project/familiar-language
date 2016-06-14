@@ -24,14 +24,14 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.eclipse.swt.widgets.Display;
-import org.xtext.example.mydsl.fML.AlternativeEdit;
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.FTCommand;
-import org.xtext.example.mydsl.fML.MandatoryEdit;
-import org.xtext.example.mydsl.fML.ModifyVOperator;
-import org.xtext.example.mydsl.fML.OptionalEdit;
-import org.xtext.example.mydsl.fML.OrEdit;
-import org.xtext.example.mydsl.fML.SetCommand;
+import org.xtext.example.mydsl.fml.AlternativeEdit;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.FTCommand;
+import org.xtext.example.mydsl.fml.MandatoryEdit;
+import org.xtext.example.mydsl.fml.ModifyVOperator;
+import org.xtext.example.mydsl.fml.OptionalEdit;
+import org.xtext.example.mydsl.fml.OrEdit;
+import org.xtext.example.mydsl.fml.SetCommand;
 
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.variable.BooleanVariable;

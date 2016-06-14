@@ -19,9 +19,9 @@
  */
 package fr.familiar.parser;
 
-import org.xtext.example.mydsl.fML.Command;
-import org.xtext.example.mydsl.fML.Compare;
-import org.xtext.example.mydsl.fML.FMCommand;
+import org.xtext.example.mydsl.fml.Command;
+import org.xtext.example.mydsl.fml.Compare;
+import org.xtext.example.mydsl.fml.FMCommand;
 
 import fr.familiar.variable.Comparison;
 import fr.familiar.variable.FeatureModelVariable;

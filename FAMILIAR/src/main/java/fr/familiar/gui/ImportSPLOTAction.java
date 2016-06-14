@@ -26,7 +26,7 @@ package fr.familiar.gui;
 
 import java.io.File;
 
-import org.xtext.example.mydsl.fML.FMFormat;
+import org.xtext.example.mydsl.fml.FMFormat;
 
 import splar.core.fm.XMLFeatureModel;
 import fr.familiar.fm.converter.SPLOTtoFML;
