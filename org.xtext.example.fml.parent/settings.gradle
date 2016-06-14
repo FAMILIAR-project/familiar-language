@@ -1,0 +1,3 @@
+include 'org.xtext.example.fml'
+include 'org.xtext.example.fml.ide'
+include 'org.xtext.example.fml.idea'

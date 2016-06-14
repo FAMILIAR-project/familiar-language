@@ -27,13 +27,13 @@ import static org.junit.Assert.assertTrue;
 import java.util.Iterator;
 
 import org.junit.Test;
-import org.xtext.example.mydsl.fML.Child;
-import org.xtext.example.mydsl.fML.FeatureModel;
-import org.xtext.example.mydsl.fML.Mandatory;
-import org.xtext.example.mydsl.fML.Optional;
-import org.xtext.example.mydsl.fML.Orgroup;
-import org.xtext.example.mydsl.fML.Production;
-import org.xtext.example.mydsl.fML.Xorgroup;
+import org.xtext.example.mydsl.fml.Child;
+import org.xtext.example.mydsl.fml.FeatureModel;
+import org.xtext.example.mydsl.fml.Mandatory;
+import org.xtext.example.mydsl.fml.Optional;
+import org.xtext.example.mydsl.fml.Orgroup;
+import org.xtext.example.mydsl.fml.Production;
+import org.xtext.example.mydsl.fml.Xorgroup;
 
 import fr.familiar.fm.basic.FMLFeatureModelReader;
 import fr.familiar.fm.basic.FeatureModelStringBuilder;

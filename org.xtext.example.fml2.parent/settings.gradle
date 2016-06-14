@@ -1,3 +1,0 @@
-include 'org.xtext.example.fml2'
-include 'org.xtext.example.fml2.ide'
-include 'org.xtext.example.fml2.idea'

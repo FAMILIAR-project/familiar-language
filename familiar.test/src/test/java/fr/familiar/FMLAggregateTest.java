@@ -30,7 +30,7 @@ import java.util.StringTokenizer;
 
 import org.junit.Ignore;
 import org.junit.Test;
-import org.xtext.example.mydsl.fML.FeatureEdgeKind;
+import org.xtext.example.mydsl.fml.FeatureEdgeKind;
 
 import fr.familiar.operations.CountingStrategy;
 import fr.familiar.parser.AggregatorAnalyzer;

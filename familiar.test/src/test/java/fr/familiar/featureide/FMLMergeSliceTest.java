@@ -38,7 +38,7 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
 import org.sat4j.specs.ISolver;
 import org.sat4j.tools.ModelIterator;
-import org.xtext.example.mydsl.fML.SliceMode;
+import org.xtext.example.mydsl.fml.SliceMode;
 
 import splar.core.fm.reasoning.FMReasoningException;
 import fr.familiar.FMLSlicerUtilityTest;

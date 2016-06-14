@@ -27,7 +27,7 @@ import java.util.Set;
 
 import org.junit.Ignore;
 import org.junit.Test;
-import org.xtext.example.mydsl.fML.OpSelection;
+import org.xtext.example.mydsl.fml.OpSelection;
 
 import de.ovgu.featureide.fm.core.FeatureModel;
 import fr.familiar.FMLTest;

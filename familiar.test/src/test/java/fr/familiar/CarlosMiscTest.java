@@ -20,7 +20,7 @@
 package fr.familiar;
 
 import org.junit.Test;
-import org.xtext.example.mydsl.fML.FMFormat;
+import org.xtext.example.mydsl.fml.FMFormat;
 
 import fr.familiar.operations.CountingStrategy;
 import fr.familiar.variable.FeatureModelVariable;

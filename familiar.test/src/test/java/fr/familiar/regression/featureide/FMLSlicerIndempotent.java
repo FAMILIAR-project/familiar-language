@@ -32,7 +32,7 @@ import java.util.Set;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.prop4j.Node;
-import org.xtext.example.mydsl.fML.SliceMode;
+import org.xtext.example.mydsl.fml.SliceMode;
 
 import splar.core.fm.FeatureGroup;
 import splar.core.fm.FeatureModelException;

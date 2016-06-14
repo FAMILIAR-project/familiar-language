@@ -23,7 +23,7 @@ import java.io.File;
 import java.util.Set;
 import java.util.concurrent.TimeoutException;
 
-import org.xtext.example.mydsl.fML.FeatureModel;
+import org.xtext.example.mydsl.fml.*;
 
 /**
  * TVL to FAMILIAR Translator class.

@@ -24,7 +24,7 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
-import org.xtext.example.mydsl.fML.ComparisonOperator;
+import org.xtext.example.mydsl.fml.ComparisonOperator;
 
 import fr.familiar.parser.VariableComparator;
 import fr.familiar.variable.FeatureModelVariable;

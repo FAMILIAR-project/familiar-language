@@ -30,7 +30,7 @@ import java.util.Set;
 
 import org.junit.Ignore;
 import org.junit.Test;
-import org.xtext.example.mydsl.fML.OpSelection;
+import org.xtext.example.mydsl.fml.OpSelection;
 
 import fr.familiar.FMLTest;
 import fr.familiar.fm.featureide.FMLtoFeatureIDE;

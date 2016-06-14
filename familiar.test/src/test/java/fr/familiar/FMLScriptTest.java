@@ -33,7 +33,7 @@ import java.io.StringReader;
 
 import org.junit.Ignore;
 import org.junit.Test;
-import org.xtext.example.mydsl.fML.ComparisonOperator;
+import org.xtext.example.mydsl.fml.ComparisonOperator;
 
 import fr.familiar.parser.VariableComparator;
 import fr.familiar.variable.FeatureModelVariable;

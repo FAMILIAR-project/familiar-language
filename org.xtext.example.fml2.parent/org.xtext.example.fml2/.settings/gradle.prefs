@@ -1,8 +1,0 @@
-{
-	"1.0": {
-		"project_path": ":org.xtext.example.fml2",
-		"project_dir": "/Users/macher1/Documents/SANDBOX/FML-from-scratch/familiar-language/org.xtext.example.fml2.parent/org.xtext.example.fml2",
-		"connection_project_dir": "/Users/macher1/Documents/SANDBOX/FML-from-scratch/familiar-language/org.xtext.example.fml2.parent",
-		"connection_gradle_distribution": "GRADLE_DISTRIBUTION(WRAPPER)"
-	}
-}

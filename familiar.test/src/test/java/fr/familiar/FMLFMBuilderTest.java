@@ -29,7 +29,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.junit.Test;
-import org.xtext.example.mydsl.fML.FeatureEdgeKind;
+import org.xtext.example.mydsl.fml.FeatureEdgeKind;
 
 import fr.familiar.interpreter.VariableNotExistingException;
 import fr.familiar.parser.MyExpressionParser;

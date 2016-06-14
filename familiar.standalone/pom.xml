@@ -103,35 +103,9 @@
 			<artifactId>FAMILIAR</artifactId>
 			<version>1.0.10</version>
 		</dependency>
-		
-			<dependency>
-		  <groupId>io.variability</groupId>
-		  <artifactId>de.ovgu.featureide.ui</artifactId>
-		  <version>2.7.5</version>
-		</dependency>
-		<dependency>
-                  <groupId>io.variability</groupId>
-                  <artifactId>de.ovgu.featureide.core</artifactId>
-                  <version>2.7.5</version>
-                </dependency>
-		<dependency>
-                  <groupId>io.variability</groupId>
-                  <artifactId>de.ovgu.featureide.fm.ui</artifactId>
-                  <version>2.7.5</version>
-                </dependency>
-		<dependency>
-                  <groupId>io.variability</groupId>
-                  <artifactId>de.ovgu.featureide.fm.core</artifactId>
-                  <version>2.7.5</version>
-                </dependency>
-		<!-- http://mvnrepository.com/artifact/org.ow2.sat4j/org.ow2.sat4j.pb -->
-		<dependency>
-		  <groupId>org.ow2.sat4j</groupId>
-		  <artifactId>org.ow2.sat4j.pb</artifactId>
-		  <version>2.3.5</version>
-		</dependency>
-	</dependencies>
-	
+				
+				
+	</dependencies>	
 	<build>
 		<plugins>
 		<plugin>

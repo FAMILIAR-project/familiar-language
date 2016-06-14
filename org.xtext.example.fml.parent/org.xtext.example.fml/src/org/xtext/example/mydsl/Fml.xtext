@@ -1,0 +1,670 @@
+grammar org.xtext.example.mydsl.Fml with org.eclipse.xtext.common.Terminals
+
+generate fml "http://www.xtext.org/example/mydsl/Fml"
+
+/*
+ * This file is part of the FAMILIAR (for FeAture Model scrIpt Language for 
+ * manIpulation and Automatic Reasoning) project.
+ * http://familiar-project.github.com/
+ *
+ * FAMILIAR is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * FAMILIAR is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with FAMILIAR.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+// A language to manipulate, compare, relate, reason about and automatically analyze FMs
+// Most of the operations can be implemented using state-of-the-art tools and/or related work (including our work!)
+// Here our purpose is to integrate into a single, concise, integrated language such efforts
+// This language can also be used i) on top of an MDE approach,
+// e.g., when FMs are related to other model elements or artefacts
+// or ii) within an IDE and graphical editors
+
+
+FamiliarScript : 
+(params+=Parameter)*
+(cmds+=ScriptCommand)*
+exports+=(Export|Hidden)*
+;
+
+
+
+ScriptCommand :
+    var=FML_IDENTIFIER (LEFT_HOOK META_ATTRIBUTE_SYMBOL metaID=(StringExpr) RIGHT_HOOK)? '=' cmd=ComplexCommand // perhaps? metaID=(StringExpr|IdentifierExpr)  
+  
+    | ComplexCommand 
+;
+   
+ComplexCommand : left=Command    
+                    ({IntegerOperation.left=current} op=(PLUS|MINUS|MULT|DIV|EXP) right=IntegerCommand
+                    | {BoolOperation.left=current} op=(BOOL_Operator) right=ComplexCommand //BCommand
+                    | {ComparisonOperation.left=current} cmpOp=(ComparisonOperator) right=ComplexCommand //(IntegerCommand|BCommand)
+                    | {SetOperation.left=current} sop=(SetOperator) right=ComplexCommand // TODO new!
+                    )?
+                | not?='not' batom=ComplexCommand ;   
+   
+Command :     (LEFT_PAREN ComplexCommand RIGHT_PAREN)
+            | (
+            StringExpr
+            |SetExpr
+            |BooleanExpr
+            |IdentifierExpr
+            |IntegerExpr
+            |FeatureVariabilityOperator
+            |IfCondition
+            |ForeachSet
+            |FeatureModel
+            |AddConstraint // only internal constraints (see aggregate)
+            |RemoveConstraint // what about associating an id to a constraint?
+            |SetOperations
+            |AnalysisOperation
+            |FeatureOperation // children, sibling, parent, operator
+            |StringOperation
+            |Compare
+            |LoadGeneric
+            |Merge
+            |AggregateMerge
+            |Synthesis
+            |Hierarchy
+            |FeatureModelOperation // insert, remove, rename, extract
+            |Aggregate
+            |Slice
+            |Map
+            |UnMap
+            |AtomicConstraintExpr
+            |ConstraintExpr
+            |GetConstraints
+            |ComputeConstraints
+            |GetFGroups
+            |ComputeFGroups
+            |VariableNull
+            |Cores
+            |Deads
+            |Cliques
+            |Leaves 
+            |FullMandatorys 
+            |PrinterUtility
+            |Convert
+            |Assertion
+            |GDisplay
+            |GListing
+            |CleanUp
+            |AsFM
+            |ModifyVOperator
+            |FMLSave
+            |ConfigurationCmd
+            |ScriptDefinition
+            |Shell
+            |CopyVariable
+            |RemoveVariable
+            |CTCRCommand
+            |PairwiseCommand
+            )
+            ;
+
+
+ 
+IntegerExpr :  {IntLiteral} value=INT
+;
+
+/******** BOOLEAN EXPRESSION? ********/
+BooleanExpr : {BooleanExpr} val=('true'|'false')  ;
+
+IdentifierExpr : val=FML_IDENTIFIER  (LEFT_HOOK META_ATTRIBUTE_SYMBOL metaID=(StringExpr) RIGHT_HOOK)?;
+
+StringExpr :     val=STRING ;
+
+SetExpr : (LEFT_BRACKET (e+=ComplexCommand)+ RIGHT_BRACKET)
+ ;
+ 
+ 
+AtomicConstraintExpr : 'constraint' LEFT_PAREN expr=CNF RIGHT_PAREN ; 
+
+//ConstraintExpr : LEFT_BRACKET (constraints+=CNF ';')+ RIGHT_BRACKET ;
+// TODO: refactor (types) + set ===> { constraint (A -> B) constraint (C -> D) }
+ConstraintExpr : 'constraints' ((LEFT_PAREN (constraints+=CNF ';')+ RIGHT_PAREN) 
+								| fm=FMCommand ) ; // implies + excludes + biimplies + o 
+//ConstraintExpr : 'constraints' LEFT_BRACKET (constraints+=CNF ';')+ RIGHT_BRACKET ;
+
+enum EditConstant : REFACTORING | SPECIALIZATION | GENERALIZATION | ARBITRARY ;
+
+//FeatureVariabilityOperator : 'OP' LEFT_PAREN val=FeatureEdgeKind RIGHT_PAREN ;
+FeatureVariabilityOperator : val=FeatureEdgeKind ;
+enum FeatureEdgeKind : MANDATORY='mand'| OPTIONAL='opt'| ALTERNATIVE='Xor'| OR='Or'|MUTEX='Mutex' ;
+
+IfCondition : 'if' LEFT_PAREN (bexpr=ComplexCommand) RIGHT_PAREN 'then' //BCommand | ComparisonExpression
+(then+=ScriptCommand)+
+('else' (else+=ScriptCommand)+)?
+'end'
+;
+
+ForeachSet : 'foreach' LEFT_PAREN val=FML_IDENTIFIER 'in' var=FML_IDENTIFIER RIGHT_PAREN 'do'
+(exprs+=ScriptCommand)+
+'end'
+;
+
+// TODO: whichfm for features
+
+/******* TYPE OPERATIONS ******/
+lType: val=('FeatureModel'|'Feature'|'Boolean'|'String'|'Configuration'|'Set'|'Double'|'Integer'|'Constraint') ;
+
+FMLAbstractCommand : (Command | FMCommand | FTCommand | SetCommand | ConstraintCommand) 
+					;
+
+FMCommand : 
+			(IdentifierExpr | CopyVariable | AggregateMerge | Merge | Synthesis | 
+			FeatureModel | FMFeature | AsFM | Aggregate | Extract | Slice | Hierarchy )
+		//	| LEFT_PAREN FMCommand RIGHT_PAREN 
+            ;
+
+FTCommand : IdentifierExpr | CopyVariable | FeatureOperation ; //ParentFeature ;
+
+BCommand : (IdentifierExpr | IsEmptySet | RemoveVariable |
+            RemoveFeature | RenameFeature | Insert | ModifyVOperator |
+            IsConflicting | CompleteConfiguration | SetBelongs 
+            )
+            ;
+
+StrCommand : IdentifierExpr | CopyVariable | StringExpr | StringConcat | StringInit | StringSubstring | FeatureOperation | Convert ; //FeatureOperation for NameFeature
+
+ConfigurationCommand : (IdentifierExpr | CreateConfiguration)
+					//| LEFT_PAREN ConfigurationCommand RIGHT_PAREN
+                    ;
+
+SetCommand : IdentifierExpr | SetExpr | FeatureOperation | 
+			Cliques | Cores | Deads | FullMandatorys | // TODO: AnalysisOperation due to 'features'
+			SetToNames | SetUnionOrIntersection | Leaves |
+			SetEmpty | SelectedConfiguration | DeselectedConfiguration | ConstraintExpr |	
+			GetConstraints 	| ComputeConstraints | GetFGroups | ComputeFGroups	| PairwiseCommand
+			;
+			
+Leaves : 'leaves' fm=FMCommand ; // return the set of leaves in the feature hierarchy 
+			
+ConstraintCommand :	IdentifierExpr | AtomicConstraintExpr ;
+
+
+GetConstraints : kindOfGet=KindOfGet fm=FMCommand ;
+enum KindOfGet : HIERARCHY_IMPLIES='getImpliesHierarchy'|HIERARCHY_EXCLUDES='getExcludesHierarchy'|HIERARCHY_BIIMPLIES='getBiimpliesHierarchy'|
+				CONSTRAINT_IMPLIES='getImpliesConstraint'|CONSTRAINT_EXCLUDES='getExcludesConstraint'|CONSTRAINT_BIIMPLIES='getBiimpliesConstraint' ;
+
+ComputeConstraints : kindOfCompute=KindOfCompute fm=FMCommand (over?='over' fts=SetCommand)?;
+enum KindOfCompute : IMPLIES='computeImplies'|EXCLUDES='computeExcludes'|BIIMPLIES='computeBiimplies' ;
+
+
+
+GetFGroups : kindOfGroups=KindOfGetGroups fm=FMCommand ;
+enum KindOfGetGroups : OR='getORGroups'|XOR='getXORGroups'|MUTEX='getMUTEXGroups' ;
+
+ComputeFGroups : kindOfGroups=KindOfComputeGroups fm=FMCommand ;
+enum KindOfComputeGroups : OR='computeORGroups'|XOR='computeXORGroups'|MUTEX='computeMUTEXGroups' ;
+
+
+PairwiseCommand : 'pw' fm=FMCommand ('minimization=' minimization=IntegerCommand)? ('partial=' partial=IntegerCommand)? ;
+
+IntegerCommand : IdentifierExpr | IntegerExpr | SetCard | StringLength | StringIndexOf | DoubleCommand ; // weird for double command
+
+DoubleCommand : CTCRCommand ;
+
+// TODO (urgent)
+//ConstraintCommand : IdentifierExpr | CopyVariable | AtomicConstraintExpr ; 
+
+//SetCNF : (LEFT_BRACKET (constraints+=CNF)+ RIGHT_BRACKET) | UnMap  ;
+
+VariabilityOpCommand : IdentifierExpr | CopyVariable | FeatureVariabilityOperator ;
+
+AnalysisOperation :
+    op=('isValid' // validity of a FM
+    | 'counting'  // number of products of a FM
+    | 'configs' // set of products of a FM
+    | 'nbFeatures' // number of features
+    | 'root' // return the root feature of the fm
+    | 'features' // return the set of features
+	) fm=(FMCommand|ConfigurationCommand)
+    ;
+
+
+SetOperations : SetCard | SetToNames | SetBelongs | SetUnionOrIntersection | SetEmpty | SetAddOrRemove | IsEmptySet ;
+
+SetCard : 'size' set=SetCommand ; //TODO: @deprecated 'set_card'
+SetBelongs : 'setBelongs' setl=FML_IDENTIFIER setr=FML_IDENTIFIER;
+SetUnionOrIntersection : op=('setUnion'|'setIntersection'|'setDiff') setl=SetCommand setr=SetCommand;
+SetEmpty : val='setEmpty' ;
+SetAddOrRemove : op=('setAdd'|'setRemove') setl=SetCommand var=Command;
+IsEmptySet : 'setIsEmpty' set=SetCommand ;
+SetToNames : 'names' set=SetCommand ;
+
+
+/********* ACCESSORS ***********/
+// + root (see below)
+FeatureOperation : op=(AncestorFeature | DescendantFeature | ChildrenFeature | SiblingFeature | ParentFeature | NameFeature | FMFeature | FeatureOperator)
+                   feature=FTCommand;
+
+AncestorFeature : val='ancestors' ;
+DescendantFeature : val='descendants' ;
+ChildrenFeature : val='children'  ; // children: Set[Feature]
+SiblingFeature: val='sibling' ; // sibling: Set[Feature]
+ParentFeature : val='parent' ; // parent: Feature
+NameFeature : val='name'  ; // name: String
+FMFeature : val='whichfm'  ; // whichfm : FM
+FeatureOperator : val='operator'  ; // operator: enum {AND, XOR, OR, ANDOPT}
+
+StringOperation : (StringInit | StringConcat | StringSubstring | StringIndexOf | StringLength) ;
+StringInit : val='strInit' ;
+StringConcat : 'strConcat' lstr=(StrCommand) rstr=(StrCommand) ; // a variable or a string literal
+StringSubstring : 'strSubstring' str=(StrCommand) begin=IntegerCommand end=IntegerCommand ;
+StringIndexOf : 'strIndexOf' str=(StrCommand) schar=StrCommand ; // char type?
+StringLength : 'strLength' str=(StrCommand) ;
+
+Compare :
+    'compare' fm_left=FMCommand fm_right=FMCommand;    // Boolean formula?
+
+Parameter : 'parameter' param=FML_IDENTIFIER (typed=':' type=lType)?;
+
+
+
+// TODO: distinguish between string and simple identifier
+LoadGeneric : 'run' stream=(STRING|FML_IDENTIFIER) (LEFT_BRACKET (params+=FML_IDENTIFIER)* RIGHT_BRACKET)? ('into' ns=FML_IDENTIFIER)? ;
+
+CTCRCommand : 'ctcr' fm=FMCommand ; 
+
+/****** COMPOSITION OPERATORS ***********/
+
+
+Merge: 'merge' (backend=BDDBackend)? (lazy?='--lazy')? mode=MergeMode 
+            ((LEFT_BRACKET
+                (lfms+=FMCommand)+
+            RIGHT_BRACKET) 
+          	 | fms=LFMArgs) ;
+            //(pre=Predirectives)?
+            //(post=Postdirectives)?; // alignment directives
+
+// BDD-DEFAULT is a workaround
+enum BDDBackend : BDD_DEFAULT='@backend=DEFAULT'|BDD_BASIC='@backend=BDD'|BDD_SPLOT='@backend=BDD_SPLOT'; // TODO integrate new results with SAT
+
+enum MergeMode : CROSS='crossproduct'|UNION='union'|SUNION='sunion'|INTER='intersection'|DIFF='diff' ;
+LFMArgs : lfms+=FMCommand (COMMA lfms+=FMCommand)* ;
+
+AggregateMerge: 'aggregateMerge' 
+	            
+	             (hierarchySpecified?='--hierarchy' hierarchyStrategy=HierarchyStrategy)?
+	             mode=MergeMode 
+            ((LEFT_BRACKET
+                (lfms+=FMCommand)+
+            RIGHT_BRACKET) 
+          	 | fms=LFMArgs) ;
+      	 
+    
+ enum HierarchyStrategy : BASIC='=basic'|FLAT='=flat'|MST='=mst' ;   	 
+ /*
+ could be ksynthesis fm0 with fm1
+ BUT
+ it is preferable to have a decomposed specification with all parts optional
+ importantly, KST can be specified using accessors of FML
+ */     	 
+Synthesis: 'ksynthesis' interactive?=('--interactive')? fm=FMCommand (over?='over' fts=SetCommand)? ('with' kst=KnowledgeSpecification)? ;
+// ('withKST' kst=KnowledgeSpecification)? ;
+
+//('with' LEFT_HOOK kst=KnowledgeSpecification RIGHT_HOOK)? ;
+
+KnowledgeSpecification : {KnowledgeSpecification} (hierarchy=HierarchySpecification)? 
+						 (COMMA groups=GroupsSpecification)? 
+						 (COMMA constraints=ConstraintsSpecification)? ;
+
+HierarchySpecification : 'hierarchy=' 
+						 (hierarchy=Hierarchy|(features+=HProduction ';')+ ) ;
+HProduction : name=ID ':' features+=FT_ID+ ;
+
+GroupsSpecification : 'groups=' (groups+=GroupSpec ';')+ ; // getFGroups?
+GroupSpec : XorGroupSpec | MtxGroupSpec | OrGroupSpec ; 
+XorGroupSpec : 'xorGroup' LEFT_PAREN name=ID ':' features+=FT_ID+ RIGHT_PAREN ;
+MtxGroupSpec : 'mtxGroup' LEFT_PAREN name=ID ':' features+=FT_ID+ RIGHT_PAREN ; 
+OrGroupSpec : 'orGroup' LEFT_PAREN name=ID ':' features+=FT_ID+ RIGHT_PAREN ; 
+
+
+ConstraintsSpecification : 'constraints=' csts=ConstraintExpr ; // constraint strategy
+
+//Predirectives : '@pre[' instr+=(AlignmentInstr)+ ']' ;
+//Postdirectives : '@post[' instr+=(AlignmentInstr)+ ']' ;
+//AlignmentInstr : (RenameFeature|RemoveFeature|Insert) ;
+
+
+//Aggregate : 'aggregate' LEFT_BRACKET (fms+=FMCommand)+ RIGHT_BRACKET ('map' LEFT_BRACKET (constraints+=CNF ';')+ RIGHT_BRACKET)?;
+
+
+Slice : 'slice' fm=FMCommand mode=SliceMode fts=SetCommand ; // issue: side effect or purely functional?
+
+enum SliceMode : INCLUDING='including' | EXCLUDING='excluding' ;
+
+Aggregate : 'aggregate' (renamings?='--renamings')? ((LEFT_BRACKET
+               			 (fms+=FMCommand)+
+           				 RIGHT_BRACKET) 
+          				 | sfms=IdentifierExpr) ('withMapping' mapping=SetCommand)?;
+
+//LEFT_BRACKET (fms+=FMCommand)+ RIGHT_BRACKET
+
+
+FeatureModelOperation : Insert | EditOperation | Extract ;
+EditOperation : (RemoveFeature|RenameFeature) ;
+Insert : 'insert' aspectfm=FMCommand 'into' baseft=FTCommand 'with' op=VariabilityOpCommand ; //TODO:  op2=(FML_IDENTIFIER)?  ;
+RemoveFeature : 'removeFeature' feature=FTCommand ;
+RenameFeature : 'renameFeature' feature=FTCommand 'as' featureNew=(StrCommand) ; //'in' fm=FML_IDENTIFIER ;
+Extract: 'extract' rootfeature=FTCommand ;
+
+
+Assertion : 'assert' LEFT_PAREN assertion=ComplexCommand RIGHT_PAREN ; // should be a BooleanOperation
+
+enum ComparisonOperator : EQUAL='eq'|NotEqual='neq'|LesserThan='<'|GreaterThan='>'|REF_EQUAL='=='|REF_NotEqual='!='; //| IntegerOperator ) ;
+
+
+enum SetOperator : SUNION='++'|SDIFF='--' ;
+
+VariableNull : 'isNull' var=FML_IDENTIFIER ;
+
+// Export/ Hide
+Export : 'export' arg=LVidentifier ;
+Hidden : 'hide'    arg=LVidentifier ;
+
+// list of identifiers
+LVidentifier : args+=FML_IDENTIFIER (COMMA args+=FML_IDENTIFIER)* ;
+
+Dependency : 'dependencies' var=FML_IDENTIFIER; // return the set of FMs which are dependent from var // TODO: deprecated???
+
+
+// a configuration is a set of features selected
+// BUT: some features are also 'deselected'
+// and some other features are not selected / deselected
+
+ConfigurationCmd : CreateConfiguration | CompleteConfiguration |
+            SelectionFeature | AutoConfiguration |
+            SelectedConfiguration | DeselectedConfiguration | UnselectedConfiguration ;
+
+CreateConfiguration: 'configuration' fm=FMCommand ;
+CompleteConfiguration: 'isComplete' config=ConfigurationCommand ; // full configuration?
+SelectionFeature : op=('select'|'deselect'|'unselect') (fts+=FeatureExpression)+ 'in' config=ConfigurationCommand ; // STRING? // TODO: in conflict with the "in"/foreach
+
+FeatureExpression: ft=IdentifierExpr | ft=StringExpr;
+enum OpSelection: SELECT='select' | DESELECT='deselect' | UNSELECT='unselect' ;
+AutoConfiguration : 'autoSelect' config=ConfigurationCommand (mode=AutoConfMode)?; // populate a configuration such that the configuration is valid
+enum AutoConfMode : RANDOM='RANDOM'|MAX='MAX'|MIN='MIN'; // current strategies to populate a configuration: select the maximum/minimum number of features or randomly
+SelectedConfiguration: 'selectedF' config=ConfigurationCommand  ; // features selected in a configuration
+DeselectedConfiguration: 'deselectedF' config=ConfigurationCommand  ; // features deselected in a configuration
+UnselectedConfiguration: 'unselectedF' config=ConfigurationCommand  ; // features unselected in a configuration
+
+AsFM : 'asFM' conf=ConfigurationCommand;
+
+Map : 'map' fm=FMCommand 'with' cst=SetCommand;
+UnMap : 'unmap' fm=FMCommand ;
+
+
+CleanUp : 'cleanup' fm=FMCommand ; // functional style?
+
+
+Cores : 'cores' fm=FMCommand ; // core features
+Deads : 'deads' fm=FMCommand ; // dead features
+// TODO: make the difference!
+FullMandatorys : ('fullMandatorys'|'falseOptionals') fm=FMCommand ; // full mandatory features
+
+Cliques : 'cliques' fm=FMCommand ; // cliques (aka atomic sets?)
+
+// isDead? isCore? isFullMandatory? can be written with an FML script
+
+
+ScriptDefinition : LEFT_HOOK 
+(params+=Parameter)*
+(cmds+=ScriptCommand)+ 
+exports+=(Export|Hidden)*
+RIGHT_HOOK ;
+
+// shell commands
+Shell : cmd=(Exit|Exist|Listing|IsConflicting|State) ; // |Help) ;
+
+Exit : val=('quit'|'exit');
+Exist : val=('isExisting') var=FML_IDENTIFIER ;
+IsConflicting : val=('isConflicting') var=FML_IDENTIFIER ;
+Listing : val=('ls'|'vars') (opt=OPT_LISTING)?;
+enum OPT_LISTING : NORMAL='--normal'|VERBOSE='--verbose'|VALUE_ONLY='--withValues' ;
+State : val=('memory'|'cpu') ; // memory usage, CPU speed?
+//Help : val=('help') ; //cmd=FML_IDENTIFIER;
+
+
+
+CopyVariable : ('copy'|'cp') vid=FML_IDENTIFIER ; //('as')? (newvar=FML_IDENTIFIER)?;
+RemoveVariable : ('removeVariable'|'rm') vid=FML_IDENTIFIER ;
+
+
+
+
+// convert e.g., featureide, pure::variants, etc.
+
+Convert: 'convert' v=FMCommand 'into' format=FMFormat ; // returns a string
+enum FMFormat : DIMACS='DIMACS'|FMLCONSTRAINT='fmlconstraints'|FMLBDD='fmlbdd'|FIDE='featureide'|FCALC='fmcalc'|FFML='fml'|FSPLOT='SPLOT'|FTVL='TVL'|FTRISKELL='fd'|FFML2='xmi'|S2T2='S2T2'|FMLBDD_ONLY='bdd' ;
+FMLSave : ('save'|'serialize') v=FMCommand 'into' format=FMFormat;
+
+
+Hierarchy : 'hierarchy' fm=FMCommand ;
+
+
+/*** UTILITIES ******/
+
+PrinterUtility : op=('print'|'println') arg=LArgs ;
+
+LArgs : args+=Command (COMMA args+=Command)* ;
+
+// TODO: unify! @deprecated: print_vars
+//Arg : StringArg | IdArg ;
+//StringArg : val=STRING;
+//IdArg : val=FML_IDENTIFIER;
+
+// graphical display or print information on the variable
+GDisplay : cmdDisplay=('gdisplay') var=(FMCommand|ConfigurationCommand) ; //@deprecated: display //@deprecated: 'print_var'// can also be a configuration
+
+GListing : cmd='glisting'|'gls' {GListing} ; // TODO: what's that?
+
+// change the variability operator associated to a feature
+ModifyVOperator: (MandatoryEdit | OptionalEdit | AlternativeEdit | OrEdit); 
+
+MandatoryEdit : 'setMandatory' ft=FTCommand ;
+OptionalEdit : 'setOptional' ft=FTCommand ;
+AlternativeEdit : 'setAlternative' fts=SetCommand ; // should be a set of features
+OrEdit : 'setOr' fts=SetCommand ; // should be a set of features 
+
+ 
+
+/******* CONSTRAINT ********/
+// TODO???
+
+AddConstraint : 'addConstraint' cst=ConstraintCommand 'to' fm=FMCommand ; //cst=ConstraintCommand ;
+RemoveConstraint : 'removeConstraint' cst=ConstraintCommand 'in' fm=FMCommand ; //TODO //cst=ConstraintCommand ; // LEFT_BRACKET (clause+=CNF ';')+ RIGHT_BRACKET ;
+
+
+/*
+CNF: lterm=FeatureTerm (op=(Imply|BiImply) rterm=FeatureTerm)? ;
+FeatureTerm: ((not?=B_NOT feature=FML_IDENTIFIER) | feature=FML_IDENTIFIER) (op=(AndBoolean|OrBoolean)
+            rfeature=FeatureTerm)?;
+
+//ImplyOperator : Imply | Exclude | BiImply ;
+ImplyOperator : Imply | BiImply ;
+Imply : name=B_IMPLY;
+//Exclude : name='excludes' ;
+BiImply : name=B_BIMPLY;
+
+
+
+
+BooleanOperator : AndBoolean | OrBoolean ;
+AndBoolean : name=B_AND ;
+OrBoolean : name=B_OR ;
+*/
+
+
+/***** canonical CNF ********/
+
+CNF : Or_expr ; //(expr+=Or_expr)+ ;
+
+Or_expr returns CNFExpression:
+ And_expr ({Or_expr.left=current} B_OR right=And_expr)*;
+
+And_expr returns CNFExpression:
+ Impl_expr ({And_expr.left=current} B_AND right=Impl_expr)*;
+
+Impl_expr returns CNFExpression:
+ Biimpl_expr ({Impl_expr.left=current} B_IMPLY right=Biimpl_expr)*;
+ 
+Biimpl_expr returns CNFExpression:
+ Unary_expr ({Biimpl_expr.left=current} B_BIMPLY right=Unary_expr)*;
+
+Unary_expr returns CNFExpression:
+ Neg_expr |
+ Primary_expr ;
+ 
+ 
+//name=FML_IDENTIFIER ;
+ 
+Neg_expr : B_NOT expr=Primary_expr ; 
+Primary_expr returns CNFExpression : 
+ 	name=(FT_ID|'true'|'false') | 
+ 	LEFT_PAREN Or_expr RIGHT_PAREN ;
+ 	
+ //	not?='!' expr=Primary_expr | 	
+
+
+
+
+
+
+
+
+ 
+enum BOOL_Operator : BOOL_OR='||' | BOOL_AND='&&' ;
+
+
+/******** FEATURE MODEL **************/
+FeatureModel : ('FM'|'featuremodel') LEFT_PAREN
+                                    (
+                                    (
+                                    (root=ID ';')|((features+=Production ';')+ 
+                                    (expr+=CNF ';')*)
+                                    )
+                                    | (file=StringExpr) )
+                                    RIGHT_PAREN ;
+
+//expr+=Fexpr
+//FeatureDescription : Production | Expr ;
+
+Production  : name=FT_ID ':' features+=Child+ ;
+
+Child       : (Mandatory
+                | Optional
+                | Xorgroup
+                | Orgroup  
+//                );             
+               | Mutexgroup ) ;
+                
+//                | Andgroup)  ;
+
+Mandatory   : name=FT_ID ;
+
+//Optional    : name=FML_IDENTIFIER '?' | '[' name=FML_IDENTIFIER ']' ;
+
+Optional    : LEFT_HOOK name=FT_ID RIGHT_HOOK ;
+Xorgroup   : LEFT_PAREN features+=FT_ID  (B_OR features+=FT_ID)+ RIGHT_PAREN ;
+Orgroup    : LEFT_PAREN features+=FT_ID  (B_OR features+=FT_ID)+ RIGHT_PAREN PLUS ;
+// Andgroup   : LEFT_PAREN features+=FT_ID ('|' features+=FT_ID)+ RIGHT_PAREN ; // TODO: (identifier=FML_IDENTIFIER '=')?
+
+Mutexgroup : LEFT_PAREN features+=FT_ID  (B_OR features+=FT_ID)+ ')?' ;
+
+// old version
+//fexpr       : exp+=fexpr ('|' | '&' | '->' | '<->') //exp+=expr
+            //|
+//            '!' fxpr
+//            | '(' fexpr ')'
+//           | name=FML_IDENTIFIER
+//           ;
+      
+      
+/*         
+Fexpr :  (mexpr+=Or_expr)+ ;
+
+Or_expr
+    : And_expr ('|' expr+=And_expr)* ;
+
+And_expr
+    : Impl_expr ('&' expr+=Impl_expr)* ;
+
+Impl_expr
+    : Biimpl_expr ('->' expr+=Biimpl_expr)* ;
+
+Biimpl_expr
+    : Unary_expr ('<->' expr+=Unary_expr)* ;
+
+Unary_expr
+    : Neg_expr
+    | Primary_expr
+    ;
+   
+Neg_expr
+    : '!' name=FML_IDENTIFIER
+    ;
+
+Primary_expr
+    : name=FML_IDENTIFIER
+    | LEFT_PAREN Fexpr RIGHT_PAREN
+    ;
+*/
+
+
+// TOKEN types
+//terminal T_BOOLEAN : 'true' | 'false' ;
+
+terminal LEFT_PAREN : '(' ;
+terminal RIGHT_PAREN : ')' ;
+
+
+
+terminal B_NOT :    '!' | '~' ; // 'not' | 
+terminal B_AND :    '&' | 'and' ; //| '&' ;
+terminal B_OR :     '|' | 'or'  ; 
+terminal B_IMPLY :   '->' | 'implies' | 'requires' ;
+terminal B_BIMPLY :     '<->' | 'biimplies' ;
+
+
+terminal PLUS     :     '+' ;
+terminal MINUS     :     '-' ;
+terminal STAR     :     '*' ;
+terminal DIV : '/' ;
+terminal EXP : '^' ; //STAR ;
+terminal MULT     :     'mult' ;
+//terminal NEWLINE: '\r' ? '\n' ;
+//terminal WS : (' ' |'\t' |'\n' |'\r' )+  ;
+terminal LEFT_BRACKET :     '{' ;
+terminal RIGHT_BRACKET : '}' ;
+
+terminal LEFT_HOOK : '[' ;
+terminal RIGHT_HOOK : ']' ; 
+ 
+terminal COMMA : ',' ;
+
+terminal META_ATTRIBUTE_SYMBOL : '@' ; 
+
+//terminal QUOTE :  '"' ;
+
+
+//IDENTIFIER :
+//terminal FML_IDENTIFIER : ID ; //Letter (Letter | DIGIT)*;
+// TODO: abstract feature / concrete feature
+// setAbstract or FM (A : B C D ; abstract D : (E|F|G) ; )
+FT_ID : (ID|'$'|STRING) ; // ('.' ID)* ; // feature ID // FIXME the second part (. ID) is not used so remove it ? 
+FML_IDENTIFIER :  (ID|'$') ('.' (ID|'$'|STAR|STRING))* | ID STAR;
+
+
+//terminal Letter :  'a'..'z' |  'A'..'Z' |  '_' |  '.' ;
+
+//terminal DIGIT :  '0'..'9';

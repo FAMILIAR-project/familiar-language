@@ -28,7 +28,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.junit.Test;
-import org.xtext.example.mydsl.fML.FeatureEdgeKind;
+import org.xtext.example.mydsl.fml.FeatureEdgeKind;
 
 import fr.familiar.variable.BooleanVariable;
 import fr.familiar.variable.FeatureModelVariable;

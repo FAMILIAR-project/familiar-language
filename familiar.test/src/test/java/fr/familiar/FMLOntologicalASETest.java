@@ -26,7 +26,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import org.junit.Test;
-import org.xtext.example.mydsl.fML.SliceMode;
+import org.xtext.example.mydsl.fml.SliceMode;
 
 import com.google.common.collect.Sets;
 

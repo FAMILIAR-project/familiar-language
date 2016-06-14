@@ -8,8 +8,8 @@
  <modules>
     <module>../FML3rdPartiesForSynthesis</module>
     <module>../FML3rdPartiesMisc</module>
-    <module>../org.xtext.example.fml</module>
-    <module>../org.xtext.example.fml.ui</module>
+     <module>../FML-featureide-dependencies</module>
+    <module>../org.xtext.example.fml.parent</module>
     <module>../org.xtext.example.fmlero</module>
     <module>../org.xtext.example.fmlero.ui</module>
     <module>../S2T2toFML</module>
@@ -17,22 +17,22 @@
     <module>../TVLPackagedAsMock</module>
     <module>../FAMILIAR</module>
     <module>../familiar.test</module>
-  </modules>
+ </modules>
 
   <properties>
-    <tycho.version>0.21.0</tycho.version>
-    <tycho-extras.version>0.21.0</tycho-extras.version>
+    <tycho.version>0.23.1</tycho.version>
+    <tycho-extras.version>0.23.1</tycho-extras.version>
 	<obeodesigner-repo.url>http://www.obeo.fr/download/release/designer/6.1/latest/juno3/update/</obeodesigner-repo.url>
     <featureide-repo.url>http://wwwiti.cs.uni-magdeburg.de/iti_db/research/featureide/deploy/</featureide-repo.url>
-    <kepler-repo.url>http://download.eclipse.org/releases/kepler/</kepler-repo.url>
+    <mars-repo.url>http://download.eclipse.org/releases/mars/</mars-repo.url>
     <tycho-repo.url>https://oss.sonatype.org/content/groups/public/</tycho-repo.url>
   </properties>
-
+  
 
   <repositories>
     <repository>
-      <id>kepler</id>
-      <url>${kepler-repo.url}</url>
+      <id>mars</id>
+      <url>${mars-repo.url}</url>
       <layout>p2</layout>
     </repository>
     <repository>
@@ -49,11 +49,13 @@
 
   </repositories>
   
+  
+
  
   <pluginRepositories>
     <pluginRepository>
-      <id>kepler</id>
-      <url>${kepler-repo.url}</url>
+      <id>mars</id>
+      <url>${mars-repo.url}</url>
       <releases>
         <enabled>false</enabled>
       </releases>
@@ -238,7 +240,7 @@
         						<artifactId>
         							tycho-packaging-plugin
         						</artifactId>
-        						<versionRange>[0.21.0,)</versionRange>
+        						<versionRange>[0.23.1,)</versionRange>
         						<goals>
         							<goal>validate-id</goal>
         						</goals>

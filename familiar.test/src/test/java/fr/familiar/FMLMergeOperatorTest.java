@@ -29,7 +29,7 @@ import java.util.Set;
 import net.sf.javabdd.BDD;
 
 import org.junit.Test;
-import org.xtext.example.mydsl.fML.FMFormat;
+import org.xtext.example.mydsl.fml.FMFormat;
 
 import com.google.common.collect.Sets;
 

@@ -21,6 +21,7 @@ package fr.familiar;
 
 import static org.junit.Assert.assertEquals;
 
+import net.sf.javabdd.BDD;
 import org.junit.Ignore;
 import org.junit.Test;
 

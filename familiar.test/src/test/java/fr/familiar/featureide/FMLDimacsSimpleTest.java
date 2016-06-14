@@ -20,7 +20,7 @@
 package fr.familiar.featureide;
 
 import org.junit.Test;
-import org.xtext.example.mydsl.fML.FMFormat;
+import org.xtext.example.mydsl.fml.FMFormat;
 
 import fr.familiar.FMLTest;
 import fr.familiar.operations.featureide.SATFMLFormula;

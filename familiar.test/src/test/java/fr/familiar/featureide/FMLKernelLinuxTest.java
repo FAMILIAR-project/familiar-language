@@ -28,7 +28,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 import org.prop4j.And;
 import org.prop4j.Node;
-import org.xtext.example.mydsl.fML.SliceMode;
+import org.xtext.example.mydsl.fml.SliceMode;
 
 import com.google.common.collect.Sets;
 

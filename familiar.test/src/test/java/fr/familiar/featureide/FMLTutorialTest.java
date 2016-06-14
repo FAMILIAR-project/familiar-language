@@ -35,9 +35,9 @@ import java.util.Set;
 
 import org.junit.Ignore;
 import org.junit.Test;
-import org.xtext.example.mydsl.fML.ComparisonOperator;
-import org.xtext.example.mydsl.fML.FMFormat;
-import org.xtext.example.mydsl.fML.OpSelection;
+import org.xtext.example.mydsl.fml.ComparisonOperator;
+import org.xtext.example.mydsl.fml.FMFormat;
+import org.xtext.example.mydsl.fml.OpSelection;
 
 import com.google.common.collect.Sets;
 

@@ -1,0 +1,93 @@
+<idea-plugin version="2">
+	<extensions defaultExtensionNs="org.eclipse.xtext.idea">
+		<package
+			uri="http://www.xtext.org/example/mydsl/Fml"
+			class="org.xtext.example.mydsl.fml.FmlPackage"
+		/>
+		<resourceFactory 
+			type="fml"
+			class="org.eclipse.xtext.resource.IResourceFactory"
+			factoryClass="org.xtext.example.mydsl.idea.FmlExtensionFactory"
+		/>
+		<resourceServiceProvider
+			uriExtension="fml"
+			class="org.eclipse.xtext.idea.resource.IResourceIdeaServiceProvider"
+			factoryClass="org.xtext.example.mydsl.idea.FmlExtensionFactory"
+		/>
+
+		<lang.setup
+			language="org.xtext.example.mydsl.Fml"
+			implementationClass="org.xtext.example.mydsl.idea.FmlIdeaSetup"
+		/>
+	</extensions>
+
+	<extensions defaultExtensionNs="com.intellij">
+		<psi.treeChangePreprocessor implementation="org.xtext.example.mydsl.idea.lang.psi.FmlCodeBlockModificationListener"/>
+
+		<fileTypeFactory implementation="org.xtext.example.mydsl.idea.lang.FmlFileTypeFactory"/>
+		<stubElementTypeHolder class="org.xtext.example.mydsl.idea.lang.FmlElementTypeProvider"/>
+		<lang.ast.factory 
+			language="org.xtext.example.mydsl.Fml"
+			factoryClass="org.xtext.example.mydsl.idea.FmlExtensionFactory"
+			implementationClass="org.eclipse.xtext.idea.lang.BaseXtextASTFactory"
+		/>
+		<lang.parserDefinition 
+			language="org.xtext.example.mydsl.Fml"
+			factoryClass="org.xtext.example.mydsl.idea.FmlExtensionFactory"
+			implementationClass="org.xtext.example.mydsl.idea.lang.parser.FmlParserDefinition"
+		/>
+		<lang.findUsagesProvider 
+			language="org.xtext.example.mydsl.Fml"
+			factoryClass="org.xtext.example.mydsl.idea.FmlExtensionFactory"
+			implementationClass="org.eclipse.xtext.idea.findusages.BaseXtextFindUsageProvider"
+		/>
+		<lang.refactoringSupport 
+			language="org.xtext.example.mydsl.Fml"
+			factoryClass="org.xtext.example.mydsl.idea.FmlExtensionFactory"
+			implementationClass="org.eclipse.xtext.idea.refactoring.BaseXtextRefactoringSupportProvider"
+		/>
+		<lang.namesValidator 
+			language="org.xtext.example.mydsl.Fml"
+			factoryClass="org.xtext.example.mydsl.idea.FmlExtensionFactory"
+			implementationClass="com.intellij.lang.refactoring.NamesValidator"
+		/>
+		<lang.syntaxHighlighterFactory key="org.xtext.example.mydsl.Fml" implementationClass="org.xtext.example.mydsl.idea.highlighting.FmlSyntaxHighlighterFactory" />
+		<lang.braceMatcher 
+			language="org.xtext.example.mydsl.Fml"
+			factoryClass="org.xtext.example.mydsl.idea.FmlExtensionFactory"
+			implementationClass="com.intellij.lang.PairedBraceMatcher"
+		/>
+		<annotator 
+			language="org.xtext.example.mydsl.Fml"
+			factoryClass="org.xtext.example.mydsl.idea.FmlExtensionFactory"
+			implementationClass="org.eclipse.xtext.idea.annotation.IssueAnnotator"
+		/>
+		<completion.contributor language="org.xtext.example.mydsl.Fml" implementationClass="org.xtext.example.mydsl.idea.completion.FmlCompletionContributor"/>
+		<pom.declarationSearcher implementation="org.xtext.example.mydsl.idea.lang.pom.FmlPomDeclarationSearcher"/>
+
+		<lang.psiStructureViewFactory 
+			language="org.xtext.example.mydsl.Fml"
+			factoryClass="org.xtext.example.mydsl.idea.FmlExtensionFactory"
+			implementationClass="com.intellij.lang.PsiStructureViewFactory"
+		/>
+		<facetType implementation="org.xtext.example.mydsl.idea.facet.FmlFacetType"/>
+      	<lang.documentationProvider 
+      		language="org.xtext.example.mydsl.Fml"
+      		factoryClass="org.xtext.example.mydsl.idea.FmlExtensionFactory"
+      		implementationClass="org.eclipse.xtext.idea.documentation.IdeaDocumentationProvider"
+      	/>
+		<colorSettingsPage implementation="org.xtext.example.mydsl.idea.highlighting.FmlColorSettingsPage"/>
+		<highlightVisitor implementation="org.xtext.example.mydsl.idea.highlighting.FmlSemanticHighlightVisitor"/>
+
+		<lang.formatter 
+			language="org.xtext.example.mydsl.Fml"
+			factoryClass="org.xtext.example.mydsl.idea.FmlExtensionFactory"
+			implementationClass="com.intellij.formatting.FormattingModelBuilder"
+		/>
+		<lang.commenter 
+			language="org.xtext.example.mydsl.Fml"
+			factoryClass="org.xtext.example.mydsl.idea.FmlExtensionFactory"
+			implementationClass="com.intellij.lang.CodeDocumentationAwareCommenter"
+		/>
+	</extensions>
+</idea-plugin>

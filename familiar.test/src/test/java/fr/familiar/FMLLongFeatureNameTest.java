@@ -27,9 +27,9 @@ import static org.junit.Assert.assertTrue;
 import java.util.Set;
 
 import org.junit.Test;
-import org.xtext.example.mydsl.fML.FMFormat;
-import org.xtext.example.mydsl.fML.FeatureEdgeKind;
-import org.xtext.example.mydsl.fML.SliceMode;
+import org.xtext.example.mydsl.fml.FMFormat;
+import org.xtext.example.mydsl.fml.FeatureEdgeKind;
+import org.xtext.example.mydsl.fml.SliceMode;
 
 import fr.familiar.fm.featureide.FMLtoFeatureIDE;
 import fr.familiar.variable.Comparison;

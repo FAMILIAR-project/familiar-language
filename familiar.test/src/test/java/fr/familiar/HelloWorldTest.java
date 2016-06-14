@@ -24,7 +24,7 @@ import static org.junit.Assert.assertEquals;
 import java.util.Collection;
 
 import org.junit.Test;
-import org.xtext.example.mydsl.fML.OpSelection;
+import org.xtext.example.mydsl.fml.OpSelection;
 
 import fr.familiar.parser.ConfigurationVariableFactory;
 import fr.familiar.variable.ConfigurationVariable;

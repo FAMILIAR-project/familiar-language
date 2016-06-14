@@ -43,8 +43,8 @@ import java.util.Set;
 import net.sf.javabdd.BDD;
 
 import org.junit.Before;
-import org.xtext.example.mydsl.fML.FMFormat;
-import org.xtext.example.mydsl.fML.SliceMode;
+import org.xtext.example.mydsl.fml.FMFormat;
+import org.xtext.example.mydsl.fml.SliceMode;
 
 /**
  * @author mathieuacher

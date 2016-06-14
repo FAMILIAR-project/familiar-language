@@ -35,7 +35,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameters;
-import org.xtext.example.mydsl.fML.FeatureModel;
+import org.xtext.example.mydsl.fml.FeatureModel;
 
 import fr.familiar.fm.basic.FMLFeatureModelReader;
 import fr.familiar.fm.basic.FMLFeatureModelWriter;
