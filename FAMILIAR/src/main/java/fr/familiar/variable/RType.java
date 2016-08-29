@@ -25,6 +25,7 @@ public enum RType {
 	PROPOSITIONAL_FORMULA, // deprecated (see constraint)
 	STRING, FEATURE, VOID, RUNNABLE, // deprecated
 	REFERENCE, VARIABILITY_OPERATOR, SCRIPT, 
-	FEATURE_GROUP // new one
+	FEATURE_GROUP, // new one
+	ATTRIBUTE_DOMAIN
 
 }

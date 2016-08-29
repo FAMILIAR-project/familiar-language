@@ -1,8 +1,12 @@
 {
-	"1.0": {
-		"project_path": ":org.xtext.example.fml.idea",
-		"project_dir": "/Users/macher1/Documents/SANDBOX/FML-from-scratch/familiar-language/org.xtext.example.fml.parent/org.xtext.example.fml.idea",
-		"connection_project_dir": "/Users/macher1/Documents/SANDBOX/FML-from-scratch/familiar-language/org.xtext.example.fml.parent",
-		"connection_gradle_distribution": "GRADLE_DISTRIBUTION(WRAPPER)"
-	}
+  "1.0": {
+    "project_path": ":org.xtext.example.fml.idea",
+    "project_dir": "/Users/macher1/Documents/SANDBOX/FML-from-scratch/familiar-language/org.xtext.example.fml.parent/org.xtext.example.fml.idea",
+    "connection_project_dir": "/Users/macher1/Documents/SANDBOX/FML-from-scratch/familiar-language/org.xtext.example.fml.parent",
+    "connection_gradle_user_home": null,
+    "connection_gradle_distribution": "GRADLE_DISTRIBUTION(WRAPPER)",
+    "connection_java_home": null,
+    "connection_jvm_arguments": "",
+    "connection_arguments": ""
+  }
 }

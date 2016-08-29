@@ -3,13 +3,21 @@
  */
 package org.xtext.example.mydsl.idea;
 
+import com.google.inject.Injector;
+import org.eclipse.xtext.ISetup;
+import org.eclipse.xtext.idea.extensions.EcoreGlobalRegistries;
+import org.xtext.example.mydsl.idea.FmlStandaloneSetupIdea;
+
 @SuppressWarnings("all")
-public class FmlIdeaSetup /* implements ISetup  */{
+public class FmlIdeaSetup implements ISetup {
   @Override
-  public Object createInjectorAndDoEMFRegistration() {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method or field EcoreGlobalRegistries is undefined"
-      + "\nThe method createInjector() from the type FmlStandaloneSetupIdea refers to the missing type Object"
-      + "\nensureInitialized cannot be resolved");
+  public Injector createInjectorAndDoEMFRegistration() {
+    Injector _xblockexpression = null;
+    {
+      EcoreGlobalRegistries.ensureInitialized();
+      FmlStandaloneSetupIdea _fmlStandaloneSetupIdea = new FmlStandaloneSetupIdea();
+      _xblockexpression = _fmlStandaloneSetupIdea.createInjector();
+    }
+    return _xblockexpression;
   }
 }

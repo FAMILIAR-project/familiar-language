@@ -7,5 +7,10 @@
 	<classpathentry kind="lib" path="/FML3rdPartiesMisc/target/FML3rdPartiesMisc-1.0.10.jar"/>
 	<classpathentry kind="lib" path="/SPLAR-plugin/target/SPLAR-plugin-1.0.10.jar"/>
 	<classpathentry kind="lib" path="/TVLPackagedAsMock/target/TVLPackagedAsMock-1.0.10.jar"/>
+	<classpathentry kind="lib" path="/featureide-dependencies/target/de.ovgu.featureide.core_2.7.5.201512021815.jar"/>
+	<classpathentry kind="lib" path="/featureide-dependencies/target/de.ovgu.featureide.fm.core_2.7.5.201512021815.jar"/>
+	<classpathentry kind="lib" path="/featureide-dependencies/target/de.ovgu.featureide.fm.ui_2.7.5.201512021815.jar"/>
+	<classpathentry kind="lib" path="/featureide-dependencies/target/de.ovgu.featureide.ui_2.7.5.201512021815.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

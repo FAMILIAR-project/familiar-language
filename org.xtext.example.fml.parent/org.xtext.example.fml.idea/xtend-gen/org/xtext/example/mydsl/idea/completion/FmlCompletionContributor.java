@@ -3,17 +3,17 @@
  */
 package org.xtext.example.mydsl.idea.completion;
 
+import org.eclipse.xtext.idea.lang.AbstractXtextLanguage;
 import org.xtext.example.mydsl.idea.completion.AbstractFmlCompletionContributor;
+import org.xtext.example.mydsl.idea.lang.FmlLanguage;
 
 @SuppressWarnings("all")
 public class FmlCompletionContributor extends AbstractFmlCompletionContributor {
   public FmlCompletionContributor() {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe constructor FmlCompletionContributor(AbstractXtextLanguage) refers to the missing type AbstractXtextLanguage");
+    this(FmlLanguage.INSTANCE);
   }
   
-  public FmlCompletionContributor(final /* AbstractXtextLanguage */Object lang) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method super(AbstractXtextLanguage) is undefined");
+  public FmlCompletionContributor(final AbstractXtextLanguage lang) {
+    super(lang);
   }
 }

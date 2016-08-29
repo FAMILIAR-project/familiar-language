@@ -35,8 +35,7 @@ Require-Bundle: org.xtext.example.fml;bundle-version="1.0.0",
  com.google.inject,
  org.sat4j.core,
  org.eclipse.xtext,
- FAMILIAR;bundle-version="1.0.10",
- FML-featureide-dependencies;bundle-version="1.0.10"
+ FAMILIAR;bundle-version="1.0.10"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Import-Package: com.google.common.collect,
  fr.familiar.fm.converter.tvl,

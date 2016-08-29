@@ -4,13 +4,13 @@
 package org.xtext.example.mydsl.idea.lang;
 
 import org.xtext.example.mydsl.idea.lang.AbstractFmlFileType;
+import org.xtext.example.mydsl.idea.lang.FmlLanguage;
 
 @SuppressWarnings("all")
 public class FmlFileType extends AbstractFmlFileType {
   public final static FmlFileType INSTANCE = new FmlFileType();
   
   public FmlFileType() {
-    throw new Error("Unresolved compilation problems:"
-      + "\nThe method super(FmlLanguage) is undefined");
+    super(FmlLanguage.INSTANCE);
   }
 }

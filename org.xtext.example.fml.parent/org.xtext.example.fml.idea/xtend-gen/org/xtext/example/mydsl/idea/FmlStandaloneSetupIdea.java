@@ -3,15 +3,21 @@
  */
 package org.xtext.example.mydsl.idea;
 
+import com.google.inject.Guice;
+import com.google.inject.Injector;
+import com.google.inject.Module;
+import org.eclipse.xtext.util.Modules2;
+import org.xtext.example.mydsl.FmlRuntimeModule;
+import org.xtext.example.mydsl.FmlStandaloneSetupGenerated;
+import org.xtext.example.mydsl.idea.FmlIdeaModule;
+
 @SuppressWarnings("all")
-public class FmlStandaloneSetupIdea /* implements FmlStandaloneSetupGenerated  */{
+public class FmlStandaloneSetupIdea extends FmlStandaloneSetupGenerated {
   @Override
-  public Object createInjector() {
-    throw new Error("Unresolved compilation problems:"
-      + "\nFmlRuntimeModule cannot be resolved."
-      + "\nThe method or field Modules2 is undefined"
-      + "\nThe method or field Guice is undefined"
-      + "\nmixin cannot be resolved"
-      + "\ncreateInjector cannot be resolved");
+  public Injector createInjector() {
+    final FmlRuntimeModule runtimeModule = new FmlRuntimeModule();
+    final FmlIdeaModule ideaModule = new FmlIdeaModule();
+    final Module mergedModule = Modules2.mixin(runtimeModule, ideaModule);
+    return Guice.createInjector(mergedModule);
   }
 }

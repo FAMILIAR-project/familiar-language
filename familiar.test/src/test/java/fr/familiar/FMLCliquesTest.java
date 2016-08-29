@@ -27,6 +27,7 @@ import java.util.Set;
 import org.junit.Test;
 
 import fr.familiar.operations.CliquesComputation;
+import fr.familiar.operations.CountingStrategy;
 import fr.familiar.variable.CliquesOperationFactory;
 import fr.familiar.variable.FeatureModelVariable;
 import fr.familiar.variable.SetVariable;

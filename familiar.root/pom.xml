@@ -8,7 +8,7 @@
  <modules>
     <module>../FML3rdPartiesForSynthesis</module>
     <module>../FML3rdPartiesMisc</module>
-     <module>../FML-featureide-dependencies</module>
+    <module>../featureide-dependencies</module>
     <module>../org.xtext.example.fml.parent</module>
     <module>../org.xtext.example.fmlero</module>
     <module>../org.xtext.example.fmlero.ui</module>
