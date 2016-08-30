@@ -17,7 +17,9 @@ Bundle-ClassPath: .,
  lib/semanticvectors-3.8.jar
 Bundle-Activator: fr.familiar.views.featureide.Activator
 Bundle-Vendor: %Bundle-Vendor.3
-Require-Bundle: org.xtext.example.fml;bundle-version="1.0.0",
+Require-Bundle: FML3rdPartiesForSynthesis;bundle-version="1.0.10",
+ FAMILIAR;bundle-version="1.0.10",
+ org.xtext.example.fml;bundle-version="1.0.0",
  org.eclipse.core.filebuffers,
  org.eclipse.core.runtime,
  org.eclipse.debug.ui,
@@ -26,7 +28,6 @@ Require-Bundle: org.xtext.example.fml;bundle-version="1.0.0",
  org.eclipse.ui.ide,
  org.eclipse.ui.workbench,
  org.xtext.example.fmlero.ui,
- FML3rdPartiesForSynthesis;bundle-version="1.0.10",
  FML3rdPartiesMisc;bundle-version="1.0.10",
  org.eclipse.core.resources,
  org.eclipse.ui,
@@ -35,7 +36,11 @@ Require-Bundle: org.xtext.example.fml;bundle-version="1.0.0",
  com.google.inject,
  org.sat4j.core,
  org.eclipse.xtext,
- FAMILIAR;bundle-version="1.0.10"
+ de.ovgu.featureide.core;bundle-version="2.7.1",
+ de.ovgu.featureide.fm.core;bundle-version="2.7.1",
+ de.ovgu.featureide.fm.ui;bundle-version="2.7.1",
+ de.ovgu.featureide.ui;bundle-version="2.7.1",
+ org.junit;bundle-version="4.12.0"
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Import-Package: com.google.common.collect,
  fr.familiar.fm.converter.tvl,

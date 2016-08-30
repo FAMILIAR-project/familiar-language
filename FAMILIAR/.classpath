@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src/main/java"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="src" path="src/fr"/>
 	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
 	<classpathentry exported="true" kind="lib" path="lib/antlr.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/choco-2.1.0-basic+old.jar"/>
-	<classpathentry exported="true" kind="lib" path="lib/commons-io-1.4.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/concurrentlinkedhashmap-lru-1.3.2.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/gagawa-1.0.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/jgraph-5.5.1.jar"/>
@@ -14,12 +14,9 @@
 	<classpathentry exported="true" kind="lib" path="lib/org.sat4j.core.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/pacogenIntern.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/semanticvectors-3.8.jar"/>
+	<classpathentry exported="true" kind="lib" path="lib/commons-io-1.4.jar"/>
 	<classpathentry kind="lib" path="/FML3rdPartiesForSynthesis/target/FML3rdPartiesForSynthesis-1.0.10.jar"/>
 	<classpathentry kind="lib" path="/FML3rdPartiesMisc/target/FML3rdPartiesMisc-1.0.10.jar"/>
 	<classpathentry kind="lib" path="/SPLAR-plugin/target/SPLAR-plugin-1.0.10.jar"/>
-	<classpathentry kind="lib" path="/featureide-dependencies/target/de.ovgu.featureide.core_2.7.5.201512021815.jar"/>
-	<classpathentry kind="lib" path="/featureide-dependencies/target/de.ovgu.featureide.fm.core_2.7.5.201512021815.jar"/>
-	<classpathentry kind="lib" path="/featureide-dependencies/target/de.ovgu.featureide.fm.ui_2.7.5.201512021815.jar"/>
-	<classpathentry kind="lib" path="/featureide-dependencies/target/de.ovgu.featureide.ui_2.7.5.201512021815.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

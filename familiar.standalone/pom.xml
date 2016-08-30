@@ -117,6 +117,28 @@
 		  <version>2.3.5</version>
 		</dependency>
 
+<!-- Fake dep installed by familiar.dependencies/pom.xml -->
+<!--        <dependency>
+            <groupId>FAMILIAR_LOCAL_DEP</groupId>
+            <artifactId>de.ovgu.featureide.core</artifactId>
+            <version>FAMILIAR_LOCAL_DEP</version>
+        </dependency>
+        <dependency>
+            <groupId>FAMILIAR_LOCAL_DEP</groupId>
+            <artifactId>de.ovgu.featureide.fm.core</artifactId>
+            <version>FAMILIAR_LOCAL_DEP</version>
+        </dependency>
+        <dependency>
+            <groupId>FAMILIAR_LOCAL_DEP</groupId>
+            <artifactId>de.ovgu.featureide.fm.ui</artifactId>
+            <version>FAMILIAR_LOCAL_DEP</version>
+        </dependency>
+        <dependency>
+            <groupId>FAMILIAR_LOCAL_DEP</groupId>
+            <artifactId>de.ovgu.featureide.ui</artifactId>
+            <version>FAMILIAR_LOCAL_DEP</version>
+        </dependency>
+-->
 	</dependencies>
 	<build>
 		<plugins>

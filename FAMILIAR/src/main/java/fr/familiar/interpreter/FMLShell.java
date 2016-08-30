@@ -79,7 +79,7 @@ public class FMLShell {
 	private static final boolean DEFAULT_VERBOSE = false;
 	private boolean _verbose = DEFAULT_VERBOSE;
 
-	public static final String FML_VERSION = "1.1 (beta)";
+	public static final String FML_VERSION = "1.2 (beta)";
 
 	/*
 	 * output facilities (display messages, debug messages, etc.)

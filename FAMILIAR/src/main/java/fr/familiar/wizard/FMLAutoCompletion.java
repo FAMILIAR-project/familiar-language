@@ -1,16 +1,16 @@
 /**
  * 
  */
-package fr.familiar.test;
+package fr.familiar.wizard;
 
 import org.eclipse.xtext.ui.editor.contentassist.AbstractContentProposalProvider;
 import org.eclipse.xtext.ui.editor.contentassist.ContentAssistContext;
 import org.eclipse.xtext.ui.editor.contentassist.ICompletionProposalAcceptor;
 import org.eclipse.xtext.ui.editor.contentassist.antlr.ParserBasedContentAssistContextFactory;
 import org.junit.Test;
-import org.xtext.example.mydsl.fML.FamiliarScript;
-import org.xtext.example.mydsl.ui.contentassist.AbstractFMLProposalProvider;
-import org.xtext.example.mydsl.ui.contentassist.FMLProposalProvider;
+import org.xtext.example.mydsl.fml.FamiliarScript;
+//import org.xtext.example.mydsl.ui.contentassist.AbstractFMLProposalProvider;
+//import org.xtext.example.mydsl.ui.contentassist.FMLProposalProvider;
 
 import fr.familiar.parser.FMLParsingHelper;
 /**
@@ -18,6 +18,7 @@ import fr.familiar.parser.FMLParsingHelper;
  * @author macher1
  *
  */
+@Deprecated
 public class FMLAutoCompletion {
 	
 	
@@ -31,9 +32,9 @@ public class FMLAutoCompletion {
 		System.err.println("FML model: " + model);
 		System.err.println("model.getCmds()=" + model.getCmds());
 		
-		AbstractFMLProposalProvider pr ;  
+		//AbstractFMLProposalProvider pr ;  
 		
-		FMLProposalProvider cpr;
+		//FMLProposalProvider cpr;
 		
 		ParserBasedContentAssistContextFactory pcf = new ParserBasedContentAssistContextFactory(); 
 		
