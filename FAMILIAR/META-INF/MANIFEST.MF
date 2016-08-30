@@ -7,6 +7,7 @@ Bundle-Activator: fr.familiar.views.featureide.Activator
 Bundle-Vendor: %Bundle-Vendor.3
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Bundle-ClassPath: .,
+ target/classes,
  lib/antlr.jar,
  lib/choco-2.1.0-basic+old.jar,
  lib/concurrentlinkedhashmap-lru-1.3.2.jar,

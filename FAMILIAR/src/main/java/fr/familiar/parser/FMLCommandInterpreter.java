@@ -187,7 +187,7 @@ public class FMLCommandInterpreter {
 			this._injector = new FmlStandaloneSetup().createInjectorAndDoEMFRegistration();
 		else
 			// vp: plugin
-			this._injector = FmlActivator.getInstance().getInjector("org.xtext.example.mydsl.FML");
+			this._injector = FmlActivator.getInstance().getInjector("org.xtext.example.mydsl.Fml");
 		// FAMILIARActivator.getInstance().getInjector("org.xtext.example.mydsl.FAMILIAR");
 
 		// TODO
