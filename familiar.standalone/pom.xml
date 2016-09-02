@@ -33,12 +33,12 @@
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.xtext</artifactId>
-			<version>2.5.3</version>
+			<version>2.9.1</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclipse.xtext</groupId>
 			<artifactId>org.eclipse.xtext.xbase</artifactId>
-			<version>2.5.3</version>
+			<version>2.9.1</version>
 		</dependency>
 
 
@@ -64,14 +64,14 @@
 			<version>1.0.10</version>
 		</dependency>
 		<dependency>
-			<groupId>fr.inria.familiar</groupId>
+			<groupId>org.xtext.example.fml</groupId>
 			<artifactId>org.xtext.example.fml</artifactId>
-			<version>1.0.10</version>
+			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
-			<groupId>fr.inria.familiar</groupId>
+			<groupId>org.xtext.example.fml</groupId>
 			<artifactId>org.xtext.example.fml.ui</artifactId>
-			<version>1.0.10</version>
+			<version>1.0.0-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>fr.inria.familiar</groupId>
@@ -102,12 +102,6 @@
 			<groupId>fr.inria.familiar</groupId>
 			<artifactId>FAMILIAR</artifactId>
 			<version>1.0.10</version>
-		</dependency>
-
-		<dependency>
-		  <groupId>io.variability</groupId>
-		  <artifactId>featureide-dependencies</artifactId>
-		  <version>1.0.10</version>
 		</dependency>
 		
 		<!-- http://mvnrepository.com/artifact/org.ow2.sat4j/org.ow2.sat4j.pb -->
