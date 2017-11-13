@@ -13,7 +13,7 @@ import org.xtext.example.mydsl.ui.AbstractFmlUiModule;
 @FinalFieldsConstructor
 @SuppressWarnings("all")
 public class FmlUiModule extends AbstractFmlUiModule {
-  public FmlUiModule(final AbstractUIPlugin arg0) {
-    super(arg0);
+  public FmlUiModule(final AbstractUIPlugin plugin) {
+    super(plugin);
   }
 }

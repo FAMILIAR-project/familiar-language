@@ -14,7 +14,7 @@ import org.xtext.example.mydsl.web.AbstractFmlWebModule;
 @FinalFieldsConstructor
 @SuppressWarnings("all")
 public class FmlWebModule extends AbstractFmlWebModule {
-  public FmlWebModule(final Provider<ExecutorService> arg0) {
-    super(arg0);
+  public FmlWebModule(final Provider<ExecutorService> executorServiceProvider) {
+    super(executorServiceProvider);
   }
 }
