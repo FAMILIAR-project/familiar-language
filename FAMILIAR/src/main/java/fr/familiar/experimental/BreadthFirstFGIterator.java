@@ -1,6 +1,6 @@
 /*
  * This file is part of the FAMILIAR (for FeAture Model scrIpt Language for 
- * manIpulation and Automatic Reasoning) project.
+ * manIpulation and Automatic Reasoning) project (2010-2017)
  * http://familiar-project.github.com/
  *
  * FAMILIAR is free software: you can redistribute it and/or modify
@@ -14,7 +14,7 @@
  * GNU Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public License
- * along with FAMILIAR.  If not, see <http://www.gnu.org/licenses/>.
+ * along with FAMILIAR.  If not, see <http://www.gnu.org/licenses/>
  */
 
 package fr.familiar.experimental;
@@ -34,7 +34,7 @@ import org.apache.commons.collections15.CollectionUtils;
  * @author mathieuacher
  * 
  */
-public class BreadthFirstVertexIterator<T extends Comparable<T>> implements
+public class BreadthFirstFGIterator<T extends Comparable<T>> implements
 		Iterator<FeatureNode<T>> {
 	private final FeatureGraph<T> _g;
 	private final Queue<FeatureNode<T>> _next;
@@ -42,40 +42,40 @@ public class BreadthFirstVertexIterator<T extends Comparable<T>> implements
 	private final HashSet<FeatureNode<T>> _siblings;
 	private int depth = 0;
 
-	public BreadthFirstVertexIterator(FeatureGraph<T> g) {
-		this._g = g;
-		this._visited = new HashSet<FeatureNode<T>>();
-		this._next = new LinkedList<FeatureNode<T>>();
-		this._siblings = new HashSet<FeatureNode<T>>();
-		this._next.add(this._g.getTopVertex());
+	public BreadthFirstFGIterator(FeatureGraph<T> g) {
+		_g = g;
+		_visited = new HashSet<FeatureNode<T>>();
+		_next = new LinkedList<FeatureNode<T>>();
+		_siblings = new HashSet<FeatureNode<T>>();
+		_next.add(_g.getTopVertex());
 	}
 
 	public boolean hasNext() {
-		return (!(this._next.isEmpty()));
+		return (!(_next.isEmpty()));
 	}
 
 	public FeatureNode<T> next() {
-		FeatureNode<T> next = this._next.poll();
+		FeatureNode<T> next = _next.poll();
 
-		Set<FeatureNode<T>> parents = this._g.parents(next);
-		if (CollectionUtils.containsAny(this._siblings, parents)) {
-			this._siblings.clear();
-			this.depth += 1;
+		Set<FeatureNode<T>> parents = _g.parents(next);
+		if (CollectionUtils.containsAny(_siblings, parents)) {
+			_siblings.clear();
+			depth += 1;
 		}
-		this._siblings.add(next);
+		_siblings.add(next);
 
-		this._visited.add(next);
+		_visited.add(next);
 
-		this._next.addAll(this._g.children(next));
-		while ((!(this._next.isEmpty()))
-				&& (this._visited.contains(this._next.peek()))) {
-			this._next.poll();
+		_next.addAll(_g.children(next));
+		while ((!(_next.isEmpty()))
+				&& (_visited.contains(_next.peek()))) {
+			_next.poll();
 		}
 		return next;
 	}
 
 	public int getDepth() {
-		return this.depth;
+		return depth;
 	}
 
 	public void remove() {

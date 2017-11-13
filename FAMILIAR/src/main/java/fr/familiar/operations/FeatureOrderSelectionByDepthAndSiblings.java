@@ -1,6 +1,6 @@
 /*
  * This file is part of the FAMILIAR (for FeAture Model scrIpt Language for 
- * manIpulation and Automatic Reasoning) project.
+ * manIpulation and Automatic Reasoning) project (2010-2017)
  * http://familiar-project.github.com/
  *
  * FAMILIAR is free software: you can redistribute it and/or modify
@@ -14,7 +14,7 @@
  * GNU Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public License
- * along with FAMILIAR.  If not, see <http://www.gnu.org/licenses/>.
+ * along with FAMILIAR.  If not, see <http://www.gnu.org/licenses/>
  */
 
 package fr.familiar.operations;
@@ -31,8 +31,8 @@ import org.apache.commons.collections15.multimap.MultiHashMap;
 import org.jgrapht.graph.DefaultEdge;
 
 import fr.familiar.experimental.BasicDirectedGraph;
-import fr.familiar.experimental.BreadthFirstIterator;
-import fr.familiar.experimental.BreadthFirstVertexIterator;
+import fr.familiar.experimental.BreadthFirstBGIterator;
+import fr.familiar.experimental.BreadthFirstFGIterator;
 import fr.familiar.variable.FeatureModelVariable;
 import gsd.synthesis.FeatureGraph;
 import gsd.synthesis.FeatureNode;
@@ -93,7 +93,7 @@ public class FeatureOrderSelectionByDepthAndSiblings extends
 		List<FeatureNode<String>> ordered = new ArrayList<FeatureNode<String>>();
 		List<FeatureNode<String>> siblings = new ArrayList<FeatureNode<String>>();
 
-		BreadthFirstVertexIterator<String> iter = new BreadthFirstVertexIterator<String>(
+		BreadthFirstFGIterator<String> iter = new BreadthFirstFGIterator<String>(
 				g);
 		int depth = 0;
 		while (iter.hasNext()) {
@@ -138,7 +138,7 @@ public class FeatureOrderSelectionByDepthAndSiblings extends
 			}
 		}
 
-		BreadthFirstIterator<FeatureNode<String>, DefaultEdge> depIter = new BreadthFirstIterator<FeatureNode<String>, DefaultEdge>(
+		BreadthFirstBGIterator<FeatureNode<String>, DefaultEdge> depIter = new BreadthFirstBGIterator<FeatureNode<String>, DefaultEdge>(
 				depG);
 
 		List<FeatureNode<String>> ordered = new ArrayList<FeatureNode<String>>();

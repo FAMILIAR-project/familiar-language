@@ -1,6 +1,6 @@
 /*
  * This file is part of the FAMILIAR (for FeAture Model scrIpt Language for 
- * manIpulation and Automatic Reasoning) project.
+ * manIpulation and Automatic Reasoning) project (2010-2017)
  * http://familiar-project.github.com/
  *
  * FAMILIAR is free software: you can redistribute it and/or modify
@@ -14,7 +14,7 @@
  * GNU Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public License
- * along with FAMILIAR.  If not, see <http://www.gnu.org/licenses/>.
+ * along with FAMILIAR.  If not, see <http://www.gnu.org/licenses/>
  */
 
 package fr.familiar.operations;
@@ -25,7 +25,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import fr.familiar.experimental.BreadthFirstVertexIterator;
+import fr.familiar.experimental.BreadthFirstFGIterator;
 import fr.familiar.variable.FeatureModelVariable;
 import gsd.synthesis.FeatureGraph;
 import gsd.synthesis.FeatureNode;
@@ -69,7 +69,7 @@ public class FeatureOrderSelectionByDepth extends FeatureOrderSelection {
 	private List<String> sortByDepths(FeatureGraph<String> g) {
 
 		List<String> ordered = new ArrayList<String>();
-		BreadthFirstVertexIterator<String> iter = new BreadthFirstVertexIterator<String>(
+		BreadthFirstFGIterator<String> iter = new BreadthFirstFGIterator<String>(
 				g);
 		while (iter.hasNext()) {
 			FeatureNode<String> next = iter.next();

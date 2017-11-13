@@ -1,6 +1,6 @@
 /*
  * This file is part of the FAMILIAR (for FeAture Model scrIpt Language for 
- * manIpulation and Automatic Reasoning) project.
+ * manIpulation and Automatic Reasoning) project (2010-2017)
  * http://familiar-project.github.com/
  *
  * FAMILIAR is free software: you can redistribute it and/or modify
@@ -14,7 +14,7 @@
  * GNU Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public License
- * along with FAMILIAR.  If not, see <http://www.gnu.org/licenses/>.
+ * along with FAMILIAR.  If not, see <http://www.gnu.org/licenses/>
  */
 
 package fr.familiar.operations.featureide;

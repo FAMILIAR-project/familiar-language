@@ -1,6 +1,6 @@
 /*
  * This file is part of the FAMILIAR (for FeAture Model scrIpt Language for 
- * manIpulation and Automatic Reasoning) project.
+ * manIpulation and Automatic Reasoning) project (2010-2017)
  * http://familiar-project.github.com/
  *
  * FAMILIAR is free software: you can redistribute it and/or modify
@@ -14,7 +14,7 @@
  * GNU Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public License
- * along with FAMILIAR.  If not, see <http://www.gnu.org/licenses/>.
+ * along with FAMILIAR.  If not, see <http://www.gnu.org/licenses/>
  */
 
 package fr.familiar.experimental;
@@ -29,19 +29,19 @@ import java.util.Set;
 
 import org.apache.commons.collections15.CollectionUtils;
 
-public class BreadthFirstIterator<V, E> implements Iterator<V> {
+public class BreadthFirstBGIterator<V, E> implements Iterator<V> {
 	private final BasicGraph<V, E> _g;
 	private final Queue<V> _next;
-	private final HashSet<V> _visited;
-	private final HashSet<V> _siblings;
+	private final Set<V> _visited;
+	private final Set<V> _siblings;
 	private int depth = 0;
 
-	public BreadthFirstIterator(BasicGraph<V, E> g) {
-		this._g = g;
-		this._visited = new HashSet<V>();
-		this._next = new LinkedList<V>();
-		this._siblings = new HashSet<V>();
-		this._next.addAll(findAllRoots(_g));
+	public BreadthFirstBGIterator(BasicGraph<V, E> g) {
+		_g = g;
+		_visited = new HashSet<V>();
+		_next = new LinkedList<V>();
+		_siblings = new HashSet<V>();
+		_next.addAll(findAllRoots(_g));
 	}
 
 	public Set<V> findAllRoots(BasicGraph<V, E> g) {
@@ -54,30 +54,30 @@ public class BreadthFirstIterator<V, E> implements Iterator<V> {
 	}
 
 	public boolean hasNext() {
-		return (!(this._next.isEmpty()));
+		return (!(_next.isEmpty()));
 	}
 
 	public V next() {
-		V next = this._next.poll();
+		V next = _next.poll();
 
-		Set<V> parents = this._g.parents(next);
-		if (CollectionUtils.containsAny(this._siblings, parents)) {
-			this._siblings.clear();
-			this.depth += 1;
+		Set<V> parents = _g.parents(next);
+		if (CollectionUtils.containsAny(_siblings, parents)) {
+			_siblings.clear();
+			depth += 1;
 		}
-		this._siblings.add(next);
-		this._visited.add(next);
+		_visited.add(next);
+		_siblings.add(next);		
 
-		this._next.addAll(this._g.children(next));
-		while ((!(this._next.isEmpty()))
-				&& (this._visited.contains(this._next.peek()))) {
-			this._next.poll();
+		_next.addAll(_g.children(next));
+		while ((!(_next.isEmpty()))
+				&& (_visited.contains(_next.peek()))) {
+			_next.poll();
 		}
 		return next;
 	}
 
 	public int getDepth() {
-		return this.depth;
+		return depth;
 	}
 
 	public void remove() {
