@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.eclipse.ui:workbench:3.3.0-I20070608-1100">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/ui/workbench/3.3.0-I20070608-1100/workbench-3.3.0-I20070608-1100.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/ui/workbench/3.3.0-I20070608-1100/workbench-3.3.0-I20070608-1100-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/ui/workbench/3.3.0-I20070608-1100/workbench-3.3.0-I20070608-1100-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

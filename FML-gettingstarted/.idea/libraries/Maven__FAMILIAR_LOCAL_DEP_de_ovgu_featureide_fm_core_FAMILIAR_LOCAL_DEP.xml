@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: FAMILIAR_LOCAL_DEP:de.ovgu.featureide.fm.core:FAMILIAR_LOCAL_DEP">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/FAMILIAR_LOCAL_DEP/de.ovgu.featureide.fm.core/FAMILIAR_LOCAL_DEP/de.ovgu.featureide.fm.core-FAMILIAR_LOCAL_DEP.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/FAMILIAR_LOCAL_DEP/de.ovgu.featureide.fm.core/FAMILIAR_LOCAL_DEP/de.ovgu.featureide.fm.core-FAMILIAR_LOCAL_DEP-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/FAMILIAR_LOCAL_DEP/de.ovgu.featureide.fm.core/FAMILIAR_LOCAL_DEP/de.ovgu.featureide.fm.core-FAMILIAR_LOCAL_DEP-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

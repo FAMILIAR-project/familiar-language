@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.eclipse.emf:org.eclipse.emf.codegen:2.11.0-v20150806-0404">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/emf/org.eclipse.emf.codegen/2.11.0-v20150806-0404/org.eclipse.emf.codegen-2.11.0-v20150806-0404.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/emf/org.eclipse.emf.codegen/2.11.0-v20150806-0404/org.eclipse.emf.codegen-2.11.0-v20150806-0404-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/emf/org.eclipse.emf.codegen/2.11.0-v20150806-0404/org.eclipse.emf.codegen-2.11.0-v20150806-0404-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

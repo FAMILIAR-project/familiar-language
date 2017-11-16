@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>io.variability</groupId>
+    <artifactId>fml-gettingstarted</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+        </dependency>
+
+        <dependency>
+            <groupId>fr.inria.familiar</groupId>
+            <artifactId>FAMILIAR</artifactId>
+            <version>1.0.10</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.inria.familiar</groupId>
+            <artifactId>FAMILIAR-Standalone</artifactId>
+            <version>1.0.10</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.xtext.example.fml</groupId>
+            <artifactId>org.xtext.example.fml</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.eclipse.xtext</groupId>
+            <artifactId>org.eclipse.xtext.generator</artifactId>
+            <version>2.10.0</version>
+        </dependency>
+        <dependency>
+            <groupId>fr.inria.familiar</groupId>
+            <artifactId>FAMILIAR-Test</artifactId>
+            <version>1.0.10</version>
+        </dependency>
+
+
+    </dependencies>
+
+
+</project>

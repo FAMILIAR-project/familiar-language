@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.eclipse.emf:org.eclipse.emf.mwe.utils:1.3.13">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/emf/org.eclipse.emf.mwe.utils/1.3.13/org.eclipse.emf.mwe.utils-1.3.13.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/emf/org.eclipse.emf.mwe.utils/1.3.13/org.eclipse.emf.mwe.utils-1.3.13-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/emf/org.eclipse.emf.mwe.utils/1.3.13/org.eclipse.emf.mwe.utils-1.3.13-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

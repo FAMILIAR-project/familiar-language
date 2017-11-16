@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inherit-compiler-output="true" inheritJdk="true">
+	<output-test url="file://$MODULE_DIR$/out/test/FML-standalone-withJARS"/>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="JUnit4" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/junit-4.12.jar!/"/>
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/lib/hamcrest-core-1.3.jar!/"/>
+	</lib>
+	<levels>
+		<level name="FAMILIAR-Standalone-1.0.10-jar-with-dependencies" value="project"/>
+		<level name="FAMILIAR-Test-1.0.10" value="project"/>
+	</levels>
+</component>

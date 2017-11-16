@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.eclipse.ui:console:3.2.0-v20070530">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/ui/console/3.2.0-v20070530/console-3.2.0-v20070530.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/ui/console/3.2.0-v20070530/console-3.2.0-v20070530-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/eclipse/ui/console/3.2.0-v20070530/console-3.2.0-v20070530-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
