@@ -1,6 +1,6 @@
 /*
  * This file is part of the FAMILIAR (for FeAture Model scrIpt Language for 
- * manIpulation and Automatic Reasoning) project.
+ * manIpulation and Automatic Reasoning) project (2010-2017)
  * http://familiar-project.github.com/
  *
  * FAMILIAR is free software: you can redistribute it and/or modify
@@ -14,7 +14,7 @@
  * GNU Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public License
- * along with FAMILIAR.  If not, see <http://www.gnu.org/licenses/>.
+ * along with FAMILIAR.  If not, see <http://www.gnu.org/licenses/>
  */
 
 package fr.familiar;
@@ -46,29 +46,29 @@ public class FMLICVS2011Test extends FMLTest {
 			+ "LongTerm : (ThreeDLongTerm|TextureLongTerm|ColorLongTerm) ; "
 			+ "ScenarioRecognition : (Simple|PeopleBased)+ ; "
 			+ "PeopleBased -> ClassificationPeople ; " + "Texture -> High ; " + // Tracking.*.Texture
-																				// impliesÊAcquisition.Resolution.High
-			"F2FColor -> Full ; " + // Tracking.*.ColorÊimpliesÊAcquisition.Color.Full
+																				// impliesï¿½Acquisition.Resolution.High
+			"F2FColor -> Full ; " + // Tracking.*.Colorï¿½impliesï¿½Acquisition.Color.Full
 			")";
 
 	protected String _rules = "constraints (ClassificationPeople -> People ; " + // internal?
 																					// (5)
 																					// Classification.People
-																					// ÊimpliesÊObjectOfInterest.People
-			"LightingLow -> NearIR ; " + // (C1)ÊContext.Ligh+ng.LowÊimpliesÊAcquisi+on.Color.NearIR
+																					// ï¿½impliesï¿½ObjectOfInterest.People
+			"LightingLow -> NearIR ; " + // (C1)ï¿½Context.Ligh+ng.Lowï¿½impliesï¿½Acquisi+on.Color.NearIR
 			"LightingLow -> Low ; " + // (C2) Context.Ligh+ng.Low
-										// ÊimpliesÊAcquisi+on.Resolu+on.Low
-			// "ShadowRemoval -> LightingHigh ; " + // (C3) ÊShadow
-			// RemovalÊimpliesÊContext.Ligh+ng.High
+										// ï¿½impliesï¿½Acquisi+on.Resolu+on.Low
+			// "ShadowRemoval -> LightingHigh ; " + // (C3) ï¿½Shadow
+			// Removalï¿½impliesï¿½Context.Ligh+ng.High
 			"LightingHigh -> ShadowRemoval ; " + "PeopleBased <-> People ; " + // (C4)
-																				// ScenarioÊRecogni+on.People
-																				// Êbased
+																				// Scenarioï¿½Recogni+on.People
+																				// ï¿½based
 																				// equiv
 																				// Object
-																				// Êof
-																				// ÊInterest.People
-			"PeopleBased <-> WithReco ;" + // (C5) ScenarioÊRecogni+on.People
-											// Êbased equiv
-											// Applica+on.Intrusion.With ÊReco
+																				// ï¿½of
+																				// ï¿½Interest.People
+			"PeopleBased <-> WithReco ;" + // (C5) Scenarioï¿½Recogni+on.People
+											// ï¿½based equiv
+											// Applica+on.Intrusion.With ï¿½Reco
 			")";
 
 	@Test

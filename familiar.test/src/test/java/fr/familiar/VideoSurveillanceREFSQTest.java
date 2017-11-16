@@ -1,6 +1,6 @@
 /*
  * This file is part of the FAMILIAR (for FeAture Model scrIpt Language for 
- * manIpulation and Automatic Reasoning) project.
+ * manIpulation and Automatic Reasoning) project (2010-2017)
  * http://familiar-project.github.com/
  *
  * FAMILIAR is free software: you can redistribute it and/or modify
@@ -14,7 +14,7 @@
  * GNU Lesser General Public License for more details.
  *
  * You should have received a copy of the GNU Lesser General Public License
- * along with FAMILIAR.  If not, see <http://www.gnu.org/licenses/>.
+ * along with FAMILIAR.  If not, see <http://www.gnu.org/licenses/>
  */
 
 package fr.familiar;
@@ -88,13 +88,13 @@ public class VideoSurveillanceREFSQTest extends FMLTest {
 
 		loadModels();
 
-		// 2.1 Détection d'intrusion sur parking extérieur
+		// 2.1ÔøΩDÔøΩtectionÔøΩd'intrusionÔøΩsurÔøΩparkingÔøΩextÔøΩrieur
 		/*
-		 * Intrusion detection Person Vehicle Single Object MonoSensor
-		 * 8 frames per second Color
-		 * Camera location hight with large field of view Natural light
-		 * outdoor, daynight Noise, vegetation Light variations
-		 * Response time < 1 second Sensitivity must be hight
+		 * IntrusionÔøΩdetection Person Vehicle SingleÔøΩObject MonoSensor
+		 * 8ÔøΩframesÔøΩperÔøΩsecond Color
+		 * CameraÔøΩlocationÔøΩhightÔøΩwithÔøΩlargeÔøΩfieldÔøΩofÔøΩview NaturalÔøΩlight
+		 * outdoor,ÔøΩdaynight Noise,ÔøΩvegetation LightÔøΩvariations
+		 * ResponseÔøΩtimeÔøΩ<ÔøΩ1ÔøΩsecond SensitivityÔøΩmustÔøΩbeÔøΩhight
 		 */
 		// Day Night
 		// LowFrameRate, ArtificialLight not possible!?
@@ -114,12 +114,12 @@ public class VideoSurveillanceREFSQTest extends FMLTest {
 
 		/*
 		 * 
-		 * Détection d'intrusion à l'intérieur d'un bâtiment Intrusion detection
-		 * Person Single Object MonoSensor 8 frames per second
-		 * Day/Night camera (color/infrared)
-		 * Camera location (on wall), normal field of view Artificial light
-		 * Indoor Light variations Response time < 1 second
-		 * Sensitivity must be hight
+		 * DÔøΩtectionÔøΩd'intrusion àÔøΩl'intÔøΩrieurÔøΩd'unÔøΩbÔøΩtiment IntrusionÔøΩdetection
+		 * Person SingleÔøΩObject MonoSensor 8ÔøΩframesÔøΩperÔøΩsecond
+		 * Day/NightÔøΩcameraÔøΩ(color/infrared)
+		 * CameraÔøΩlocationÔøΩ(onÔøΩwall),ÔøΩnormalÔøΩfieldÔøΩofÔøΩview ArtificialÔøΩlight
+		 * Indoor LightÔøΩvariations ResponseÔøΩtimeÔøΩ<ÔøΩ1ÔøΩsecond
+		 * SensitivityÔøΩmustÔøΩbeÔøΩhight
 		 */
 		// Day Night
 		String FTsIncluded = "Narrow ResponseTime Color Natural Camera Infrared MonoSensor SingleObject Person Indoors LightingVariation";
@@ -138,11 +138,11 @@ public class VideoSurveillanceREFSQTest extends FMLTest {
 
 		/*
 		 * 
-		 * Counting Person Single Object
-		 * MultiSensor (one for entrance and one for exit) 25 frames per second
-		 * Color Camera location: top view, small field of view Indoor
-		 * Artificial light Noise, fences
-		 * Response time not so important < 1 minute
+		 * Counting Person SingleÔøΩObject
+		 * MultiSensorÔøΩ(oneÔøΩforÔøΩentranceÔøΩandÔøΩoneÔøΩforÔøΩexit) 25ÔøΩframesÔøΩperÔøΩsecond
+		 * Color CameraÔøΩlocation:ÔøΩtopÔøΩview,ÔøΩsmallÔøΩfieldÔøΩofÔøΩview Indoor
+		 * ArtificialÔøΩlight Noise,ÔøΩfences
+		 * ResponseÔøΩtimeÔøΩnotÔøΩsoÔøΩimportantÔøΩ<ÔøΩ1ÔøΩminute
 		 */
 
 		String FTsIncluded = "Color Indoor TopView Noise VingtCinqFrSec Color Camera MultiSensor SingleObject";
