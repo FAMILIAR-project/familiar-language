@@ -1,11 +1,28 @@
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+import org.junit.Test;
+
 import fr.familiar.FMLTest;
 import fr.familiar.FeatureModelLoader;
 import fr.familiar.parser.FMBuilder;
 import fr.familiar.variable.Comparison;
 import fr.familiar.variable.FeatureModelVariable;
-import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
+import fr.familiar.variable.SetVariable;
+import fr.familiar.variable.Variable;
+import gsd.synthesis.BDDBuilder;
+import gsd.synthesis.Expression;
+import gsd.synthesis.ExpressionUtil;
 
 /**
  * Created by macher1 on 16/11/2017.
@@ -13,7 +30,9 @@ import static org.junit.Assert.assertEquals;
 public class FMLGettingStarted extends FMLTest {
 
 
-    @Test
+    private static final String TARGET_FOLDER = "ouputCSV";
+
+	@Test
     public void testHelloWorld() throws Exception {
         FeatureModelVariable fmv = FM ("fm1", "FM (A : [B] [C] ;)");
         
@@ -23,5 +42,164 @@ public class FMLGettingStarted extends FMLTest {
         assertEquals(Comparison.REFACTORING, fmv2.compare(fmv));
         
     }
+    
+    @Test
+    public void testSPLOT() throws Exception {
+    	
+    	
+    	// dataset: SPLOT archive 
+    	FeatureModelLoader loader = new FeatureModelLoader(_shell, _builder);
+    	List<FeatureModelVariable> fmvs = loader.getAllSPLOTFeatureModels();
+    	assertEquals(201, fmvs.size());
+    	
+    	
+    	final int MAX_CONFIGS = 10000;  	 
+    	 
+         // now we remove constraints (strategy here: ALL)
+        // we only want feature models with not large configuration spaces (ie for which we can practically enumerate all configs) 
+    	// ("ground-truth" setting)
+    	 List<PairFMV> pairsFM = new ArrayList<>();
+    	 for (FeatureModelVariable fmv : fmvs) {
+    		 
+    		 if (fmv.getAllConstraints().size() == 0)
+    			 continue; 
+    		 
+    		 FeatureModelVariable fmvPrime = (FeatureModelVariable) fmv.copy();
+    		 assertNotNull(fmvPrime);    		 
+    		 fmvPrime.removeAllConstraints();
+    		 
+    		 fmvPrime.setBuilder(new BDDBuilder<String>(_builder.getFeatureGraphFactory()));
+    		 double c = fmvPrime.counting();
+			 if (c <= MAX_CONFIGS) {				 	
+				 pairsFM.add(new PairFMV(fmv, fmvPrime));
+			 }    		 
+    		     		 
+    	 }
+    	 System.out.println("Number of feature models for which configuration size is < " + MAX_CONFIGS + " => "  + pairsFM.size());
+ 
+    	 
+    	 /*
+    	  * We got a set of pairs <fmv, fmvPrime>
+    	  * 
+    	  */    	 
+    	 
+    	 stats(pairsFM); // some basic stats
+    	 
+    	 /*
+    	  *  for each feature model, we create a CSV file with all configs with labels 
+    	  */
+    	 
+    	 for (PairFMV pFmv : pairsFM) {
+    		 
+    		 
+    		 FeatureModelVariable fmvPrime = pFmv.getGeneralizedFM();
+    		 FeatureModelVariable fmv = pFmv.getOriginalFM();
+    		 System.err.println("Processing... " + fmv.getIdentifier());
+    	
+    		Set<Variable> allConfigs = fmvPrime.configs();	 
+    		Collection<Set<String>> scfs = new HashSet<Set<String>>();
+	        for (Variable cf : allConfigs) {
+	            Set<String> confFts = ((SetVariable) cf).names();
+	            scfs.add(confFts);	        
+
+	        }
+	        
+	    	
+   		 	Set<String> fts = fmv.features().names();
+   		 	String fullHeader = "configurationID" + "," + fts.stream().sorted().collect(Collectors.joining(",")) + ",isValid" + "";
+   		 	StringBuilder csvLines = new StringBuilder(); 
+	        int idConf = 0;
+	         for (Set<String> cf : scfs) {
+	             idConf++;
+	             FeatureConfiguration ftConf = new FeatureConfiguration(cf, fmv);	            
+	             Map<String, Boolean> conf = ftConf.getConfMap();
+	             // toCSV line
+	             String csvLine = idConf + ","; 
+	             csvLine += conf.keySet().stream().sorted().map(ft -> conf.get(ft).toString()).collect(Collectors.joining(","));
+	             boolean b = isValid (ftConf, fmv);
+	             csvLine += "," + b + "\n";
+	   			 // CSV line: configID + config values + label value "b"
+	             csvLines.append(csvLine);
+	         }
+	         
+	         String csvContent = fullHeader + "\n" + csvLines;
+	         
+	         new File(TARGET_FOLDER).mkdir();
+	        
+	         FileWriter fw = new FileWriter(new File(TARGET_FOLDER + "/" + fmv.getIdentifier().trim() + ".csv"));
+	         fw.write(csvContent);
+	         fw.close();
+    		 
+    	 } 
+    	
+    	
+    }
+    
+    
+   
+    
+    private void stats(List<PairFMV> pairsFM) {
+    	for (PairFMV pFmv : pairsFM) {
+   		 
+   		 FeatureModelVariable fmvPrime = pFmv.getGeneralizedFM();
+   		 FeatureModelVariable fmv = pFmv.getOriginalFM();
+   		 
+   		 fmvPrime.setBuilder(new BDDBuilder<String>(_builder.getFeatureGraphFactory()));
+   		 double cPrime = fmvPrime.counting();
+   		 
+   		 fmv.setBuilder(new BDDBuilder<String>(_builder.getFeatureGraphFactory()));
+   		 double c = fmv.counting();
+   		 
+   		// idea: if the original configuration is the "same", then it means there are actually no constraints in the original feature models
+   		 if (c == cPrime) {     			 
+   			//assertEquals(0, fmv.getAllConstraints().size());
+   			// not necessarily the case if cross-tree constraints are pointless 
+   			// (and actually do not "further" constraint the feature model) 
+   			// we could use fmv.computeRendundantConstraints() but it only operates over implies/excludes 
+   			// simple stuff to fix if we want
+   		 }
+   		 
+   		 System.err.println("#originalConfigurations " + c + "\t\t#specializedConfigurations " + cPrime);       		     		 
+   	 }
+		
+	}
+
+	/*
+     *  config is valid if valid in fmv (original FM)
+     *  config is non-valid if non-valid in fmv (original FM)
+     */
+    private boolean isValid(FeatureConfiguration config, FeatureModelVariable fmv) {
+		
+    	// make a constraint out of a config (conjunctions of literal)
+    	Set<String> fts = config.getSelectedFeatures();    	
+    	Expression<String> e = ExpressionUtil.mkConjunction(fts);
+    	System.err.println("cst to add " + e);
+    	// add to fmv
+    	FeatureModelVariable ofmv = (FeatureModelVariable) fmv.copy();
+    	ofmv.addConstraint(e);
+    	// if fmv is non valid, config is non-valid
+    	return ofmv.isValid();
+	}
+
+	private class PairFMV {
+    	
+    	private FeatureModelVariable _fmv;
+    	private FeatureModelVariable _fmvPrime;
+    	
+    	public PairFMV(FeatureModelVariable fmv, FeatureModelVariable fmvPrime) {
+    		_fmv = fmv;
+    		_fmvPrime = fmvPrime;
+    	}
+    	
+    	public FeatureModelVariable getOriginalFM() {
+    		return _fmv;
+    	}
+    	
+    	public FeatureModelVariable getGeneralizedFM() {
+    		return _fmvPrime;
+    	}
+		 
+		 
+	}
 }
 
