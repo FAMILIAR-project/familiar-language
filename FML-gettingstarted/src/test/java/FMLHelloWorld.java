@@ -16,7 +16,6 @@ public class FMLHelloWorld extends FMLTest {
     @Test
     public void testHelloWorld() throws Exception {
         FeatureModelVariable fmv = FM ("fm1", "FM (A : [B] [C] ;)");
-        FeatureModelLoader loader = new FeatureModelLoader(_shell, _builder);
         assertEquals(4.0, fmv.counting(), 0.0);
 
         FeatureModelVariable fmv2 = new FeatureModelVariable ("fm2", FMBuilder.getInternalFM("A : [B] [C] ;"));
