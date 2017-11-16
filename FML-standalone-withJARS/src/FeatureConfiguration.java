@@ -2,6 +2,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+import com.google.common.collect.Sets;
+
 import fr.familiar.variable.FeatureModelVariable;
 
 public class FeatureConfiguration {
@@ -17,6 +19,10 @@ public class FeatureConfiguration {
 
 	public Set<String> getSelectedFeatures() {
 		return _selectedFeatures;
+	}
+	
+	public Set<String> getDeselectFeatures() {
+		return Sets.difference(_fmv.features().names(), _selectedFeatures);
 	}
 	
 	

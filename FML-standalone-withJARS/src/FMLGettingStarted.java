@@ -53,7 +53,7 @@ public class FMLGettingStarted extends FMLTest {
     	assertEquals(201, fmvs.size());
     	
     	
-    	final int MAX_CONFIGS = 10000;  	 
+    	final int MAX_CONFIGS = 20000;  	 
     	 
          // now we remove constraints (strategy here: ALL)
         // we only want feature models with not large configuration spaces (ie for which we can practically enumerate all configs) 
@@ -61,18 +61,32 @@ public class FMLGettingStarted extends FMLTest {
     	 List<PairFMV> pairsFM = new ArrayList<>();
     	 for (FeatureModelVariable fmv : fmvs) {
     		 
-    		 if (fmv.getAllConstraints().size() == 0)
-    			 continue; 
+    		 
+    		//if (fmv.getAllConstraints().size() == 0)
+    			//continue; 
+    		fmv.setBuilder(new BDDBuilder<String>(_builder.getFeatureGraphFactory()));
+    		 double c = fmv.counting();
     		 
     		 FeatureModelVariable fmvPrime = (FeatureModelVariable) fmv.copy();
     		 assertNotNull(fmvPrime);    		 
     		 fmvPrime.removeAllConstraints();
     		 
     		 fmvPrime.setBuilder(new BDDBuilder<String>(_builder.getFeatureGraphFactory()));
-    		 double c = fmvPrime.counting();
-			 if (c <= MAX_CONFIGS) {				 	
+    		 double cPrime = fmvPrime.counting();
+    		 
+    		// idea: if the original configuration is the "same", then it means there are actually no constraints in the original feature models
+       		 if (c == cPrime) {     
+       			 continue ;
+       			//assertEquals(0, fmv.getAllConstraints().size());
+       			// not necessarily the case if cross-tree constraints are pointless 
+       			// (and actually do not "further" constraint the feature model) 
+       			// we could use fmv.computeRendundantConstraints() but it only operates over implies/excludes 
+       			// simple stuff to fix if we want
+       		 }
+    		 
+			if (cPrime <= MAX_CONFIGS) {				 	
 				 pairsFM.add(new PairFMV(fmv, fmvPrime));
-			 }    		 
+			}    		 
     		     		 
     	 }
     	 System.out.println("Number of feature models for which configuration size is < " + MAX_CONFIGS + " => "  + pairsFM.size());
@@ -83,7 +97,7 @@ public class FMLGettingStarted extends FMLTest {
     	  * 
     	  */    	 
     	 
-    	 stats(pairsFM); // some basic stats
+    	// stats(pairsFM); // some basic stats
     	 
     	 /*
     	  *  for each feature model, we create a CSV file with all configs with labels 
@@ -95,6 +109,11 @@ public class FMLGettingStarted extends FMLTest {
     		 FeatureModelVariable fmvPrime = pFmv.getGeneralizedFM();
     		 FeatureModelVariable fmv = pFmv.getOriginalFM();
     		 System.err.println("Processing... " + fmv.getIdentifier());
+    		 System.err.println("#############");  
+    		 System.err.println("" + fmv);
+    		 System.err.println("------"); 
+    		 System.err.println("" + fmvPrime);
+    		 System.err.println("#############\n\n\n");  
     	
     		Set<Variable> allConfigs = fmvPrime.configs();	 
     		Collection<Set<String>> scfs = new HashSet<Set<String>>();
@@ -173,10 +192,15 @@ public class FMLGettingStarted extends FMLTest {
     	// make a constraint out of a config (conjunctions of literal)
     	Set<String> fts = config.getSelectedFeatures();    	
     	Expression<String> e = ExpressionUtil.mkConjunction(fts);
-    	System.err.println("cst to add " + e);
+    	Set<String> dfts = config.getDeselectFeatures();
+    	
     	// add to fmv
     	FeatureModelVariable ofmv = (FeatureModelVariable) fmv.copy();
     	ofmv.addConstraint(e);
+    	if (dfts.size() > 0) {
+        	Expression<String> eNot = ExpressionUtil.mkDisjunction(dfts).not(); // logic pleasure ;) ! (A v B v C) ~ !A ^ !B ^ !C
+        	ofmv.addConstraint(eNot);
+    	}
     	// if fmv is non valid, config is non-valid
     	return ofmv.isValid();
 	}
