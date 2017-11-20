@@ -15,6 +15,8 @@ import org.junit.Test;
 
 import fr.familiar.FMLTest;
 import fr.familiar.FeatureModelLoader;
+import fr.familiar.fm.converter.SPLOTtoFML;
+import fr.familiar.interpreter.FMLShell;
 import fr.familiar.parser.FMBuilder;
 import fr.familiar.variable.Comparison;
 import fr.familiar.variable.FeatureModelVariable;
@@ -23,6 +25,8 @@ import fr.familiar.variable.Variable;
 import gsd.synthesis.BDDBuilder;
 import gsd.synthesis.Expression;
 import gsd.synthesis.ExpressionUtil;
+import splar.core.fm.FeatureModelException;
+import splar.core.fm.XMLFeatureModel;
 
 /**
  * Created by macher1 on 16/11/2017.
@@ -32,6 +36,44 @@ public class FMLGettingStarted extends FMLTest {
 
     private static final String TARGET_FOLDER = "ouputCSV";
 
+    
+    private static final String absoluteFolder = "/Users/macher1/Documents/SANDBOX/FML-from-scratch/FOReverSE-KSynthesis/Evaluation/";
+	private static final String SPLOT_FOLDER = absoluteFolder + "input/splot-models-2014-01-30";
+    
+	@Test
+	public void testREAL11() throws Exception {
+		FeatureModelVariable fmvReal11 = mkFMFromSPLOTFile(new File(SPLOT_FOLDER + "/" + "REAL-FM-11.xml"), "fm1");
+		assertNotNull(fmvReal11);
+		
+		System.err.println("" + fmvReal11.counting());
+		System.err.println("" + fmvReal11.cores());
+		System.err.println("" + fmvReal11.falseOptionalFeatures());
+		
+		
+	}
+	
+	public FeatureModelVariable mkFMFromSPLOTFile(File splotFile, String varID) {
+		splar.core.fm.FeatureModel featureModelSPLOT = new XMLFeatureModel(
+				splotFile.getAbsolutePath(),
+				XMLFeatureModel.USE_VARIABLE_NAME_AS_ID);
+		try {
+			featureModelSPLOT.loadModel();
+		} catch (FeatureModelException e) {
+			FMLShell.getInstance().printError(
+					"Unable to load SPLOT feature model "
+							+ e.getMessage());
+			return null;
+		}
+
+		// strfm = new SPLOTtoFML().convert(featureModelSPLOT); // @Deprecated
+	
+		
+		gsd.synthesis.FeatureModel<String> rFM = new SPLOTtoFML().convertToFeatureModel(featureModelSPLOT);
+		FeatureModelVariable fmv = new FeatureModelVariable(varID, rFM) ; 
+		return fmv;
+		
+	}
+	
 	@Test
     public void testHelloWorld() throws Exception {
         FeatureModelVariable fmv = FM ("fm1", "FM (A : [B] [C] ;)");
@@ -53,7 +95,7 @@ public class FMLGettingStarted extends FMLTest {
     	assertEquals(201, fmvs.size());
     	
     	
-    	final int MAX_CONFIGS = 20000;  	 
+    	final int MAX_CONFIGS = 200000;  	 
     	 
          // now we remove constraints (strategy here: ALL)
         // we only want feature models with not large configuration spaces (ie for which we can practically enumerate all configs) 
@@ -134,9 +176,9 @@ public class FMLGettingStarted extends FMLTest {
 	             Map<String, Boolean> conf = ftConf.getConfMap();
 	             // toCSV line
 	             String csvLine = idConf + ","; 
-	             csvLine += conf.keySet().stream().sorted().map(ft -> conf.get(ft).toString()).collect(Collectors.joining(","));
+	             csvLine += conf.keySet().stream().sorted().map(ft -> conf.get(ft) ? "TRUE" : "FALSE").collect(Collectors.joining(","));
 	             boolean b = isValid (ftConf, fmv);
-	             csvLine += "," + b + "\n";
+	             csvLine += "," + (b ? "TRUE" : "FALSE") + "\n";
 	   			 // CSV line: configID + config values + label value "b"
 	             csvLines.append(csvLine);
 	         }

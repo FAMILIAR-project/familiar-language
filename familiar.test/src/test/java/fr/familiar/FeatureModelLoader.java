@@ -139,7 +139,7 @@ public class FeatureModelLoader {
 		return fms;
 	}
 	
-	private FeatureModelVariable mkFMFromSPLOTFile(File splotFile, String varID) {
+	public FeatureModelVariable mkFMFromSPLOTFile(File splotFile, String varID) {
 		splar.core.fm.FeatureModel featureModelSPLOT = new XMLFeatureModel(
 				splotFile.getAbsolutePath(),
 				XMLFeatureModel.USE_VARIABLE_NAME_AS_ID);
