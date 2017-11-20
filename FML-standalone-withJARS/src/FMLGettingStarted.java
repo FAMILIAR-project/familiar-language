@@ -29,6 +29,8 @@ import splar.core.fm.FeatureModelException;
 import splar.core.fm.XMLFeatureModel;
 
 /**
+ * 
+ * Moving to another repo 
  * Created by macher1 on 16/11/2017.
  */
 public class FMLGettingStarted extends FMLTest {
