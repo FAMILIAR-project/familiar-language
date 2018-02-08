@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/junit-4.12.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/FAMILIAR-Standalone-1.0.10-jar-with-dependencies"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/FAMILIAR-Test-1.0.10"/>
+	<classpathentry kind="lib" path="lib/FAMILIAR-Standalone-1.0.10-jar-with-dependencies.jar"/>
+	<classpathentry kind="lib" path="lib/FAMILIAR-Test-1.0.10.jar"/>
+	<classpathentry kind="lib" path="lib/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="output" path="out/production/FML-standalone-withJARS"/>
+</classpath>

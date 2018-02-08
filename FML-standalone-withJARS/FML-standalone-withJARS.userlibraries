@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="FAMILIAR-Standalone-1.0.10-jar-with-dependencies">
+    <archive path="/Users/macher1/Documents/SANDBOX/FML-from-scratch/familiar-language/FML-standalone-withJARS/lib/FAMILIAR-Standalone-1.0.10-jar-with-dependencies.jar" />
+  </library>
+  <library name="FAMILIAR-Test-1.0.10">
+    <archive path="/Users/macher1/Documents/SANDBOX/FML-from-scratch/familiar-language/FML-standalone-withJARS/lib/FAMILIAR-Test-1.0.10.jar" />
+  </library>
+  <library name="scala-sdk-2.11.6">
+    <archive path="/Users/macher1/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.6.jar" />
+    <archive path="/Users/macher1/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.11.6.jar" />
+  </library>
+</eclipse-userlibraries>
+

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="FAMILIAR-Standalone-1.0.10-jar-with-dependencies">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/FAMILIAR-Standalone-1.0.10-jar-with-dependencies.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/lib/FAMILIAR-Standalone-1.0.10-jar-with-dependencies.jar!/doc" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/FAMILIAR-Standalone-1.0.10-jar-with-dependencies.jar!/src" />
+    </SOURCES>
+  </library>
+</component>
