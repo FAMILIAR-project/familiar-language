@@ -7,7 +7,7 @@ FAMILIAR is used in different teaching contexts, for conducting research, or for
 
 You can use it:
  * online http://familiar.variability.io/ide/familiar
- * with an executable JAR
+ * with an executable JAR (https://github.com/FAMILIAR-project/familiar-language/releases/) 
  * with the source code 
 
 # Getting started 
@@ -17,7 +17,23 @@ Once you have cloned the repo, you can build FAMILIAR using Apache Maven:
  * for building an executable jar, in ``familiar.standalone``, launch ```mvn package```: the command aggregates all previous jars into one executable jar (in the folder "target", ends up with "-jar-with-dependencies.jar")
  * for executing the tests, in ``familiar.test``, launch ```mvn integration-test``` 
  
-We provide an illustrative Maven project (see FML-gettingstarted) to use FAMILIAR
+We provide an illustrative Maven project (see FML-gettingstarted) to programmatically use FAMILIAR with a Java fluent API
+
+# Architecture 
+
+ * FAMILIAR: interpreter of FAMILIAR programs, Java fluent API
+ * org.xtext.example.fml*: Xtext project with the grammar of FAMILIAR 
+ * familiar.test: some unit tests over FAMILIAR functionnalities (interesting to look at for learning how the API does work) 
+ * familiar.root and familiar.standalone: mainly here for Maven 
+ * FML-gettingstarted: ready-to-user project for programmatically using FAMILIAR with a Java fluent API
+ * FML3rdPartiesMisc and FML3rdPartiesForSynthesis: a packaging of various libraries (at time Maven was not mainstream) 
+ * SPLAR-plugin: a packaging of SPLAR (https://splot-research.org) 
+ * PacogenPlugin: for generating T-wise configurations with Pacogen (deprecated from both sides)
+ * TVLPackagedAsMock: some interoperability with TVL models (deprecated from both sides)
+ * org.xtext.example.fmlero* and S2T2toFML: for interoperating with S2T2, a configurator developed at Lero (deprecated from both sides) 
+
+FAMILIAR can internally reuse some FeatureIDE facilities (but we do not follow the evolution of FeatureIDE) 
+
 
 # Credits 
 
