@@ -2,7 +2,7 @@
 
 JAR=familiar.jar
 VERSION=1.2
-DOCKER_ID=petitroll
+DOCKER_ID=familiarlang
 LOCAL_NAME=familiar
 PUBLIC_IMAGE=$DOCKER_ID/$LOCAL_NAME:$VERSION
 
