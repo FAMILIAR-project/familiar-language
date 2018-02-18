@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:jre-alpine
 MAINTAINER ?????
 
 #### Image administration
@@ -19,7 +19,7 @@ MAINTAINER ?????
 RUN mkdir familiar familiar/host
 
 WORKDIR familiar
-COPY ./familiar.standalone/target/FAMILIAR-Standalone-1.0.10-jar-with-dependencies.jar familiar.jar
+COPY ./familiar.jar .
 VOLUME ./host
 
 WORKDIR ./host
