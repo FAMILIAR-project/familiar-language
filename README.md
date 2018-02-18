@@ -35,6 +35,23 @@ We provide an illustrative Maven project (see FML-gettingstarted) to programmati
 
 FAMILIAR can internally reuse some FeatureIDE facilities (but we do not follow the evolution of FeatureIDE) 
 
+# Docker 
+
+## Using FAMILIAR with Docker 
+
+```
+docker pull familiarlang/familiar:1.2
+vmacher:familiar-language macher1$ docker run -v $PWD:/familiar/host -it familiarlang/familiar:1.2
+FAMILIAR (for FeAture Model scrIpt Language for manIpulation and Automatic Reasoning)  version 1.2 (beta)
+http://familiar-project.github.com/
+fml> fm1 = FM (D : O C K E [R] ; )
+fm1: (FEATURE_MODEL) D: C [R] O K E ;
+```
+
+## Building Docker 
+
+See the "docker" folder: prepare.sh is here to build the JAR, release.sh is here to build the Docker using Dockerfile (you have to change some settings since by default it pushes the Docker image) 
+
 
 # Credits 
 
