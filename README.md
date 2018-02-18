@@ -8,7 +8,7 @@ FAMILIAR is used in different teaching contexts, for conducting research, or for
 You can use it:
  * online http://familiar.variability.io/ide/familiar
  * with an executable JAR (https://github.com/FAMILIAR-project/familiar-language/releases/) 
- * with Docker thanks to [Sébastien Mosser](https://github.com/mosser) (docker pull familiarlang/familiar) 
+ * with Docker thanks to [Sébastien Mosser](https://github.com/mosser) (docker pull familiarlang/familiar:1.2) 
  * with the source code 
 
 # Getting started 
