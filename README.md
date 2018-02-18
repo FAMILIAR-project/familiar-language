@@ -38,4 +38,4 @@ FAMILIAR can internally reuse some FeatureIDE facilities (but we do not follow t
 
 # Credits 
 
-FAMILIAR was originally created at I3S laboratory by Mathieu Acher, Philippe Collet and Philippe Lahire and is now jointly and openly managed by the DiverSE team (IRISA / Inria / University of Rennes 1) and the MODALIS team (I3S laboratory, University of Nice Sophia Antipolis). 
+FAMILIAR was originally created at I3S laboratory / Colorado State University by Mathieu Acher, Philippe Collet, Philippe Lahire, and Robert B. France. It is now jointly and openly managed by the DiverSE team (IRISA / Inria / University of Rennes 1) and the MODALIS team (I3S laboratory, University of Nice Sophia Antipolis). 
