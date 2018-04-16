@@ -71,7 +71,7 @@ public class FMLRandomGenerator implements FMRandomGenerator {
                 if (vInformation == XOR ||vInformation == OR) {
                     Set<FeatureNode<String>> srs = chFts;
                     if (srs.size() > 1) { // more than one
-                      //  fg.addEdge(srs, ft, vInformation == XOR ? FeatureEdge.XOR : FeatureEdge.OR);
+                      fg.addEdge(srs, ft, vInformation == XOR ? FeatureEdge.XOR : FeatureEdge.OR);
                     }
 
                 }
@@ -80,7 +80,7 @@ public class FMLRandomGenerator implements FMRandomGenerator {
 
             if (chFts.size() != 0)
                 if (vInformation == MANDATORY) {
-                   //  fg.addEdge(chFts.iterator().next(), ft, FeatureEdge.MANDATORY);
+                   fg.addEdge(chFts.iterator().next(), ft, FeatureEdge.MANDATORY);
 
                 }
                 else if (vInformation == OPTIONAL) {
