@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5" inherit-compiler-output="false">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_6" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
@@ -91,11 +91,11 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.ow2.sat4j:org.ow2.sat4j.core:2.3.5" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.ow2.sat4j:org.ow2.sat4j.core:test-jar:tests:2.3.5" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: FAMILIAR_LOCAL_DEP:de.ovgu.featureide.core:FAMILIAR_LOCAL_DEP" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: FAMILIAR_LOCAL_DEP:de.ovgu.featureide.fm.core:FAMILIAR_LOCAL_DEP" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: FAMILIAR_LOCAL_DEP:de.ovgu.featureide.fm.ui:FAMILIAR_LOCAL_DEP" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: FAMILIAR_LOCAL_DEP:de.ovgu.featureide.ui:FAMILIAR_LOCAL_DEP" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: fr.inria.familiar:parent:1.0.10" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.xtext.example.fml:org.xtext.example.fml:1.0.0-SNAPSHOT" level="project" />
     <orderEntry type="library" name="Maven: fr.inria.familiar:FAMILIAR-Test:1.0.10" level="project" />
+    <orderEntry type="library" name="Maven: commons-io:commons-io:1.3.2" level="project" />
+    <orderEntry type="library" name="Maven: FAMILIAR_LOCAL_DEP:de.ovgu.featureide.fm.core:FAMILIAR_LOCAL_DEP" level="project" />
   </component>
 </module>

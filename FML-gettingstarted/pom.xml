@@ -7,6 +7,18 @@
     <groupId>io.variability</groupId>
     <artifactId>fml-gettingstarted</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
     <dependencies>
         <dependency>
@@ -42,6 +54,18 @@
             <groupId>fr.inria.familiar</groupId>
             <artifactId>FAMILIAR-Test</artifactId>
             <version>1.0.10</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-io -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>1.3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>FAMILIAR_LOCAL_DEP</groupId>
+            <artifactId>de.ovgu.featureide.fm.core</artifactId>
+            <version>FAMILIAR_LOCAL_DEP</version>
         </dependency>
 
 
