@@ -52,6 +52,23 @@ fm1: (FEATURE_MODEL) D: C [R] O K E ;
 
 See the "docker" folder: prepare.sh is here to build the JAR, release.sh is here to build the Docker using Dockerfile (you have to change some settings since by default it pushes the Docker image) 
 
+# Citation
+
+Please use this bibtex entry to cite this work: 
+```
+@article{FAMILIAR, author = {Mathieu Acher and Philippe Collet and Philippe Lahire and Robert B. France}, 
+title = {FAMILIAR: A domain-specific language for large scale management of feature models}, 
+journal = {Science of Computer Programming (SCP)}, 
+volume = {78}, 
+number = {6}, 
+year = {2013}, 
+pages = {657-681}, 
+ee = {http://dx.doi.org/10.1016/j.scico.2012.12.004}}
+``` 
+
+preprint is available here: https://hal.inria.fr/hal-00767175
+see also tutorials: https://familiar-project.github.io/ 
+
 
 # Credits 
 
