@@ -15,6 +15,9 @@ authors:
     given-names: Robert    
 title: "FAMILIAR: A Domain-Specific Language for Large Scale Management of Feature Models"
 abstract: The feature model formalism has become the de facto standard for managing variability in software product lines (SPLs). In practice, developing an SPL can involve modeling a large number of features representing di erent viewpoints, sub-systems or concerns of the software system. This activity is generally tedious and error-prone. In this article, we present FAMILIAR a Domain-Specific Language (DSL) that is dedicated to the large scale management of feature models and that complements existing tool support. The language provides a powerful support for separating concerns in feature modeling, through the provision of composition and decomposition operators, reasoning facilities and scripting capabilities with modularization mechanisms. We illustrate how an SPL consisting of medical imaging services can be practically managed using reusable FAMILIAR scripts that implement reasoning mechanisms. We also report on various usages and applications of FAMILIAR and its operators, to demonstrate their applicability to di erent domains and use for di erent purposes.
+publisher: Science of Computer Programming 
+volume: 78
+number: 6
 version: 1.2
 doi: https://hal.inria.fr/hal-00767175
 date-released: 2013-08-11
