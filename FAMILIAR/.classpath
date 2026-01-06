@@ -11,7 +11,6 @@
 	<classpathentry exported="true" kind="lib" path="lib/jgraph-5.5.1.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/jgrapht-jdk1.6.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/jgraphx.jar"/>
-	<classpathentry exported="true" kind="lib" path="lib/org.sat4j.core.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/pacogenIntern.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/semanticvectors-3.8.jar"/>
 	<classpathentry exported="true" kind="lib" path="lib/commons-io-1.4.jar"/>
