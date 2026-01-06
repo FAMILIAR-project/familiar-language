@@ -11,7 +11,7 @@ Built with Xtext 2.30.0 (Eclipse language engineering framework) on Java 11 with
 ## Build Commands
 
 ```bash
-# Build all jars (from familiar.root directory)
+# Build all modules (from familiar.root directory)
 # Note: MAVEN_OPTS required for Java 11+ XML processing
 cd familiar.root
 MAVEN_OPTS="-Djdk.xml.maxGeneralEntitySizeLimit=0 -Djdk.xml.totalEntitySizeLimit=0" mvn install -DskipTests
@@ -19,10 +19,26 @@ MAVEN_OPTS="-Djdk.xml.maxGeneralEntitySizeLimit=0 -Djdk.xml.totalEntitySizeLimit
 # Build executable standalone JAR (from familiar.standalone directory)
 cd familiar.standalone && mvn package
 # Output: target/*-jar-with-dependencies.jar
-
-# Run integration tests (from familiar.test directory)
-cd familiar.test && mvn integration-test
 ```
+
+## Running Tests
+
+```bash
+# Run all integration tests (requires full build first)
+cd familiar.test
+MAVEN_OPTS="-Djdk.xml.maxGeneralEntitySizeLimit=0 -Djdk.xml.totalEntitySizeLimit=0" mvn integration-test
+
+# Run from root (builds + tests)
+cd familiar.root
+MAVEN_OPTS="-Djdk.xml.maxGeneralEntitySizeLimit=0 -Djdk.xml.totalEntitySizeLimit=0" mvn integration-test
+```
+
+**Test Results Notes:**
+- Tests run as Eclipse/Tycho plugin tests in an OSGi runtime
+- ~958 tests total, ~675 typically pass
+- Some tests require optional libraries (TVL, JavaBDD) and are skipped/fail if unavailable
+- SAT4J version mismatches may cause `IncompatibleClassChange` errors in some tests
+- Test reports: `familiar.test/target/surefire-reports/`
 
 ## Running FAMILIAR
 
