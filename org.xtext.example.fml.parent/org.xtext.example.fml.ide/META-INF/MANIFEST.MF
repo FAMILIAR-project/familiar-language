@@ -8,7 +8,7 @@ Bundle-ActivationPolicy: lazy
 Require-Bundle: org.xtext.example.fml,
  org.eclipse.xtext.ide;bundle-version="2.9.1",
  org.eclipse.xtext.xbase.ide
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.xtext.example.mydsl.ide.contentassist.antlr.internal,
  org.xtext.example.mydsl.ide.contentassist.antlr
 

@@ -27,3 +27,4 @@ Import-Package: org.eclipse.emf.common.util,
 Require-Bundle: org.eclipse.emf.ecore,
  org.eclipse.emf.ecore.xmi,
  org.eclipse.core.resources
+Bundle-RequiredExecutionEnvironment: JavaSE-11

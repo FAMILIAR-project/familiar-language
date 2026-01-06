@@ -28,7 +28,7 @@
                                <goal>run</goal>
                            </goals>
                            <configuration>
-                                    <tasks>
+                                    <target>
                                       <mkdir dir="target"/>
                                    <!-- download file -->
                                    <get src="http://wwwiti.cs.uni-magdeburg.de/iti_db/research/featureide/deploy/plugins/de.ovgu.featureide.core_${featureide.version}.jar"
@@ -84,7 +84,7 @@
                                             <arg value="-Dpackaging=jar"/>
                                             <arg value="-DgeneratePom=true"/>
                                         </exec>
-                                    </tasks>
+                                    </target>
                             </configuration>
                         </execution>
                   </executions>

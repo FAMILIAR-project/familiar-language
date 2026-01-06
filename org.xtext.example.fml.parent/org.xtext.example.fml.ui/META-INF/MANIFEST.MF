@@ -19,7 +19,7 @@ Require-Bundle: org.xtext.example.fml,
  org.eclipse.xtext.xbase.lib
 Import-Package: org.apache.log4j,
  org.xtext.example.mydsl.ui.contentassist
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: org.xtext.example.fml.ui.internal,
  org.xtext.example.mydsl.ui.quickfix,
  org.xtext.example.mydsl.ui.contentassist

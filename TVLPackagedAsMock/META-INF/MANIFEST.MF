@@ -7,4 +7,5 @@ Export-Package: fr.familiar.fm.converter.tvl
 Require-Bundle: org.xtext.example.fml;bundle-version="1.0.0",
  org.xtext.example.fml.ide;bundle-version="1.0.0",
  org.xtext.example.fml.ui;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 

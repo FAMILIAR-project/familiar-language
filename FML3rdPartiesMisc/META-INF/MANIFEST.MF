@@ -54,4 +54,4 @@ Export-Package: com.martiansoftware.jsap,
  test.prefuse.data.io.sql,
  test.prefuse.data.util,
  test.prefuse.visual
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-11

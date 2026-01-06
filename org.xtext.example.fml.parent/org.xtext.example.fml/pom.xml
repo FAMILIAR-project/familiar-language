@@ -14,11 +14,12 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
-				<version>1.4.0</version>
+				<version>3.1.0</version>
 				<executions>
 					<execution>
 						<id>mwe2Launcher</id>
-						<phase>generate-sources</phase>
+						<!-- Skip MWE2 on Java 11+ - use pre-generated sources from git -->
+						<phase>none</phase>
 						<goals>
 							<goal>java</goal>
 						</goals>
@@ -34,12 +35,17 @@
 					<classpathScope>compile</classpathScope>
 					<includePluginDependencies>true</includePluginDependencies>
 					<cleanupDaemonThreads>false</cleanupDaemonThreads><!-- see https://bugs.eclipse.org/bugs/show_bug.cgi?id=475098#c3 -->
+					<addOpens>
+						<addOpen>java.base/java.lang=ALL-UNNAMED</addOpen>
+						<addOpen>java.base/java.lang.reflect=ALL-UNNAMED</addOpen>
+						<addOpen>java.base/java.util=ALL-UNNAMED</addOpen>
+					</addOpens>
 				</configuration>
 				<dependencies>
 					<dependency>
 						<groupId>org.eclipse.emf</groupId>
 						<artifactId>org.eclipse.emf.mwe2.launch</artifactId>
-						<version>2.8.3</version>
+						<version>2.14.0</version>
 					</dependency>
 					<dependency>
 						<groupId>org.eclipse.xtext</groupId>
@@ -53,12 +59,14 @@
 					</dependency>
 				</dependencies>
 			</plugin>
-			<plugin>
+			<!-- Skip Xtend compilation on Java 11+ - use pre-compiled Java files -->
+			<!-- <plugin>
 				<groupId>org.eclipse.xtend</groupId>
 				<artifactId>xtend-maven-plugin</artifactId>
-			</plugin>
+			</plugin> -->
 	
-			<plugin>
+			<!-- Disabled: Don't delete generated sources on Java 11+ since MWE2 regeneration doesn't work -->
+			<!-- <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-clean-plugin</artifactId>
 				<configuration>
@@ -104,7 +112,7 @@
 						</fileset>
 					</filesets>
 				</configuration>
-			</plugin>
+			</plugin> -->
 		</plugins>
 		<pluginManagement>
 			<plugins>

@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: PacogenPlugin
 Bundle-SymbolicName: PacogenPlugin
 Bundle-Version: 1.0.0.qualifier
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Import-Package: org.junit;version="4.10.0",
  splar.core.constraints,
  splar.core.fm

@@ -20,11 +20,10 @@
  </modules>
 
   <properties>
-    <tycho.version>0.23.1</tycho.version>
-    <tycho-extras.version>0.23.1</tycho-extras.version>
-	<obeodesigner-repo.url>http://www.obeo.fr/download/release/designer/6.1/latest/juno3/update/</obeodesigner-repo.url>
+    <tycho.version>4.0.4</tycho.version>
+    <tycho-extras.version>4.0.4</tycho-extras.version>
     <featureide-repo.url>http://wwwiti.cs.uni-magdeburg.de/iti_db/research/featureide/deploy/</featureide-repo.url>
-    <mars-repo.url>http://download.eclipse.org/releases/mars/</mars-repo.url>
+    <mars-repo.url>https://download.eclipse.org/releases/2023-03/</mars-repo.url>
     <tycho-repo.url>https://oss.sonatype.org/content/groups/public/</tycho-repo.url>
   </properties>
   
@@ -40,13 +39,6 @@
       <url>${featureide-repo.url}</url>
       <layout>p2</layout>
     </repository>
-    <repository>
-      <id>obeodesigner</id>
-      <url>${obeodesigner-repo.url}</url>
-      <layout>p2</layout>
-    </repository>
-
-
   </repositories>
   
   
@@ -73,17 +65,6 @@
         <enabled>true</enabled>
       </snapshots>
     </pluginRepository>
-    <pluginRepository>
-      <id>obeodesigner</id>
-      <url>${obeodesigner-repo.url}</url>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>true</enabled>
-      </snapshots>
-    </pluginRepository>
-
   </pluginRepositories>
 
   <build>
@@ -167,13 +148,6 @@
           <groupId>org.eclipse.tycho</groupId>
           <artifactId>tycho-packaging-plugin</artifactId>
           <version>${tycho.version}</version>
-          <dependencies>
-            <dependency>
-              <groupId>org.eclipse.tycho.extras</groupId>
-              <artifactId>tycho-buildtimestamp-jgit</artifactId>
-              <version>${tycho-extras.version}</version>
-            </dependency>
-          </dependencies>
           <configuration>
             <strictBinIncludes>false</strictBinIncludes>
             <format>'v'yyyyMMdd-HHmm</format>
@@ -240,7 +214,7 @@
         						<artifactId>
         							tycho-packaging-plugin
         						</artifactId>
-        						<versionRange>[0.23.1,)</versionRange>
+        						<versionRange>[4.0.4,)</versionRange>
         						<goals>
         							<goal>validate-id</goal>
         						</goals>

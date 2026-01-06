@@ -19,5 +19,5 @@ Import-Package: com.google.inject,
  org.junit.runner.notification,
  org.junit.runners,
  org.junit.runners.model
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: fr.inria.familiar.fmlero

@@ -41,7 +41,7 @@ Require-Bundle: FML3rdPartiesForSynthesis;bundle-version="1.0.10",
  de.ovgu.featureide.fm.ui;bundle-version="2.7.1",
  de.ovgu.featureide.ui;bundle-version="2.7.1",
  org.junit;bundle-version="4.12.0"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Import-Package: com.google.common.collect,
  fr.familiar.fm.converter.tvl,
  fr.inria.familiar.fmlero,

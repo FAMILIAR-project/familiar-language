@@ -59,4 +59,4 @@ Export-Package: bin.splar.apps,
  splar.plugins.tests,
  splar.samples
 Require-Bundle: org.eclipse.core.runtime
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-11

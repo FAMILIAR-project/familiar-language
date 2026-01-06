@@ -17,7 +17,7 @@ Require-Bundle: org.xtext.example.fmlero,
  org.eclipse.xtext.ui.codetemplates.ui,
  org.eclipse.compare
 Import-Package: org.apache.log4j
-Bundle-RequiredExecutionEnvironment: J2SE-1.5
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: fr.inria.familiar.fmlero.ui.contentassist,
  fr.inria.familiar.fmlero.ui.quickfix,
  fr.inria.familiar.fmlero.ui.contentassist.antlr,

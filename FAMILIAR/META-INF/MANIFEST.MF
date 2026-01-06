@@ -5,7 +5,7 @@ Bundle-SymbolicName: FAMILIAR;singleton:=true
 Bundle-Version: 1.0.10
 Bundle-Activator: fr.familiar.views.featureide.Activator
 Bundle-Vendor: %Bundle-Vendor.3
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Bundle-ClassPath: .,
  target/classes,
  lib/antlr.jar,

@@ -37,4 +37,4 @@ Export-Package: net.sf.javabdd,
  org.jgrapht.traverse,
  org.jgrapht.util
 Require-Bundle: org.eclipse.core.runtime
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Bundle-RequiredExecutionEnvironment: JavaSE-11
