@@ -56,7 +56,6 @@ import fr.familiar.fm.converter.FDUnsupportedModelException;
 import fr.familiar.fm.converter.FMLDimacsReaderBDD;
 import fr.familiar.fm.converter.SPLOTtoFML;
 import fr.familiar.fm.converter.featureide.FMLDimacsReaderSAT;
-import fr.familiar.fm.converter.tvl.TVLTranslator;
 import fr.familiar.interpreter.FMLAssertionError;
 import fr.familiar.interpreter.FMLBasicInterpreter;
 import fr.familiar.interpreter.FMLFatalError;
@@ -141,26 +140,6 @@ public class FMBuilder extends FMLAbstractCommandAnalyzer {
 				File file = FMLShell.getInstance().searchFile(filename) ; 
 				// FIXME @FeatureIDE
 				strfm = new FeatureIDEReader(file).writeToString() ; // TODO model-to-model transformations
-			}
-			
-			else if (filename.endsWith(".tvl")) {
-				
-				
-				File file = FMLShell.getInstance()
-				.searchFile(filename) ; 
-				try {
-					FeatureModelVariable fmv = parseTVLModel(file) ; 	
-					setVariable(fmv);
-					return ; 
-				} catch (Exception e) {
-					FMLShell.getInstance().printError("Unable to parse the TVL model..." + e.getMessage());
-					return ; 
-				}
-				/*
-				inputFAMILIAR = _translator.getFAMILIARFMLOutput();
-				_shell.parse("fm = " + inputFAMILIAR);
-				FeatureModelVariable fmVariable = getFMVariable("fm");
-				*/
 			}
 			
 			else if (filename.endsWith(".fmlbdd")) {
@@ -373,16 +352,6 @@ public class FMBuilder extends FMLAbstractCommandAnalyzer {
 		return new FeatureModelVariableConstraints("", disjClauses);
 	}
 
-	public static FeatureModelVariable parseTVLModel(File file) throws Exception {
-		
-		TVLTranslator translator = new TVLTranslator(file);
-		FeatureModel fmTranslated = translator.getFAMILIARFeatureModel() ; 
-		gsd.synthesis.FeatureModel<String> ifm = mkInternalFM(fmTranslated);
-		assertNotNull (ifm);
-		FeatureModelVariable fmv = new FeatureModelVariable("", ifm);
-		return fmv ;
-	}
-
 	public static gsd.synthesis.FeatureModel<String> mkInternalFM(FeatureModel fm) {
 		// TODO: FeatureModelVisitor?
 		
@@ -577,19 +546,6 @@ public class FMBuilder extends FMLAbstractCommandAnalyzer {
 
 	}
 
-	/**
-	 * @param tvlContent tvl input (not filename!)
-	 */
-	public static FeatureModelVariable mkTVLModel(String tvlContent) throws Exception {
-		TVLTranslator translator = new TVLTranslator(tvlContent);
-		FeatureModel fmTranslated = translator.getFAMILIARFeatureModel() ; 
-		gsd.synthesis.FeatureModel<String> ifm = mkInternalFM(fmTranslated);
-		assertNotNull (ifm);
-		FeatureModelVariable fmv = new FeatureModelVariable("", ifm);
-		return fmv ;
-		
-	}
-	
 	public static FMLFeatureModel parseDimacsWithSAT(String dimacs) {
 		// FIXME @FeatureIDE 
 		FMLDimacsReaderSAT dimacsReeader = new FMLDimacsReaderSAT() ; 

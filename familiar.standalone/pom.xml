@@ -95,11 +95,6 @@
 		</dependency>
 		<dependency>
 			<groupId>fr.inria.familiar</groupId>
-			<artifactId>TVLPackagedAsMock</artifactId>
-			<version>1.0.10</version>
-		</dependency>
-		<dependency>
-			<groupId>fr.inria.familiar</groupId>
 			<artifactId>FAMILIAR</artifactId>
 			<version>1.0.10</version>
 		</dependency>

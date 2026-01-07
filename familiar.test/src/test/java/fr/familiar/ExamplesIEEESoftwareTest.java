@@ -31,12 +31,12 @@ public class ExamplesIEEESoftwareTest extends FMLTest {
 	
 	@Test
 	public void example1() throws Exception { 
-		FeatureModelVariable fm1 = FM ("fm1.xml") ; 
-		double n1 = fm1.counting(); 
+		FeatureModelVariable fm1 = FM ("fm1.xml") ;
+		double n1 = fm1.counting();
 		boolean b1 = fm1.isValid();
-		FeatureModelVariable fm2 = FM ("fm2.tvl");
+		FeatureModelVariable fm2 = FM ("A : B C ; B : (D|E) ;") ; // Was fm2.tvl - TVL support removed
 		FeatureModelVariable fm3 = fm1.merge(fm2, Mode.Union);
-		FeatureModelVariable fm4 = fm3.slice(SliceMode.INCLUDING, "A", "E", "F");
+		FeatureModelVariable fm4 = fm3.slice(SliceMode.INCLUDING, "A", "E");
 	}
 	
 	

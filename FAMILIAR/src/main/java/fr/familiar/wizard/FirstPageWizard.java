@@ -42,7 +42,6 @@ public class FirstPageWizard extends WizardPage implements Listener {
 	public static final String FAMILIAR = "FAMILIAR";
 	public static final String FEATURE_IDE = "FeatureIDE";
 	public static final String SPLOT = "SPLOT";
-	public static final String TVL = "TVL";
 	public static final String TRISKELL = "Triskell";
 
 	private Label comboLabel;
@@ -129,7 +128,6 @@ public class FirstPageWizard extends WizardPage implements Listener {
 		combo.add(FAMILIAR);
 		combo.add(FEATURE_IDE);
 		combo.add(SPLOT);
-		combo.add(TVL);
 		combo.add(TRISKELL);
 		combo.addSelectionListener(new SelectionListener() {
 

@@ -32,7 +32,6 @@ import fr.familiar.fm.FMLBDDWriter;
 import fr.familiar.fm.FeatureModelPrinter;
 import fr.familiar.fm.basic.FMLFeatureModelReader;
 import fr.familiar.fm.basic.FMLFeatureModelWriter;
-import fr.familiar.fm.converter.FMLtoTVLConverter;
 import fr.familiar.fm.converter.FeatureModelToExpression;
 import fr.familiar.fm.converter.S2T2Converter;
 import fr.familiar.fm.converter.SPLOTConverter;
@@ -130,13 +129,6 @@ public class ConvertAnalyzer extends FMLAbstractCommandAnalyzer {
 			strfm = strfm.replace("[", "");
 			strfm = strfm.replace("]", "?");
 			return strfm;
-		}
-
-		else if (format == FMFormat.FTVL) {
-			// SCALA: convertion = FMConverter.convertToTVL(fmw.getFm());
-			//FMLShell.getInstance().printTODO("supported in Scala version");
-			convertion = new FMLtoTVLConverter(fmv).toStringRepresentation();
-			
 		}
 
 		else if (format == FMFormat.FFML) {

@@ -14,7 +14,6 @@
     <module>../org.xtext.example.fmlero.ui</module>
     <module>../S2T2toFML</module>
     <module>../SPLAR-plugin</module>
-    <module>../TVLPackagedAsMock</module>
     <module>../FAMILIAR</module>
     <module>../familiar.test</module>
  </modules>

@@ -65,8 +65,6 @@ public class MyWizard extends Wizard {
 			extension = ".m";
 		else if (type.equals(FirstPageWizard.SPLOT))
 			extension = ".xml";
-		else if (type.equals(FirstPageWizard.TVL))
-			extension = "tvl";
 		else
 			extension = "triskell";
 		return true;

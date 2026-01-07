@@ -468,19 +468,5 @@ public class FMLConverterTest extends FMLTest {
 		System.err.println("#platform=" + platformFM.counting());
 
 	}
-	
-	@Test
-	public void testTVL1() throws Exception {
-
-		_shell.parse("fm1 = FM (\"inputFMLTests/testTVL1.tvl\")\n"
-				+ "n1 = counting fm1\n" + "");
-
-		FeatureModelVariable fmv1 = getFMVariable("fm1");
-		DoubleVariable n1 = getDoubleVariable("n1");
-		
-		System.err.println("n1=" + n1.getDouble());
-		System.err.println("fm1.*=" + fmv1.features().names());
-		System.err.println("fm1=" + fmv1);
-	}
 
 }

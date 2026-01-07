@@ -178,9 +178,6 @@ public class Menu {
         otherNotationsSubMenu.addSeparator();
         otherNotationsSubMenu.add(new ImportS2T2Action());
         otherNotationsSubMenu.add(new ExportS2T2Action());
-        otherNotationsSubMenu.addSeparator();
-        otherNotationsSubMenu.add(new ImportTVLAction());
-        otherNotationsSubMenu.add(new ExportTVLAction());
         fileMenu.add(otherNotationsSubMenu);
         fileMenu.addSeparator();
         

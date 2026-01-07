@@ -142,8 +142,6 @@ public class FMLSaveAnalyzer extends FMLAbstractCommandAnalyzer {
 			return "fcalc";
 		else if (format == FMFormat.FIDE)
 			return "m";
-		else if (format == FMFormat.FTVL)
-			return "tvl";
 		else if (format == FMFormat.FFML)
 			return "fml";
 		else if (format == FMFormat.FFML2) // XMI
@@ -169,8 +167,6 @@ public class FMLSaveAnalyzer extends FMLAbstractCommandAnalyzer {
 	public static String formatToToolName(FMFormat format) {
 		if (format == FMFormat.FIDE)
 			return "FeatureIDE";
-		else if (format == FMFormat.FTVL)
-			return "TVL";
 		else if (format == FMFormat.FFML)
 			return "FAMILIAR";
 		else if (format == FMFormat.FFML2) // XMI

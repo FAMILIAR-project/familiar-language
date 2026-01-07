@@ -89,8 +89,7 @@ public class FMLLongFeatureNameTest extends FMLTest {
 		String fide1 = fm1.convert(FMFormat.FIDE);
 		System.err.println("fide1=" + fide1);
 		String s2t21 = fm1.convert(FMFormat.S2T2);
-		String tvl1 = fm1.convert(FMFormat.FTVL);
-		
+
 		FeatureModelVariable idFm1 = fm1.slice(SliceMode.INCLUDING, fm1.features().names()) ;
 		assertEquals(fm1.features().names(), idFm1.features().names());
 		System.err.println("fm1=" + fm1);

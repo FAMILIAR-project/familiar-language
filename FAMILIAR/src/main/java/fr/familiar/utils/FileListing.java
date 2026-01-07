@@ -34,7 +34,6 @@ public class FileListing {
 
 	public static final String FAMILIAR_EXTENSION = "fml";
 	private static final String XMI_EXTENSION = "xmi";
-	private static final String TVL_EXTENSION = "tvl";
 	private static final String FEATUREIDE_EXTENSION = "m";
 	private static final String TRISKELL_EXTENSION = "fd";
 	private static final String SPLOT_EXTENSION = "xml";
@@ -160,7 +159,6 @@ public class FileListing {
 	private boolean checkExtension(String extension) {
 		return extension.equals(FAMILIAR_EXTENSION)
 				|| extension.equals(XMI_EXTENSION)
-				|| extension.equals(TVL_EXTENSION)
 				|| extension.equals(FEATUREIDE_EXTENSION)
 				|| extension.equals(TRISKELL_EXTENSION)
 				|| extension.equals(SPLOT_EXTENSION);
