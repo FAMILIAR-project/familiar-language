@@ -115,7 +115,6 @@ import fr.familiar.parser.HierarchyMergerFactory;
 import fr.familiar.parser.HierarchyMergerStrategy;
 import fr.familiar.parser.NameSpace;
 import fr.familiar.utils.FileSerializer;
-import fr.familiar.variable.featureide.FMDisplayFeatureIDE;
 import gsd.graph.DirectedCliqueFinder;
 import gsd.graph.ImplicationGraph;
 import gsd.synthesis.BDDBuilder;
@@ -425,13 +424,8 @@ public class FeatureModelVariable extends VariableImpl implements FMLFeatureMode
 	 * display graphically the content of the feature model label,
 	 * */
 	public void gdisplay() {
-		if (FMLShell.getInstance().isEclipseBased()) {
-			// FIXME @FeatureIDE
-			new FMDisplayFeatureIDE(this).perform() ;
-		} else {
-			// GUI removed - use toDOT() or convert() for visualization
-			FMLShell.getInstance().printWarning("gdisplay() is only available in Eclipse mode. Use toDOT() for Graphviz output.");
-		}
+		// GUI removed - use toDOT() or convert() for visualization
+		FMLShell.getInstance().printWarning("gdisplay() is only available in Eclipse mode. Use toDOT() for Graphviz output.");
 	}
 
 	

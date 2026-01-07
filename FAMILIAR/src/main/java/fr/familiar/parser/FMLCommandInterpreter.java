@@ -124,8 +124,6 @@ import fr.familiar.variable.StringVariable;
 import fr.familiar.variable.VariabilityOperatorVariable;
 import fr.familiar.variable.Variable;
 import fr.familiar.variable.VariableIdentifier;
-import fr.familiar.views.featureide.FamiliarRun;
-import fr.familiar.views.featureide.VariableView;
 import gsd.synthesis.BDDBuilder;
 import gsd.synthesis.FeatureNode;
 
@@ -1745,40 +1743,7 @@ public class FMLCommandInterpreter {
 	}
 
 	public void updateVariableView() {
-
-		// FIXME: weird
-		if (!FMLShell.getInstance().getPreference().isVariableViewActivated())
-			return;
-
-		// view
-		if (FMLShell.getInstance().isEclipseInteractiveMode()
-				&& !FMLShell.getInstance().isRunningScript()) {
-			_LOGGER.debug("updating view");
-
-			// FIXME @FeatureIDE 
-			
-			VariableView variableView = FamiliarRun.getVariableView();
-			if (variableView == null)
-				return;
-			_LOGGER.debug(
-					"variableView=" + variableView);
-
-			variableView.clear();
-
-			List<Variable> varList = FMLShell.getInstance().getCurrentEnv()
-					.getVariables();
-			for (Variable var : varList) {
-				System.out.println("ajout d'un element");
-
-				variableView.addItem(var);
-				System.out.println("fin d'ajout de l'element");
-			}
-
-			variableView.listen();
-			variableView.dispose() ;
-
-		}
-
+		// Eclipse view update removed - standalone mode only
 	}
 
 	/*
