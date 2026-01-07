@@ -27,10 +27,6 @@
 		<module>org.xtext.example.fml.ui</module>
 		<module>org.xtext.example.fml.web</module>
 		<module>org.xtext.example.fml.target</module>
-		<!-- Disabled: Test modules require MWE2-generated classes not available on Java 11+
-		<module>org.xtext.example.fml.tests</module>
-		<module>org.xtext.example.fml.ui.tests</module>
-		-->
 	</modules>
 	<build>
 		<plugins>
