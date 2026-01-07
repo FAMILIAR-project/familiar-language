@@ -23,8 +23,6 @@ import java.util.Set;
 
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
-import org.eclipse.swt.widgets.Display;
-import org.eclipse.ui.progress.UIJob;
 import org.xtext.example.mydsl.fml.AutoConfMode;
 import org.xtext.example.mydsl.fml.AutoConfiguration;
 import org.xtext.example.mydsl.fml.Command;
@@ -213,42 +211,6 @@ public class ConfigurationOperationAnalyzer extends FMLAbstractCommandAnalyzer {
 		}
 
 		setVariable(vari);
-
-		final ConfigurationVariable cv = cw;
-
-		UIJob analyzingJob = null;
-		/*************** gdisplay *************/
-
-		if (!FMLShell.getInstance().getPreference()
-				.isConfigurationGraphicalDisplay())
-			return;
-
-		if (FMLShell.getInstance().isEclipseInteractiveMode()
-				|| FMLShell.getInstance().isStepByStep())
-
-			/*
-			 * analyzingJob = new
-			 * UIJob(" Opening configuration editor FeatureIDE"){
-			 * 
-			 * @Override public IStatus runInUIThread(IProgressMonitor monitor)
-			 * { cv.gdisplay() ; return Status.OK_STATUS;
-			 * 
-			 * } }; analyzingJob.setPriority(Job.DECORATE);
-			 * analyzingJob.schedule();
-			 * 
-			 * if (true) return ;
-			 */
-			Display.getDefault().asyncExec(new Runnable() {
-
-				@Override
-				public void run() {
-					if (cv == null)
-						FMLShell.getInstance().printDebugMessage(
-								"Unable to display after renaming (null)");
-					cv.gdisplay();
-
-				}
-			});
 	}
 
 	private Variable _toSetVariable(Set<String> ftures, FeatureModelVariable fmv) {

@@ -18,14 +18,7 @@
  */
 package fr.familiar.interpreter;
 
-import org.eclipse.swt.graphics.Color;
-
 public interface Output {
-
-	// Prints a line of text with the specified color.
-	void print(Color color, java.lang.String msg);
-
-	void println(Color color, java.lang.String msg);
 
 	// Prints a line of text
 	void print(java.lang.String msg);

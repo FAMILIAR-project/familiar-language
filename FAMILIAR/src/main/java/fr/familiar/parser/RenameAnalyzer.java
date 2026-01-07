@@ -20,7 +20,6 @@ package fr.familiar.parser;
 
 import java.util.Set;
 
-import org.eclipse.swt.widgets.Display;
 import org.xtext.example.mydsl.fml.Command;
 import org.xtext.example.mydsl.fml.FTCommand;
 import org.xtext.example.mydsl.fml.RenameFeature;
@@ -162,22 +161,6 @@ public class RenameAnalyzer extends FMLAbstractCommandAnalyzer {
 				.retrieveAllConfigurations(fmw);
 		for (ConfigurationVariable cv : configurations)
 				cv.changeFeatureModel(fmw);
-			
-
-		/*************** gdisplay *************/
-		if (FMLShell.getInstance().isEclipseInteractiveMode()
-				|| FMLShell.getInstance().isStepByStep())
-			Display.getDefault().asyncExec(new Runnable() {
-
-				@Override
-				public void run() {
-					if (fmw == null)
-						FMLShell.getInstance().printDebugMessage(
-								"Unable to display after renaming (null)");
-					fmw.gdisplay();
-
-				}
-			});
 
 	}
 

@@ -22,7 +22,6 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
-import org.eclipse.swt.widgets.Display;
 import org.xtext.example.mydsl.fml.AlternativeEdit;
 import org.xtext.example.mydsl.fml.Command;
 import org.xtext.example.mydsl.fml.FTCommand;
@@ -156,46 +155,12 @@ public class ModifyVOperatorParser extends FMLAbstractCommandAnalyzer {
 		final FeatureVariable fv = _environment.parseFTCommand(ftCmd, null);
 		boolean b = fv.setOptionalStatus();
 		setVariable(new BooleanVariable(getAssigner(), b));
-
-		// at this step, fv has been set up
-		/*************** gdisplay *************/
-		if (FMLShell.getInstance().isEclipseInteractiveMode()
-				|| FMLShell.getInstance().isStepByStep())
-			Display.getDefault().asyncExec(new Runnable() {
-
-				@Override
-				public void run() {
-					if (fv.getFeatureModel() == null)
-						FMLShell.getInstance()
-								.printDebugMessage(
-										"Unable to display after setting optional (null)");
-					fv.getFeatureModel().gdisplay();
-
-				}
-			});
 	}
 
 	private void setMandatory(FTCommand ftCmd) {
 		final FeatureVariable fv = _environment.parseFTCommand(ftCmd, null);
 		boolean b = fv.setMandatoryStatus();
 		setVariable(new BooleanVariable(getAssigner(), b));
-
-		// at this step, fv has been set up
-		/*************** gdisplay *************/
-		if (FMLShell.getInstance().isEclipseInteractiveMode()
-				|| FMLShell.getInstance().isStepByStep())
-			Display.getDefault().asyncExec(new Runnable() {
-
-				@Override
-				public void run() {
-					if (fv.getFeatureModel() == null)
-						FMLShell.getInstance()
-								.printDebugMessage(
-										"Unable to display after setting mandatory (null)");
-					fv.getFeatureModel().gdisplay();
-
-				}
-			});
 	}
 
 	/**

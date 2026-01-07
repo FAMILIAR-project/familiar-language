@@ -19,19 +19,11 @@
 package fr.familiar.variable.featureide;
 
 import java.lang.reflect.Method;
-import java.net.URI;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
 
 import org.apache.log4j.Logger;
-import org.eclipse.core.resources.IFile;
-import org.eclipse.ui.IEditorInput;
-import org.eclipse.ui.IEditorPart;
-import org.eclipse.ui.IWorkbenchPage;
-import org.eclipse.ui.PartInitException;
-import org.eclipse.ui.PlatformUI;
-import org.eclipse.ui.part.FileEditorInput;
 import org.xtext.example.mydsl.fml.AutoConfMode;
 import org.xtext.example.mydsl.fml.OpSelection;
 
@@ -39,16 +31,12 @@ import de.ovgu.featureide.fm.core.Feature;
 import de.ovgu.featureide.fm.core.configuration.Configuration;
 import de.ovgu.featureide.fm.core.configuration.Selection;
 import de.ovgu.featureide.fm.core.configuration.SelectionNotPossibleException;
-import de.ovgu.featureide.fm.ui.editors.configuration.ConfigurationEditor;
 import fr.familiar.fm.converter.FeatureModelUtil;
 import fr.familiar.fm.featureide.FMLtoFeatureIDE;
 import fr.familiar.fm.featureide.MinMaxConfiguration;
-import fr.familiar.gui.featureide.ConfigurationRegister;
-import fr.familiar.gui.featureide.FMConfigurationEditor;
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.interpreter.NSFactory;
 import fr.familiar.parser.NameSpace;
-import fr.familiar.utils.URIUtils;
 import fr.familiar.variable.ConfigurationVariable;
 import fr.familiar.variable.FeatureModelVariable;
 import fr.familiar.variable.FeatureVariable;
@@ -257,67 +245,14 @@ public class ConfigurationVariableFeatureIDEImpl extends ConfigurationVariable {
 	}
 
 	/**
-	 * display graphically the content of the configuration variable, i.e., the
-	 * configuration in FeatureIDE editor
+	 * display graphically the content of the configuration variable
+	 * Note: graphical display requires Eclipse and is not supported in standalone mode
 	 */
 	@Override
 	public void gdisplay() {
-
-		// save as a FeatureIDE file
-		de.ovgu.featureide.fm.core.configuration.ConfigurationWriter writerFmIDE = new de.ovgu.featureide.fm.core.configuration.ConfigurationWriter(
-				_configuration);
-
-		ConfigurationRegister.register(getIdentifier() + ".equation", this);
-
-		try {
-
-			if (!ConfigurationRegister.isRegistred(this))
-				;
-			ConfigurationRegister.register(this);
-			// IFile lfile = getSerializationFile();
-			// System.out.println("Ifile (conf): " + lfile);
-			// System.out.println("Ifile name (conf): " + lfile.getName());
-			IFile lfile = ConfigurationRegister.getFile(this);
-			writerFmIDE.saveToFile(lfile);
-
-			// now we have serialized, we want to open
-
-			IEditorInput ii = new FileEditorInput(lfile);
-
-			_LOGGER.debug("IEditor: (conf) " + ii);
-			try {
-
-				IWorkbenchPage page = PlatformUI.getWorkbench()
-						.getActiveWorkbenchWindow().getActivePage();
-				_LOGGER.debug(
-						"getting active page (conf) " + page);
-				_LOGGER.debug(
-						"opening the editor (conf) ");
-				// IEditorPart iep = page.openEditor(ii,
-				// ConfigurationEditor.ID);
-				IEditorPart iep = page.openEditor(ii, FMConfigurationEditor.ID);
-				_LOGGER.debug(
-						"ConfigurationVariable.gdisplay() " + iep);
-				if (iep instanceof FMConfigurationEditor)// ++++
-					((FMConfigurationEditor) iep).refresh();// ++++
-				// IEditorPart iep = page.findEditor(ii);// TODO a voire ...
-				if (iep instanceof ConfigurationEditor) {
-					_LOGGER.debug(
-							"configuration display");
-					((ConfigurationEditor) iep).dispose();
-
-				}
-				// page.openEditor(iei, "org.eclipse.ui.DefaultTextEditor");
-			} catch (PartInitException e) {
-				e.printStackTrace();
-				_LOGGER.debug(
-						"the exception is catched");
-			}
-
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-
+		FMLShell.getInstance().printWarning(
+				"Graphical display of configurations is not supported in standalone mode. " +
+				"Configuration: " + getSpecificValue());
 	}
 
 	public boolean changeFeatureModel(FeatureModelVariable fmv) {
@@ -350,17 +285,6 @@ public class ConfigurationVariableFeatureIDEImpl extends ConfigurationVariable {
 		return true;
 	}
 
-	private IFile getSerializationFile() {
-		String directory = FMLShell.getInstance().getTemporaryPath();
-		String name = getIdentifier();
-		String filename = directory + name + ".equation";
-		URI uri = URI.create(filename);
-		IFile lfile = URIUtils.getIFileFromURI(uri);
-		return lfile;
-	}
-
-	
-	
 	@Override
 	public boolean isComplete() {
 		SetVariable sw = getCurrentFeatures(OpSelection.UNSELECT);

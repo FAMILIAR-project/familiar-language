@@ -26,10 +26,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.URI;
 
-import org.eclipse.core.resources.IFile;
-import org.eclipse.core.runtime.CoreException;
 import org.eclipse.emf.ecore.EObject;
 import org.xtext.example.mydsl.fml.Command;
 import org.xtext.example.mydsl.fml.ConfigurationCommand;
@@ -38,7 +35,6 @@ import org.xtext.example.mydsl.fml.FMFormat;
 import org.xtext.example.mydsl.fml.FMLSave;
 
 import fr.familiar.interpreter.FMLShell;
-import fr.familiar.utils.URIUtils;
 import fr.familiar.variable.FeatureModelVariable;
 import fr.familiar.variable.RType;
 
@@ -80,46 +76,22 @@ public class FMLSaveAnalyzer extends FMLAbstractCommandAnalyzer {
 			FMLShell.getInstance()
 					.printDebugMessage("convertion=" + convertion);
 
-			String name = fmv.getIdentifier(); // saveCmd.getFilename();
+			String name = fmv.getIdentifier();
 
-			if (FMLShell.getInstance().isEclipseBased()) {
-				IFile path = FMLShell.getInstance().getOutputPath();
+			File outputDirectory = FMLShell.getInstance()
+					.getStandaloneOutputPath();
 
-				String directory = path.getLocationURI().toString();
+			String filename = outputDirectory.getAbsolutePath()
+					+ System.getProperty("file.separator") + name + "."
+					+ formatToFileExtension(format);
 
-				String filename = directory
-						+ System.getProperty("file.separator") + name + "." +
-						// SCALA:(modalis.polytech.unice.fr.utils.FMFormat2Extension.apply(format).
-						formatToFileExtension(format);
-
-				URI uri = URI.create(filename);
-				IFile file = URIUtils.getIFileFromURI(uri); // where to
-															// serialize
-				// write in file the content of convertion
-				try {
-					writeToFile(file, convertion);
-				} catch (CoreException e) {
-					FMLShell.getInstance().setError(
-							"Unable to serialize " + e.getLocalizedMessage());
-					return;
-				}
-			} else {
-				File outputDirectory = FMLShell.getInstance()
-						.getStandaloneOutputPath();
-
-				String filename = outputDirectory.getAbsolutePath()
-						+ System.getProperty("file.separator") + name + "."
-						+ formatToFileExtension(format);
-
-				File file = new File(filename);
-				try {
-					writeToFile(file, convertion);
-				} catch (IOException e) {
-					FMLShell.getInstance().setFatalError(
-							"Unable to serialize " + e.getMessage());
-					return;
-				}
-
+			File file = new File(filename);
+			try {
+				writeToFile(file, convertion);
+			} catch (IOException e) {
+				FMLShell.getInstance().setFatalError(
+						"Unable to serialize " + e.getMessage());
+				return;
 			}
 
 		} else if (eo instanceof ConfigurationCommand) {
@@ -190,33 +162,12 @@ public class FMLSaveAnalyzer extends FMLAbstractCommandAnalyzer {
 	}
 
 	/**
-	 * writing facilities to serialize a feature model variable (Eclipse version
-	 * uses IFile, not File)
-	 * 
+	 * writing facilities to serialize a feature model variable
+	 *
 	 * @param file
 	 * @param writeToString
-	 * @throws CoreException
-	 */
-	public void writeToFile(IFile file, String writeToString)
-			throws CoreException {
-		InputStream source = new ByteArrayInputStream(writeToString.getBytes());
-		if (file.exists()) {
-			file.setContents(source, false, true, null);
-		} else {
-			file.create(source, false, null);
-		}
-	}
-
-	/**
-	 * writing facilities to serialize a feature model variable (standalone
-	 * version uses File, not IFile)
-	 * 
-	 * @param file
-	 * @param writeToString
-	 * @throws CoreException
 	 * @throws IOException
 	 */
-
 	public void writeToFile(File file, String writeToString) throws IOException {
 		InputStream source = new ByteArrayInputStream(writeToString.getBytes());
 		if (!file.exists())

@@ -34,10 +34,8 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
-import org.eclipse.swt.widgets.Display;
 import org.eclipse.xtext.resource.XtextResource;
 import org.eclipse.xtext.resource.XtextResourceSet;
-import org.xtext.example.fml.ui.internal.FmlActivator;
 import org.xtext.example.mydsl.FmlStandaloneSetup;
 import org.xtext.example.mydsl.fml.AddConstraint;
 import org.xtext.example.mydsl.fml.AnalysisOperation;
@@ -181,13 +179,7 @@ public class FMLCommandInterpreter {
 		// .createInjectorAndDoEMFRegistration();
 
 		_LOGGER.debug("creating FMM injector");
-
-		if (FMLShell.getInstance().isStandalone())
-			this._injector = new FmlStandaloneSetup().createInjectorAndDoEMFRegistration();
-		else
-			// vp: plugin
-			this._injector = FmlActivator.getInstance().getInjector("org.xtext.example.mydsl.Fml");
-		// FAMILIARActivator.getInstance().getInjector("org.xtext.example.mydsl.FAMILIAR");
+		this._injector = new FmlStandaloneSetup().createInjectorAndDoEMFRegistration();
 
 		// TODO
 		// rebind stdout/stderr to logger
@@ -910,21 +902,11 @@ public class FMLCommandInterpreter {
 	}
 	
 	public void show(final Variable v) {
-
-		/*************** gdisplay *************/
-		Display.getDefault().asyncExec(new Runnable() {
-
-			@Override
-			public void run() {
-				if (v instanceof FeatureModelVariable)
-					((FeatureModelVariable) v).gdisplay();
-				else if (v instanceof ConfigurationVariable) {
-					((ConfigurationVariable) v).gdisplay();
-				}
-
-			}
-		});
-
+		if (v instanceof FeatureModelVariable)
+			((FeatureModelVariable) v).gdisplay();
+		else if (v instanceof ConfigurationVariable) {
+			((ConfigurationVariable) v).gdisplay();
+		}
 	}
 	
 	

@@ -18,39 +18,24 @@
  */
 package fr.familiar.interpreter;
 
-import org.eclipse.swt.graphics.Color;
-
 /**
  * @author mathieuacher
- * 
+ *
  */
 
 public class DefaultOutput implements Output {
 
-	public void print(Color color, String msg) {
-		System.out.print(msg);
-
-	}
-
 	public void print(String msg) {
 		System.out.print(msg);
-
-	}
-
-	public void println(Color color, String msg) {
-		System.out.println(msg);
-
 	}
 
 	public void println(String msg) {
 		System.out.println(msg);
-
 	}
 
 	@Override
 	public void close() {
 		// nothing to do
-
 	}
 
 }
