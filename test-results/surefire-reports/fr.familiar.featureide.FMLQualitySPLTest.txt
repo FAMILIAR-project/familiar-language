@@ -1,0 +1,6 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.featureide.FMLQualitySPLTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.017 s -- in fr.familiar.featureide.FMLQualitySPLTest
+fr.familiar.featureide.FMLQualitySPLTest.SPLSegmentation -- Time elapsed: 0.017 s
+fr.familiar.featureide.FMLQualitySPLTest skipped

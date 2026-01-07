@@ -1,0 +1,30 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.FMLComparisonTest
+-------------------------------------------------------------------------------
+Tests run: 26, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.239 s -- in fr.familiar.FMLComparisonTest
+fr.familiar.FMLComparisonTest.testCompare[0] -- Time elapsed: 0.009 s
+fr.familiar.FMLComparisonTest.testCompare[1] -- Time elapsed: 0.011 s
+fr.familiar.FMLComparisonTest.testCompare[2] -- Time elapsed: 0.010 s
+fr.familiar.FMLComparisonTest.testCompare[3] -- Time elapsed: 0.008 s
+fr.familiar.FMLComparisonTest.testCompare[4] -- Time elapsed: 0.007 s
+fr.familiar.FMLComparisonTest.testCompare[5] -- Time elapsed: 0.010 s
+fr.familiar.FMLComparisonTest.testCompare[6] -- Time elapsed: 0.011 s
+fr.familiar.FMLComparisonTest.testCompare[7] -- Time elapsed: 0.010 s
+fr.familiar.FMLComparisonTest.testCompare[8] -- Time elapsed: 0.010 s
+fr.familiar.FMLComparisonTest.testCompare[9] -- Time elapsed: 0.008 s
+fr.familiar.FMLComparisonTest.testCompare[10] -- Time elapsed: 0.009 s
+fr.familiar.FMLComparisonTest.testCompare[11] -- Time elapsed: 0.007 s
+fr.familiar.FMLComparisonTest.testCompare[12] -- Time elapsed: 0.011 s
+fr.familiar.FMLComparisonTest.testCompare[13] -- Time elapsed: 0.010 s
+fr.familiar.FMLComparisonTest.testCompare[14] -- Time elapsed: 0.010 s
+fr.familiar.FMLComparisonTest.testCompare[15] -- Time elapsed: 0.010 s
+fr.familiar.FMLComparisonTest.testCompare[16] -- Time elapsed: 0.008 s
+fr.familiar.FMLComparisonTest.testCompare[17] -- Time elapsed: 0.007 s
+fr.familiar.FMLComparisonTest.testCompare[18] -- Time elapsed: 0.008 s
+fr.familiar.FMLComparisonTest.testCompare[19] -- Time elapsed: 0.012 s
+fr.familiar.FMLComparisonTest.testCompare[20] -- Time elapsed: 0.009 s
+fr.familiar.FMLComparisonTest.testCompare[21] -- Time elapsed: 0.007 s
+fr.familiar.FMLComparisonTest.testCompare[22] -- Time elapsed: 0.008 s
+fr.familiar.FMLComparisonTest.testCompare[23] -- Time elapsed: 0.006 s
+fr.familiar.FMLComparisonTest.testCompare[24] -- Time elapsed: 0.010 s
+fr.familiar.FMLComparisonTest.testCompare[25] -- Time elapsed: 0.010 s

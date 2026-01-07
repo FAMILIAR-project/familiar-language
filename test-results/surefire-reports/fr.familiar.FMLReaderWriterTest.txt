@@ -1,0 +1,18 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.FMLReaderWriterTest
+-------------------------------------------------------------------------------
+Tests run: 14, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.108 s -- in fr.familiar.FMLReaderWriterTest
+fr.familiar.FMLReaderWriterTest.testReader1[0] -- Time elapsed: 0.005 s
+fr.familiar.FMLReaderWriterTest.testReader2[0] -- Time elapsed: 0.012 s
+fr.familiar.FMLReaderWriterTest.testReader1[1] -- Time elapsed: 0.005 s
+fr.familiar.FMLReaderWriterTest.testReader2[1] -- Time elapsed: 0.012 s
+fr.familiar.FMLReaderWriterTest.testReader1[2] -- Time elapsed: 0.005 s
+fr.familiar.FMLReaderWriterTest.testReader2[2] -- Time elapsed: 0.010 s
+fr.familiar.FMLReaderWriterTest.testReader1[3] -- Time elapsed: 0.004 s
+fr.familiar.FMLReaderWriterTest.testReader2[3] -- Time elapsed: 0.010 s
+fr.familiar.FMLReaderWriterTest.testReader1[4] -- Time elapsed: 0.004 s
+fr.familiar.FMLReaderWriterTest.testReader2[4] -- Time elapsed: 0.010 s
+fr.familiar.FMLReaderWriterTest.testReader1[5] -- Time elapsed: 0.004 s
+fr.familiar.FMLReaderWriterTest.testReader2[5] -- Time elapsed: 0.010 s
+fr.familiar.FMLReaderWriterTest.testReader1[6] -- Time elapsed: 0.005 s
+fr.familiar.FMLReaderWriterTest.testReader2[6] -- Time elapsed: 0.012 s

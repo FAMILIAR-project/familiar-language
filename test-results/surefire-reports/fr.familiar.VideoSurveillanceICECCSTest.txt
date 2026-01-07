@@ -1,0 +1,6 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.VideoSurveillanceICECCSTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.075 s -- in fr.familiar.VideoSurveillanceICECCSTest
+fr.familiar.VideoSurveillanceICECCSTest.testConfigsTalk -- Time elapsed: 0.008 s
+fr.familiar.VideoSurveillanceICECCSTest.testCleanup -- Time elapsed: 0.067 s

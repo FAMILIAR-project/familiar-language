@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.FMLMetaAttributeTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.055 s -- in fr.familiar.FMLMetaAttributeTest
+fr.familiar.FMLMetaAttributeTest.test2bis -- Time elapsed: 0.007 s
+fr.familiar.FMLMetaAttributeTest.test3bis -- Time elapsed: 0.009 s
+fr.familiar.FMLMetaAttributeTest.test1 -- Time elapsed: 0.007 s
+fr.familiar.FMLMetaAttributeTest.test2 -- Time elapsed: 0.006 s
+fr.familiar.FMLMetaAttributeTest.test3 -- Time elapsed: 0.006 s
+fr.familiar.FMLMetaAttributeTest.test4 -- Time elapsed: 0.006 s
+fr.familiar.FMLMetaAttributeTest.test5 -- Time elapsed: 0.007 s
+fr.familiar.FMLMetaAttributeTest.testProgrammativeWay1 -- Time elapsed: 0.005 s

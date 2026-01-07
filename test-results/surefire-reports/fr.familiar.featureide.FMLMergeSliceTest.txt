@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.featureide.FMLMergeSliceTest
+-------------------------------------------------------------------------------
+Tests run: 24, Failures: 0, Errors: 0, Skipped: 24, Time elapsed: 0.001 s -- in fr.familiar.featureide.FMLMergeSliceTest
+fr.familiar.featureide.FMLMergeSliceTest skipped
+fr.familiar.featureide.FMLMergeSliceTest skipped
+fr.familiar.featureide.FMLMergeSliceTest skipped
+fr.familiar.featureide.FMLMergeSliceTest skipped
+fr.familiar.featureide.FMLMergeSliceTest skipped
+fr.familiar.featureide.FMLMergeSliceTest skipped
+fr.familiar.featureide.FMLMergeSliceTest skipped
+fr.familiar.featureide.FMLMergeSliceTest skipped
+fr.familiar.featureide.FMLMergeSliceTest skipped
+fr.familiar.featureide.FMLMergeSliceTest skipped
+fr.familiar.featureide.FMLMergeSliceTest skipped
+fr.familiar.featureide.FMLMergeSliceTest skipped
+fr.familiar.featureide.FMLMergeSliceTest skipped
+fr.familiar.featureide.FMLMergeSliceTest skipped
+fr.familiar.featureide.FMLMergeSliceTest skipped
+fr.familiar.featureide.FMLMergeSliceTest skipped
+fr.familiar.featureide.FMLMergeSliceTest skipped
+fr.familiar.featureide.FMLMergeSliceTest skipped
+fr.familiar.featureide.FMLMergeSliceTest skipped
+fr.familiar.featureide.FMLMergeSliceTest skipped
+fr.familiar.featureide.FMLMergeSliceTest skipped
+fr.familiar.featureide.FMLMergeSliceTest skipped
+fr.familiar.featureide.FMLMergeSliceTest skipped
+fr.familiar.featureide.FMLMergeSliceTest skipped

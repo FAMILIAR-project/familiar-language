@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.FMLDeadsTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.069 s -- in fr.familiar.FMLDeadsTest
+fr.familiar.FMLDeadsTest.testDead1 -- Time elapsed: 0.007 s
+fr.familiar.FMLDeadsTest.testDead2 -- Time elapsed: 0.008 s
+fr.familiar.FMLDeadsTest.testDeadScript1 -- Time elapsed: 0.023 s
+fr.familiar.FMLDeadsTest.testBenavides1 -- Time elapsed: 0.011 s
+fr.familiar.FMLDeadsTest.testBenavides2 -- Time elapsed: 0.010 s
+fr.familiar.FMLDeadsTest.testBenavides3 -- Time elapsed: 0.010 s

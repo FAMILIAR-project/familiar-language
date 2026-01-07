@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.FMLMergeOperationsTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.080 s -- in fr.familiar.FMLMergeOperationsTest
+fr.familiar.FMLMergeOperationsTest.testJOTCrossProduct1 -- Time elapsed: 0.008 s
+fr.familiar.FMLMergeOperationsTest.testSC1 -- Time elapsed: 0.014 s
+fr.familiar.FMLMergeOperationsTest.testSC2 -- Time elapsed: 0.009 s
+fr.familiar.FMLMergeOperationsTest skipped
+fr.familiar.FMLMergeOperationsTest.testMST1 -- Time elapsed: 0.009 s
+fr.familiar.FMLMergeOperationsTest.testSLE1 -- Time elapsed: 0.008 s
+fr.familiar.FMLMergeOperationsTest.testECMFA1 -- Time elapsed: 0.009 s
+fr.familiar.FMLMergeOperationsTest.testECMFA2 -- Time elapsed: 0.008 s
+fr.familiar.FMLMergeOperationsTest.testECMFA3 -- Time elapsed: 0.007 s
+fr.familiar.FMLMergeOperationsTest.testECMFA4 -- Time elapsed: 0.008 s

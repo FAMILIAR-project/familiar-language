@@ -1,0 +1,5 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.FMLtoPrefuseTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.020 s -- in fr.familiar.FMLtoPrefuseTest
+fr.familiar.FMLtoPrefuseTest.testTree1 -- Time elapsed: 0.020 s

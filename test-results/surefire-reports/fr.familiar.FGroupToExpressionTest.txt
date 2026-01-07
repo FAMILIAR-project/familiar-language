@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.FGroupToExpressionTest
+-------------------------------------------------------------------------------
+Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.091 s -- in fr.familiar.FGroupToExpressionTest
+fr.familiar.FGroupToExpressionTest.testOR1 -- Time elapsed: 0.008 s
+fr.familiar.FGroupToExpressionTest.testOR2 -- Time elapsed: 0.035 s
+fr.familiar.FGroupToExpressionTest.testOR3 -- Time elapsed: 0.007 s
+fr.familiar.FGroupToExpressionTest.testMTX1 -- Time elapsed: 0.007 s
+fr.familiar.FGroupToExpressionTest.testMTX2 -- Time elapsed: 0.007 s
+fr.familiar.FGroupToExpressionTest.testMTX3 -- Time elapsed: 0.007 s
+fr.familiar.FGroupToExpressionTest.testXOR1 -- Time elapsed: 0.007 s
+fr.familiar.FGroupToExpressionTest.testXOR2 -- Time elapsed: 0.007 s
+fr.familiar.FGroupToExpressionTest.testXOR3 -- Time elapsed: 0.006 s

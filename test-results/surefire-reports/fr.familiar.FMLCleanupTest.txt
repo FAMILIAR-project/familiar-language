@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.FMLCleanupTest
+-------------------------------------------------------------------------------
+Tests run: 12, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.100 s -- in fr.familiar.FMLCleanupTest
+fr.familiar.FMLCleanupTest.testCleanUpScript1 -- Time elapsed: 0.008 s
+fr.familiar.FMLCleanupTest.testCleanUpScript2 -- Time elapsed: 0.008 s
+fr.familiar.FMLCleanupTest.testDead1 -- Time elapsed: 0.009 s
+fr.familiar.FMLCleanupTest.testBenavides1 -- Time elapsed: 0.009 s
+fr.familiar.FMLCleanupTest.testBenavides2 -- Time elapsed: 0.008 s
+fr.familiar.FMLCleanupTest.testBenavides3 -- Time elapsed: 0.010 s
+fr.familiar.FMLCleanupTest.testCleanup1 -- Time elapsed: 0.010 s
+fr.familiar.FMLCleanupTest.testCleanup2 -- Time elapsed: 0.009 s
+fr.familiar.FMLCleanupTest.testCleanup3 -- Time elapsed: 0.007 s
+fr.familiar.FMLCleanupTest.testCleanup4 -- Time elapsed: 0.008 s
+fr.familiar.FMLCleanupTest.testFullMandatory1 -- Time elapsed: 0.007 s
+fr.familiar.FMLCleanupTest.testFullMandatory2 -- Time elapsed: 0.006 s

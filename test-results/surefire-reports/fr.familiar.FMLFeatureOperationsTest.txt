@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.FMLFeatureOperationsTest
+-------------------------------------------------------------------------------
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.131 s -- in fr.familiar.FMLFeatureOperationsTest
+fr.familiar.FMLFeatureOperationsTest.testOperator1 -- Time elapsed: 0.006 s
+fr.familiar.FMLFeatureOperationsTest.testOperator2 -- Time elapsed: 0.005 s
+fr.familiar.FMLFeatureOperationsTest.testMisc1 -- Time elapsed: 0.013 s
+fr.familiar.FMLFeatureOperationsTest.testMisc2 -- Time elapsed: 0.007 s
+fr.familiar.FMLFeatureOperationsTest.testMisc3 -- Time elapsed: 0.007 s
+fr.familiar.FMLFeatureOperationsTest.testName1 -- Time elapsed: 0.023 s
+fr.familiar.FMLFeatureOperationsTest.testRoot1 -- Time elapsed: 0.006 s
+fr.familiar.FMLFeatureOperationsTest.testParent1 -- Time elapsed: 0.006 s
+fr.familiar.FMLFeatureOperationsTest.testMisc2bis -- Time elapsed: 0.007 s
+fr.familiar.FMLFeatureOperationsTest.testAncestors1 -- Time elapsed: 0.006 s
+fr.familiar.FMLFeatureOperationsTest.testChildren1 -- Time elapsed: 0.009 s
+fr.familiar.FMLFeatureOperationsTest.testSibling1 -- Time elapsed: 0.007 s
+fr.familiar.FMLFeatureOperationsTest.testSibling2 -- Time elapsed: 0.007 s
+fr.familiar.FMLFeatureOperationsTest.testSibling3 -- Time elapsed: 0.006 s
+fr.familiar.FMLFeatureOperationsTest.testWhichfm -- Time elapsed: 0.007 s
+fr.familiar.FMLFeatureOperationsTest.testDescendants1 -- Time elapsed: 0.006 s

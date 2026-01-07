@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.FMLctcrTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.068 s -- in fr.familiar.FMLctcrTest
+fr.familiar.FMLctcrTest.testCTCR1[0] -- Time elapsed: 0.007 s
+fr.familiar.FMLctcrTest.testCTCR1[1] -- Time elapsed: 0.007 s
+fr.familiar.FMLctcrTest.testCTCR1[2] -- Time elapsed: 0.007 s
+fr.familiar.FMLctcrTest.testCTCR1[3] -- Time elapsed: 0.006 s
+fr.familiar.FMLctcrTest.testCTCR1[4] -- Time elapsed: 0.007 s
+fr.familiar.FMLctcrTest.testCTCR1[5] -- Time elapsed: 0.006 s
+fr.familiar.FMLctcrTest.testCTCR1[6] -- Time elapsed: 0.006 s
+fr.familiar.FMLctcrTest.testCTCR1[7] -- Time elapsed: 0.007 s
+fr.familiar.FMLctcrTest.testCTCR1[8] -- Time elapsed: 0.006 s
+fr.familiar.FMLctcrTest.testCTCR1[9] -- Time elapsed: 0.007 s

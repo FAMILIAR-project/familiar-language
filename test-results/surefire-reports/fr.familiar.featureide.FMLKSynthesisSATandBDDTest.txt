@@ -1,0 +1,90 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.featureide.FMLKSynthesisSATandBDDTest
+-------------------------------------------------------------------------------
+Tests run: 23, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.353 s <<< FAILURE! -- in fr.familiar.featureide.FMLKSynthesisSATandBDDTest
+fr.familiar.featureide.FMLKSynthesisSATandBDDTest.test1[0] -- Time elapsed: 0.014 s
+fr.familiar.featureide.FMLKSynthesisSATandBDDTest.test1[1] -- Time elapsed: 0.009 s
+fr.familiar.featureide.FMLKSynthesisSATandBDDTest.test1[2] -- Time elapsed: 0.010 s
+fr.familiar.featureide.FMLKSynthesisSATandBDDTest.test1[3] -- Time elapsed: 0.010 s
+fr.familiar.featureide.FMLKSynthesisSATandBDDTest.test1[4] -- Time elapsed: 0.011 s
+fr.familiar.featureide.FMLKSynthesisSATandBDDTest.test1[5] -- Time elapsed: 0.015 s
+fr.familiar.featureide.FMLKSynthesisSATandBDDTest.test1[6] -- Time elapsed: 0.009 s
+fr.familiar.featureide.FMLKSynthesisSATandBDDTest.test1[7] -- Time elapsed: 0.009 s
+fr.familiar.featureide.FMLKSynthesisSATandBDDTest.test1[8] -- Time elapsed: 0.014 s
+fr.familiar.featureide.FMLKSynthesisSATandBDDTest.test1[9] -- Time elapsed: 0.013 s
+fr.familiar.featureide.FMLKSynthesisSATandBDDTest.test1[10] -- Time elapsed: 0.015 s
+fr.familiar.featureide.FMLKSynthesisSATandBDDTest.test1[11] -- Time elapsed: 0.029 s
+fr.familiar.featureide.FMLKSynthesisSATandBDDTest.test1[12] -- Time elapsed: 0.029 s
+fr.familiar.featureide.FMLKSynthesisSATandBDDTest.test1[13] -- Time elapsed: 0.010 s
+fr.familiar.featureide.FMLKSynthesisSATandBDDTest.test1[14] -- Time elapsed: 0.011 s
+fr.familiar.featureide.FMLKSynthesisSATandBDDTest.test1[15] -- Time elapsed: 0.086 s
+fr.familiar.featureide.FMLKSynthesisSATandBDDTest.test1[16] -- Time elapsed: 0.008 s <<< ERROR!
+java.lang.IllegalArgumentException: edge cannot be null!
+	at gsd.synthesis.FeatureGraph.checkEdgeExists(FeatureGraph.java:938)
+	at gsd.synthesis.FeatureGraph.removeEdge(FeatureGraph.java:291)
+	at fr.familiar.fm.converter.FeatureModelUtil.unfoldGroup(FeatureModelUtil.java:102)
+	at fr.familiar.fm.converter.FeatureModelUtil.normalizeMultiGroups(FeatureModelUtil.java:64)
+	at fr.familiar.fm.featureide.FMLtoFeatureIDE.transformToModel(FMLtoFeatureIDE.java:299)
+	at fr.familiar.fm.featureide.FMLtoFeatureIDE.convertWithModelToModel(FMLtoFeatureIDE.java:295)
+	at fr.familiar.fm.featureide.FMLtoFeatureIDE.convert(FMLtoFeatureIDE.java:273)
+	at fr.familiar.experimental.featureide.ConstraintAdderFeatureIDE.<init>(ConstraintAdderFeatureIDE.java:54)
+	at fr.familiar.operations.KSynthesis.getAdderConstraint(KSynthesis.java:611)
+	at fr.familiar.operations.KSynthesisBDD.build(KSynthesisBDD.java:226)
+	at fr.familiar.featureide.FMLKSynthesisSATandBDDTest.test1(FMLKSynthesisSATandBDDTest.java:119)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray2(ReflectionUtils.java:137)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:148)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:88)
+	at org.eclipse.tycho.surefire.osgibooter.OsgiSurefireBooter.run(OsgiSurefireBooter.java:140)
+	at org.eclipse.tycho.surefire.osgibooter.HeadlessTestApplication.start(HeadlessTestApplication.java:29)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+fr.familiar.featureide.FMLKSynthesisSATandBDDTest.test1[17] -- Time elapsed: 0.010 s
+fr.familiar.featureide.FMLKSynthesisSATandBDDTest.test1[18] -- Time elapsed: 0.009 s
+fr.familiar.featureide.FMLKSynthesisSATandBDDTest.test1[19] -- Time elapsed: 0.008 s
+fr.familiar.featureide.FMLKSynthesisSATandBDDTest.test1[20] -- Time elapsed: 0.009 s
+fr.familiar.featureide.FMLKSynthesisSATandBDDTest.test1[21] -- Time elapsed: 0.007 s
+fr.familiar.featureide.FMLKSynthesisSATandBDDTest.test1[22] -- Time elapsed: 0.007 s

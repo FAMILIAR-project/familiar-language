@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.FMLCliquesTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.055 s -- in fr.familiar.FMLCliquesTest
+fr.familiar.FMLCliquesTest.testCliqueFar -- Time elapsed: 0.006 s
+fr.familiar.FMLCliquesTest.test1 -- Time elapsed: 0.007 s
+fr.familiar.FMLCliquesTest.test2 -- Time elapsed: 0.006 s
+fr.familiar.FMLCliquesTest.test3 -- Time elapsed: 0.007 s
+fr.familiar.FMLCliquesTest.testMutexCliques1 -- Time elapsed: 0.007 s
+fr.familiar.FMLCliquesTest.testBenavides -- Time elapsed: 0.007 s
+fr.familiar.FMLCliquesTest.testBenavides2 -- Time elapsed: 0.007 s
+fr.familiar.FMLCliquesTest.testSegura -- Time elapsed: 0.006 s

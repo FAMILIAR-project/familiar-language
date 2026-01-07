@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.FMLScriptTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.146 s -- in fr.familiar.FMLScriptTest
+fr.familiar.FMLScriptTest.testExternalScript1 -- Time elapsed: 0.020 s
+fr.familiar.FMLScriptTest.testExternalScript2 -- Time elapsed: 0.017 s
+fr.familiar.FMLScriptTest.testExternalScript3 -- Time elapsed: 0.025 s
+fr.familiar.FMLScriptTest.testExternalScript4 -- Time elapsed: 0.030 s
+fr.familiar.FMLScriptTest skipped
+fr.familiar.FMLScriptTest.testInternalScript1 -- Time elapsed: 0.016 s
+fr.familiar.FMLScriptTest.testInternalScript2 -- Time elapsed: 0.014 s
+fr.familiar.FMLScriptTest.testInternalScript3 -- Time elapsed: 0.024 s

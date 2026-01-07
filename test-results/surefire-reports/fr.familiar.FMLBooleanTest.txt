@@ -1,0 +1,5 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.FMLBooleanTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 s -- in fr.familiar.FMLBooleanTest
+fr.familiar.FMLBooleanTest.testBool1 -- Time elapsed: 0.008 s

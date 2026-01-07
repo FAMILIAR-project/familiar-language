@@ -1,0 +1,23 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.FMLFMBuilderTest
+-------------------------------------------------------------------------------
+Tests run: 19, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.118 s -- in fr.familiar.FMLFMBuilderTest
+fr.familiar.FMLFMBuilderTest.testConstraints1 -- Time elapsed: 0.008 s
+fr.familiar.FMLFMBuilderTest.testConstraints2 -- Time elapsed: 0.008 s
+fr.familiar.FMLFMBuilderTest.testConstraints3 -- Time elapsed: 0.009 s
+fr.familiar.FMLFMBuilderTest.testConstraints4 -- Time elapsed: 0.007 s
+fr.familiar.FMLFMBuilderTest.testConstraints5 -- Time elapsed: 0.006 s
+fr.familiar.FMLFMBuilderTest.testConstraints6 -- Time elapsed: 0.006 s
+fr.familiar.FMLFMBuilderTest.testORGroup1 -- Time elapsed: 0.006 s
+fr.familiar.FMLFMBuilderTest.testORGroup2 -- Time elapsed: 0.005 s
+fr.familiar.FMLFMBuilderTest.testORGroup3 -- Time elapsed: 0.006 s
+fr.familiar.FMLFMBuilderTest.testXORGroup1 -- Time elapsed: 0.005 s
+fr.familiar.FMLFMBuilderTest.testXORGroup2 -- Time elapsed: 0.005 s
+fr.familiar.FMLFMBuilderTest.testXORGroup3 -- Time elapsed: 0.005 s
+fr.familiar.FMLFMBuilderTest.testNotWellFormed1 -- Time elapsed: 0.005 s
+fr.familiar.FMLFMBuilderTest.testNotWellFormed2 -- Time elapsed: 0.005 s
+fr.familiar.FMLFMBuilderTest.testNotWellFormed3 -- Time elapsed: 0.006 s
+fr.familiar.FMLFMBuilderTest.testNotWellFormed4 -- Time elapsed: 0.008 s
+fr.familiar.FMLFMBuilderTest.testNotWellFormed5 -- Time elapsed: 0.006 s
+fr.familiar.FMLFMBuilderTest.testNotWellFormed6 -- Time elapsed: 0.005 s
+fr.familiar.FMLFMBuilderTest.testNotWellFormed7 -- Time elapsed: 0.006 s

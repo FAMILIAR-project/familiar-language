@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.FMLPhDThesisTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.040 s -- in fr.familiar.FMLPhDThesisTest
+fr.familiar.FMLPhDThesisTest.testFooExample -- Time elapsed: 0.009 s
+fr.familiar.FMLPhDThesisTest.testInternalBDDTranslation -- Time elapsed: 0.008 s
+fr.familiar.FMLPhDThesisTest.testFooSCPExample -- Time elapsed: 0.009 s
+fr.familiar.FMLPhDThesisTest.testAnomaliesExample -- Time elapsed: 0.014 s

@@ -1,0 +1,5 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.regression.FMLSlicerEnforcerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.019 s -- in fr.familiar.regression.FMLSlicerEnforcerTest
+fr.familiar.regression.FMLSlicerEnforcerTest.repeatCorrecting[0] -- Time elapsed: 0.018 s

@@ -1,0 +1,27 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.FMLAggregateTest
+-------------------------------------------------------------------------------
+Tests run: 23, Failures: 0, Errors: 0, Skipped: 5, Time elapsed: 0.195 s -- in fr.familiar.FMLAggregateTest
+fr.familiar.FMLAggregateTest skipped
+fr.familiar.FMLAggregateTest.withoutConstraints -- Time elapsed: 0.008 s
+fr.familiar.FMLAggregateTest.unamedAggregatedFM -- Time elapsed: 0.007 s
+fr.familiar.FMLAggregateTest.withConstraints -- Time elapsed: 0.006 s
+fr.familiar.FMLAggregateTest.withInternalConstraints1 -- Time elapsed: 0.007 s
+fr.familiar.FMLAggregateTest.withInternalConstraints2 -- Time elapsed: 0.008 s
+fr.familiar.FMLAggregateTest.testMap1 -- Time elapsed: 0.008 s
+fr.familiar.FMLAggregateTest.testMap2 -- Time elapsed: 0.007 s
+fr.familiar.FMLAggregateTest.testMap3 -- Time elapsed: 0.007 s
+fr.familiar.FMLAggregateTest.testMap4 -- Time elapsed: 0.007 s
+fr.familiar.FMLAggregateTest.testMap6 -- Time elapsed: 0.007 s
+fr.familiar.FMLAggregateTest skipped
+fr.familiar.FMLAggregateTest.testMap8 -- Time elapsed: 0.007 s
+fr.familiar.FMLAggregateTest.aggregateUnvalid1 -- Time elapsed: 0.008 s
+fr.familiar.FMLAggregateTest.testSpecificationConstraints -- Time elapsed: 0.006 s
+fr.familiar.FMLAggregateTest.testAggregate1 -- Time elapsed: 0.007 s
+fr.familiar.FMLAggregateTest.testAggregate2 -- Time elapsed: 0.007 s
+fr.familiar.FMLAggregateTest skipped
+fr.familiar.FMLAggregateTest skipped
+fr.familiar.FMLAggregateTest.aggregateModularWay -- Time elapsed: 0.060 s
+fr.familiar.FMLAggregateTest.cleanup1 -- Time elapsed: 0.018 s
+fr.familiar.FMLAggregateTest skipped
+fr.familiar.FMLAggregateTest.testAddConstraint1 -- Time elapsed: 0.010 s

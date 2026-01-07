@@ -1,0 +1,14 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.FeatureNodeUtilsTest
+-------------------------------------------------------------------------------
+Tests run: 10, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.066 s -- in fr.familiar.FeatureNodeUtilsTest
+fr.familiar.FeatureNodeUtilsTest.testOR1 -- Time elapsed: 0.006 s
+fr.familiar.FeatureNodeUtilsTest.testOR2 -- Time elapsed: 0.006 s
+fr.familiar.FeatureNodeUtilsTest.testMultiGroup1 -- Time elapsed: 0.007 s
+fr.familiar.FeatureNodeUtilsTest.testMultiGroup2 -- Time elapsed: 0.006 s
+fr.familiar.FeatureNodeUtilsTest.testMAND1 -- Time elapsed: 0.007 s
+fr.familiar.FeatureNodeUtilsTest.testMAND2 -- Time elapsed: 0.009 s
+fr.familiar.FeatureNodeUtilsTest.testOPT1 -- Time elapsed: 0.006 s
+fr.familiar.FeatureNodeUtilsTest.testOPT2 -- Time elapsed: 0.007 s
+fr.familiar.FeatureNodeUtilsTest.testXOR1 -- Time elapsed: 0.005 s
+fr.familiar.FeatureNodeUtilsTest.testXOR2 -- Time elapsed: 0.006 s

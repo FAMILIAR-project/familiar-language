@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.FMLRendererTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.387 s -- in fr.familiar.FMLRendererTest
+fr.familiar.FMLRendererTest.testZest1 -- Time elapsed: 0.317 s
+fr.familiar.FMLRendererTest.testDot1 -- Time elapsed: 0.031 s
+fr.familiar.FMLRendererTest.testDot2 -- Time elapsed: 0.027 s

@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.FMLConstraintSimplificatorTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.063 s -- in fr.familiar.FMLConstraintSimplificatorTest
+fr.familiar.FMLConstraintSimplificatorTest.testDetection[0] -- Time elapsed: 0.008 s
+fr.familiar.FMLConstraintSimplificatorTest.testDetection[1] -- Time elapsed: 0.007 s
+fr.familiar.FMLConstraintSimplificatorTest.testDetection[2] -- Time elapsed: 0.007 s
+fr.familiar.FMLConstraintSimplificatorTest.testDetection[3] -- Time elapsed: 0.009 s
+fr.familiar.FMLConstraintSimplificatorTest.testDetection[4] -- Time elapsed: 0.007 s
+fr.familiar.FMLConstraintSimplificatorTest.testDetection[5] -- Time elapsed: 0.008 s
+fr.familiar.FMLConstraintSimplificatorTest.testDetection[6] -- Time elapsed: 0.009 s
+fr.familiar.FMLConstraintSimplificatorTest.testDetection[7] -- Time elapsed: 0.008 s

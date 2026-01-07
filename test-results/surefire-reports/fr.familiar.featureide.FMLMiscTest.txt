@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.featureide.FMLMiscTest
+-------------------------------------------------------------------------------
+Tests run: 13, Failures: 0, Errors: 0, Skipped: 2, Time elapsed: 0.127 s -- in fr.familiar.featureide.FMLMiscTest
+fr.familiar.featureide.FMLMiscTest.testDependency1 -- Time elapsed: 0.012 s
+fr.familiar.featureide.FMLMiscTest.testSebSeduite -- Time elapsed: 0.007 s
+fr.familiar.featureide.FMLMiscTest.testCTRC1 -- Time elapsed: 0.010 s
+fr.familiar.featureide.FMLMiscTest.testMutex -- Time elapsed: 0.008 s
+fr.familiar.featureide.FMLMiscTest.testCompare1 -- Time elapsed: 0.010 s
+fr.familiar.featureide.FMLMiscTest.testConvert1 -- Time elapsed: 0.015 s
+fr.familiar.featureide.FMLMiscTest skipped
+fr.familiar.featureide.FMLMiscTest.testSetAlternative1 -- Time elapsed: 0.008 s
+fr.familiar.featureide.FMLMiscTest.testForeach1 -- Time elapsed: 0.030 s
+fr.familiar.featureide.FMLMiscTest.testIsRoot -- Time elapsed: 0.008 s
+fr.familiar.featureide.FMLMiscTest.testMutex2 -- Time elapsed: 0.008 s
+fr.familiar.featureide.FMLMiscTest.testInsert1 -- Time elapsed: 0.009 s
+fr.familiar.featureide.FMLMiscTest skipped

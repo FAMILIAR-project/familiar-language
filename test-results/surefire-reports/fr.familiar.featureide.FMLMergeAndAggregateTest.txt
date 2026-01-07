@@ -1,0 +1,34 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.featureide.FMLMergeAndAggregateTest
+-------------------------------------------------------------------------------
+Tests run: 30, Failures: 0, Errors: 0, Skipped: 15, Time elapsed: 0.225 s -- in fr.familiar.featureide.FMLMergeAndAggregateTest
+fr.familiar.featureide.FMLMergeAndAggregateTest.testMergeUnion[0] -- Time elapsed: 0.010 s
+fr.familiar.featureide.FMLMergeAndAggregateTest skipped
+fr.familiar.featureide.FMLMergeAndAggregateTest.testMergeUnion[1] -- Time elapsed: 0.010 s
+fr.familiar.featureide.FMLMergeAndAggregateTest skipped
+fr.familiar.featureide.FMLMergeAndAggregateTest.testMergeUnion[2] -- Time elapsed: 0.009 s
+fr.familiar.featureide.FMLMergeAndAggregateTest skipped
+fr.familiar.featureide.FMLMergeAndAggregateTest.testMergeUnion[3] -- Time elapsed: 0.010 s
+fr.familiar.featureide.FMLMergeAndAggregateTest skipped
+fr.familiar.featureide.FMLMergeAndAggregateTest.testMergeUnion[4] -- Time elapsed: 0.011 s
+fr.familiar.featureide.FMLMergeAndAggregateTest skipped
+fr.familiar.featureide.FMLMergeAndAggregateTest.testMergeUnion[5] -- Time elapsed: 0.010 s
+fr.familiar.featureide.FMLMergeAndAggregateTest skipped
+fr.familiar.featureide.FMLMergeAndAggregateTest.testMergeUnion[6] -- Time elapsed: 0.009 s
+fr.familiar.featureide.FMLMergeAndAggregateTest skipped
+fr.familiar.featureide.FMLMergeAndAggregateTest.testMergeUnion[7] -- Time elapsed: 0.012 s
+fr.familiar.featureide.FMLMergeAndAggregateTest skipped
+fr.familiar.featureide.FMLMergeAndAggregateTest.testMergeUnion[8] -- Time elapsed: 0.037 s
+fr.familiar.featureide.FMLMergeAndAggregateTest skipped
+fr.familiar.featureide.FMLMergeAndAggregateTest.testMergeUnion[9] -- Time elapsed: 0.015 s
+fr.familiar.featureide.FMLMergeAndAggregateTest skipped
+fr.familiar.featureide.FMLMergeAndAggregateTest.testMergeUnion[10] -- Time elapsed: 0.013 s
+fr.familiar.featureide.FMLMergeAndAggregateTest skipped
+fr.familiar.featureide.FMLMergeAndAggregateTest.testMergeUnion[11] -- Time elapsed: 0.032 s
+fr.familiar.featureide.FMLMergeAndAggregateTest skipped
+fr.familiar.featureide.FMLMergeAndAggregateTest.testMergeUnion[12] -- Time elapsed: 0.010 s
+fr.familiar.featureide.FMLMergeAndAggregateTest skipped
+fr.familiar.featureide.FMLMergeAndAggregateTest.testMergeUnion[13] -- Time elapsed: 0.011 s
+fr.familiar.featureide.FMLMergeAndAggregateTest skipped
+fr.familiar.featureide.FMLMergeAndAggregateTest.testMergeUnion[14] -- Time elapsed: 0.023 s
+fr.familiar.featureide.FMLMergeAndAggregateTest skipped

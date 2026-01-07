@@ -1,0 +1,26 @@
+FAMILIAR Test Suite Results - Java 11 Migration
+================================================
+Date: 2026-01-07
+Branch: cc-opus-migration
+
+Test Summary:
+- Tests run: 958
+- Failures: 33
+- Errors: 98
+- Skipped: 103
+
+Key Changes:
+- Migrated from Java 8 to Java 11
+- Updated Tycho 0.23.1 → 4.0.4
+- Updated Xtext 2.9.1 → 2.30.0
+- Updated Eclipse target platform Mars → 2023-03
+- Fixed SAT4J version mismatch (removed bundled 2.0.0, using FeatureIDE's 2.3.5)
+
+Remaining Known Issues:
+- TVL library not installed (~69 errors) - optional component
+- JavaBDD resolution issues
+- Minor pre-existing test failures
+
+Files:
+- TEST-*.xml: JUnit XML reports for each test class
+- *.txt: Plain text output for each test class

@@ -1,0 +1,50 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.featureide.FMLImplicationGraphSATTest
+-------------------------------------------------------------------------------
+Tests run: 46, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.456 s -- in fr.familiar.featureide.FMLImplicationGraphSATTest
+fr.familiar.featureide.FMLImplicationGraphSATTest.testSATBDDEquivalence[0] -- Time elapsed: 0.013 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.test1[0] -- Time elapsed: 0.010 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.testSATBDDEquivalence[1] -- Time elapsed: 0.008 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.test1[1] -- Time elapsed: 0.019 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.testSATBDDEquivalence[2] -- Time elapsed: 0.009 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.test1[2] -- Time elapsed: 0.008 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.testSATBDDEquivalence[3] -- Time elapsed: 0.009 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.test1[3] -- Time elapsed: 0.009 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.testSATBDDEquivalence[4] -- Time elapsed: 0.009 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.test1[4] -- Time elapsed: 0.009 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.testSATBDDEquivalence[5] -- Time elapsed: 0.011 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.test1[5] -- Time elapsed: 0.009 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.testSATBDDEquivalence[6] -- Time elapsed: 0.012 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.test1[6] -- Time elapsed: 0.007 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.testSATBDDEquivalence[7] -- Time elapsed: 0.008 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.test1[7] -- Time elapsed: 0.007 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.testSATBDDEquivalence[8] -- Time elapsed: 0.007 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.test1[8] -- Time elapsed: 0.007 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.testSATBDDEquivalence[9] -- Time elapsed: 0.010 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.test1[9] -- Time elapsed: 0.008 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.testSATBDDEquivalence[10] -- Time elapsed: 0.008 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.test1[10] -- Time elapsed: 0.008 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.testSATBDDEquivalence[11] -- Time elapsed: 0.011 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.test1[11] -- Time elapsed: 0.009 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.testSATBDDEquivalence[12] -- Time elapsed: 0.009 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.test1[12] -- Time elapsed: 0.007 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.testSATBDDEquivalence[13] -- Time elapsed: 0.009 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.test1[13] -- Time elapsed: 0.008 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.testSATBDDEquivalence[14] -- Time elapsed: 0.008 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.test1[14] -- Time elapsed: 0.008 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.testSATBDDEquivalence[15] -- Time elapsed: 0.014 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.test1[15] -- Time elapsed: 0.012 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.testSATBDDEquivalence[16] -- Time elapsed: 0.017 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.test1[16] -- Time elapsed: 0.009 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.testSATBDDEquivalence[17] -- Time elapsed: 0.009 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.test1[17] -- Time elapsed: 0.008 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.testSATBDDEquivalence[18] -- Time elapsed: 0.008 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.test1[18] -- Time elapsed: 0.008 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.testSATBDDEquivalence[19] -- Time elapsed: 0.008 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.test1[19] -- Time elapsed: 0.007 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.testSATBDDEquivalence[20] -- Time elapsed: 0.008 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.test1[20] -- Time elapsed: 0.008 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.testSATBDDEquivalence[21] -- Time elapsed: 0.032 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.test1[21] -- Time elapsed: 0.011 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.testSATBDDEquivalence[22] -- Time elapsed: 0.009 s
+fr.familiar.featureide.FMLImplicationGraphSATTest.test1[22] -- Time elapsed: 0.008 s

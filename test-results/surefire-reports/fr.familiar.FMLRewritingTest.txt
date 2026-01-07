@@ -1,0 +1,62 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.FMLRewritingTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.099 s <<< FAILURE! -- in fr.familiar.FMLRewritingTest
+fr.familiar.FMLRewritingTest.testReconciliationClarke1 -- Time elapsed: 0.017 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "gsd.synthesis.Formula.isZero()" because "this._f" is null
+	at fr.familiar.operations.FormulaAnalyzer.computeCoreFeatures(FormulaAnalyzer.java:105)
+	at fr.familiar.operations.FMSlicerBDD.checkRootsWellFormedRule(FMSlicerBDD.java:134)
+	at fr.familiar.operations.FMSlicerBDD._computeFMVSliced(FMSlicerBDD.java:91)
+	at fr.familiar.operations.FMSlicerBDD.sliceFM(FMSlicerBDD.java:67)
+	at fr.familiar.variable.FeatureModelVariable.slice(FeatureModelVariable.java:1904)
+	at fr.familiar.variable.FeatureModelVariable.slice(FeatureModelVariable.java:1891)
+	at fr.familiar.FMLRewritingTest.abstractFtsByFt(FMLRewritingTest.java:341)
+	at fr.familiar.FMLRewritingTest.testReconciliationClarke1(FMLRewritingTest.java:104)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:316)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:240)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:214)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:155)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.apache.maven.surefire.api.util.ReflectionUtils.invokeMethodWithArray2(ReflectionUtils.java:137)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:148)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:88)
+	at org.eclipse.tycho.surefire.osgibooter.OsgiSurefireBooter.run(OsgiSurefireBooter.java:140)
+	at org.eclipse.tycho.surefire.osgibooter.HeadlessTestApplication.start(HeadlessTestApplication.java:29)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:136)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:402)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:596)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1467)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1440)
+
+fr.familiar.FMLRewritingTest.testReconciliationClarke2 -- Time elapsed: 0.017 s
+fr.familiar.FMLRewritingTest.testReconciliationClarke3 -- Time elapsed: 0.016 s
+fr.familiar.FMLRewritingTest.testReconciliationClarke1bis -- Time elapsed: 0.010 s
+fr.familiar.FMLRewritingTest.testReconciliationClarke3bis -- Time elapsed: 0.019 s
+fr.familiar.FMLRewritingTest.testRefactoring -- Time elapsed: 0.019 s

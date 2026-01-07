@@ -1,0 +1,7 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.FMLIntegerTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 1, Time elapsed: 0.014 s -- in fr.familiar.FMLIntegerTest
+fr.familiar.FMLIntegerTest.testInteger1 -- Time elapsed: 0.007 s
+fr.familiar.FMLIntegerTest.testInteger2 -- Time elapsed: 0.007 s
+fr.familiar.FMLIntegerTest skipped

@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: fr.familiar.FMLCAiSE2012DiffTest
+-------------------------------------------------------------------------------
+Tests run: 8, Failures: 0, Errors: 0, Skipped: 4, Time elapsed: 0.059 s -- in fr.familiar.FMLCAiSE2012DiffTest
+fr.familiar.FMLCAiSE2012DiffTest.testWasowskiToGeneralization -- Time elapsed: 0.021 s
+fr.familiar.FMLCAiSE2012DiffTest skipped
+fr.familiar.FMLCAiSE2012DiffTest.testWasowski2 -- Time elapsed: 0.015 s
+fr.familiar.FMLCAiSE2012DiffTest.testWasowski3 -- Time elapsed: 0.008 s
+fr.familiar.FMLCAiSE2012DiffTest skipped
+fr.familiar.FMLCAiSE2012DiffTest skipped
+fr.familiar.FMLCAiSE2012DiffTest.testSlicingAndDifferencing -- Time elapsed: 0.013 s
+fr.familiar.FMLCAiSE2012DiffTest skipped
