@@ -256,9 +256,6 @@ public class FMLSlicerEnforcerTest extends FMLSlicerUtilityTest {
 		FeatureModelVariable fmvExpected = FM("fmSliceExpected",
 				"FM (A : B C [D]; C : (E|F); E <-> D ; )");
 
-		FileSerializer.write("output/" + fm1.getIdentifier() + ".html",
-				fm1.toProtovis()); // _fmID
-
 		assertFormulaEquals(fmvExpected.getFormula(), fm2.getFormula());
 		assertHierarchyEquals(fmvExpected, fm2);
 

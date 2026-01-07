@@ -1,7 +1,0 @@
-%Relationships
-R : [F1] [F2] ;
-
-%Attributes
-
-%Constraints
-

@@ -1,8 +1,0 @@
-graph G {
-  Reports;
-  0;
-  1;
-  Client_Payment;
-  Reports -- 1;
-  Client_Payment -- 1;
-}

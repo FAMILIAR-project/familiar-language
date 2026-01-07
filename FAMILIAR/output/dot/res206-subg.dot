@@ -1,8 +1,0 @@
-graph G {
-  spanish;
-  0;
-  svg;
-  1;
-  svg -- 1;
-  spanish -- 1;
-}

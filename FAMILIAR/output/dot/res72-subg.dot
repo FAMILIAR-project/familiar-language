@@ -1,8 +1,0 @@
-graph G {
-  BasicTwoDview;
-  0;
-  Changemaximumlimitforwithdrawal;
-  1;
-  Changemaximumlimitforwithdrawal -- 1;
-  BasicTwoDview -- 1;
-}

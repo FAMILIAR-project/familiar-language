@@ -1,8 +1,0 @@
-graph G {
-  Search;
-  cycle;
-  0;
-  1;
-  Search -- 1;
-  cycle -- 1;
-}

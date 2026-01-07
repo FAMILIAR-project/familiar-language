@@ -1,1 +1,0 @@
-FM (Car: Sensors [AutomatedDrivingController] ; Sensors: [ForwardRangeFinder] [LateralRangeFinder] ; AutomatedDrivingController: [ParallelParking] CollisionAvoidanceBraking ; CollisionAvoidanceBraking: (EnhancedAvoidance|StandardAvoidance) ; (ParallelParking -> LateralRangeFinder); (EnhancedAvoidance -> ForwardRangeFinder); )

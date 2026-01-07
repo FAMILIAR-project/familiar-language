@@ -1,8 +1,0 @@
-graph G {
-  engine;
-  methods;
-  0;
-  1;
-  methods -- 1;
-  engine -- 1;
-}

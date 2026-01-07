@@ -1,8 +1,0 @@
-graph G {
-  modem;
-  wap;
-  0;
-  1;
-  modem -- 1;
-  wap -- 1;
-}

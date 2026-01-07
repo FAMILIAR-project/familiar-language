@@ -1,1 +1,0 @@
-FM (cardproduct: Payments Rewards InterestRates [Card] Credit FeesandCharges ; Payments: [Deferred] ; Rewards: [GOBusinessRewards] [FlybyPoints] [FuelSavings] ; InterestRates: [InterestFreeDays] [BalanceTransferRate] InterestRate [CashAdvanceRate] VariableInterestRate ; Card: [MultipleCards] [NameonCard] ; Credit: MinimumCreditLimit MaximumCreditLimit ; )

@@ -1,8 +1,0 @@
-graph G {
-  input_output;
-  ascendant;
-  0;
-  1;
-  input_output -- 1;
-  ascendant -- 1;
-}

@@ -1,1 +1,0 @@
-FM (MobilePhone: Settings UtilityFunctions [Media] [Connectivity] ; Settings: [JavaSupport] OS ; UtilityFunctions: Calls [Games] Messaging RingingTones Alarm ; Media: [MPThree] Camera ; Connectivity: [Bluetooth] USB ; OS: (WinCE|Symbian) ; Messaging: (SMS|MMS)+ ; (Games -> JavaSupport); )

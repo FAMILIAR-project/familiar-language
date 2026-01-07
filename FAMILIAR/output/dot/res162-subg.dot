@@ -1,8 +1,0 @@
-graph G {
-  Bluetooth;
-  Local;
-  0;
-  1;
-  Bluetooth -- 1;
-  Local -- 1;
-}

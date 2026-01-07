@@ -1,8 +1,0 @@
-graph G {
-  ExecutiveDashboard;
-  ProgramandControlManagement;
-  0;
-  1;
-  ExecutiveDashboard -- 1;
-  ProgramandControlManagement -- 1;
-}

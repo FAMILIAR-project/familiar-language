@@ -1,1 +1,0 @@
-FM (InsurancePolicy: [ThirdPartyServices] Reporting DataCapture U_W Financials LOB ; ThirdPartyServices: [VINValidation] [AddDOTValidation] [CreditCheck] ; DataCapture: [housedetails] clientdata [cardetails] ; U_W: decision ; LOB: (Auto|watercraft)+ [Home] [commercial] ; CreditCheck: (simple|advanced) ; Auto: (TP|Comprehensive)+ ; )

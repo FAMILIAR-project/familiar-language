@@ -61,7 +61,6 @@ import splar.plugins.reasoners.sat.sat4j.ReasoningWithSAT;
 import com.google.common.collect.Sets;
 
 import fr.familiar.experimental.FGroup;
-import fr.familiar.experimental.FMtoProtovis;
 import fr.familiar.experimental.MutexGroup;
 import fr.familiar.experimental.XorGroup;
 import fr.familiar.fm.FGroupBuilder;
@@ -1277,12 +1276,6 @@ public class FeatureModelVariable extends VariableImpl implements FMLFeatureMode
 		return getSpecificValue();
 	}
 
-	public String toProtovis() {
-		// TODO void fm?
-		return new FMtoProtovis(this).convert();
-	}
-
-	
 	public Comparison compareSAT(FeatureModelVariable rfmv,	boolean refactoringBDD) {
 		// FIXME @FeatureIDE 
 		return new FMComparatorSATFeatureIDE(this, rfmv, refactoringBDD).compare();

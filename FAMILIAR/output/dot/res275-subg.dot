@@ -1,8 +1,0 @@
-graph G {
-  li_ion;
-  ni_mh;
-  0;
-  1;
-  ni_mh -- 1;
-  li_ion -- 1;
-}
