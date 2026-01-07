@@ -30,7 +30,6 @@ import org.xtext.example.mydsl.fml.OpSelection;
 
 import com.google.common.collect.Sets;
 
-import fr.familiar.gui.Tab2EnvVar;
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.interpreter.NSFactory;
 import fr.familiar.operations.FormulaAnalyzer;
@@ -294,12 +293,10 @@ public class ConfigurationVariableBDDImpl extends ConfigurationVariable {
 	 */
 	@Override
 	public void gdisplay() {
-		
-		// TODO hack we should refactor out
+		// GUI removed - gdisplay() is only available in Eclipse mode
 		if (!FMLShell.getInstance().isEclipseBased()) {
-			Tab2EnvVar.INSTANCE.createNewConfigurationTab(this, true);			
+			FMLShell.getInstance().printWarning("gdisplay() is only available in Eclipse mode.");
 		}
-		
 	}
 
 	/* (non-Javadoc)

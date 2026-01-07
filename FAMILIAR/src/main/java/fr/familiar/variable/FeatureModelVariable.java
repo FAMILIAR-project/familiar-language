@@ -75,7 +75,6 @@ import fr.familiar.fm.basic.FMLFeatureModel;
 import fr.familiar.fm.converter.ExclusionGraph;
 import fr.familiar.fm.featureide.AllConfigsSAT;
 import fr.familiar.fm.featureide.SATFeatureIDEFormula;
-import fr.familiar.gui.GDisplayPrefuseHandler;
 import fr.familiar.interpreter.ComparisonStrategy;
 import fr.familiar.interpreter.FMLShell;
 import fr.familiar.interpreter.NSFactory;
@@ -428,18 +427,11 @@ public class FeatureModelVariable extends VariableImpl implements FMLFeatureMode
 	 * */
 	public void gdisplay() {
 		if (FMLShell.getInstance().isEclipseBased()) {
-			// FIXME @FeatureIDE 
+			// FIXME @FeatureIDE
 			new FMDisplayFeatureIDE(this).perform() ;
-		} else { 
-			// Prefuse stuff: First, create an event source with FMV name
-	        final GDisplayPrefuseEvent gdpEvent = new GDisplayPrefuseEvent(this.name);
-	        // Second, create an observer
-	        final GDisplayPrefuseHandler gdpHandler = new GDisplayPrefuseHandler();
-	        // Third, subscribe the observer to the event source
-	        gdpEvent.addObserver(gdpHandler);
-	        // Finally, start the event thread
-	        Thread thread = new Thread(gdpEvent);
-	        thread.start();
+		} else {
+			// GUI removed - use toDOT() or convert() for visualization
+			FMLShell.getInstance().printWarning("gdisplay() is only available in Eclipse mode. Use toDOT() for Graphviz output.");
 		}
 	}
 

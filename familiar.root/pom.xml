@@ -7,7 +7,6 @@
   <packaging>pom</packaging>
  <modules>
     <module>../FML3rdPartiesForSynthesis</module>
-    <module>../FML3rdPartiesMisc</module>
     <module>../featureide-dependencies</module>
     <module>../org.xtext.example.fml.parent</module>
     <module>../SPLAR-plugin</module>

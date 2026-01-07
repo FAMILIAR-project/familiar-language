@@ -23,14 +23,8 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.io.PrintStream;
-
-import com.martiansoftware.jsap.FlaggedOption;
-import com.martiansoftware.jsap.JSAP;
-import com.martiansoftware.jsap.JSAPException;
-import com.martiansoftware.jsap.JSAPResult;
-import com.martiansoftware.jsap.QualifiedSwitch;
-import com.martiansoftware.jsap.Switch;
-import com.martiansoftware.jsap.UnflaggedOption;
+import java.util.ArrayList;
+import java.util.List;
 
 import fr.familiar.interpreter.FMLShell;
 
@@ -39,113 +33,78 @@ import fr.familiar.interpreter.FMLShell;
  */
 public class FML {
 
-	/**
-	 * 
-	 */
-	public FML() {
-		// TODO Auto-generated constructor stub
-	}
+	public static void main(String[] args) {
+		boolean verbose = false;
+		boolean help = false;
+		boolean version = false;
+		String filename = null;
+		String outputPath = null;
+		List<String> paths = new ArrayList<>();
 
-	public static void main(String[] args) throws JSAPException {
-
-		JSAP jsap = new JSAP();
-
-		// create a switch we'll access using the id "verbose".
-		// it has the short flag "-v" and the long flag "--verbose"
-		// this will govern whether we say "Hi" or "Hello".
-		Switch sw1 = new Switch("verbose").setShortFlag('v').setLongFlag(
-				"verbose");
-		sw1.setHelp("Requests verbose output.");
-		jsap.registerParameter(sw1);
-
-		Switch sw2 = new Switch("help").setShortFlag('h').setLongFlag("help");
-
-		sw2.setHelp("Help.");
-		jsap.registerParameter(sw2);
-
-		Switch sw3 = new Switch("version").setLongFlag("version");
-
-		sw3.setHelp("Version of FAMILIAR");
-		jsap.registerParameter(sw3);
-
-		QualifiedSwitch qsw1 = (QualifiedSwitch) (new QualifiedSwitch("paths")
-				.setShortFlag('p').setRequired(false).setLongFlag("path")
-				.setList(true).setListSeparator(','));
-
-		qsw1.setHelp("Paths to consider (FAMILIAR files should be located in those paths)");
-		jsap.registerParameter(qsw1);
-
-		FlaggedOption output1 = new FlaggedOption("output")
-				.setStringParser(JSAP.STRING_PARSER).setRequired(false)
-				.setShortFlag('o').setLongFlag("output");
-
-		output1.setHelp("Output folder where FAMILIAR files are produced.");
-		jsap.registerParameter(output1);
-
-		// Create an unflagged option called "name"
-		UnflaggedOption opt2 = new UnflaggedOption("filename").setStringParser(
-				JSAP.STRING_PARSER).setRequired(false);
-
-		opt2.setHelp("FAMILIAR file to interpret.");
-		jsap.registerParameter(opt2);
-
-		JSAPResult config = jsap.parse(args);
-
-		// check whether the command line was valid, and if it wasn't,
-		// display usage information and exit.
-		if (!config.success()) {
-
-			// print out specific error messages describing the problems
-			// with the command line, THEN print usage, THEN print full
-			// help. This is called "beating the user with a clue stick."
-			for (java.util.Iterator errs = config.getErrorMessageIterator(); errs
-					.hasNext();) {
-				System.err.println("Error: " + errs.next());
+		// Simple argument parsing
+		for (int i = 0; i < args.length; i++) {
+			String arg = args[i];
+			if (arg.equals("-v") || arg.equals("--verbose")) {
+				verbose = true;
+			} else if (arg.equals("-h") || arg.equals("--help")) {
+				help = true;
+			} else if (arg.equals("--version")) {
+				version = true;
+			} else if (arg.equals("-o") || arg.equals("--output")) {
+				if (i + 1 < args.length) {
+					outputPath = args[++i];
+				} else {
+					System.err.println("Error: -o/--output requires an argument");
+					displayUsage(System.err);
+					System.exit(1);
+				}
+			} else if (arg.equals("-p") || arg.equals("--path")) {
+				if (i + 1 < args.length) {
+					String pathList = args[++i];
+					for (String p : pathList.split(",")) {
+						paths.add(p.trim());
+					}
+				} else {
+					System.err.println("Error: -p/--path requires an argument");
+					displayUsage(System.err);
+					System.exit(1);
+				}
+			} else if (!arg.startsWith("-")) {
+				filename = arg;
+			} else {
+				System.err.println("Error: Unknown option: " + arg);
+				displayUsage(System.err);
+				System.exit(1);
 			}
-
-			displayUsage(jsap, System.err);
-			System.exit(1);
 		}
 
-		boolean help = config.getBoolean("help");
 		if (help) {
-			displayUsage(jsap, System.out);
+			displayUsage(System.out);
 			return;
 		}
 
-		// FML file to proceed
-		String filename = config.getString("filename");
-
-		InputStream in = null; // TODO
-		if (filename == null)
-			in = System.in;
-		else {
-			File file = new File(filename);
-			try {
-				in = new FileInputStream(file);
-			} catch (FileNotFoundException e) {
-				System.err.println("Unable to load the file "
-						+ e.getLocalizedMessage());
-				return;
-			}
-		}
-
-		FMLShell shell = FMLShell.instantiateStandalone(in);
-
-		boolean verbose = config.getBoolean("verbose");
-		shell.setVerbose(verbose);
-
-		boolean version = config.getBoolean("version");
 		if (version) {
 			System.out.println("version " + FMLShell.FML_VERSION);
 			return;
 		}
 
-		String outputpath = config.getString("output");
+		InputStream in;
+		if (filename == null) {
+			in = System.in;
+		} else {
+			File file = new File(filename);
+			try {
+				in = new FileInputStream(file);
+			} catch (FileNotFoundException e) {
+				System.err.println("Unable to load the file " + e.getLocalizedMessage());
+				return;
+			}
+		}
 
-		String[] paths = config.getStringArray("paths");
-		for (int i = 0; i < paths.length; ++i) {
-			String path = paths[i];
+		FMLShell shell = FMLShell.instantiateStandalone(in);
+		shell.setVerbose(verbose);
+
+		for (String path : paths) {
 			File f = new File(path);
 			if (!f.exists()) {
 				System.err.println("Path " + path + " does not exist");
@@ -159,17 +118,21 @@ public class FML {
 		}
 
 		shell.launch();
-
 	}
 
-	private static void displayUsage(JSAP jsap, PrintStream printer) {
+	private static void displayUsage(PrintStream printer) {
 		printer.println();
-
-		printer.println("Usage: java " + FML.class.getSimpleName());
-		printer.println("                " + jsap.getUsage());
+		printer.println("Usage: java " + FML.class.getSimpleName() + " [options] [filename]");
 		printer.println();
-		printer.println(jsap.getHelp());
-
+		printer.println("Options:");
+		printer.println("  -v, --verbose     Enable verbose output");
+		printer.println("  -h, --help        Display this help message");
+		printer.println("  --version         Display version information");
+		printer.println("  -o, --output DIR  Output folder for FAMILIAR files");
+		printer.println("  -p, --path PATHS  Comma-separated list of paths to search");
+		printer.println();
+		printer.println("Arguments:");
+		printer.println("  filename          FAMILIAR file to interpret (optional, reads stdin if not provided)");
+		printer.println();
 	}
-
 }
