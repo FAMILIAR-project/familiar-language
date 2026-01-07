@@ -12,7 +12,6 @@ Bundle-ClassPath: .,
  lib/jgraph-5.5.1.jar,
  lib/jgrapht-jdk1.6.jar,
  lib/jgraphx.jar,
- lib/pacogenIntern.jar,
  lib/semanticvectors-3.8.jar
 Bundle-Activator: fr.familiar.views.featureide.Activator
 Bundle-Vendor: %Bundle-Vendor.3
