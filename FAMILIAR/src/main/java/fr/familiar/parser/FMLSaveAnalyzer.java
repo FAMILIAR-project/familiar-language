@@ -148,8 +148,6 @@ public class FMLSaveAnalyzer extends FMLAbstractCommandAnalyzer {
 			return "xmi";
 		else if (format == FMFormat.FSPLOT)
 			return "xml";
-		else if (format == FMFormat.S2T2)
-			return "fmprimitives";
 		else if (format == FMFormat.FMLBDD)
 			return "fmlbdd";
 		else if (format == FMFormat.FMLBDD_ONLY)
@@ -173,8 +171,6 @@ public class FMLSaveAnalyzer extends FMLAbstractCommandAnalyzer {
 			return "xmi";
 		else if (format == FMFormat.FSPLOT)
 			return "SPLOT/SXFM";
-		else if (format == FMFormat.S2T2)
-			return "S2T2";
 		else if (format == FMFormat.FMLCONSTRAINT)
 			return "FML constraints";
 		else

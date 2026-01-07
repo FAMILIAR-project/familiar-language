@@ -175,9 +175,6 @@ public class Menu {
         otherNotationsSubMenu.addSeparator();
         otherNotationsSubMenu.add(new ImportFeatureIDEAction());
         otherNotationsSubMenu.add(new ExportFeatureIDEAction());
-        otherNotationsSubMenu.addSeparator();
-        otherNotationsSubMenu.add(new ImportS2T2Action());
-        otherNotationsSubMenu.add(new ExportS2T2Action());
         fileMenu.add(otherNotationsSubMenu);
         fileMenu.addSeparator();
         

@@ -75,21 +75,6 @@
 		</dependency>
 		<dependency>
 			<groupId>fr.inria.familiar</groupId>
-			<artifactId>org.xtext.example.fmlero</artifactId>
-			<version>1.0.10</version>
-		</dependency>
-		<dependency>
-			<groupId>fr.inria.familiar</groupId>
-			<artifactId>org.xtext.example.fmlero.ui</artifactId>
-			<version>1.0.10</version>
-		</dependency>
-		<dependency>
-			<groupId>fr.inria.familiar</groupId>
-			<artifactId>S2T2toFML</artifactId>
-			<version>1.0.10</version>
-		</dependency>
-		<dependency>
-			<groupId>fr.inria.familiar</groupId>
 			<artifactId>SPLAR-plugin</artifactId>
 			<version>1.0.10</version>
 		</dependency>

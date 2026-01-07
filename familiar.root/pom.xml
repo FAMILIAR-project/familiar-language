@@ -10,9 +10,6 @@
     <module>../FML3rdPartiesMisc</module>
     <module>../featureide-dependencies</module>
     <module>../org.xtext.example.fml.parent</module>
-    <module>../org.xtext.example.fmlero</module>
-    <module>../org.xtext.example.fmlero.ui</module>
-    <module>../S2T2toFML</module>
     <module>../SPLAR-plugin</module>
     <module>../FAMILIAR</module>
     <module>../familiar.test</module>

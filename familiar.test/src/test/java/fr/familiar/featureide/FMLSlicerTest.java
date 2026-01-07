@@ -1133,7 +1133,7 @@ public class FMLSlicerTest extends FMLSlicerUtilityTest {
 
 		_shell.parse(fmID + " = " + fmSpecification + "\n");
 		FeatureModelVariable fmFoo = getFMVariable(fmID);
-		serializeToS2T2(fmFoo);
+		// serializeToS2T2(fmFoo); // S2T2 support removed
 
 		String sliceCriteria = "{ " + fmID + ".MedicalImage" + " } " + " ++ "
 				+ fmID + "." + "FormatName.*" + " ++ " + "{ " + fmID + "."
@@ -1183,7 +1183,7 @@ public class FMLSlicerTest extends FMLSlicerUtilityTest {
 
 		FeatureModelVariable fmExpected = getFMVariable(fmExpectedID);
 		assertFormulaEquals(fmExpected.getFormula(), slicedFmv.getFormula());
-		serializeToS2T2(fmExpected);
+		// serializeToS2T2(fmExpected); // S2T2 support removed
 
 		FeatureModel<String> fmExpectedWCst = fmExpected.getFm().clone();
 		fmExpectedWCst.removeAllConstraints();

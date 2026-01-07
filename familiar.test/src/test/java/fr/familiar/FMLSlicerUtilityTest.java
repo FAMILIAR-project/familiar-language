@@ -221,13 +221,6 @@ public class FMLSlicerUtilityTest extends FMLTest {
 
 	}
 
-	protected void serializeToS2T2(FeatureModelVariable fmv) throws IOException {
-		String fmvID = fmv.getIdentifier();
-		String fmvS2T2Content = ConvertAnalyzer.convert(fmv, FMFormat.S2T2);
-		FileSerializer.write("output/" + fmvID + ".fmprimitives",
-				fmvS2T2Content);
-	}
-
 	public static String prettyConfigs(FeatureModelVariable fm1) {
 		Set<Variable> fm1Configs = fm1.configs();
 		StringBuilder sb = new StringBuilder();

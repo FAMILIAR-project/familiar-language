@@ -244,7 +244,7 @@ public class FMLMedicalImageSliceTest2 extends FMLSlicerUtilityTest {
 		String fmServiceID = "fmService";
 		_shell.parse(fmServiceID + " = " + _fmServiceSpecification);
 		FeatureModelVariable fmvService = getFMVariable(fmServiceID);
-		serializeToS2T2(fmvService);
+		// serializeToS2T2(fmvService); // S2T2 support removed
 
 		// 2. VIEWS extraction
 		// 2.1 security expert view extraction
@@ -262,11 +262,11 @@ public class FMLMedicalImageSliceTest2 extends FMLSlicerUtilityTest {
 
 		FeatureModelVariable fmvSecurity = runSliceFMV(fmvService,
 				securityView, SliceMode.INCLUDING, "fmSecurity");
-		serializeToS2T2(fmvSecurity);
+		// serializeToS2T2(fmvSecurity); // S2T2 support removed
 
 		FeatureModelVariable fmvMedicalView = runSliceFMV(fmvService,
 				medicalView, SliceMode.INCLUDING, "fmMedical");
-		serializeToS2T2(fmvMedicalView);
+		// serializeToS2T2(fmvMedicalView); // S2T2 support removed
 
 	}
 

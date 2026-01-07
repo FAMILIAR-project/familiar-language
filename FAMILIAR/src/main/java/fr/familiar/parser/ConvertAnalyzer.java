@@ -33,7 +33,6 @@ import fr.familiar.fm.FeatureModelPrinter;
 import fr.familiar.fm.basic.FMLFeatureModelReader;
 import fr.familiar.fm.basic.FMLFeatureModelWriter;
 import fr.familiar.fm.converter.FeatureModelToExpression;
-import fr.familiar.fm.converter.S2T2Converter;
 import fr.familiar.fm.converter.SPLOTConverter;
 import fr.familiar.fm.featureide.FMLtoFeatureIDE;
 import fr.familiar.interpreter.BDDStrategy;
@@ -184,13 +183,6 @@ public class ConvertAnalyzer extends FMLAbstractCommandAnalyzer {
 			}
 			convertion = sb.toString() ; 
 		}
-
-		else if (format == FMFormat.S2T2) {
-			// FIXME
-			convertion = new S2T2Converter
-			(FMLShell.getInstance().isStandalone()).fmlToS2T2XMI(fmv);
-		}
-	
 
 		else {
 
